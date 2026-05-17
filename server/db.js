@@ -43,12 +43,37 @@ db.exec(`
   );
 `);
 
+// Seed admin user (only if not exists)
 const adminExists = db.prepare('SELECT id FROM users WHERE email = ?').get('admin@tracker.com');
 if (!adminExists) {
-  const hashedPassword = bcrypt.hashSync('admin123', 10);
+  let seedPassword = process.env.ADMIN_SEED_PASSWORD;
+
+  // Validate seed password
+  if (!seedPassword) {
+    const defaultPassword = 'admin123';
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error(
+        'ADMIN_SEED_PASSWORD environment variable is required in production. ' +
+        'Set a strong password before first startup.'
+      );
+    }
+    console.warn(
+      '⚠️  Using default seed password "admin123" for admin@tracker.com. ' +
+      'Set ADMIN_SEED_PASSWORD environment variable to use a custom password.'
+    );
+    seedPassword = defaultPassword;
+  }
+
+  if (seedPassword === 'admin123' && process.env.NODE_ENV === 'production') {
+    throw new Error('ADMIN_SEED_PASSWORD cannot be "admin123" in production');
+  }
+
+  const hashedPassword = bcrypt.hashSync(seedPassword, 12);
   db.prepare('INSERT INTO users (email, password_hash, role) VALUES (?, ?, ?)')
     .run('admin@tracker.com', hashedPassword, 'admin');
-  console.log('✓ Seeded admin user: admin@tracker.com / admin123');
+
+  const passwordDisplay = seedPassword === 'admin123' ? 'admin123 (dev)' : '[custom password set via env]';
+  console.log(`✓ Seeded admin user: admin@tracker.com / ${passwordDisplay}`);
 }
 
 module.exports = db;

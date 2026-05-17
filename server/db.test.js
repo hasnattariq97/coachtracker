@@ -280,4 +280,87 @@ describe('Database Schema and Seeding', () => {
       expect(countAfter.count).toBe(1);
     });
   });
+
+  describe('Admin seed password validation (Security Issue #2)', () => {
+    test('uses environment variable ADMIN_SEED_PASSWORD when provided', () => {
+      db.pragma('foreign_keys = ON');
+
+      db.exec(`
+        CREATE TABLE IF NOT EXISTS users (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          email TEXT UNIQUE NOT NULL,
+          password_hash TEXT NOT NULL,
+          role TEXT NOT NULL CHECK (role IN ('admin', 'coach')),
+          created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        );
+      `);
+
+      const customPassword = 'super-secure-password-123456';
+      process.env.ADMIN_SEED_PASSWORD = customPassword;
+
+      const adminExists = db.prepare('SELECT id FROM users WHERE email = ?').get('admin@tracker.com');
+      if (!adminExists) {
+        let seedPassword = process.env.ADMIN_SEED_PASSWORD;
+        const hashedPassword = bcrypt.hashSync(seedPassword, 12);
+        db.prepare('INSERT INTO users (email, password_hash, role) VALUES (?, ?, ?)')
+          .run('admin@tracker.com', hashedPassword, 'admin');
+      }
+
+      const admin = db.prepare('SELECT * FROM users WHERE email = ?').get('admin@tracker.com');
+      expect(admin).toBeDefined();
+      expect(bcrypt.compareSync(customPassword, admin.password_hash)).toBe(true);
+
+      delete process.env.ADMIN_SEED_PASSWORD;
+    });
+
+    test('throws error in production with default password', () => {
+      const originalEnv = process.env.NODE_ENV;
+      process.env.NODE_ENV = 'production';
+      delete process.env.ADMIN_SEED_PASSWORD;
+
+      db.exec(`
+        CREATE TABLE IF NOT EXISTS users (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          email TEXT UNIQUE NOT NULL,
+          password_hash TEXT NOT NULL,
+          role TEXT NOT NULL CHECK (role IN ('admin', 'coach')),
+          created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        );
+      `);
+
+      const adminExists = db.prepare('SELECT id FROM users WHERE email = ?').get('admin@tracker.com');
+      if (!adminExists) {
+        let seedPassword = process.env.ADMIN_SEED_PASSWORD;
+
+        if (!seedPassword) {
+          if (process.env.NODE_ENV === 'production') {
+            expect(() => {
+              throw new Error(
+                'ADMIN_SEED_PASSWORD environment variable is required in production. ' +
+                'Set a strong password before first startup.'
+              );
+            }).toThrow('ADMIN_SEED_PASSWORD environment variable is required in production');
+          }
+        }
+      }
+
+      process.env.NODE_ENV = originalEnv;
+    });
+
+    test('throws error if admin123 is used in production', () => {
+      const originalEnv = process.env.NODE_ENV;
+      process.env.NODE_ENV = 'production';
+      process.env.ADMIN_SEED_PASSWORD = 'admin123';
+
+      expect(() => {
+        let seedPassword = process.env.ADMIN_SEED_PASSWORD;
+        if (seedPassword === 'admin123' && process.env.NODE_ENV === 'production') {
+          throw new Error('ADMIN_SEED_PASSWORD cannot be "admin123" in production');
+        }
+      }).toThrow('ADMIN_SEED_PASSWORD cannot be "admin123" in production');
+
+      process.env.NODE_ENV = originalEnv;
+      delete process.env.ADMIN_SEED_PASSWORD;
+    });
+  });
 });

@@ -8,7 +8,14 @@
 
 const jwt = require('jsonwebtoken');
 
-const SECRET = process.env.JWT_SECRET || 'dev-secret-change-in-production';
+// Require JWT_SECRET at module load time
+const SECRET = process.env.JWT_SECRET || (process.env.NODE_ENV === 'test' ? 'test-secret-key-minimum-32-characters-requirement' : null);
+if (!SECRET || SECRET.length < 32) {
+  throw new Error(
+    'JWT_SECRET environment variable is required and must be at least 32 characters. ' +
+    'Generate one with: node -e "console.log(require(\'crypto\').randomBytes(32).toString(\'hex\'))"'
+  );
+}
 
 const generateToken = (user) => {
   if (!user || !user.id || !user.email || !user.role) {
