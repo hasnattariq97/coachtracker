@@ -140,3 +140,74 @@ Build Phase 1
 - All agent decisions logged in `.claude-flow/metrics/`
 - On failure: agents report blocker to AgentDB, await human intervention
 - Cost tracking: `/cost-tracker status` monitors token spend per phase
+
+## Beads Work-Tracking System
+
+Append-only JSONL event log for cross-session work durability. Solves the problem: **Phase Builder work disappears after context resets.**
+
+### How It Works
+
+**Three files track everything:**
+- **`.beads/status.jsonl`** — work items (open → in_progress → closed)
+- **`.beads/decisions.jsonl`** — Phase Board decisions (one per phase)
+- **`.beads/failures.jsonl`** — evaluation failures requiring fix loops
+
+### SessionStart Auto-Injection
+
+Every session start, the SessionStart hook reads `.beads/status.jsonl` and injects open beads:
+
+```
+Open Work Items from Previous Session:
+- Auth Agent: Implement server/auth.js
+- Task Manager Agent: Schema + CRUD routes
+```
+
+This lets work resume seamlessly after context resets.
+
+### Phase Builder Integration
+
+Phase Builder logs to beads at key moments:
+
+1. **Spawns agents** → creates open bead for each
+2. **Agents update status** → in_progress, then closed
+3. **Board votes** → logs decision to decisions.jsonl
+4. **Evaluator fails** → logs issues to failures.jsonl
+5. **SessionStart** → injects open beads next session
+
+### Stop Hook Reminders
+
+On session end, Stop hook reminds about unclosed beads:
+```
+⚠️  Note: 2 unclosed bead(s) in .beads/status.jsonl
+```
+
+### Metadata Contract
+
+All `.md` files must have YAML frontmatter for freshness tracking:
+```yaml
+---
+phase: "0"
+status: "active"
+owner: "phase-builder"
+last_updated: "2026-05-17T22:30:00Z"
+beads: []
+---
+```
+
+See [@docs/METADATA-CONTRACT.md](docs/METADATA-CONTRACT.md) for full spec.
+
+### Querying Beads
+
+All beads are JSONL (one JSON object per line), queryable:
+```bash
+# Show open beads
+grep '"status":"open"' .beads/status.jsonl
+
+# Show phase decisions
+grep '"type":"decision"' .beads/decisions.jsonl
+
+# Show evaluation failures
+grep '"type":"failure"' .beads/failures.jsonl
+```
+
+See [@.beads/README.md](.beads/README.md) for full documentation.

@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "created_at": "2026-05-17T00:00:00Z",
+  "project": "Coach Task Tracker",
+  "session_count": 1,
+  "bead_count": {
+    "status": 1,
+    "decisions": 0,
+    "failures": 0
+  },
+  "phases_tracked": ["0"],
+  "last_updated": "2026-05-17T00:00:00Z"
+}

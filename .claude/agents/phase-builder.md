@@ -144,3 +144,118 @@ APPROVE: 4/5 or 5/5 directors vote APPROVE
 REMEDIATE: 3/5 or more vote REMEDIATE → loop again
 ESCALATE: Tied votes or 2+ vote ESCALATE → human review
 ```
+
+## Session End Protocol (Beads Integration)
+
+After Phase N completes (approval or escalation), Phase Builder logs decisions to `.beads/` for cross-session persistence:
+
+### 1. Decision Logging (→ `.beads/decisions.jsonl`)
+Each phase board vote is logged as a decision bead:
+```json
+{
+  "id": "phase_N_decision",
+  "timestamp": "2026-05-17T23:00:00Z",
+  "type": "decision",
+  "status": "closed",
+  "phase": "N",
+  "agent": "phase-builder",
+  "title": "Phase N Board Decision: APPROVE / REMEDIATE / ESCALATE",
+  "body": "Summary of Board votes with director rationale",
+  "metadata": {
+    "board_votes": {
+      "chief_architect": "APPROVE",
+      "chief_product_officer": "APPROVE",
+      "chief_security_officer": "REMEDIATE",
+      "chief_operating_officer": "APPROVE",
+      "chief_experience_officer": "APPROVE"
+    },
+    "phase": "N",
+    "attempt": 1,
+    "consensus": true
+  }
+}
+```
+
+### 2. Failure Logging (→ `.beads/failures.jsonl`) — on REMEDIATE/ESCALATE
+When any evaluator fails, issues are logged for fix loops:
+```json
+{
+  "id": "phase_N_eval_failure_attempt_1",
+  "timestamp": "2026-05-17T23:30:00Z",
+  "type": "failure",
+  "status": "open",
+  "phase": "N",
+  "agent": "quality-evaluators",
+  "title": "Phase N Issues (Retry 1/5)",
+  "body": "- Code Quality: Uncommented console.logs in auth.js:42\n- Integration: Missing requireAdmin guard on PUT /api/coaches/:id\n- Business Logic: Failing test: login with invalid email should return 401",
+  "metadata": {
+    "failed_evaluators": ["Code Quality Evaluator", "Integration Evaluator", "Business Logic Evaluator"],
+    "retry_attempt": 1,
+    "max_retries": 5,
+    "priority": "high"
+  }
+}
+```
+
+### 3. Work Item Tracking (→ `.beads/status.jsonl`)
+Each agent spawned by Phase Builder creates a work item (status bead):
+```json
+{
+  "id": "auth_agent_phase1",
+  "timestamp": "2026-05-17T22:30:00Z",
+  "type": "status",
+  "status": "open",
+  "phase": "1",
+  "agent": "phase-builder",
+  "title": "Auth Agent: Implement server/auth.js",
+  "body": "JWT verification, bcrypt hashing, role-based guards",
+  "metadata": {
+    "assigned_files": ["server/auth.js", "server/db.js"],
+    "priority": "high"
+  }
+}
+```
+
+Agent updates status during execution:
+- `status: open` → work item created
+- `status: in_progress` → agent begins work
+- `status: closed` → agent completes, tests pass
+
+### 4. SessionStart Injection
+On next session, SessionStart hook injects open beads as context:
+```
+Open Work Items from Previous Session:
+- Auth Agent: Implement server/auth.js
+- Task Manager Agent: Schema + CRUD routes
+- Frontend Agent: React components + routing
+```
+
+This allows work to resume seamlessly after context reset.
+
+### 5. Stop Hook Reminders
+On session end, Stop hook reminds about unclosed beads:
+```
+⚠️  Note: 3 unclosed bead(s) in .beads/status.jsonl
+Consider closing them before next session:
+  - Auth Agent: Implement server/auth.js (id: auth_agent_phase1)
+  - Task Manager Agent: Schema + CRUD routes (id: tm_agent_phase1)
+  - Frontend Agent: React components + routing (id: fe_agent_phase1)
+```
+
+### 6. Bead Lifecycle
+```
+Phase N starts
+  → Phase Builder opens beads for all agents
+  → Agents update status → in_progress
+  → Evaluators assess, Board votes
+  → IF APPROVE: close all agent beads
+  → IF REMEDIATE: open failure bead, agents continue
+  → IF ESCALATE: open failure bead, await human decision
+```
+
+### 7. Cross-Session Durability
+Because beads are append-only JSONL files (not in-memory):
+- Work survives context resets (SessionStart injects open beads)
+- Board decisions are recorded (decisions.jsonl)
+- Issues are tracked (failures.jsonl)
+- No work is lost between sessions

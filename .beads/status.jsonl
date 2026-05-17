@@ -1,0 +1,1 @@
+{"id": "bootstrap_session_0", "timestamp": "2026-05-17T00:00:00Z", "session_id": "session_init", "type": "status", "status": "closed", "phase": "0", "agent": "automation", "title": "Session 0: Beads System Bootstrap", "body": "Initial setup of Coach Task Tracker beads work-tracking system", "metadata": {"bootstrap": true, "tag": "system"}, "relationships": []}

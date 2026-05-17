@@ -32,7 +32,19 @@ escape_for_json() {
 
 using_superpowers_escaped=$(escape_for_json "$using_superpowers_content")
 warning_escaped=$(escape_for_json "$warning_message")
-session_context="<EXTREMELY_IMPORTANT>\nYou have superpowers.\n\n**Below is the full content of your 'superpowers:using-superpowers' skill - your introduction to using skills. For all other skills, use the 'Skill' tool:**\n\n${using_superpowers_escaped}\n\n${warning_escaped}\n</EXTREMELY_IMPORTANT>"
+
+# Inject open beads from .beads/status.jsonl (if any exist)
+beads_context=""
+if [ -f ".beads/status.jsonl" ]; then
+  open_beads=$(grep -o '"status":"open"' .beads/status.jsonl 2>/dev/null | wc -l)
+  if [ "$open_beads" -gt 0 ]; then
+    beads_list=$(grep '"status":"open"' .beads/status.jsonl 2>/dev/null | jq -r '.title' | sed 's/^/- /')
+    beads_context="\n\n## Open Work Items from Previous Session\n${beads_list}"
+  fi
+fi
+beads_context_escaped=$(escape_for_json "$beads_context")
+
+session_context="<EXTREMELY_IMPORTANT>\nYou have superpowers.\n\n**Below is the full content of your 'superpowers:using-superpowers' skill - your introduction to using skills. For all other skills, use the 'Skill' tool:**\n\n${using_superpowers_escaped}\n\n${warning_escaped}${beads_context_escaped}\n</EXTREMELY_IMPORTANT>"
 
 # Output context injection as JSON.
 # Cursor hooks expect additional_context (snake_case).
