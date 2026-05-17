@@ -919,7 +919,409 @@ gofmt -l .
 
 ---
 
-## Distribution & Usage
+## Installation & Setup
+
+### Superpowers Framework
+
+**Install superpowers skills in your project:**
+
+```bash
+# Install the superpowers framework
+npx skills add superpowers
+
+# Install individual domain-specific skills
+npx skills add superpowers/auth       # JWT, bcrypt, sessions
+npx skills add superpowers/database   # SQL, migrations, schemas
+npx skills add superpowers/api        # REST, gRPC, contracts
+npx skills add superpowers/frontend   # React, Vue, Angular patterns
+npx skills add superpowers/testing    # Jest, pytest, testing patterns
+```
+
+**Repository:** https://github.com/obra/superpowers
+
+**Quick Start:**
+```bash
+/using-superpowers
+```
+
+---
+
+### Graphify Knowledge Graph
+
+**Install graphify CLI:**
+
+```bash
+# Via pip
+pip install graphify
+
+# Via npm (if available)
+npm install -g graphify
+
+# Or build from source
+git clone https://github.com/safishamsi/graphify
+cd graphify
+pip install -e .
+```
+
+**Repository:** https://github.com/safishamsi/graphify
+
+**First-time setup in your project:**
+
+```bash
+export ANTHROPIC_API_KEY="sk-ant-..."
+# OR
+export OPENAI_API_KEY="sk-..."
+# OR
+export GEMINI_API_KEY="..."
+
+graphify extract . --out graphify-out
+```
+
+**Git hook integration (auto-rebuild on commit):**
+
+```bash
+# Already set up if .git/hooks/post-commit exists
+# Otherwise:
+git hooks install  # If graphify provides it
+```
+
+---
+
+### Ruflo Multi-Agent Orchestration
+
+**Install Ruflo and plugins:**
+
+```bash
+# Core orchestration
+npx ruflo init
+
+# Install MCP servers
+npx mcp install @supabase/supabase-mcp
+npx mcp install @anthropic-ai/resources-mcp
+
+# Or via MCP server directory
+~/.mcp/servers/
+├── ruflo-core
+├── ruv-swarm
+├── flow-nexus
+└── [custom servers]
+```
+
+**Repositories:**
+- Core: https://github.com/anthropics/ruflo
+- Supabase MCP: https://github.com/supabase/supabase-mcp
+- Custom agent skills: `.claude/skills/` (project-local)
+
+**Invoke Phase Builder:**
+
+```bash
+/phase-builder
+# or
+Build Phase 1
+```
+
+---
+
+### Beads Work-Tracking System
+
+**Bootstrap beads in your project:**
+
+```bash
+# Create .beads/ directory structure
+mkdir -p .beads
+
+# Initialize beads files
+echo '{"id":"bootstrap","timestamp":"'$(date -u +%Y-%m-%dT%H:%M:%SZ)'","type":"note","status":"open","phase":"0","agent":"automation","title":"Bootstrap beads system","body":"","metadata":{},"relationships":[]}' > .beads/status.jsonl
+
+echo '{}' > .beads/_manifest.json
+touch .beads/decisions.jsonl
+touch .beads/failures.jsonl
+```
+
+**Or use bootstrap script:**
+
+```bash
+# If hook installed
+./.claude/hooks/bootstrap-beads.sh
+```
+
+**Read beads:**
+
+```bash
+grep '"status":"open"' .beads/status.jsonl
+grep '"type":"decision"' .beads/decisions.jsonl | jq '.'
+```
+
+---
+
+### Claude Code CLI
+
+**Install Claude Code:**
+
+```bash
+# macOS
+brew install anthropics/tap/claude-code
+
+# Windows
+# Download from https://claude.ai/code
+
+# Linux
+curl -O https://release.claude-code.io/claude-code-linux.tar.gz
+tar xzf claude-code-linux.tar.gz
+./install.sh
+```
+
+**Repository:** https://github.com/anthropics/claude-code
+
+**Verify installation:**
+
+```bash
+claude-code --version
+```
+
+---
+
+### IDE Extensions
+
+**VS Code:**
+
+```bash
+# Install from VS Code Marketplace
+# Search: "Claude Code" or "Anthropic"
+
+# Or install via CLI
+code --install-extension anthropic.claude-code
+```
+
+**JetBrains (IntelliJ, PyCharm, etc.):**
+
+```bash
+# Install from JetBrains Marketplace
+# Settings → Plugins → Search "Claude Code"
+```
+
+**Links:**
+- VS Code: https://marketplace.visualstudio.com/items?itemName=Anthropic.claude-code
+- JetBrains: https://plugins.jetbrains.com/plugin/claude-code
+
+---
+
+### MCP Servers (Model Context Protocol)
+
+**Install and configure MCP servers:**
+
+```bash
+# Create MCP config file
+~/.claude/mcp.json
+{
+  "mcpServers": {
+    "supabase": {
+      "command": "node",
+      "args": ["node_modules/@supabase/supabase-mcp/build/index.js"]
+    },
+    "git": {
+      "command": "npx",
+      "args": ["git-mcp"]
+    }
+  }
+}
+```
+
+**Available MCP Servers:**
+- **Supabase:** https://github.com/supabase/supabase-mcp — Database operations
+- **GitHub:** https://github.com/anthropics/github-mcp — Issue/PR management
+- **Google Drive:** https://github.com/anthropics/google-drive-mcp — File access
+- **Gmail:** https://github.com/anthropics/gmail-mcp — Email operations
+- **Notion:** https://github.com/anthropics/notion-mcp — Database sync
+- **Slack:** https://github.com/anthropics/slack-mcp — Chat integration
+
+**Configure in Claude Code settings.json:**
+
+```json
+{
+  "mcpServers": [
+    {
+      "name": "supabase",
+      "enabled": true,
+      "config": {
+        "projectId": "your-project-id",
+        "apiKey": "your-api-key"
+      }
+    }
+  ]
+}
+```
+
+---
+
+### Custom Skills & Agents
+
+**Create custom skills in your project:**
+
+```bash
+# Structure
+.claude/skills/
+├── skill-auth/
+│   ├── SKILL.md          # Skill definition
+│   ├── examples/
+│   └── MANIFEST.json     # Metadata
+├── skill-database/
+└── [project-specific skills]
+
+# Invoke custom skill
+/skill-auth
+/skill-database
+```
+
+**Skill template:**
+
+```markdown
+---
+name: skill-auth
+description: JWT + bcrypt authentication patterns
+metadata:
+  type: skill
+  tags: [security, authentication]
+---
+
+# Authentication Skill
+
+Use this skill for JWT + bcrypt patterns...
+```
+
+**Register in settings.json:**
+
+```json
+{
+  "skills": [
+    {
+      "name": "skill-auth",
+      "path": ".claude/skills/skill-auth/SKILL.md",
+      "enabled": true
+    }
+  ]
+}
+```
+
+---
+
+### Testing Frameworks
+
+**Install testing tools per language:**
+
+```bash
+# JavaScript/Node.js
+npm install --save-dev jest @testing-library/react supertest
+
+# Python
+pip install pytest pytest-cov pytest-mock
+
+# Go
+go get github.com/stretchr/testify/assert
+
+# Rust
+cargo add --dev criterion tokio
+```
+
+**Configure in project:**
+
+```bash
+# Jest config (package.json or jest.config.js)
+{
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": ["node_modules"]
+  }
+}
+
+# Pytest config (pytest.ini)
+[pytest]
+testpaths = tests
+python_files = test_*.py
+```
+
+---
+
+### Security & Linting
+
+**Install linters and security tools:**
+
+```bash
+# JavaScript
+npm install --save-dev eslint prettier @typescript-eslint/eslint-plugin
+
+# Python
+pip install flake8 black isort bandit
+
+# Go
+go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+
+# Rust
+cargo install clippy
+```
+
+**Configure:**
+
+```bash
+# .eslintrc.json
+{
+  "extends": ["eslint:recommended"],
+  "rules": {
+    "no-console": "warn",
+    "no-var": "error"
+  }
+}
+
+# .prettierrc
+{
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5"
+}
+```
+
+---
+
+## Plugin Checklist for New Projects
+
+```bash
+# Step 1: Initialize Claude Code
+claude-code init [project-path]
+
+# Step 2: Install Superpowers
+npx skills add superpowers
+
+# Step 3: Install Graphify
+pip install graphify
+
+# Step 4: Bootstrap Beads
+mkdir -p .beads
+./.claude/hooks/bootstrap-beads.sh
+
+# Step 5: Install testing framework
+npm install --save-dev jest  # or pytest/go test/cargo
+
+# Step 6: Install linters
+npm install --save-dev eslint prettier
+
+# Step 7: Set up IDE extension
+# VS Code: Install from Marketplace
+# JetBrains: Settings → Plugins
+
+# Step 8: Configure .claude/settings.json
+cp MASTER_CAPABILITIES.md .claude/
+# Add your custom hooks, skills, permissions
+
+# Step 9: Test everything
+/using-superpowers
+graphify query "test"
+Agent(description: "test", subagent_type: "Explore")
+```
+
+---
+
+
 
 ### For Agents
 Give this document when:
