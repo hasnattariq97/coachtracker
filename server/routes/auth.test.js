@@ -92,4 +92,121 @@ describe('POST /api/auth/login', () => {
     expect(payload).toHaveProperty('email', 'admin@tracker.com');
     expect(payload).toHaveProperty('role', 'admin');
   });
+
+  // Test 8: Login with whitespace in email is trimmed
+  test('POST /api/auth/login with whitespace in email is trimmed', async () => {
+    const res = await request(app)
+      .post('/api/auth/login')
+      .send({ email: '  admin@tracker.com  ', password: 'admin123' });
+
+    expect(res.status).toBe(200);
+    expect(res.body).toHaveProperty('token');
+  });
+
+  // Test 9: Login with uppercase email is normalized
+  test('POST /api/auth/login with uppercase email is normalized', async () => {
+    const res = await request(app)
+      .post('/api/auth/login')
+      .send({ email: 'ADMIN@TRACKER.COM', password: 'admin123' });
+
+    expect(res.status).toBe(200);
+    expect(res.body).toHaveProperty('token');
+  });
+
+  // Test 10: Login with mixed case and whitespace
+  test('POST /api/auth/login with mixed case and whitespace', async () => {
+    const res = await request(app)
+      .post('/api/auth/login')
+      .send({ email: '  AdMiN@TrAcKeR.cOm  ', password: 'admin123' });
+
+    expect(res.status).toBe(200);
+    expect(res.body).toHaveProperty('token');
+  });
+
+  // Test 11: Invalid email format returns 400
+  test('POST /api/auth/login with invalid email format returns 400', async () => {
+    const res = await request(app)
+      .post('/api/auth/login')
+      .send({ email: 'not-an-email', password: 'admin123' });
+
+    expect(res.status).toBe(400);
+    expect(res.body).toHaveProperty('error');
+    expect(res.body.error).toContain('Invalid email format');
+  });
+
+  // Test 12: Email with no domain returns 400
+  test('POST /api/auth/login with email missing domain returns 400', async () => {
+    const res = await request(app)
+      .post('/api/auth/login')
+      .send({ email: 'admin@', password: 'admin123' });
+
+    expect(res.status).toBe(400);
+    expect(res.body).toHaveProperty('error');
+  });
+
+  // Test 13: Non-string email returns 400
+  test('POST /api/auth/login with non-string email returns 400', async () => {
+    const res = await request(app)
+      .post('/api/auth/login')
+      .send({ email: 123, password: 'admin123' });
+
+    expect(res.status).toBe(400);
+    expect(res.body).toHaveProperty('error');
+    expect(res.body.error).toContain('Email is required');
+  });
+
+  // Test 14: Non-string password returns 400
+  test('POST /api/auth/login with non-string password returns 400', async () => {
+    const res = await request(app)
+      .post('/api/auth/login')
+      .send({ email: 'admin@tracker.com', password: 123 });
+
+    expect(res.status).toBe(400);
+    expect(res.body).toHaveProperty('error');
+    expect(res.body.error).toContain('Password is required');
+  });
+
+  // Test 15: Email too long returns 400
+  test('POST /api/auth/login with email over 255 chars returns 400', async () => {
+    const longEmail = 'a'.repeat(250) + '@example.com';
+    const res = await request(app)
+      .post('/api/auth/login')
+      .send({ email: longEmail, password: 'admin123' });
+
+    expect(res.status).toBe(400);
+    expect(res.body).toHaveProperty('error');
+    expect(res.body.error).toContain('Email is too long');
+  });
+
+  // Test 16: Password too long returns 400
+  test('POST /api/auth/login with password over 500 chars returns 400', async () => {
+    const longPassword = 'p'.repeat(501);
+    const res = await request(app)
+      .post('/api/auth/login')
+      .send({ email: 'admin@tracker.com', password: longPassword });
+
+    expect(res.status).toBe(400);
+    expect(res.body).toHaveProperty('error');
+    expect(res.body.error).toContain('Password is too long');
+  });
+
+  // Test 17: Empty string email returns 400
+  test('POST /api/auth/login with empty string email returns 400', async () => {
+    const res = await request(app)
+      .post('/api/auth/login')
+      .send({ email: '', password: 'admin123' });
+
+    expect(res.status).toBe(400);
+    expect(res.body).toHaveProperty('error');
+  });
+
+  // Test 18: Empty string password returns 400
+  test('POST /api/auth/login with empty string password returns 400', async () => {
+    const res = await request(app)
+      .post('/api/auth/login')
+      .send({ email: 'admin@tracker.com', password: '' });
+
+    expect(res.status).toBe(400);
+    expect(res.body).toHaveProperty('error');
+  });
 });

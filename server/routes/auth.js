@@ -2,8 +2,8 @@
  * @phase 1
  * @status active
  * @owner phase-builder
- * @last_updated 2026-05-17T23:20:00Z
- * @beads ["login_endpoint_green_phase"]
+ * @last_updated 2026-05-17T23:30:00Z
+ * @beads ["login_endpoint_refactor_phase"]
  */
 
 const express = require('express');
@@ -13,17 +13,52 @@ const { generateToken } = require('../auth');
 
 const router = express.Router();
 
+function isValidEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
+function validateLoginInput(email, password) {
+  const errors = [];
+
+  if (!email || typeof email !== 'string') {
+    errors.push('Email is required');
+  } else {
+    if (email.length > 255) {
+      errors.push('Email is too long');
+    }
+    const trimmedEmail = email.trim();
+    if (!isValidEmail(trimmedEmail)) {
+      errors.push('Invalid email format');
+    }
+  }
+
+  if (!password || typeof password !== 'string') {
+    errors.push('Password is required');
+  } else {
+    if (password.length > 500) {
+      errors.push('Password is too long');
+    }
+  }
+
+  return errors;
+}
+
 router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
 
     // Validate input
-    if (!email || !password) {
-      return res.status(400).json({ error: 'Email and password required' });
+    const validationErrors = validateLoginInput(email, password);
+    if (validationErrors.length > 0) {
+      return res.status(400).json({ error: validationErrors[0] });
     }
 
-    // Query user by email
-    const user = db.prepare('SELECT * FROM users WHERE email = ?').get(email);
+    // Normalize email (trim and lowercase)
+    const normalizedEmail = email.trim().toLowerCase();
+
+    // Query user by email (case-insensitive)
+    const user = db.prepare('SELECT * FROM users WHERE LOWER(email) = ?').get(normalizedEmail);
     if (!user) {
       return res.status(401).json({ error: 'Invalid email or password' });
     }
@@ -37,7 +72,7 @@ router.post('/login', async (req, res) => {
     // Generate JWT token
     const token = generateToken(user);
 
-    // Return token (do NOT return password_hash)
+    // Return token (never return password_hash or sensitive data)
     res.json({ token });
   } catch (error) {
     console.error('Login error:', error);
