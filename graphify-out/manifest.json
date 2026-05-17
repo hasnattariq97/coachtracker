@@ -125,13 +125,13 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\auth.js": {
-    "mtime": 1779041078.108928,
-    "ast_hash": "34d89c64a9782982100c99545fe011df",
+    "mtime": 1779042617.6948457,
+    "ast_hash": "558ccf66f1fc90a09e472ccc19e2440d",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\auth.test.js": {
-    "mtime": 1779041095.0260231,
-    "ast_hash": "22ad8a719871feb2504c21892c5f7146",
+    "mtime": 1779042651.634345,
+    "ast_hash": "b611d23e634a9199d97eb32c944cfb56",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\db-integration.test.js": {
@@ -140,18 +140,18 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\db.js": {
-    "mtime": 1779040647.0524464,
-    "ast_hash": "dbae2e0dce60d8c61e1f7daa0cbf9e4c",
+    "mtime": 1779042472.0441146,
+    "ast_hash": "090a4940d761e7d193f6913481b4d02a",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\db.test.js": {
-    "mtime": 1779040565.9927099,
-    "ast_hash": "6889808e5aa30ee5c69e471925c11fb5",
+    "mtime": 1779042517.8550618,
+    "ast_hash": "8302b66deb5c48b1d8e19069fef0dd36",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\index.js": {
-    "mtime": 1779041390.156334,
-    "ast_hash": "69e064eab3e276e1b741db6eb564e181",
+    "mtime": 1779041835.6330884,
+    "ast_hash": "f39e38855ecb44b603368a7c1d36cd40",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\index.test.js": {
@@ -170,13 +170,13 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\auth.js": {
-    "mtime": 1779041474.6512198,
-    "ast_hash": "b97127fb02dade8e1858190cb0308821",
+    "mtime": 1779041980.2824254,
+    "ast_hash": "0fabc4e5269535e75a9851250931de61",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\auth.test.js": {
-    "mtime": 1779041721.1931603,
-    "ast_hash": "e6c65c974d7fd82624db392d2076aba7",
+    "mtime": 1779041997.9421816,
+    "ast_hash": "b352bf2c478e58003a8b8aacf145e00a",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\coaches.js": {
