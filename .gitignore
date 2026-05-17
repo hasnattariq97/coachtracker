@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Database
+server/tracker.db
+server/tracker.db-shm
+server/tracker.db-wal
+
+# Claude Code
+.claude/settings.local.json
+.claude/audit.log
+.claude/session-log.md
+
+# Build & dist
+client/dist/
+build/
+out/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Development
+.env.test
+test-tracker.db

@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local
+
+# Database
+server/tracker.db
+server/tracker.db-journal
+
+# Graphify output (regenerate with `graphify extract .`)
+.graphify/
+graphify-out/
+
+# Build output
+client/dist/
+server/dist/
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
