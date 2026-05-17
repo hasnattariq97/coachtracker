@@ -1024,6 +1024,10 @@ Build Phase 1
 
 ### Beads Work-Tracking System
 
+**What Beads Are:**
+
+Append-only JSONL event log for tracking work across context resets. When Claude Code sessions end and restart, work-in-progress is automatically re-injected as context.
+
 **Bootstrap beads in your project:**
 
 ```bash
@@ -1031,25 +1035,229 @@ Build Phase 1
 mkdir -p .beads
 
 # Initialize beads files
-echo '{"id":"bootstrap","timestamp":"'$(date -u +%Y-%m-%dT%H:%M:%SZ)'","type":"note","status":"open","phase":"0","agent":"automation","title":"Bootstrap beads system","body":"","metadata":{},"relationships":[]}' > .beads/status.jsonl
+echo '{"id":"bootstrap","timestamp":"'$(date -u +%Y-%m-%dT%H:%M:%SZ)'","type":"note","status":"open","phase":"0","agent":"automation","title":"Bootstrap beads system","body":"Initial session","metadata":{},"relationships":[]}' > .beads/status.jsonl
 
 echo '{}' > .beads/_manifest.json
 touch .beads/decisions.jsonl
 touch .beads/failures.jsonl
+
+# Create .beads/README.md with documentation
+cat > .beads/README.md << 'EOF'
+---
+phase: "0"
+status: "active"
+owner: "automation"
+last_updated: "2026-05-17T22:30:00Z"
+beads: []
+---
+
+# Beads Work-Tracking System
+
+Append-only JSONL event log for cross-session durability.
+
+See parent project MASTER_CAPABILITIES.md → Integrated Frameworks → Beads.
+EOF
 ```
 
 **Or use bootstrap script:**
 
 ```bash
-# If hook installed
-./.claude/hooks/bootstrap-beads.sh
+# Create helper script at .claude/hooks/bootstrap-beads.sh
+mkdir -p .claude/hooks
+cat > .claude/hooks/bootstrap-beads.sh << 'EOF'
+#!/bin/bash
+set -e
+
+echo "Bootstrapping beads system..."
+mkdir -p .beads
+
+# Initialize JSONL files if they don't exist
+[ -f .beads/status.jsonl ] || echo '{"id":"bootstrap","timestamp":"'$(date -u +%Y-%m-%dT%H:%M:%SZ)'","type":"note","status":"open","phase":"0","agent":"automation","title":"Bootstrap beads","body":"","metadata":{},"relationships":[]}' > .beads/status.jsonl
+
+[ -f .beads/decisions.jsonl ] || touch .beads/decisions.jsonl
+[ -f .beads/failures.jsonl ] || touch .beads/failures.jsonl
+[ -f .beads/_manifest.json ] || echo '{"version":"1.0","created_at":"'$(date -u +%Y-%m-%dT%H:%M:%SZ)'","session_count":0,"bead_count":1}' > .beads/_manifest.json
+
+echo "✓ Beads bootstrap complete"
+chmod +x .claude/hooks/bootstrap-beads.sh
+EOF
+
+# Run bootstrap
+bash .claude/hooks/bootstrap-beads.sh
 ```
 
-**Read beads:**
+**Wire hooks into settings.json:**
+
+```json
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/session-start"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/on-stop.sh"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/pre-tool-use-write-guard.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+**Create SessionStart hook (at .claude/hooks/session-start):**
 
 ```bash
+#!/bin/bash
+# Inject open beads from previous session
+
+if [ -f .beads/status.jsonl ]; then
+  OPEN_COUNT=$(grep -c '"status":"open"' .beads/status.jsonl 2>/dev/null || echo 0)
+  if [ "$OPEN_COUNT" -gt 0 ]; then
+    echo ""
+    echo "📌 Open Work Items from Previous Session:"
+    grep '"status":"open"' .beads/status.jsonl | jq -r '.title' | sed 's/^/  - /'
+    echo ""
+  fi
+fi
+```
+
+**Create Stop hook (at .claude/hooks/on-stop.sh):**
+
+```bash
+#!/bin/bash
+# Remind about unclosed beads
+
+if [ -f .beads/status.jsonl ]; then
+  UNCLOSED=$(grep -c '"status":\s*"open\|in_progress"' .beads/status.jsonl 2>/dev/null || echo 0)
+  if [ "$UNCLOSED" -gt 0 ]; then
+    echo ""
+    echo "⚠️  Note: $UNCLOSED unclosed beads in .beads/status.jsonl"
+    echo "Consider closing them before next session:"
+    grep '"status":\s*"open\|in_progress"' .beads/status.jsonl | jq -r '.title' | sed 's/^/  - /' | head -5
+  fi
+fi
+```
+
+**Create write guard hook (at .claude/hooks/pre-tool-use-write-guard.sh):**
+
+```bash
+#!/bin/bash
+# Validate YAML frontmatter on markdown writes
+
+FILE_PATH="$1"
+CONTENT="$2"
+
+# Skip generated files
+if [[ "$FILE_PATH" =~ (graph.json|GRAPH_REPORT|manifest.json|cache/) ]]; then
+  exit 0
+fi
+
+# Check markdown files for YAML frontmatter
+if [[ "$FILE_PATH" =~ \.(md)$ ]]; then
+  if ! echo "$CONTENT" | grep -q "^---\nphase:"; then
+    # Log violation (soft enforcement - don't block)
+    echo "{\"id\":\"guard_$(date +%s)\",\"type\":\"failure\",\"status\":\"open\",\"title\":\"Missing YAML frontmatter\",\"body\":\"$FILE_PATH\",\"metadata\":{},\"relationships\":[]}" >> .beads/failures.jsonl 2>/dev/null || true
+  fi
+fi
+
+exit 0
+```
+
+**Add metadata contract to all markdown files:**
+
+```yaml
+---
+phase: "0"
+status: "active"
+owner: "automation"
+last_updated: "2026-05-17T22:30:00Z"
+beads: []
+---
+
+# Your Content Here
+```
+
+**Read & query beads:**
+
+```bash
+# Show all open work items
 grep '"status":"open"' .beads/status.jsonl
+
+# Show all phase decisions
 grep '"type":"decision"' .beads/decisions.jsonl | jq '.'
+
+# Show all failures/issues
+grep '"type":"failure"' .beads/failures.jsonl
+
+# Pretty-print one bead
+grep 'specific_id' .beads/status.jsonl | jq '.'
+
+# Count by phase
+grep '"phase":"1"' .beads/status.jsonl | wc -l
+
+# Close a bead (append new status)
+echo '{"id":"xyz","status":"closed","timestamp":"2026-05-17T..."}' >> .beads/status.jsonl
+```
+
+**How beads integrate with agents:**
+
+When you spawn agents, they should:
+1. **Open** a bead when starting work: `{"id":"agent_name_task","status":"open",...}`
+2. **Update** to in_progress: `{"id":"agent_name_task","status":"in_progress",...}`
+3. **Close** when done: `{"id":"agent_name_task","status":"closed",...}`
+
+SessionStart hook auto-injects open beads, so agents see: "Here's what was being worked on."
+Stop hook reminds: "Close your beads before ending session."
+
+**Example workflow:**
+
+```bash
+# Session 1: Start work
+/phase-builder
+→ Spawns agents
+→ Auth Agent creates: {"id":"auth_p1","status":"open",...}
+→ Task Manager Agent creates: {"id":"tm_p1","status":"open",...}
+
+# Session 1 ends
+Stop hook reminds: "⚠️ 2 unclosed beads"
+
+# Session 2: Work resumes
+SessionStart hook injects: "Open Work Items:
+  - Auth Agent: Implement authentication
+  - Task Manager Agent: Implement schema"
+
+Auth Agent sees previous work, updates:
+{"id":"auth_p1","status":"in_progress",...}
+
+# Session 2 ends
+Auth Agent closes: {"id":"auth_p1","status":"closed",...}
+
+# Session 3 starts
+SessionStart hook silent (no open beads)
 ```
 
 ---
