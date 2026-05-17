@@ -1,0 +1,138 @@
+{
+  "communities": {
+    "0": [
+      "skills_writing_skills_render_graphs_js",
+      "writing_skills_render_graphs_combinegraphs",
+      "writing_skills_render_graphs_execsync",
+      "writing_skills_render_graphs_extractdotblocks",
+      "writing_skills_render_graphs_extractgraphbody",
+      "writing_skills_render_graphs_fs",
+      "writing_skills_render_graphs_main",
+      "writing_skills_render_graphs_path",
+      "writing_skills_render_graphs_rendertosvg"
+    ],
+    "1": [
+      "claude_settings_env",
+      "claude_settings_env_node_env",
+      "claude_settings_env_port",
+      "claude_settings_env_react_port",
+      "claude_settings_permissions",
+      "claude_settings_permissions_allow",
+      "claude_settings_permissions_deny",
+      "settings_json"
+    ],
+    "2": [
+      "scripts_helper_connect",
+      "scripts_helper_eventqueue",
+      "scripts_helper_indicator",
+      "scripts_helper_sendevent",
+      "scripts_helper_target",
+      "skills_brainstorming_scripts_helper_js"
+    ],
+    "3": [
+      "claude_settings_hooks",
+      "claude_settings_hooks_stop",
+      "hooks_post_tool_use_sh",
+      "hooks_pre_tool_use_sh"
+    ],
+    "4": [
+      "hooks_hooks_cursor_hooks",
+      "hooks_hooks_cursor_hooks_sessionstart",
+      "hooks_hooks_cursor_json",
+      "hooks_hooks_cursor_version"
+    ],
+    "5": [
+      "skills_systematic_debugging_condition_based_waiting_example_ts",
+      "systematic_debugging_condition_based_waiting_example_waitforevent",
+      "systematic_debugging_condition_based_waiting_example_waitforeventcount",
+      "systematic_debugging_condition_based_waiting_example_waitforeventmatch"
+    ],
+    "6": [
+      "hooks_hooks_hooks",
+      "hooks_hooks_hooks_sessionstart",
+      "hooks_hooks_json"
+    ],
+    "7": [
+      "hooks_on_stop_sh"
+    ],
+    "8": [
+      "skills_brainstorming_scripts_start_server_sh"
+    ],
+    "9": [
+      "skills_brainstorming_scripts_stop_server_sh"
+    ],
+    "10": [
+      "skills_systematic_debugging_find_polluter_sh"
+    ]
+  },
+  "cohesion": {
+    "0": 0.31,
+    "1": 0.25,
+    "2": 0.33,
+    "3": 0.5,
+    "4": 0.5,
+    "5": 0.5,
+    "6": 0.67,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0
+  },
+  "gods": [
+    {
+      "id": "claude_settings_env",
+      "label": "env",
+      "degree": 4
+    },
+    {
+      "id": "claude_settings_hooks",
+      "label": "hooks",
+      "degree": 4
+    },
+    {
+      "id": "writing_skills_render_graphs_main",
+      "label": "main()",
+      "degree": 4
+    },
+    {
+      "id": "claude_settings_permissions",
+      "label": "permissions",
+      "degree": 3
+    },
+    {
+      "id": "hooks_hooks_cursor_hooks",
+      "label": "hooks",
+      "degree": 2
+    },
+    {
+      "id": "hooks_hooks_hooks",
+      "label": "hooks",
+      "degree": 2
+    },
+    {
+      "id": "writing_skills_render_graphs_extractdotblocks",
+      "label": "extractDotBlocks()",
+      "degree": 2
+    },
+    {
+      "id": "writing_skills_render_graphs_combinegraphs",
+      "label": "combineGraphs()",
+      "degree": 2
+    },
+    {
+      "id": "writing_skills_render_graphs_rendertosvg",
+      "label": "renderToSvg()",
+      "degree": 2
+    },
+    {
+      "id": "claude_settings_permissions_allow",
+      "label": "allow",
+      "degree": 1
+    }
+  ],
+  "surprises": [],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

@@ -1,4 +1,19 @@
 {
+  "D:\\Cursor_new\\install-ruflo-plugins.ps1": {
+    "mtime": 1779003653.0463064,
+    "ast_hash": "2835ed9e117c0f48572fee41eeb8eb5b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\install-ruflo-plugins.sh": {
+    "mtime": 1779003566.6511369,
+    "ast_hash": "744d2c195b338a5e6b5e00bb66148f21",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\verify-ruflo-plugins.sh": {
+    "mtime": 1779004298.2795365,
+    "ast_hash": "ef0b1f2e4e5276ace3b462ec6cf32a9d",
+    "semantic_hash": ""
+  },
   "D:\\Cursor_new\\.claude\\settings.json": {
     "mtime": 1779000431.5086994,
     "ast_hash": "c42a36319435aee7226cca5bf27e30f3",
@@ -65,8 +80,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\CLAUDE.md": {
-    "mtime": 1779000431.4977283,
-    "ast_hash": "460992c30a55e6cb19080bf86dd66735",
+    "mtime": 1779002429.2278903,
+    "ast_hash": "ae2dc2f6540ba722d96d81556cd87f7c",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\COMPLETION_REPORT.md": {
@@ -99,6 +114,11 @@
     "ast_hash": "be3439af73b0acd66ca94b657ab63855",
     "semantic_hash": ""
   },
+  "D:\\Cursor_new\\RUFLO_SETUP.md": {
+    "mtime": 1779003703.284878,
+    "ast_hash": "f90c3bc347559b8755ad455d42cf4474",
+    "semantic_hash": ""
+  },
   "D:\\Cursor_new\\SESSION_LOG.md": {
     "mtime": 1778235166.548384,
     "ast_hash": "87ad212c725665da6ff120462fefe9ad",
@@ -129,9 +149,34 @@
     "ast_hash": "5ee2f314cc05fc02bad6cc44510ea548",
     "semantic_hash": ""
   },
+  "D:\\Cursor_new\\.claude\\agents\\phase-builder.md": {
+    "mtime": 1779002239.7131858,
+    "ast_hash": "c170956450837b3af4a33af1184fd3ca",
+    "semantic_hash": ""
+  },
   "D:\\Cursor_new\\.claude\\agents\\security-reviewer.md": {
     "mtime": 1778235825.8427808,
     "ast_hash": "baa72426aa5431c26e59c9780674efd2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\agents\\coach-task-tracker\\auth-agent.md": {
+    "mtime": 1779002247.7464309,
+    "ast_hash": "b86a96e40d4137c8fc1c0e4273a61409",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\agents\\coach-task-tracker\\frontend-agent.md": {
+    "mtime": 1779002265.5496633,
+    "ast_hash": "0b12d3703a2ad3f14da0564b88aad635",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\agents\\coach-task-tracker\\notification-agent.md": {
+    "mtime": 1779002275.0424027,
+    "ast_hash": "a58af2180b3145f81643120602bed737",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\agents\\coach-task-tracker\\task-manager-agent.md": {
+    "mtime": 1779002256.4471064,
+    "ast_hash": "a52dadef381f86fd976ae7c3906cd449",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\.claude\\skills\\brainstorming\\SKILL.md": {
@@ -365,18 +410,18 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\docs\\ARCHITECTURE.md": {
-    "mtime": 1778235649.2197495,
-    "ast_hash": "e5602d11a66321282c964e732ae572a2",
+    "mtime": 1779003173.5246294,
+    "ast_hash": "d7809b8b7d558d4de60a8d93307d7761",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\docs\\CONTRIBUTING.md": {
-    "mtime": 1779000505.0450218,
-    "ast_hash": "054ae6ba2e2bafb1a7a838d796cb2129",
+    "mtime": 1779003161.7057848,
+    "ast_hash": "036b23c3509ab061081ffa5e2fe7322d",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\docs\\ROADMAP.md": {
-    "mtime": 1778235665.6393094,
-    "ast_hash": "cb3c766a0ff8b3f645b21c2e81694a1a",
+    "mtime": 1779003188.3885362,
+    "ast_hash": "e2e1a499c34c65cc8b231cf813f66f07",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\docs\\SUPERPOWERS-QUICK-START.md": {
@@ -422,6 +467,16 @@
   "D:\\Cursor_new\\skills\\skill-orchestrator.md": {
     "mtime": 1778235212.1951394,
     "ast_hash": "d3a8f47f9250bfa89d538ae4f7d5ebd1",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\graph-expanded.png": {
+    "mtime": 1779001134.2709396,
+    "ast_hash": "90a493629a5b8b26d7bcc58413905293",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\graph-visualization.png": {
+    "mtime": 1779001107.5729108,
+    "ast_hash": "6ace1d9ca58a9be663d68a5d21a69487",
     "semantic_hash": ""
   }
 }

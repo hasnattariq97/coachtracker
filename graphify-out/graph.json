@@ -2,8 +2,3129 @@
   "directed": false,
   "multigraph": false,
   "graph": {},
-  "nodes": [],
-  "links": [],
+  "nodes": [
+    {
+      "label": "verify-ruflo-plugins.sh",
+      "file_type": "code",
+      "source_file": "verify-ruflo-plugins.sh",
+      "source_location": "L1",
+      "id": "verify_ruflo_plugins_sh",
+      "community": 18,
+      "norm_label": "verify-ruflo-plugins.sh"
+    },
+    {
+      "label": "RUFLO_SETUP.md",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L1",
+      "community": 5,
+      "norm_label": "ruflo_setup.md",
+      "id": "ruflo_setup_md"
+    },
+    {
+      "label": "Ruflo Multi-Agent Orchestration Setup",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L1",
+      "community": 5,
+      "norm_label": "ruflo multi-agent orchestration setup",
+      "id": "cursor_new_ruflo_setup_ruflo_multi_agent_orchestration_setup"
+    },
+    {
+      "label": "Status: 80% Complete \u2705",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L3",
+      "community": 5,
+      "norm_label": "status: 80% complete \u2705",
+      "id": "cursor_new_ruflo_setup_status_80_complete"
+    },
+    {
+      "label": "\u2705 Completed (Fully Automated)",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L5",
+      "community": 5,
+      "norm_label": "\u2705 completed (fully automated)",
+      "id": "cursor_new_ruflo_setup_completed_fully_automated"
+    },
+    {
+      "label": "\u23f3 Pending: Plugin Installation (Windows Compatibility Issue)",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L37",
+      "community": 13,
+      "norm_label": "\u23f3 pending: plugin installation (windows compatibility issue)",
+      "id": "cursor_new_ruflo_setup_pending_plugin_installation_windows_compatibility_issue"
+    },
+    {
+      "label": "Known Issue",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L39",
+      "community": 13,
+      "norm_label": "known issue",
+      "id": "cursor_new_ruflo_setup_known_issue"
+    },
+    {
+      "label": "code:block1 ([PluginManager] Failed to install ruflo-agentdb: spawn npm E)",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L41",
+      "community": 13,
+      "norm_label": "code:block1 ([pluginmanager] failed to install ruflo-agentdb: spawn npm e)",
+      "id": "cursor_new_ruflo_setup_codeblock_1"
+    },
+    {
+      "label": "Workaround: Use PowerShell Script",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L47",
+      "community": 13,
+      "norm_label": "workaround: use powershell script",
+      "id": "cursor_new_ruflo_setup_workaround_use_powershell_script"
+    },
+    {
+      "label": "code:powershell (cd d:\\Cursor_new)",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L50",
+      "community": 13,
+      "norm_label": "code:powershell (cd d:\\cursor_new)",
+      "id": "cursor_new_ruflo_setup_codeblock_2"
+    },
+    {
+      "label": "code:bash (# Try from PowerShell or CMD with Node.js in PATH)",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L63",
+      "community": 13,
+      "norm_label": "code:bash (# try from powershell or cmd with node.js in path)",
+      "id": "cursor_new_ruflo_setup_codeblock_3"
+    },
+    {
+      "label": "code:bash (npx ruflo@latest hooks pretrain --depth deep)",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L81",
+      "community": 13,
+      "norm_label": "code:bash (npx ruflo@latest hooks pretrain --depth deep)",
+      "id": "cursor_new_ruflo_setup_codeblock_4"
+    },
+    {
+      "label": "13 Plugins to Install",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L86",
+      "community": 13,
+      "norm_label": "13 plugins to install",
+      "id": "cursor_new_ruflo_setup_13_plugins_to_install"
+    },
+    {
+      "label": "\ud83d\ude80 Using Ruflo Now (Already Available)",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L111",
+      "community": 15,
+      "norm_label": "\ud83d\ude80 using ruflo now (already available)",
+      "id": "cursor_new_ruflo_setup_using_ruflo_now_already_available"
+    },
+    {
+      "label": "Phase Builder (Parallel Agent Execution)",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L113",
+      "community": 15,
+      "norm_label": "phase builder (parallel agent execution)",
+      "id": "cursor_new_ruflo_setup_phase_builder_parallel_agent_execution"
+    },
+    {
+      "label": "code:bash (/phase-builder)",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L116",
+      "community": 15,
+      "norm_label": "code:bash (/phase-builder)",
+      "id": "cursor_new_ruflo_setup_codeblock_5"
+    },
+    {
+      "label": "Agent Commands",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L130",
+      "community": 15,
+      "norm_label": "agent commands",
+      "id": "cursor_new_ruflo_setup_agent_commands"
+    },
+    {
+      "label": "code:bash (# Search shared agent memory)",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L132",
+      "community": 15,
+      "norm_label": "code:bash (# search shared agent memory)",
+      "id": "cursor_new_ruflo_setup_codeblock_6"
+    },
+    {
+      "label": "AgentDB Namespaces",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L149",
+      "community": 15,
+      "norm_label": "agentdb namespaces",
+      "id": "cursor_new_ruflo_setup_agentdb_namespaces"
+    },
+    {
+      "label": "\ud83d\udcca Project State After Integration",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L166",
+      "community": 5,
+      "norm_label": "\ud83d\udcca project state after integration",
+      "id": "cursor_new_ruflo_setup_project_state_after_integration"
+    },
+    {
+      "label": "Next Steps",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L180",
+      "community": 14,
+      "norm_label": "next steps",
+      "id": "cursor_new_ruflo_setup_next_steps"
+    },
+    {
+      "label": "Immediate (Do These Now)",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L182",
+      "community": 14,
+      "norm_label": "immediate (do these now)",
+      "id": "cursor_new_ruflo_setup_immediate_do_these_now"
+    },
+    {
+      "label": "code:powershell (.\\install-ruflo-plugins.ps1)",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L185",
+      "community": 14,
+      "norm_label": "code:powershell (.\\install-ruflo-plugins.ps1)",
+      "id": "cursor_new_ruflo_setup_codeblock_7"
+    },
+    {
+      "label": "code:bash (npx ruflo@latest init --doctor)",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L190",
+      "community": 14,
+      "norm_label": "code:bash (npx ruflo@latest init --doctor)",
+      "id": "cursor_new_ruflo_setup_codeblock_8"
+    },
+    {
+      "label": "code:block9 (/phase-builder)",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L195",
+      "community": 14,
+      "norm_label": "code:block9 (/phase-builder)",
+      "id": "cursor_new_ruflo_setup_codeblock_9"
+    },
+    {
+      "label": "Phase 1 Execution (Autonomous Agent Team)",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L200",
+      "community": 14,
+      "norm_label": "phase 1 execution (autonomous agent team)",
+      "id": "cursor_new_ruflo_setup_phase_1_execution_autonomous_agent_team"
+    },
+    {
+      "label": "Option B: Multi-Agent Coaching Insights (Phase 7)",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L212",
+      "community": 14,
+      "norm_label": "option b: multi-agent coaching insights (phase 7)",
+      "id": "cursor_new_ruflo_setup_option_b_multi_agent_coaching_insights_phase_7"
+    },
+    {
+      "label": "Troubleshooting",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L224",
+      "community": 5,
+      "norm_label": "troubleshooting",
+      "id": "cursor_new_ruflo_setup_troubleshooting"
+    },
+    {
+      "label": "Plugin Installation Fails with \"spawn npm ENOENT\"",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L226",
+      "community": 5,
+      "norm_label": "plugin installation fails with \"spawn npm enoent\"",
+      "id": "cursor_new_ruflo_setup_plugin_installation_fails_with_spawn_npm_enoent"
+    },
+    {
+      "label": "Agents Not Spawning",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L235",
+      "community": 5,
+      "norm_label": "agents not spawning",
+      "id": "cursor_new_ruflo_setup_agents_not_spawning"
+    },
+    {
+      "label": "Knowledge Graph Not Updating",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L241",
+      "community": 5,
+      "norm_label": "knowledge graph not updating",
+      "id": "cursor_new_ruflo_setup_knowledge_graph_not_updating"
+    },
+    {
+      "label": "code:bash (cd ~/.claude/projects/d--Cursor-new)",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L245",
+      "community": 5,
+      "norm_label": "code:bash (cd ~/.claude/projects/d--cursor-new)",
+      "id": "cursor_new_ruflo_setup_codeblock_10"
+    },
+    {
+      "label": "Files Created/Modified",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L252",
+      "community": 5,
+      "norm_label": "files created/modified",
+      "id": "cursor_new_ruflo_setup_files_created_modified"
+    },
+    {
+      "label": "New Files",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L254",
+      "community": 5,
+      "norm_label": "new files",
+      "id": "cursor_new_ruflo_setup_new_files"
+    },
+    {
+      "label": "Modified Files",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L263",
+      "community": 5,
+      "norm_label": "modified files",
+      "id": "cursor_new_ruflo_setup_modified_files"
+    },
+    {
+      "label": "Architecture: Ruflo in Coach Task Tracker",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L271",
+      "community": 5,
+      "norm_label": "architecture: ruflo in coach task tracker",
+      "id": "cursor_new_ruflo_setup_architecture_ruflo_in_coach_task_tracker"
+    },
+    {
+      "label": "code:block11 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L273",
+      "community": 5,
+      "norm_label": "code:block11 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
+      "id": "cursor_new_ruflo_setup_codeblock_11"
+    },
+    {
+      "label": "Key Concepts",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L314",
+      "community": 5,
+      "norm_label": "key concepts",
+      "id": "cursor_new_ruflo_setup_key_concepts"
+    },
+    {
+      "label": "AgentDB Namespaces",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L316",
+      "community": 5,
+      "norm_label": "agentdb namespaces",
+      "id": "cursor_new_ruflo_setup_agentdb_namespaces_316"
+    },
+    {
+      "label": "Agent Consensus Voting",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L333",
+      "community": 5,
+      "norm_label": "agent consensus voting",
+      "id": "cursor_new_ruflo_setup_agent_consensus_voting"
+    },
+    {
+      "label": "Glossary",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L342",
+      "community": 5,
+      "norm_label": "glossary",
+      "id": "cursor_new_ruflo_setup_glossary"
+    },
+    {
+      "label": "Quick Commands Reference",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L358",
+      "community": 5,
+      "norm_label": "quick commands reference",
+      "id": "cursor_new_ruflo_setup_quick_commands_reference"
+    },
+    {
+      "label": "code:bash (# Trigger parallel agent team (Phase 1))",
+      "file_type": "document",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L360",
+      "community": 5,
+      "norm_label": "code:bash (# trigger parallel agent team (phase 1))",
+      "id": "cursor_new_ruflo_setup_codeblock_12"
+    },
+    {
+      "label": "install-ruflo-plugins.ps1",
+      "file_type": "code",
+      "source_file": "install-ruflo-plugins.ps1",
+      "source_location": "L1",
+      "community": 17,
+      "norm_label": "install-ruflo-plugins.ps1",
+      "id": "install_ruflo_plugins_ps1"
+    },
+    {
+      "label": "install-ruflo-plugins.sh",
+      "file_type": "code",
+      "source_file": "install-ruflo-plugins.sh",
+      "source_location": "L1",
+      "community": 16,
+      "norm_label": "install-ruflo-plugins.sh",
+      "id": "install_ruflo_plugins_sh"
+    },
+    {
+      "label": "PATH",
+      "file_type": "code",
+      "source_file": "install-ruflo-plugins.sh",
+      "source_location": "L8",
+      "community": 16,
+      "norm_label": "path",
+      "id": "cursor_new_install_ruflo_plugins_path"
+    },
+    {
+      "label": "auth-agent.md",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/auth-agent.md",
+      "source_location": "L1",
+      "community": 8,
+      "norm_label": "auth-agent.md",
+      "id": "claude_agents_coach_task_tracker_auth_agent_md"
+    },
+    {
+      "label": "Auth Agent \u2014 Coach Task Tracker",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/auth-agent.md",
+      "source_location": "L1",
+      "community": 8,
+      "norm_label": "auth agent \u2014 coach task tracker",
+      "id": "coach_task_tracker_auth_agent_auth_agent_coach_task_tracker"
+    },
+    {
+      "label": "Expertise",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/auth-agent.md",
+      "source_location": "L5",
+      "community": 8,
+      "norm_label": "expertise",
+      "id": "coach_task_tracker_auth_agent_expertise"
+    },
+    {
+      "label": "Responsibilities",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/auth-agent.md",
+      "source_location": "L13",
+      "community": 8,
+      "norm_label": "responsibilities",
+      "id": "coach_task_tracker_auth_agent_responsibilities"
+    },
+    {
+      "label": "Integration Points",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/auth-agent.md",
+      "source_location": "L20",
+      "community": 8,
+      "norm_label": "integration points",
+      "id": "coach_task_tracker_auth_agent_integration_points"
+    },
+    {
+      "label": "Success Criteria",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/auth-agent.md",
+      "source_location": "L26",
+      "community": 8,
+      "norm_label": "success criteria",
+      "id": "coach_task_tracker_auth_agent_success_criteria"
+    },
+    {
+      "label": "frontend-agent.md",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/frontend-agent.md",
+      "source_location": "L1",
+      "community": 9,
+      "norm_label": "frontend-agent.md",
+      "id": "claude_agents_coach_task_tracker_frontend_agent_md"
+    },
+    {
+      "label": "Frontend Agent \u2014 Coach Task Tracker",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/frontend-agent.md",
+      "source_location": "L1",
+      "community": 9,
+      "norm_label": "frontend agent \u2014 coach task tracker",
+      "id": "coach_task_tracker_frontend_agent_frontend_agent_coach_task_tracker"
+    },
+    {
+      "label": "Expertise",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/frontend-agent.md",
+      "source_location": "L5",
+      "community": 9,
+      "norm_label": "expertise",
+      "id": "coach_task_tracker_frontend_agent_expertise"
+    },
+    {
+      "label": "Responsibilities",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/frontend-agent.md",
+      "source_location": "L15",
+      "community": 9,
+      "norm_label": "responsibilities",
+      "id": "coach_task_tracker_frontend_agent_responsibilities"
+    },
+    {
+      "label": "Integration Points",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/frontend-agent.md",
+      "source_location": "L26",
+      "community": 9,
+      "norm_label": "integration points",
+      "id": "coach_task_tracker_frontend_agent_integration_points"
+    },
+    {
+      "label": "Success Criteria",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/frontend-agent.md",
+      "source_location": "L33",
+      "community": 9,
+      "norm_label": "success criteria",
+      "id": "coach_task_tracker_frontend_agent_success_criteria"
+    },
+    {
+      "label": "notification-agent.md",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/notification-agent.md",
+      "source_location": "L1",
+      "community": 10,
+      "norm_label": "notification-agent.md",
+      "id": "claude_agents_coach_task_tracker_notification_agent_md"
+    },
+    {
+      "label": "Notification Agent \u2014 Coach Task Tracker",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/notification-agent.md",
+      "source_location": "L1",
+      "community": 10,
+      "norm_label": "notification agent \u2014 coach task tracker",
+      "id": "coach_task_tracker_notification_agent_notification_agent_coach_task_tracker"
+    },
+    {
+      "label": "Expertise",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/notification-agent.md",
+      "source_location": "L5",
+      "community": 10,
+      "norm_label": "expertise",
+      "id": "coach_task_tracker_notification_agent_expertise"
+    },
+    {
+      "label": "Responsibilities",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/notification-agent.md",
+      "source_location": "L14",
+      "community": 10,
+      "norm_label": "responsibilities",
+      "id": "coach_task_tracker_notification_agent_responsibilities"
+    },
+    {
+      "label": "Integration Points",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/notification-agent.md",
+      "source_location": "L31",
+      "community": 10,
+      "norm_label": "integration points",
+      "id": "coach_task_tracker_notification_agent_integration_points"
+    },
+    {
+      "label": "Success Criteria",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/notification-agent.md",
+      "source_location": "L37",
+      "community": 10,
+      "norm_label": "success criteria",
+      "id": "coach_task_tracker_notification_agent_success_criteria"
+    },
+    {
+      "label": "task-manager-agent.md",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/task-manager-agent.md",
+      "source_location": "L1",
+      "community": 11,
+      "norm_label": "task-manager-agent.md",
+      "id": "claude_agents_coach_task_tracker_task_manager_agent_md"
+    },
+    {
+      "label": "Task Manager Agent \u2014 Coach Task Tracker",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/task-manager-agent.md",
+      "source_location": "L1",
+      "community": 11,
+      "norm_label": "task manager agent \u2014 coach task tracker",
+      "id": "coach_task_tracker_task_manager_agent_task_manager_agent_coach_task_tracker"
+    },
+    {
+      "label": "Expertise",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/task-manager-agent.md",
+      "source_location": "L5",
+      "community": 11,
+      "norm_label": "expertise",
+      "id": "coach_task_tracker_task_manager_agent_expertise"
+    },
+    {
+      "label": "Responsibilities",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/task-manager-agent.md",
+      "source_location": "L13",
+      "community": 11,
+      "norm_label": "responsibilities",
+      "id": "coach_task_tracker_task_manager_agent_responsibilities"
+    },
+    {
+      "label": "Integration Points",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/task-manager-agent.md",
+      "source_location": "L25",
+      "community": 11,
+      "norm_label": "integration points",
+      "id": "coach_task_tracker_task_manager_agent_integration_points"
+    },
+    {
+      "label": "Success Criteria",
+      "file_type": "document",
+      "source_file": ".claude/agents/coach-task-tracker/task-manager-agent.md",
+      "source_location": "L31",
+      "community": 11,
+      "norm_label": "success criteria",
+      "id": "coach_task_tracker_task_manager_agent_success_criteria"
+    },
+    {
+      "label": "phase-builder.md",
+      "file_type": "document",
+      "source_file": ".claude/agents/phase-builder.md",
+      "source_location": "L1",
+      "community": 4,
+      "norm_label": "phase-builder.md",
+      "id": "claude_agents_phase_builder_md"
+    },
+    {
+      "label": "Phase Builder Agent",
+      "file_type": "document",
+      "source_file": ".claude/agents/phase-builder.md",
+      "source_location": "L1",
+      "community": 4,
+      "norm_label": "phase builder agent",
+      "id": "agents_phase_builder_phase_builder_agent"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": ".claude/agents/phase-builder.md",
+      "source_location": "L5",
+      "community": 4,
+      "norm_label": "purpose",
+      "id": "agents_phase_builder_purpose"
+    },
+    {
+      "label": "When to Trigger",
+      "file_type": "document",
+      "source_file": ".claude/agents/phase-builder.md",
+      "source_location": "L12",
+      "community": 4,
+      "norm_label": "when to trigger",
+      "id": "agents_phase_builder_when_to_trigger"
+    },
+    {
+      "label": "code:block1 (User: \"Build Phase 1\")",
+      "file_type": "document",
+      "source_file": ".claude/agents/phase-builder.md",
+      "source_location": "L13",
+      "community": 4,
+      "norm_label": "code:block1 (user: \"build phase 1\")",
+      "id": "agents_phase_builder_codeblock_1"
+    },
+    {
+      "label": "Agent Swarm Composition",
+      "file_type": "document",
+      "source_file": ".claude/agents/phase-builder.md",
+      "source_location": "L21",
+      "community": 4,
+      "norm_label": "agent swarm composition",
+      "id": "agents_phase_builder_agent_swarm_composition"
+    },
+    {
+      "label": "Coordination Protocol",
+      "file_type": "document",
+      "source_file": ".claude/agents/phase-builder.md",
+      "source_location": "L27",
+      "community": 4,
+      "norm_label": "coordination protocol",
+      "id": "agents_phase_builder_coordination_protocol"
+    },
+    {
+      "label": "Agent Memory",
+      "file_type": "document",
+      "source_file": ".claude/agents/phase-builder.md",
+      "source_location": "L33",
+      "community": 4,
+      "norm_label": "agent memory",
+      "id": "agents_phase_builder_agent_memory"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "claude.md",
+      "id": "claude_md"
+    },
+    {
+      "label": "Coach Task Tracker",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "coach task tracker",
+      "id": "cursor_new_claude_coach_task_tracker"
+    },
+    {
+      "label": "Tech Stack",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L5",
+      "community": 2,
+      "norm_label": "tech stack",
+      "id": "cursor_new_claude_tech_stack"
+    },
+    {
+      "label": "Key Commands",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L12",
+      "community": 2,
+      "norm_label": "key commands",
+      "id": "cursor_new_claude_key_commands"
+    },
+    {
+      "label": "Code Conventions",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L16",
+      "community": 2,
+      "norm_label": "code conventions",
+      "id": "cursor_new_claude_code_conventions"
+    },
+    {
+      "label": "Nudge Logic",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L23",
+      "community": 2,
+      "norm_label": "nudge logic",
+      "id": "cursor_new_claude_nudge_logic"
+    },
+    {
+      "label": "Superpowers Workflow",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L28",
+      "community": 2,
+      "norm_label": "superpowers workflow",
+      "id": "cursor_new_claude_superpowers_workflow"
+    },
+    {
+      "label": "How to Use This Project",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L36",
+      "community": 2,
+      "norm_label": "how to use this project",
+      "id": "cursor_new_claude_how_to_use_this_project"
+    },
+    {
+      "label": "Links",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L42",
+      "community": 2,
+      "norm_label": "links",
+      "id": "cursor_new_claude_links"
+    },
+    {
+      "label": "graphify",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L47",
+      "community": 2,
+      "norm_label": "graphify",
+      "id": "cursor_new_claude_graphify"
+    },
+    {
+      "label": "Ruflo: Multi-Agent AI Orchestration",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L57",
+      "community": 2,
+      "norm_label": "ruflo: multi-agent ai orchestration",
+      "id": "cursor_new_claude_ruflo_multi_agent_ai_orchestration"
+    },
+    {
+      "label": "Development Acceleration (Option A)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L61",
+      "community": 2,
+      "norm_label": "development acceleration (option a)",
+      "id": "cursor_new_claude_development_acceleration_option_a"
+    },
+    {
+      "label": "Product Feature: Multi-Agent Coaching (Option B)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L70",
+      "community": 2,
+      "norm_label": "product feature: multi-agent coaching (option b)",
+      "id": "cursor_new_claude_product_feature_multi_agent_coaching_option_b"
+    },
+    {
+      "label": "Enterprise Platform (Option C)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L78",
+      "community": 2,
+      "norm_label": "enterprise platform (option c)",
+      "id": "cursor_new_claude_enterprise_platform_option_c"
+    },
+    {
+      "label": "When to Use Agent Commands",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L96",
+      "community": 2,
+      "norm_label": "when to use agent commands",
+      "id": "cursor_new_claude_when_to_use_agent_commands"
+    },
+    {
+      "label": "code:bash (# Trigger phase builder for parallel development)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L98",
+      "community": 2,
+      "norm_label": "code:bash (# trigger phase builder for parallel development)",
+      "id": "cursor_new_claude_codeblock_1"
+    },
+    {
+      "label": "Learning Loop",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L116",
+      "community": 2,
+      "norm_label": "learning loop",
+      "id": "cursor_new_claude_learning_loop"
+    },
+    {
+      "label": "Rules",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L122",
+      "community": 2,
+      "norm_label": "rules",
+      "id": "cursor_new_claude_rules"
+    },
+    {
+      "label": "ARCHITECTURE.md",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L1",
+      "community": 3,
+      "norm_label": "architecture.md",
+      "id": "docs_architecture_md"
+    },
+    {
+      "label": "Architecture Decisions",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L1",
+      "community": 3,
+      "norm_label": "architecture decisions",
+      "id": "docs_architecture_architecture_decisions"
+    },
+    {
+      "label": "SQLite over PostgreSQL",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L5",
+      "community": 3,
+      "norm_label": "sqlite over postgresql",
+      "id": "docs_architecture_sqlite_over_postgresql"
+    },
+    {
+      "label": "JWT over Sessions",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L9",
+      "community": 3,
+      "norm_label": "jwt over sessions",
+      "id": "docs_architecture_jwt_over_sessions"
+    },
+    {
+      "label": "node-cron over External Queue (Bull/Redis)",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L13",
+      "community": 3,
+      "norm_label": "node-cron over external queue (bull/redis)",
+      "id": "docs_architecture_node_cron_over_external_queue_bull_redis"
+    },
+    {
+      "label": "In-App Notifications over Email (MVP)",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L17",
+      "community": 3,
+      "norm_label": "in-app notifications over email (mvp)",
+      "id": "docs_architecture_in_app_notifications_over_email_mvp"
+    },
+    {
+      "label": "Polling (30s) over WebSockets",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L21",
+      "community": 3,
+      "norm_label": "polling (30s) over websockets",
+      "id": "docs_architecture_polling_30s_over_websockets"
+    },
+    {
+      "label": "Ruflo Multi-Agent Orchestration over Manual Development",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L25",
+      "community": 3,
+      "norm_label": "ruflo multi-agent orchestration over manual development",
+      "id": "docs_architecture_ruflo_multi_agent_orchestration_over_manual_development"
+    },
+    {
+      "label": "Project Structure",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L37",
+      "community": 3,
+      "norm_label": "project structure",
+      "id": "docs_architecture_project_structure"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L1",
+      "community": 1,
+      "norm_label": "contributing.md",
+      "id": "docs_contributing_md"
+    },
+    {
+      "label": "Contributing \u2014 Coach Task Tracker",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L1",
+      "community": 1,
+      "norm_label": "contributing \u2014 coach task tracker",
+      "id": "docs_contributing_contributing_coach_task_tracker"
+    },
+    {
+      "label": "Superpowers: Brainstorm \u2192 Design \u2192 Plan \u2192 Execute \u2192 Review",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L5",
+      "community": 1,
+      "norm_label": "superpowers: brainstorm \u2192 design \u2192 plan \u2192 execute \u2192 review",
+      "id": "docs_contributing_superpowers_brainstorm_design_plan_execute_review"
+    },
+    {
+      "label": "How Claude Works on This Project",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L9",
+      "community": 1,
+      "norm_label": "how claude works on this project",
+      "id": "docs_contributing_how_claude_works_on_this_project"
+    },
+    {
+      "label": "Knowledge Graph (Graphify)",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L22",
+      "community": 6,
+      "norm_label": "knowledge graph (graphify)",
+      "id": "docs_contributing_knowledge_graph_graphify"
+    },
+    {
+      "label": "Initial Setup (One-Time)",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L26",
+      "community": 6,
+      "norm_label": "initial setup (one-time)",
+      "id": "docs_contributing_initial_setup_one_time"
+    },
+    {
+      "label": "code:bash (# Generate the knowledge graph (requires API key))",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L27",
+      "community": 6,
+      "norm_label": "code:bash (# generate the knowledge graph (requires api key))",
+      "id": "docs_contributing_codeblock_1"
+    },
+    {
+      "label": "Using the Knowledge Graph",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L34",
+      "community": 6,
+      "norm_label": "using the knowledge graph",
+      "id": "docs_contributing_using_the_knowledge_graph"
+    },
+    {
+      "label": "code:bash (# Question-based search)",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L38",
+      "community": 6,
+      "norm_label": "code:bash (# question-based search)",
+      "id": "docs_contributing_codeblock_2"
+    },
+    {
+      "label": "Keeping the Graph Updated",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L51",
+      "community": 6,
+      "norm_label": "keeping the graph updated",
+      "id": "docs_contributing_keeping_the_graph_updated"
+    },
+    {
+      "label": "code:bash (graphify update .)",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L54",
+      "community": 6,
+      "norm_label": "code:bash (graphify update .)",
+      "id": "docs_contributing_codeblock_3"
+    },
+    {
+      "label": "Graph Outputs",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L60",
+      "community": 6,
+      "norm_label": "graph outputs",
+      "id": "docs_contributing_graph_outputs"
+    },
+    {
+      "label": "Git Workflow",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L69",
+      "community": 12,
+      "norm_label": "git workflow",
+      "id": "docs_contributing_git_workflow"
+    },
+    {
+      "label": "Branch Naming",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L71",
+      "community": 12,
+      "norm_label": "branch naming",
+      "id": "docs_contributing_branch_naming"
+    },
+    {
+      "label": "Commit Messages",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L77",
+      "community": 12,
+      "norm_label": "commit messages",
+      "id": "docs_contributing_commit_messages"
+    },
+    {
+      "label": "code:block4 ([Phase 1] Add JWT auth middleware and login route)",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L83",
+      "community": 12,
+      "norm_label": "code:block4 ([phase 1] add jwt auth middleware and login route)",
+      "id": "docs_contributing_codeblock_4"
+    },
+    {
+      "label": "code:block5 ([Phase 3] Implement task assignment with notifications)",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L93",
+      "community": 12,
+      "norm_label": "code:block5 ([phase 3] implement task assignment with notifications)",
+      "id": "docs_contributing_codeblock_5"
+    },
+    {
+      "label": "Pushing Changes",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L101",
+      "community": 12,
+      "norm_label": "pushing changes",
+      "id": "docs_contributing_pushing_changes"
+    },
+    {
+      "label": "Code Conventions",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L107",
+      "community": 1,
+      "norm_label": "code conventions",
+      "id": "docs_contributing_code_conventions"
+    },
+    {
+      "label": "Authentication & Authorization",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L109",
+      "community": 1,
+      "norm_label": "authentication & authorization",
+      "id": "docs_contributing_authentication_authorization"
+    },
+    {
+      "label": "Database",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L115",
+      "community": 1,
+      "norm_label": "database",
+      "id": "docs_contributing_database"
+    },
+    {
+      "label": "API Routes",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L120",
+      "community": 1,
+      "norm_label": "api routes",
+      "id": "docs_contributing_api_routes"
+    },
+    {
+      "label": "Frontend",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L125",
+      "community": 1,
+      "norm_label": "frontend",
+      "id": "docs_contributing_frontend"
+    },
+    {
+      "label": "Testing (Superpowers: RED-GREEN-REFACTOR)",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L131",
+      "community": 1,
+      "norm_label": "testing (superpowers: red-green-refactor)",
+      "id": "docs_contributing_testing_superpowers_red_green_refactor"
+    },
+    {
+      "label": "Coaching Tone",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L141",
+      "community": 1,
+      "norm_label": "coaching tone",
+      "id": "docs_contributing_coaching_tone"
+    },
+    {
+      "label": "Skills & Subagents (Superpowers)",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L153",
+      "community": 1,
+      "norm_label": "skills & subagents (superpowers)",
+      "id": "docs_contributing_skills_subagents_superpowers"
+    },
+    {
+      "label": "Agent-Powered Development (Ruflo)",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L170",
+      "community": 7,
+      "norm_label": "agent-powered development (ruflo)",
+      "id": "docs_contributing_agent_powered_development_ruflo"
+    },
+    {
+      "label": "Phase Builder Agent",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L174",
+      "community": 7,
+      "norm_label": "phase builder agent",
+      "id": "docs_contributing_phase_builder_agent"
+    },
+    {
+      "label": "code:bash (/phase-builder        # Triggers parallel agent swarm)",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L176",
+      "community": 7,
+      "norm_label": "code:bash (/phase-builder        # triggers parallel agent swarm)",
+      "id": "docs_contributing_codeblock_6"
+    },
+    {
+      "label": "Multi-Agent Coaching Insights (Option B, Phase 7)",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L189",
+      "community": 7,
+      "norm_label": "multi-agent coaching insights (option b, phase 7)",
+      "id": "docs_contributing_multi_agent_coaching_insights_option_b_phase_7"
+    },
+    {
+      "label": "Agent Commands",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L197",
+      "community": 7,
+      "norm_label": "agent commands",
+      "id": "docs_contributing_agent_commands"
+    },
+    {
+      "label": "code:bash (# Search shared agent memory)",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L199",
+      "community": 7,
+      "norm_label": "code:bash (# search shared agent memory)",
+      "id": "docs_contributing_codeblock_7"
+    },
+    {
+      "label": "AgentDB Namespaces",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L216",
+      "community": 7,
+      "norm_label": "agentdb namespaces",
+      "id": "docs_contributing_agentdb_namespaces"
+    },
+    {
+      "label": "Common Commands",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L222",
+      "community": 1,
+      "norm_label": "common commands",
+      "id": "docs_contributing_common_commands"
+    },
+    {
+      "label": "code:bash (# Run dev servers)",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L224",
+      "community": 1,
+      "norm_label": "code:bash (# run dev servers)",
+      "id": "docs_contributing_codeblock_8"
+    },
+    {
+      "label": "Debugging",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L246",
+      "community": 1,
+      "norm_label": "debugging",
+      "id": "docs_contributing_debugging"
+    },
+    {
+      "label": "Backend Won't Start",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L248",
+      "community": 1,
+      "norm_label": "backend won't start",
+      "id": "docs_contributing_backend_won_t_start"
+    },
+    {
+      "label": "Frontend Won't Connect",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L253",
+      "community": 1,
+      "norm_label": "frontend won't connect",
+      "id": "docs_contributing_frontend_won_t_connect"
+    },
+    {
+      "label": "Notifications Not Showing",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L258",
+      "community": 1,
+      "norm_label": "notifications not showing",
+      "id": "docs_contributing_notifications_not_showing"
+    },
+    {
+      "label": "Cron Jobs Not Running",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L263",
+      "community": 1,
+      "norm_label": "cron jobs not running",
+      "id": "docs_contributing_cron_jobs_not_running"
+    },
+    {
+      "label": "References",
+      "file_type": "document",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L268",
+      "community": 1,
+      "norm_label": "references",
+      "id": "docs_contributing_references"
+    },
+    {
+      "label": "ROADMAP.md",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L1",
+      "community": 0,
+      "norm_label": "roadmap.md",
+      "id": "docs_roadmap_md"
+    },
+    {
+      "label": "Build Roadmap \u2014 Coach Task Tracker",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L1",
+      "community": 0,
+      "norm_label": "build roadmap \u2014 coach task tracker",
+      "id": "docs_roadmap_build_roadmap_coach_task_tracker"
+    },
+    {
+      "label": "Phase 0 \u2014 Agentic Scaffold \u2705",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L5",
+      "community": 0,
+      "norm_label": "phase 0 \u2014 agentic scaffold \u2705",
+      "id": "docs_roadmap_phase_0_agentic_scaffold"
+    },
+    {
+      "label": "Phase 1 \u2014 Auth System",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L21",
+      "community": 0,
+      "norm_label": "phase 1 \u2014 auth system",
+      "id": "docs_roadmap_phase_1_auth_system"
+    },
+    {
+      "label": "Backend",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L24",
+      "community": 0,
+      "norm_label": "backend",
+      "id": "docs_roadmap_backend"
+    },
+    {
+      "label": "Frontend",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L33",
+      "community": 0,
+      "norm_label": "frontend",
+      "id": "docs_roadmap_frontend"
+    },
+    {
+      "label": "Phase 2 \u2014 Coach Management",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L47",
+      "community": 0,
+      "norm_label": "phase 2 \u2014 coach management",
+      "id": "docs_roadmap_phase_2_coach_management"
+    },
+    {
+      "label": "Backend",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L50",
+      "community": 0,
+      "norm_label": "backend",
+      "id": "docs_roadmap_backend_50"
+    },
+    {
+      "label": "Frontend",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L57",
+      "community": 0,
+      "norm_label": "frontend",
+      "id": "docs_roadmap_frontend_57"
+    },
+    {
+      "label": "Phase 3 \u2014 Task Assignment & Management",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L66",
+      "community": 0,
+      "norm_label": "phase 3 \u2014 task assignment & management",
+      "id": "docs_roadmap_phase_3_task_assignment_management"
+    },
+    {
+      "label": "Backend",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L69",
+      "community": 0,
+      "norm_label": "backend",
+      "id": "docs_roadmap_backend_69"
+    },
+    {
+      "label": "Frontend",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L80",
+      "community": 0,
+      "norm_label": "frontend",
+      "id": "docs_roadmap_frontend_80"
+    },
+    {
+      "label": "Phase 4 \u2014 Coach Dashboard & My Tasks",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L90",
+      "community": 0,
+      "norm_label": "phase 4 \u2014 coach dashboard & my tasks",
+      "id": "docs_roadmap_phase_4_coach_dashboard_my_tasks"
+    },
+    {
+      "label": "Frontend",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L93",
+      "community": 0,
+      "norm_label": "frontend",
+      "id": "docs_roadmap_frontend_93"
+    },
+    {
+      "label": "Phase 5 \u2014 Notifications System",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L103",
+      "community": 0,
+      "norm_label": "phase 5 \u2014 notifications system",
+      "id": "docs_roadmap_phase_5_notifications_system"
+    },
+    {
+      "label": "Backend",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L106",
+      "community": 0,
+      "norm_label": "backend",
+      "id": "docs_roadmap_backend_106"
+    },
+    {
+      "label": "Frontend",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L116",
+      "community": 0,
+      "norm_label": "frontend",
+      "id": "docs_roadmap_frontend_116"
+    },
+    {
+      "label": "Phase 6 \u2014 Polish & Admin Dashboard",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L124",
+      "community": 0,
+      "norm_label": "phase 6 \u2014 polish & admin dashboard",
+      "id": "docs_roadmap_phase_6_polish_admin_dashboard"
+    },
+    {
+      "label": "Frontend",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L125",
+      "community": 0,
+      "norm_label": "frontend",
+      "id": "docs_roadmap_frontend_125"
+    },
+    {
+      "label": "Security Audit",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L131",
+      "community": 0,
+      "norm_label": "security audit",
+      "id": "docs_roadmap_security_audit"
+    },
+    {
+      "label": "Phase 7 \u2014 Multi-Agent Coaching Insights (Option B)",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L142",
+      "community": 0,
+      "norm_label": "phase 7 \u2014 multi-agent coaching insights (option b)",
+      "id": "docs_roadmap_phase_7_multi_agent_coaching_insights_option_b"
+    },
+    {
+      "label": "Backend",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L145",
+      "community": 0,
+      "norm_label": "backend",
+      "id": "docs_roadmap_backend_145"
+    },
+    {
+      "label": "Frontend",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L157",
+      "community": 0,
+      "norm_label": "frontend",
+      "id": "docs_roadmap_frontend_157"
+    },
+    {
+      "label": "Ruflo Integration",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L162",
+      "community": 0,
+      "norm_label": "ruflo integration",
+      "id": "docs_roadmap_ruflo_integration"
+    },
+    {
+      "label": "Notes",
+      "file_type": "document",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L171",
+      "community": 0,
+      "norm_label": "notes",
+      "id": "docs_roadmap_notes"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ruflo_setup_md",
+      "target": "cursor_new_ruflo_setup_ruflo_multi_agent_orchestration_setup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_ruflo_multi_agent_orchestration_setup",
+      "target": "cursor_new_ruflo_setup_status_80_complete"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_ruflo_multi_agent_orchestration_setup",
+      "target": "cursor_new_ruflo_setup_pending_plugin_installation_windows_compatibility_issue"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_ruflo_multi_agent_orchestration_setup",
+      "target": "cursor_new_ruflo_setup_using_ruflo_now_already_available"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L166",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_ruflo_multi_agent_orchestration_setup",
+      "target": "cursor_new_ruflo_setup_project_state_after_integration"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L180",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_ruflo_multi_agent_orchestration_setup",
+      "target": "cursor_new_ruflo_setup_next_steps"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L224",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_ruflo_multi_agent_orchestration_setup",
+      "target": "cursor_new_ruflo_setup_troubleshooting"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L252",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_ruflo_multi_agent_orchestration_setup",
+      "target": "cursor_new_ruflo_setup_files_created_modified"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L271",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_ruflo_multi_agent_orchestration_setup",
+      "target": "cursor_new_ruflo_setup_architecture_ruflo_in_coach_task_tracker"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L314",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_ruflo_multi_agent_orchestration_setup",
+      "target": "cursor_new_ruflo_setup_key_concepts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L342",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_ruflo_multi_agent_orchestration_setup",
+      "target": "cursor_new_ruflo_setup_glossary"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L358",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_ruflo_multi_agent_orchestration_setup",
+      "target": "cursor_new_ruflo_setup_quick_commands_reference"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_status_80_complete",
+      "target": "cursor_new_ruflo_setup_completed_fully_automated"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_pending_plugin_installation_windows_compatibility_issue",
+      "target": "cursor_new_ruflo_setup_known_issue"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_pending_plugin_installation_windows_compatibility_issue",
+      "target": "cursor_new_ruflo_setup_workaround_use_powershell_script"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_pending_plugin_installation_windows_compatibility_issue",
+      "target": "cursor_new_ruflo_setup_13_plugins_to_install"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_known_issue",
+      "target": "cursor_new_ruflo_setup_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_workaround_use_powershell_script",
+      "target": "cursor_new_ruflo_setup_codeblock_2"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_workaround_use_powershell_script",
+      "target": "cursor_new_ruflo_setup_codeblock_3"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L81",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_workaround_use_powershell_script",
+      "target": "cursor_new_ruflo_setup_codeblock_4"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L113",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_using_ruflo_now_already_available",
+      "target": "cursor_new_ruflo_setup_phase_builder_parallel_agent_execution"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L130",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_using_ruflo_now_already_available",
+      "target": "cursor_new_ruflo_setup_agent_commands"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L149",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_using_ruflo_now_already_available",
+      "target": "cursor_new_ruflo_setup_agentdb_namespaces"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L116",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_phase_builder_parallel_agent_execution",
+      "target": "cursor_new_ruflo_setup_codeblock_5"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L132",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_agent_commands",
+      "target": "cursor_new_ruflo_setup_codeblock_6"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L182",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_next_steps",
+      "target": "cursor_new_ruflo_setup_immediate_do_these_now"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L200",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_next_steps",
+      "target": "cursor_new_ruflo_setup_phase_1_execution_autonomous_agent_team"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L212",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_next_steps",
+      "target": "cursor_new_ruflo_setup_option_b_multi_agent_coaching_insights_phase_7"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L185",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_immediate_do_these_now",
+      "target": "cursor_new_ruflo_setup_codeblock_7"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L190",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_immediate_do_these_now",
+      "target": "cursor_new_ruflo_setup_codeblock_8"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L195",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_immediate_do_these_now",
+      "target": "cursor_new_ruflo_setup_codeblock_9"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L226",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_troubleshooting",
+      "target": "cursor_new_ruflo_setup_plugin_installation_fails_with_spawn_npm_enoent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L235",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_troubleshooting",
+      "target": "cursor_new_ruflo_setup_agents_not_spawning"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L241",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_troubleshooting",
+      "target": "cursor_new_ruflo_setup_knowledge_graph_not_updating"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L245",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_knowledge_graph_not_updating",
+      "target": "cursor_new_ruflo_setup_codeblock_10"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L254",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_files_created_modified",
+      "target": "cursor_new_ruflo_setup_new_files"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L263",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_files_created_modified",
+      "target": "cursor_new_ruflo_setup_modified_files"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L273",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_architecture_ruflo_in_coach_task_tracker",
+      "target": "cursor_new_ruflo_setup_codeblock_11"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L316",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_key_concepts",
+      "target": "cursor_new_ruflo_setup_agentdb_namespaces_316"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L333",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_key_concepts",
+      "target": "cursor_new_ruflo_setup_agent_consensus_voting"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RUFLO_SETUP.md",
+      "source_location": "L360",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_ruflo_setup_quick_commands_reference",
+      "target": "cursor_new_ruflo_setup_codeblock_12"
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "install-ruflo-plugins.sh",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "install_ruflo_plugins_sh",
+      "target": "cursor_new_install_ruflo_plugins_path"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/auth-agent.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_agents_coach_task_tracker_auth_agent_md",
+      "target": "coach_task_tracker_auth_agent_auth_agent_coach_task_tracker"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/auth-agent.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "coach_task_tracker_auth_agent_auth_agent_coach_task_tracker",
+      "target": "coach_task_tracker_auth_agent_expertise"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/auth-agent.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "coach_task_tracker_auth_agent_auth_agent_coach_task_tracker",
+      "target": "coach_task_tracker_auth_agent_responsibilities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/auth-agent.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "coach_task_tracker_auth_agent_auth_agent_coach_task_tracker",
+      "target": "coach_task_tracker_auth_agent_integration_points"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/auth-agent.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "coach_task_tracker_auth_agent_auth_agent_coach_task_tracker",
+      "target": "coach_task_tracker_auth_agent_success_criteria"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/frontend-agent.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_agents_coach_task_tracker_frontend_agent_md",
+      "target": "coach_task_tracker_frontend_agent_frontend_agent_coach_task_tracker"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/frontend-agent.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "coach_task_tracker_frontend_agent_frontend_agent_coach_task_tracker",
+      "target": "coach_task_tracker_frontend_agent_expertise"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/frontend-agent.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "coach_task_tracker_frontend_agent_frontend_agent_coach_task_tracker",
+      "target": "coach_task_tracker_frontend_agent_responsibilities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/frontend-agent.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "coach_task_tracker_frontend_agent_frontend_agent_coach_task_tracker",
+      "target": "coach_task_tracker_frontend_agent_integration_points"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/frontend-agent.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "coach_task_tracker_frontend_agent_frontend_agent_coach_task_tracker",
+      "target": "coach_task_tracker_frontend_agent_success_criteria"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/notification-agent.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_agents_coach_task_tracker_notification_agent_md",
+      "target": "coach_task_tracker_notification_agent_notification_agent_coach_task_tracker"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/notification-agent.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "coach_task_tracker_notification_agent_notification_agent_coach_task_tracker",
+      "target": "coach_task_tracker_notification_agent_expertise"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/notification-agent.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "coach_task_tracker_notification_agent_notification_agent_coach_task_tracker",
+      "target": "coach_task_tracker_notification_agent_responsibilities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/notification-agent.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "coach_task_tracker_notification_agent_notification_agent_coach_task_tracker",
+      "target": "coach_task_tracker_notification_agent_integration_points"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/notification-agent.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "coach_task_tracker_notification_agent_notification_agent_coach_task_tracker",
+      "target": "coach_task_tracker_notification_agent_success_criteria"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/task-manager-agent.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_agents_coach_task_tracker_task_manager_agent_md",
+      "target": "coach_task_tracker_task_manager_agent_task_manager_agent_coach_task_tracker"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/task-manager-agent.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "coach_task_tracker_task_manager_agent_task_manager_agent_coach_task_tracker",
+      "target": "coach_task_tracker_task_manager_agent_expertise"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/task-manager-agent.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "coach_task_tracker_task_manager_agent_task_manager_agent_coach_task_tracker",
+      "target": "coach_task_tracker_task_manager_agent_responsibilities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/task-manager-agent.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "coach_task_tracker_task_manager_agent_task_manager_agent_coach_task_tracker",
+      "target": "coach_task_tracker_task_manager_agent_integration_points"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/coach-task-tracker/task-manager-agent.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "coach_task_tracker_task_manager_agent_task_manager_agent_coach_task_tracker",
+      "target": "coach_task_tracker_task_manager_agent_success_criteria"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/phase-builder.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_agents_phase_builder_md",
+      "target": "agents_phase_builder_phase_builder_agent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/phase-builder.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_phase_builder_phase_builder_agent",
+      "target": "agents_phase_builder_purpose"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/phase-builder.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_phase_builder_phase_builder_agent",
+      "target": "agents_phase_builder_when_to_trigger"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/phase-builder.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_phase_builder_phase_builder_agent",
+      "target": "agents_phase_builder_agent_swarm_composition"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/phase-builder.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_phase_builder_phase_builder_agent",
+      "target": "agents_phase_builder_coordination_protocol"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/phase-builder.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_phase_builder_phase_builder_agent",
+      "target": "agents_phase_builder_agent_memory"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/agents/phase-builder.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_phase_builder_when_to_trigger",
+      "target": "agents_phase_builder_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_md",
+      "target": "cursor_new_claude_coach_task_tracker"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_claude_coach_task_tracker",
+      "target": "cursor_new_claude_tech_stack"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_claude_coach_task_tracker",
+      "target": "cursor_new_claude_key_commands"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_claude_coach_task_tracker",
+      "target": "cursor_new_claude_code_conventions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_claude_coach_task_tracker",
+      "target": "cursor_new_claude_nudge_logic"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_claude_coach_task_tracker",
+      "target": "cursor_new_claude_superpowers_workflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_claude_coach_task_tracker",
+      "target": "cursor_new_claude_how_to_use_this_project"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_claude_coach_task_tracker",
+      "target": "cursor_new_claude_links"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_claude_coach_task_tracker",
+      "target": "cursor_new_claude_graphify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_claude_coach_task_tracker",
+      "target": "cursor_new_claude_ruflo_multi_agent_ai_orchestration"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_claude_ruflo_multi_agent_ai_orchestration",
+      "target": "cursor_new_claude_development_acceleration_option_a"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_claude_ruflo_multi_agent_ai_orchestration",
+      "target": "cursor_new_claude_product_feature_multi_agent_coaching_option_b"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_claude_ruflo_multi_agent_ai_orchestration",
+      "target": "cursor_new_claude_enterprise_platform_option_c"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_claude_ruflo_multi_agent_ai_orchestration",
+      "target": "cursor_new_claude_when_to_use_agent_commands"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L116",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_claude_ruflo_multi_agent_ai_orchestration",
+      "target": "cursor_new_claude_learning_loop"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_claude_ruflo_multi_agent_ai_orchestration",
+      "target": "cursor_new_claude_rules"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_claude_when_to_use_agent_commands",
+      "target": "cursor_new_claude_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_architecture_md",
+      "target": "docs_architecture_architecture_decisions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_architecture_architecture_decisions",
+      "target": "docs_architecture_sqlite_over_postgresql"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_architecture_architecture_decisions",
+      "target": "docs_architecture_jwt_over_sessions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_architecture_architecture_decisions",
+      "target": "docs_architecture_node_cron_over_external_queue_bull_redis"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_architecture_architecture_decisions",
+      "target": "docs_architecture_in_app_notifications_over_email_mvp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_architecture_architecture_decisions",
+      "target": "docs_architecture_polling_30s_over_websockets"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_architecture_architecture_decisions",
+      "target": "docs_architecture_ruflo_multi_agent_orchestration_over_manual_development"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURE.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_architecture_architecture_decisions",
+      "target": "docs_architecture_project_structure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_md",
+      "target": "docs_contributing_contributing_coach_task_tracker"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_contributing_coach_task_tracker",
+      "target": "docs_contributing_superpowers_brainstorm_design_plan_execute_review"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_contributing_coach_task_tracker",
+      "target": "docs_contributing_knowledge_graph_graphify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_contributing_coach_task_tracker",
+      "target": "docs_contributing_git_workflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_contributing_coach_task_tracker",
+      "target": "docs_contributing_code_conventions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L141",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_contributing_coach_task_tracker",
+      "target": "docs_contributing_coaching_tone"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L153",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_contributing_coach_task_tracker",
+      "target": "docs_contributing_skills_subagents_superpowers"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L170",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_contributing_coach_task_tracker",
+      "target": "docs_contributing_agent_powered_development_ruflo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L222",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_contributing_coach_task_tracker",
+      "target": "docs_contributing_common_commands"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L246",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_contributing_coach_task_tracker",
+      "target": "docs_contributing_debugging"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L268",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_contributing_coach_task_tracker",
+      "target": "docs_contributing_references"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_superpowers_brainstorm_design_plan_execute_review",
+      "target": "docs_contributing_how_claude_works_on_this_project"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_knowledge_graph_graphify",
+      "target": "docs_contributing_initial_setup_one_time"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_knowledge_graph_graphify",
+      "target": "docs_contributing_using_the_knowledge_graph"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_knowledge_graph_graphify",
+      "target": "docs_contributing_keeping_the_graph_updated"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L60",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_knowledge_graph_graphify",
+      "target": "docs_contributing_graph_outputs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_initial_setup_one_time",
+      "target": "docs_contributing_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_using_the_knowledge_graph",
+      "target": "docs_contributing_codeblock_2"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_keeping_the_graph_updated",
+      "target": "docs_contributing_codeblock_3"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_git_workflow",
+      "target": "docs_contributing_branch_naming"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_git_workflow",
+      "target": "docs_contributing_commit_messages"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L101",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_git_workflow",
+      "target": "docs_contributing_pushing_changes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_commit_messages",
+      "target": "docs_contributing_codeblock_4"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L93",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_commit_messages",
+      "target": "docs_contributing_codeblock_5"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L109",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_code_conventions",
+      "target": "docs_contributing_authentication_authorization"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L115",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_code_conventions",
+      "target": "docs_contributing_database"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_code_conventions",
+      "target": "docs_contributing_api_routes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L125",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_code_conventions",
+      "target": "docs_contributing_frontend"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L131",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_code_conventions",
+      "target": "docs_contributing_testing_superpowers_red_green_refactor"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L174",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_agent_powered_development_ruflo",
+      "target": "docs_contributing_phase_builder_agent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L189",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_agent_powered_development_ruflo",
+      "target": "docs_contributing_multi_agent_coaching_insights_option_b_phase_7"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L197",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_agent_powered_development_ruflo",
+      "target": "docs_contributing_agent_commands"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L216",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_agent_powered_development_ruflo",
+      "target": "docs_contributing_agentdb_namespaces"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L176",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_phase_builder_agent",
+      "target": "docs_contributing_codeblock_6"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L199",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_agent_commands",
+      "target": "docs_contributing_codeblock_7"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L224",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_common_commands",
+      "target": "docs_contributing_codeblock_8"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L248",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_debugging",
+      "target": "docs_contributing_backend_won_t_start"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L253",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_debugging",
+      "target": "docs_contributing_frontend_won_t_connect"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L258",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_debugging",
+      "target": "docs_contributing_notifications_not_showing"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/CONTRIBUTING.md",
+      "source_location": "L263",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_contributing_debugging",
+      "target": "docs_contributing_cron_jobs_not_running"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_md",
+      "target": "docs_roadmap_build_roadmap_coach_task_tracker"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_build_roadmap_coach_task_tracker",
+      "target": "docs_roadmap_phase_0_agentic_scaffold"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_build_roadmap_coach_task_tracker",
+      "target": "docs_roadmap_phase_1_auth_system"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_build_roadmap_coach_task_tracker",
+      "target": "docs_roadmap_phase_2_coach_management"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_build_roadmap_coach_task_tracker",
+      "target": "docs_roadmap_phase_3_task_assignment_management"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_build_roadmap_coach_task_tracker",
+      "target": "docs_roadmap_phase_4_coach_dashboard_my_tasks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L103",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_build_roadmap_coach_task_tracker",
+      "target": "docs_roadmap_phase_5_notifications_system"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L124",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_build_roadmap_coach_task_tracker",
+      "target": "docs_roadmap_phase_6_polish_admin_dashboard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L142",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_build_roadmap_coach_task_tracker",
+      "target": "docs_roadmap_phase_7_multi_agent_coaching_insights_option_b"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L171",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_build_roadmap_coach_task_tracker",
+      "target": "docs_roadmap_notes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_phase_1_auth_system",
+      "target": "docs_roadmap_backend"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_phase_1_auth_system",
+      "target": "docs_roadmap_frontend"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_phase_2_coach_management",
+      "target": "docs_roadmap_backend_50"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_phase_2_coach_management",
+      "target": "docs_roadmap_frontend_57"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_phase_3_task_assignment_management",
+      "target": "docs_roadmap_backend_69"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L80",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_phase_3_task_assignment_management",
+      "target": "docs_roadmap_frontend_80"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L93",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_phase_4_coach_dashboard_my_tasks",
+      "target": "docs_roadmap_frontend_93"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L106",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_phase_5_notifications_system",
+      "target": "docs_roadmap_backend_106"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L116",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_phase_5_notifications_system",
+      "target": "docs_roadmap_frontend_116"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L125",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_phase_6_polish_admin_dashboard",
+      "target": "docs_roadmap_frontend_125"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L131",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_phase_6_polish_admin_dashboard",
+      "target": "docs_roadmap_security_audit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L145",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_phase_7_multi_agent_coaching_insights_option_b",
+      "target": "docs_roadmap_backend_145"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L157",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_phase_7_multi_agent_coaching_insights_option_b",
+      "target": "docs_roadmap_frontend_157"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ROADMAP.md",
+      "source_location": "L162",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_phase_7_multi_agent_coaching_insights_option_b",
+      "target": "docs_roadmap_ruflo_integration"
+    }
+  ],
   "hyperedges": [],
-  "built_at_commit": "2fa8600e273342af23527e6668429e69af4ac599"
+  "built_at_commit": "9ab92d532fea41c8645195e48f5930494f226b68"
 }

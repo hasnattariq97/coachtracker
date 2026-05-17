@@ -54,18 +54,33 @@ Rules:
 - Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
 
-## Ruflo: Multi-Agent AI Orchestration
+## Ruflo: Multi-Agent AI Orchestration + SupaConductor Evaluation Framework
 
-This project uses **Ruflo** to orchestrate 100+ specialized agents for development acceleration and product features.
+This project uses **Ruflo** with **SupaConductor quality patterns** to orchestrate 100+ specialized agents for development acceleration with explicit quality gates.
 
-### Development Acceleration (Option A)
-The **Phase Builder Agent** spawns a team of domain agents that work in parallel:
+### Development Acceleration (Option A): Parallel Agents + Quality Evaluation
+The **Phase Builder Agent** spawns a team of domain agents in parallel, evaluates outputs through 4 specialized assessors, and Board of Directors voting:
+
+**Parallel Execution (Phase N):**
 - Auth Agent (JWT, bcrypt, session management)
 - Task Manager Agent (database schema, CRUD, lifecycle)
 - Frontend Agent (React components, routing, UI)
 - Notification Agent (cron jobs, nudge logic, messaging)
 
-Trigger: `/phase-builder` or `Build Phase 1` → agents coordinate via AgentDB, report consensus completion.
+**Quality Evaluation Gates (SupaConductor Pattern):**
+1. **UI/UX Evaluator** — responsive design, coaching tone, accessibility
+2. **Code Quality Evaluator** — linting, type safety, conventions, no secrets
+3. **Integration Evaluator** — API contracts, database schema, auth guards, idempotency
+4. **Business Logic Evaluator** — feature completeness, tests, ROADMAP alignment
+
+**Board of Directors Consensus (5 executives):**
+- Chief Architect, Chief Product Officer, Chief Security Officer, Chief Operating Officer, Chief Experience Officer
+- Each votes with rationale: APPROVE / REMEDIATE / ESCALATE
+- Consensus required (4/5+)
+- Fix loops (max 5 retries) if remediation needed
+- ESCALATE to human if max retries exhausted
+
+Trigger: `/phase-builder` or `Build Phase 1` → agents build in parallel → 4 evaluators assess → Board votes → results stored in AgentDB `phase-{N}-approved` or `phase-{N}-issues`
 
 ### Product Feature: Multi-Agent Coaching (Option B)
 When coaches submit completed tasks or delay reasons, a 3-agent swarm analyzes:
