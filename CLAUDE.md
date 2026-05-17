@@ -53,3 +53,75 @@ Rules:
 - If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
 - Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+
+## Ruflo: Multi-Agent AI Orchestration
+
+This project uses **Ruflo** to orchestrate 100+ specialized agents for development acceleration and product features.
+
+### Development Acceleration (Option A)
+The **Phase Builder Agent** spawns a team of domain agents that work in parallel:
+- Auth Agent (JWT, bcrypt, session management)
+- Task Manager Agent (database schema, CRUD, lifecycle)
+- Frontend Agent (React components, routing, UI)
+- Notification Agent (cron jobs, nudge logic, messaging)
+
+Trigger: `/phase-builder` or `Build Phase 1` → agents coordinate via AgentDB, report consensus completion.
+
+### Product Feature: Multi-Agent Coaching (Option B)
+When coaches submit completed tasks or delay reasons, a 3-agent swarm analyzes:
+1. **Pattern Agent**: compares to historical coach data
+2. **Growth Agent**: identifies learning opportunities
+3. **Risk Agent**: flags recurring delays or blockers
+
+Consensus → stored as `coaching_insights` (Phase 7, deferred).
+
+### Enterprise Platform (Option C)
+**MCP Servers:**
+- `ruflo` — core orchestration
+- `ruv-swarm` — team coordination
+- `flow-nexus` — autonomous workflows
+
+**13 Installed Plugins:**
+- Memory: agentdb, rag-memory, intelligence
+- Orchestration: swarm, autopilot, goals, workflows
+- Code Quality: testgen, docs, security-audit, observability
+- Enterprise: federation, adr, cost-tracker
+
+**AgentDB Namespaces:**
+- `phase-{N}` — agents working on phase N store shared progress
+- `claude-memories` — auto-synced from ~/.claude/projects/*/memory/
+- `patterns` — neural learning (SONA trajectories)
+- Reserved: do not shadow `pattern`, `default`
+
+### When to Use Agent Commands
+
+```bash
+# Trigger phase builder for parallel development
+/phase-builder
+Build Phase 1
+
+# Search shared agent memory
+/agentdb search "How do we handle overdue tasks?"
+
+# Spawn a specialized agent for a task
+/swarm spawn task-manager-agent "Implement task CRUD routes"
+
+# Check agent team status
+/swarm status
+
+# Export agent insights to memory
+/memory save-result --question "Q" --answer "A" --type query --nodes node1 node2
+```
+
+### Learning Loop
+- Agents store decisions in AgentDB
+- Pre-commit hook: consolidates learnings (pattern-consolidator.sh)
+- Post-session: insights exported to ~/.claude/projects/*/memory/MEMORY.md
+- Next session: agents auto-import learnings via SessionStart hook
+
+### Rules
+- Do NOT shadow reserved AgentDB namespaces
+- Agents coordinate via `phase-{N}` namespace only
+- All agent decisions logged in `.claude-flow/metrics/`
+- On failure: agents report blocker to AgentDB, await human intervention
+- Cost tracking: `/cost-tracker status` monitors token spend per phase

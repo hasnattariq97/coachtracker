@@ -1,0 +1,427 @@
+{
+  "D:\\Cursor_new\\.claude\\settings.json": {
+    "mtime": 1779000431.5086994,
+    "ast_hash": "c42a36319435aee7226cca5bf27e30f3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\hooks\\hooks-cursor.json": {
+    "mtime": 1778999838.0789075,
+    "ast_hash": "ad3db7a506ea39ec2ba4796d8587e01b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\hooks\\hooks.json": {
+    "mtime": 1778999838.0868857,
+    "ast_hash": "e3360afd26af98c2424b59736f43978a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\hooks\\on-stop.sh": {
+    "mtime": 1778235324.1312773,
+    "ast_hash": "82de46296d896eb00efacc52d7576cbe",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\hooks\\post-tool-use.sh": {
+    "mtime": 1778235318.0608585,
+    "ast_hash": "e0b5f7514df23965e313069e3555e029",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\hooks\\pre-tool-use.sh": {
+    "mtime": 1778235313.0862057,
+    "ast_hash": "aa0928b857c07eae216780f9e31dcfb8",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\hooks\\session-start": {
+    "mtime": 1778999838.1417396,
+    "ast_hash": "77858b3b0573e35e847932da16722cda",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\brainstorming\\scripts\\helper.js": {
+    "mtime": 1778999818.5728621,
+    "ast_hash": "cef288b6b4543910ffc7826c3a036a55",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\brainstorming\\scripts\\start-server.sh": {
+    "mtime": 1778999818.6127572,
+    "ast_hash": "386ba065fd00d2f3d8d5303c26d413f5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\brainstorming\\scripts\\stop-server.sh": {
+    "mtime": 1778999818.6257246,
+    "ast_hash": "3d59796ec5ca347c5eb95adbc4914bb8",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\condition-based-waiting-example.ts": {
+    "mtime": 1778999818.9608252,
+    "ast_hash": "8e502a8c1e9c7de15967202615d241d5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\find-polluter.sh": {
+    "mtime": 1778999819.033631,
+    "ast_hash": "2ae1144fa5a66aa26c13d644a12ad0bf",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\writing-skills\\render-graphs.js": {
+    "mtime": 1778999819.4774444,
+    "ast_hash": "e9d8be9caa34d327cac6f746f947cee0",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\CLAUDE.md": {
+    "mtime": 1779000431.4977283,
+    "ast_hash": "460992c30a55e6cb19080bf86dd66735",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\COMPLETION_REPORT.md": {
+    "mtime": 1778235996.473992,
+    "ast_hash": "d77c9a0ee364807ca19cde7f12085df1",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\DECISION.md": {
+    "mtime": 1778235162.676998,
+    "ast_hash": "bd6f468b003368783686309e00831ec9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\MEMORY.md": {
+    "mtime": 1778235156.5354612,
+    "ast_hash": "1dcf69df601e69232ce87d5b6168ea38",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\PLANNING.md": {
+    "mtime": 1778235338.9321966,
+    "ast_hash": "614dd194a0683bc28a56413904fc02db",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\README.md": {
+    "mtime": 1779000541.157859,
+    "ast_hash": "a2b60843d693610f742e2910cc9c4756",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\REORGANIZATION_SUMMARY.md": {
+    "mtime": 1778235874.8109984,
+    "ast_hash": "be3439af73b0acd66ca94b657ab63855",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\SESSION_LOG.md": {
+    "mtime": 1778235166.548384,
+    "ast_hash": "87ad212c725665da6ff120462fefe9ad",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\STRUCTURE_GUIDE.md": {
+    "mtime": 1778235958.1429088,
+    "ast_hash": "1cea637ac3f76a15a5722dd55f623689",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\SUPERPOWERS-CLAUDE.md": {
+    "mtime": 1778999853.1905842,
+    "ast_hash": "b4bc2abbb3c24de1ea51af6b447d678b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\SUPERPOWERS-INSTALLED.md": {
+    "mtime": 1778999889.761698,
+    "ast_hash": "d0ca63f7b94bd1a0d12ac29947777c02",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\ARCHITECTURE.md": {
+    "mtime": 1778235896.2630231,
+    "ast_hash": "d6c64b4b541ecfbb071232075b77635b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\SUPERPOWERS-INTEGRATION.md": {
+    "mtime": 1778999450.4996295,
+    "ast_hash": "5ee2f314cc05fc02bad6cc44510ea548",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\agents\\security-reviewer.md": {
+    "mtime": 1778235825.8427808,
+    "ast_hash": "baa72426aa5431c26e59c9780674efd2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\brainstorming\\SKILL.md": {
+    "mtime": 1778999818.4850984,
+    "ast_hash": "02d86f11c496ece51327cca35491c45c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\brainstorming\\spec-document-reviewer-prompt.md": {
+    "mtime": 1778999818.683568,
+    "ast_hash": "ea74c0f2369ae553c62f36af4ed3d424",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\brainstorming\\visual-companion.md": {
+    "mtime": 1778999818.6925435,
+    "ast_hash": "98407f42a43e3c3e3aae399376821e7e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\brainstorming\\scripts\\frame-template.html": {
+    "mtime": 1778999818.539951,
+    "ast_hash": "bae2f359c254d1563ecdd2b7396d545f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\dispatching-parallel-agents\\SKILL.md": {
+    "mtime": 1778999818.7274485,
+    "ast_hash": "af319c60c986d9024c49de78dff43593",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\executing-plans\\SKILL.md": {
+    "mtime": 1778999818.7404163,
+    "ast_hash": "63061f08162428574aeccec5d0ef1f26",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\finishing-a-development-branch\\SKILL.md": {
+    "mtime": 1778999818.7553754,
+    "ast_hash": "e9b367120e56b5d4f438225cd4861caf",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\receiving-code-review\\SKILL.md": {
+    "mtime": 1778999818.7713447,
+    "ast_hash": "dd0aadbca70fe3bedbd059b730a6edbb",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\requesting-code-review\\code-reviewer.md": {
+    "mtime": 1778999818.8062418,
+    "ast_hash": "11211d21337d0c498660f51edff7323b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\requesting-code-review\\SKILL.md": {
+    "mtime": 1778999818.789287,
+    "ast_hash": "f7d20aeaa4eca81b2617b6c68f3b91b9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\skill-api\\SKILL.md": {
+    "mtime": 1778235752.5294697,
+    "ast_hash": "62e6f35d53760d58d723833fea5f02d0",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\skill-auth\\SKILL.md": {
+    "mtime": 1778235712.35114,
+    "ast_hash": "6362c2e2ca236e892f00c6ead30eca15",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\skill-cron\\SKILL.md": {
+    "mtime": 1778235812.7162762,
+    "ast_hash": "bf700a569ecb22c909ca2f8fd58e3622",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\skill-db\\SKILL.md": {
+    "mtime": 1778235737.836699,
+    "ast_hash": "01d33dcd73c4c825af538aad48757e17",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\skill-frontend\\SKILL.md": {
+    "mtime": 1778235772.5289912,
+    "ast_hash": "1aca2d3cf2d3626e45d6a1c543e3df18",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\skill-notifications\\SKILL.md": {
+    "mtime": 1778235793.1034932,
+    "ast_hash": "e75b101f86ba5e1f3d1dc9674b4f2c55",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\skill-testing\\SKILL.md": {
+    "mtime": 1778999334.6134858,
+    "ast_hash": "87abbb499a7dd06e3410a9d5231f2b8b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\subagent-driven-development\\code-quality-reviewer-prompt.md": {
+    "mtime": 1778999818.8700676,
+    "ast_hash": "fc5e2ea930681d4228debaa3714f6ea0",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\subagent-driven-development\\implementer-prompt.md": {
+    "mtime": 1778999818.882037,
+    "ast_hash": "b856c2076801a91854adf094a907de9c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\subagent-driven-development\\SKILL.md": {
+    "mtime": 1778999818.8541093,
+    "ast_hash": "da1219128741a51fccc499a613072fc3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\subagent-driven-development\\spec-reviewer-prompt.md": {
+    "mtime": 1778999818.8949997,
+    "ast_hash": "ecc20717d0b31a9013ba732f366eba8f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\condition-based-waiting.md": {
+    "mtime": 1778999818.9897482,
+    "ast_hash": "c64d669f2490aa489c514304c9ad46d3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\CREATION-LOG.md": {
+    "mtime": 1778999818.914949,
+    "ast_hash": "b7ba553678c10cc2234dc9ae193d5347",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\defense-in-depth.md": {
+    "mtime": 1778999819.0067031,
+    "ast_hash": "002a0c9e8bee8fc29f85d7a434916977",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\root-cause-tracing.md": {
+    "mtime": 1778999819.0725257,
+    "ast_hash": "7e96b2fe346c89d4f2300341529178cc",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\SKILL.md": {
+    "mtime": 1778999818.9269164,
+    "ast_hash": "3a08f3330fce34e3b2104e7d97f64af0",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\test-academic.md": {
+    "mtime": 1778999819.086489,
+    "ast_hash": "272ab1d95e755a7ff9479d547168eef9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\test-pressure-1.md": {
+    "mtime": 1778999819.0954638,
+    "ast_hash": "3d8805e8946e3889d4de0e906af66c47",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\test-pressure-2.md": {
+    "mtime": 1778999819.1343613,
+    "ast_hash": "237f40dfd0b48af48d239ab3af499f7b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\test-pressure-3.md": {
+    "mtime": 1778999819.1572995,
+    "ast_hash": "42ea1bd281ca8d837f5dd45143762b95",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\test-driven-development\\SKILL.md": {
+    "mtime": 1778999819.1712692,
+    "ast_hash": "b349bbcc136f3f50c45f04d0917bdfc9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\test-driven-development\\testing-anti-patterns.md": {
+    "mtime": 1778999819.1842299,
+    "ast_hash": "f4373033bf29f06897cd63c994deb2a7",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\using-git-worktrees\\SKILL.md": {
+    "mtime": 1778999819.2111635,
+    "ast_hash": "19c5db98107c897bed0f70415e294015",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\using-superpowers\\SKILL.md": {
+    "mtime": 1778999819.2281108,
+    "ast_hash": "7e7a8bba2c866b16f5f05351faf2e2c5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\using-superpowers\\references\\codex-tools.md": {
+    "mtime": 1778999819.2640128,
+    "ast_hash": "980b647b2c982b5b31cf08b83823a284",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\using-superpowers\\references\\copilot-tools.md": {
+    "mtime": 1778999819.2809677,
+    "ast_hash": "d4424fd67d662e17b470d9560e1cd930",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\using-superpowers\\references\\gemini-tools.md": {
+    "mtime": 1778999819.2979243,
+    "ast_hash": "4f93c6d265d412b76c4ecc15c0c2e4b4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\verification-before-completion\\SKILL.md": {
+    "mtime": 1778999819.3128831,
+    "ast_hash": "ccf0e58c597adc512d920263562b5391",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\writing-plans\\plan-document-reviewer-prompt.md": {
+    "mtime": 1778999819.371726,
+    "ast_hash": "dcad0192c2c468107951d7dcb47246a9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\writing-plans\\SKILL.md": {
+    "mtime": 1778999819.3298395,
+    "ast_hash": "e9325200b86a2c27c64c4458e7943e34",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\writing-skills\\anthropic-best-practices.md": {
+    "mtime": 1778999819.400648,
+    "ast_hash": "05c7c66a824d55afc81f3be10dd04750",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\writing-skills\\persuasion-principles.md": {
+    "mtime": 1778999819.4485197,
+    "ast_hash": "5f0c22c7c8c3c5e12f255719833c2545",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\writing-skills\\SKILL.md": {
+    "mtime": 1778999819.3826954,
+    "ast_hash": "87cef13875b60fa4cd3bc5b3e64ec3d3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\writing-skills\\testing-skills-with-subagents.md": {
+    "mtime": 1778999819.4973896,
+    "ast_hash": "3b7b7942a42cb0450896d4b48cd49ed0",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\skills\\writing-skills\\examples\\CLAUDE_MD_TESTING.md": {
+    "mtime": 1778999819.4235866,
+    "ast_hash": "2980791d97afe0f32c2eb4a6264fb8e6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\docs\\API.md": {
+    "mtime": 1778235695.1670969,
+    "ast_hash": "e8c3e1245412dc7bebffa69e2dd2e195",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\docs\\ARCHITECTURE.md": {
+    "mtime": 1778235649.2197495,
+    "ast_hash": "e5602d11a66321282c964e732ae572a2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\docs\\CONTRIBUTING.md": {
+    "mtime": 1779000505.0450218,
+    "ast_hash": "054ae6ba2e2bafb1a7a838d796cb2129",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\docs\\ROADMAP.md": {
+    "mtime": 1778235665.6393094,
+    "ast_hash": "cb3c766a0ff8b3f645b21c2e81694a1a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\docs\\SUPERPOWERS-QUICK-START.md": {
+    "mtime": 1778999396.4058993,
+    "ast_hash": "e1ab98c00d3cebfc6ca2a9b5ebb5bd72",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\docs\\SUPERPOWERS.md": {
+    "mtime": 1778999307.339105,
+    "ast_hash": "dd6c08fd2f46f4623a6350d8b1aaa798",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\skills\\skill-api.md": {
+    "mtime": 1778235247.6413417,
+    "ast_hash": "031e2f9cf0518a21d994f209eb73a7eb",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\skills\\skill-auth.md": {
+    "mtime": 1778235221.9848847,
+    "ast_hash": "cc5c0aac8ae441fdeda29a8e1a39cf63",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\skills\\skill-cron.md": {
+    "mtime": 1778235295.336897,
+    "ast_hash": "fa1d53b940c5afb157b54b2047132201",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\skills\\skill-db.md": {
+    "mtime": 1778235235.1857543,
+    "ast_hash": "2d48e6fc7b0ae89701caa32b7bfe003b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\skills\\skill-frontend.md": {
+    "mtime": 1778235262.7752953,
+    "ast_hash": "4dbddf6e660ceb4e45e2cccb1bfbe673",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\skills\\skill-notifications.md": {
+    "mtime": 1778235281.5988643,
+    "ast_hash": "13da0d75d7b48eeb50218a913eac1b26",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\skills\\skill-orchestrator.md": {
+    "mtime": 1778235212.1951394,
+    "ast_hash": "d3a8f47f9250bfa89d538ae4f7d5ebd1",
+    "semantic_hash": ""
+  }
+}

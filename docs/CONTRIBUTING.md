@@ -167,6 +167,58 @@ For complex tasks, use Agent tool:
 - `Agent(Explore)` — find code by pattern
 - `Agent(general-purpose)` — multi-step implementation
 
+## Agent-Powered Development (Ruflo)
+
+This project uses **Ruflo** to orchestrate 90+ specialized agents for development acceleration.
+
+### Phase Builder Agent
+Spawns a team of domain agents that work in parallel on phases:
+```bash
+/phase-builder        # Triggers parallel agent swarm
+Build Phase 1         # Natural language trigger
+```
+
+**Domain agents (in `.claude/agents/coach-task-tracker/`):**
+- `auth-agent.md` — JWT, bcrypt, authentication
+- `task-manager-agent.md` — database schema, CRUD, lifecycle
+- `frontend-agent.md` — React components, routing, UI
+- `notification-agent.md` — cron jobs, nudge logic, messaging
+
+All agents coordinate via **AgentDB** namespace `phase-{N}` for shared progress.
+
+### Multi-Agent Coaching Insights (Option B, Phase 7)
+When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm analyzes:
+1. **Pattern Agent** — compares to historical coach data
+2. **Growth Agent** — identifies learning opportunities
+3. **Risk Agent** — flags recurring delays or blockers
+
+Consensus → stored as `coaching_insights` notification to coach.
+
+### Agent Commands
+
+```bash
+# Search shared agent memory
+/agentdb search "How do we handle overdue tasks?"
+
+# Spawn specialized agent for a task
+/swarm spawn task-manager-agent "Implement task CRUD routes"
+
+# Check agent team status
+/swarm status
+
+# View cost tracking
+/cost-tracker status
+
+# Save agent insights to project memory
+/memory save-result --question "Q" --answer "A" --nodes node1 node2
+```
+
+### AgentDB Namespaces
+- `phase-{N}` — agents working on phase N store shared progress
+- `claude-memories` — auto-synced from `~/.claude/projects/*/memory/`
+- `patterns` — neural learning trajectories (SONA)
+- Reserved: do NOT shadow `pattern`, `default`
+
 ## Common Commands
 
 ```bash

@@ -22,6 +22,18 @@ Why we chose certain technologies and patterns.
 **Why:** Simpler implementation. Notifications are not real-time critical.
 **Trade-off:** Up to 30s delay. Acceptable for coaching workflow.
 
+## Ruflo Multi-Agent Orchestration over Manual Development
+**Why:** Parallelize phase builds (auth + task-mgmt + frontend + notifications simultaneously). Share learnings across agents via AgentDB. Reduce human context switching.
+**Trade-off:** Added orchestration complexity. Agents may hallucinate. Requires MCP server setup.
+**Benefit:** 90+ specialized agents available for code generation, testing, docs, security audit, observability.
+
+**Implementations:**
+- **Option A:** Development acceleration — agents build phases faster in parallel
+- **Option B:** Product feature — multi-agent coaching analysis (Phase 7) — consensus swarm analyzes coach behavior
+- **Option C:** Enterprise platform — federation, zero-trust teams, cost tracking, ADR management
+
+See [@CLAUDE.md](../CLAUDE.md#ruflo-multi-agent-ai-orchestration) for agent commands and AgentDB usage.
+
 ## Project Structure
 - **Backend:** server/ with Express, SQLite, node-cron
 - **Frontend:** client/ with React, Vite, TailwindCSS

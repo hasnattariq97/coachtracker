@@ -139,6 +139,35 @@ Phased implementation checklist. Find the first unchecked task and read the rele
 
 ---
 
+## Phase 7 — Multi-Agent Coaching Insights (Option B)
+**Read:** [@CLAUDE.md — Ruflo Multi-Agent Coaching](../CLAUDE.md#product-feature-multi-agent-coaching-option-b)
+
+### Backend
+- [ ] Create `server/agents/coaching-swarm.js` — Ruflo swarm initialization
+  - 3-agent consensus: Pattern Agent, Growth Agent, Risk Agent
+  - Triggered on task completion or delay reason submission
+  - Store consensus in AgentDB, write result to `coaching_insights` table
+- [ ] Create server/routes/insights.js
+  - GET /api/coaches/:id/insights (list coaching insights for coach)
+  - Analysis available after task completion
+- [ ] Create `coaching_insights` database table
+  - coach_id, task_id, pattern_type ('strength' | 'growth' | 'risk')
+  - agent_consensus (JSON), message, created_at
+
+### Frontend
+- [ ] Create client/src/components/CoachInsights.jsx (display insights with coaching tone)
+- [ ] Add insights panel to coach dashboard
+- [ ] Show patterns, growth opportunities, risk flags
+
+### Ruflo Integration
+- [ ] Spawn analysis swarm on task completion: `/swarm spawn coaching-swarm`
+- [ ] Consensus voting: 2/3 agents agree on pattern classification
+- [ ] Store learnings in AgentDB namespace `coaching-insights-{coach_id}`
+
+**Verify:** Complete task → coaching swarm analyzes → insight appears in dashboard.
+
+---
+
 ## Notes
 - Each phase has verification steps; run them before moving to next phase
 - Seed admin: admin@tracker.com / admin123
