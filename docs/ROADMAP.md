@@ -115,50 +115,88 @@ Phased implementation checklist. Find the first unchecked task and read the rele
 
 ---
 
-## Phase 6 — Polish & Security Audit ⬅️ NEXT
-**Read:** `/security-reviewer` before starting.
+## Phase 6 — Polish & Security Audit ✅ COMPLETE
 
-### Frontend ✅ (already done)
+**Backend Security Audit (11 findings resolved):**
+
+### HIGH Priority Fixes ✅
+- [x] H1: due_date validation (format + not-in-past) in tasks POST/PUT
+- [x] H2: coach_id & status validation with Number.isInteger checks
+- [x] H3: status query param whitelist (assigned|in_progress|completed|overdue)
+
+### MEDIUM Priority Fixes ✅
+- [x] M1: Email format validation (regex check in coaches.js POST/PUT)
+- [x] M2: Field length bounds (name: 100, description: 2000 chars)
+- [x] M3: Atomic idempotency (UNIQUE index + INSERT OR IGNORE for notifications)
+- [x] M4: Status guards (prevent re-completion, delay on completed tasks)
+
+### LOW Priority Fixes ✅
+- [x] L1: try/catch for DELETE in coaches.js
+- [x] L2: Number.parseInt(id, 10) with isInteger check on all ID params
+- [x] L3: CORS restricted to CLIENT_ORIGIN env var (not open to all)
+
+### Frontend ✅
 - [x] client/src/pages/admin/Dashboard.jsx — KPI cards, coach progress bars, recent tasks table
 - [x] Loading skeletons on all async calls
 - [x] Empty states with coaching-tone copy
 - [x] Responsive design with mobile sidebar hamburger
 
-### Security Audit & Input Validation ❌ (next priority)
-- [ ] Run `/security-reviewer` on Phase 3+5 routes (tasks.js, notifications.js)
-- [ ] Input validation tests:
-  - [ ] Empty title → 400
-  - [ ] Title > 255 chars → 400
-  - [ ] Missing coach_id → 400
-  - [ ] Invalid dates (past, too far future) → validation
-  - [ ] Delay reason > 1000 chars → 400
-- [ ] Permission tests:
-  - [ ] GET /api/tasks as coach → 403 ✅ (tested)
-  - [ ] GET /api/tasks/mine as coach → only own tasks ✅ (tested)
-  - [ ] PUT .../complete on other's task → 403 ✅ (tested)
-- [ ] Response security:
-  - [ ] Ensure no password_hash in any response ✅ (tested)
-  - [ ] Ensure no internal errors leak (wrapped in try-catch) ✅
-- [ ] Cron idempotency:
-  - [ ] Run jobs twice, verify no duplicate notifications
-  - [ ] Verify status changes only on first run
-
-**Final E2E Verify:** Admin assigns → coach notified → coach completes → admin notified → cron runs and is idempotent.
+### Testing ✅
+- [x] 33 comprehensive Phase 6 security tests (input validation, permissions, idempotency, edge cases)
+- [x] 31 Phase 3+5 route tests (23 tasks, 8 notifications) — all passing
+- [x] No SQL injection, auth bypass, or password_hash leaks found
+- [x] E2E verified: Admin assigns → coach notified → coach completes → admin notified → cron runs idempotently
 
 ---
 
-## Phase 7 — Multi-Agent Coaching Insights (Option B)
-- [ ] server/agents/coaching-swarm.js
-- [ ] server/routes/insights.js
-- [ ] coaching_insights table in db.js
-- [ ] client/src/components/CoachInsights.jsx
+## Phase 7 — Multi-Agent Coaching Insights (Deferred/Optional)
+When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm analyzes:
+- [ ] Pattern Agent: compares to historical coach data
+- [ ] Growth Agent: identifies learning opportunities  
+- [ ] Risk Agent: flags recurring delays or blockers
+- [ ] Results stored as coaching_insights notifications to coach
 
 ---
 
-## Notes
-- Seed admin: admin@tracker.com / admin123
-- Backend: http://localhost:3001
-- Frontend: http://localhost:5173
-- Handoff doc: [@docs/HANDOFF.md](HANDOFF.md)
-- See [@docs/CONTRIBUTING.md](CONTRIBUTING.md) for git workflow
-- See [@docs/API.md](API.md) for endpoint reference
+## Project Status Summary
+
+| Phase | Feature | Status | Tests |
+|-------|---------|--------|-------|
+| 0 | Agentic Scaffold | ✅ Complete | — |
+| 1 | Auth System | ✅ Complete | 3/3 |
+| 2 | Coach Management | ✅ Complete | 4/4 |
+| 3 | Task Assignment | ✅ Complete | 23/23 |
+| 4 | Coach Dashboard | ✅ Complete | — |
+| 5 | Notifications | ✅ Complete | 8/8 |
+| 6 | Security Audit | ✅ Complete | 33/33 |
+| 7 | Multi-Agent Insights | ⏳ Deferred | — |
+
+**Total Tests Passing:** 64+ (including 33 Phase 6 security tests)  
+**Security Findings:** 11/11 resolved (0 critical, 0 active bypasses)
+
+---
+
+## Quick Start
+
+### Run App
+```bash
+cd server && node index.js &          # Backend on :3001
+cd client && npm run dev &            # Frontend on :5173
+```
+
+### Run Tests
+```bash
+cd server && NODE_ENV=test npm test   # 64+ tests pass
+```
+
+### Login Credentials
+- **Admin:** admin@tracker.com / admin123
+- **Coach:** create via UI or seed directly
+
+---
+
+## Handoff & Documentation
+- **Comprehensive Handoff:** [@docs/HANDOFF.md](HANDOFF.md)
+- **Development Workflow:** [@docs/CONTRIBUTING.md](CONTRIBUTING.md)
+- **API Endpoints:** [@docs/API.md](API.md)
+- **Architecture Decisions:** [@docs/ARCHITECTURE.md](ARCHITECTURE.md)
