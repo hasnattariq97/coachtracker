@@ -2,12 +2,14 @@
   "version": "1.0",
   "created_at": "2026-05-17T00:00:00Z",
   "project": "Coach Task Tracker",
-  "session_count": 1,
+  "session_count": 2,
   "bead_count": {
-    "status": 1,
+    "status": 3,
     "decisions": 0,
     "failures": 0
   },
-  "phases_tracked": ["0"],
-  "last_updated": "2026-05-17T00:00:00Z"
+  "phases_tracked": ["0", "1", "2", "3"],
+  "last_updated": "2026-06-02T14:30:00Z",
+  "open_beads": 1,
+  "note": "SessionStart hook enabled. Open beads auto-injected at session start."
 }

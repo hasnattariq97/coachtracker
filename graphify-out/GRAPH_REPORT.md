@@ -1,16 +1,16 @@
 # Graph Report - Cursor_new  (2026-05-17)
 
 ## Corpus Check
-- 121 files · ~98,952 words
+- 125 files · ~99,796 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 740 nodes · 787 edges · 64 communities (60 shown, 4 thin omitted)
+- 761 nodes · 814 edges · 59 communities (54 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f33191a0`
+- Built from commit: `409dcbbb`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -62,18 +62,12 @@
 - [[_COMMUNITY_Community 49|Community 49]]
 - [[_COMMUNITY_Community 50|Community 50]]
 - [[_COMMUNITY_Community 51|Community 51]]
-- [[_COMMUNITY_Community 57|Community 57]]
-- [[_COMMUNITY_Community 58|Community 58]]
-- [[_COMMUNITY_Community 59|Community 59]]
-- [[_COMMUNITY_Community 60|Community 60]]
-- [[_COMMUNITY_Community 61|Community 61]]
-- [[_COMMUNITY_Community 62|Community 62]]
 - [[_COMMUNITY_Community 63|Community 63]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Phase 1: Auth System Implementation Plan` - 20 edges
-2. `Master Capabilities Reference` - 15 edges
-3. `devDependencies` - 13 edges
+2. `devDependencies` - 19 edges
+3. `Master Capabilities Reference` - 15 edges
 4. `Ruflo Multi-Agent Orchestration Setup` - 12 edges
 5. `Task 16: End-to-End Verification` - 11 edges
 6. `Installation & Setup` - 11 edges
@@ -83,9 +77,10 @@
 10. `Contributing — Coach Task Tracker` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
-- None detected - all connections are within the same source files.
+- `TestComponent()` --calls--> `useAuth()`  [EXTRACTED]
+  src/context/AuthContext.test.jsx → src/context/AuthContext.jsx
 
-## Communities (64 total, 4 thin omitted)
+## Communities (59 total, 5 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.08
@@ -104,16 +99,16 @@ Cohesion: 0.22
 Nodes (8): Architecture Decisions, In-App Notifications over Email (MVP), JWT over Sessions, node-cron over External Queue (Bull/Redis), Polling (30s) over WebSockets, Project Structure, Ruflo Multi-Agent Orchestration over Manual Development, SQLite over PostgreSQL
 
 ### Community 4 - "Community 4"
-Cohesion: 0.09
-Nodes (25): 1. UI/UX Evaluator, 2. Code Quality Evaluator, 3. Integration Evaluator, 4. Business Logic Evaluator, Agent Memory, Agent Swarm Composition, Board Consensus Rules, Board Deliberation Protocol (+17 more)
+Cohesion: 0.06
+Nodes (39): 1. Decision Logging (→ `.beads/decisions.jsonl`), 1. UI/UX Evaluator, 2. Code Quality Evaluator, 2. Failure Logging (→ `.beads/failures.jsonl`) — on REMEDIATE/ESCALATE, 3. Integration Evaluator, 3. Work Item Tracking (→ `.beads/status.jsonl`), 4. Business Logic Evaluator, 4. SessionStart Injection (+31 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.05
 Nodes (41): 13 Plugins to Install, Agent Commands, Agent Consensus Voting, AgentDB Namespaces, AgentDB Namespaces, Agents Not Spawning, Architecture: Ruflo in Coach Task Tracker, code:block1 ([PluginManager] Failed to install ruflo-agentdb: spawn npm E) (+33 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.39
-Nodes (7): adminExists, bcrypt, Database, db, dbPath, hashedPassword, path
+Cohesion: 0.24
+Nodes (9): AuthContext, AuthProvider(), loginButton, loginPromise, logoutButton, TestComponent(), user, userSetup (+1 more)
 
 ### Community 7 - "Community 7"
 Cohesion: 0.18
@@ -148,8 +143,8 @@ Cohesion: 0.06
 Nodes (31): code:markdown (---), code:markdown (---), code:javascript (/**), code:json ({), code:bash (grep -r "^phase: \"1\"" docs/ .claude/), code:bash (grep -r "^status: \"deprecated\"" .), code:bash (# (use your date command to compute cutoff)), code:markdown (---) (+23 more)
 
 ### Community 15 - "Community 15"
-Cohesion: 0.08
-Nodes (39): bcrypt, db, express, { generateToken }, isValidEmail(), normalizedEmail, router, app (+31 more)
+Cohesion: 0.07
+Nodes (46): bcrypt, db, express, { generateToken }, isValidEmail(), normalizedEmail, router, app (+38 more)
 
 ### Community 19 - "Community 19"
 Cohesion: 0.1
@@ -168,16 +163,16 @@ Cohesion: 0.1
 Nodes (21): 1. File Operations, 2. Shell Operations, 3. Code Understanding, Available Tools, Bash, code:bash (Read(file_path)), code:bash (Write(file_path, content)), code:bash (Edit(file_path, old_string, new_string)) (+13 more)
 
 ### Community 23 - "Community 23"
-Cohesion: 0.29
-Nodes (7): 1. Local Memory (.claude/projects/*/memory/), code:block35 (.claude/projects/{project_name}/memory/), code:markdown (---), code:markdown (---), code:markdown (---), code:markdown (---), Memory Types
+Cohesion: 0.05
+Nodes (42): 1. Local Memory (.claude/projects/*/memory/), 2. AgentDB (Ruflo Vector Database), 3. SONA Learning (Neural Trajectories), Agent Best Practices, Best Practices, Building a Feature (Superpowers Cycle), Claude Core Capabilities, Code Conventions (Language-Neutral) (+34 more)
 
 ### Community 24 - "Community 24"
 Cohesion: 0.07
 Nodes (40): Beads Work-Tracking System, Claude Code CLI, code:bash (# Install the superpowers framework), code:bash (/using-superpowers), code:bash (# Via pip), code:bash (export ANTHROPIC_API_KEY="sk-ant-..."), code:bash (# Already set up if .git/hooks/post-commit exists), code:bash (# Core orchestration) (+32 more)
 
 ### Community 27 - "Community 27"
-Cohesion: 0.07
-Nodes (29): dependencies, axios, react, react-dom, react-hot-toast, react-router-dom, @tailwindcss/postcss, devDependencies (+21 more)
+Cohesion: 0.06
+Nodes (35): dependencies, axios, react, react-dom, react-hot-toast, react-router-dom, @tailwindcss/postcss, devDependencies (+27 more)
 
 ### Community 28 - "Community 28"
 Cohesion: 0.09
@@ -255,54 +250,26 @@ Nodes (4): code:javascript (import React, { useState, useEffect } from 'react';)
 Cohesion: 0.67
 Nodes (3): code:javascript (import request from 'supertest';), code:bash (cd d:\Cursor_new\server), Task 6: Implement Login Endpoint (RED)
 
-### Community 48 - "Community 48"
-Cohesion: 0.29
-Nodes (7): Building a Feature (Superpowers Cycle), code:block45 (1. BRAINSTORM), code:block46 (1. REPRODUCE), code:block47 (Task: Build multi-user system), Debugging a Bug (Systematic Approach), Parallel Agent Development, Patterns & Workflows
-
-### Community 57 - "Community 57"
-Cohesion: 0.14
-Nodes (14): 1. Decision Logging (→ `.beads/decisions.jsonl`), 2. Failure Logging (→ `.beads/failures.jsonl`) — on REMEDIATE/ESCALATE, 3. Work Item Tracking (→ `.beads/status.jsonl`), 4. SessionStart Injection, 5. Stop Hook Reminders, 6. Bead Lifecycle, 7. Cross-Session Durability, code:json ({) (+6 more)
-
-### Community 58 - "Community 58"
-Cohesion: 0.29
-Nodes (6): Claude Core Capabilities, Guarantees & Constraints, Master Capabilities Reference, Reasoning Powers, Table of Contents, When to Use Each Tool/Framework
-
-### Community 59 - "Community 59"
-Cohesion: 0.29
-Nodes (7): Code Review (Two-Stage), code:javascript (// RED: Write failing test first), code:block43 ([Phase #] Brief description), code:block44 ([Phase 2] Add user authentication with JWT), Commit Message Format, Development Methodologies, Test-First Development (RED-GREEN-REFACTOR)
-
-### Community 60 - "Community 60"
-Cohesion: 0.47
-Nodes (6): code:bash (# Step 1: Initialize Claude Code), Distribution & Usage, For Agents, For Projects, For Teams, Plugin Checklist for New Projects
-
-### Community 61 - "Community 61"
-Cohesion: 0.4
-Nodes (5): 2. AgentDB (Ruflo Vector Database), 3. SONA Learning (Neural Trajectories), code:bash (# Search agent knowledge), code:block41 ("When task deadline < 1 week, add hourly reminders"), Memory & Learning Systems
-
-### Community 62 - "Community 62"
-Cohesion: 0.5
-Nodes (4): Agent Best Practices, Best Practices, Code Conventions (Language-Neutral), Documentation Best Practices
-
 ### Community 63 - "Community 63"
 Cohesion: 0.67
 Nodes (3): code:javascript (import { render, screen, waitFor } from '@testing-library/re), code:bash (cd d:\Cursor_new\client), Task 9: Create React AuthContext (RED)
 
 ## Knowledge Gaps
-- **407 isolated node(s):** `validationErrors`, `normalizedEmail`, `request`, `app`, `db` (+402 more)
+- **416 isolated node(s):** `dev`, `build`, `lint`, `preview`, `test` (+411 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Master Capabilities Reference` connect `Community 58` to `Community 7`, `Community 13`, `Community 48`, `Community 19`, `Community 22`, `Community 24`, `Community 59`, `Community 60`, `Community 61`, `Community 62`?**
-  _High betweenness centrality (0.046) - this node is a cross-community bridge._
-- **Why does `Installation & Setup` connect `Community 24` to `Community 58`?**
-  _High betweenness centrality (0.020) - this node is a cross-community bridge._
-- **Why does `Integrated Frameworks` connect `Community 13` to `Community 58`?**
-  _High betweenness centrality (0.020) - this node is a cross-community bridge._
-- **What connects `validationErrors`, `normalizedEmail`, `request` to the rest of the system?**
-  _407 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `Master Capabilities Reference` connect `Community 23` to `Community 7`, `Community 13`, `Community 19`, `Community 22`, `Community 24`?**
+  _High betweenness centrality (0.044) - this node is a cross-community bridge._
+- **Why does `Installation & Setup` connect `Community 24` to `Community 23`?**
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `Integrated Frameworks` connect `Community 13` to `Community 23`?**
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **What connects `dev`, `build`, `lint` to the rest of the system?**
+  _416 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.08 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

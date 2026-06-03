@@ -5,6 +5,12 @@ description: React + Vite + TailwindCSS patterns and setup
 
 # skill-frontend — React + Vite + Tailwind Patterns
 
+⚠️ **IMPORTANT:** Before building any frontend UI, review the **ui-ux-pro-max-skill** design system requirement in [@CLAUDE.md](../../CLAUDE.md#frontend-design-system-required). All frontend work MUST use:
+- Teal `#0D9488` primary + Orange `#EA580C` accent
+- Plus Jakarta Sans + Inter typography
+- Tailwind v4 `@theme` custom properties
+- shimmer/slide/celebrate animations with `prefers-reduced-motion` support
+
 ## Vite Setup (client/vite.config.js)
 ```javascript
 import react from '@vitejs/plugin-react';

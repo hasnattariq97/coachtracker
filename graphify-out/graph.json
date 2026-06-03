@@ -4,409 +4,859 @@
   "graph": {},
   "nodes": [
     {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "id": "package_json",
+      "community": 27,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "id": "client_package_name",
+      "community": 27,
+      "norm_label": "name"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "id": "client_package_private",
+      "community": 27,
+      "norm_label": "private"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "id": "client_package_version",
+      "community": 27,
+      "norm_label": "version"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "id": "client_package_type",
+      "community": 27,
+      "norm_label": "type"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "id": "client_package_scripts",
+      "community": 27,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "id": "client_package_scripts_dev",
+      "community": 27,
+      "norm_label": "dev"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "id": "client_package_scripts_build",
+      "community": 27,
+      "norm_label": "build"
+    },
+    {
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "id": "client_package_scripts_lint",
+      "community": 27,
+      "norm_label": "lint"
+    },
+    {
+      "label": "preview",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "id": "client_package_scripts_preview",
+      "community": 27,
+      "norm_label": "preview"
+    },
+    {
+      "label": "test",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "id": "client_package_scripts_test",
+      "community": 27,
+      "norm_label": "test"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "id": "client_package_dependencies",
+      "community": 27,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "@tailwindcss/postcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "id": "client_package_dependencies_tailwindcss_postcss",
+      "community": 27,
+      "norm_label": "@tailwindcss/postcss"
+    },
+    {
+      "label": "axios",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "id": "client_package_dependencies_axios",
+      "community": 27,
+      "norm_label": "axios"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "id": "client_package_dependencies_react",
+      "community": 27,
+      "norm_label": "react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "id": "client_package_dependencies_react_dom",
+      "community": 27,
+      "norm_label": "react-dom"
+    },
+    {
+      "label": "react-hot-toast",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "id": "client_package_dependencies_react_hot_toast",
+      "community": 27,
+      "norm_label": "react-hot-toast"
+    },
+    {
+      "label": "react-router-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "id": "client_package_dependencies_react_router_dom",
+      "community": 27,
+      "norm_label": "react-router-dom"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "id": "client_package_devdependencies",
+      "community": 27,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "@eslint/js",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "id": "client_package_devdependencies_eslint_js",
+      "community": 27,
+      "norm_label": "@eslint/js"
+    },
+    {
+      "label": "@testing-library/jest-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "id": "client_package_devdependencies_testing_library_jest_dom",
+      "community": 27,
+      "norm_label": "@testing-library/jest-dom"
+    },
+    {
+      "label": "@testing-library/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "id": "client_package_devdependencies_testing_library_react",
+      "community": 27,
+      "norm_label": "@testing-library/react"
+    },
+    {
+      "label": "@testing-library/user-event",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "id": "client_package_devdependencies_testing_library_user_event",
+      "community": 27,
+      "norm_label": "@testing-library/user-event"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "id": "client_package_devdependencies_types_react",
+      "community": 27,
+      "norm_label": "@types/react"
+    },
+    {
+      "label": "@types/react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "id": "client_package_devdependencies_types_react_dom",
+      "community": 27,
+      "norm_label": "@types/react-dom"
+    },
+    {
+      "label": "@vitejs/plugin-react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "id": "client_package_devdependencies_vitejs_plugin_react",
+      "community": 27,
+      "norm_label": "@vitejs/plugin-react"
+    },
+    {
+      "label": "autoprefixer",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "id": "client_package_devdependencies_autoprefixer",
+      "community": 27,
+      "norm_label": "autoprefixer"
+    },
+    {
+      "label": "eslint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "id": "client_package_devdependencies_eslint",
+      "community": 27,
+      "norm_label": "eslint"
+    },
+    {
+      "label": "eslint-plugin-react-hooks",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L31",
+      "id": "client_package_devdependencies_eslint_plugin_react_hooks",
+      "community": 27,
+      "norm_label": "eslint-plugin-react-hooks"
+    },
+    {
+      "label": "eslint-plugin-react-refresh",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L32",
+      "id": "client_package_devdependencies_eslint_plugin_react_refresh",
+      "community": 27,
+      "norm_label": "eslint-plugin-react-refresh"
+    },
+    {
+      "label": "globals",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "id": "client_package_devdependencies_globals",
+      "community": 27,
+      "norm_label": "globals"
+    },
+    {
+      "label": "jsdom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "id": "client_package_devdependencies_jsdom",
+      "community": 27,
+      "norm_label": "jsdom"
+    },
+    {
+      "label": "postcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L35",
+      "id": "client_package_devdependencies_postcss",
+      "community": 27,
+      "norm_label": "postcss"
+    },
+    {
+      "label": "tailwindcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L36",
+      "id": "client_package_devdependencies_tailwindcss",
+      "community": 27,
+      "norm_label": "tailwindcss"
+    },
+    {
+      "label": "vite",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L37",
+      "id": "client_package_devdependencies_vite",
+      "community": 27,
+      "norm_label": "vite"
+    },
+    {
+      "label": "vitest",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L38",
+      "id": "client_package_devdependencies_vitest",
+      "community": 27,
+      "norm_label": "vitest"
+    },
+    {
+      "label": "AuthContext.jsx",
+      "file_type": "code",
+      "source_file": "src/context/AuthContext.jsx",
+      "source_location": "L1",
+      "id": "src_context_authcontext_jsx",
+      "community": 6,
+      "norm_label": "authcontext.jsx"
+    },
+    {
+      "label": "AuthContext",
+      "file_type": "code",
+      "source_file": "src/context/AuthContext.jsx",
+      "source_location": "L3",
+      "id": "context_authcontext_authcontext",
+      "community": 6,
+      "norm_label": "authcontext"
+    },
+    {
+      "label": "AuthProvider()",
+      "file_type": "code",
+      "source_file": "src/context/AuthContext.jsx",
+      "source_location": "L5",
+      "id": "context_authcontext_authprovider",
+      "community": 6,
+      "norm_label": "authprovider()"
+    },
+    {
+      "label": "useAuth()",
+      "file_type": "code",
+      "source_file": "src/context/AuthContext.jsx",
+      "source_location": "L9",
+      "id": "context_authcontext_useauth",
+      "community": 6,
+      "norm_label": "useauth()"
+    },
+    {
+      "label": "AuthContext.test.jsx",
+      "file_type": "code",
+      "source_file": "src/context/AuthContext.test.jsx",
+      "source_location": "L1",
+      "id": "src_context_authcontext_test_jsx",
+      "community": 6,
+      "norm_label": "authcontext.test.jsx"
+    },
+    {
+      "label": "TestComponent()",
+      "file_type": "code",
+      "source_file": "src/context/AuthContext.test.jsx",
+      "source_location": "L19",
+      "id": "context_authcontext_test_testcomponent",
+      "community": 6,
+      "norm_label": "testcomponent()"
+    },
+    {
+      "label": "user",
+      "file_type": "code",
+      "source_file": "src/context/AuthContext.test.jsx",
+      "source_location": "L58",
+      "id": "context_authcontext_test_user",
+      "community": 6,
+      "norm_label": "user"
+    },
+    {
+      "label": "loginButton",
+      "file_type": "code",
+      "source_file": "src/context/AuthContext.test.jsx",
+      "source_location": "L65",
+      "id": "context_authcontext_test_loginbutton",
+      "community": 6,
+      "norm_label": "loginbutton"
+    },
+    {
+      "label": "logoutButton",
+      "file_type": "code",
+      "source_file": "src/context/AuthContext.test.jsx",
+      "source_location": "L105",
+      "id": "context_authcontext_test_logoutbutton",
+      "community": 6,
+      "norm_label": "logoutbutton"
+    },
+    {
+      "label": "loginPromise",
+      "file_type": "code",
+      "source_file": "src/context/AuthContext.test.jsx",
+      "source_location": "L141",
+      "id": "context_authcontext_test_loginpromise",
+      "community": 6,
+      "norm_label": "loginpromise"
+    },
+    {
+      "label": "userSetup",
+      "file_type": "code",
+      "source_file": "src/context/AuthContext.test.jsx",
+      "source_location": "L226",
+      "id": "context_authcontext_test_usersetup",
+      "community": 6,
+      "norm_label": "usersetup"
+    },
+    {
+      "label": "setup.test.js",
+      "file_type": "code",
+      "source_file": "src/setup.test.js",
+      "source_location": "L1",
+      "id": "src_setup_test_js",
+      "community": 48,
+      "norm_label": "setup.test.js"
+    },
+    {
+      "label": "localStorageMock",
+      "file_type": "code",
+      "source_file": "src/setup.test.js",
+      "source_location": "L12",
+      "id": "src_setup_test_localstoragemock",
+      "community": 48,
+      "norm_label": "localstoragemock"
+    },
+    {
+      "label": "vitest.config.js",
+      "file_type": "code",
+      "source_file": "vitest.config.js",
+      "source_location": "L1",
+      "id": "vitest_config_js",
+      "community": 57,
+      "norm_label": "vitest.config.js"
+    },
+    {
       "label": "auth.js",
       "file_type": "code",
       "source_file": "auth.js",
       "source_location": "L1",
-      "id": "auth_js",
       "community": 15,
-      "norm_label": "auth.js"
+      "norm_label": "auth.js",
+      "id": "auth_js"
     },
     {
       "label": "jwt",
       "file_type": "code",
       "source_file": "auth.js",
       "source_location": "L9",
-      "id": "server_auth_jwt",
       "community": 15,
-      "norm_label": "jwt"
+      "norm_label": "jwt",
+      "id": "server_auth_jwt"
     },
     {
       "label": "generateToken()",
       "file_type": "code",
       "source_file": "auth.js",
       "source_location": "L20",
-      "id": "server_auth_generatetoken",
       "community": 15,
-      "norm_label": "generatetoken()"
+      "norm_label": "generatetoken()",
+      "id": "server_auth_generatetoken"
     },
     {
       "label": "verifyToken()",
       "file_type": "code",
       "source_file": "auth.js",
       "source_location": "L31",
-      "id": "server_auth_verifytoken",
       "community": 15,
-      "norm_label": "verifytoken()"
+      "norm_label": "verifytoken()",
+      "id": "server_auth_verifytoken"
     },
     {
       "label": "authenticateToken()",
       "file_type": "code",
       "source_file": "auth.js",
       "source_location": "L39",
-      "id": "server_auth_authenticatetoken",
       "community": 15,
-      "norm_label": "authenticatetoken()"
+      "norm_label": "authenticatetoken()",
+      "id": "server_auth_authenticatetoken"
     },
     {
       "label": "requireAdmin()",
       "file_type": "code",
       "source_file": "auth.js",
       "source_location": "L56",
-      "id": "server_auth_requireadmin",
       "community": 15,
-      "norm_label": "requireadmin()"
+      "norm_label": "requireadmin()",
+      "id": "server_auth_requireadmin"
     },
     {
       "label": "requireCoach()",
       "file_type": "code",
       "source_file": "auth.js",
       "source_location": "L63",
-      "id": "server_auth_requirecoach",
       "community": 15,
-      "norm_label": "requirecoach()"
+      "norm_label": "requirecoach()",
+      "id": "server_auth_requirecoach"
     },
     {
       "label": "auth.test.js",
       "file_type": "code",
       "source_file": "auth.test.js",
       "source_location": "L1",
-      "id": "auth_test_js",
       "community": 15,
-      "norm_label": "auth.test.js"
+      "norm_label": "auth.test.js",
+      "id": "auth_test_js"
     },
     {
       "label": "jwt",
       "file_type": "code",
       "source_file": "auth.test.js",
       "source_location": "L9",
-      "id": "server_auth_test_jwt",
       "community": 15,
-      "norm_label": "jwt"
+      "norm_label": "jwt",
+      "id": "server_auth_test_jwt"
     },
     {
       "label": "{ generateToken, verifyToken, authenticateToken, requireAdmin, requireCoach }",
       "file_type": "code",
       "source_file": "auth.test.js",
       "source_location": "L10",
-      "id": "server_auth_test_generatetoken_verifytoken_authenticatetoken_requireadmin_requirecoach",
       "community": 15,
-      "norm_label": "{ generatetoken, verifytoken, authenticatetoken, requireadmin, requirecoach }"
+      "norm_label": "{ generatetoken, verifytoken, authenticatetoken, requireadmin, requirecoach }",
+      "id": "server_auth_test_generatetoken_verifytoken_authenticatetoken_requireadmin_requirecoach"
     },
     {
       "label": "mockUser",
       "file_type": "code",
       "source_file": "auth.test.js",
       "source_location": "L13",
-      "id": "server_auth_test_mockuser",
       "community": 15,
-      "norm_label": "mockuser"
+      "norm_label": "mockuser",
+      "id": "server_auth_test_mockuser"
     },
     {
       "label": "mockCoach",
       "file_type": "code",
       "source_file": "auth.test.js",
       "source_location": "L19",
-      "id": "server_auth_test_mockcoach",
       "community": 15,
-      "norm_label": "mockcoach"
+      "norm_label": "mockcoach",
+      "id": "server_auth_test_mockcoach"
     },
     {
       "label": "token",
       "file_type": "code",
       "source_file": "auth.test.js",
       "source_location": "L27",
-      "id": "server_auth_test_token",
       "community": 15,
-      "norm_label": "token"
+      "norm_label": "token",
+      "id": "server_auth_test_token"
     },
     {
       "label": "decoded",
       "file_type": "code",
       "source_file": "auth.test.js",
       "source_location": "L32",
-      "id": "server_auth_test_decoded",
       "community": 15,
-      "norm_label": "decoded"
+      "norm_label": "decoded",
+      "id": "server_auth_test_decoded"
     },
     {
       "label": "tokenWithPassword",
       "file_type": "code",
       "source_file": "auth.test.js",
       "source_location": "L50",
-      "id": "server_auth_test_tokenwithpassword",
       "community": 15,
-      "norm_label": "tokenwithpassword"
+      "norm_label": "tokenwithpassword",
+      "id": "server_auth_test_tokenwithpassword"
     },
     {
       "label": "invalidUser",
       "file_type": "code",
       "source_file": "auth.test.js",
       "source_location": "L62",
-      "id": "server_auth_test_invaliduser",
       "community": 15,
-      "norm_label": "invaliduser"
+      "norm_label": "invaliduser",
+      "id": "server_auth_test_invaliduser"
     },
     {
       "label": "verified",
       "file_type": "code",
       "source_file": "auth.test.js",
       "source_location": "L80",
-      "id": "server_auth_test_verified",
       "community": 15,
-      "norm_label": "verified"
+      "norm_label": "verified",
+      "id": "server_auth_test_verified"
     },
     {
       "label": "expiredToken",
       "file_type": "code",
       "source_file": "auth.test.js",
       "source_location": "L96",
-      "id": "server_auth_test_expiredtoken",
       "community": 15,
-      "norm_label": "expiredtoken"
+      "norm_label": "expiredtoken",
+      "id": "server_auth_test_expiredtoken"
     },
     {
       "label": "db.js",
       "file_type": "code",
       "source_file": "db.js",
       "source_location": "L1",
-      "id": "db_js",
-      "community": 6,
-      "norm_label": "db.js"
+      "community": 15,
+      "norm_label": "db.js",
+      "id": "db_js"
     },
     {
       "label": "Database",
       "file_type": "code",
       "source_file": "db.js",
       "source_location": "L1",
-      "id": "server_db_database",
-      "community": 6,
-      "norm_label": "database"
+      "community": 15,
+      "norm_label": "database",
+      "id": "server_db_database"
     },
     {
       "label": "bcrypt",
       "file_type": "code",
       "source_file": "db.js",
       "source_location": "L2",
-      "id": "server_db_bcrypt",
-      "community": 6,
-      "norm_label": "bcrypt"
+      "community": 15,
+      "norm_label": "bcrypt",
+      "id": "server_db_bcrypt"
     },
     {
       "label": "path",
       "file_type": "code",
       "source_file": "db.js",
       "source_location": "L3",
-      "id": "server_db_path",
-      "community": 6,
-      "norm_label": "path"
+      "community": 15,
+      "norm_label": "path",
+      "id": "server_db_path"
     },
     {
       "label": "dbPath",
       "file_type": "code",
       "source_file": "db.js",
       "source_location": "L5",
-      "id": "server_db_dbpath",
-      "community": 6,
-      "norm_label": "dbpath"
+      "community": 15,
+      "norm_label": "dbpath",
+      "id": "server_db_dbpath"
     },
     {
       "label": "db",
       "file_type": "code",
       "source_file": "db.js",
       "source_location": "L6",
-      "id": "server_db_db",
-      "community": 6,
-      "norm_label": "db"
+      "community": 15,
+      "norm_label": "db",
+      "id": "server_db_db"
     },
     {
       "label": "adminExists",
       "file_type": "code",
       "source_file": "db.js",
       "source_location": "L47",
-      "id": "server_db_adminexists",
-      "community": 6,
-      "norm_label": "adminexists"
+      "community": 15,
+      "norm_label": "adminexists",
+      "id": "server_db_adminexists"
     },
     {
       "label": "hashedPassword",
       "file_type": "code",
       "source_file": "db.js",
       "source_location": "L71",
-      "id": "server_db_hashedpassword",
-      "community": 6,
-      "norm_label": "hashedpassword"
+      "community": 15,
+      "norm_label": "hashedpassword",
+      "id": "server_db_hashedpassword"
     },
     {
       "label": "db.test.js",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L1",
-      "id": "db_test_js",
       "community": 30,
-      "norm_label": "db.test.js"
+      "norm_label": "db.test.js",
+      "id": "db_test_js"
     },
     {
       "label": "fs",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L1",
-      "id": "server_db_test_fs",
       "community": 30,
-      "norm_label": "fs"
+      "norm_label": "fs",
+      "id": "server_db_test_fs"
     },
     {
       "label": "path",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L2",
-      "id": "server_db_test_path",
       "community": 30,
-      "norm_label": "path"
+      "norm_label": "path",
+      "id": "server_db_test_path"
     },
     {
       "label": "Database",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L3",
-      "id": "server_db_test_database",
       "community": 30,
-      "norm_label": "database"
+      "norm_label": "database",
+      "id": "server_db_test_database"
     },
     {
       "label": "bcrypt",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L4",
-      "id": "server_db_test_bcrypt",
       "community": 30,
-      "norm_label": "bcrypt"
+      "norm_label": "bcrypt",
+      "id": "server_db_test_bcrypt"
     },
     {
       "label": "testDbPath",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L8",
-      "id": "server_db_test_testdbpath",
       "community": 30,
-      "norm_label": "testdbpath"
+      "norm_label": "testdbpath",
+      "id": "server_db_test_testdbpath"
     },
     {
       "label": "columns",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L36",
-      "id": "server_db_test_columns",
       "community": 30,
-      "norm_label": "columns"
+      "norm_label": "columns",
+      "id": "server_db_test_columns"
     },
     {
       "label": "columnNames",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L37",
-      "id": "server_db_test_columnnames",
       "community": 30,
-      "norm_label": "columnnames"
+      "norm_label": "columnnames",
+      "id": "server_db_test_columnnames"
     },
     {
       "label": "hash",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L57",
-      "id": "server_db_test_hash",
       "community": 30,
-      "norm_label": "hash"
+      "norm_label": "hash",
+      "id": "server_db_test_hash"
     },
     {
       "label": "insertCoach",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L156",
-      "id": "server_db_test_insertcoach",
       "community": 30,
-      "norm_label": "insertcoach"
+      "norm_label": "insertcoach",
+      "id": "server_db_test_insertcoach"
     },
     {
       "label": "result",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L157",
-      "id": "server_db_test_result",
       "community": 30,
-      "norm_label": "result"
+      "norm_label": "result",
+      "id": "server_db_test_result"
     },
     {
       "label": "insertTask",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L160",
-      "id": "server_db_test_inserttask",
       "community": 30,
-      "norm_label": "inserttask"
+      "norm_label": "inserttask",
+      "id": "server_db_test_inserttask"
     },
     {
       "label": "tasksBefore",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L166",
-      "id": "server_db_test_tasksbefore",
       "community": 30,
-      "norm_label": "tasksbefore"
+      "norm_label": "tasksbefore",
+      "id": "server_db_test_tasksbefore"
     },
     {
       "label": "tasksAfter",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L171",
-      "id": "server_db_test_tasksafter",
       "community": 30,
-      "norm_label": "tasksafter"
+      "norm_label": "tasksafter",
+      "id": "server_db_test_tasksafter"
     },
     {
       "label": "adminExists",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L241",
-      "id": "server_db_test_adminexists",
       "community": 30,
-      "norm_label": "adminexists"
+      "norm_label": "adminexists",
+      "id": "server_db_test_adminexists"
     },
     {
       "label": "hashedPassword",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L244",
-      "id": "server_db_test_hashedpassword",
       "community": 30,
-      "norm_label": "hashedpassword"
+      "norm_label": "hashedpassword",
+      "id": "server_db_test_hashedpassword"
     },
     {
       "label": "admin",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L248",
-      "id": "server_db_test_admin",
       "community": 30,
-      "norm_label": "admin"
+      "norm_label": "admin",
+      "id": "server_db_test_admin"
     },
     {
       "label": "countBefore",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L270",
-      "id": "server_db_test_countbefore",
       "community": 30,
-      "norm_label": "countbefore"
+      "norm_label": "countbefore",
+      "id": "server_db_test_countbefore"
     },
     {
       "label": "countAfter",
       "file_type": "code",
       "source_file": "db.test.js",
       "source_location": "L279",
-      "id": "server_db_test_countafter",
       "community": 30,
-      "norm_label": "countafter"
+      "norm_label": "countafter",
+      "id": "server_db_test_countafter"
     },
     {
       "label": "express",
@@ -605,267 +1055,6 @@
       "community": 27,
       "norm_label": "package.json",
       "id": "client_package_json"
-    },
-    {
-      "label": "name",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L2",
-      "community": 27,
-      "norm_label": "name",
-      "id": "client_package_name"
-    },
-    {
-      "label": "private",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L3",
-      "community": 27,
-      "norm_label": "private",
-      "id": "client_package_private"
-    },
-    {
-      "label": "version",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L4",
-      "community": 27,
-      "norm_label": "version",
-      "id": "client_package_version"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L5",
-      "community": 27,
-      "norm_label": "type",
-      "id": "client_package_type"
-    },
-    {
-      "label": "scripts",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L6",
-      "community": 27,
-      "norm_label": "scripts",
-      "id": "client_package_scripts"
-    },
-    {
-      "label": "dev",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L7",
-      "community": 27,
-      "norm_label": "dev",
-      "id": "client_package_scripts_dev"
-    },
-    {
-      "label": "build",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L8",
-      "community": 27,
-      "norm_label": "build",
-      "id": "client_package_scripts_build"
-    },
-    {
-      "label": "lint",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L9",
-      "community": 27,
-      "norm_label": "lint",
-      "id": "client_package_scripts_lint"
-    },
-    {
-      "label": "preview",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L10",
-      "community": 27,
-      "norm_label": "preview",
-      "id": "client_package_scripts_preview"
-    },
-    {
-      "label": "dependencies",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L12",
-      "community": 27,
-      "norm_label": "dependencies",
-      "id": "client_package_dependencies"
-    },
-    {
-      "label": "@tailwindcss/postcss",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L13",
-      "community": 27,
-      "norm_label": "@tailwindcss/postcss",
-      "id": "client_package_dependencies_tailwindcss_postcss"
-    },
-    {
-      "label": "axios",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L14",
-      "community": 27,
-      "norm_label": "axios",
-      "id": "client_package_dependencies_axios"
-    },
-    {
-      "label": "react",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L15",
-      "community": 27,
-      "norm_label": "react",
-      "id": "client_package_dependencies_react"
-    },
-    {
-      "label": "react-dom",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L16",
-      "community": 27,
-      "norm_label": "react-dom",
-      "id": "client_package_dependencies_react_dom"
-    },
-    {
-      "label": "react-hot-toast",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L17",
-      "community": 27,
-      "norm_label": "react-hot-toast",
-      "id": "client_package_dependencies_react_hot_toast"
-    },
-    {
-      "label": "react-router-dom",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L18",
-      "community": 27,
-      "norm_label": "react-router-dom",
-      "id": "client_package_dependencies_react_router_dom"
-    },
-    {
-      "label": "devDependencies",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L20",
-      "community": 27,
-      "norm_label": "devdependencies",
-      "id": "client_package_devdependencies"
-    },
-    {
-      "label": "@eslint/js",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L21",
-      "community": 27,
-      "norm_label": "@eslint/js",
-      "id": "client_package_devdependencies_eslint_js"
-    },
-    {
-      "label": "@types/react",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L22",
-      "community": 27,
-      "norm_label": "@types/react",
-      "id": "client_package_devdependencies_types_react"
-    },
-    {
-      "label": "@types/react-dom",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L23",
-      "community": 27,
-      "norm_label": "@types/react-dom",
-      "id": "client_package_devdependencies_types_react_dom"
-    },
-    {
-      "label": "@vitejs/plugin-react",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L24",
-      "community": 27,
-      "norm_label": "@vitejs/plugin-react",
-      "id": "client_package_devdependencies_vitejs_plugin_react"
-    },
-    {
-      "label": "autoprefixer",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L25",
-      "community": 27,
-      "norm_label": "autoprefixer",
-      "id": "client_package_devdependencies_autoprefixer"
-    },
-    {
-      "label": "eslint",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L26",
-      "community": 27,
-      "norm_label": "eslint",
-      "id": "client_package_devdependencies_eslint"
-    },
-    {
-      "label": "eslint-plugin-react-hooks",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L27",
-      "community": 27,
-      "norm_label": "eslint-plugin-react-hooks",
-      "id": "client_package_devdependencies_eslint_plugin_react_hooks"
-    },
-    {
-      "label": "eslint-plugin-react-refresh",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L28",
-      "community": 27,
-      "norm_label": "eslint-plugin-react-refresh",
-      "id": "client_package_devdependencies_eslint_plugin_react_refresh"
-    },
-    {
-      "label": "globals",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L29",
-      "community": 27,
-      "norm_label": "globals",
-      "id": "client_package_devdependencies_globals"
-    },
-    {
-      "label": "postcss",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L30",
-      "community": 27,
-      "norm_label": "postcss",
-      "id": "client_package_devdependencies_postcss"
-    },
-    {
-      "label": "tailwindcss",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L31",
-      "community": 27,
-      "norm_label": "tailwindcss",
-      "id": "client_package_devdependencies_tailwindcss"
-    },
-    {
-      "label": "vite",
-      "file_type": "code",
-      "source_file": "client/package.json",
-      "source_location": "L32",
-      "community": 27,
-      "norm_label": "vite",
-      "id": "client_package_devdependencies_vite"
     },
     {
       "label": "postcss.config.js",
@@ -1943,7 +2132,7 @@
       "file_type": "code",
       "source_file": "server/db.js",
       "source_location": "L1",
-      "community": 6,
+      "community": 15,
       "norm_label": "db.js",
       "id": "server_db_js"
     },
@@ -2348,7 +2537,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1",
-      "community": 58,
+      "community": 23,
       "norm_label": "master_capabilities.md",
       "id": "master_capabilities_md"
     },
@@ -2357,7 +2546,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L9",
-      "community": 58,
+      "community": 23,
       "norm_label": "master capabilities reference",
       "id": "claude_master_capabilities_master_capabilities_reference"
     },
@@ -2366,7 +2555,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L15",
-      "community": 58,
+      "community": 23,
       "norm_label": "table of contents",
       "id": "claude_master_capabilities_table_of_contents"
     },
@@ -2375,7 +2564,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L29",
-      "community": 58,
+      "community": 23,
       "norm_label": "claude core capabilities",
       "id": "claude_master_capabilities_claude_core_capabilities"
     },
@@ -2384,7 +2573,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L31",
-      "community": 58,
+      "community": 23,
       "norm_label": "reasoning powers",
       "id": "claude_master_capabilities_reasoning_powers"
     },
@@ -2393,7 +2582,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L43",
-      "community": 58,
+      "community": 23,
       "norm_label": "guarantees & constraints",
       "id": "claude_master_capabilities_guarantees_constraints"
     },
@@ -3113,7 +3302,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L518",
-      "community": 61,
+      "community": 23,
       "norm_label": "memory & learning systems",
       "id": "claude_master_capabilities_memory_learning_systems"
     },
@@ -3185,7 +3374,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L591",
-      "community": 61,
+      "community": 23,
       "norm_label": "2. agentdb (ruflo vector database)",
       "id": "claude_master_capabilities_2_agentdb_ruflo_vector_database"
     },
@@ -3194,7 +3383,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L595",
-      "community": 61,
+      "community": 23,
       "norm_label": "code:bash (# search agent knowledge)",
       "id": "claude_master_capabilities_codeblock_40"
     },
@@ -3203,7 +3392,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L606",
-      "community": 61,
+      "community": 23,
       "norm_label": "3. sona learning (neural trajectories)",
       "id": "claude_master_capabilities_3_sona_learning_neural_trajectories"
     },
@@ -3212,7 +3401,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L611",
-      "community": 61,
+      "community": 23,
       "norm_label": "code:block41 (\"when task deadline < 1 week, add hourly reminders\")",
       "id": "claude_master_capabilities_codeblock_41"
     },
@@ -3221,7 +3410,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L620",
-      "community": 59,
+      "community": 23,
       "norm_label": "development methodologies",
       "id": "claude_master_capabilities_development_methodologies"
     },
@@ -3230,7 +3419,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L622",
-      "community": 59,
+      "community": 23,
       "norm_label": "test-first development (red-green-refactor)",
       "id": "claude_master_capabilities_test_first_development_red_green_refactor"
     },
@@ -3239,7 +3428,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L624",
-      "community": 59,
+      "community": 23,
       "norm_label": "code:javascript (// red: write failing test first)",
       "id": "claude_master_capabilities_codeblock_42"
     },
@@ -3248,7 +3437,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L665",
-      "community": 59,
+      "community": 23,
       "norm_label": "code review (two-stage)",
       "id": "claude_master_capabilities_code_review_two_stage"
     },
@@ -3257,7 +3446,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L678",
-      "community": 59,
+      "community": 23,
       "norm_label": "commit message format",
       "id": "claude_master_capabilities_commit_message_format"
     },
@@ -3266,7 +3455,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L680",
-      "community": 59,
+      "community": 23,
       "norm_label": "code:block43 ([phase #] brief description)",
       "id": "claude_master_capabilities_codeblock_43"
     },
@@ -3275,7 +3464,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L692",
-      "community": 59,
+      "community": 23,
       "norm_label": "code:block44 ([phase 2] add user authentication with jwt)",
       "id": "claude_master_capabilities_codeblock_44"
     },
@@ -3284,7 +3473,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L705",
-      "community": 48,
+      "community": 23,
       "norm_label": "patterns & workflows",
       "id": "claude_master_capabilities_patterns_workflows"
     },
@@ -3293,7 +3482,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L707",
-      "community": 48,
+      "community": 23,
       "norm_label": "building a feature (superpowers cycle)",
       "id": "claude_master_capabilities_building_a_feature_superpowers_cycle"
     },
@@ -3302,7 +3491,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L709",
-      "community": 48,
+      "community": 23,
       "norm_label": "code:block45 (1. brainstorm)",
       "id": "claude_master_capabilities_codeblock_45"
     },
@@ -3311,7 +3500,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L737",
-      "community": 48,
+      "community": 23,
       "norm_label": "debugging a bug (systematic approach)",
       "id": "claude_master_capabilities_debugging_a_bug_systematic_approach"
     },
@@ -3320,7 +3509,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L739",
-      "community": 48,
+      "community": 23,
       "norm_label": "code:block46 (1. reproduce)",
       "id": "claude_master_capabilities_codeblock_46"
     },
@@ -3329,7 +3518,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L763",
-      "community": 48,
+      "community": 23,
       "norm_label": "parallel agent development",
       "id": "claude_master_capabilities_parallel_agent_development"
     },
@@ -3338,7 +3527,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L765",
-      "community": 48,
+      "community": 23,
       "norm_label": "code:block47 (task: build multi-user system)",
       "id": "claude_master_capabilities_codeblock_47"
     },
@@ -3446,7 +3635,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L870",
-      "community": 62,
+      "community": 23,
       "norm_label": "best practices",
       "id": "claude_master_capabilities_best_practices"
     },
@@ -3455,7 +3644,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L872",
-      "community": 62,
+      "community": 23,
       "norm_label": "code conventions (language-neutral)",
       "id": "claude_master_capabilities_code_conventions_language_neutral"
     },
@@ -3464,7 +3653,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L882",
-      "community": 62,
+      "community": 23,
       "norm_label": "agent best practices",
       "id": "claude_master_capabilities_agent_best_practices"
     },
@@ -3473,7 +3662,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L892",
-      "community": 62,
+      "community": 23,
       "norm_label": "documentation best practices",
       "id": "claude_master_capabilities_documentation_best_practices"
     },
@@ -3482,7 +3671,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L901",
-      "community": 58,
+      "community": 23,
       "norm_label": "when to use each tool/framework",
       "id": "claude_master_capabilities_when_to_use_each_tool_framework"
     },
@@ -3851,7 +4040,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1494",
-      "community": 60,
+      "community": 23,
       "norm_label": "plugin checklist for new projects",
       "id": "claude_master_capabilities_plugin_checklist_for_new_projects"
     },
@@ -3860,7 +4049,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1496",
-      "community": 60,
+      "community": 23,
       "norm_label": "code:bash (# step 1: initialize claude code)",
       "id": "claude_master_capabilities_codeblock_82"
     },
@@ -3869,7 +4058,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1534",
-      "community": 60,
+      "community": 23,
       "norm_label": "for agents",
       "id": "claude_master_capabilities_for_agents"
     },
@@ -3878,7 +4067,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1541",
-      "community": 60,
+      "community": 23,
       "norm_label": "for projects",
       "id": "claude_master_capabilities_for_projects"
     },
@@ -3887,7 +4076,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1548",
-      "community": 60,
+      "community": 23,
       "norm_label": "for teams",
       "id": "claude_master_capabilities_for_teams"
     },
@@ -3896,7 +4085,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L922",
-      "community": 60,
+      "community": 23,
       "norm_label": "distribution & usage",
       "id": "claude_master_capabilities_distribution_usage"
     },
@@ -4553,7 +4742,7 @@
       "file_type": "document",
       "source_file": ".claude/agents/phase-builder.md",
       "source_location": "L148",
-      "community": 57,
+      "community": 4,
       "norm_label": "session end protocol (beads integration)",
       "id": "agents_phase_builder_session_end_protocol_beads_integration"
     },
@@ -4562,7 +4751,7 @@
       "file_type": "document",
       "source_file": ".claude/agents/phase-builder.md",
       "source_location": "L152",
-      "community": 57,
+      "community": 4,
       "norm_label": "1. decision logging (\u2192 `.beads/decisions.jsonl`)",
       "id": "agents_phase_builder_1_decision_logging_beads_decisions_jsonl"
     },
@@ -4571,7 +4760,7 @@
       "file_type": "document",
       "source_file": ".claude/agents/phase-builder.md",
       "source_location": "L154",
-      "community": 57,
+      "community": 4,
       "norm_label": "code:json ({)",
       "id": "agents_phase_builder_codeblock_9"
     },
@@ -4580,7 +4769,7 @@
       "file_type": "document",
       "source_file": ".claude/agents/phase-builder.md",
       "source_location": "L179",
-      "community": 57,
+      "community": 4,
       "norm_label": "2. failure logging (\u2192 `.beads/failures.jsonl`) \u2014 on remediate/escalate",
       "id": "agents_phase_builder_2_failure_logging_beads_failures_jsonl_on_remediate_escalate"
     },
@@ -4589,7 +4778,7 @@
       "file_type": "document",
       "source_file": ".claude/agents/phase-builder.md",
       "source_location": "L181",
-      "community": 57,
+      "community": 4,
       "norm_label": "code:json ({)",
       "id": "agents_phase_builder_codeblock_10"
     },
@@ -4598,7 +4787,7 @@
       "file_type": "document",
       "source_file": ".claude/agents/phase-builder.md",
       "source_location": "L200",
-      "community": 57,
+      "community": 4,
       "norm_label": "3. work item tracking (\u2192 `.beads/status.jsonl`)",
       "id": "agents_phase_builder_3_work_item_tracking_beads_status_jsonl"
     },
@@ -4607,7 +4796,7 @@
       "file_type": "document",
       "source_file": ".claude/agents/phase-builder.md",
       "source_location": "L202",
-      "community": 57,
+      "community": 4,
       "norm_label": "code:json ({)",
       "id": "agents_phase_builder_codeblock_11"
     },
@@ -4616,7 +4805,7 @@
       "file_type": "document",
       "source_file": ".claude/agents/phase-builder.md",
       "source_location": "L224",
-      "community": 57,
+      "community": 4,
       "norm_label": "4. sessionstart injection",
       "id": "agents_phase_builder_4_sessionstart_injection"
     },
@@ -4625,7 +4814,7 @@
       "file_type": "document",
       "source_file": ".claude/agents/phase-builder.md",
       "source_location": "L226",
-      "community": 57,
+      "community": 4,
       "norm_label": "code:block12 (open work items from previous session:)",
       "id": "agents_phase_builder_codeblock_12"
     },
@@ -4634,7 +4823,7 @@
       "file_type": "document",
       "source_file": ".claude/agents/phase-builder.md",
       "source_location": "L235",
-      "community": 57,
+      "community": 4,
       "norm_label": "5. stop hook reminders",
       "id": "agents_phase_builder_5_stop_hook_reminders"
     },
@@ -4643,7 +4832,7 @@
       "file_type": "document",
       "source_file": ".claude/agents/phase-builder.md",
       "source_location": "L237",
-      "community": 57,
+      "community": 4,
       "norm_label": "code:block13 (\u26a0\ufe0f  note: 3 unclosed bead(s) in .beads/status.jsonl)",
       "id": "agents_phase_builder_codeblock_13"
     },
@@ -4652,7 +4841,7 @@
       "file_type": "document",
       "source_file": ".claude/agents/phase-builder.md",
       "source_location": "L245",
-      "community": 57,
+      "community": 4,
       "norm_label": "6. bead lifecycle",
       "id": "agents_phase_builder_6_bead_lifecycle"
     },
@@ -4661,7 +4850,7 @@
       "file_type": "document",
       "source_file": ".claude/agents/phase-builder.md",
       "source_location": "L246",
-      "community": 57,
+      "community": 4,
       "norm_label": "code:block14 (phase n starts)",
       "id": "agents_phase_builder_codeblock_14"
     },
@@ -4670,7 +4859,7 @@
       "file_type": "document",
       "source_file": ".claude/agents/phase-builder.md",
       "source_location": "L256",
-      "community": 57,
+      "community": 4,
       "norm_label": "7. cross-session durability",
       "id": "agents_phase_builder_7_cross_session_durability"
     },
@@ -6668,12 +6857,576 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "client_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "client_package_private",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "client_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "client_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "client_package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "client_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "client_package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_json",
+      "target": "client_package_name"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_json",
+      "target": "client_package_private"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_json",
+      "target": "client_package_version"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_json",
+      "target": "client_package_type"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_scripts",
+      "target": "client_package_scripts_dev"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_scripts",
+      "target": "client_package_scripts_build"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_scripts",
+      "target": "client_package_scripts_lint"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_scripts",
+      "target": "client_package_scripts_preview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "client_package_scripts",
+      "target": "client_package_scripts_test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_json",
+      "target": "client_package_scripts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_dependencies",
+      "target": "client_package_dependencies_tailwindcss_postcss"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_dependencies",
+      "target": "client_package_dependencies_axios"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_dependencies",
+      "target": "client_package_dependencies_react"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_dependencies",
+      "target": "client_package_dependencies_react_dom"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_dependencies",
+      "target": "client_package_dependencies_react_hot_toast"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_dependencies",
+      "target": "client_package_dependencies_react_router_dom"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_json",
+      "target": "client_package_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_devdependencies",
+      "target": "client_package_devdependencies_eslint_js"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "client_package_devdependencies",
+      "target": "client_package_devdependencies_testing_library_jest_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "client_package_devdependencies",
+      "target": "client_package_devdependencies_testing_library_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "client_package_devdependencies",
+      "target": "client_package_devdependencies_testing_library_user_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_devdependencies",
+      "target": "client_package_devdependencies_types_react"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_devdependencies",
+      "target": "client_package_devdependencies_types_react_dom"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_devdependencies",
+      "target": "client_package_devdependencies_vitejs_plugin_react"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_devdependencies",
+      "target": "client_package_devdependencies_autoprefixer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_devdependencies",
+      "target": "client_package_devdependencies_eslint"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_devdependencies",
+      "target": "client_package_devdependencies_eslint_plugin_react_hooks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_devdependencies",
+      "target": "client_package_devdependencies_eslint_plugin_react_refresh"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_devdependencies",
+      "target": "client_package_devdependencies_globals"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "client_package_devdependencies",
+      "target": "client_package_devdependencies_jsdom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_devdependencies",
+      "target": "client_package_devdependencies_postcss"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_devdependencies",
+      "target": "client_package_devdependencies_tailwindcss"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_devdependencies",
+      "target": "client_package_devdependencies_vite"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "client_package_devdependencies",
+      "target": "client_package_devdependencies_vitest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_package_json",
+      "target": "client_package_devdependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/AuthContext.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_context_authcontext_jsx",
+      "target": "context_authcontext_authcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/AuthContext.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_context_authcontext_jsx",
+      "target": "context_authcontext_authprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/AuthContext.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_context_authcontext_jsx",
+      "target": "context_authcontext_useauth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/AuthContext.test.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_context_authcontext_test_jsx",
+      "target": "src_context_authcontext_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/AuthContext.test.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_context_authcontext_test_jsx",
+      "target": "context_authcontext_authprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/AuthContext.test.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_context_authcontext_test_jsx",
+      "target": "context_authcontext_useauth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/context/AuthContext.test.jsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "context_authcontext_test_testcomponent",
+      "target": "context_authcontext_useauth"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/AuthContext.test.jsx",
+      "source_location": "L247",
+      "weight": 1.0,
+      "source": "src_context_authcontext_test_jsx",
+      "target": "context_authcontext_test_testcomponent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/AuthContext.test.jsx",
+      "source_location": "L258",
+      "weight": 1.0,
+      "source": "src_context_authcontext_test_jsx",
+      "target": "context_authcontext_test_user",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/AuthContext.test.jsx",
+      "source_location": "L233",
+      "weight": 1.0,
+      "source": "src_context_authcontext_test_jsx",
+      "target": "context_authcontext_test_loginbutton",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/AuthContext.test.jsx",
+      "source_location": "L267",
+      "weight": 1.0,
+      "source": "src_context_authcontext_test_jsx",
+      "target": "context_authcontext_test_logoutbutton",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/AuthContext.test.jsx",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "src_context_authcontext_test_jsx",
+      "target": "context_authcontext_test_loginpromise",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/AuthContext.test.jsx",
+      "source_location": "L226",
+      "weight": 1.0,
+      "source": "src_context_authcontext_test_jsx",
+      "target": "context_authcontext_test_usersetup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/setup.test.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_setup_test_js",
+      "target": "src_setup_test_localstoragemock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "auth.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_js",
-      "target": "server_auth_jwt",
-      "confidence_score": 1.0
+      "target": "server_auth_jwt"
     },
     {
       "relation": "imports",
@@ -6692,9 +7445,9 @@
       "source_file": "auth.js",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_js",
-      "target": "server_auth_verifytoken",
-      "confidence_score": 1.0
+      "target": "server_auth_verifytoken"
     },
     {
       "relation": "contains",
@@ -6702,9 +7455,9 @@
       "source_file": "auth.js",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_js",
-      "target": "server_auth_authenticatetoken",
-      "confidence_score": 1.0
+      "target": "server_auth_authenticatetoken"
     },
     {
       "relation": "contains",
@@ -6712,9 +7465,9 @@
       "source_file": "auth.js",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_js",
-      "target": "server_auth_requireadmin",
-      "confidence_score": 1.0
+      "target": "server_auth_requireadmin"
     },
     {
       "relation": "contains",
@@ -6722,9 +7475,9 @@
       "source_file": "auth.js",
       "source_location": "L63",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_js",
-      "target": "server_auth_requirecoach",
-      "confidence_score": 1.0
+      "target": "server_auth_requirecoach"
     },
     {
       "relation": "imports_from",
@@ -6733,9 +7486,9 @@
       "source_file": "auth.test.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_test_js",
-      "target": "auth_js",
-      "confidence_score": 1.0
+      "target": "auth_js"
     },
     {
       "relation": "contains",
@@ -6864,9 +7617,9 @@
       "source_file": "auth.test.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_test_js",
-      "target": "server_auth_generatetoken",
-      "confidence_score": 1.0
+      "target": "server_auth_generatetoken"
     },
     {
       "relation": "contains",
@@ -6918,9 +7671,9 @@
       "source_file": "auth.test.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_test_js",
-      "target": "server_auth_verifytoken",
-      "confidence_score": 1.0
+      "target": "server_auth_verifytoken"
     },
     {
       "relation": "contains",
@@ -6950,9 +7703,9 @@
       "source_file": "auth.test.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_test_js",
-      "target": "server_auth_authenticatetoken",
-      "confidence_score": 1.0
+      "target": "server_auth_authenticatetoken"
     },
     {
       "relation": "contains",
@@ -6993,9 +7746,9 @@
       "source_file": "auth.test.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_test_js",
-      "target": "server_auth_requireadmin",
-      "confidence_score": 1.0
+      "target": "server_auth_requireadmin"
     },
     {
       "relation": "contains",
@@ -7036,9 +7789,9 @@
       "source_file": "auth.test.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_test_js",
-      "target": "server_auth_requirecoach",
-      "confidence_score": 1.0
+      "target": "server_auth_requirecoach"
     },
     {
       "relation": "contains",
@@ -7067,9 +7820,9 @@
       "source_file": "auth.test.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_test_js",
-      "target": "server_auth_test_jwt",
-      "confidence_score": 1.0
+      "target": "server_auth_test_jwt"
     },
     {
       "relation": "contains",
@@ -7077,9 +7830,9 @@
       "source_file": "auth.test.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_test_js",
-      "target": "server_auth_test_generatetoken_verifytoken_authenticatetoken_requireadmin_requirecoach",
-      "confidence_score": 1.0
+      "target": "server_auth_test_generatetoken_verifytoken_authenticatetoken_requireadmin_requirecoach"
     },
     {
       "relation": "contains",
@@ -7087,9 +7840,9 @@
       "source_file": "auth.test.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_test_js",
-      "target": "server_auth_test_mockuser",
-      "confidence_score": 1.0
+      "target": "server_auth_test_mockuser"
     },
     {
       "relation": "contains",
@@ -7097,9 +7850,9 @@
       "source_file": "auth.test.js",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_test_js",
-      "target": "server_auth_test_mockcoach",
-      "confidence_score": 1.0
+      "target": "server_auth_test_mockcoach"
     },
     {
       "relation": "contains",
@@ -7107,9 +7860,9 @@
       "source_file": "auth.test.js",
       "source_location": "L301",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_test_js",
-      "target": "server_auth_test_token",
-      "confidence_score": 1.0
+      "target": "server_auth_test_token"
     },
     {
       "relation": "contains",
@@ -7117,9 +7870,9 @@
       "source_file": "auth.test.js",
       "source_location": "L302",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_test_js",
-      "target": "server_auth_test_decoded",
-      "confidence_score": 1.0
+      "target": "server_auth_test_decoded"
     },
     {
       "relation": "contains",
@@ -7127,9 +7880,9 @@
       "source_file": "auth.test.js",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_test_js",
-      "target": "server_auth_test_tokenwithpassword",
-      "confidence_score": 1.0
+      "target": "server_auth_test_tokenwithpassword"
     },
     {
       "relation": "contains",
@@ -7137,9 +7890,9 @@
       "source_file": "auth.test.js",
       "source_location": "L72",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_test_js",
-      "target": "server_auth_test_invaliduser",
-      "confidence_score": 1.0
+      "target": "server_auth_test_invaliduser"
     },
     {
       "relation": "contains",
@@ -7147,9 +7900,9 @@
       "source_file": "auth.test.js",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_test_js",
-      "target": "server_auth_test_verified",
-      "confidence_score": 1.0
+      "target": "server_auth_test_verified"
     },
     {
       "relation": "contains",
@@ -7157,9 +7910,9 @@
       "source_file": "auth.test.js",
       "source_location": "L159",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "auth_test_js",
-      "target": "server_auth_test_expiredtoken",
-      "confidence_score": 1.0
+      "target": "server_auth_test_expiredtoken"
     },
     {
       "relation": "contains",
@@ -7317,9 +8070,9 @@
       "source_file": "db.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_js",
-      "target": "server_db_database",
-      "confidence_score": 1.0
+      "target": "server_db_database"
     },
     {
       "relation": "contains",
@@ -7327,9 +8080,9 @@
       "source_file": "db.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_js",
-      "target": "server_db_bcrypt",
-      "confidence_score": 1.0
+      "target": "server_db_bcrypt"
     },
     {
       "relation": "contains",
@@ -7337,9 +8090,9 @@
       "source_file": "db.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_js",
-      "target": "server_db_path",
-      "confidence_score": 1.0
+      "target": "server_db_path"
     },
     {
       "relation": "contains",
@@ -7347,9 +8100,9 @@
       "source_file": "db.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_js",
-      "target": "server_db_dbpath",
-      "confidence_score": 1.0
+      "target": "server_db_dbpath"
     },
     {
       "relation": "contains",
@@ -7357,9 +8110,9 @@
       "source_file": "db.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_js",
-      "target": "server_db_db",
-      "confidence_score": 1.0
+      "target": "server_db_db"
     },
     {
       "relation": "contains",
@@ -7367,9 +8120,9 @@
       "source_file": "db.js",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_js",
-      "target": "server_db_adminexists",
-      "confidence_score": 1.0
+      "target": "server_db_adminexists"
     },
     {
       "relation": "contains",
@@ -7377,9 +8130,9 @@
       "source_file": "db.js",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_js",
-      "target": "server_db_hashedpassword",
-      "confidence_score": 1.0
+      "target": "server_db_hashedpassword"
     },
     {
       "relation": "contains",
@@ -7457,9 +8210,9 @@
       "source_file": "db.test.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_test_js",
-      "target": "server_db_test_fs",
-      "confidence_score": 1.0
+      "target": "server_db_test_fs"
     },
     {
       "relation": "contains",
@@ -7467,9 +8220,9 @@
       "source_file": "db.test.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_test_js",
-      "target": "server_db_test_path",
-      "confidence_score": 1.0
+      "target": "server_db_test_path"
     },
     {
       "relation": "contains",
@@ -7477,9 +8230,9 @@
       "source_file": "db.test.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_test_js",
-      "target": "server_db_test_database",
-      "confidence_score": 1.0
+      "target": "server_db_test_database"
     },
     {
       "relation": "contains",
@@ -7487,9 +8240,9 @@
       "source_file": "db.test.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_test_js",
-      "target": "server_db_test_bcrypt",
-      "confidence_score": 1.0
+      "target": "server_db_test_bcrypt"
     },
     {
       "relation": "contains",
@@ -7497,9 +8250,9 @@
       "source_file": "db.test.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_test_js",
-      "target": "server_db_test_testdbpath",
-      "confidence_score": 1.0
+      "target": "server_db_test_testdbpath"
     },
     {
       "relation": "contains",
@@ -7507,9 +8260,9 @@
       "source_file": "db.test.js",
       "source_location": "L214",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_test_js",
-      "target": "server_db_test_columns",
-      "confidence_score": 1.0
+      "target": "server_db_test_columns"
     },
     {
       "relation": "contains",
@@ -7517,9 +8270,9 @@
       "source_file": "db.test.js",
       "source_location": "L215",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_test_js",
-      "target": "server_db_test_columnnames",
-      "confidence_score": 1.0
+      "target": "server_db_test_columnnames"
     },
     {
       "relation": "contains",
@@ -7527,9 +8280,9 @@
       "source_file": "db.test.js",
       "source_location": "L266",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_test_js",
-      "target": "server_db_test_hash",
-      "confidence_score": 1.0
+      "target": "server_db_test_hash"
     },
     {
       "relation": "contains",
@@ -7537,9 +8290,9 @@
       "source_file": "db.test.js",
       "source_location": "L156",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_test_js",
-      "target": "server_db_test_insertcoach",
-      "confidence_score": 1.0
+      "target": "server_db_test_insertcoach"
     },
     {
       "relation": "contains",
@@ -7547,9 +8300,9 @@
       "source_file": "db.test.js",
       "source_location": "L157",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_test_js",
-      "target": "server_db_test_result",
-      "confidence_score": 1.0
+      "target": "server_db_test_result"
     },
     {
       "relation": "contains",
@@ -7557,9 +8310,9 @@
       "source_file": "db.test.js",
       "source_location": "L160",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_test_js",
-      "target": "server_db_test_inserttask",
-      "confidence_score": 1.0
+      "target": "server_db_test_inserttask"
     },
     {
       "relation": "contains",
@@ -7567,9 +8320,9 @@
       "source_file": "db.test.js",
       "source_location": "L166",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_test_js",
-      "target": "server_db_test_tasksbefore",
-      "confidence_score": 1.0
+      "target": "server_db_test_tasksbefore"
     },
     {
       "relation": "contains",
@@ -7577,9 +8330,9 @@
       "source_file": "db.test.js",
       "source_location": "L171",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_test_js",
-      "target": "server_db_test_tasksafter",
-      "confidence_score": 1.0
+      "target": "server_db_test_tasksafter"
     },
     {
       "relation": "contains",
@@ -7587,9 +8340,9 @@
       "source_file": "db.test.js",
       "source_location": "L331",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_test_js",
-      "target": "server_db_test_adminexists",
-      "confidence_score": 1.0
+      "target": "server_db_test_adminexists"
     },
     {
       "relation": "contains",
@@ -7597,9 +8350,9 @@
       "source_file": "db.test.js",
       "source_location": "L304",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_test_js",
-      "target": "server_db_test_hashedpassword",
-      "confidence_score": 1.0
+      "target": "server_db_test_hashedpassword"
     },
     {
       "relation": "contains",
@@ -7607,9 +8360,9 @@
       "source_file": "db.test.js",
       "source_location": "L309",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_test_js",
-      "target": "server_db_test_admin",
-      "confidence_score": 1.0
+      "target": "server_db_test_admin"
     },
     {
       "relation": "contains",
@@ -7617,9 +8370,9 @@
       "source_file": "db.test.js",
       "source_location": "L270",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_test_js",
-      "target": "server_db_test_countbefore",
-      "confidence_score": 1.0
+      "target": "server_db_test_countbefore"
     },
     {
       "relation": "contains",
@@ -7627,9 +8380,9 @@
       "source_file": "db.test.js",
       "source_location": "L279",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "db_test_js",
-      "target": "server_db_test_countafter",
-      "confidence_score": 1.0
+      "target": "server_db_test_countafter"
     },
     {
       "relation": "contains",
@@ -7921,296 +8674,6 @@
       "confidence_score": 1.0,
       "source": "client_readme_react_vite",
       "target": "client_readme_expanding_the_eslint_configuration"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_json",
-      "target": "client_package_name"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_json",
-      "target": "client_package_private"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_json",
-      "target": "client_package_version"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_json",
-      "target": "client_package_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_json",
-      "target": "client_package_scripts"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_json",
-      "target": "client_package_dependencies"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_json",
-      "target": "client_package_devdependencies"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_scripts",
-      "target": "client_package_scripts_dev"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_scripts",
-      "target": "client_package_scripts_build"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_scripts",
-      "target": "client_package_scripts_lint"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_scripts",
-      "target": "client_package_scripts_preview"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_dependencies",
-      "target": "client_package_dependencies_tailwindcss_postcss"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_dependencies",
-      "target": "client_package_dependencies_axios"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_dependencies",
-      "target": "client_package_dependencies_react"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_dependencies",
-      "target": "client_package_dependencies_react_dom"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_dependencies",
-      "target": "client_package_dependencies_react_hot_toast"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_dependencies",
-      "target": "client_package_dependencies_react_router_dom"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_devdependencies",
-      "target": "client_package_devdependencies_eslint_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L22",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_devdependencies",
-      "target": "client_package_devdependencies_types_react"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_devdependencies",
-      "target": "client_package_devdependencies_types_react_dom"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_devdependencies",
-      "target": "client_package_devdependencies_vitejs_plugin_react"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_devdependencies",
-      "target": "client_package_devdependencies_autoprefixer"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L26",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_devdependencies",
-      "target": "client_package_devdependencies_eslint"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L27",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_devdependencies",
-      "target": "client_package_devdependencies_eslint_plugin_react_hooks"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L28",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_devdependencies",
-      "target": "client_package_devdependencies_eslint_plugin_react_refresh"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L29",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_devdependencies",
-      "target": "client_package_devdependencies_globals"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L30",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_devdependencies",
-      "target": "client_package_devdependencies_postcss"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L31",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_devdependencies",
-      "target": "client_package_devdependencies_tailwindcss"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/package.json",
-      "source_location": "L32",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_package_devdependencies",
-      "target": "client_package_devdependencies_vite"
     },
     {
       "relation": "contains",
@@ -14561,5 +15024,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "f33191a0361463c83948b5610d972fa241d06359"
+  "built_at_commit": "409dcbbbda2bc43ff5e0d938a59fabf7a065042d"
 }

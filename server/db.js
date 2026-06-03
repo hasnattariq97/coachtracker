@@ -10,6 +10,7 @@ db.pragma('foreign_keys = ON');
 db.exec(`
   CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL DEFAULT '',
     email TEXT UNIQUE NOT NULL,
     password_hash TEXT NOT NULL,
     role TEXT NOT NULL CHECK (role IN ('admin', 'coach')),
@@ -74,6 +75,33 @@ if (!adminExists) {
 
   const passwordDisplay = seedPassword === 'admin123' ? 'admin123 (dev)' : '[custom password set via env]';
   console.log(`✓ Seeded admin user: admin@tracker.com / ${passwordDisplay}`);
+}
+
+// Add name column if missing (safe migration)
+const cols = db.prepare('PRAGMA table_info(users)').all().map(c => c.name);
+if (!cols.includes('name')) {
+  db.exec("ALTER TABLE users ADD COLUMN name TEXT NOT NULL DEFAULT ''");
+}
+
+// Add UNIQUE constraint to notifications for atomic idempotency (Phase 6)
+// Check if constraint exists by trying to violate it
+try {
+  const constraintExists = db.prepare(`
+    SELECT 1 FROM sqlite_master
+    WHERE type='index' AND name='unique_notification_dedup'
+  `).get();
+
+  if (!constraintExists) {
+    db.exec(`
+      CREATE UNIQUE INDEX unique_notification_dedup
+      ON notifications(user_id, task_id, type)
+      WHERE task_id IS NOT NULL;
+    `);
+    console.log('✓ Added UNIQUE index for notification idempotency');
+  }
+} catch (err) {
+  // Index might already exist; safe to ignore
+  console.log('ℹ️  Notification idempotency index already exists');
 }
 
 module.exports = db;

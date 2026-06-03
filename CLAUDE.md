@@ -20,6 +20,17 @@ Dual-role web app: Admin assigns tasks to coaches with deadlines. Coaches log in
 - All coach routes: scoped to req.user.id
 - Never return password_hash in API responses
 
+## Frontend Design System (REQUIRED)
+**All frontend UI MUST use the ui-ux-pro-max-skill design system:**
+- **Primary color:** Teal `#0D9488` (buttons, navigation, primary actions)
+- **Accent color:** Orange `#EA580C` (highlights, secondary emphasis)
+- **Typography:** Plus Jakarta Sans (headings) + Inter (body text)
+- **Framework:** Tailwind v4 with `@theme` custom properties (see `client/src/index.css`)
+- **Animations:** shimmer (loading), slide (panels), celebrate (success)
+- **Accessibility:** Always respect `prefers-reduced-motion`
+
+Before any frontend feature, read `/skill-frontend` AND reference the design spec in [@memory/frontend_design_system.md](~/.claude/projects/d--Cursor-new/memory/frontend_design_system.md).
+
 ## Nudge Logic
 1. **Midpoint**: now ≥ assigned_at + (due_date - assigned_at)/2 → notify coach
 2. **Overdue**: now > due_date AND status ≠ 'completed' → status=overdue, notify coach

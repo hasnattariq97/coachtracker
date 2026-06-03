@@ -1,122 +1,88 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
+import { AuthProvider } from './context/AuthContext';
+import ProtectedRoute from './components/ProtectedRoute';
+import Layout from './components/Layout';
 
-function App() {
-  const [count, setCount] = useState(0)
+const LoginPage        = lazy(() => import('./pages/LoginPage'));
+const AdminDashboard   = lazy(() => import('./pages/admin/Dashboard'));
+const CoachesPage      = lazy(() => import('./pages/admin/CoachesPage'));
+const TaskBoard        = lazy(() => import('./pages/admin/TaskBoard'));
+const AssignTask       = lazy(() => import('./pages/admin/AssignTask'));
+const CoachDashboard   = lazy(() => import('./pages/coach/Dashboard'));
+const MyTasks          = lazy(() => import('./pages/coach/MyTasks'));
 
-  return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-dvh bg-primary-50">
+    <div className="flex flex-col items-center gap-3">
+      <div className="w-8 h-8 border-3 border-primary-200 border-t-primary-600 rounded-full animate-spin" />
+      <p className="text-sm text-primary-600 font-medium font-sans">Loading…</p>
+    </div>
+  </div>
+);
 
-      <div className="ticks"></div>
+const AdminLayout = () => (
+  <ProtectedRoute requiredRole="admin" component={() => <Layout role="admin" />} />
+);
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+const CoachLayout = () => (
+  <ProtectedRoute requiredRole="coach" component={() => <Layout role="coach" />} />
+);
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
-}
+const RoleRedirect = () => {
+  const token = localStorage.getItem('token');
+  if (!token) return <Navigate to="/login" replace />;
+  try {
+    const { role } = JSON.parse(atob(token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/')));
+    return <Navigate to={role === 'admin' ? '/admin/dashboard' : '/coach/dashboard'} replace />;
+  } catch {
+    return <Navigate to="/login" replace />;
+  }
+};
 
-export default App
+const App = () => (
+  <>
+    <Toaster
+      position="top-right"
+      toastOptions={{
+        style: {
+          fontFamily: "'Inter', sans-serif",
+          fontSize: '14px',
+          borderRadius: '10px',
+          boxShadow: '0 4px 12px rgb(0 0 0 / 0.1)',
+        },
+        success: { iconTheme: { primary: '#0d9488', secondary: '#fff' } },
+        error:   { iconTheme: { primary: '#dc2626', secondary: '#fff' } },
+      }}
+    />
+    <Router>
+      <AuthProvider>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/login" element={<LoginPage />} />
+
+            <Route element={<AdminLayout />}>
+              <Route path="/admin/dashboard" element={<AdminDashboard />} />
+              <Route path="/admin/coaches"   element={<CoachesPage />} />
+              <Route path="/admin/tasks"     element={<TaskBoard />} />
+              <Route path="/admin/assign"    element={<AssignTask />} />
+              <Route path="/admin"           element={<Navigate to="/admin/dashboard" replace />} />
+            </Route>
+
+            <Route element={<CoachLayout />}>
+              <Route path="/coach/dashboard" element={<CoachDashboard />} />
+              <Route path="/coach/tasks"     element={<MyTasks />} />
+              <Route path="/coach"           element={<Navigate to="/coach/dashboard" replace />} />
+            </Route>
+
+            <Route path="/"  element={<RoleRedirect />} />
+            <Route path="*"  element={<Navigate to="/" replace />} />
+          </Routes>
+        </Suspense>
+      </AuthProvider>
+    </Router>
+  </>
+);
+
+export default App;

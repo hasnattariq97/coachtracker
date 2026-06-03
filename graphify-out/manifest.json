@@ -95,8 +95,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\package.json": {
-    "mtime": 1779040401.1150897,
-    "ast_hash": "b6a0ea199b89f45386f0f7895cd8e8f8",
+    "mtime": 1779043360.9431386,
+    "ast_hash": "d9451cf616f65d6c886528bc76a79529",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\postcss.config.js": {
@@ -114,6 +114,11 @@
     "ast_hash": "685d2a5814804d2a3ab8a80a6c57c4a4",
     "semantic_hash": ""
   },
+  "D:\\Cursor_new\\client\\vitest.config.js": {
+    "mtime": 1779043101.451367,
+    "ast_hash": "c3820348041b65849a1d5aa745ce502a",
+    "semantic_hash": ""
+  },
   "D:\\Cursor_new\\client\\src\\App.jsx": {
     "mtime": 1779040086.017652,
     "ast_hash": "cd56544ef84672246b9eebbde5b73d5b",
@@ -122,6 +127,21 @@
   "D:\\Cursor_new\\client\\src\\main.jsx": {
     "mtime": 1779040086.2490332,
     "ast_hash": "e13723e2574429d9a6d849727e3ff695",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\setup.test.js": {
+    "mtime": 1779043112.780841,
+    "ast_hash": "70d4c9e5a4475324972744204d583c09",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\context\\AuthContext.jsx": {
+    "mtime": 1779043473.0936184,
+    "ast_hash": "440bfef5ce42671199ff25e0b505fda3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\context\\AuthContext.test.jsx": {
+    "mtime": 1779043434.2591014,
+    "ast_hash": "e03f211cd98e71cd67cb2353f4ca01ef",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\auth.js": {

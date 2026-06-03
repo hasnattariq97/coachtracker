@@ -122,7 +122,15 @@ REFACTOR: Extract createNotification helper, add idempotency check
 - Return 400 for bad input, 403 for auth failures, 500 for server errors
 - Create notifications on state-changing actions (task assign, complete, delay reason)
 
-### Frontend
+### Frontend (MUST USE ui-ux-pro-max-skill)
+**REQUIRED:** All frontend UI must follow the **ui-ux-pro-max-skill design system:**
+- **Colors:** Teal `#0D9488` (primary), Orange `#EA580C` (accent)
+- **Typography:** Plus Jakarta Sans (headings), Inter (body)
+- **Framework:** Tailwind v4 with `@theme` custom properties
+- **Animations:** shimmer (loading), slide (panels), celebrate (success)
+- **Accessibility:** Respect `prefers-reduced-motion`
+
+Additional frontend conventions:
 - Use AuthContext for login state (localStorage + JWT)
 - Poll notifications every 30s (not WebSocket)
 - Show loading spinners on all async calls
