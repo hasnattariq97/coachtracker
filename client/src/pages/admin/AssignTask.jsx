@@ -7,13 +7,19 @@ import Card from '../../components/ui/Card';
 import Button from '../../components/ui/Button';
 
 const AssignTask = () => {
-  const [coaches, setCoaches]   = useState([]);
-  const [loading, setLoading]   = useState(false);
-  const [form, setForm]         = useState({ coach_id: '', title: '', description: '', priority: 'medium', due_date: '' });
+  const [coaches, setCoaches]     = useState([]);
+  const [coachesError, setCoachesError] = useState(false);
+  const [loading, setLoading]     = useState(false);
+  const [form, setForm]           = useState({ coach_id: '', title: '', description: '', priority: 'medium', due_date: '' });
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('/api/coaches').then(r => setCoaches(r.data)).catch(() => {});
+    axios.get('/api/coaches')
+      .then(r => setCoaches(r.data))
+      .catch(() => {
+        setCoachesError(true);
+        toast.error('Could not load coaches. Please refresh.');
+      });
   }, []);
 
   const set = k => e => setForm(f => ({ ...f, [k]: e.target.value }));
@@ -62,8 +68,12 @@ const AssignTask = () => {
               className="w-full px-3 py-2.5 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:bg-white focus:border-primary-400 focus:ring-2 focus:ring-primary-100 outline-none transition-all"
             >
               <option value="">Select a coach…</option>
+              {!coachesError && coaches.length === 0 && <option disabled>Could not load coaches</option>}
               {coaches.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
             </select>
+            {coachesError && (
+              <p className="mt-1 text-xs text-red-600">Coaches failed to load — refresh the page to try again.</p>
+            )}
           </div>
 
           {/* Title */}
@@ -78,6 +88,7 @@ const AssignTask = () => {
               maxLength={200}
               className="w-full px-3 py-2.5 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:bg-white focus:border-primary-400 focus:ring-2 focus:ring-primary-100 outline-none transition-all"
             />
+            <p className="mt-1 text-right text-[11px] text-slate-400">{form.title.length}/200</p>
           </div>
 
           {/* Description */}
@@ -94,6 +105,7 @@ const AssignTask = () => {
               maxLength={1000}
               className="w-full px-3 py-2.5 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:bg-white focus:border-primary-400 focus:ring-2 focus:ring-primary-100 outline-none transition-all resize-none"
             />
+            <p className="mt-1 text-right text-[11px] text-slate-400">{form.description.length}/1000</p>
           </div>
 
           <div className="grid grid-cols-2 gap-4">

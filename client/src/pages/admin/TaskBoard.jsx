@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import { ClipboardList, Search, Filter } from 'lucide-react';
@@ -6,6 +6,7 @@ import Card from '../../components/ui/Card';
 import Badge from '../../components/ui/Badge';
 import Button from '../../components/ui/Button';
 import EmptyState from '../../components/ui/EmptyState';
+import Modal from '../../components/ui/Modal';
 import { TableRowSkeleton } from '../../components/ui/Skeleton';
 import TaskDetailSlideOver from '../../components/TaskDetailSlideOver';
 import EditTaskModal from '../../components/EditTaskModal';
@@ -16,11 +17,13 @@ const TaskBoard = () => {
   const [tasks, setTasks]           = useState([]);
   const [coaches, setCoaches]       = useState([]);
   const [loading, setLoading]       = useState(true);
+  const [rawSearch, setRawSearch]   = useState('');
   const [search, setSearch]         = useState('');
   const [statusFilter, setStatus]   = useState('all');
   const [coachFilter, setCoach]     = useState('all');
   const [selected, setSelected]     = useState(null);
   const [editing, setEditing]       = useState(null);
+  const [deleteTarget, setDeleteTarget] = useState(null);
 
   const fetchAll = useCallback(async () => {
     try {
@@ -33,20 +36,29 @@ const TaskBoard = () => {
 
   useEffect(() => { fetchAll(); }, [fetchAll]);
 
-  const filtered = tasks.filter(t => {
+  useEffect(() => {
+    const id = setTimeout(() => setSearch(rawSearch), 300);
+    return () => clearTimeout(id);
+  }, [rawSearch]);
+
+  const filtered = useMemo(() => tasks.filter(t => {
     if (statusFilter !== 'all' && t.status !== statusFilter) return false;
     if (coachFilter  !== 'all' && String(t.coach_id) !== coachFilter) return false;
     if (search && !t.title.toLowerCase().includes(search.toLowerCase()) &&
         !t.coach_name?.toLowerCase().includes(search.toLowerCase())) return false;
     return true;
-  });
+  }), [tasks, statusFilter, coachFilter, search]);
 
-  const handleDelete = async (id) => {
-    if (!confirm('Delete this task?')) return;
+  const confirmDelete = (id) => {
+    setDeleteTarget(id);
+  };
+
+  const executeDelete = async () => {
     try {
-      await axios.delete(`/api/tasks/${id}`);
+      await axios.delete(`/api/tasks/${deleteTarget}`);
       toast.success('Task deleted.');
       setSelected(null);
+      setDeleteTarget(null);
       fetchAll();
     } catch { toast.error('Failed to delete task'); }
   };
@@ -73,8 +85,8 @@ const TaskBoard = () => {
           <div className="relative flex-1">
             <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
             <input
-              value={search}
-              onChange={e => setSearch(e.target.value)}
+              value={rawSearch}
+              onChange={e => setRawSearch(e.target.value)}
               placeholder="Search tasks or coaches…"
               className="w-full pl-8 pr-3 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:bg-white focus:border-primary-400 focus:ring-2 focus:ring-primary-100 outline-none transition-all"
             />
@@ -142,7 +154,7 @@ const TaskBoard = () => {
                   <td className="py-3 px-4">
                     <div className="flex gap-1" onClick={e => e.stopPropagation()}>
                       <Button size="sm" variant="ghost" onClick={() => setEditing(t)}>Edit</Button>
-                      <Button size="sm" variant="ghost" onClick={() => handleDelete(t.id)} className="text-red-500 hover:text-red-700 hover:bg-red-50">Del</Button>
+                      <Button size="sm" variant="ghost" onClick={() => confirmDelete(t.id)} className="text-red-500 hover:text-red-700 hover:bg-red-50">Del</Button>
                     </div>
                   </td>
                 </tr>
@@ -152,8 +164,18 @@ const TaskBoard = () => {
         </div>
       </Card>
 
-      <TaskDetailSlideOver task={selected} onClose={() => setSelected(null)} onEdit={t => { setSelected(null); setEditing(t); }} onDelete={handleDelete} onRefresh={fetchAll} />
+      <TaskDetailSlideOver task={selected} onClose={() => setSelected(null)} onEdit={t => { setSelected(null); setEditing(t); }} onDelete={confirmDelete} onRefresh={fetchAll} />
       <EditTaskModal task={editing} onClose={() => setEditing(null)} onSaved={() => { setEditing(null); fetchAll(); }} />
+
+      <Modal open={!!deleteTarget} onClose={() => setDeleteTarget(null)} title="Delete Task" size="sm">
+        <p className="text-sm text-slate-600 mb-5">
+          Delete this task? This can't be undone.
+        </p>
+        <div className="flex gap-3">
+          <Button variant="secondary" className="flex-1" onClick={() => setDeleteTarget(null)}>Cancel</Button>
+          <Button variant="danger" className="flex-1" onClick={executeDelete}>Delete</Button>
+        </div>
+      </Modal>
     </div>
   );
 };

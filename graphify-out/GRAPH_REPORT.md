@@ -1,16 +1,16 @@
-# Graph Report - Cursor_new  (2026-05-17)
+# Graph Report - Cursor_new  (2026-06-03)
 
 ## Corpus Check
-- 125 files · ~99,796 words
+- 158 files · ~118,652 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 761 nodes · 814 edges · 59 communities (54 shown, 5 thin omitted)
+- 1096 nodes · 1205 edges · 74 communities (71 shown, 3 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `409dcbbb`
+- Built from commit: `a0616aea`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -57,42 +57,65 @@
 - [[_COMMUNITY_Community 43|Community 43]]
 - [[_COMMUNITY_Community 44|Community 44]]
 - [[_COMMUNITY_Community 45|Community 45]]
+- [[_COMMUNITY_Community 46|Community 46]]
 - [[_COMMUNITY_Community 47|Community 47]]
 - [[_COMMUNITY_Community 48|Community 48]]
 - [[_COMMUNITY_Community 49|Community 49]]
 - [[_COMMUNITY_Community 50|Community 50]]
 - [[_COMMUNITY_Community 51|Community 51]]
+- [[_COMMUNITY_Community 58|Community 58]]
+- [[_COMMUNITY_Community 59|Community 59]]
+- [[_COMMUNITY_Community 60|Community 60]]
+- [[_COMMUNITY_Community 61|Community 61]]
+- [[_COMMUNITY_Community 62|Community 62]]
 - [[_COMMUNITY_Community 63|Community 63]]
+- [[_COMMUNITY_Community 64|Community 64]]
+- [[_COMMUNITY_Community 65|Community 65]]
+- [[_COMMUNITY_Community 66|Community 66]]
+- [[_COMMUNITY_Community 67|Community 67]]
+- [[_COMMUNITY_Community 68|Community 68]]
+- [[_COMMUNITY_Community 69|Community 69]]
+- [[_COMMUNITY_Community 71|Community 71]]
+- [[_COMMUNITY_Community 72|Community 72]]
+- [[_COMMUNITY_Community 73|Community 73]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Phase 1: Auth System Implementation Plan` - 20 edges
 2. `devDependencies` - 19 edges
-3. `Master Capabilities Reference` - 15 edges
-4. `Ruflo Multi-Agent Orchestration Setup` - 12 edges
-5. `Task 16: End-to-End Verification` - 11 edges
-6. `Installation & Setup` - 11 edges
-7. `Phase Builder Agent (with Quality Evaluation Framework)` - 11 edges
-8. `Coach Task Tracker` - 11 edges
-9. `Metadata Contract for Coach Task Tracker` - 11 edges
+3. `Build Roadmap — Coach Task Tracker` - 18 edges
+4. `Phase 6 Handoff — Security Audit & Polish Complete` - 15 edges
+5. `Master Capabilities Reference` - 15 edges
+6. `Coach Task Tracker` - 12 edges
+7. `useAuth()` - 12 edges
+8. `Agent Handoff Document — Coach Task Tracker` - 12 edges
+9. `Ruflo Multi-Agent Orchestration Setup` - 12 edges
 10. `Contributing — Coach Task Tracker` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `TestComponent()` --calls--> `useAuth()`  [EXTRACTED]
-  src/context/AuthContext.test.jsx → src/context/AuthContext.jsx
+  src/context/AuthContext.test.jsx → client/src/context/AuthContext.jsx
+- `ProtectedRoute()` --calls--> `useAuth()`  [EXTRACTED]
+  client/src/components/ProtectedRoute.jsx → client/src/context/AuthContext.jsx
+- `Sidebar()` --calls--> `useAuth()`  [EXTRACTED]
+  client/src/components/Sidebar.jsx → client/src/context/AuthContext.jsx
+- `LoginPage()` --calls--> `useAuth()`  [EXTRACTED]
+  client/src/pages/LoginPage.jsx → client/src/context/AuthContext.jsx
+- `CoachDashboard()` --calls--> `useAuth()`  [EXTRACTED]
+  client/src/pages/coach/Dashboard.jsx → client/src/context/AuthContext.jsx
 
-## Communities (59 total, 5 thin omitted)
+## Communities (74 total, 3 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.08
-Nodes (24): Backend, Backend, Backend, Backend, Backend, Build Roadmap — Coach Task Tracker, Frontend, Frontend (+16 more)
+Cohesion: 0.04
+Nodes (46): Backend, Backend, Backend, Backend, Backend, Backend ✅ (complete), Backend ✅ (complete), Build Roadmap — Coach Task Tracker (+38 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.05
-Nodes (40): Agent Commands, Agent-Powered Development (Ruflo), AgentDB Namespaces, API Routes, Authentication & Authorization, Backend Won't Start, Branch Naming, Coaching Tone (+32 more)
+Nodes (41): Agent Commands, Agent-Powered Development (Ruflo), AgentDB Namespaces, API Routes, Authentication & Authorization, Backend Won't Start, Branch Naming, Coaching Tone (+33 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.07
-Nodes (28): Beads Work-Tracking System, Coach Task Tracker, Code Conventions, code:bash (# Trigger phase builder for parallel development), code:block2 (Open Work Items from Previous Session:), code:block3 (⚠️  Note: 2 unclosed bead(s) in .beads/status.jsonl), code:yaml (---), code:bash (# Show open beads) (+20 more)
+Nodes (29): Beads Work-Tracking System, Coach Task Tracker, Code Conventions, code:bash (# Trigger phase builder for parallel development), code:block2 (Open Work Items from Previous Session:), code:block3 (⚠️  Note: 2 unclosed bead(s) in .beads/status.jsonl), code:yaml (---), code:bash (# Show open beads) (+21 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.22
@@ -107,8 +130,8 @@ Cohesion: 0.05
 Nodes (41): 13 Plugins to Install, Agent Commands, Agent Consensus Voting, AgentDB Namespaces, AgentDB Namespaces, Agents Not Spawning, Architecture: Ruflo in Coach Task Tracker, code:block1 ([PluginManager] Failed to install ruflo-agentdb: spawn npm E) (+33 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.24
-Nodes (9): AuthContext, AuthProvider(), loginButton, loginPromise, logoutButton, TestComponent(), user, userSetup (+1 more)
+Cohesion: 0.05
+Nodes (27): pageTitles, typeIcons, typeStyles, ProtectedRoute(), adminLinks, coachLinks, Sidebar(), AuthContext (+19 more)
 
 ### Community 7 - "Community 7"
 Cohesion: 0.18
@@ -143,8 +166,8 @@ Cohesion: 0.06
 Nodes (31): code:markdown (---), code:markdown (---), code:javascript (/**), code:json ({), code:bash (grep -r "^phase: \"1\"" docs/ .claude/), code:bash (grep -r "^status: \"deprecated\"" .), code:bash (# (use your date command to compute cutoff)), code:markdown (---) (+23 more)
 
 ### Community 15 - "Community 15"
-Cohesion: 0.07
-Nodes (46): bcrypt, db, express, { generateToken }, isValidEmail(), normalizedEmail, router, app (+38 more)
+Cohesion: 0.16
+Nodes (20): app, db, longPassword, payload, request, authenticateToken(), jwt, requireAdmin() (+12 more)
 
 ### Community 19 - "Community 19"
 Cohesion: 0.1
@@ -155,16 +178,16 @@ Cohesion: 0.17
 Nodes (11): env, NODE_ENV, PORT, REACT_PORT, hooks, PostToolUse, PreToolUse, Stop (+3 more)
 
 ### Community 21 - "Community 21"
-Cohesion: 0.18
-Nodes (10): bead_count, decisions, failures, status, created_at, last_updated, phases_tracked, project (+2 more)
+Cohesion: 0.15
+Nodes (12): bead_count, decisions, failures, status, created_at, last_updated, note, open_beads (+4 more)
 
 ### Community 22 - "Community 22"
 Cohesion: 0.1
 Nodes (21): 1. File Operations, 2. Shell Operations, 3. Code Understanding, Available Tools, Bash, code:bash (Read(file_path)), code:bash (Write(file_path, content)), code:bash (Edit(file_path, old_string, new_string)) (+13 more)
 
 ### Community 23 - "Community 23"
-Cohesion: 0.05
-Nodes (42): 1. Local Memory (.claude/projects/*/memory/), 2. AgentDB (Ruflo Vector Database), 3. SONA Learning (Neural Trajectories), Agent Best Practices, Best Practices, Building a Feature (Superpowers Cycle), Claude Core Capabilities, Code Conventions (Language-Neutral) (+34 more)
+Cohesion: 0.29
+Nodes (7): 1. Local Memory (.claude/projects/*/memory/), code:block35 (.claude/projects/{project_name}/memory/), code:markdown (---), code:markdown (---), code:markdown (---), code:markdown (---), Memory Types
 
 ### Community 24 - "Community 24"
 Cohesion: 0.07
@@ -172,7 +195,7 @@ Nodes (40): Beads Work-Tracking System, Claude Code CLI, code:bash (# Install th
 
 ### Community 27 - "Community 27"
 Cohesion: 0.06
-Nodes (35): dependencies, axios, react, react-dom, react-hot-toast, react-router-dom, @tailwindcss/postcss, devDependencies (+27 more)
+Nodes (36): dependencies, axios, lucide-react, react, react-dom, react-hot-toast, react-router-dom, @tailwindcss/postcss (+28 more)
 
 ### Community 28 - "Community 28"
 Cohesion: 0.09
@@ -191,8 +214,8 @@ Cohesion: 0.18
 Nodes (11): code:bash (cd d:\Cursor_new\server), code:bash (cd d:\Cursor_new\client), code:bash (curl http://localhost:3001/health), code:json ({"status":"ok"}), code:bash (curl -X POST http://localhost:3001/api/auth/login \), code:bash (curl -X POST http://localhost:3001/api/auth/login \), code:bash (cd d:\Cursor_new\server), code:bash (cd d:\Cursor_new\client) (+3 more)
 
 ### Community 32 - "Community 32"
-Cohesion: 0.2
-Nodes (9): code:javascript (import { render, screen } from '@testing-library/react';), code:bash (cd d:\Cursor_new\client), code:javascript (import { render, screen, waitFor } from '@testing-library/re), code:bash (cd d:\Cursor_new\client), Phase 1: Auth System Implementation Plan, Security Checklist (Final Review), Summary, Task 11: Create ProtectedRoute Component (RED) (+1 more)
+Cohesion: 0.18
+Nodes (10): code:javascript (import { render, screen } from '@testing-library/react';), code:bash (cd d:\Cursor_new\client), code:javascript (import React from 'react';), code:bash (cd d:\Cursor_new\client), code:bash (cd d:\Cursor_new\client), Phase 1: Auth System Implementation Plan, Security Checklist (Final Review), Summary (+2 more)
 
 ### Community 33 - "Community 33"
 Cohesion: 0.25
@@ -239,39 +262,107 @@ Cohesion: 0.5
 Nodes (4): code:javascript (import express from 'express';), code:bash (cd d:\Cursor_new\server), code:bash (cd d:\Cursor_new\server), Task 8: Refactor Login Endpoint
 
 ### Community 44 - "Community 44"
-Cohesion: 0.5
-Nodes (4): code:javascript (import React from 'react';), code:bash (cd d:\Cursor_new\client), code:bash (cd d:\Cursor_new\client), Task 12: Create ProtectedRoute Component (GREEN)
+Cohesion: 0.06
+Nodes (15): STATUSES, CoachDashboard(), greeting(), emptyMessages, TABS, daysLeft(), priorityBorder, TaskCard() (+7 more)
 
 ### Community 45 - "Community 45"
 Cohesion: 0.5
 Nodes (4): code:javascript (import React, { useState, useEffect } from 'react';), code:bash (cd d:\Cursor_new\client), code:bash (cd d:\Cursor_new\client), Task 14: Create LoginPage Component (GREEN)
 
+### Community 46 - "Community 46"
+Cohesion: 0.05
+Nodes (39): adminResult, app, coachHash, coachResult, db, future, jwt, notifs (+31 more)
+
 ### Community 47 - "Community 47"
 Cohesion: 0.67
 Nodes (3): code:javascript (import request from 'supertest';), code:bash (cd d:\Cursor_new\server), Task 6: Implement Login Endpoint (RED)
+
+### Community 49 - "Community 49"
+Cohesion: 0.14
+Nodes (12): bcrypt, coach, coaches, conflict, db, existing, express, id (+4 more)
+
+### Community 50 - "Community 50"
+Cohesion: 0.08
+Nodes (24): db, express, id, notif, notifs, router, adminResult, adminTaskResult (+16 more)
+
+### Community 51 - "Community 51"
+Cohesion: 0.08
+Nodes (19): admin, coach, db, dueDateFormatted, dueDateValidation, express, id, params (+11 more)
+
+### Community 58 - "Community 58"
+Cohesion: 0.08
+Nodes (23): Admin Layout (client/src/layout/AdminLayout.jsx), API Wrapper (client/src/api.js), App Layout (client/src/App.jsx), AuthContext (client/src/context/AuthContext.jsx), code:javascript (import react from '@vitejs/plugin-react';), code:javascript (useEffect(() => {), code:javascript (import axios from 'axios';), code:javascript (import {createContext, useState, useCallback} from 'react';) (+15 more)
+
+### Community 59 - "Community 59"
+Cohesion: 0.08
+Nodes (23): code:javascript (const createNotification = (userId, taskId, type, message) =), code:javascript (const scheduleJobs = () => {), code:bash (cd server), code:bash (cd server && node index.js), code:block5 (✓ Server running on http://localhost:3001), Files Modified/Created, Handoff Status, Key Implementation Details (+15 more)
+
+### Community 60 - "Community 60"
+Cohesion: 0.08
+Nodes (23): Agent Handoff Document — Coach Task Tracker, Backend Structure (server/), Coaching Tone Reference, Code Architecture, code:block1 (server/), code:bash (# Backend (port 3001, requires .env with JWT_SECRET)), ✅ Complete (Phases 0–5), Cron Job Details (+15 more)
+
+### Community 61 - "Community 61"
+Cohesion: 0.29
+Nodes (7): Building a Feature (Superpowers Cycle), code:block45 (1. BRAINSTORM), code:block46 (1. REPRODUCE), code:block47 (Task: Build multi-user system), Debugging a Bug (Systematic Approach), Parallel Agent Development, Patterns & Workflows
+
+### Community 62 - "Community 62"
+Cohesion: 0.29
+Nodes (6): Claude Core Capabilities, Guarantees & Constraints, Master Capabilities Reference, Reasoning Powers, Table of Contents, When to Use Each Tool/Framework
 
 ### Community 63 - "Community 63"
 Cohesion: 0.67
 Nodes (3): code:javascript (import { render, screen, waitFor } from '@testing-library/re), code:bash (cd d:\Cursor_new\client), Task 9: Create React AuthContext (RED)
 
+### Community 64 - "Community 64"
+Cohesion: 0.29
+Nodes (7): Code Review (Two-Stage), code:javascript (// RED: Write failing test first), code:block43 ([Phase #] Brief description), code:block44 ([Phase 2] Add user authentication with JWT), Commit Message Format, Development Methodologies, Test-First Development (RED-GREEN-REFACTOR)
+
+### Community 65 - "Community 65"
+Cohesion: 0.47
+Nodes (6): code:bash (# Step 1: Initialize Claude Code), Distribution & Usage, For Agents, For Projects, For Teams, Plugin Checklist for New Projects
+
+### Community 66 - "Community 66"
+Cohesion: 0.4
+Nodes (5): 2. AgentDB (Ruflo Vector Database), 3. SONA Learning (Neural Trajectories), code:bash (# Search agent knowledge), code:block41 ("When task deadline < 1 week, add hourly reminders"), Memory & Learning Systems
+
+### Community 67 - "Community 67"
+Cohesion: 0.5
+Nodes (4): Agent Best Practices, Best Practices, Code Conventions (Language-Neutral), Documentation Best Practices
+
+### Community 68 - "Community 68"
+Cohesion: 0.67
+Nodes (3): code:javascript (import { render, screen, waitFor } from '@testing-library/re), code:bash (cd d:\Cursor_new\client), Task 13: Create LoginPage Component (RED)
+
+### Community 71 - "Community 71"
+Cohesion: 0.04
+Nodes (44): API Endpoints (All Implemented & Tested), Auth, Coaches (Admin Only), Code Changes, code:javascript (// Old: SELECT-then-INSERT (racy)), code:javascript (const validateDueDate = (dueDate) => {), code:javascript (if (task.status === 'completed') {), code:bash (# Terminal 1: Backend) (+36 more)
+
+### Community 72 - "Community 72"
+Cohesion: 0.23
+Nodes (12): bcrypt, db, express, { generateToken }, isValidEmail(), normalizedEmail, router, token (+4 more)
+
+### Community 73 - "Community 73"
+Cohesion: 0.15
+Nodes (12): adminResult, app, coachResult, db, express, { generateToken, authenticateToken }, notif, otherCoachToken (+4 more)
+
 ## Knowledge Gaps
-- **416 isolated node(s):** `dev`, `build`, `lint`, `preview`, `test` (+411 more)
+- **611 isolated node(s):** `Executive Summary`, `Security Audit Methodology`, `Findings & Fixes`, `Phase 6 Security Test Suite (33 tests)`, `Phase 3+5 Route Tests (31 tests)` (+606 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Master Capabilities Reference` connect `Community 23` to `Community 7`, `Community 13`, `Community 19`, `Community 22`, `Community 24`?**
-  _High betweenness centrality (0.044) - this node is a cross-community bridge._
-- **Why does `Installation & Setup` connect `Community 24` to `Community 23`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
-- **Why does `Integrated Frameworks` connect `Community 13` to `Community 23`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
-- **What connects `dev`, `build`, `lint` to the rest of the system?**
-  _416 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `Master Capabilities Reference` connect `Community 62` to `Community 64`, `Community 65`, `Community 66`, `Community 67`, `Community 7`, `Community 13`, `Community 19`, `Community 22`, `Community 24`, `Community 61`?**
+  _High betweenness centrality (0.024) - this node is a cross-community bridge._
+- **Why does `Integrated Frameworks` connect `Community 13` to `Community 62`?**
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
+- **Why does `Agent Capabilities` connect `Community 19` to `Community 62`?**
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+- **What connects `Executive Summary`, `Security Audit Methodology`, `Findings & Fixes` to the rest of the system?**
+  _611 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.08 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.04 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**

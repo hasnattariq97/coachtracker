@@ -26,8 +26,10 @@ const CoachForm = ({ initial = {}, onSubmit, loading }) => {
             id={id}
             value={form[id]}
             onChange={set(id)}
+            disabled={loading}
             className="w-full px-3 py-2.5 border border-slate-200 rounded-lg text-sm bg-slate-50
-                       focus:bg-white focus:border-primary-400 focus:ring-2 focus:ring-primary-100 outline-none transition-all"
+                       focus:bg-white focus:border-primary-400 focus:ring-2 focus:ring-primary-100 outline-none transition-all
+                       disabled:opacity-60 disabled:cursor-not-allowed"
             {...rest}
           />
         </div>
@@ -177,13 +179,23 @@ const CoachesPage = () => {
 
       {/* Delete confirm */}
       <Modal open={!!deleteCoach} onClose={() => setDeleteCoach(null)} title="Remove Coach" size="sm">
-        <p className="text-sm text-slate-600 mb-5">
-          Remove <strong>{deleteCoach?.name}</strong>? Their tasks will also be deleted. This can't be undone.
-        </p>
-        <div className="flex gap-3">
-          <Button variant="secondary" className="flex-1" onClick={() => setDeleteCoach(null)}>Cancel</Button>
-          <Button variant="danger" className="flex-1" loading={saving} onClick={handleDelete}>Remove</Button>
-        </div>
+        {deleteCoach && (() => {
+          const taskCount = (deleteCoach.assigned || 0) + (deleteCoach.completed || 0) + (deleteCoach.overdue || 0);
+          return (
+            <>
+              <p className="text-sm text-slate-600 mb-5">
+                Remove <strong>{deleteCoach.name}</strong>?{' '}
+                {taskCount > 0
+                  ? <>This will also delete their <strong>{taskCount} task{taskCount !== 1 ? 's' : ''}</strong>. This can't be undone.</>
+                  : <>They have no tasks. This can't be undone.</>}
+              </p>
+              <div className="flex gap-3">
+                <Button variant="secondary" className="flex-1" onClick={() => setDeleteCoach(null)}>Cancel</Button>
+                <Button variant="danger" className="flex-1" loading={saving} onClick={handleDelete}>Remove</Button>
+              </div>
+            </>
+          );
+        })()}
       </Modal>
     </div>
   );

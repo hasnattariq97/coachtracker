@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import toast from 'react-hot-toast';
 import { CheckSquare, Clock, AlertTriangle, ClipboardList, ArrowRight } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import KPICard from '../../components/ui/KPICard';
 import Card from '../../components/ui/Card';
 import Button from '../../components/ui/Button';
 import EmptyState from '../../components/ui/EmptyState';
-import { CardSkeleton } from '../../components/ui/Skeleton';
+import { CardSkeleton, TaskCardSkeleton } from '../../components/ui/Skeleton';
 import TaskCard from '../../components/TaskCard';
 
 const greeting = (name) => {
@@ -20,11 +21,15 @@ const CoachDashboard = () => {
   const { user }              = useAuth();
   const [tasks, setTasks]     = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError]     = useState(null);
 
   useEffect(() => {
     axios.get('/api/tasks/mine')
       .then(r => setTasks(r.data))
-      .catch(() => {})
+      .catch(() => {
+        setError('Could not load your tasks.');
+        toast.error('Could not load your tasks.');
+      })
       .finally(() => setLoading(false));
   }, []);
 
@@ -47,11 +52,13 @@ const CoachDashboard = () => {
         </p>
         <h2 className="text-2xl font-heading font-bold mb-1">{greeting(user?.name)}</h2>
         <p className="text-primary-100 text-sm">
-          {overdue > 0
-            ? `You have ${overdue} overdue task${overdue > 1 ? 's' : ''} — let's address them today.`
-            : active > 0
-              ? `You have ${active} active task${active > 1 ? 's' : ''} in progress. Keep the momentum!`
-              : 'You\'re all caught up! Great work. 🎉'}
+          {loading
+            ? 'Loading your tasks…'
+            : overdue > 0
+              ? `You have ${overdue} overdue task${overdue > 1 ? 's' : ''} — let's address them today.`
+              : active > 0
+                ? `You have ${active} active task${active > 1 ? 's' : ''} in progress. Keep the momentum!`
+                : 'You\'re all caught up! Great work. 🎉'}
         </p>
       </div>
 
@@ -82,8 +89,17 @@ const CoachDashboard = () => {
 
         {loading ? (
           <div className="space-y-3">
-            {[1,2].map(i => <div key={i} className="bg-white rounded-xl h-28 skeleton" />)}
+            {[1,2].map(i => <TaskCardSkeleton key={i} />)}
           </div>
+        ) : error ? (
+          <Card>
+            <EmptyState
+              icon={AlertTriangle}
+              title="Couldn't load your tasks"
+              message={error}
+              action={<Button variant="secondary" onClick={() => window.location.reload()}>Try again</Button>}
+            />
+          </Card>
         ) : upcoming.length === 0 ? (
           <Card>
             <EmptyState

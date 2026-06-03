@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
-import { CheckSquare } from 'lucide-react';
+import toast from 'react-hot-toast';
+import { CheckSquare, AlertTriangle } from 'lucide-react';
 import Card from '../../components/ui/Card';
 import EmptyState from '../../components/ui/EmptyState';
+import Button from '../../components/ui/Button';
+import { TaskCardSkeleton } from '../../components/ui/Skeleton';
 import TaskCard from '../../components/TaskCard';
 
 const TABS = [
@@ -22,13 +25,18 @@ const emptyMessages = {
 const MyTasks = () => {
   const [tasks, setTasks]     = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError]     = useState(null);
   const [tab, setTab]         = useState('all');
 
   const fetchTasks = useCallback(async () => {
+    setError(null);
     try {
       const { data } = await axios.get('/api/tasks/mine');
       setTasks(data);
-    } catch {} finally { setLoading(false); }
+    } catch {
+      setError('Could not load your tasks.');
+      toast.error('Could not load your tasks.');
+    } finally { setLoading(false); }
   }, []);
 
   useEffect(() => { fetchTasks(); }, [fetchTasks]);
@@ -79,8 +87,17 @@ const MyTasks = () => {
 
       {loading ? (
         <div className="space-y-3">
-          {[1,2,3].map(i => <div key={i} className="bg-white rounded-xl h-32 skeleton" />)}
+          {[1,2,3].map(i => <TaskCardSkeleton key={i} />)}
         </div>
+      ) : error ? (
+        <Card>
+          <EmptyState
+            icon={AlertTriangle}
+            title="Couldn't load your tasks"
+            message={error}
+            action={<Button variant="secondary" onClick={fetchTasks}>Try again</Button>}
+          />
+        </Card>
       ) : filtered.length === 0 ? (
         <Card>
           <EmptyState icon={CheckSquare} {...emptyMessages[tab]} />

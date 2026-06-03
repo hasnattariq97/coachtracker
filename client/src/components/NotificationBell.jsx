@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Bell, CheckCheck, X } from 'lucide-react';
+import toast from 'react-hot-toast';
 import axios from 'axios';
 
 const typeStyles = {
@@ -20,6 +21,7 @@ const typeIcons = {
 
 const NotificationBell = () => {
   const [notifications, setNotifications] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
 
@@ -27,13 +29,32 @@ const NotificationBell = () => {
     try {
       const { data } = await axios.get('/api/notifications');
       setNotifications(data);
-    } catch {}
+    } catch {
+      toast.error('Could not load notifications');
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
   useEffect(() => {
     fetchNotifications();
-    const id = setInterval(fetchNotifications, 30000);
-    return () => clearInterval(id);
+
+    let id = null;
+    const start = () => { id = setInterval(fetchNotifications, 30000); };
+    const stop = () => { clearInterval(id); id = null; };
+
+    const handleVisibility = () => {
+      if (document.visibilityState === 'hidden') stop();
+      else { fetchNotifications(); start(); }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibility);
+    start();
+
+    return () => {
+      stop();
+      document.removeEventListener('visibilitychange', handleVisibility);
+    };
   }, [fetchNotifications]);
 
   useEffect(() => {
@@ -47,14 +68,18 @@ const NotificationBell = () => {
     try {
       await axios.put(`/api/notifications/${id}/read`);
       setNotifications(n => n.map(x => x.id === id ? { ...x, read: 1 } : x));
-    } catch {}
+    } catch {
+      toast.error('Could not mark as read');
+    }
   };
 
   const markAllRead = async () => {
     try {
       await axios.put('/api/notifications/read-all');
       setNotifications(n => n.map(x => ({ ...x, read: 1 })));
-    } catch {}
+    } catch {
+      toast.error('Could not mark as read');
+    }
   };
 
   const unread = notifications.filter(n => !n.read).length;
@@ -106,7 +131,13 @@ const NotificationBell = () => {
           </div>
 
           <div className="max-h-80 overflow-y-auto">
-            {notifications.length === 0 ? (
+            {loading ? (
+              <div className="p-3 space-y-2">
+                {[1,2,3].map(i => (
+                  <div key={i} className="skeleton h-12 rounded-lg" />
+                ))}
+              </div>
+            ) : notifications.length === 0 ? (
               <div className="py-10 text-center">
                 <p className="text-sm text-slate-400">No notifications yet.</p>
               </div>

@@ -24,6 +24,7 @@ axios.interceptors.response.use(
   err => {
     if (err.response?.status === 401) {
       localStorage.removeItem('token');
+      sessionStorage.setItem('session_expired', '1');
       window.location.href = '/login';
     }
     return Promise.reject(err);

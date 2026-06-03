@@ -11,6 +11,13 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    if (sessionStorage.getItem('session_expired')) {
+      sessionStorage.removeItem('session_expired');
+      toast.error('Your session expired. Please sign in again.');
+    }
+  }, []);
+
+  useEffect(() => {
     if (isAuthenticated && user) {
       navigate(user.role === 'admin' ? '/admin/dashboard' : '/coach/dashboard', { replace: true });
     }

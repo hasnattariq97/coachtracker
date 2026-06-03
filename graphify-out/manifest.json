@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\.beads\\_manifest.json": {
-    "mtime": 1779038154.6742938,
-    "ast_hash": "d175fbd60e50fb54a88784bdac7e2dea",
+    "mtime": 1780387033.280883,
+    "ast_hash": "36d2d7f6308deab7829e52422a940d80",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\.claude\\settings.json": {
@@ -95,8 +95,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\package.json": {
-    "mtime": 1779043360.9431386,
-    "ast_hash": "d9451cf616f65d6c886528bc76a79529",
+    "mtime": 1780381419.7895386,
+    "ast_hash": "65c686c6ac4950ae9867ce7f030edc0b",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\postcss.config.js": {
@@ -105,8 +105,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\tailwind.config.js": {
-    "mtime": 1779040308.5089576,
-    "ast_hash": "e00dbab0ccb594e9c1f6c9852ea76a33",
+    "mtime": 1780381458.9144914,
+    "ast_hash": "16eb3b51e468fb93f73dcf209d8b47cd",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\vite.config.js": {
@@ -115,13 +115,13 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\vitest.config.js": {
-    "mtime": 1779043101.451367,
-    "ast_hash": "c3820348041b65849a1d5aa745ce502a",
+    "mtime": 1779044127.852481,
+    "ast_hash": "ca19447c2529e443144a07496a301c74",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\src\\App.jsx": {
-    "mtime": 1779040086.017652,
-    "ast_hash": "cd56544ef84672246b9eebbde5b73d5b",
+    "mtime": 1780381481.9851265,
+    "ast_hash": "58859c11c29a71954ae641252f6bcbfb",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\src\\main.jsx": {
@@ -129,19 +129,149 @@
     "ast_hash": "e13723e2574429d9a6d849727e3ff695",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\setup.test.js": {
+  "D:\\Cursor_new\\client\\src\\setup.js": {
     "mtime": 1779043112.780841,
     "ast_hash": "70d4c9e5a4475324972744204d583c09",
     "semantic_hash": ""
   },
+  "D:\\Cursor_new\\client\\src\\components\\DelayReasonModal.jsx": {
+    "mtime": 1780381879.8913338,
+    "ast_hash": "31d4d8b9c4dd67825055032367bacc89",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\components\\EditTaskModal.jsx": {
+    "mtime": 1780381895.046575,
+    "ast_hash": "c56c67dd429e24e440cd1118e9ede792",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\components\\Header.jsx": {
+    "mtime": 1780381538.4504366,
+    "ast_hash": "5f005f9e4cfb0818098862b5f4069461",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\components\\Layout.jsx": {
+    "mtime": 1780381509.622122,
+    "ast_hash": "c45d13fb18915d2faa9be77ea80f8671",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\components\\NotificationBell.jsx": {
+    "mtime": 1780381665.5827687,
+    "ast_hash": "cae93c847e40e63eb53f8ba8f6460c7e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\components\\ProtectedRoute.jsx": {
+    "mtime": 1780381922.5503638,
+    "ast_hash": "3a84119b46eccd0ced96fb5948f6be92",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\components\\ProtectedRoute.test.jsx": {
+    "mtime": 1779043734.7992969,
+    "ast_hash": "8e38a29bb6a9384a6854594c2441f6ee",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\components\\Sidebar.jsx": {
+    "mtime": 1780381529.9746294,
+    "ast_hash": "2fcf4fe8adc14cfa7738c054071b3729",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\components\\TaskCard.jsx": {
+    "mtime": 1780381866.988422,
+    "ast_hash": "7a90095bbe4d419fc50c8ea23a58d6fc",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\components\\TaskDetailSlideOver.jsx": {
+    "mtime": 1780381915.4111676,
+    "ast_hash": "84f9e2cbbd2418cc572702935598ef42",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\components\\ui\\Badge.jsx": {
+    "mtime": 1780381569.1245377,
+    "ast_hash": "afc36e11f479ca76ece6b4df453bcb93",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\components\\ui\\Button.jsx": {
+    "mtime": 1780381559.6689353,
+    "ast_hash": "c784bc1f7c4f1293de1907502cbff907",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\components\\ui\\Card.jsx": {
+    "mtime": 1780381576.0428252,
+    "ast_hash": "3e4bac0ba166fc0e787c9b44cf571498",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\components\\ui\\EmptyState.jsx": {
+    "mtime": 1780381608.0947404,
+    "ast_hash": "454fa9a361356f1fb0812626fdd6ce8f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\components\\ui\\KPICard.jsx": {
+    "mtime": 1780381586.6535678,
+    "ast_hash": "72839e24491347637565ccb60f51e188",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\components\\ui\\Modal.jsx": {
+    "mtime": 1780381618.088331,
+    "ast_hash": "7aacad74b94585863d0e1580f7c187f9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\components\\ui\\ProgressBar.jsx": {
+    "mtime": 1780381594.2063687,
+    "ast_hash": "33a1035473d20d4e1e39da0994f58a13",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\components\\ui\\Skeleton.jsx": {
+    "mtime": 1780381601.5648978,
+    "ast_hash": "d7244c326cc95e6333f4c7dff9e3c188",
+    "semantic_hash": ""
+  },
   "D:\\Cursor_new\\client\\src\\context\\AuthContext.jsx": {
-    "mtime": 1779043473.0936184,
-    "ast_hash": "440bfef5ce42671199ff25e0b505fda3",
+    "mtime": 1780381493.2664979,
+    "ast_hash": "3d522fad1c130c8367dea386f614cfe1",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\src\\context\\AuthContext.test.jsx": {
     "mtime": 1779043434.2591014,
     "ast_hash": "e03f211cd98e71cd67cb2353f4ca01ef",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\pages\\LoginPage.jsx": {
+    "mtime": 1780381643.0903528,
+    "ast_hash": "a055c1b293de8873a9eac83f1b728849",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\pages\\LoginPage.test.jsx": {
+    "mtime": 1779044026.8808112,
+    "ast_hash": "afa621ba0785389be2c4ad3a2eba2663",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\pages\\admin\\AssignTask.jsx": {
+    "mtime": 1780381791.2258017,
+    "ast_hash": "5178d4bf384e0c9652efb418924abd2c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\pages\\admin\\CoachesPage.jsx": {
+    "mtime": 1780381740.0831792,
+    "ast_hash": "341cec49edae1917c24e2614e1059b90",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\pages\\admin\\Dashboard.jsx": {
+    "mtime": 1780381708.3200727,
+    "ast_hash": "502c248524d28d2811943f48e57bf916",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\pages\\admin\\TaskBoard.jsx": {
+    "mtime": 1780381769.3727815,
+    "ast_hash": "2236b04b10dc120050d601d90cd05435",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\pages\\coach\\Dashboard.jsx": {
+    "mtime": 1780381811.5988984,
+    "ast_hash": "4a28fe7dae77fb66423292842adf2831",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\src\\pages\\coach\\MyTasks.jsx": {
+    "mtime": 1780381831.522846,
+    "ast_hash": "db2a19fd869aa3f3884028afbd03e5eb",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\auth.js": {
@@ -154,14 +284,19 @@
     "ast_hash": "b611d23e634a9199d97eb32c944cfb56",
     "semantic_hash": ""
   },
+  "D:\\Cursor_new\\server\\cron.js": {
+    "mtime": 1780469427.3685038,
+    "ast_hash": "cb2f37b007fc09e7490e0baf5711917b",
+    "semantic_hash": ""
+  },
   "D:\\Cursor_new\\server\\db-integration.test.js": {
     "mtime": 1779040755.0706341,
     "ast_hash": "db5df2d8ba881a68e069b96f2fe87516",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\db.js": {
-    "mtime": 1779042472.0441146,
-    "ast_hash": "090a4940d761e7d193f6913481b4d02a",
+    "mtime": 1780469415.878848,
+    "ast_hash": "9cb8d133603d79d66a9d976ca4e63d32",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\db.test.js": {
@@ -170,8 +305,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\index.js": {
-    "mtime": 1779041835.6330884,
-    "ast_hash": "f39e38855ecb44b603368a7c1d36cd40",
+    "mtime": 1780469453.1099095,
+    "ast_hash": "e1ccf95c1eabe228b11e5e518101ab52",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\index.test.js": {
@@ -200,23 +335,38 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\coaches.js": {
-    "mtime": 1779041354.938405,
-    "ast_hash": "f112971c8b671cf7a71c48d4858975a1",
+    "mtime": 1780469403.6814451,
+    "ast_hash": "0c2532fb76060ff3dea0a2cb818bdc76",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\notifications.js": {
-    "mtime": 1779041375.888968,
-    "ast_hash": "bf29a3c460e7f52e2394b5932a33833a",
+    "mtime": 1780469443.4356737,
+    "ast_hash": "371efb4854e8fab1b75341fb569efb72",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\tasks.js": {
-    "mtime": 1779041364.7607963,
-    "ast_hash": "1fcf5a67b0dfdf2729f48a55dd178c24",
+    "mtime": 1780469669.2502544,
+    "ast_hash": "29d96d87cd5edea6ec121c58872feee1",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\server\\__tests__\\routes\\notifications.test.js": {
+    "mtime": 1780468496.1904182,
+    "ast_hash": "779d778592d17e9b3c670efd4418f469",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\server\\__tests__\\routes\\tasks.test.js": {
+    "mtime": 1780467943.059988,
+    "ast_hash": "e710ad9d8811d0b23515a3e7f1fd782f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\server\\__tests__\\security\\phase6-validation.test.js": {
+    "mtime": 1780469567.3436904,
+    "ast_hash": "f282b36dacfdc748ba92b843ad9bdbc2",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\CLAUDE.md": {
-    "mtime": 1779038313.116509,
-    "ast_hash": "d3eb3caaa0d09c7377de2d41a00c195d",
+    "mtime": 1780468474.7641957,
+    "ast_hash": "050ac65752aef3aac148ffddadc94aaf",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\COMPLETION_REPORT.md": {
@@ -257,6 +407,11 @@
   "D:\\Cursor_new\\SESSION_LOG.md": {
     "mtime": 1778235166.548384,
     "ast_hash": "87ad212c725665da6ff120462fefe9ad",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\SESSION_SUMMARY.md": {
+    "mtime": 1780468813.2086897,
+    "ast_hash": "b9a85899695c6897f78b42f10ae717c2",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\STRUCTURE_GUIDE.md": {
@@ -395,8 +550,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\.claude\\skills\\skill-frontend\\SKILL.md": {
-    "mtime": 1778235772.5289912,
-    "ast_hash": "1aca2d3cf2d3626e45d6a1c543e3df18",
+    "mtime": 1780468542.7114754,
+    "ast_hash": "1500ab351dfa081be3224bda932e826f",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\.claude\\skills\\skill-notifications\\SKILL.md": {
@@ -570,8 +725,13 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\docs\\CONTRIBUTING.md": {
-    "mtime": 1779003161.7057848,
-    "ast_hash": "036b23c3509ab061081ffa5e2fe7322d",
+    "mtime": 1780468489.3839269,
+    "ast_hash": "32044d58465dee934425146014dfe125",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\docs\\HANDOFF.md": {
+    "mtime": 1780468672.6869638,
+    "ast_hash": "f08b4ed4339bb544b7a74509b4102f48",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\docs\\METADATA-CONTRACT.md": {
@@ -579,9 +739,14 @@
     "ast_hash": "7006a88b4581d1d359f7fcc7632d547a",
     "semantic_hash": ""
   },
+  "D:\\Cursor_new\\docs\\PHASE6-HANDOFF.md": {
+    "mtime": 1780470533.0276747,
+    "ast_hash": "b89c06e6308f66d631499779c5652141",
+    "semantic_hash": ""
+  },
   "D:\\Cursor_new\\docs\\ROADMAP.md": {
-    "mtime": 1779003188.3885362,
-    "ast_hash": "e2e1a499c34c65cc8b231cf813f66f07",
+    "mtime": 1780470493.9419494,
+    "ast_hash": "cfccbdd02d9069a98417adbb2a44db73",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\docs\\SUPERPOWERS-QUICK-START.md": {
