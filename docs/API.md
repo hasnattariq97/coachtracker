@@ -142,9 +142,9 @@ List tasks for logged-in coach only.
 **Response (200):** Same as GET /api/tasks but only coach's tasks.
 
 ### POST /api/tasks
-Assign a task to a coach (admin only). Creates 'assigned' notification for coach.
+Assign a task to one or more coaches (admin only). Creates 'assigned' notification for each coach.
 
-**Request:**
+**Request (single coach - legacy):**
 ```json
 {
   "coach_id": 1,
@@ -155,16 +155,68 @@ Assign a task to a coach (admin only). Creates 'assigned' notification for coach
 }
 ```
 
-**Response (200):**
+**Request (multiple coaches - new):**
 ```json
 {
-  "id": 1,
-  "coach_id": 1,
+  "coach_ids": [1, 2, 3],
   "title": "Q2 Growth Strategy",
-  "status": "assigned",
-  "priority": "high"
+  "description": "Plan Q2 initiatives and set metrics",
+  "priority": "high",
+  "due_date": "2026-05-15T18:00:00Z"
 }
 ```
+
+**Response (200) - single coach:**
+```json
+{
+  "tasks": [
+    {
+      "id": 1,
+      "coach_id": 1,
+      "title": "Q2 Growth Strategy",
+      "status": "assigned",
+      "priority": "high"
+    }
+  ]
+}
+```
+
+**Response (200) - multiple coaches:**
+```json
+{
+  "tasks": [
+    {
+      "id": 1,
+      "coach_id": 1,
+      "title": "Q2 Growth Strategy",
+      "status": "assigned",
+      "priority": "high"
+    },
+    {
+      "id": 2,
+      "coach_id": 2,
+      "title": "Q2 Growth Strategy",
+      "status": "assigned",
+      "priority": "high"
+    },
+    {
+      "id": 3,
+      "coach_id": 3,
+      "title": "Q2 Growth Strategy",
+      "status": "assigned",
+      "priority": "high"
+    }
+  ]
+}
+```
+
+**Notes:**
+- Use `coach_id` (integer) to assign to a single coach (backward compatible)
+- Use `coach_ids` (array of integers) to assign to multiple coaches
+- Each coach receives their own task instance with identical title/description/priority/due_date
+- Each coach receives their own notification
+- Validation is atomic — if any coach_id is invalid, no tasks are created
+- Notifications are idempotent (checked via task_id, type, user_id composite key)
 
 ### GET /api/tasks/:id
 Get single task detail (admin or task owner).

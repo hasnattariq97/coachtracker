@@ -1,6 +1,6 @@
 # Coach Task Tracker
 
-Dual-role web app: Admin assigns tasks to coaches with deadlines. Coaches log in, get auto-nudged, mark completion, and submit delay reasons. Coaching tone throughout.
+Dual-role web app: Admin assigns tasks to coaches (single or multiple) with deadlines. Coaches log in, get auto-nudged, mark completion, and submit delay reasons. Coaching tone throughout. Multi-coach assignment: assign one task to several coaches with individual notifications.
 
 ## Tech Stack
 - Frontend: React (Vite) + TailwindCSS, port 5173

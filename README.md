@@ -95,7 +95,8 @@ d:\Cursor_new\
 
 ### Admin
 - Create and manage coaches
-- Assign tasks with priority and deadline
+- Assign tasks with priority and deadline (single or multiple coaches)
+- Multi-coach assignment: assign one task to several coaches with individual notifications
 - View all task progress
 - Read delay reasons from coaches
 - Get notifications when tasks complete or are overdue
@@ -236,12 +237,36 @@ See [@docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for full design rationale.
 
 ## Debugging
 
-| Problem | Check |
-|---------|-------|
+⚠️ **CRITICAL ISSUE:** If all API endpoints return 500 errors, see [@docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) for the quick fix (usually just stuck Node processes).
+
+| Problem | Solution |
+|---------|----------|
+| **All APIs return 500 (but code works)** | **Run `scripts/cleanup.cmd` — old Node processes on port 3001** |
+| **Port 3001 already in use** | **Run `scripts/cleanup.cmd` to kill stuck processes** |
 | Backend won't start | `.env` has `JWT_SECRET`, `npm install` ran |
 | Frontend won't connect | Backend on 3001, Vite proxy in `vite.config.js` |
 | Notifications not showing | Table has rows, bell polls every 30s |
 | Cron not running | `cron.js` imported in `index.js`, schedule set |
+
+**Quick Fix for "All APIs Return 500":**
+```bash
+# Windows
+scripts\cleanup.cmd
+
+# Linux/Mac
+./scripts/cleanup.sh
+```
+
+Then start fresh servers in **two new terminal windows**:
+```bash
+# Terminal 1
+cd server && node index.js
+
+# Terminal 2
+cd client && npm run dev
+```
+
+See [@docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) for detailed troubleshooting, prevention strategies, and diagnostic tools.
 
 ---
 

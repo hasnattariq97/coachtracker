@@ -82,6 +82,27 @@ Phased implementation checklist. Find the first unchecked task and read the rele
 
 ---
 
+## Phase 3+ — Multi-Coach Task Assignment ✅
+**Feature:** Assign a single task to multiple coaches simultaneously. Each coach receives their own task instance.
+
+### Backend ✅
+- [x] server/routes/tasks.js POST endpoint now accepts both:
+  - Legacy: `coach_id` (single) — backward compatible
+  - New: `coach_ids` (array) — supports multiple coaches
+- [x] Validation loop validates all coach IDs atomically (no partial creation)
+- [x] Creates one task per coach with individual notifications
+- [x] Returns array of created task IDs
+
+### Frontend ✅
+- [x] client/src/pages/admin/AssignTask.jsx — multi-select dropdown instead of single select
+- [x] Coach selection displays as removable teal tags
+- [x] "Select all coaches" option + toggle for each coach
+- [x] Dynamic success message: "assigned to X coach(es)"
+
+**Verified:** Multi-select dropdown works ✅ Tasks created for both coaches ✅ Each coach notified ✅ Backward compatible ✅
+
+---
+
 ## Phase 4 — Coach Dashboard & My Tasks ✅ (Frontend)
 **Frontend**
 - [x] client/src/pages/coach/Dashboard.jsx — personalized greeting, KPIs, upcoming tasks
@@ -166,6 +187,7 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 | 1 | Auth System | ✅ Complete | 3/3 |
 | 2 | Coach Management | ✅ Complete | 4/4 |
 | 3 | Task Assignment | ✅ Complete | 23/23 |
+| 3+ | Multi-Coach Assignment | ✅ Complete | ✅ Verified |
 | 4 | Coach Dashboard | ✅ Complete | — |
 | 5 | Notifications | ✅ Complete | 8/8 |
 | 6 | Security Audit | ✅ Complete | 33/33 |
@@ -173,6 +195,7 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 
 **Total Tests Passing:** 64+ (including 33 Phase 6 security tests)  
 **Security Findings:** 11/11 resolved (0 critical, 0 active bypasses)
+**Features Complete:** 7/7 (plus Phase 3+ multi-coach enhancement)
 
 ---
 
