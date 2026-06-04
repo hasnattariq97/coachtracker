@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import toast from 'react-hot-toast';
-import { PlusCircle, ChevronLeft } from 'lucide-react';
+import { PlusCircle, ChevronLeft, Check } from 'lucide-react';
 import Card from '../../components/ui/Card';
 import Button from '../../components/ui/Button';
 
@@ -10,8 +10,20 @@ const AssignTask = () => {
   const [coaches, setCoaches]     = useState([]);
   const [coachesError, setCoachesError] = useState(false);
   const [loading, setLoading]     = useState(false);
-  const [form, setForm]           = useState({ coach_id: '', title: '', description: '', priority: 'medium', due_date: '' });
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [form, setForm]           = useState({ coach_ids: [], title: '', description: '', priority: 'medium', due_date: '' });
+  const dropdownRef = useRef(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setShowDropdown(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   useEffect(() => {
     axios.get('/api/coaches')
@@ -24,6 +36,23 @@ const AssignTask = () => {
 
   const set = k => e => setForm(f => ({ ...f, [k]: e.target.value }));
 
+  const toggleCoach = (coachId) => {
+    setForm(f => ({
+      ...f,
+      coach_ids: f.coach_ids.includes(coachId)
+        ? f.coach_ids.filter(id => id !== coachId)
+        : [...f.coach_ids, coachId]
+    }));
+  };
+
+  const toggleSelectAll = () => {
+    setForm(f => ({
+      ...f,
+      coach_ids: f.coach_ids.length === coaches.length ? [] : coaches.map(c => c.id)
+    }));
+  };
+
+  const selectedCoaches = coaches.filter(c => form.coach_ids.includes(c.id));
   const minDate = new Date().toISOString().split('T')[0];
 
   const handleSubmit = async (e) => {
@@ -31,11 +60,13 @@ const AssignTask = () => {
     setLoading(true);
     try {
       await axios.post('/api/tasks', {
-        ...form,
-        coach_id: Number(form.coach_id),
+        title: form.title,
+        description: form.description,
+        priority: form.priority,
         due_date: new Date(form.due_date).toISOString(),
+        coach_ids: form.coach_ids,
       });
-      toast.success("Task assigned! Let's see some momentum. 🎯");
+      toast.success(`Task assigned to ${selectedCoaches.length} coach${selectedCoaches.length > 1 ? 'es' : ''}! 🎯`);
       navigate('/admin/tasks');
     } catch (err) {
       toast.error(err.response?.data?.error || 'Failed to assign task');
@@ -57,22 +88,92 @@ const AssignTask = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
-          {/* Coach */}
+          {/* Coaches Multi-Select */}
           <div>
-            <label htmlFor="coach" className="block text-sm font-medium text-primary-800 mb-1.5">Assign to Coach</label>
-            <select
-              id="coach"
-              value={form.coach_id}
-              onChange={set('coach_id')}
-              required
-              className="w-full px-3 py-2.5 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:bg-white focus:border-primary-400 focus:ring-2 focus:ring-primary-100 outline-none transition-all"
-            >
-              <option value="">Select a coach…</option>
-              {!coachesError && coaches.length === 0 && <option disabled>Could not load coaches</option>}
-              {coaches.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
-            </select>
-            {coachesError && (
-              <p className="mt-1 text-xs text-red-600">Coaches failed to load — refresh the page to try again.</p>
+            <label className="block text-sm font-medium text-primary-800 mb-1.5">Assign to Coaches</label>
+            <div className="relative" ref={dropdownRef}>
+              <button
+                type="button"
+                onClick={() => setShowDropdown(!showDropdown)}
+                className="w-full px-3 py-2.5 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:bg-white focus:border-primary-400 focus:ring-2 focus:ring-primary-100 outline-none transition-all text-left flex justify-between items-center hover:bg-white"
+              >
+                <span>
+                  {form.coach_ids.length === 0
+                    ? 'Select coaches…'
+                    : form.coach_ids.length === coaches.length
+                    ? `All coaches (${coaches.length})`
+                    : `${form.coach_ids.length} coach${form.coach_ids.length > 1 ? 'es' : ''} selected`}
+                </span>
+                <span className="text-slate-400">▼</span>
+              </button>
+
+              {showDropdown && (
+                <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-slate-200 rounded-lg shadow-lg z-10">
+                  <div className="max-h-64 overflow-y-auto">
+                    {/* Select All option */}
+                    <button
+                      type="button"
+                      onClick={toggleSelectAll}
+                      className="w-full px-3 py-2.5 text-left text-sm hover:bg-primary-50 border-b border-slate-100 flex items-center gap-2 font-medium text-primary-800"
+                    >
+                      <input
+                        type="checkbox"
+                        checked={form.coach_ids.length === coaches.length && coaches.length > 0}
+                        readOnly
+                        className="cursor-pointer"
+                      />
+                      Select all coaches
+                    </button>
+
+                    {coachesError ? (
+                      <div className="px-3 py-2.5 text-xs text-red-600">
+                        Coaches failed to load — refresh the page to try again.
+                      </div>
+                    ) : coaches.length === 0 ? (
+                      <div className="px-3 py-2.5 text-xs text-slate-500">No coaches available</div>
+                    ) : (
+                      coaches.map(c => (
+                        <button
+                          key={c.id}
+                          type="button"
+                          onClick={() => toggleCoach(c.id)}
+                          className="w-full px-3 py-2.5 text-left text-sm hover:bg-slate-50 border-b border-slate-50 last:border-b-0 flex items-center gap-2"
+                        >
+                          <input
+                            type="checkbox"
+                            checked={form.coach_ids.includes(c.id)}
+                            readOnly
+                            className="cursor-pointer"
+                          />
+                          <span className="flex-1">{c.name}</span>
+                          {form.coach_ids.includes(c.id) && <Check size={16} className="text-primary-600" />}
+                        </button>
+                      ))
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {form.coach_ids.length > 0 && (
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {selectedCoaches.map(c => (
+                  <span key={c.id} className="inline-flex items-center gap-1 px-2.5 py-1 bg-primary-100 text-primary-700 text-xs rounded-full font-medium">
+                    {c.name}
+                    <button
+                      type="button"
+                      onClick={() => toggleCoach(c.id)}
+                      className="hover:text-primary-900"
+                    >
+                      ×
+                    </button>
+                  </span>
+                ))}
+              </div>
+            )}
+
+            {form.coach_ids.length === 0 && (
+              <p className="mt-1 text-xs text-red-600">Please select at least one coach</p>
             )}
           </div>
 

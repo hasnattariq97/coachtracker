@@ -129,9 +129,12 @@ router.get('/:id', (req, res) => {
 // BATCH B: Write Endpoints
 
 router.post('/', requireAdmin, (req, res) => {
-  const { coach_id, title, description, priority, due_date } = req.body;
+  const { coach_ids, coach_id, title, description, priority, due_date } = req.body;
 
-  if (!coach_id || !title || !priority || !due_date) {
+  // Support both single coach_id (legacy) and multiple coach_ids (new)
+  const coachIdsArray = coach_ids && Array.isArray(coach_ids) ? coach_ids : (coach_id ? [coach_id] : []);
+
+  if (coachIdsArray.length === 0 || !title || !priority || !due_date) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
@@ -153,30 +156,47 @@ router.post('/', requireAdmin, (req, res) => {
   }
 
   try {
-    const coach = db.prepare('SELECT id FROM users WHERE id = ? AND role = ?').get(coach_id, 'coach');
-    if (!coach) {
-      return res.status(400).json({ error: 'Invalid coach_id' });
+    // Validate all coach IDs exist
+    const validCoaches = [];
+    for (const cId of coachIdsArray) {
+      const parsed = Number.parseInt(cId, 10);
+      if (!Number.isInteger(parsed)) {
+        return res.status(400).json({ error: `Invalid coach_id: ${cId}` });
+      }
+      const coach = db.prepare('SELECT id FROM users WHERE id = ? AND role = ?').get(parsed, 'coach');
+      if (!coach) {
+        return res.status(400).json({ error: `Invalid coach_id: ${parsed}` });
+      }
+      validCoaches.push(parsed);
     }
 
-    const stmt = db.prepare(`
+    // Create tasks in loop (one per coach)
+    const insertStmt = db.prepare(`
       INSERT INTO tasks (coach_id, title, description, priority, due_date, status, assigned_at)
       VALUES (?, ?, ?, ?, ?, 'assigned', datetime('now'))
     `);
-    const result = stmt.run(coach_id, title, description || null, priority, due_date);
-    const taskId = result.lastInsertRowid;
 
+    const createdTasks = [];
     const dueDateFormatted = formatDueDate(due_date);
     const notificationMessage = `You've got a new challenge! 🎯 '${title}' — let's make it happen by ${dueDateFormatted}.`;
-    createNotification(coach_id, taskId, 'assigned', notificationMessage);
+
+    for (const coachId of validCoaches) {
+      const result = insertStmt.run(coachId, title, description || null, priority, due_date);
+      const taskId = result.lastInsertRowid;
+      createdTasks.push({ id: taskId, coach_id: coachId });
+      createNotification(coachId, taskId, 'assigned', notificationMessage);
+    }
 
     res.json({
-      id: taskId,
-      coach_id,
-      title,
-      description: description || null,
-      priority,
-      due_date,
-      status: 'assigned'
+      tasks: createdTasks.map(t => ({
+        id: t.id,
+        coach_id: t.coach_id,
+        title,
+        description: description || null,
+        priority,
+        due_date,
+        status: 'assigned'
+      }))
     });
   } catch (e) {
     console.error(e);
