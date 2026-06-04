@@ -65,7 +65,10 @@ const TaskBoard = () => {
       groups[key].instances.push(t);
       groups[key].allIds.push(t.id);
     });
-    return Object.values(groups);
+    // Sort by assigned_at descending (most recent first)
+    return Object.values(groups).sort((a, b) =>
+      new Date(b.baseTask.assigned_at) - new Date(a.baseTask.assigned_at)
+    );
   }, [filtered]);
 
   const confirmDelete = (id) => {

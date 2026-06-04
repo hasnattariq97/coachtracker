@@ -4,198 +4,18 @@
   "graph": {},
   "nodes": [
     {
-      "label": "QUICK-FIX.md",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L1",
-      "id": "quick_fix_md",
-      "community": 74,
-      "norm_label": "quick-fix.md"
-    },
-    {
-      "label": "\ud83d\udea8 Quick Fix Reference",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L9",
-      "id": "cursor_new_quick_fix_quick_fix_reference",
-      "community": 74,
-      "norm_label": "\ud83d\udea8 quick fix reference"
-    },
-    {
-      "label": "Problem 1: All API Calls Return 500 Errors",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L13",
-      "id": "cursor_new_quick_fix_problem_1_all_api_calls_return_500_errors",
-      "community": 74,
-      "norm_label": "problem 1: all api calls return 500 errors"
-    },
-    {
-      "label": "Windows:",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L22",
-      "id": "cursor_new_quick_fix_windows",
-      "community": 74,
-      "norm_label": "windows:"
-    },
-    {
-      "label": "code:cmd (scripts\\cleanup.cmd)",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L23",
-      "id": "cursor_new_quick_fix_codeblock_1",
-      "community": 74,
-      "norm_label": "code:cmd (scripts\\cleanup.cmd)"
-    },
-    {
-      "label": "Linux/Mac:",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L27",
-      "id": "cursor_new_quick_fix_linux_mac",
-      "community": 74,
-      "norm_label": "linux/mac:"
-    },
-    {
-      "label": "code:bash (./scripts/cleanup.sh)",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L28",
-      "id": "cursor_new_quick_fix_codeblock_2",
-      "community": 74,
-      "norm_label": "code:bash (./scripts/cleanup.sh)"
-    },
-    {
-      "label": "code:bash (cd d:\\Cursor_new\\server)",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L35",
-      "id": "cursor_new_quick_fix_codeblock_3",
-      "community": 74,
-      "norm_label": "code:bash (cd d:\\cursor_new\\server)"
-    },
-    {
-      "label": "code:bash (cd d:\\Cursor_new\\client)",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L42",
-      "id": "cursor_new_quick_fix_codeblock_4",
-      "community": 74,
-      "norm_label": "code:bash (cd d:\\cursor_new\\client)"
-    },
-    {
-      "label": "Problem 2: Port 3001 Already in Use",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L52",
-      "id": "cursor_new_quick_fix_problem_2_port_3001_already_in_use",
-      "community": 74,
-      "norm_label": "problem 2: port 3001 already in use"
-    },
-    {
-      "label": "code:cmd (scripts\\cleanup.cmd)",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L57",
-      "id": "cursor_new_quick_fix_codeblock_5",
-      "community": 74,
-      "norm_label": "code:cmd (scripts\\cleanup.cmd)"
-    },
-    {
-      "label": "Problem 3: Database Locked / \"Device or Resource Busy\"",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L65",
-      "id": "cursor_new_quick_fix_problem_3_database_locked_device_or_resource_busy",
-      "community": 74,
-      "norm_label": "problem 3: database locked / \"device or resource busy\""
-    },
-    {
-      "label": "code:cmd (scripts\\cleanup.cmd)",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L70",
-      "id": "cursor_new_quick_fix_codeblock_6",
-      "community": 74,
-      "norm_label": "code:cmd (scripts\\cleanup.cmd)"
-    },
-    {
-      "label": "Problem 4: \"All Node Processes Still Running\"",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L78",
-      "id": "cursor_new_quick_fix_problem_4_all_node_processes_still_running",
-      "community": 74,
-      "norm_label": "problem 4: \"all node processes still running\""
-    },
-    {
-      "label": "code:bash (ps aux | grep node | grep -v grep | wc -l)",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L83",
-      "id": "cursor_new_quick_fix_codeblock_7",
-      "community": 74,
-      "norm_label": "code:bash (ps aux | grep node | grep -v grep | wc -l)"
-    },
-    {
-      "label": "When to Use This",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L92",
-      "id": "cursor_new_quick_fix_when_to_use_this",
-      "community": 74,
-      "norm_label": "when to use this"
-    },
-    {
-      "label": "What NOT to Do",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L100",
-      "id": "cursor_new_quick_fix_what_not_to_do",
-      "community": 74,
-      "norm_label": "what not to do"
-    },
-    {
-      "label": "One-Liner (Linux/Mac)",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L109",
-      "id": "cursor_new_quick_fix_one_liner_linux_mac",
-      "community": 74,
-      "norm_label": "one-liner (linux/mac)"
-    },
-    {
-      "label": "code:bash (killall -9 node && sleep 2 && cd server && node index.js)",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L111",
-      "id": "cursor_new_quick_fix_codeblock_8",
-      "community": 74,
-      "norm_label": "code:bash (killall -9 node && sleep 2 && cd server && node index.js)"
-    },
-    {
-      "label": "Questions?",
-      "file_type": "document",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L117",
-      "id": "cursor_new_quick_fix_questions",
-      "community": 74,
-      "norm_label": "questions?"
-    },
-    {
       "label": "TaskDetailSlideOver.jsx",
       "file_type": "code",
-      "source_file": "client/src/components/TaskDetailSlideOver.jsx",
+      "source_file": "components/TaskDetailSlideOver.jsx",
       "source_location": "L1",
-      "id": "client_src_components_taskdetailslideover_jsx",
+      "id": "components_taskdetailslideover_jsx",
       "community": 44,
       "norm_label": "taskdetailslideover.jsx"
     },
     {
       "label": "Field()",
       "file_type": "code",
-      "source_file": "client/src/components/TaskDetailSlideOver.jsx",
+      "source_file": "components/TaskDetailSlideOver.jsx",
       "source_location": "L6",
       "id": "components_taskdetailslideover_field",
       "community": 44,
@@ -204,7 +24,7 @@
     {
       "label": "TaskDetailSlideOver()",
       "file_type": "code",
-      "source_file": "client/src/components/TaskDetailSlideOver.jsx",
+      "source_file": "components/TaskDetailSlideOver.jsx",
       "source_location": "L18",
       "id": "components_taskdetailslideover_taskdetailslideover",
       "community": 44,
@@ -213,16 +33,16 @@
     {
       "label": "TaskBoard.jsx",
       "file_type": "code",
-      "source_file": "client/src/pages/admin/TaskBoard.jsx",
+      "source_file": "pages/admin/TaskBoard.jsx",
       "source_location": "L1",
-      "id": "client_src_pages_admin_taskboard_jsx",
+      "id": "pages_admin_taskboard_jsx",
       "community": 44,
       "norm_label": "taskboard.jsx"
     },
     {
       "label": "STATUSES",
       "file_type": "code",
-      "source_file": "client/src/pages/admin/TaskBoard.jsx",
+      "source_file": "pages/admin/TaskBoard.jsx",
       "source_location": "L14",
       "id": "admin_taskboard_statuses",
       "community": 44,
@@ -231,1721 +51,1919 @@
     {
       "label": "TaskBoard()",
       "file_type": "code",
-      "source_file": "client/src/pages/admin/TaskBoard.jsx",
+      "source_file": "pages/admin/TaskBoard.jsx",
       "source_location": "L16",
       "id": "admin_taskboard_taskboard",
       "community": 44,
       "norm_label": "taskboard()"
     },
     {
+      "label": "QUICK-FIX.md",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L1",
+      "community": 74,
+      "norm_label": "quick-fix.md",
+      "id": "quick_fix_md"
+    },
+    {
+      "label": "\ud83d\udea8 Quick Fix Reference",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L9",
+      "community": 74,
+      "norm_label": "\ud83d\udea8 quick fix reference",
+      "id": "cursor_new_quick_fix_quick_fix_reference"
+    },
+    {
+      "label": "Problem 1: All API Calls Return 500 Errors",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L13",
+      "community": 74,
+      "norm_label": "problem 1: all api calls return 500 errors",
+      "id": "cursor_new_quick_fix_problem_1_all_api_calls_return_500_errors"
+    },
+    {
+      "label": "Windows:",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L22",
+      "community": 74,
+      "norm_label": "windows:",
+      "id": "cursor_new_quick_fix_windows"
+    },
+    {
+      "label": "code:cmd (scripts\\cleanup.cmd)",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L23",
+      "community": 74,
+      "norm_label": "code:cmd (scripts\\cleanup.cmd)",
+      "id": "cursor_new_quick_fix_codeblock_1"
+    },
+    {
+      "label": "Linux/Mac:",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L27",
+      "community": 74,
+      "norm_label": "linux/mac:",
+      "id": "cursor_new_quick_fix_linux_mac"
+    },
+    {
+      "label": "code:bash (./scripts/cleanup.sh)",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L28",
+      "community": 74,
+      "norm_label": "code:bash (./scripts/cleanup.sh)",
+      "id": "cursor_new_quick_fix_codeblock_2"
+    },
+    {
+      "label": "code:bash (cd d:\\Cursor_new\\server)",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L35",
+      "community": 74,
+      "norm_label": "code:bash (cd d:\\cursor_new\\server)",
+      "id": "cursor_new_quick_fix_codeblock_3"
+    },
+    {
+      "label": "code:bash (cd d:\\Cursor_new\\client)",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L42",
+      "community": 74,
+      "norm_label": "code:bash (cd d:\\cursor_new\\client)",
+      "id": "cursor_new_quick_fix_codeblock_4"
+    },
+    {
+      "label": "Problem 2: Port 3001 Already in Use",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L52",
+      "community": 74,
+      "norm_label": "problem 2: port 3001 already in use",
+      "id": "cursor_new_quick_fix_problem_2_port_3001_already_in_use"
+    },
+    {
+      "label": "code:cmd (scripts\\cleanup.cmd)",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L57",
+      "community": 74,
+      "norm_label": "code:cmd (scripts\\cleanup.cmd)",
+      "id": "cursor_new_quick_fix_codeblock_5"
+    },
+    {
+      "label": "Problem 3: Database Locked / \"Device or Resource Busy\"",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L65",
+      "community": 74,
+      "norm_label": "problem 3: database locked / \"device or resource busy\"",
+      "id": "cursor_new_quick_fix_problem_3_database_locked_device_or_resource_busy"
+    },
+    {
+      "label": "code:cmd (scripts\\cleanup.cmd)",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L70",
+      "community": 74,
+      "norm_label": "code:cmd (scripts\\cleanup.cmd)",
+      "id": "cursor_new_quick_fix_codeblock_6"
+    },
+    {
+      "label": "Problem 4: \"All Node Processes Still Running\"",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L78",
+      "community": 74,
+      "norm_label": "problem 4: \"all node processes still running\"",
+      "id": "cursor_new_quick_fix_problem_4_all_node_processes_still_running"
+    },
+    {
+      "label": "code:bash (ps aux | grep node | grep -v grep | wc -l)",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L83",
+      "community": 74,
+      "norm_label": "code:bash (ps aux | grep node | grep -v grep | wc -l)",
+      "id": "cursor_new_quick_fix_codeblock_7"
+    },
+    {
+      "label": "When to Use This",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L92",
+      "community": 74,
+      "norm_label": "when to use this",
+      "id": "cursor_new_quick_fix_when_to_use_this"
+    },
+    {
+      "label": "What NOT to Do",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L100",
+      "community": 74,
+      "norm_label": "what not to do",
+      "id": "cursor_new_quick_fix_what_not_to_do"
+    },
+    {
+      "label": "One-Liner (Linux/Mac)",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L109",
+      "community": 74,
+      "norm_label": "one-liner (linux/mac)",
+      "id": "cursor_new_quick_fix_one_liner_linux_mac"
+    },
+    {
+      "label": "code:bash (killall -9 node && sleep 2 && cd server && node index.js)",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L111",
+      "community": 74,
+      "norm_label": "code:bash (killall -9 node && sleep 2 && cd server && node index.js)",
+      "id": "cursor_new_quick_fix_codeblock_8"
+    },
+    {
+      "label": "Questions?",
+      "file_type": "document",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L117",
+      "community": 74,
+      "norm_label": "questions?",
+      "id": "cursor_new_quick_fix_questions"
+    },
+    {
+      "label": "TaskDetailSlideOver.jsx",
+      "file_type": "code",
+      "source_file": "client/src/components/TaskDetailSlideOver.jsx",
+      "source_location": "L1",
+      "community": 44,
+      "norm_label": "taskdetailslideover.jsx",
+      "id": "client_src_components_taskdetailslideover_jsx"
+    },
+    {
+      "label": "TaskBoard.jsx",
+      "file_type": "code",
+      "source_file": "client/src/pages/admin/TaskBoard.jsx",
+      "source_location": "L1",
+      "community": 44,
+      "norm_label": "taskboard.jsx",
+      "id": "client_src_pages_admin_taskboard_jsx"
+    },
+    {
       "label": "INCIDENT-2026-06-04.md",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L1",
-      "id": "docs_incident_2026_06_04_md",
       "community": 46,
-      "norm_label": "incident-2026-06-04.md"
+      "norm_label": "incident-2026-06-04.md",
+      "id": "docs_incident_2026_06_04_md"
     },
     {
       "label": "Incident Report: Stuck Node Processes (2026-06-04)",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L9",
-      "id": "docs_incident_2026_06_04_incident_report_stuck_node_processes_2026_06_04",
       "community": 46,
-      "norm_label": "incident report: stuck node processes (2026-06-04)"
+      "norm_label": "incident report: stuck node processes (2026-06-04)",
+      "id": "docs_incident_2026_06_04_incident_report_stuck_node_processes_2026_06_04"
     },
     {
       "label": "Executive Summary",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L11",
-      "id": "docs_incident_2026_06_04_executive_summary",
       "community": 46,
-      "norm_label": "executive summary"
+      "norm_label": "executive summary",
+      "id": "docs_incident_2026_06_04_executive_summary"
     },
     {
       "label": "Timeline",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L21",
-      "id": "docs_incident_2026_06_04_timeline",
       "community": 46,
-      "norm_label": "timeline"
+      "norm_label": "timeline",
+      "id": "docs_incident_2026_06_04_timeline"
     },
     {
       "label": "Symptoms vs Root Cause",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L42",
-      "id": "docs_incident_2026_06_04_symptoms_vs_root_cause",
       "community": 46,
-      "norm_label": "symptoms vs root cause"
+      "norm_label": "symptoms vs root cause",
+      "id": "docs_incident_2026_06_04_symptoms_vs_root_cause"
     },
     {
       "label": "What We Saw (Symptoms)",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L44",
-      "id": "docs_incident_2026_06_04_what_we_saw_symptoms",
       "community": 46,
-      "norm_label": "what we saw (symptoms)"
+      "norm_label": "what we saw (symptoms)",
+      "id": "docs_incident_2026_06_04_what_we_saw_symptoms"
     },
     {
       "label": "What Was Actually Wrong (Root Cause)",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L54",
-      "id": "docs_incident_2026_06_04_what_was_actually_wrong_root_cause",
       "community": 46,
-      "norm_label": "what was actually wrong (root cause)"
+      "norm_label": "what was actually wrong (root cause)",
+      "id": "docs_incident_2026_06_04_what_was_actually_wrong_root_cause"
     },
     {
       "label": "code:block1 (Process 1:   \u2713 Running (old, broken state from earlier test))",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L55",
-      "id": "docs_incident_2026_06_04_codeblock_1",
       "community": 46,
-      "norm_label": "code:block1 (process 1:   \u2713 running (old, broken state from earlier test))"
+      "norm_label": "code:block1 (process 1:   \u2713 running (old, broken state from earlier test))",
+      "id": "docs_incident_2026_06_04_codeblock_1"
     },
     {
       "label": "Why Detection Was Tricky",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L67",
-      "id": "docs_incident_2026_06_04_why_detection_was_tricky",
       "community": 46,
-      "norm_label": "why detection was tricky"
+      "norm_label": "why detection was tricky",
+      "id": "docs_incident_2026_06_04_why_detection_was_tricky"
     },
     {
       "label": "Normal Error Messages Didn't Appear",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L69",
-      "id": "docs_incident_2026_06_04_normal_error_messages_didn_t_appear",
       "community": 46,
-      "norm_label": "normal error messages didn't appear"
+      "norm_label": "normal error messages didn't appear",
+      "id": "docs_incident_2026_06_04_normal_error_messages_didn_t_appear"
     },
     {
       "label": "code:javascript (// We added this to coaches.js:)",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L70",
-      "id": "docs_incident_2026_06_04_codeblock_2",
       "community": 46,
-      "norm_label": "code:javascript (// we added this to coaches.js:)"
+      "norm_label": "code:javascript (// we added this to coaches.js:)",
+      "id": "docs_incident_2026_06_04_codeblock_2"
     },
     {
       "label": "Console Logs Disappeared",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L81",
-      "id": "docs_incident_2026_06_04_console_logs_disappeared",
       "community": 46,
-      "norm_label": "console logs disappeared"
+      "norm_label": "console logs disappeared",
+      "id": "docs_incident_2026_06_04_console_logs_disappeared"
     },
     {
       "label": "Even Simple Test Returned 500",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L91",
-      "id": "docs_incident_2026_06_04_even_simple_test_returned_500",
       "community": 46,
-      "norm_label": "even simple test returned 500"
+      "norm_label": "even simple test returned 500",
+      "id": "docs_incident_2026_06_04_even_simple_test_returned_500"
     },
     {
       "label": "code:bash (curl http://localhost:3001/health)",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L92",
-      "id": "docs_incident_2026_06_04_codeblock_3",
       "community": 46,
-      "norm_label": "code:bash (curl http://localhost:3001/health)"
+      "norm_label": "code:bash (curl http://localhost:3001/health)",
+      "id": "docs_incident_2026_06_04_codeblock_3"
     },
     {
       "label": "The Fix That Worked",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L102",
-      "id": "docs_incident_2026_06_04_the_fix_that_worked",
       "community": 46,
-      "norm_label": "the fix that worked"
+      "norm_label": "the fix that worked",
+      "id": "docs_incident_2026_06_04_the_fix_that_worked"
     },
     {
       "label": "code:bash (taskkill /IM node.exe /F)",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L104",
-      "id": "docs_incident_2026_06_04_codeblock_4",
       "community": 46,
-      "norm_label": "code:bash (taskkill /im node.exe /f)"
+      "norm_label": "code:bash (taskkill /im node.exe /f)",
+      "id": "docs_incident_2026_06_04_codeblock_4"
     },
     {
       "label": "What We Verified Works",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L122",
-      "id": "docs_incident_2026_06_04_what_we_verified_works",
       "community": 46,
-      "norm_label": "what we verified works"
+      "norm_label": "what we verified works",
+      "id": "docs_incident_2026_06_04_what_we_verified_works"
     },
     {
       "label": "\u2705 Complete End-to-End Flow",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L124",
-      "id": "docs_incident_2026_06_04_complete_end_to_end_flow",
       "community": 46,
-      "norm_label": "\u2705 complete end-to-end flow"
+      "norm_label": "\u2705 complete end-to-end flow",
+      "id": "docs_incident_2026_06_04_complete_end_to_end_flow"
     },
     {
       "label": "\u2705 Authentication",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L133",
-      "id": "docs_incident_2026_06_04_authentication",
       "community": 46,
-      "norm_label": "\u2705 authentication"
+      "norm_label": "\u2705 authentication",
+      "id": "docs_incident_2026_06_04_authentication"
     },
     {
       "label": "\u2705 Database",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L138",
-      "id": "docs_incident_2026_06_04_database",
       "community": 46,
-      "norm_label": "\u2705 database"
+      "norm_label": "\u2705 database",
+      "id": "docs_incident_2026_06_04_database"
     },
     {
       "label": "\u2705 Notifications",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L144",
-      "id": "docs_incident_2026_06_04_notifications",
       "community": 46,
-      "norm_label": "\u2705 notifications"
+      "norm_label": "\u2705 notifications",
+      "id": "docs_incident_2026_06_04_notifications"
     },
     {
       "label": "Prevention Measures Implemented",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L152",
-      "id": "docs_incident_2026_06_04_prevention_measures_implemented",
       "community": 46,
-      "norm_label": "prevention measures implemented"
+      "norm_label": "prevention measures implemented",
+      "id": "docs_incident_2026_06_04_prevention_measures_implemented"
     },
     {
       "label": "1. **Cleanup Scripts** (Immediate)",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L154",
-      "id": "docs_incident_2026_06_04_1_cleanup_scripts_immediate",
       "community": 46,
-      "norm_label": "1. **cleanup scripts** (immediate)"
+      "norm_label": "1. **cleanup scripts** (immediate)",
+      "id": "docs_incident_2026_06_04_1_cleanup_scripts_immediate"
     },
     {
       "label": "2. **Server Error Handling** (Code)",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L158",
-      "id": "docs_incident_2026_06_04_2_server_error_handling_code",
       "community": 46,
-      "norm_label": "2. **server error handling** (code)"
+      "norm_label": "2. **server error handling** (code)",
+      "id": "docs_incident_2026_06_04_2_server_error_handling_code"
     },
     {
       "label": "code:javascript (server.on('error', (err) => {)",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L160",
-      "id": "docs_incident_2026_06_04_codeblock_5",
       "community": 46,
-      "norm_label": "code:javascript (server.on('error', (err) => {)"
+      "norm_label": "code:javascript (server.on('error', (err) => {)",
+      "id": "docs_incident_2026_06_04_codeblock_5"
     },
     {
       "label": "3. **Troubleshooting Documentation** (Guide)",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L172",
-      "id": "docs_incident_2026_06_04_3_troubleshooting_documentation_guide",
       "community": 46,
-      "norm_label": "3. **troubleshooting documentation** (guide)"
+      "norm_label": "3. **troubleshooting documentation** (guide)",
+      "id": "docs_incident_2026_06_04_3_troubleshooting_documentation_guide"
     },
     {
       "label": "4. **Memory & References** (Knowledge Base)",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L179",
-      "id": "docs_incident_2026_06_04_4_memory_references_knowledge_base",
       "community": 46,
-      "norm_label": "4. **memory & references** (knowledge base)"
+      "norm_label": "4. **memory & references** (knowledge base)",
+      "id": "docs_incident_2026_06_04_4_memory_references_knowledge_base"
     },
     {
       "label": "5. **Process Monitoring** (Prevention Hook - Future)",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L185",
-      "id": "docs_incident_2026_06_04_5_process_monitoring_prevention_hook_future",
       "community": 46,
-      "norm_label": "5. **process monitoring** (prevention hook - future)"
+      "norm_label": "5. **process monitoring** (prevention hook - future)",
+      "id": "docs_incident_2026_06_04_5_process_monitoring_prevention_hook_future"
     },
     {
       "label": "code:bash (node_count=$(ps aux | grep node | grep -v grep | wc -l))",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L187",
-      "id": "docs_incident_2026_06_04_codeblock_6",
       "community": 46,
-      "norm_label": "code:bash (node_count=$(ps aux | grep node | grep -v grep | wc -l))"
+      "norm_label": "code:bash (node_count=$(ps aux | grep node | grep -v grep | wc -l))",
+      "id": "docs_incident_2026_06_04_codeblock_6"
     },
     {
       "label": "How to Prevent This",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L197",
-      "id": "docs_incident_2026_06_04_how_to_prevent_this",
       "community": 46,
-      "norm_label": "how to prevent this"
+      "norm_label": "how to prevent this",
+      "id": "docs_incident_2026_06_04_how_to_prevent_this"
     },
     {
       "label": "\u2705 DO",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L199",
-      "id": "docs_incident_2026_06_04_do",
       "community": 46,
-      "norm_label": "\u2705 do"
+      "norm_label": "\u2705 do",
+      "id": "docs_incident_2026_06_04_do"
     },
     {
       "label": "\u274c DON'T",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L205",
-      "id": "docs_incident_2026_06_04_don_t",
       "community": 46,
-      "norm_label": "\u274c don't"
+      "norm_label": "\u274c don't",
+      "id": "docs_incident_2026_06_04_don_t"
     },
     {
       "label": "\ud83d\udd27 Best Practice (Development)",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L210",
-      "id": "docs_incident_2026_06_04_best_practice_development",
       "community": 46,
-      "norm_label": "\ud83d\udd27 best practice (development)"
+      "norm_label": "\ud83d\udd27 best practice (development)",
+      "id": "docs_incident_2026_06_04_best_practice_development"
     },
     {
       "label": "code:bash (# Before starting servers, always clean)",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L211",
-      "id": "docs_incident_2026_06_04_codeblock_7",
       "community": 46,
-      "norm_label": "code:bash (# before starting servers, always clean)"
+      "norm_label": "code:bash (# before starting servers, always clean)",
+      "id": "docs_incident_2026_06_04_codeblock_7"
     },
     {
       "label": "Key Learnings",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L229",
-      "id": "docs_incident_2026_06_04_key_learnings",
       "community": 46,
-      "norm_label": "key learnings"
+      "norm_label": "key learnings",
+      "id": "docs_incident_2026_06_04_key_learnings"
     },
     {
       "label": "1. **Isolation Testing is Crucial**",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L231",
-      "id": "docs_incident_2026_06_04_1_isolation_testing_is_crucial",
       "community": 46,
-      "norm_label": "1. **isolation testing is crucial**"
+      "norm_label": "1. **isolation testing is crucial**",
+      "id": "docs_incident_2026_06_04_1_isolation_testing_is_crucial"
     },
     {
       "label": "2. **Error Messages Can Lie**",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L234",
-      "id": "docs_incident_2026_06_04_2_error_messages_can_lie",
       "community": 46,
-      "norm_label": "2. **error messages can lie**"
+      "norm_label": "2. **error messages can lie**",
+      "id": "docs_incident_2026_06_04_2_error_messages_can_lie"
     },
     {
       "label": "3. **Console Output Can Be Misleading**",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L237",
-      "id": "docs_incident_2026_06_04_3_console_output_can_be_misleading",
       "community": 46,
-      "norm_label": "3. **console output can be misleading**"
+      "norm_label": "3. **console output can be misleading**",
+      "id": "docs_incident_2026_06_04_3_console_output_can_be_misleading"
     },
     {
       "label": "4. **Port Conflicts = Silent Failures**",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L240",
-      "id": "docs_incident_2026_06_04_4_port_conflicts_silent_failures",
       "community": 46,
-      "norm_label": "4. **port conflicts = silent failures**"
+      "norm_label": "4. **port conflicts = silent failures**",
+      "id": "docs_incident_2026_06_04_4_port_conflicts_silent_failures"
     },
     {
       "label": "5. **Process Management Matters**",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L243",
-      "id": "docs_incident_2026_06_04_5_process_management_matters",
       "community": 46,
-      "norm_label": "5. **process management matters**"
+      "norm_label": "5. **process management matters**",
+      "id": "docs_incident_2026_06_04_5_process_management_matters"
     },
     {
       "label": "Follow-up Actions",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L248",
-      "id": "docs_incident_2026_06_04_follow_up_actions",
       "community": 46,
-      "norm_label": "follow-up actions"
+      "norm_label": "follow-up actions",
+      "id": "docs_incident_2026_06_04_follow_up_actions"
     },
     {
       "label": "Immediate (\u2705 Done)",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L250",
-      "id": "docs_incident_2026_06_04_immediate_done",
       "community": 46,
-      "norm_label": "immediate (\u2705 done)"
+      "norm_label": "immediate (\u2705 done)",
+      "id": "docs_incident_2026_06_04_immediate_done"
     },
     {
       "label": "Short-term (Next Session)",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L258",
-      "id": "docs_incident_2026_06_04_short_term_next_session",
       "community": 46,
-      "norm_label": "short-term (next session)"
+      "norm_label": "short-term (next session)",
+      "id": "docs_incident_2026_06_04_short_term_next_session"
     },
     {
       "label": "Long-term (Ongoing)",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L264",
-      "id": "docs_incident_2026_06_04_long_term_ongoing",
       "community": 46,
-      "norm_label": "long-term (ongoing)"
+      "norm_label": "long-term (ongoing)",
+      "id": "docs_incident_2026_06_04_long_term_ongoing"
     },
     {
       "label": "References",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L272",
-      "id": "docs_incident_2026_06_04_references",
       "community": 46,
-      "norm_label": "references"
+      "norm_label": "references",
+      "id": "docs_incident_2026_06_04_references"
     },
     {
       "label": "Conclusion",
       "file_type": "document",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L281",
-      "id": "docs_incident_2026_06_04_conclusion",
       "community": 46,
-      "norm_label": "conclusion"
+      "norm_label": "conclusion",
+      "id": "docs_incident_2026_06_04_conclusion"
     },
     {
       "label": "TROUBLESHOOTING.md",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L1",
-      "id": "docs_troubleshooting_md",
       "community": 66,
-      "norm_label": "troubleshooting.md"
+      "norm_label": "troubleshooting.md",
+      "id": "docs_troubleshooting_md"
     },
     {
       "label": "Troubleshooting Guide \u2014 Coach Task Tracker",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L9",
-      "id": "docs_troubleshooting_troubleshooting_guide_coach_task_tracker",
       "community": 66,
-      "norm_label": "troubleshooting guide \u2014 coach task tracker"
+      "norm_label": "troubleshooting guide \u2014 coach task tracker",
+      "id": "docs_troubleshooting_troubleshooting_guide_coach_task_tracker"
     },
     {
       "label": "Quick Diagnostics",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L11",
-      "id": "docs_troubleshooting_quick_diagnostics",
       "community": 66,
-      "norm_label": "quick diagnostics"
+      "norm_label": "quick diagnostics",
+      "id": "docs_troubleshooting_quick_diagnostics"
     },
     {
       "label": "App completely broken? Start here.",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L13",
-      "id": "docs_troubleshooting_app_completely_broken_start_here",
       "community": 66,
-      "norm_label": "app completely broken? start here."
+      "norm_label": "app completely broken? start here.",
+      "id": "docs_troubleshooting_app_completely_broken_start_here"
     },
     {
       "label": "code:bash (# 1. Are there stuck Node processes?)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L14",
-      "id": "docs_troubleshooting_codeblock_1",
       "community": 66,
-      "norm_label": "code:bash (# 1. are there stuck node processes?)"
+      "norm_label": "code:bash (# 1. are there stuck node processes?)",
+      "id": "docs_troubleshooting_codeblock_1"
     },
     {
       "label": "Common Issues & Fixes",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L29",
-      "id": "docs_troubleshooting_common_issues_fixes",
       "community": 66,
-      "norm_label": "common issues & fixes"
+      "norm_label": "common issues & fixes",
+      "id": "docs_troubleshooting_common_issues_fixes"
     },
     {
       "label": "Issue 1: All API Calls Return 500 Error (But Code Works)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L31",
-      "id": "docs_troubleshooting_issue_1_all_api_calls_return_500_error_but_code_works",
       "community": 66,
-      "norm_label": "issue 1: all api calls return 500 error (but code works)"
+      "norm_label": "issue 1: all api calls return 500 error (but code works)",
+      "id": "docs_troubleshooting_issue_1_all_api_calls_return_500_error_but_code_works"
     },
     {
       "label": "code:bash (# Step 1: Force-kill all Node processes)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L43",
-      "id": "docs_troubleshooting_codeblock_2",
       "community": 66,
-      "norm_label": "code:bash (# step 1: force-kill all node processes)"
+      "norm_label": "code:bash (# step 1: force-kill all node processes)",
+      "id": "docs_troubleshooting_codeblock_2"
     },
     {
       "label": "Issue 2: \"Failed to Load Coaches\" Error in UI",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L71",
-      "id": "docs_troubleshooting_issue_2_failed_to_load_coaches_error_in_ui",
       "community": 66,
-      "norm_label": "issue 2: \"failed to load coaches\" error in ui"
+      "norm_label": "issue 2: \"failed to load coaches\" error in ui",
+      "id": "docs_troubleshooting_issue_2_failed_to_load_coaches_error_in_ui"
     },
     {
       "label": "code:bash (taskkill /IM node.exe /F)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L79",
-      "id": "docs_troubleshooting_codeblock_3",
       "community": 66,
-      "norm_label": "code:bash (taskkill /im node.exe /f)"
+      "norm_label": "code:bash (taskkill /im node.exe /f)",
+      "id": "docs_troubleshooting_codeblock_3"
     },
     {
       "label": "code:bash (# Check if backend is actually listening)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L84",
-      "id": "docs_troubleshooting_codeblock_4",
       "community": 66,
-      "norm_label": "code:bash (# check if backend is actually listening)"
+      "norm_label": "code:bash (# check if backend is actually listening)",
+      "id": "docs_troubleshooting_codeblock_4"
     },
     {
       "label": "code:bash (# Test API directly:)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L95",
-      "id": "docs_troubleshooting_codeblock_5",
       "community": 66,
-      "norm_label": "code:bash (# test api directly:)"
+      "norm_label": "code:bash (# test api directly:)",
+      "id": "docs_troubleshooting_codeblock_5"
     },
     {
       "label": "code:bash (# Check for locked database file)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L105",
-      "id": "docs_troubleshooting_codeblock_6",
       "community": 66,
-      "norm_label": "code:bash (# check for locked database file)"
+      "norm_label": "code:bash (# check for locked database file)",
+      "id": "docs_troubleshooting_codeblock_6"
     },
     {
       "label": "Issue 3: \"JWT_SECRET not set\" Error",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L121",
-      "id": "docs_troubleshooting_issue_3_jwt_secret_not_set_error",
       "community": 66,
-      "norm_label": "issue 3: \"jwt_secret not set\" error"
+      "norm_label": "issue 3: \"jwt_secret not set\" error",
+      "id": "docs_troubleshooting_issue_3_jwt_secret_not_set_error"
     },
     {
       "label": "code:bash (# Check .env exists)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L130",
-      "id": "docs_troubleshooting_codeblock_7",
       "community": 66,
-      "norm_label": "code:bash (# check .env exists)"
+      "norm_label": "code:bash (# check .env exists)",
+      "id": "docs_troubleshooting_codeblock_7"
     },
     {
       "label": "Issue 4: Database \"Device or Resource Busy\"",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L147",
-      "id": "docs_troubleshooting_issue_4_database_device_or_resource_busy",
       "community": 66,
-      "norm_label": "issue 4: database \"device or resource busy\""
+      "norm_label": "issue 4: database \"device or resource busy\"",
+      "id": "docs_troubleshooting_issue_4_database_device_or_resource_busy"
     },
     {
       "label": "code:block8 (rm: cannot remove 'tracker.db': Device or resource busy)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L150",
-      "id": "docs_troubleshooting_codeblock_8",
       "community": 66,
-      "norm_label": "code:block8 (rm: cannot remove 'tracker.db': device or resource busy)"
+      "norm_label": "code:block8 (rm: cannot remove 'tracker.db': device or resource busy)",
+      "id": "docs_troubleshooting_codeblock_8"
     },
     {
       "label": "code:bash (# Force-kill the process holding it)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L157",
-      "id": "docs_troubleshooting_codeblock_9",
       "community": 66,
-      "norm_label": "code:bash (# force-kill the process holding it)"
+      "norm_label": "code:bash (# force-kill the process holding it)",
+      "id": "docs_troubleshooting_codeblock_9"
     },
     {
       "label": "Issue 5: Tests Fail With \"Cannot Find Module\"",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L177",
-      "id": "docs_troubleshooting_issue_5_tests_fail_with_cannot_find_module",
       "community": 66,
-      "norm_label": "issue 5: tests fail with \"cannot find module\""
+      "norm_label": "issue 5: tests fail with \"cannot find module\"",
+      "id": "docs_troubleshooting_issue_5_tests_fail_with_cannot_find_module"
     },
     {
       "label": "code:block10 (Error: Cannot find module './db')",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L180",
-      "id": "docs_troubleshooting_codeblock_10",
       "community": 66,
-      "norm_label": "code:block10 (error: cannot find module './db')"
+      "norm_label": "code:block10 (error: cannot find module './db')",
+      "id": "docs_troubleshooting_codeblock_10"
     },
     {
       "label": "code:bash (# Kill all Node processes)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L188",
-      "id": "docs_troubleshooting_codeblock_11",
       "community": 66,
-      "norm_label": "code:bash (# kill all node processes)"
+      "norm_label": "code:bash (# kill all node processes)",
+      "id": "docs_troubleshooting_codeblock_11"
     },
     {
       "label": "Issue 6: Frontend Won't Connect to Backend",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L206",
-      "id": "docs_troubleshooting_issue_6_frontend_won_t_connect_to_backend",
       "community": 66,
-      "norm_label": "issue 6: frontend won't connect to backend"
+      "norm_label": "issue 6: frontend won't connect to backend",
+      "id": "docs_troubleshooting_issue_6_frontend_won_t_connect_to_backend"
     },
     {
       "label": "code:bash (# Check if 3001 is listening)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L214",
-      "id": "docs_troubleshooting_codeblock_12",
       "community": 66,
-      "norm_label": "code:bash (# check if 3001 is listening)"
+      "norm_label": "code:bash (# check if 3001 is listening)",
+      "id": "docs_troubleshooting_codeblock_12"
     },
     {
       "label": "code:bash (# Check vite.config.js has proxy setup:)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L223",
-      "id": "docs_troubleshooting_codeblock_13",
       "community": 66,
-      "norm_label": "code:bash (# check vite.config.js has proxy setup:)"
+      "norm_label": "code:bash (# check vite.config.js has proxy setup:)",
+      "id": "docs_troubleshooting_codeblock_13"
     },
     {
       "label": "code:bash (# Backend should allow localhost:5173)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L231",
-      "id": "docs_troubleshooting_codeblock_14",
       "community": 66,
-      "norm_label": "code:bash (# backend should allow localhost:5173)"
+      "norm_label": "code:bash (# backend should allow localhost:5173)",
+      "id": "docs_troubleshooting_codeblock_14"
     },
     {
       "label": "Cleanup & Reset Scripts",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L241",
-      "id": "docs_troubleshooting_cleanup_reset_scripts",
       "community": 66,
-      "norm_label": "cleanup & reset scripts"
+      "norm_label": "cleanup & reset scripts",
+      "id": "docs_troubleshooting_cleanup_reset_scripts"
     },
     {
       "label": "Option 1: Minimal Cleanup",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L243",
-      "id": "docs_troubleshooting_option_1_minimal_cleanup",
       "community": 66,
-      "norm_label": "option 1: minimal cleanup"
+      "norm_label": "option 1: minimal cleanup",
+      "id": "docs_troubleshooting_option_1_minimal_cleanup"
     },
     {
       "label": "code:bash (# Kill processes and start fresh)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L244",
-      "id": "docs_troubleshooting_codeblock_15",
       "community": 66,
-      "norm_label": "code:bash (# kill processes and start fresh)"
+      "norm_label": "code:bash (# kill processes and start fresh)",
+      "id": "docs_troubleshooting_codeblock_15"
     },
     {
       "label": "Option 2: Full System Reset",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L253",
-      "id": "docs_troubleshooting_option_2_full_system_reset",
       "community": 66,
-      "norm_label": "option 2: full system reset"
+      "norm_label": "option 2: full system reset",
+      "id": "docs_troubleshooting_option_2_full_system_reset"
     },
     {
       "label": "code:bash (# Kill processes)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L254",
-      "id": "docs_troubleshooting_codeblock_16",
       "community": 66,
-      "norm_label": "code:bash (# kill processes)"
+      "norm_label": "code:bash (# kill processes)",
+      "id": "docs_troubleshooting_codeblock_16"
     },
     {
       "label": "Option 3: Development Alias (Save This!)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L273",
-      "id": "docs_troubleshooting_option_3_development_alias_save_this",
       "community": 66,
-      "norm_label": "option 3: development alias (save this!)"
+      "norm_label": "option 3: development alias (save this!)",
+      "id": "docs_troubleshooting_option_3_development_alias_save_this"
     },
     {
       "label": "code:bash (# Add to ~/.bashrc or ~/.zshrc:)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L274",
-      "id": "docs_troubleshooting_codeblock_17",
       "community": 66,
-      "norm_label": "code:bash (# add to ~/.bashrc or ~/.zshrc:)"
+      "norm_label": "code:bash (# add to ~/.bashrc or ~/.zshrc:)",
+      "id": "docs_troubleshooting_codeblock_17"
     },
     {
       "label": "Diagnostic Tools",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L286",
-      "id": "docs_troubleshooting_diagnostic_tools",
       "community": 66,
-      "norm_label": "diagnostic tools"
+      "norm_label": "diagnostic tools",
+      "id": "docs_troubleshooting_diagnostic_tools"
     },
     {
       "label": "Check Server Health",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L288",
-      "id": "docs_troubleshooting_check_server_health",
       "community": 66,
-      "norm_label": "check server health"
+      "norm_label": "check server health",
+      "id": "docs_troubleshooting_check_server_health"
     },
     {
       "label": "code:bash (curl -s http://localhost:3001/health)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L289",
-      "id": "docs_troubleshooting_codeblock_18",
       "community": 66,
-      "norm_label": "code:bash (curl -s http://localhost:3001/health)"
+      "norm_label": "code:bash (curl -s http://localhost:3001/health)",
+      "id": "docs_troubleshooting_codeblock_18"
     },
     {
       "label": "Check Database",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L294",
-      "id": "docs_troubleshooting_check_database",
       "community": 66,
-      "norm_label": "check database"
+      "norm_label": "check database",
+      "id": "docs_troubleshooting_check_database"
     },
     {
       "label": "code:bash (node -e \"const db = require('./server/db'); console.log(db.p)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L295",
-      "id": "docs_troubleshooting_codeblock_19",
       "community": 66,
-      "norm_label": "code:bash (node -e \"const db = require('./server/db'); console.log(db.p)"
+      "norm_label": "code:bash (node -e \"const db = require('./server/db'); console.log(db.p)",
+      "id": "docs_troubleshooting_codeblock_19"
     },
     {
       "label": "Check JWT Secret",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L300",
-      "id": "docs_troubleshooting_check_jwt_secret",
       "community": 66,
-      "norm_label": "check jwt secret"
+      "norm_label": "check jwt secret",
+      "id": "docs_troubleshooting_check_jwt_secret"
     },
     {
       "label": "code:bash (node -e \"console.log(process.env.JWT_SECRET?.length || 'NOT )",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L301",
-      "id": "docs_troubleshooting_codeblock_20",
       "community": 66,
-      "norm_label": "code:bash (node -e \"console.log(process.env.jwt_secret?.length || 'not )"
+      "norm_label": "code:bash (node -e \"console.log(process.env.jwt_secret?.length || 'not )",
+      "id": "docs_troubleshooting_codeblock_20"
     },
     {
       "label": "Check Port Usage",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L306",
-      "id": "docs_troubleshooting_check_port_usage",
       "community": 66,
-      "norm_label": "check port usage"
+      "norm_label": "check port usage",
+      "id": "docs_troubleshooting_check_port_usage"
     },
     {
       "label": "code:bash (# Windows)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L307",
-      "id": "docs_troubleshooting_codeblock_21",
       "community": 66,
-      "norm_label": "code:bash (# windows)"
+      "norm_label": "code:bash (# windows)",
+      "id": "docs_troubleshooting_codeblock_21"
     },
     {
       "label": "List All Node Processes",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L317",
-      "id": "docs_troubleshooting_list_all_node_processes",
       "community": 66,
-      "norm_label": "list all node processes"
+      "norm_label": "list all node processes",
+      "id": "docs_troubleshooting_list_all_node_processes"
     },
     {
       "label": "code:bash (ps aux | grep node)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L318",
-      "id": "docs_troubleshooting_codeblock_22",
       "community": 66,
-      "norm_label": "code:bash (ps aux | grep node)"
+      "norm_label": "code:bash (ps aux | grep node)",
+      "id": "docs_troubleshooting_codeblock_22"
     },
     {
       "label": "When to Escalate",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L325",
-      "id": "docs_troubleshooting_when_to_escalate",
       "community": 66,
-      "norm_label": "when to escalate"
+      "norm_label": "when to escalate",
+      "id": "docs_troubleshooting_when_to_escalate"
     },
     {
       "label": "code:bash (# Run and paste output:)",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L334",
-      "id": "docs_troubleshooting_codeblock_23",
       "community": 66,
-      "norm_label": "code:bash (# run and paste output:)"
+      "norm_label": "code:bash (# run and paste output:)",
+      "id": "docs_troubleshooting_codeblock_23"
     },
     {
       "label": "Reference",
       "file_type": "document",
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L344",
-      "id": "docs_troubleshooting_reference",
       "community": 66,
-      "norm_label": "reference"
+      "norm_label": "reference",
+      "id": "docs_troubleshooting_reference"
     },
     {
       "label": "README.md",
       "file_type": "document",
       "source_file": "scripts/README.md",
       "source_location": "L1",
-      "id": "scripts_readme_md",
       "community": 82,
-      "norm_label": "readme.md"
+      "norm_label": "readme.md",
+      "id": "scripts_readme_md"
     },
     {
       "label": "Scripts Directory",
       "file_type": "document",
       "source_file": "scripts/README.md",
       "source_location": "L9",
-      "id": "scripts_readme_scripts_directory",
       "community": 82,
-      "norm_label": "scripts directory"
+      "norm_label": "scripts directory",
+      "id": "scripts_readme_scripts_directory"
     },
     {
       "label": "cleanup.cmd (Windows)",
       "file_type": "document",
       "source_file": "scripts/README.md",
       "source_location": "L13",
-      "id": "scripts_readme_cleanup_cmd_windows",
       "community": 82,
-      "norm_label": "cleanup.cmd (windows)"
+      "norm_label": "cleanup.cmd (windows)",
+      "id": "scripts_readme_cleanup_cmd_windows"
     },
     {
       "label": "code:bash (scripts\\cleanup.cmd)",
       "file_type": "document",
       "source_file": "scripts/README.md",
       "source_location": "L17",
-      "id": "scripts_readme_codeblock_1",
       "community": 82,
-      "norm_label": "code:bash (scripts\\cleanup.cmd)"
+      "norm_label": "code:bash (scripts\\cleanup.cmd)",
+      "id": "scripts_readme_codeblock_1"
     },
     {
       "label": "code:block2 (======================================)",
       "file_type": "document",
       "source_file": "scripts/README.md",
       "source_location": "L29",
-      "id": "scripts_readme_codeblock_2",
       "community": 82,
-      "norm_label": "code:block2 (======================================)"
+      "norm_label": "code:block2 (======================================)",
+      "id": "scripts_readme_codeblock_2"
     },
     {
       "label": "cleanup.sh (Linux/Mac)",
       "file_type": "document",
       "source_file": "scripts/README.md",
       "source_location": "L50",
-      "id": "scripts_readme_cleanup_sh_linux_mac",
       "community": 82,
-      "norm_label": "cleanup.sh (linux/mac)"
+      "norm_label": "cleanup.sh (linux/mac)",
+      "id": "scripts_readme_cleanup_sh_linux_mac"
     },
     {
       "label": "code:bash (chmod +x scripts/cleanup.sh)",
       "file_type": "document",
       "source_file": "scripts/README.md",
       "source_location": "L54",
-      "id": "scripts_readme_codeblock_3",
       "community": 82,
-      "norm_label": "code:bash (chmod +x scripts/cleanup.sh)"
+      "norm_label": "code:bash (chmod +x scripts/cleanup.sh)",
+      "id": "scripts_readme_codeblock_3"
     },
     {
       "label": "When to Use Cleanup",
       "file_type": "document",
       "source_file": "scripts/README.md",
       "source_location": "L62",
-      "id": "scripts_readme_when_to_use_cleanup",
       "community": 82,
-      "norm_label": "when to use cleanup"
+      "norm_label": "when to use cleanup",
+      "id": "scripts_readme_when_to_use_cleanup"
     },
     {
       "label": "Why This Matters",
       "file_type": "document",
       "source_file": "scripts/README.md",
       "source_location": "L79",
-      "id": "scripts_readme_why_this_matters",
       "community": 82,
-      "norm_label": "why this matters"
+      "norm_label": "why this matters",
+      "id": "scripts_readme_why_this_matters"
     },
     {
       "label": "Prevention",
       "file_type": "document",
       "source_file": "scripts/README.md",
       "source_location": "L91",
-      "id": "scripts_readme_prevention",
       "community": 82,
-      "norm_label": "prevention"
+      "norm_label": "prevention",
+      "id": "scripts_readme_prevention"
     },
     {
       "label": "Troubleshooting",
       "file_type": "document",
       "source_file": "scripts/README.md",
       "source_location": "L98",
-      "id": "scripts_readme_troubleshooting",
       "community": 82,
-      "norm_label": "troubleshooting"
+      "norm_label": "troubleshooting",
+      "id": "scripts_readme_troubleshooting"
     },
     {
       "label": "See Also",
       "file_type": "document",
       "source_file": "scripts/README.md",
       "source_location": "L113",
-      "id": "scripts_readme_see_also",
       "community": 82,
-      "norm_label": "see also"
+      "norm_label": "see also",
+      "id": "scripts_readme_see_also"
     },
     {
       "label": "cleanup.sh",
       "file_type": "code",
       "source_file": "scripts/cleanup.sh",
       "source_location": "L1",
-      "id": "scripts_cleanup_sh",
       "community": 109,
-      "norm_label": "cleanup.sh"
+      "norm_label": "cleanup.sh",
+      "id": "scripts_cleanup_sh"
     },
     {
       "label": "auth.js",
       "file_type": "code",
       "source_file": "server/auth.js",
       "source_location": "L1",
-      "id": "server_auth_js",
       "community": 88,
-      "norm_label": "auth.js"
+      "norm_label": "auth.js",
+      "id": "server_auth_js"
     },
     {
       "label": "jwt",
       "file_type": "code",
       "source_file": "server/auth.js",
       "source_location": "L9",
-      "id": "server_auth_jwt",
       "community": 88,
-      "norm_label": "jwt"
+      "norm_label": "jwt",
+      "id": "server_auth_jwt"
     },
     {
       "label": "generateToken()",
       "file_type": "code",
       "source_file": "server/auth.js",
       "source_location": "L20",
-      "id": "server_auth_generatetoken",
       "community": 79,
-      "norm_label": "generatetoken()"
+      "norm_label": "generatetoken()",
+      "id": "server_auth_generatetoken"
     },
     {
       "label": "verifyToken()",
       "file_type": "code",
       "source_file": "server/auth.js",
       "source_location": "L31",
-      "id": "server_auth_verifytoken",
       "community": 88,
-      "norm_label": "verifytoken()"
+      "norm_label": "verifytoken()",
+      "id": "server_auth_verifytoken"
     },
     {
       "label": "authenticateToken()",
       "file_type": "code",
       "source_file": "server/auth.js",
       "source_location": "L39",
-      "id": "server_auth_authenticatetoken",
       "community": 88,
-      "norm_label": "authenticatetoken()"
+      "norm_label": "authenticatetoken()",
+      "id": "server_auth_authenticatetoken"
     },
     {
       "label": "requireAdmin()",
       "file_type": "code",
       "source_file": "server/auth.js",
       "source_location": "L57",
-      "id": "server_auth_requireadmin",
       "community": 95,
-      "norm_label": "requireadmin()"
+      "norm_label": "requireadmin()",
+      "id": "server_auth_requireadmin"
     },
     {
       "label": "requireCoach()",
       "file_type": "code",
       "source_file": "server/auth.js",
       "source_location": "L64",
-      "id": "server_auth_requirecoach",
       "community": 77,
-      "norm_label": "requirecoach()"
+      "norm_label": "requirecoach()",
+      "id": "server_auth_requirecoach"
     },
     {
       "label": "index.js",
       "file_type": "code",
       "source_file": "server/index.js",
       "source_location": "L1",
-      "id": "server_index_js",
-      "community": 15,
-      "norm_label": "index.js"
+      "community": 65,
+      "norm_label": "index.js",
+      "id": "server_index_js"
     },
     {
       "label": "express",
       "file_type": "code",
       "source_file": "server/index.js",
       "source_location": "L10",
-      "id": "server_index_express",
-      "community": 15,
-      "norm_label": "express"
+      "community": 65,
+      "norm_label": "express",
+      "id": "server_index_express"
     },
     {
       "label": "cors",
       "file_type": "code",
       "source_file": "server/index.js",
       "source_location": "L11",
-      "id": "server_index_cors",
-      "community": 15,
-      "norm_label": "cors"
+      "community": 65,
+      "norm_label": "cors",
+      "id": "server_index_cors"
     },
     {
       "label": "db",
       "file_type": "code",
       "source_file": "server/index.js",
       "source_location": "L12",
-      "id": "server_index_db",
-      "community": 15,
-      "norm_label": "db"
+      "community": 65,
+      "norm_label": "db",
+      "id": "server_index_db"
     },
     {
       "label": "{ authenticateToken, requireAdmin }",
       "file_type": "code",
       "source_file": "server/index.js",
       "source_location": "L13",
-      "id": "server_index_authenticatetoken_requireadmin",
-      "community": 15,
-      "norm_label": "{ authenticatetoken, requireadmin }"
+      "community": 65,
+      "norm_label": "{ authenticatetoken, requireadmin }",
+      "id": "server_index_authenticatetoken_requireadmin"
     },
     {
       "label": "{ scheduleJobs }",
       "file_type": "code",
       "source_file": "server/index.js",
       "source_location": "L14",
-      "id": "server_index_schedulejobs",
-      "community": 15,
-      "norm_label": "{ schedulejobs }"
+      "community": 65,
+      "norm_label": "{ schedulejobs }",
+      "id": "server_index_schedulejobs"
     },
     {
       "label": "app",
       "file_type": "code",
       "source_file": "server/index.js",
       "source_location": "L16",
-      "id": "server_index_app",
-      "community": 15,
-      "norm_label": "app"
+      "community": 65,
+      "norm_label": "app",
+      "id": "server_index_app"
     },
     {
       "label": "corsOptions",
       "file_type": "code",
       "source_file": "server/index.js",
       "source_location": "L19",
-      "id": "server_index_corsoptions",
-      "community": 15,
-      "norm_label": "corsoptions"
+      "community": 65,
+      "norm_label": "corsoptions",
+      "id": "server_index_corsoptions"
     },
     {
       "label": "server",
       "file_type": "code",
       "source_file": "server/index.js",
       "source_location": "L52",
-      "id": "server_index_server",
-      "community": 15,
-      "norm_label": "server"
+      "community": 65,
+      "norm_label": "server",
+      "id": "server_index_server"
     },
     {
       "label": "coaches.js",
       "file_type": "code",
       "source_file": "server/routes/coaches.js",
       "source_location": "L1",
-      "id": "server_routes_coaches_js",
       "community": 49,
-      "norm_label": "coaches.js"
+      "norm_label": "coaches.js",
+      "id": "server_routes_coaches_js"
     },
     {
       "label": "express",
       "file_type": "code",
       "source_file": "server/routes/coaches.js",
       "source_location": "L1",
-      "id": "routes_coaches_express",
       "community": 49,
-      "norm_label": "express"
+      "norm_label": "express",
+      "id": "routes_coaches_express"
     },
     {
       "label": "bcrypt",
       "file_type": "code",
       "source_file": "server/routes/coaches.js",
       "source_location": "L2",
-      "id": "routes_coaches_bcrypt",
       "community": 49,
-      "norm_label": "bcrypt"
+      "norm_label": "bcrypt",
+      "id": "routes_coaches_bcrypt"
     },
     {
       "label": "db",
       "file_type": "code",
       "source_file": "server/routes/coaches.js",
       "source_location": "L3",
-      "id": "routes_coaches_db",
       "community": 49,
-      "norm_label": "db"
+      "norm_label": "db",
+      "id": "routes_coaches_db"
     },
     {
       "label": "router",
       "file_type": "code",
       "source_file": "server/routes/coaches.js",
       "source_location": "L4",
-      "id": "routes_coaches_router",
       "community": 49,
-      "norm_label": "router"
+      "norm_label": "router",
+      "id": "routes_coaches_router"
     },
     {
       "label": "validateEmail()",
       "file_type": "code",
       "source_file": "server/routes/coaches.js",
       "source_location": "L7",
-      "id": "routes_coaches_validateemail",
       "community": 49,
-      "norm_label": "validateemail()"
+      "norm_label": "validateemail()",
+      "id": "routes_coaches_validateemail"
     },
     {
       "label": "coaches",
       "file_type": "code",
       "source_file": "server/routes/coaches.js",
       "source_location": "L13",
-      "id": "routes_coaches_coaches",
       "community": 49,
-      "norm_label": "coaches"
+      "norm_label": "coaches",
+      "id": "routes_coaches_coaches"
     },
     {
       "label": "trimmedName",
       "file_type": "code",
       "source_file": "server/routes/coaches.js",
       "source_location": "L44",
-      "id": "routes_coaches_trimmedname",
       "community": 49,
-      "norm_label": "trimmedname"
+      "norm_label": "trimmedname",
+      "id": "routes_coaches_trimmedname"
     },
     {
       "label": "trimmedEmail",
       "file_type": "code",
       "source_file": "server/routes/coaches.js",
       "source_location": "L45",
-      "id": "routes_coaches_trimmedemail",
       "community": 49,
-      "norm_label": "trimmedemail"
+      "norm_label": "trimmedemail",
+      "id": "routes_coaches_trimmedemail"
     },
     {
       "label": "existing",
       "file_type": "code",
       "source_file": "server/routes/coaches.js",
       "source_location": "L64",
-      "id": "routes_coaches_existing",
       "community": 49,
-      "norm_label": "existing"
+      "norm_label": "existing",
+      "id": "routes_coaches_existing"
     },
     {
       "label": "{ lastInsertRowid }",
       "file_type": "code",
       "source_file": "server/routes/coaches.js",
       "source_location": "L68",
-      "id": "routes_coaches_lastinsertrowid",
       "community": 49,
-      "norm_label": "{ lastinsertrowid }"
+      "norm_label": "{ lastinsertrowid }",
+      "id": "routes_coaches_lastinsertrowid"
     },
     {
       "label": "id",
       "file_type": "code",
       "source_file": "server/routes/coaches.js",
       "source_location": "L81",
-      "id": "routes_coaches_id",
       "community": 49,
-      "norm_label": "id"
+      "norm_label": "id",
+      "id": "routes_coaches_id"
     },
     {
       "label": "coach",
       "file_type": "code",
       "source_file": "server/routes/coaches.js",
       "source_location": "L88",
-      "id": "routes_coaches_coach",
       "community": 49,
-      "norm_label": "coach"
+      "norm_label": "coach",
+      "id": "routes_coaches_coach"
     },
     {
       "label": "conflict",
       "file_type": "code",
       "source_file": "server/routes/coaches.js",
       "source_location": "L113",
-      "id": "routes_coaches_conflict",
       "community": 49,
-      "norm_label": "conflict"
+      "norm_label": "conflict",
+      "id": "routes_coaches_conflict"
     },
     {
       "label": "test-api.js",
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L1",
-      "id": "server_test_api_js",
       "community": 96,
-      "norm_label": "test-api.js"
+      "norm_label": "test-api.js",
+      "id": "server_test_api_js"
     },
     {
       "label": "express",
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L2",
-      "id": "server_test_api_express",
       "community": 96,
-      "norm_label": "express"
+      "norm_label": "express",
+      "id": "server_test_api_express"
     },
     {
       "label": "db",
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L3",
-      "id": "server_test_api_db",
       "community": 96,
-      "norm_label": "db"
+      "norm_label": "db",
+      "id": "server_test_api_db"
     },
     {
       "label": "{ authenticateToken, requireAdmin }",
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L4",
-      "id": "server_test_api_authenticatetoken_requireadmin",
       "community": 96,
-      "norm_label": "{ authenticatetoken, requireadmin }"
+      "norm_label": "{ authenticatetoken, requireadmin }",
+      "id": "server_test_api_authenticatetoken_requireadmin"
     },
     {
       "label": "app",
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L6",
-      "id": "server_test_api_app",
       "community": 96,
-      "norm_label": "app"
+      "norm_label": "app",
+      "id": "server_test_api_app"
     },
     {
       "label": "result",
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L24",
-      "id": "server_test_api_result",
       "community": 96,
-      "norm_label": "result"
+      "norm_label": "result",
+      "id": "server_test_api_result"
     },
     {
       "label": "coaches",
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L33",
-      "id": "server_test_api_coaches",
       "community": 96,
-      "norm_label": "coaches"
+      "norm_label": "coaches",
+      "id": "server_test_api_coaches"
     },
     {
       "label": "test-db.js",
       "file_type": "code",
       "source_file": "server/test-db.js",
       "source_location": "L1",
-      "id": "server_test_db_js",
       "community": 107,
-      "norm_label": "test-db.js"
+      "norm_label": "test-db.js",
+      "id": "server_test_db_js"
     },
     {
       "label": "db",
       "file_type": "code",
       "source_file": "server/test-db.js",
       "source_location": "L1",
-      "id": "server_test_db_db",
       "community": 107,
-      "norm_label": "db"
+      "norm_label": "db",
+      "id": "server_test_db_db"
     },
     {
       "label": "coaches",
       "file_type": "code",
       "source_file": "server/test-db.js",
       "source_location": "L6",
-      "id": "server_test_db_coaches",
       "community": 107,
-      "norm_label": "coaches"
+      "norm_label": "coaches",
+      "id": "server_test_db_coaches"
     },
     {
       "label": "test-minimal.js",
       "file_type": "code",
       "source_file": "server/test-minimal.js",
       "source_location": "L1",
-      "id": "server_test_minimal_js",
       "community": 105,
-      "norm_label": "test-minimal.js"
+      "norm_label": "test-minimal.js",
+      "id": "server_test_minimal_js"
     },
     {
       "label": "express",
       "file_type": "code",
       "source_file": "server/test-minimal.js",
       "source_location": "L1",
-      "id": "server_test_minimal_express",
       "community": 105,
-      "norm_label": "express"
+      "norm_label": "express",
+      "id": "server_test_minimal_express"
     },
     {
       "label": "cors",
       "file_type": "code",
       "source_file": "server/test-minimal.js",
       "source_location": "L2",
-      "id": "server_test_minimal_cors",
       "community": 105,
-      "norm_label": "cors"
+      "norm_label": "cors",
+      "id": "server_test_minimal_cors"
     },
     {
       "label": "app",
       "file_type": "code",
       "source_file": "server/test-minimal.js",
       "source_location": "L3",
-      "id": "server_test_minimal_app",
       "community": 105,
-      "norm_label": "app"
+      "norm_label": "app",
+      "id": "server_test_minimal_app"
     },
     {
       "label": "test-no-routes.js",
       "file_type": "code",
       "source_file": "server/test-no-routes.js",
       "source_location": "L1",
-      "id": "server_test_no_routes_js",
       "community": 103,
-      "norm_label": "test-no-routes.js"
+      "norm_label": "test-no-routes.js",
+      "id": "server_test_no_routes_js"
     },
     {
       "label": "express",
       "file_type": "code",
       "source_file": "server/test-no-routes.js",
       "source_location": "L2",
-      "id": "server_test_no_routes_express",
       "community": 103,
-      "norm_label": "express"
+      "norm_label": "express",
+      "id": "server_test_no_routes_express"
     },
     {
       "label": "cors",
       "file_type": "code",
       "source_file": "server/test-no-routes.js",
       "source_location": "L3",
-      "id": "server_test_no_routes_cors",
       "community": 103,
-      "norm_label": "cors"
+      "norm_label": "cors",
+      "id": "server_test_no_routes_cors"
     },
     {
       "label": "app",
       "file_type": "code",
       "source_file": "server/test-no-routes.js",
       "source_location": "L5",
-      "id": "server_test_no_routes_app",
       "community": 103,
-      "norm_label": "app"
+      "norm_label": "app",
+      "id": "server_test_no_routes_app"
     },
     {
       "label": "corsOptions",
       "file_type": "code",
       "source_file": "server/test-no-routes.js",
       "source_location": "L10",
-      "id": "server_test_no_routes_corsoptions",
       "community": 103,
-      "norm_label": "corsoptions"
+      "norm_label": "corsoptions",
+      "id": "server_test_no_routes_corsoptions"
     },
     {
       "label": "test-simple.js",
       "file_type": "code",
       "source_file": "server/test-simple.js",
       "source_location": "L1",
-      "id": "server_test_simple_js",
       "community": 108,
-      "norm_label": "test-simple.js"
+      "norm_label": "test-simple.js",
+      "id": "server_test_simple_js"
     },
     {
       "label": "express",
       "file_type": "code",
       "source_file": "server/test-simple.js",
       "source_location": "L1",
-      "id": "server_test_simple_express",
       "community": 108,
-      "norm_label": "express"
+      "norm_label": "express",
+      "id": "server_test_simple_express"
     },
     {
       "label": "app",
       "file_type": "code",
       "source_file": "server/test-simple.js",
       "source_location": "L2",
-      "id": "server_test_simple_app",
       "community": 108,
-      "norm_label": "app"
+      "norm_label": "app",
+      "id": "server_test_simple_app"
     },
     {
       "label": "test-with-auth-route.js",
       "file_type": "code",
       "source_file": "server/test-with-auth-route.js",
       "source_location": "L1",
-      "id": "server_test_with_auth_route_js",
       "community": 88,
-      "norm_label": "test-with-auth-route.js"
+      "norm_label": "test-with-auth-route.js",
+      "id": "server_test_with_auth_route_js"
     },
     {
       "label": "express",
       "file_type": "code",
       "source_file": "server/test-with-auth-route.js",
       "source_location": "L2",
-      "id": "server_test_with_auth_route_express",
       "community": 88,
-      "norm_label": "express"
+      "norm_label": "express",
+      "id": "server_test_with_auth_route_express"
     },
     {
       "label": "cors",
       "file_type": "code",
       "source_file": "server/test-with-auth-route.js",
       "source_location": "L3",
-      "id": "server_test_with_auth_route_cors",
       "community": 88,
-      "norm_label": "cors"
+      "norm_label": "cors",
+      "id": "server_test_with_auth_route_cors"
     },
     {
       "label": "{ authenticateToken, requireAdmin }",
       "file_type": "code",
       "source_file": "server/test-with-auth-route.js",
       "source_location": "L4",
-      "id": "server_test_with_auth_route_authenticatetoken_requireadmin",
       "community": 88,
-      "norm_label": "{ authenticatetoken, requireadmin }"
+      "norm_label": "{ authenticatetoken, requireadmin }",
+      "id": "server_test_with_auth_route_authenticatetoken_requireadmin"
     },
     {
       "label": "app",
       "file_type": "code",
       "source_file": "server/test-with-auth-route.js",
       "source_location": "L6",
-      "id": "server_test_with_auth_route_app",
       "community": 88,
-      "norm_label": "app"
+      "norm_label": "app",
+      "id": "server_test_with_auth_route_app"
     },
     {
       "label": "corsOptions",
       "file_type": "code",
       "source_file": "server/test-with-auth-route.js",
       "source_location": "L11",
-      "id": "server_test_with_auth_route_corsoptions",
       "community": 88,
-      "norm_label": "corsoptions"
+      "norm_label": "corsoptions",
+      "id": "server_test_with_auth_route_corsoptions"
     },
     {
       "label": "test-with-coaches-route.js",
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L1",
-      "id": "server_test_with_coaches_route_js",
       "community": 98,
-      "norm_label": "test-with-coaches-route.js"
+      "norm_label": "test-with-coaches-route.js",
+      "id": "server_test_with_coaches_route_js"
     },
     {
       "label": "express",
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L2",
-      "id": "server_test_with_coaches_route_express",
       "community": 98,
-      "norm_label": "express"
+      "norm_label": "express",
+      "id": "server_test_with_coaches_route_express"
     },
     {
       "label": "cors",
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L3",
-      "id": "server_test_with_coaches_route_cors",
       "community": 98,
-      "norm_label": "cors"
+      "norm_label": "cors",
+      "id": "server_test_with_coaches_route_cors"
     },
     {
       "label": "{ authenticateToken, requireAdmin }",
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L4",
-      "id": "server_test_with_coaches_route_authenticatetoken_requireadmin",
       "community": 98,
-      "norm_label": "{ authenticatetoken, requireadmin }"
+      "norm_label": "{ authenticatetoken, requireadmin }",
+      "id": "server_test_with_coaches_route_authenticatetoken_requireadmin"
     },
     {
       "label": "app",
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L6",
-      "id": "server_test_with_coaches_route_app",
       "community": 98,
-      "norm_label": "app"
+      "norm_label": "app",
+      "id": "server_test_with_coaches_route_app"
     },
     {
       "label": "corsOptions",
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L11",
-      "id": "server_test_with_coaches_route_corsoptions",
       "community": 98,
-      "norm_label": "corsoptions"
+      "norm_label": "corsoptions",
+      "id": "server_test_with_coaches_route_corsoptions"
     },
     {
       "label": "test-with-db.js",
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L1",
-      "id": "server_test_with_db_js",
       "community": 93,
-      "norm_label": "test-with-db.js"
+      "norm_label": "test-with-db.js",
+      "id": "server_test_with_db_js"
     },
     {
       "label": "express",
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L2",
-      "id": "server_test_with_db_express",
       "community": 93,
-      "norm_label": "express"
+      "norm_label": "express",
+      "id": "server_test_with_db_express"
     },
     {
       "label": "cors",
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L3",
-      "id": "server_test_with_db_cors",
       "community": 93,
-      "norm_label": "cors"
+      "norm_label": "cors",
+      "id": "server_test_with_db_cors"
     },
     {
       "label": "db",
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L4",
-      "id": "server_test_with_db_db",
       "community": 93,
-      "norm_label": "db"
+      "norm_label": "db",
+      "id": "server_test_with_db_db"
     },
     {
       "label": "{ authenticateToken, requireAdmin }",
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L5",
-      "id": "server_test_with_db_authenticatetoken_requireadmin",
       "community": 93,
-      "norm_label": "{ authenticatetoken, requireadmin }"
+      "norm_label": "{ authenticatetoken, requireadmin }",
+      "id": "server_test_with_db_authenticatetoken_requireadmin"
     },
     {
       "label": "{ scheduleJobs }",
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L6",
-      "id": "server_test_with_db_schedulejobs",
       "community": 93,
-      "norm_label": "{ schedulejobs }"
+      "norm_label": "{ schedulejobs }",
+      "id": "server_test_with_db_schedulejobs"
     },
     {
       "label": "app",
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L8",
-      "id": "server_test_with_db_app",
       "community": 93,
-      "norm_label": "app"
+      "norm_label": "app",
+      "id": "server_test_with_db_app"
     },
     {
       "label": "corsOptions",
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L13",
-      "id": "server_test_with_db_corsoptions",
       "community": 93,
-      "norm_label": "corsoptions"
+      "norm_label": "corsoptions",
+      "id": "server_test_with_db_corsoptions"
     },
     {
       "label": "test-with-notifications-route.js",
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L1",
-      "id": "server_test_with_notifications_route_js",
       "community": 97,
-      "norm_label": "test-with-notifications-route.js"
+      "norm_label": "test-with-notifications-route.js",
+      "id": "server_test_with_notifications_route_js"
     },
     {
       "label": "express",
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L2",
-      "id": "server_test_with_notifications_route_express",
       "community": 97,
-      "norm_label": "express"
+      "norm_label": "express",
+      "id": "server_test_with_notifications_route_express"
     },
     {
       "label": "cors",
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L3",
-      "id": "server_test_with_notifications_route_cors",
       "community": 97,
-      "norm_label": "cors"
+      "norm_label": "cors",
+      "id": "server_test_with_notifications_route_cors"
     },
     {
       "label": "{ authenticateToken, requireAdmin }",
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L4",
-      "id": "server_test_with_notifications_route_authenticatetoken_requireadmin",
       "community": 97,
-      "norm_label": "{ authenticatetoken, requireadmin }"
+      "norm_label": "{ authenticatetoken, requireadmin }",
+      "id": "server_test_with_notifications_route_authenticatetoken_requireadmin"
     },
     {
       "label": "{ scheduleJobs }",
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L5",
-      "id": "server_test_with_notifications_route_schedulejobs",
       "community": 97,
-      "norm_label": "{ schedulejobs }"
+      "norm_label": "{ schedulejobs }",
+      "id": "server_test_with_notifications_route_schedulejobs"
     },
     {
       "label": "app",
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L7",
-      "id": "server_test_with_notifications_route_app",
       "community": 97,
-      "norm_label": "app"
+      "norm_label": "app",
+      "id": "server_test_with_notifications_route_app"
     },
     {
       "label": "corsOptions",
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L12",
-      "id": "server_test_with_notifications_route_corsoptions",
       "community": 97,
-      "norm_label": "corsoptions"
+      "norm_label": "corsoptions",
+      "id": "server_test_with_notifications_route_corsoptions"
     },
     {
       "label": "test-with-tasks-route.js",
       "file_type": "code",
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L1",
-      "id": "server_test_with_tasks_route_js",
       "community": 95,
-      "norm_label": "test-with-tasks-route.js"
+      "norm_label": "test-with-tasks-route.js",
+      "id": "server_test_with_tasks_route_js"
     },
     {
       "label": "express",
       "file_type": "code",
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L2",
-      "id": "server_test_with_tasks_route_express",
       "community": 95,
-      "norm_label": "express"
+      "norm_label": "express",
+      "id": "server_test_with_tasks_route_express"
     },
     {
       "label": "cors",
       "file_type": "code",
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L3",
-      "id": "server_test_with_tasks_route_cors",
       "community": 95,
-      "norm_label": "cors"
+      "norm_label": "cors",
+      "id": "server_test_with_tasks_route_cors"
     },
     {
       "label": "{ authenticateToken, requireAdmin }",
       "file_type": "code",
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L4",
-      "id": "server_test_with_tasks_route_authenticatetoken_requireadmin",
       "community": 95,
-      "norm_label": "{ authenticatetoken, requireadmin }"
+      "norm_label": "{ authenticatetoken, requireadmin }",
+      "id": "server_test_with_tasks_route_authenticatetoken_requireadmin"
     },
     {
       "label": "app",
       "file_type": "code",
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L6",
-      "id": "server_test_with_tasks_route_app",
       "community": 95,
-      "norm_label": "app"
+      "norm_label": "app",
+      "id": "server_test_with_tasks_route_app"
     },
     {
       "label": "corsOptions",
       "file_type": "code",
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L11",
-      "id": "server_test_with_tasks_route_corsoptions",
       "community": 95,
-      "norm_label": "corsoptions"
+      "norm_label": "corsoptions",
+      "id": "server_test_with_tasks_route_corsoptions"
     },
     {
       "label": "TASKBOARD-GROUPED-TASKS.md",
@@ -7307,7 +7325,7 @@
       "file_type": "code",
       "source_file": "server/cron.js",
       "source_location": "L1",
-      "community": 15,
+      "community": 76,
       "norm_label": "cron.js",
       "id": "server_cron_js"
     },
@@ -7316,7 +7334,7 @@
       "file_type": "code",
       "source_file": "server/cron.js",
       "source_location": "L9",
-      "community": 15,
+      "community": 76,
       "norm_label": "cron",
       "id": "server_cron_cron"
     },
@@ -7325,7 +7343,7 @@
       "file_type": "code",
       "source_file": "server/cron.js",
       "source_location": "L10",
-      "community": 15,
+      "community": 76,
       "norm_label": "db",
       "id": "server_cron_db"
     },
@@ -7334,7 +7352,7 @@
       "file_type": "code",
       "source_file": "server/cron.js",
       "source_location": "L12",
-      "community": 15,
+      "community": 76,
       "norm_label": "createnotification()",
       "id": "server_cron_createnotification"
     },
@@ -7343,7 +7361,7 @@
       "file_type": "code",
       "source_file": "server/cron.js",
       "source_location": "L18",
-      "community": 15,
+      "community": 76,
       "norm_label": "midpointnudgejob()",
       "id": "server_cron_midpointnudgejob"
     },
@@ -7352,7 +7370,7 @@
       "file_type": "code",
       "source_file": "server/cron.js",
       "source_location": "L46",
-      "community": 15,
+      "community": 76,
       "norm_label": "overduejob()",
       "id": "server_cron_overduejob"
     },
@@ -7361,7 +7379,7 @@
       "file_type": "code",
       "source_file": "server/cron.js",
       "source_location": "L76",
-      "community": 15,
+      "community": 76,
       "norm_label": "schedulejobs()",
       "id": "server_cron_schedulejobs"
     },
@@ -7460,7 +7478,7 @@
       "file_type": "code",
       "source_file": "server/routes/notifications.js",
       "source_location": "L1",
-      "community": 65,
+      "community": 50,
       "norm_label": "notifications.js",
       "id": "server_routes_notifications_js"
     },
@@ -7469,7 +7487,7 @@
       "file_type": "code",
       "source_file": "server/routes/notifications.js",
       "source_location": "L9",
-      "community": 65,
+      "community": 50,
       "norm_label": "express",
       "id": "routes_notifications_express"
     },
@@ -7478,7 +7496,7 @@
       "file_type": "code",
       "source_file": "server/routes/notifications.js",
       "source_location": "L10",
-      "community": 65,
+      "community": 50,
       "norm_label": "router",
       "id": "routes_notifications_router"
     },
@@ -7487,7 +7505,7 @@
       "file_type": "code",
       "source_file": "server/routes/notifications.js",
       "source_location": "L11",
-      "community": 65,
+      "community": 50,
       "norm_label": "db",
       "id": "routes_notifications_db"
     },
@@ -7496,7 +7514,7 @@
       "file_type": "code",
       "source_file": "server/routes/notifications.js",
       "source_location": "L15",
-      "community": 65,
+      "community": 50,
       "norm_label": "notifs",
       "id": "routes_notifications_notifs"
     },
@@ -7505,7 +7523,7 @@
       "file_type": "code",
       "source_file": "server/routes/notifications.js",
       "source_location": "L30",
-      "community": 65,
+      "community": 50,
       "norm_label": "id",
       "id": "routes_notifications_id"
     },
@@ -7514,7 +7532,7 @@
       "file_type": "code",
       "source_file": "server/routes/notifications.js",
       "source_location": "L36",
-      "community": 65,
+      "community": 50,
       "norm_label": "notif",
       "id": "routes_notifications_notif"
     },
@@ -8477,7 +8495,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L596",
-      "community": 76,
+      "community": 32,
       "norm_label": "task 6: implement login endpoint (red)",
       "id": "plans_2026_05_17_phase1_auth_system_task_6_implement_login_endpoint_red"
     },
@@ -8486,7 +8504,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L607",
-      "community": 76,
+      "community": 32,
       "norm_label": "code:javascript (import request from 'supertest';)",
       "id": "plans_2026_05_17_phase1_auth_system_codeblock_28"
     },
@@ -8495,7 +8513,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L709",
-      "community": 76,
+      "community": 32,
       "norm_label": "code:bash (cd d:\\cursor_new\\server)",
       "id": "plans_2026_05_17_phase1_auth_system_codeblock_29"
     },
@@ -8657,7 +8675,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L1130",
-      "community": 32,
+      "community": 99,
       "norm_label": "task 11: create protectedroute component (red)",
       "id": "plans_2026_05_17_phase1_auth_system_task_11_create_protectedroute_component_red"
     },
@@ -8666,7 +8684,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L1140",
-      "community": 32,
+      "community": 99,
       "norm_label": "code:javascript (import { render, screen } from '@testing-library/react';)",
       "id": "plans_2026_05_17_phase1_auth_system_codeblock_43"
     },
@@ -8675,7 +8693,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L1226",
-      "community": 32,
+      "community": 99,
       "norm_label": "code:bash (cd d:\\cursor_new\\client)",
       "id": "plans_2026_05_17_phase1_auth_system_codeblock_44"
     },
@@ -9152,7 +9170,7 @@
       "file_type": "code",
       "source_file": "server/index.test.js",
       "source_location": "L1",
-      "community": 15,
+      "community": 65,
       "norm_label": "index.test.js",
       "id": "server_index_test_js"
     },
@@ -9161,7 +9179,7 @@
       "file_type": "code",
       "source_file": "server/index.test.js",
       "source_location": "L9",
-      "community": 15,
+      "community": 65,
       "norm_label": "request",
       "id": "server_index_test_request"
     },
@@ -9170,7 +9188,7 @@
       "file_type": "code",
       "source_file": "server/index.test.js",
       "source_location": "L10",
-      "community": 15,
+      "community": 65,
       "norm_label": "app",
       "id": "server_index_test_app"
     },
@@ -10169,7 +10187,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L518",
-      "community": 23,
+      "community": 92,
       "norm_label": "memory & learning systems",
       "id": "claude_master_capabilities_memory_learning_systems"
     },
@@ -10241,7 +10259,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L591",
-      "community": 23,
+      "community": 92,
       "norm_label": "2. agentdb (ruflo vector database)",
       "id": "claude_master_capabilities_2_agentdb_ruflo_vector_database"
     },
@@ -10250,7 +10268,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L595",
-      "community": 23,
+      "community": 92,
       "norm_label": "code:bash (# search agent knowledge)",
       "id": "claude_master_capabilities_codeblock_40"
     },
@@ -10259,7 +10277,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L606",
-      "community": 23,
+      "community": 92,
       "norm_label": "3. sona learning (neural trajectories)",
       "id": "claude_master_capabilities_3_sona_learning_neural_trajectories"
     },
@@ -10268,7 +10286,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L611",
-      "community": 23,
+      "community": 92,
       "norm_label": "code:block41 (\"when task deadline < 1 week, add hourly reminders\")",
       "id": "claude_master_capabilities_codeblock_41"
     },
@@ -10547,7 +10565,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L922",
-      "community": 83,
+      "community": 24,
       "norm_label": "installation & setup",
       "id": "claude_master_capabilities_installation_setup"
     },
@@ -10556,7 +10574,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L924",
-      "community": 83,
+      "community": 24,
       "norm_label": "superpowers framework",
       "id": "claude_master_capabilities_superpowers_framework"
     },
@@ -10565,7 +10583,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L928",
-      "community": 83,
+      "community": 24,
       "norm_label": "code:bash (# install the superpowers framework)",
       "id": "claude_master_capabilities_codeblock_53"
     },
@@ -10574,7 +10592,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L943",
-      "community": 83,
+      "community": 24,
       "norm_label": "code:bash (/using-superpowers)",
       "id": "claude_master_capabilities_codeblock_54"
     },
@@ -10583,7 +10601,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L949",
-      "community": 83,
+      "community": 24,
       "norm_label": "graphify knowledge graph",
       "id": "claude_master_capabilities_graphify_knowledge_graph"
     },
@@ -10592,7 +10610,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L953",
-      "community": 83,
+      "community": 24,
       "norm_label": "code:bash (# via pip)",
       "id": "claude_master_capabilities_codeblock_55"
     },
@@ -10601,7 +10619,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L970",
-      "community": 83,
+      "community": 24,
       "norm_label": "code:bash (export anthropic_api_key=\"sk-ant-...\")",
       "id": "claude_master_capabilities_codeblock_56"
     },
@@ -10610,7 +10628,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L982",
-      "community": 83,
+      "community": 24,
       "norm_label": "code:bash (# already set up if .git/hooks/post-commit exists)",
       "id": "claude_master_capabilities_codeblock_57"
     },
@@ -10619,7 +10637,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L990",
-      "community": 83,
+      "community": 24,
       "norm_label": "ruflo multi-agent orchestration",
       "id": "claude_master_capabilities_ruflo_multi_agent_orchestration"
     },
@@ -10628,7 +10646,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L994",
-      "community": 83,
+      "community": 24,
       "norm_label": "code:bash (# core orchestration)",
       "id": "claude_master_capabilities_codeblock_58"
     },
@@ -10637,7 +10655,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1017",
-      "community": 83,
+      "community": 24,
       "norm_label": "code:bash (/phase-builder)",
       "id": "claude_master_capabilities_codeblock_59"
     },
@@ -10682,7 +10700,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1133",
-      "community": 92,
+      "community": 24,
       "norm_label": "code:bash (#!/bin/bash)",
       "id": "claude_master_capabilities_codeblock_63"
     },
@@ -10691,7 +10709,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1150",
-      "community": 92,
+      "community": 24,
       "norm_label": "code:bash (#!/bin/bash)",
       "id": "claude_master_capabilities_codeblock_64"
     },
@@ -10736,7 +10754,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1265",
-      "community": 92,
+      "community": 24,
       "norm_label": "claude code cli",
       "id": "claude_master_capabilities_claude_code_cli"
     },
@@ -10745,7 +10763,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1269",
-      "community": 92,
+      "community": 24,
       "norm_label": "code:bash (# macos)",
       "id": "claude_master_capabilities_codeblock_69"
     },
@@ -10754,7 +10772,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1286",
-      "community": 92,
+      "community": 24,
       "norm_label": "code:bash (claude-code --version)",
       "id": "claude_master_capabilities_codeblock_70"
     },
@@ -10808,7 +10826,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1348",
-      "community": 99,
+      "community": 24,
       "norm_label": "code:json ({)",
       "id": "claude_master_capabilities_codeblock_74"
     },
@@ -10817,7 +10835,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1365",
-      "community": 92,
+      "community": 24,
       "norm_label": "custom skills & agents",
       "id": "claude_master_capabilities_custom_skills_agents"
     },
@@ -10826,7 +10844,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1369",
-      "community": 99,
+      "community": 24,
       "norm_label": "code:bash (# structure)",
       "id": "claude_master_capabilities_codeblock_75"
     },
@@ -10835,7 +10853,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1386",
-      "community": 92,
+      "community": 24,
       "norm_label": "code:markdown (---)",
       "id": "claude_master_capabilities_codeblock_76"
     },
@@ -10844,7 +10862,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1402",
-      "community": 92,
+      "community": 24,
       "norm_label": "code:json ({)",
       "id": "claude_master_capabilities_codeblock_77"
     },
@@ -10880,7 +10898,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1454",
-      "community": 99,
+      "community": 24,
       "norm_label": "security & linting",
       "id": "claude_master_capabilities_security_linting"
     },
@@ -10889,7 +10907,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1458",
-      "community": 99,
+      "community": 24,
       "norm_label": "code:bash (# javascript)",
       "id": "claude_master_capabilities_codeblock_80"
     },
@@ -10898,7 +10916,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1474",
-      "community": 99,
+      "community": 24,
       "norm_label": "code:bash (# .eslintrc.json)",
       "id": "claude_master_capabilities_codeblock_81"
     },
@@ -10907,7 +10925,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1494",
-      "community": 62,
+      "community": 83,
       "norm_label": "plugin checklist for new projects",
       "id": "claude_master_capabilities_plugin_checklist_for_new_projects"
     },
@@ -10916,7 +10934,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1496",
-      "community": 62,
+      "community": 83,
       "norm_label": "code:bash (# step 1: initialize claude code)",
       "id": "claude_master_capabilities_codeblock_82"
     },
@@ -10925,7 +10943,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1534",
-      "community": 62,
+      "community": 83,
       "norm_label": "for agents",
       "id": "claude_master_capabilities_for_agents"
     },
@@ -10934,7 +10952,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1541",
-      "community": 62,
+      "community": 83,
       "norm_label": "for projects",
       "id": "claude_master_capabilities_for_projects"
     },
@@ -10943,7 +10961,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1548",
-      "community": 62,
+      "community": 83,
       "norm_label": "for teams",
       "id": "claude_master_capabilities_for_teams"
     },
@@ -10952,7 +10970,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L922",
-      "community": 62,
+      "community": 83,
       "norm_label": "distribution & usage",
       "id": "claude_master_capabilities_distribution_usage"
     },
@@ -12905,191 +12923,32 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L9",
+      "source_file": "components/TaskDetailSlideOver.jsx",
+      "source_location": "L6",
       "weight": 1.0,
-      "source": "quick_fix_md",
-      "target": "cursor_new_quick_fix_quick_fix_reference",
+      "source": "components_taskdetailslideover_jsx",
+      "target": "components_taskdetailslideover_field",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L13",
+      "source_file": "components/TaskDetailSlideOver.jsx",
+      "source_location": "L18",
       "weight": 1.0,
-      "source": "cursor_new_quick_fix_quick_fix_reference",
-      "target": "cursor_new_quick_fix_problem_1_all_api_calls_return_500_errors",
+      "source": "components_taskdetailslideover_jsx",
+      "target": "components_taskdetailslideover_taskdetailslideover",
       "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "imports_from",
+      "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L52",
+      "source_file": "pages/admin/TaskBoard.jsx",
+      "source_location": "L11",
       "weight": 1.0,
-      "source": "cursor_new_quick_fix_quick_fix_reference",
-      "target": "cursor_new_quick_fix_problem_2_port_3001_already_in_use",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L65",
-      "weight": 1.0,
-      "source": "cursor_new_quick_fix_quick_fix_reference",
-      "target": "cursor_new_quick_fix_problem_3_database_locked_device_or_resource_busy",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L78",
-      "weight": 1.0,
-      "source": "cursor_new_quick_fix_quick_fix_reference",
-      "target": "cursor_new_quick_fix_problem_4_all_node_processes_still_running",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L92",
-      "weight": 1.0,
-      "source": "cursor_new_quick_fix_quick_fix_reference",
-      "target": "cursor_new_quick_fix_when_to_use_this",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L100",
-      "weight": 1.0,
-      "source": "cursor_new_quick_fix_quick_fix_reference",
-      "target": "cursor_new_quick_fix_what_not_to_do",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L109",
-      "weight": 1.0,
-      "source": "cursor_new_quick_fix_quick_fix_reference",
-      "target": "cursor_new_quick_fix_one_liner_linux_mac",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L117",
-      "weight": 1.0,
-      "source": "cursor_new_quick_fix_quick_fix_reference",
-      "target": "cursor_new_quick_fix_questions",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L22",
-      "weight": 1.0,
-      "source": "cursor_new_quick_fix_problem_1_all_api_calls_return_500_errors",
-      "target": "cursor_new_quick_fix_windows",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L27",
-      "weight": 1.0,
-      "source": "cursor_new_quick_fix_problem_1_all_api_calls_return_500_errors",
-      "target": "cursor_new_quick_fix_linux_mac",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L23",
-      "weight": 1.0,
-      "source": "cursor_new_quick_fix_windows",
-      "target": "cursor_new_quick_fix_codeblock_1",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L28",
-      "weight": 1.0,
-      "source": "cursor_new_quick_fix_linux_mac",
-      "target": "cursor_new_quick_fix_codeblock_2",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L35",
-      "weight": 1.0,
-      "source": "cursor_new_quick_fix_linux_mac",
-      "target": "cursor_new_quick_fix_codeblock_3",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L42",
-      "weight": 1.0,
-      "source": "cursor_new_quick_fix_linux_mac",
-      "target": "cursor_new_quick_fix_codeblock_4",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L57",
-      "weight": 1.0,
-      "source": "cursor_new_quick_fix_problem_2_port_3001_already_in_use",
-      "target": "cursor_new_quick_fix_codeblock_5",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L70",
-      "weight": 1.0,
-      "source": "cursor_new_quick_fix_problem_3_database_locked_device_or_resource_busy",
-      "target": "cursor_new_quick_fix_codeblock_6",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L83",
-      "weight": 1.0,
-      "source": "cursor_new_quick_fix_problem_4_all_node_processes_still_running",
-      "target": "cursor_new_quick_fix_codeblock_7",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "QUICK-FIX.md",
-      "source_location": "L111",
-      "weight": 1.0,
-      "source": "cursor_new_quick_fix_one_liner_linux_mac",
-      "target": "cursor_new_quick_fix_codeblock_8",
+      "source": "pages_admin_taskboard_jsx",
+      "target": "components_taskdetailslideover_jsx",
       "confidence_score": 1.0
     },
     {
@@ -13111,6 +12970,267 @@
       "confidence_score": 1.0,
       "source": "client_src_components_taskdetailslideover_jsx",
       "target": "components_taskdetailslideover_taskdetailslideover"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pages/admin/TaskBoard.jsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "pages_admin_taskboard_jsx",
+      "target": "ui_skeleton_tablerowskeleton",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pages/admin/TaskBoard.jsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "pages_admin_taskboard_jsx",
+      "target": "admin_taskboard_statuses",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pages/admin/TaskBoard.jsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "pages_admin_taskboard_jsx",
+      "target": "admin_taskboard_taskboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/pages/admin/TaskBoard.jsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_pages_admin_taskboard_jsx",
+      "target": "admin_taskboard_statuses"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TaskBoard.jsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "taskboard_jsx",
+      "target": "admin_taskboard_statuses"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/pages/admin/TaskBoard.jsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_pages_admin_taskboard_jsx",
+      "target": "admin_taskboard_taskboard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "TaskBoard.jsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "taskboard_jsx",
+      "target": "admin_taskboard_taskboard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "quick_fix_md",
+      "target": "cursor_new_quick_fix_quick_fix_reference"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_quick_fix_quick_fix_reference",
+      "target": "cursor_new_quick_fix_problem_1_all_api_calls_return_500_errors"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_quick_fix_quick_fix_reference",
+      "target": "cursor_new_quick_fix_problem_2_port_3001_already_in_use"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_quick_fix_quick_fix_reference",
+      "target": "cursor_new_quick_fix_problem_3_database_locked_device_or_resource_busy"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_quick_fix_quick_fix_reference",
+      "target": "cursor_new_quick_fix_problem_4_all_node_processes_still_running"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L92",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_quick_fix_quick_fix_reference",
+      "target": "cursor_new_quick_fix_when_to_use_this"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L100",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_quick_fix_quick_fix_reference",
+      "target": "cursor_new_quick_fix_what_not_to_do"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L109",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_quick_fix_quick_fix_reference",
+      "target": "cursor_new_quick_fix_one_liner_linux_mac"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L117",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_quick_fix_quick_fix_reference",
+      "target": "cursor_new_quick_fix_questions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_quick_fix_problem_1_all_api_calls_return_500_errors",
+      "target": "cursor_new_quick_fix_windows"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_quick_fix_problem_1_all_api_calls_return_500_errors",
+      "target": "cursor_new_quick_fix_linux_mac"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_quick_fix_windows",
+      "target": "cursor_new_quick_fix_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_quick_fix_linux_mac",
+      "target": "cursor_new_quick_fix_codeblock_2"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_quick_fix_linux_mac",
+      "target": "cursor_new_quick_fix_codeblock_3"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_quick_fix_linux_mac",
+      "target": "cursor_new_quick_fix_codeblock_4"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_quick_fix_problem_2_port_3001_already_in_use",
+      "target": "cursor_new_quick_fix_codeblock_5"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_quick_fix_problem_3_database_locked_device_or_resource_busy",
+      "target": "cursor_new_quick_fix_codeblock_6"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_quick_fix_problem_4_all_node_processes_still_running",
+      "target": "cursor_new_quick_fix_codeblock_7"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "QUICK-FIX.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_quick_fix_one_liner_linux_mac",
+      "target": "cursor_new_quick_fix_codeblock_8"
     },
     {
       "relation": "imports_from",
@@ -13155,26 +13275,6 @@
       "confidence_score": 1.0,
       "source": "client_src_pages_admin_taskboard_jsx",
       "target": "ui_skeleton_tablerowskeleton"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/pages/admin/TaskBoard.jsx",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_pages_admin_taskboard_jsx",
-      "target": "admin_taskboard_statuses"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/pages/admin/TaskBoard.jsx",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_pages_admin_taskboard_jsx",
-      "target": "admin_taskboard_taskboard"
     },
     {
       "relation": "imports_from",
@@ -13245,32 +13345,12 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "TaskBoard.jsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "taskboard_jsx",
-      "target": "admin_taskboard_statuses"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "TaskBoard.jsx",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "taskboard_jsx",
-      "target": "admin_taskboard_taskboard"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_md",
-      "target": "docs_incident_2026_06_04_incident_report_stuck_node_processes_2026_06_04",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_incident_report_stuck_node_processes_2026_06_04"
     },
     {
       "relation": "contains",
@@ -13278,9 +13358,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_incident_report_stuck_node_processes_2026_06_04",
-      "target": "docs_incident_2026_06_04_executive_summary",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_executive_summary"
     },
     {
       "relation": "contains",
@@ -13288,9 +13368,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_incident_report_stuck_node_processes_2026_06_04",
-      "target": "docs_incident_2026_06_04_timeline",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_timeline"
     },
     {
       "relation": "contains",
@@ -13298,9 +13378,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_incident_report_stuck_node_processes_2026_06_04",
-      "target": "docs_incident_2026_06_04_symptoms_vs_root_cause",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_symptoms_vs_root_cause"
     },
     {
       "relation": "contains",
@@ -13308,9 +13388,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L67",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_incident_report_stuck_node_processes_2026_06_04",
-      "target": "docs_incident_2026_06_04_why_detection_was_tricky",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_why_detection_was_tricky"
     },
     {
       "relation": "contains",
@@ -13318,9 +13398,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L102",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_incident_report_stuck_node_processes_2026_06_04",
-      "target": "docs_incident_2026_06_04_the_fix_that_worked",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_the_fix_that_worked"
     },
     {
       "relation": "contains",
@@ -13328,9 +13408,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L122",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_incident_report_stuck_node_processes_2026_06_04",
-      "target": "docs_incident_2026_06_04_what_we_verified_works",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_what_we_verified_works"
     },
     {
       "relation": "contains",
@@ -13338,9 +13418,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L152",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_incident_report_stuck_node_processes_2026_06_04",
-      "target": "docs_incident_2026_06_04_prevention_measures_implemented",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_prevention_measures_implemented"
     },
     {
       "relation": "contains",
@@ -13348,9 +13428,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L197",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_incident_report_stuck_node_processes_2026_06_04",
-      "target": "docs_incident_2026_06_04_how_to_prevent_this",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_how_to_prevent_this"
     },
     {
       "relation": "contains",
@@ -13358,9 +13438,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L229",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_incident_report_stuck_node_processes_2026_06_04",
-      "target": "docs_incident_2026_06_04_key_learnings",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_key_learnings"
     },
     {
       "relation": "contains",
@@ -13368,9 +13448,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L248",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_incident_report_stuck_node_processes_2026_06_04",
-      "target": "docs_incident_2026_06_04_follow_up_actions",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_follow_up_actions"
     },
     {
       "relation": "contains",
@@ -13378,9 +13458,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L272",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_incident_report_stuck_node_processes_2026_06_04",
-      "target": "docs_incident_2026_06_04_references",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_references"
     },
     {
       "relation": "contains",
@@ -13388,9 +13468,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L281",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_incident_report_stuck_node_processes_2026_06_04",
-      "target": "docs_incident_2026_06_04_conclusion",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_conclusion"
     },
     {
       "relation": "contains",
@@ -13398,9 +13478,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_symptoms_vs_root_cause",
-      "target": "docs_incident_2026_06_04_what_we_saw_symptoms",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_what_we_saw_symptoms"
     },
     {
       "relation": "contains",
@@ -13408,9 +13488,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_symptoms_vs_root_cause",
-      "target": "docs_incident_2026_06_04_what_was_actually_wrong_root_cause",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_what_was_actually_wrong_root_cause"
     },
     {
       "relation": "contains",
@@ -13418,9 +13498,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_what_was_actually_wrong_root_cause",
-      "target": "docs_incident_2026_06_04_codeblock_1",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_codeblock_1"
     },
     {
       "relation": "contains",
@@ -13428,9 +13508,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L69",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_why_detection_was_tricky",
-      "target": "docs_incident_2026_06_04_normal_error_messages_didn_t_appear",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_normal_error_messages_didn_t_appear"
     },
     {
       "relation": "contains",
@@ -13438,9 +13518,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_why_detection_was_tricky",
-      "target": "docs_incident_2026_06_04_console_logs_disappeared",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_console_logs_disappeared"
     },
     {
       "relation": "contains",
@@ -13448,9 +13528,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L91",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_why_detection_was_tricky",
-      "target": "docs_incident_2026_06_04_even_simple_test_returned_500",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_even_simple_test_returned_500"
     },
     {
       "relation": "contains",
@@ -13458,9 +13538,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L70",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_normal_error_messages_didn_t_appear",
-      "target": "docs_incident_2026_06_04_codeblock_2",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_codeblock_2"
     },
     {
       "relation": "contains",
@@ -13468,9 +13548,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L92",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_even_simple_test_returned_500",
-      "target": "docs_incident_2026_06_04_codeblock_3",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_codeblock_3"
     },
     {
       "relation": "contains",
@@ -13478,9 +13558,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L104",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_the_fix_that_worked",
-      "target": "docs_incident_2026_06_04_codeblock_4",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_codeblock_4"
     },
     {
       "relation": "contains",
@@ -13488,9 +13568,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L124",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_what_we_verified_works",
-      "target": "docs_incident_2026_06_04_complete_end_to_end_flow",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_complete_end_to_end_flow"
     },
     {
       "relation": "contains",
@@ -13498,9 +13578,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L133",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_what_we_verified_works",
-      "target": "docs_incident_2026_06_04_authentication",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_authentication"
     },
     {
       "relation": "contains",
@@ -13508,9 +13588,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L138",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_what_we_verified_works",
-      "target": "docs_incident_2026_06_04_database",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_database"
     },
     {
       "relation": "contains",
@@ -13518,9 +13598,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L144",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_what_we_verified_works",
-      "target": "docs_incident_2026_06_04_notifications",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_notifications"
     },
     {
       "relation": "contains",
@@ -13528,9 +13608,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L154",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_prevention_measures_implemented",
-      "target": "docs_incident_2026_06_04_1_cleanup_scripts_immediate",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_1_cleanup_scripts_immediate"
     },
     {
       "relation": "contains",
@@ -13538,9 +13618,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L158",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_prevention_measures_implemented",
-      "target": "docs_incident_2026_06_04_2_server_error_handling_code",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_2_server_error_handling_code"
     },
     {
       "relation": "contains",
@@ -13548,9 +13628,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L172",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_prevention_measures_implemented",
-      "target": "docs_incident_2026_06_04_3_troubleshooting_documentation_guide",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_3_troubleshooting_documentation_guide"
     },
     {
       "relation": "contains",
@@ -13558,9 +13638,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L179",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_prevention_measures_implemented",
-      "target": "docs_incident_2026_06_04_4_memory_references_knowledge_base",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_4_memory_references_knowledge_base"
     },
     {
       "relation": "contains",
@@ -13568,9 +13648,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L185",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_prevention_measures_implemented",
-      "target": "docs_incident_2026_06_04_5_process_monitoring_prevention_hook_future",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_5_process_monitoring_prevention_hook_future"
     },
     {
       "relation": "contains",
@@ -13578,9 +13658,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L160",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_2_server_error_handling_code",
-      "target": "docs_incident_2026_06_04_codeblock_5",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_codeblock_5"
     },
     {
       "relation": "contains",
@@ -13588,9 +13668,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L187",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_5_process_monitoring_prevention_hook_future",
-      "target": "docs_incident_2026_06_04_codeblock_6",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_codeblock_6"
     },
     {
       "relation": "contains",
@@ -13598,9 +13678,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L199",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_how_to_prevent_this",
-      "target": "docs_incident_2026_06_04_do",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_do"
     },
     {
       "relation": "contains",
@@ -13608,9 +13688,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L205",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_how_to_prevent_this",
-      "target": "docs_incident_2026_06_04_don_t",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_don_t"
     },
     {
       "relation": "contains",
@@ -13618,9 +13698,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L210",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_how_to_prevent_this",
-      "target": "docs_incident_2026_06_04_best_practice_development",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_best_practice_development"
     },
     {
       "relation": "contains",
@@ -13628,9 +13708,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L211",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_best_practice_development",
-      "target": "docs_incident_2026_06_04_codeblock_7",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_codeblock_7"
     },
     {
       "relation": "contains",
@@ -13638,9 +13718,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L231",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_key_learnings",
-      "target": "docs_incident_2026_06_04_1_isolation_testing_is_crucial",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_1_isolation_testing_is_crucial"
     },
     {
       "relation": "contains",
@@ -13648,9 +13728,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L234",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_key_learnings",
-      "target": "docs_incident_2026_06_04_2_error_messages_can_lie",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_2_error_messages_can_lie"
     },
     {
       "relation": "contains",
@@ -13658,9 +13738,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L237",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_key_learnings",
-      "target": "docs_incident_2026_06_04_3_console_output_can_be_misleading",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_3_console_output_can_be_misleading"
     },
     {
       "relation": "contains",
@@ -13668,9 +13748,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L240",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_key_learnings",
-      "target": "docs_incident_2026_06_04_4_port_conflicts_silent_failures",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_4_port_conflicts_silent_failures"
     },
     {
       "relation": "contains",
@@ -13678,9 +13758,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L243",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_key_learnings",
-      "target": "docs_incident_2026_06_04_5_process_management_matters",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_5_process_management_matters"
     },
     {
       "relation": "contains",
@@ -13688,9 +13768,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L250",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_follow_up_actions",
-      "target": "docs_incident_2026_06_04_immediate_done",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_immediate_done"
     },
     {
       "relation": "contains",
@@ -13698,9 +13778,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L258",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_follow_up_actions",
-      "target": "docs_incident_2026_06_04_short_term_next_session",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_short_term_next_session"
     },
     {
       "relation": "contains",
@@ -13708,9 +13788,9 @@
       "source_file": "docs/INCIDENT-2026-06-04.md",
       "source_location": "L264",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_incident_2026_06_04_follow_up_actions",
-      "target": "docs_incident_2026_06_04_long_term_ongoing",
-      "confidence_score": 1.0
+      "target": "docs_incident_2026_06_04_long_term_ongoing"
     },
     {
       "relation": "contains",
@@ -13718,9 +13798,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_md",
-      "target": "docs_troubleshooting_troubleshooting_guide_coach_task_tracker",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_troubleshooting_guide_coach_task_tracker"
     },
     {
       "relation": "contains",
@@ -13728,9 +13808,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_troubleshooting_guide_coach_task_tracker",
-      "target": "docs_troubleshooting_quick_diagnostics",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_quick_diagnostics"
     },
     {
       "relation": "contains",
@@ -13738,9 +13818,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_troubleshooting_guide_coach_task_tracker",
-      "target": "docs_troubleshooting_common_issues_fixes",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_common_issues_fixes"
     },
     {
       "relation": "contains",
@@ -13748,9 +13828,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L241",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_troubleshooting_guide_coach_task_tracker",
-      "target": "docs_troubleshooting_cleanup_reset_scripts",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_cleanup_reset_scripts"
     },
     {
       "relation": "contains",
@@ -13758,9 +13838,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L286",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_troubleshooting_guide_coach_task_tracker",
-      "target": "docs_troubleshooting_diagnostic_tools",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_diagnostic_tools"
     },
     {
       "relation": "contains",
@@ -13768,9 +13848,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L325",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_troubleshooting_guide_coach_task_tracker",
-      "target": "docs_troubleshooting_when_to_escalate",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_when_to_escalate"
     },
     {
       "relation": "contains",
@@ -13778,9 +13858,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L344",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_troubleshooting_guide_coach_task_tracker",
-      "target": "docs_troubleshooting_reference",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_reference"
     },
     {
       "relation": "contains",
@@ -13788,9 +13868,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_quick_diagnostics",
-      "target": "docs_troubleshooting_app_completely_broken_start_here",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_app_completely_broken_start_here"
     },
     {
       "relation": "contains",
@@ -13798,9 +13878,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_app_completely_broken_start_here",
-      "target": "docs_troubleshooting_codeblock_1",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_1"
     },
     {
       "relation": "contains",
@@ -13808,9 +13888,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_common_issues_fixes",
-      "target": "docs_troubleshooting_issue_1_all_api_calls_return_500_error_but_code_works",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_issue_1_all_api_calls_return_500_error_but_code_works"
     },
     {
       "relation": "contains",
@@ -13818,9 +13898,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_common_issues_fixes",
-      "target": "docs_troubleshooting_issue_2_failed_to_load_coaches_error_in_ui",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_issue_2_failed_to_load_coaches_error_in_ui"
     },
     {
       "relation": "contains",
@@ -13828,9 +13908,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L121",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_common_issues_fixes",
-      "target": "docs_troubleshooting_issue_3_jwt_secret_not_set_error",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_issue_3_jwt_secret_not_set_error"
     },
     {
       "relation": "contains",
@@ -13838,9 +13918,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L147",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_common_issues_fixes",
-      "target": "docs_troubleshooting_issue_4_database_device_or_resource_busy",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_issue_4_database_device_or_resource_busy"
     },
     {
       "relation": "contains",
@@ -13848,9 +13928,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L177",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_common_issues_fixes",
-      "target": "docs_troubleshooting_issue_5_tests_fail_with_cannot_find_module",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_issue_5_tests_fail_with_cannot_find_module"
     },
     {
       "relation": "contains",
@@ -13858,9 +13938,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L206",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_common_issues_fixes",
-      "target": "docs_troubleshooting_issue_6_frontend_won_t_connect_to_backend",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_issue_6_frontend_won_t_connect_to_backend"
     },
     {
       "relation": "contains",
@@ -13868,9 +13948,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_issue_1_all_api_calls_return_500_error_but_code_works",
-      "target": "docs_troubleshooting_codeblock_2",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_2"
     },
     {
       "relation": "contains",
@@ -13878,9 +13958,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L79",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_issue_2_failed_to_load_coaches_error_in_ui",
-      "target": "docs_troubleshooting_codeblock_3",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_3"
     },
     {
       "relation": "contains",
@@ -13888,9 +13968,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L84",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_issue_2_failed_to_load_coaches_error_in_ui",
-      "target": "docs_troubleshooting_codeblock_4",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_4"
     },
     {
       "relation": "contains",
@@ -13898,9 +13978,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L95",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_issue_2_failed_to_load_coaches_error_in_ui",
-      "target": "docs_troubleshooting_codeblock_5",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_5"
     },
     {
       "relation": "contains",
@@ -13908,9 +13988,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L105",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_issue_2_failed_to_load_coaches_error_in_ui",
-      "target": "docs_troubleshooting_codeblock_6",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_6"
     },
     {
       "relation": "contains",
@@ -13918,9 +13998,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L130",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_issue_3_jwt_secret_not_set_error",
-      "target": "docs_troubleshooting_codeblock_7",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_7"
     },
     {
       "relation": "contains",
@@ -13928,9 +14008,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L150",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_issue_4_database_device_or_resource_busy",
-      "target": "docs_troubleshooting_codeblock_8",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_8"
     },
     {
       "relation": "contains",
@@ -13938,9 +14018,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L157",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_issue_4_database_device_or_resource_busy",
-      "target": "docs_troubleshooting_codeblock_9",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_9"
     },
     {
       "relation": "contains",
@@ -13948,9 +14028,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L180",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_issue_5_tests_fail_with_cannot_find_module",
-      "target": "docs_troubleshooting_codeblock_10",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_10"
     },
     {
       "relation": "contains",
@@ -13958,9 +14038,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L188",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_issue_5_tests_fail_with_cannot_find_module",
-      "target": "docs_troubleshooting_codeblock_11",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_11"
     },
     {
       "relation": "contains",
@@ -13968,9 +14048,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L214",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_issue_6_frontend_won_t_connect_to_backend",
-      "target": "docs_troubleshooting_codeblock_12",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_12"
     },
     {
       "relation": "contains",
@@ -13978,9 +14058,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L223",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_issue_6_frontend_won_t_connect_to_backend",
-      "target": "docs_troubleshooting_codeblock_13",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_13"
     },
     {
       "relation": "contains",
@@ -13988,9 +14068,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L231",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_issue_6_frontend_won_t_connect_to_backend",
-      "target": "docs_troubleshooting_codeblock_14",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_14"
     },
     {
       "relation": "contains",
@@ -13998,9 +14078,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L243",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_cleanup_reset_scripts",
-      "target": "docs_troubleshooting_option_1_minimal_cleanup",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_option_1_minimal_cleanup"
     },
     {
       "relation": "contains",
@@ -14008,9 +14088,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L253",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_cleanup_reset_scripts",
-      "target": "docs_troubleshooting_option_2_full_system_reset",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_option_2_full_system_reset"
     },
     {
       "relation": "contains",
@@ -14018,9 +14098,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L273",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_cleanup_reset_scripts",
-      "target": "docs_troubleshooting_option_3_development_alias_save_this",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_option_3_development_alias_save_this"
     },
     {
       "relation": "contains",
@@ -14028,9 +14108,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L244",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_option_1_minimal_cleanup",
-      "target": "docs_troubleshooting_codeblock_15",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_15"
     },
     {
       "relation": "contains",
@@ -14038,9 +14118,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L254",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_option_2_full_system_reset",
-      "target": "docs_troubleshooting_codeblock_16",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_16"
     },
     {
       "relation": "contains",
@@ -14048,9 +14128,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L274",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_option_3_development_alias_save_this",
-      "target": "docs_troubleshooting_codeblock_17",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_17"
     },
     {
       "relation": "contains",
@@ -14058,9 +14138,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L288",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_diagnostic_tools",
-      "target": "docs_troubleshooting_check_server_health",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_check_server_health"
     },
     {
       "relation": "contains",
@@ -14068,9 +14148,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L294",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_diagnostic_tools",
-      "target": "docs_troubleshooting_check_database",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_check_database"
     },
     {
       "relation": "contains",
@@ -14078,9 +14158,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L300",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_diagnostic_tools",
-      "target": "docs_troubleshooting_check_jwt_secret",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_check_jwt_secret"
     },
     {
       "relation": "contains",
@@ -14088,9 +14168,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L306",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_diagnostic_tools",
-      "target": "docs_troubleshooting_check_port_usage",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_check_port_usage"
     },
     {
       "relation": "contains",
@@ -14098,9 +14178,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L317",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_diagnostic_tools",
-      "target": "docs_troubleshooting_list_all_node_processes",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_list_all_node_processes"
     },
     {
       "relation": "contains",
@@ -14108,9 +14188,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L289",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_check_server_health",
-      "target": "docs_troubleshooting_codeblock_18",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_18"
     },
     {
       "relation": "contains",
@@ -14118,9 +14198,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L295",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_check_database",
-      "target": "docs_troubleshooting_codeblock_19",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_19"
     },
     {
       "relation": "contains",
@@ -14128,9 +14208,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L301",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_check_jwt_secret",
-      "target": "docs_troubleshooting_codeblock_20",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_20"
     },
     {
       "relation": "contains",
@@ -14138,9 +14218,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L307",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_check_port_usage",
-      "target": "docs_troubleshooting_codeblock_21",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_21"
     },
     {
       "relation": "contains",
@@ -14148,9 +14228,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L318",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_list_all_node_processes",
-      "target": "docs_troubleshooting_codeblock_22",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_22"
     },
     {
       "relation": "contains",
@@ -14158,9 +14238,9 @@
       "source_file": "docs/TROUBLESHOOTING.md",
       "source_location": "L334",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_troubleshooting_when_to_escalate",
-      "target": "docs_troubleshooting_codeblock_23",
-      "confidence_score": 1.0
+      "target": "docs_troubleshooting_codeblock_23"
     },
     {
       "relation": "contains",
@@ -14168,9 +14248,9 @@
       "source_file": "scripts/README.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_readme_md",
-      "target": "scripts_readme_scripts_directory",
-      "confidence_score": 1.0
+      "target": "scripts_readme_scripts_directory"
     },
     {
       "relation": "contains",
@@ -14178,9 +14258,9 @@
       "source_file": "scripts/README.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_readme_scripts_directory",
-      "target": "scripts_readme_cleanup_cmd_windows",
-      "confidence_score": 1.0
+      "target": "scripts_readme_cleanup_cmd_windows"
     },
     {
       "relation": "contains",
@@ -14188,9 +14268,9 @@
       "source_file": "scripts/README.md",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_readme_scripts_directory",
-      "target": "scripts_readme_cleanup_sh_linux_mac",
-      "confidence_score": 1.0
+      "target": "scripts_readme_cleanup_sh_linux_mac"
     },
     {
       "relation": "contains",
@@ -14198,9 +14278,9 @@
       "source_file": "scripts/README.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_readme_scripts_directory",
-      "target": "scripts_readme_when_to_use_cleanup",
-      "confidence_score": 1.0
+      "target": "scripts_readme_when_to_use_cleanup"
     },
     {
       "relation": "contains",
@@ -14208,9 +14288,9 @@
       "source_file": "scripts/README.md",
       "source_location": "L79",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_readme_scripts_directory",
-      "target": "scripts_readme_why_this_matters",
-      "confidence_score": 1.0
+      "target": "scripts_readme_why_this_matters"
     },
     {
       "relation": "contains",
@@ -14218,9 +14298,9 @@
       "source_file": "scripts/README.md",
       "source_location": "L91",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_readme_scripts_directory",
-      "target": "scripts_readme_prevention",
-      "confidence_score": 1.0
+      "target": "scripts_readme_prevention"
     },
     {
       "relation": "contains",
@@ -14228,9 +14308,9 @@
       "source_file": "scripts/README.md",
       "source_location": "L98",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_readme_scripts_directory",
-      "target": "scripts_readme_troubleshooting",
-      "confidence_score": 1.0
+      "target": "scripts_readme_troubleshooting"
     },
     {
       "relation": "contains",
@@ -14238,9 +14318,9 @@
       "source_file": "scripts/README.md",
       "source_location": "L113",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_readme_scripts_directory",
-      "target": "scripts_readme_see_also",
-      "confidence_score": 1.0
+      "target": "scripts_readme_see_also"
     },
     {
       "relation": "contains",
@@ -14248,9 +14328,9 @@
       "source_file": "scripts/README.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_readme_cleanup_cmd_windows",
-      "target": "scripts_readme_codeblock_1",
-      "confidence_score": 1.0
+      "target": "scripts_readme_codeblock_1"
     },
     {
       "relation": "contains",
@@ -14258,9 +14338,9 @@
       "source_file": "scripts/README.md",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_readme_cleanup_cmd_windows",
-      "target": "scripts_readme_codeblock_2",
-      "confidence_score": 1.0
+      "target": "scripts_readme_codeblock_2"
     },
     {
       "relation": "contains",
@@ -14268,9 +14348,9 @@
       "source_file": "scripts/README.md",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_readme_cleanup_sh_linux_mac",
-      "target": "scripts_readme_codeblock_3",
-      "confidence_score": 1.0
+      "target": "scripts_readme_codeblock_3"
     },
     {
       "relation": "contains",
@@ -14350,9 +14430,9 @@
       "source_file": "server/test-api.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_api_js",
-      "target": "server_auth_js",
-      "confidence_score": 1.0
+      "target": "server_auth_js"
     },
     {
       "relation": "imports_from",
@@ -14361,9 +14441,9 @@
       "source_file": "server/test-with-auth-route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_auth_route_js",
-      "target": "server_auth_js",
-      "confidence_score": 1.0
+      "target": "server_auth_js"
     },
     {
       "relation": "imports_from",
@@ -14372,9 +14452,9 @@
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_coaches_route_js",
-      "target": "server_auth_js",
-      "confidence_score": 1.0
+      "target": "server_auth_js"
     },
     {
       "relation": "imports_from",
@@ -14383,9 +14463,9 @@
       "source_file": "server/test-with-db.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_db_js",
-      "target": "server_auth_js",
-      "confidence_score": 1.0
+      "target": "server_auth_js"
     },
     {
       "relation": "imports_from",
@@ -14394,9 +14474,9 @@
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_notifications_route_js",
-      "target": "server_auth_js",
-      "confidence_score": 1.0
+      "target": "server_auth_js"
     },
     {
       "relation": "imports_from",
@@ -14405,9 +14485,9 @@
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_tasks_route_js",
-      "target": "server_auth_js",
-      "confidence_score": 1.0
+      "target": "server_auth_js"
     },
     {
       "relation": "imports_from",
@@ -14568,9 +14648,9 @@
       "source_file": "server/test-api.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_api_js",
-      "target": "server_auth_authenticatetoken",
-      "confidence_score": 1.0
+      "target": "server_auth_authenticatetoken"
     },
     {
       "relation": "imports",
@@ -14579,9 +14659,9 @@
       "source_file": "server/test-with-auth-route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_auth_route_js",
-      "target": "server_auth_authenticatetoken",
-      "confidence_score": 1.0
+      "target": "server_auth_authenticatetoken"
     },
     {
       "relation": "imports",
@@ -14590,9 +14670,9 @@
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_coaches_route_js",
-      "target": "server_auth_authenticatetoken",
-      "confidence_score": 1.0
+      "target": "server_auth_authenticatetoken"
     },
     {
       "relation": "imports",
@@ -14601,9 +14681,9 @@
       "source_file": "server/test-with-db.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_db_js",
-      "target": "server_auth_authenticatetoken",
-      "confidence_score": 1.0
+      "target": "server_auth_authenticatetoken"
     },
     {
       "relation": "imports",
@@ -14612,9 +14692,9 @@
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_notifications_route_js",
-      "target": "server_auth_authenticatetoken",
-      "confidence_score": 1.0
+      "target": "server_auth_authenticatetoken"
     },
     {
       "relation": "imports",
@@ -14623,9 +14703,9 @@
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_tasks_route_js",
-      "target": "server_auth_authenticatetoken",
-      "confidence_score": 1.0
+      "target": "server_auth_authenticatetoken"
     },
     {
       "relation": "imports",
@@ -14699,9 +14779,9 @@
       "source_file": "server/test-api.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_api_js",
-      "target": "server_auth_requireadmin",
-      "confidence_score": 1.0
+      "target": "server_auth_requireadmin"
     },
     {
       "relation": "imports",
@@ -14710,9 +14790,9 @@
       "source_file": "server/test-with-auth-route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_auth_route_js",
-      "target": "server_auth_requireadmin",
-      "confidence_score": 1.0
+      "target": "server_auth_requireadmin"
     },
     {
       "relation": "imports",
@@ -14721,9 +14801,9 @@
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_coaches_route_js",
-      "target": "server_auth_requireadmin",
-      "confidence_score": 1.0
+      "target": "server_auth_requireadmin"
     },
     {
       "relation": "imports",
@@ -14732,9 +14812,9 @@
       "source_file": "server/test-with-db.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_db_js",
-      "target": "server_auth_requireadmin",
-      "confidence_score": 1.0
+      "target": "server_auth_requireadmin"
     },
     {
       "relation": "imports",
@@ -14743,9 +14823,9 @@
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_notifications_route_js",
-      "target": "server_auth_requireadmin",
-      "confidence_score": 1.0
+      "target": "server_auth_requireadmin"
     },
     {
       "relation": "imports",
@@ -14754,9 +14834,9 @@
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_tasks_route_js",
-      "target": "server_auth_requireadmin",
-      "confidence_score": 1.0
+      "target": "server_auth_requireadmin"
     },
     {
       "relation": "imports",
@@ -14931,9 +15011,9 @@
       "source_file": "server/index.js",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_index_js",
-      "target": "server_index_server",
-      "confidence_score": 1.0
+      "target": "server_index_server"
     },
     {
       "relation": "imports_from",
@@ -15126,9 +15206,9 @@
       "source_file": "server/test-api.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_api_js",
-      "target": "server_test_api_express",
-      "confidence_score": 1.0
+      "target": "server_test_api_express"
     },
     {
       "relation": "contains",
@@ -15136,9 +15216,9 @@
       "source_file": "server/test-api.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_api_js",
-      "target": "server_test_api_db",
-      "confidence_score": 1.0
+      "target": "server_test_api_db"
     },
     {
       "relation": "contains",
@@ -15146,9 +15226,9 @@
       "source_file": "server/test-api.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_api_js",
-      "target": "server_test_api_authenticatetoken_requireadmin",
-      "confidence_score": 1.0
+      "target": "server_test_api_authenticatetoken_requireadmin"
     },
     {
       "relation": "contains",
@@ -15156,9 +15236,9 @@
       "source_file": "server/test-api.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_api_js",
-      "target": "server_test_api_app",
-      "confidence_score": 1.0
+      "target": "server_test_api_app"
     },
     {
       "relation": "contains",
@@ -15166,9 +15246,9 @@
       "source_file": "server/test-api.js",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_api_js",
-      "target": "server_test_api_result",
-      "confidence_score": 1.0
+      "target": "server_test_api_result"
     },
     {
       "relation": "contains",
@@ -15176,9 +15256,9 @@
       "source_file": "server/test-api.js",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_api_js",
-      "target": "server_test_api_coaches",
-      "confidence_score": 1.0
+      "target": "server_test_api_coaches"
     },
     {
       "relation": "contains",
@@ -15186,9 +15266,9 @@
       "source_file": "server/test-db.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_db_js",
-      "target": "server_test_db_db",
-      "confidence_score": 1.0
+      "target": "server_test_db_db"
     },
     {
       "relation": "contains",
@@ -15196,9 +15276,9 @@
       "source_file": "server/test-db.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_db_js",
-      "target": "server_test_db_coaches",
-      "confidence_score": 1.0
+      "target": "server_test_db_coaches"
     },
     {
       "relation": "contains",
@@ -15206,9 +15286,9 @@
       "source_file": "server/test-minimal.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_minimal_js",
-      "target": "server_test_minimal_express",
-      "confidence_score": 1.0
+      "target": "server_test_minimal_express"
     },
     {
       "relation": "contains",
@@ -15216,9 +15296,9 @@
       "source_file": "server/test-minimal.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_minimal_js",
-      "target": "server_test_minimal_cors",
-      "confidence_score": 1.0
+      "target": "server_test_minimal_cors"
     },
     {
       "relation": "contains",
@@ -15226,9 +15306,9 @@
       "source_file": "server/test-minimal.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_minimal_js",
-      "target": "server_test_minimal_app",
-      "confidence_score": 1.0
+      "target": "server_test_minimal_app"
     },
     {
       "relation": "contains",
@@ -15236,9 +15316,9 @@
       "source_file": "server/test-no-routes.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_no_routes_js",
-      "target": "server_test_no_routes_express",
-      "confidence_score": 1.0
+      "target": "server_test_no_routes_express"
     },
     {
       "relation": "contains",
@@ -15246,9 +15326,9 @@
       "source_file": "server/test-no-routes.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_no_routes_js",
-      "target": "server_test_no_routes_cors",
-      "confidence_score": 1.0
+      "target": "server_test_no_routes_cors"
     },
     {
       "relation": "contains",
@@ -15256,9 +15336,9 @@
       "source_file": "server/test-no-routes.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_no_routes_js",
-      "target": "server_test_no_routes_app",
-      "confidence_score": 1.0
+      "target": "server_test_no_routes_app"
     },
     {
       "relation": "contains",
@@ -15266,9 +15346,9 @@
       "source_file": "server/test-no-routes.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_no_routes_js",
-      "target": "server_test_no_routes_corsoptions",
-      "confidence_score": 1.0
+      "target": "server_test_no_routes_corsoptions"
     },
     {
       "relation": "contains",
@@ -15276,9 +15356,9 @@
       "source_file": "server/test-simple.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_simple_js",
-      "target": "server_test_simple_express",
-      "confidence_score": 1.0
+      "target": "server_test_simple_express"
     },
     {
       "relation": "contains",
@@ -15286,9 +15366,9 @@
       "source_file": "server/test-simple.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_simple_js",
-      "target": "server_test_simple_app",
-      "confidence_score": 1.0
+      "target": "server_test_simple_app"
     },
     {
       "relation": "contains",
@@ -15296,9 +15376,9 @@
       "source_file": "server/test-with-auth-route.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_auth_route_js",
-      "target": "server_test_with_auth_route_express",
-      "confidence_score": 1.0
+      "target": "server_test_with_auth_route_express"
     },
     {
       "relation": "contains",
@@ -15306,9 +15386,9 @@
       "source_file": "server/test-with-auth-route.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_auth_route_js",
-      "target": "server_test_with_auth_route_cors",
-      "confidence_score": 1.0
+      "target": "server_test_with_auth_route_cors"
     },
     {
       "relation": "contains",
@@ -15316,9 +15396,9 @@
       "source_file": "server/test-with-auth-route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_auth_route_js",
-      "target": "server_test_with_auth_route_authenticatetoken_requireadmin",
-      "confidence_score": 1.0
+      "target": "server_test_with_auth_route_authenticatetoken_requireadmin"
     },
     {
       "relation": "contains",
@@ -15326,9 +15406,9 @@
       "source_file": "server/test-with-auth-route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_auth_route_js",
-      "target": "server_test_with_auth_route_app",
-      "confidence_score": 1.0
+      "target": "server_test_with_auth_route_app"
     },
     {
       "relation": "contains",
@@ -15336,9 +15416,9 @@
       "source_file": "server/test-with-auth-route.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_auth_route_js",
-      "target": "server_test_with_auth_route_corsoptions",
-      "confidence_score": 1.0
+      "target": "server_test_with_auth_route_corsoptions"
     },
     {
       "relation": "contains",
@@ -15346,9 +15426,9 @@
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_coaches_route_js",
-      "target": "server_test_with_coaches_route_express",
-      "confidence_score": 1.0
+      "target": "server_test_with_coaches_route_express"
     },
     {
       "relation": "contains",
@@ -15356,9 +15436,9 @@
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_coaches_route_js",
-      "target": "server_test_with_coaches_route_cors",
-      "confidence_score": 1.0
+      "target": "server_test_with_coaches_route_cors"
     },
     {
       "relation": "contains",
@@ -15366,9 +15446,9 @@
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_coaches_route_js",
-      "target": "server_test_with_coaches_route_authenticatetoken_requireadmin",
-      "confidence_score": 1.0
+      "target": "server_test_with_coaches_route_authenticatetoken_requireadmin"
     },
     {
       "relation": "contains",
@@ -15376,9 +15456,9 @@
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_coaches_route_js",
-      "target": "server_test_with_coaches_route_app",
-      "confidence_score": 1.0
+      "target": "server_test_with_coaches_route_app"
     },
     {
       "relation": "contains",
@@ -15386,9 +15466,9 @@
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_coaches_route_js",
-      "target": "server_test_with_coaches_route_corsoptions",
-      "confidence_score": 1.0
+      "target": "server_test_with_coaches_route_corsoptions"
     },
     {
       "relation": "contains",
@@ -15396,9 +15476,9 @@
       "source_file": "server/test-with-db.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_db_js",
-      "target": "server_test_with_db_express",
-      "confidence_score": 1.0
+      "target": "server_test_with_db_express"
     },
     {
       "relation": "contains",
@@ -15406,9 +15486,9 @@
       "source_file": "server/test-with-db.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_db_js",
-      "target": "server_test_with_db_cors",
-      "confidence_score": 1.0
+      "target": "server_test_with_db_cors"
     },
     {
       "relation": "contains",
@@ -15416,9 +15496,9 @@
       "source_file": "server/test-with-db.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_db_js",
-      "target": "server_test_with_db_db",
-      "confidence_score": 1.0
+      "target": "server_test_with_db_db"
     },
     {
       "relation": "contains",
@@ -15426,9 +15506,9 @@
       "source_file": "server/test-with-db.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_db_js",
-      "target": "server_test_with_db_authenticatetoken_requireadmin",
-      "confidence_score": 1.0
+      "target": "server_test_with_db_authenticatetoken_requireadmin"
     },
     {
       "relation": "imports",
@@ -15437,9 +15517,9 @@
       "source_file": "server/test-with-db.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_db_js",
-      "target": "server_cron_schedulejobs",
-      "confidence_score": 1.0
+      "target": "server_cron_schedulejobs"
     },
     {
       "relation": "contains",
@@ -15447,9 +15527,9 @@
       "source_file": "server/test-with-db.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_db_js",
-      "target": "server_test_with_db_schedulejobs",
-      "confidence_score": 1.0
+      "target": "server_test_with_db_schedulejobs"
     },
     {
       "relation": "contains",
@@ -15457,9 +15537,9 @@
       "source_file": "server/test-with-db.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_db_js",
-      "target": "server_test_with_db_app",
-      "confidence_score": 1.0
+      "target": "server_test_with_db_app"
     },
     {
       "relation": "contains",
@@ -15467,9 +15547,9 @@
       "source_file": "server/test-with-db.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_db_js",
-      "target": "server_test_with_db_corsoptions",
-      "confidence_score": 1.0
+      "target": "server_test_with_db_corsoptions"
     },
     {
       "relation": "contains",
@@ -15477,9 +15557,9 @@
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_notifications_route_js",
-      "target": "server_test_with_notifications_route_express",
-      "confidence_score": 1.0
+      "target": "server_test_with_notifications_route_express"
     },
     {
       "relation": "contains",
@@ -15487,9 +15567,9 @@
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_notifications_route_js",
-      "target": "server_test_with_notifications_route_cors",
-      "confidence_score": 1.0
+      "target": "server_test_with_notifications_route_cors"
     },
     {
       "relation": "contains",
@@ -15497,9 +15577,9 @@
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_notifications_route_js",
-      "target": "server_test_with_notifications_route_authenticatetoken_requireadmin",
-      "confidence_score": 1.0
+      "target": "server_test_with_notifications_route_authenticatetoken_requireadmin"
     },
     {
       "relation": "imports",
@@ -15508,9 +15588,9 @@
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_notifications_route_js",
-      "target": "server_cron_schedulejobs",
-      "confidence_score": 1.0
+      "target": "server_cron_schedulejobs"
     },
     {
       "relation": "contains",
@@ -15518,9 +15598,9 @@
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_notifications_route_js",
-      "target": "server_test_with_notifications_route_schedulejobs",
-      "confidence_score": 1.0
+      "target": "server_test_with_notifications_route_schedulejobs"
     },
     {
       "relation": "contains",
@@ -15528,9 +15608,9 @@
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_notifications_route_js",
-      "target": "server_test_with_notifications_route_app",
-      "confidence_score": 1.0
+      "target": "server_test_with_notifications_route_app"
     },
     {
       "relation": "contains",
@@ -15538,9 +15618,9 @@
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_notifications_route_js",
-      "target": "server_test_with_notifications_route_corsoptions",
-      "confidence_score": 1.0
+      "target": "server_test_with_notifications_route_corsoptions"
     },
     {
       "relation": "contains",
@@ -15548,9 +15628,9 @@
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_tasks_route_js",
-      "target": "server_test_with_tasks_route_express",
-      "confidence_score": 1.0
+      "target": "server_test_with_tasks_route_express"
     },
     {
       "relation": "contains",
@@ -15558,9 +15638,9 @@
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_tasks_route_js",
-      "target": "server_test_with_tasks_route_cors",
-      "confidence_score": 1.0
+      "target": "server_test_with_tasks_route_cors"
     },
     {
       "relation": "contains",
@@ -15568,9 +15648,9 @@
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_tasks_route_js",
-      "target": "server_test_with_tasks_route_authenticatetoken_requireadmin",
-      "confidence_score": 1.0
+      "target": "server_test_with_tasks_route_authenticatetoken_requireadmin"
     },
     {
       "relation": "contains",
@@ -15578,9 +15658,9 @@
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_tasks_route_js",
-      "target": "server_test_with_tasks_route_app",
-      "confidence_score": 1.0
+      "target": "server_test_with_tasks_route_app"
     },
     {
       "relation": "contains",
@@ -15588,9 +15668,9 @@
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_with_tasks_route_js",
-      "target": "server_test_with_tasks_route_corsoptions",
-      "confidence_score": 1.0
+      "target": "server_test_with_tasks_route_corsoptions"
     },
     {
       "relation": "contains",
@@ -28512,5 +28592,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "f0f156a655cb28a1e6a7862522c08346ef0aae54"
+  "built_at_commit": "c429eca9c4fe328b056d20b503ba35fa478d72c6"
 }

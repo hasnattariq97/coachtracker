@@ -1,16 +1,16 @@
 # Graph Report - Cursor_new  (2026-06-04)
 
 ## Corpus Check
-- 175 files · ~127,451 words
+- 175 files · ~127,489 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1433 nodes · 1547 edges · 110 communities (105 shown, 5 thin omitted)
+- 1435 nodes · 1553 edges · 110 communities (105 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f0f156a6`
+- Built from commit: `c429eca9`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -201,8 +201,8 @@ Cohesion: 0.06
 Nodes (31): code:markdown (---), code:markdown (---), code:javascript (/**), code:json ({), code:bash (grep -r "^phase: \"1\"" docs/ .claude/), code:bash (grep -r "^status: \"deprecated\"" .), code:bash (# (use your date command to compute cutoff)), code:markdown (---) (+23 more)
 
 ### Community 15 - "Community 15"
-Cohesion: 0.06
-Nodes (31): adminResult, app, coachHash, coachResult, db, future, jwt, notifs (+23 more)
+Cohesion: 0.12
+Nodes (15): adminResult, app, coachHash, coachResult, db, future, jwt, notifs (+7 more)
 
 ### Community 19 - "Community 19"
 Cohesion: 0.1
@@ -221,12 +221,12 @@ Cohesion: 0.1
 Nodes (21): 1. File Operations, 2. Shell Operations, 3. Code Understanding, Available Tools, Bash, code:bash (Read(file_path)), code:bash (Write(file_path, content)), code:bash (Edit(file_path, old_string, new_string)) (+13 more)
 
 ### Community 23 - "Community 23"
-Cohesion: 0.17
-Nodes (12): 1. Local Memory (.claude/projects/*/memory/), 2. AgentDB (Ruflo Vector Database), 3. SONA Learning (Neural Trajectories), code:block35 (.claude/projects/{project_name}/memory/), code:markdown (---), code:markdown (---), code:markdown (---), code:markdown (---) (+4 more)
+Cohesion: 0.29
+Nodes (7): 1. Local Memory (.claude/projects/*/memory/), code:block35 (.claude/projects/{project_name}/memory/), code:markdown (---), code:markdown (---), code:markdown (---), code:markdown (---), Memory Types
 
 ### Community 24 - "Community 24"
-Cohesion: 0.15
-Nodes (16): Beads Work-Tracking System, code:bash (# Create .beads/ directory structure), code:bash (# Create helper script at .claude/hooks/bootstrap-beads.sh), code:json ({), code:bash (#!/bin/bash), code:yaml (---), code:bash (# Show all open work items), code:bash (# Session 1: Start work) (+8 more)
+Cohesion: 0.07
+Nodes (40): Beads Work-Tracking System, Claude Code CLI, code:bash (# Install the superpowers framework), code:bash (/using-superpowers), code:bash (# Via pip), code:bash (export ANTHROPIC_API_KEY="sk-ant-..."), code:bash (# Already set up if .git/hooks/post-commit exists), code:bash (# Core orchestration) (+32 more)
 
 ### Community 27 - "Community 27"
 Cohesion: 0.06
@@ -250,7 +250,7 @@ Nodes (11): code:bash (cd d:\Cursor_new\server), code:bash (cd d:\Cursor_new\cli
 
 ### Community 32 - "Community 32"
 Cohesion: 0.15
-Nodes (12): code:javascript (import { render, screen, waitFor } from '@testing-library/re), code:bash (cd d:\Cursor_new\client), code:javascript (import { render, screen } from '@testing-library/react';), code:bash (cd d:\Cursor_new\client), code:javascript (import { render, screen, waitFor } from '@testing-library/re), code:bash (cd d:\Cursor_new\client), Phase 1: Auth System Implementation Plan, Security Checklist (Final Review) (+4 more)
+Nodes (12): code:javascript (import request from 'supertest';), code:bash (cd d:\Cursor_new\server), code:javascript (import { render, screen, waitFor } from '@testing-library/re), code:bash (cd d:\Cursor_new\client), code:javascript (import { render, screen, waitFor } from '@testing-library/re), code:bash (cd d:\Cursor_new\client), Phase 1: Auth System Implementation Plan, Security Checklist (Final Review) (+4 more)
 
 ### Community 33 - "Community 33"
 Cohesion: 0.25
@@ -298,7 +298,7 @@ Nodes (4): code:javascript (import express from 'express';), code:bash (cd d:\Cu
 
 ### Community 44 - "Community 44"
 Cohesion: 0.06
-Nodes (16): STATUSES, TaskBoard(), CoachDashboard(), greeting(), emptyMessages, TABS, daysLeft(), priorityBorder (+8 more)
+Nodes (18): STATUSES, TaskBoard(), CoachDashboard(), greeting(), emptyMessages, TABS, daysLeft(), priorityBorder (+10 more)
 
 ### Community 45 - "Community 45"
 Cohesion: 0.5
@@ -317,8 +317,8 @@ Cohesion: 0.14
 Nodes (12): bcrypt, coach, coaches, conflict, db, existing, express, id (+4 more)
 
 ### Community 50 - "Community 50"
-Cohesion: 0.11
-Nodes (18): adminResult, adminTaskResult, adminUnread, app, coachResult, coachUnread, db, express (+10 more)
+Cohesion: 0.08
+Nodes (24): db, express, id, notif, notifs, router, adminResult, adminTaskResult (+16 more)
 
 ### Community 51 - "Community 51"
 Cohesion: 0.05
@@ -341,8 +341,8 @@ Cohesion: 0.29
 Nodes (7): Building a Feature (Superpowers Cycle), code:block45 (1. BRAINSTORM), code:block46 (1. REPRODUCE), code:block47 (Task: Build multi-user system), Debugging a Bug (Systematic Approach), Parallel Agent Development, Patterns & Workflows
 
 ### Community 62 - "Community 62"
-Cohesion: 0.19
-Nodes (12): Claude Core Capabilities, code:bash (# Step 1: Initialize Claude Code), Distribution & Usage, For Agents, For Projects, For Teams, Guarantees & Constraints, Master Capabilities Reference (+4 more)
+Cohesion: 0.29
+Nodes (6): Claude Core Capabilities, Guarantees & Constraints, Master Capabilities Reference, Reasoning Powers, Table of Contents, When to Use Each Tool/Framework
 
 ### Community 63 - "Community 63"
 Cohesion: 0.29
@@ -353,8 +353,8 @@ Cohesion: 0.29
 Nodes (7): Code Review (Two-Stage), code:javascript (// RED: Write failing test first), code:block43 ([Phase #] Brief description), code:block44 ([Phase 2] Add user authentication with JWT), Commit Message Format, Development Methodologies, Test-First Development (RED-GREEN-REFACTOR)
 
 ### Community 65 - "Community 65"
-Cohesion: 0.29
-Nodes (6): db, express, id, notif, notifs, router
+Cohesion: 0.17
+Nodes (10): app, { authenticateToken, requireAdmin }, cors, corsOptions, db, express, { scheduleJobs }, server (+2 more)
 
 ### Community 66 - "Community 66"
 Cohesion: 0.04
@@ -389,8 +389,8 @@ Cohesion: 0.18
 Nodes (11): 400 Bad Request, 401 Unauthorized, 403 Forbidden, 409 Conflict, 500 Internal Server Error, code:json ({), code:json ({), code:json ({) (+3 more)
 
 ### Community 76 - "Community 76"
-Cohesion: 0.67
-Nodes (3): code:javascript (import request from 'supertest';), code:bash (cd d:\Cursor_new\server), Task 6: Implement Login Endpoint (RED)
+Cohesion: 0.38
+Nodes (6): createNotification(), cron, db, midpointNudgeJob(), overdueJob(), scheduleJobs()
 
 ### Community 77 - "Community 77"
 Cohesion: 0.18
@@ -417,8 +417,8 @@ Cohesion: 0.17
 Nodes (11): cleanup.cmd (Windows), cleanup.sh (Linux/Mac), code:bash (scripts\cleanup.cmd), code:block2 (======================================), code:bash (chmod +x scripts/cleanup.sh), Prevention, Scripts Directory, See Also (+3 more)
 
 ### Community 83 - "Community 83"
-Cohesion: 0.18
-Nodes (11): code:bash (# Install the superpowers framework), code:bash (/using-superpowers), code:bash (# Via pip), code:bash (export ANTHROPIC_API_KEY="sk-ant-..."), code:bash (# Already set up if .git/hooks/post-commit exists), code:bash (# Core orchestration), code:bash (/phase-builder), Graphify Knowledge Graph (+3 more)
+Cohesion: 0.47
+Nodes (6): code:bash (# Step 1: Initialize Claude Code), Distribution & Usage, For Agents, For Projects, For Teams, Plugin Checklist for New Projects
 
 ### Community 84 - "Community 84"
 Cohesion: 0.18
@@ -453,8 +453,8 @@ Cohesion: 0.67
 Nodes (3): Frontend ✅ (already done), Phase 6 — Polish & Security Audit ⬅️ NEXT, Security Audit & Input Validation ❌ (next priority)
 
 ### Community 92 - "Community 92"
-Cohesion: 0.29
-Nodes (8): Claude Code CLI, code:bash (#!/bin/bash), code:bash (#!/bin/bash), code:bash (# macOS), code:bash (claude-code --version), code:markdown (---), code:json ({), Custom Skills & Agents
+Cohesion: 0.4
+Nodes (5): 2. AgentDB (Ruflo Vector Database), 3. SONA Learning (Neural Trajectories), code:bash (# Search agent knowledge), code:block41 ("When task deadline < 1 week, add hourly reminders"), Memory & Learning Systems
 
 ### Community 93 - "Community 93"
 Cohesion: 0.25
@@ -481,8 +481,8 @@ Cohesion: 0.33
 Nodes (5): app, { authenticateToken, requireAdmin }, cors, corsOptions, express
 
 ### Community 99 - "Community 99"
-Cohesion: 0.4
-Nodes (5): code:json ({), code:bash (# Structure), code:bash (# JavaScript), code:bash (# .eslintrc.json), Security & Linting
+Cohesion: 0.67
+Nodes (3): code:javascript (import { render, screen } from '@testing-library/react';), code:bash (cd d:\Cursor_new\client), Task 11: Create ProtectedRoute Component (RED)
 
 ### Community 100 - "Community 100"
 Cohesion: 0.4
@@ -520,11 +520,11 @@ Nodes (3): code:json ({), code:json ({), PUT /api/tasks/:id/delay-reason
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Master Capabilities Reference` connect `Community 62` to `Community 64`, `Community 67`, `Community 7`, `Community 13`, `Community 19`, `Community 83`, `Community 22`, `Community 23`, `Community 61`?**
+- **Why does `Master Capabilities Reference` connect `Community 62` to `Community 64`, `Community 67`, `Community 7`, `Community 13`, `Community 19`, `Community 83`, `Community 22`, `Community 24`, `Community 92`, `Community 61`?**
   _High betweenness centrality (0.010) - this node is a cross-community bridge._
-- **Why does `requireAdmin()` connect `Community 95` to `Community 96`, `Community 97`, `Community 98`, `Community 77`, `Community 15`, `Community 79`, `Community 51`, `Community 88`, `Community 93`?**
+- **Why does `requireAdmin()` connect `Community 95` to `Community 96`, `Community 65`, `Community 98`, `Community 97`, `Community 77`, `Community 79`, `Community 51`, `Community 88`, `Community 93`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **Why does `authenticateToken()` connect `Community 88` to `Community 96`, `Community 97`, `Community 98`, `Community 77`, `Community 15`, `Community 79`, `Community 50`, `Community 51`, `Community 93`, `Community 95`?**
+- **Why does `authenticateToken()` connect `Community 88` to `Community 96`, `Community 65`, `Community 98`, `Community 97`, `Community 77`, `Community 79`, `Community 50`, `Community 51`, `Community 93`, `Community 95`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **What connects `code:cmd (scripts\cleanup.cmd)`, `code:bash (./scripts/cleanup.sh)`, `code:bash (cd d:\Cursor_new\server)` to the rest of the system?**
   _826 weakly-connected nodes found - possible documentation gaps or missing edges._
