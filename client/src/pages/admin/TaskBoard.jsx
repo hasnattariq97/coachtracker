@@ -84,6 +84,15 @@ const TaskBoard = () => {
     } catch { toast.error('Failed to delete task'); }
   };
 
+  const getInitials = (name) => {
+    if (!name) return '?';
+    const parts = name.trim().split(/\s+/);
+    if (parts.length >= 2) {
+      return (parts[0].charAt(0) + parts[parts.length - 1].charAt(0)).toUpperCase();
+    }
+    return name.charAt(0).toUpperCase();
+  };
+
   const daysLeft = (due) => {
     const diff = Math.ceil((new Date(due) - new Date()) / 86400000);
     if (diff < 0) return <span className="text-red-600 font-medium">{Math.abs(diff)}d overdue</span>;
@@ -169,7 +178,7 @@ const TaskBoard = () => {
                         {group.instances.map(inst => (
                           <div key={inst.id} className="flex items-center gap-1 group/coach relative">
                             <div className="w-7 h-7 rounded-full bg-primary-100 text-primary-700 text-xs font-bold flex items-center justify-center shrink-0">
-                              {inst.coach_name?.charAt(0).toUpperCase()}
+                              {getInitials(inst.coach_name)}
                             </div>
                             <span className={`text-xs font-medium px-1.5 py-0.5 rounded ${
                               inst.status === 'completed' ? 'bg-green-100 text-green-700' :

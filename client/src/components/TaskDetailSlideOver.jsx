@@ -36,13 +36,14 @@ const TaskDetailSlideOver = ({ task, instances, onClose, onEdit, onDelete, onRef
         aria-hidden="true"
       />
 
-      {/* Panel */}
-      <aside
-        className="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-50 flex flex-col slide-in-right"
+      {/* Modal */}
+      <div
+        className="fixed inset-0 flex items-center justify-center z-50 p-4"
         role="dialog"
         aria-modal="true"
         aria-label="Task details"
       >
+        <div className="bg-white rounded-2xl shadow-2xl flex flex-col w-full max-w-2xl max-h-[90vh] animate-in fade-in zoom-in duration-300">
         {/* Header */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-slate-100 shrink-0">
           <div className="flex items-center gap-2">
@@ -121,16 +122,17 @@ const TaskDetailSlideOver = ({ task, instances, onClose, onEdit, onDelete, onRef
           )}
         </div>
 
-        {/* Actions */}
-        <div className="shrink-0 px-5 py-4 border-t border-slate-100 flex gap-3">
-          <Button variant="secondary" className="flex-1" icon={Pencil} onClick={() => onEdit(task)}>
-            Edit
-          </Button>
-          <Button variant="danger" className="flex-1" icon={Trash2} onClick={() => onDelete(task.id)}>
-            Delete
-          </Button>
+          {/* Actions */}
+          <div className="shrink-0 px-5 py-4 border-t border-slate-100 flex gap-3">
+            <Button variant="secondary" className="flex-1" icon={Pencil} onClick={() => onEdit(task)}>
+              Edit
+            </Button>
+            <Button variant="danger" className="flex-1" icon={Trash2} onClick={() => onDelete(task.id)}>
+              Delete
+            </Button>
+          </div>
         </div>
-      </aside>
+      </div>
     </>
   );
 };
