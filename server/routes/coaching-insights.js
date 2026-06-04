@@ -135,21 +135,81 @@ Event type: ${eventType}
 }
 
 /**
- * Placeholder agents — will implement in next tasks
+ * Pattern Analysis Agent: Identify completion patterns
  */
 async function callPatternAgent(context) {
-  // Implemented in Task 4
-  return null;
+  try {
+    const message = await client.messages.create({
+      model: ANTHROPIC_MODEL,
+      max_tokens: 500,
+      system: `You are a Pattern Analysis Agent. Analyze a coach's task completion history and current event to identify patterns.
+Focus on: on-time completion rate, delays, consistency, patterns by task type or deadline.
+Respond with 2-3 specific observations about this coach's patterns. Be concise and actionable.`,
+      messages: [
+        {
+          role: 'user',
+          content: `Analyze this coach's patterns:\n${context}`,
+        },
+      ],
+    });
+
+    return message.content[0].type === 'text' ? message.content[0].text : null;
+  } catch (error) {
+    console.error('[Pattern Agent] Error:', error.message);
+    return null;
+  }
 }
 
+/**
+ * Growth Coach Agent: Identify learning opportunities
+ */
 async function callGrowthAgent(context) {
-  // Implemented in Task 4
-  return null;
+  try {
+    const message = await client.messages.create({
+      model: ANTHROPIC_MODEL,
+      max_tokens: 500,
+      system: `You are a Growth Coach Agent. Identify learning opportunities and professional growth from a coach's task performance.
+Focus on: strengths to leverage, skills to develop, positive momentum.
+Respond with 1-2 encouraging observations and a concrete growth opportunity. Use coaching tone (supportive, growth-focused).`,
+      messages: [
+        {
+          role: 'user',
+          content: `Identify growth opportunities for this coach:\n${context}`,
+        },
+      ],
+    });
+
+    return message.content[0].type === 'text' ? message.content[0].text : null;
+  } catch (error) {
+    console.error('[Growth Agent] Error:', error.message);
+    return null;
+  }
 }
 
+/**
+ * Risk Analysis Agent: Identify blockers and risk factors
+ */
 async function callRiskAgent(context) {
-  // Implemented in Task 4
-  return null;
+  try {
+    const message = await client.messages.create({
+      model: ANTHROPIC_MODEL,
+      max_tokens: 500,
+      system: `You are a Risk Analysis Agent. Identify risk factors and recurring blockers in a coach's task completion.
+Focus on: recurring delay patterns, high-risk task types, external blockers, workload concerns.
+Respond with observations about risks (if any) and preventive recommendations. If no risks, say so clearly.`,
+      messages: [
+        {
+          role: 'user',
+          content: `Analyze risks and blockers for this coach:\n${context}`,
+        },
+      ],
+    });
+
+    return message.content[0].type === 'text' ? message.content[0].text : null;
+  } catch (error) {
+    console.error('[Risk Agent] Error:', error.message);
+    return null;
+  }
 }
 
 /**
@@ -189,8 +249,21 @@ function extractConfidence(response) {
  * Build consensus statement from all 3 agents
  */
 function buildConsensus(patternResponse, growthResponse, riskResponse) {
-  // Implemented in Task 4
-  return 'Analysis complete. Continue growing!';
+  if (!patternResponse || !growthResponse || !riskResponse) {
+    return 'Insights partial. Continue strong work!';
+  }
+
+  // Extract key phrases for consensus
+  const patterns = patternResponse.split('.')[0]; // First sentence
+  const growth = growthResponse.split('.')[0];
+  const risks = riskResponse.includes('no risks') ? null : riskResponse.split('.')[0];
+
+  let consensus = `${growth} ${patterns}`;
+  if (risks) {
+    consensus += ` Note: ${risks}`;
+  }
+
+  return consensus.slice(0, 200); // Truncate to 200 chars for notification message
 }
 
 /**
