@@ -10,6 +10,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../db');
 const { requireAdmin, requireCoach } = require('../auth');
+const { queueCoachingInsights } = require('./coaching-insights');
 
 const createNotification = (userId, taskId, type, message) => {
   db.prepare(
@@ -328,6 +329,9 @@ router.put('/:id/complete', requireCoach, (req, res) => {
       createNotification(admin.id, id, 'completed', message);
     }
 
+    // Queue coaching insights (async, non-blocking)
+    queueCoachingInsights(req.user.id, id, 'completion');
+
     res.json({
       id,
       status: 'completed',
@@ -386,6 +390,9 @@ router.put('/:id/delay-reason', requireCoach, (req, res) => {
       const message = `${coach.name} submitted a reason for delay on '${task.title}'`;
       createNotification(admin.id, id, 'delay_submitted', message);
     }
+
+    // Queue coaching insights (async, non-blocking)
+    queueCoachingInsights(req.user.id, id, 'delay');
 
     res.json({
       id,
