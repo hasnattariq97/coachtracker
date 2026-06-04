@@ -49,14 +49,34 @@ const TaskBoard = () => {
     return true;
   }), [tasks, statusFilter, coachFilter, search]);
 
+  // Group tasks by title/description/priority/due_date to show one card per task
+  const groupedTasks = useMemo(() => {
+    const groups = {};
+    filtered.forEach(t => {
+      const key = `${t.title}|${t.description}|${t.priority}|${t.due_date}`;
+      if (!groups[key]) {
+        groups[key] = {
+          baseTask: t,
+          instances: [],
+          allIds: [],
+        };
+      }
+      groups[key].instances.push(t);
+      groups[key].allIds.push(t.id);
+    });
+    return Object.values(groups);
+  }, [filtered]);
+
   const confirmDelete = (id) => {
     setDeleteTarget(id);
   };
 
   const executeDelete = async () => {
     try {
-      await axios.delete(`/api/tasks/${deleteTarget}`);
-      toast.success('Task deleted.');
+      // deleteTarget now contains array of all task IDs for this task
+      const idsToDelete = Array.isArray(deleteTarget) ? deleteTarget : [deleteTarget];
+      await Promise.all(idsToDelete.map(id => axios.delete(`/api/tasks/${id}`)));
+      toast.success(`Task${idsToDelete.length > 1 ? 's' : ''} deleted.`);
       setSelected(null);
       setDeleteTarget(null);
       fetchAll();
@@ -75,7 +95,7 @@ const TaskBoard = () => {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
           <h2 className="text-lg font-heading font-bold text-primary-900">Task Board</h2>
-          <p className="text-sm text-slate-500">{filtered.length} task{filtered.length !== 1 ? 's' : ''}</p>
+          <p className="text-sm text-slate-500">{groupedTasks.length} task{groupedTasks.length !== 1 ? 's' : ''}</p>
         </div>
       </div>
 
@@ -122,43 +142,68 @@ const TaskBoard = () => {
             <tbody>
               {loading ? (
                 Array.from({ length: 5 }).map((_, i) => <TableRowSkeleton key={i} cols={6} />)
-              ) : filtered.length === 0 ? (
+              ) : groupedTasks.length === 0 ? (
                 <tr><td colSpan={6} className="py-12">
                   <EmptyState icon={ClipboardList} title="No tasks found" message="Try adjusting your filters." />
                 </td></tr>
-              ) : filtered.map(t => (
-                <tr
-                  key={t.id}
-                  className={`border-b border-slate-50 hover:bg-slate-50 transition-colors cursor-pointer
-                              ${t.status === 'overdue' ? 'bg-red-50/40' : ''}`}
-                  onClick={() => setSelected(t)}
-                >
-                  <td className="py-3 px-4 pl-5 font-medium text-primary-900 max-w-[200px]">
-                    <p className="truncate">{t.title}</p>
-                    {t.description && <p className="text-xs text-slate-400 truncate mt-0.5">{t.description}</p>}
-                  </td>
-                  <td className="py-3 px-4">
-                    <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-full bg-primary-100 text-primary-700 text-xs font-bold flex items-center justify-center shrink-0">
-                        {t.coach_name?.charAt(0).toUpperCase()}
+              ) : groupedTasks.map(group => {
+                const t = group.baseTask;
+                const hasOverdue = group.instances.some(inst => inst.status === 'overdue');
+                return (
+                  <tr
+                    key={t.id}
+                    className={`border-b border-slate-50 hover:bg-slate-50 transition-colors cursor-pointer
+                                ${hasOverdue ? 'bg-red-50/40' : ''}`}
+                    onClick={() => setSelected(t)}
+                  >
+                    <td className="py-3 px-4 pl-5 font-medium text-primary-900 max-w-[200px]">
+                      <p className="truncate">{t.title}</p>
+                      {t.description && <p className="text-xs text-slate-400 truncate mt-0.5">{t.description}</p>}
+                    </td>
+                    <td className="py-3 px-4">
+                      <div className="space-y-1.5">
+                        {group.instances.map(inst => (
+                          <div key={inst.id} className="flex items-center gap-2">
+                            <div className="w-6 h-6 rounded-full bg-primary-100 text-primary-700 text-xs font-bold flex items-center justify-center shrink-0">
+                              {inst.coach_name?.charAt(0).toUpperCase()}
+                            </div>
+                            <span className="text-slate-700 truncate text-sm">{inst.coach_name}</span>
+                            <span className={`text-xs font-medium px-1.5 py-0.5 rounded ${
+                              inst.status === 'completed' ? 'bg-green-100 text-green-700' :
+                              inst.status === 'overdue' ? 'bg-red-100 text-red-700' :
+                              'bg-slate-100 text-slate-700'
+                            }`}>
+                              {inst.status === 'completed' ? '✓' : inst.status === 'overdue' ? '!' : '○'}
+                            </span>
+                          </div>
+                        ))}
                       </div>
-                      <span className="text-slate-700 truncate">{t.coach_name}</span>
-                    </div>
-                  </td>
-                  <td className="py-3 px-4"><Badge value={t.priority} /></td>
-                  <td className="py-3 px-4"><Badge value={t.status} /></td>
-                  <td className="py-3 px-4 whitespace-nowrap text-xs">
-                    <div>{new Date(t.due_date).toLocaleDateString([], { month: 'short', day: 'numeric' })}</div>
-                    <div>{daysLeft(t.due_date)}</div>
-                  </td>
-                  <td className="py-3 px-4">
-                    <div className="flex gap-1" onClick={e => e.stopPropagation()}>
-                      <Button size="sm" variant="ghost" onClick={() => setEditing(t)}>Edit</Button>
-                      <Button size="sm" variant="ghost" onClick={() => confirmDelete(t.id)} className="text-red-500 hover:text-red-700 hover:bg-red-50">Del</Button>
-                    </div>
-                  </td>
-                </tr>
-              ))}
+                    </td>
+                    <td className="py-3 px-4"><Badge value={t.priority} /></td>
+                    <td className="py-3 px-4">
+                      {group.instances.length === 1 ? (
+                        <Badge value={t.status} />
+                      ) : (
+                        <div className="text-xs space-y-1">
+                          <div className="text-slate-600">
+                            {group.instances.filter(i => i.status === 'completed').length}/{group.instances.length} done
+                          </div>
+                        </div>
+                      )}
+                    </td>
+                    <td className="py-3 px-4 whitespace-nowrap text-xs">
+                      <div>{new Date(t.due_date).toLocaleDateString([], { month: 'short', day: 'numeric' })}</div>
+                      <div>{daysLeft(t.due_date)}</div>
+                    </td>
+                    <td className="py-3 px-4">
+                      <div className="flex gap-1" onClick={e => e.stopPropagation()}>
+                        <Button size="sm" variant="ghost" onClick={() => setEditing(t)}>Edit</Button>
+                        <Button size="sm" variant="ghost" onClick={() => confirmDelete(group.allIds)} className="text-red-500 hover:text-red-700 hover:bg-red-50">Del</Button>
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
