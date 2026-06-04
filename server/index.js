@@ -23,6 +23,11 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
+app.use((req, res, next) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.path}`);
+  next();
+});
+
 app.use('/api/auth', require('./routes/auth'));
 
 app.use('/api/coaches', authenticateToken, requireAdmin, require('./routes/coaches'));
@@ -38,15 +43,30 @@ app.use((req, res) => {
 });
 
 app.use((err, req, res, next) => {
-  console.error(err);
+  console.error('[ERROR HANDLER]', err.message || err);
+  if (err.stack) console.error(err.stack);
   res.status(500).json({ error: 'Internal server error' });
 });
 
 if (require.main === module) {
-  app.listen(PORT, () => {
+  const server = app.listen(PORT, () => {
     console.log(`✓ Server running on http://localhost:${PORT}`);
     console.log(`✓ Database: server/tracker.db`);
     scheduleJobs();
+  });
+
+  // Handle port conflicts gracefully
+  server.on('error', (err) => {
+    if (err.code === 'EADDRINUSE') {
+      console.error(`\n✗ FATAL: Port ${PORT} is already in use`);
+      console.error(`✗ This usually means a previous Node process is still running.\n`);
+      console.error(`FIX: Run this command to kill all Node processes:`);
+      console.error(`  Windows: taskkill /IM node.exe /F`);
+      console.error(`  Linux/Mac: killall -9 node\n`);
+      console.error(`Then start a new server in a fresh terminal.\n`);
+      process.exit(1);
+    }
+    throw err;
   });
 }
 

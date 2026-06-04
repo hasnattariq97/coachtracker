@@ -15,7 +15,7 @@ const Field = ({ icon: Icon, label, children }) => (
   </div>
 );
 
-const TaskDetailSlideOver = ({ task, onClose, onEdit, onDelete, onRefresh }) => {
+const TaskDetailSlideOver = ({ task, instances, onClose, onEdit, onDelete, onRefresh }) => {
   useEffect(() => {
     if (!task) return;
     const handleKey = (e) => { if (e.key === 'Escape') onClose(); };
@@ -70,7 +70,29 @@ const TaskDetailSlideOver = ({ task, onClose, onEdit, onDelete, onRefresh }) => 
           </div>
 
           <div className="space-y-4">
-            <Field icon={User} label="Assigned to">{task.coach_name || '—'}</Field>
+            <Field icon={User} label="Assigned to">
+              {instances && instances.length > 1 ? (
+                <div className="space-y-2">
+                  <div className="text-xs text-slate-500 font-medium">{instances.length} coaches:</div>
+                  <div className="space-y-1.5">
+                    {instances.map(inst => (
+                      <div key={inst.id} className="flex items-center justify-between text-sm">
+                        <span>{inst.coach_name}</span>
+                        <span className={`text-xs font-medium px-2 py-0.5 rounded ${
+                          inst.status === 'completed' ? 'bg-green-100 text-green-700' :
+                          inst.status === 'overdue' ? 'bg-red-100 text-red-700' :
+                          'bg-slate-100 text-slate-700'
+                        }`}>
+                          {inst.status === 'completed' ? '✓ Completed' : inst.status === 'overdue' ? '! Overdue' : '○ Pending'}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                task.coach_name || '—'
+              )}
+            </Field>
             <Field icon={Calendar} label="Due date">
               <span>{new Date(task.due_date).toLocaleDateString([], { weekday: 'short', month: 'long', day: 'numeric', year: 'numeric' })}</span>
               {' '}

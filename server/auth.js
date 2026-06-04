@@ -37,6 +37,7 @@ const verifyToken = (token) => {
 };
 
 const authenticateToken = (req, res, next) => {
+  console.log('[AUTH] authenticateToken middleware');
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
 

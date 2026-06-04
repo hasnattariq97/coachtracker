@@ -8,6 +8,7 @@ const validateEmail = (email) => EMAIL_REGEX.test(email);
 
 // GET /api/coaches — list all coaches with task counts
 router.get('/', (req, res) => {
+  console.log('[GET /coaches] Route called');
   try {
     const coaches = db.prepare(`
       SELECT
@@ -23,6 +24,7 @@ router.get('/', (req, res) => {
     `).all();
     res.json(coaches);
   } catch (err) {
+    console.error('GET /api/coaches error:', err.message);
     res.status(500).json({ error: 'Internal server error' });
   }
 });

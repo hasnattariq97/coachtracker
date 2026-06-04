@@ -22,6 +22,7 @@ const TaskBoard = () => {
   const [statusFilter, setStatus]   = useState('all');
   const [coachFilter, setCoach]     = useState('all');
   const [selected, setSelected]     = useState(null);
+  const [selectedInstances, setSelectedInstances] = useState(null);
   const [editing, setEditing]       = useState(null);
   const [deleteTarget, setDeleteTarget] = useState(null);
 
@@ -154,20 +155,22 @@ const TaskBoard = () => {
                     key={t.id}
                     className={`border-b border-slate-50 hover:bg-slate-50 transition-colors cursor-pointer
                                 ${hasOverdue ? 'bg-red-50/40' : ''}`}
-                    onClick={() => setSelected(t)}
+                    onClick={() => {
+                      setSelected(t);
+                      setSelectedInstances(group.instances);
+                    }}
                   >
                     <td className="py-3 px-4 pl-5 font-medium text-primary-900 max-w-[200px]">
                       <p className="truncate">{t.title}</p>
                       {t.description && <p className="text-xs text-slate-400 truncate mt-0.5">{t.description}</p>}
                     </td>
                     <td className="py-3 px-4">
-                      <div className="space-y-1.5">
+                      <div className="flex flex-wrap gap-1.5 items-center">
                         {group.instances.map(inst => (
-                          <div key={inst.id} className="flex items-center gap-2">
-                            <div className="w-6 h-6 rounded-full bg-primary-100 text-primary-700 text-xs font-bold flex items-center justify-center shrink-0">
+                          <div key={inst.id} className="flex items-center gap-1 group/coach relative">
+                            <div className="w-7 h-7 rounded-full bg-primary-100 text-primary-700 text-xs font-bold flex items-center justify-center shrink-0">
                               {inst.coach_name?.charAt(0).toUpperCase()}
                             </div>
-                            <span className="text-slate-700 truncate text-sm">{inst.coach_name}</span>
                             <span className={`text-xs font-medium px-1.5 py-0.5 rounded ${
                               inst.status === 'completed' ? 'bg-green-100 text-green-700' :
                               inst.status === 'overdue' ? 'bg-red-100 text-red-700' :
@@ -175,6 +178,10 @@ const TaskBoard = () => {
                             }`}>
                               {inst.status === 'completed' ? '✓' : inst.status === 'overdue' ? '!' : '○'}
                             </span>
+                            {/* Hover tooltip */}
+                            <div className="hidden group-hover/coach:block absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-slate-900 text-white text-xs rounded whitespace-nowrap z-10">
+                              {inst.coach_name}
+                            </div>
                           </div>
                         ))}
                       </div>
@@ -209,7 +216,7 @@ const TaskBoard = () => {
         </div>
       </Card>
 
-      <TaskDetailSlideOver task={selected} onClose={() => setSelected(null)} onEdit={t => { setSelected(null); setEditing(t); }} onDelete={confirmDelete} onRefresh={fetchAll} />
+      <TaskDetailSlideOver task={selected} instances={selectedInstances} onClose={() => { setSelected(null); setSelectedInstances(null); }} onEdit={t => { setSelected(null); setSelectedInstances(null); setEditing(t); }} onDelete={confirmDelete} onRefresh={fetchAll} />
       <EditTaskModal task={editing} onClose={() => setEditing(null)} onSaved={() => { setEditing(null); fetchAll(); }} />
 
       <Modal open={!!deleteTarget} onClose={() => setDeleteTarget(null)} title="Delete Task" size="sm">
