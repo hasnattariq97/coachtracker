@@ -104,4 +104,19 @@ try {
   console.log('ℹ️  Notification idempotency index already exists');
 }
 
+// Coaching insights columns (Phase 7)
+try {
+  db.exec(`ALTER TABLE notifications ADD COLUMN metadata TEXT;`);
+  console.log('✓ Added metadata column to notifications');
+} catch (e) {
+  if (!e.message.includes('duplicate column')) throw e;
+}
+
+try {
+  db.exec(`ALTER TABLE notifications ADD COLUMN insights_status TEXT DEFAULT 'pending';`);
+  console.log('✓ Added insights_status column to notifications');
+} catch (e) {
+  if (!e.message.includes('duplicate column')) throw e;
+}
+
 module.exports = db;
