@@ -113,7 +113,7 @@ try {
 }
 
 try {
-  db.exec(`ALTER TABLE notifications ADD COLUMN insights_status TEXT DEFAULT 'pending';`);
+  db.exec(`ALTER TABLE notifications ADD COLUMN insights_status TEXT DEFAULT pending;`);
   console.log('✓ Added insights_status column to notifications');
 } catch (e) {
   if (!e.message.includes('duplicate column')) throw e;
