@@ -234,4 +234,51 @@ describe('Coaching Insights Module', () => {
       expect(notification.metadata).toBeNull();
     });
   });
+
+  describe('Integration: Full Coaching Insights Flow', () => {
+    it('should generate coaching insights when task is completed', async () => {
+      // Setup: Create coach, task
+      const coachId = 2000;
+      const taskId = 100;
+
+      db.prepare(
+        'INSERT INTO users (id, email, name, role, password_hash) VALUES (?, ?, ?, ?, ?)'
+      ).run(coachId, 'integration@example.com', 'Integration Coach', 'coach', 'hash');
+
+      db.prepare(
+        'INSERT INTO tasks (id, coach_id, title, status, assigned_at, due_date, priority) VALUES (?, ?, ?, ?, ?, ?, ?)'
+      ).run(
+        taskId,
+        coachId,
+        'Integration Test Task',
+        'assigned',
+        new Date(Date.now() - 86400000).toISOString(),
+        new Date(Date.now() + 86400000).toISOString(),
+        'medium'
+      );
+
+      // Execute: Simulate task completion with coaching insights
+      const { analyzeCoachBehavior } = require('../routes/coaching-insights');
+      const coachHistory = [
+        { id: 99, title: 'Previous Task', status: 'completed', onTime: true, delayReason: null },
+      ];
+      const task = db.prepare('SELECT * FROM tasks WHERE id = ?').get(taskId);
+
+      await analyzeCoachBehavior(coachId, taskId, 'completion', coachHistory, task);
+
+      // Verify: Notification created
+      const notification = db.prepare(
+        'SELECT * FROM notifications WHERE user_id = ? AND type = ? ORDER BY created_at DESC LIMIT 1'
+      ).get(coachId, 'coaching_insights');
+
+      expect(notification).toBeDefined();
+      expect(notification.insights_status).toBe('success');
+      expect(notification.metadata).toBeDefined();
+
+      const metadata = JSON.parse(notification.metadata);
+      expect(metadata.pattern_agent).toBeDefined();
+      expect(metadata.growth_agent).toBeDefined();
+      expect(metadata.risk_agent).toBeDefined();
+    }, { timeout: 40000 }); // 40s timeout for agent calls
+  });
 });
