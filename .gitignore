@@ -42,3 +42,6 @@ yarn-debug.log*
 # Development
 .env.test
 test-tracker.db
+
+# Generated
+graphify-out/
