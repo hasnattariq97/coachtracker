@@ -119,4 +119,11 @@ try {
   if (!e.message.includes('duplicate column')) throw e;
 }
 
+try {
+  db.exec(`ALTER TABLE notifications ADD COLUMN task_title TEXT;`);
+  console.log('✓ Added task_title column to notifications');
+} catch (e) {
+  if (!e.message.includes('duplicate column')) throw e;
+}
+
 module.exports = db;
