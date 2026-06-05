@@ -1,7 +1,17 @@
 {
+  "D:\\Cursor_new\\assign-test-task.js": {
+    "mtime": 1780656008.3031838,
+    "ast_hash": "95c8c2e045a97148573f233429e8ba47",
+    "semantic_hash": ""
+  },
   "D:\\Cursor_new\\check-task.js": {
     "mtime": 1780655516.1161325,
     "ast_hash": "7ae9909a4857e62a47e5bde91fd08704",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\create-coach.js": {
+    "mtime": 1780655930.9476192,
+    "ast_hash": "fe2c751bd20bb848f876e8f0d6d5e751",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\install-ruflo-plugins.ps1": {
@@ -460,8 +470,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\tasks.js": {
-    "mtime": 1780654702.3383658,
-    "ast_hash": "5cdcdd2ab569d61d085876b67a98f108",
+    "mtime": 1780658620.4165652,
+    "ast_hash": "03781e2563c300aeadf57e5c423c70b4",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\__tests__\\coaching-insights.test.js": {
