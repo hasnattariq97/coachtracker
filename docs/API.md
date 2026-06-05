@@ -321,6 +321,57 @@ Get logged-in user's notifications, newest first.
 ]
 ```
 
+**Notification Types:**
+
+- `assigned` — New task assigned to coach
+- `midpoint_nudge` — 50% of task time elapsed
+- `overdue` — Task past due date
+- `completed` — Coach completed task (admin notification)
+- `delay_submitted` — Coach submitted delay reason (admin notification)
+- `coaching_insights` — Multi-agent analysis of coach behavior (Phase 7)
+
+**Example: coaching_insights notification**
+
+```json
+{
+  "id": 42,
+  "user_id": 2,
+  "task_id": 5,
+  "task_title": "Q2 Strategy",
+  "type": "coaching_insights",
+  "message": "Great work on deadline execution! Consider applying this approach to future complex tasks.",
+  "metadata": {
+    "pattern_agent": {
+      "summary": "You're 85% on-time — strong execution",
+      "confidence": 0.92
+    },
+    "growth_agent": {
+      "summary": "Great execution on deadline pressure",
+      "confidence": 0.88
+    },
+    "risk_agent": {
+      "summary": "No risks detected",
+      "confidence": 0.95
+    },
+    "consensus": "Keep it up!",
+    "generated_at": "2026-06-04T15:30:00Z"
+  },
+  "insights_status": "success",
+  "read": 0,
+  "created_at": "2026-06-04T15:30:00Z"
+}
+```
+
+**Coaching Insights Behavior:**
+
+- Generated asynchronously after coach completes task or submits delay reason
+- Spawns 3 agents in parallel (Pattern, Growth, Risk) for behavior analysis
+- 30-second timeout; partial results stored if any agent times out
+- `insights_status`: `success`, `partial`, or `timeout`
+- Features on-time pattern analysis, growth opportunities, and risk detection
+- Displayed as special card in notification bell with expandable details
+- Does not block task completion or delay reason submission
+
 ### PUT /api/notifications/:id/read
 Mark single notification as read.
 
