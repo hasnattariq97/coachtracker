@@ -14,7 +14,14 @@ A dual-role web application for managing coaching tasks. Admins assign tasks wit
 ```bash
 cd server
 npm install
+
+# Setup environment variables (create .env file):
+# JWT_SECRET=your-secret-key-here
+# GROQ_API_KEY=gsk_...  (get free key at https://console.groq.com, no credit card needed)
+# COACHING_INSIGHTS_ENABLED=true (optional, for Phase 7 multi-agent coaching)
+
 echo "JWT_SECRET=your-secret-key-here" > .env
+echo "GROQ_API_KEY=gsk_YOUR_KEY_HERE" >> .env
 node index.js
 ```
 Runs on http://localhost:3001
@@ -112,6 +119,7 @@ d:\Cursor_new\
 - **Midpoint nudge**: Coach notified when 50% of task time has elapsed
 - **Overdue nudge**: Coach notified and admin alerted when task is past due
 - **Coaching tone**: All messages encourage growth and accountability
+- **Multi-Agent Coaching Insights** (Phase 7): Groq API-powered 3-agent consensus swarm analyzes coach behavior patterns on task completion/delay submission. No cost, fire-and-forget, never blocks UX.
 
 ---
 
@@ -123,6 +131,7 @@ d:\Cursor_new\
 | Backend | Node.js, Express, SQLite (better-sqlite3) |
 | Auth | JWT + bcrypt |
 | Automation | node-cron (hourly nudge jobs) |
+| LLM (Phase 7) | Groq API (llama-3.3-70b-versatile) — free tier, 30 RPM, no credit card |
 
 ---
 

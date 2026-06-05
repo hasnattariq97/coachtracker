@@ -213,7 +213,7 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 - [x] Results stored as coaching_insights notifications to coach
 - [x] Can verify UI state with agent-browser in live app
 
-**Implementation:** Async fire-and-forget via Claude API. Agents call in parallel (10s timeout each, 30s total). Results stored in notifications table with structured metadata. UI renders special card with expandable details.
+**Implementation:** Async fire-and-forget via **Groq API** (free tier, no credit card). Uses llama-3.3-70b-versatile model. Agents call in parallel (10s timeout each, 30s total). Results stored in notifications table with structured metadata. UI renders special card with expandable details. **Setup:** Get free Groq key at https://console.groq.com, add `GROQ_API_KEY=gsk_...` to `server/.env`.
 
 ---
 

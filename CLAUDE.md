@@ -8,10 +8,11 @@ New to this project? Do this first:
 
 1. **Read** [@README.md](README.md) — 5 min quick start
 2. **Read** [@CLAUDE.md](CLAUDE.md) — you're here (project brain)
-3. **Skim** [@docs/ROADMAP.md](docs/ROADMAP.md) — see the phases
-4. **Run** `cd server && npm install && node index.js` — start backend on :3001
-5. **Run** `cd client && npm install && npm run dev` — start frontend on :5173
-6. **Login** with admin@tracker.com / admin123
+3. **Setup Groq API Key** — Go to https://console.groq.com, sign up (email only), copy key, paste in `server/.env` as `GROQ_API_KEY=...`
+4. **Skim** [@docs/ROADMAP.md](docs/ROADMAP.md) — see the phases
+5. **Run** `cd server && npm install && node index.js` — start backend on :3001
+6. **Run** `cd client && npm install && npm run dev` — start frontend on :5173
+7. **Login** with admin@tracker.com / admin123
 
 ## Tech Stack
 
@@ -23,6 +24,7 @@ New to this project? Do this first:
 | Auth | JWT + bcrypt (roles: 'admin' \| 'coach') |
 | Automation | node-cron (hourly nudge jobs) |
 | E2E Testing | Agent-Browser (deterministic element refs) |
+| LLM (Phase 7) | Groq API (llama-3.3-70b-versatile) — free tier, 30 RPM, no credit card |
 
 ## Code Conventions
 

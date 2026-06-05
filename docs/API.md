@@ -364,13 +364,15 @@ Get logged-in user's notifications, newest first.
 
 **Coaching Insights Behavior:**
 
-- Generated asynchronously after coach completes task or submits delay reason
+- Generated asynchronously after coach completes task or submits delay reason via **Groq API** (free tier, no credit card)
+- Uses llama-3.3-70b-versatile model from Groq
 - Spawns 3 agents in parallel (Pattern, Growth, Risk) for behavior analysis
-- 30-second timeout; partial results stored if any agent times out
+- 10 second timeout per agent, 30-second total timeout; partial results stored if any agent times out
 - `insights_status`: `success`, `partial`, or `timeout`
 - Features on-time pattern analysis, growth opportunities, and risk detection
 - Displayed as special card in notification bell with expandable details
 - Does not block task completion or delay reason submission
+- **Setup:** Set `GROQ_API_KEY=gsk_...` in `server/.env` (get free key at https://console.groq.com)
 
 ### PUT /api/notifications/:id/read
 Mark single notification as read.
