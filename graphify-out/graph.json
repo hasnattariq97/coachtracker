@@ -4,274 +4,310 @@
   "graph": {},
   "nodes": [
     {
+      "label": "check-task.js",
+      "file_type": "code",
+      "source_file": "check-task.js",
+      "source_location": "L1",
+      "id": "check_task_js",
+      "community": 143,
+      "norm_label": "check-task.js"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "check-task.js",
+      "source_location": "L1",
+      "id": "cursor_new_check_task_db",
+      "community": 143,
+      "norm_label": "db"
+    },
+    {
+      "label": "task",
+      "file_type": "code",
+      "source_file": "check-task.js",
+      "source_location": "L5",
+      "id": "cursor_new_check_task_task",
+      "community": 143,
+      "norm_label": "task"
+    },
+    {
+      "label": "links",
+      "file_type": "code",
+      "source_file": "check-task.js",
+      "source_location": "L14",
+      "id": "cursor_new_check_task_links",
+      "community": 143,
+      "norm_label": "links"
+    },
+    {
       "label": "tasks.js",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L1",
-      "id": "tasks_js",
       "community": 51,
-      "norm_label": "tasks.js"
+      "norm_label": "tasks.js",
+      "id": "tasks_js"
     },
     {
       "label": "express",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L9",
-      "id": "routes_tasks_express",
       "community": 51,
-      "norm_label": "express"
+      "norm_label": "express",
+      "id": "routes_tasks_express"
     },
     {
       "label": "router",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L10",
-      "id": "routes_tasks_router",
       "community": 51,
-      "norm_label": "router"
+      "norm_label": "router",
+      "id": "routes_tasks_router"
     },
     {
       "label": "db",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L11",
-      "id": "routes_tasks_db",
       "community": 51,
-      "norm_label": "db"
+      "norm_label": "db",
+      "id": "routes_tasks_db"
     },
     {
       "label": "{ requireAdmin, requireCoach }",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L12",
-      "id": "routes_tasks_requireadmin_requirecoach",
       "community": 51,
-      "norm_label": "{ requireadmin, requirecoach }"
+      "norm_label": "{ requireadmin, requirecoach }",
+      "id": "routes_tasks_requireadmin_requirecoach"
     },
     {
       "label": "{ queueCoachingInsights }",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L13",
-      "id": "routes_tasks_queuecoachinginsights",
       "community": 51,
-      "norm_label": "{ queuecoachinginsights }"
+      "norm_label": "{ queuecoachinginsights }",
+      "id": "routes_tasks_queuecoachinginsights"
     },
     {
       "label": "createNotification()",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L15",
-      "id": "routes_tasks_createnotification",
       "community": 51,
-      "norm_label": "createnotification()"
+      "norm_label": "createnotification()",
+      "id": "routes_tasks_createnotification"
     },
     {
       "label": "formatDueDate()",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L21",
-      "id": "routes_tasks_formatduedate",
       "community": 51,
-      "norm_label": "formatduedate()"
+      "norm_label": "formatduedate()",
+      "id": "routes_tasks_formatduedate"
     },
     {
       "label": "validateDueDate()",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L26",
-      "id": "routes_tasks_validateduedate",
       "community": 51,
-      "norm_label": "validateduedate()"
+      "norm_label": "validateduedate()",
+      "id": "routes_tasks_validateduedate"
     },
     {
       "label": "VALID_STATUSES",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L37",
-      "id": "routes_tasks_valid_statuses",
       "community": 51,
-      "norm_label": "valid_statuses"
+      "norm_label": "valid_statuses",
+      "id": "routes_tasks_valid_statuses"
     },
     {
       "label": "VALID_PRIORITIES",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L38",
-      "id": "routes_tasks_valid_priorities",
       "community": 51,
-      "norm_label": "valid_priorities"
+      "norm_label": "valid_priorities",
+      "id": "routes_tasks_valid_priorities"
     },
     {
       "label": "getTaskWithCoachName()",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L40",
-      "id": "routes_tasks_gettaskwithcoachname",
       "community": 51,
-      "norm_label": "gettaskwithcoachname()"
+      "norm_label": "gettaskwithcoachname()",
+      "id": "routes_tasks_gettaskwithcoachname"
     },
     {
       "label": "getTasksQuery()",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L60",
-      "id": "routes_tasks_gettasksquery",
       "community": 51,
-      "norm_label": "gettasksquery()"
+      "norm_label": "gettasksquery()",
+      "id": "routes_tasks_gettasksquery"
     },
     {
       "label": "params",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L92",
-      "id": "routes_tasks_params",
       "community": 51,
-      "norm_label": "params"
+      "norm_label": "params",
+      "id": "routes_tasks_params"
     },
     {
       "label": "id",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L95",
-      "id": "routes_tasks_id",
       "community": 51,
-      "norm_label": "id"
+      "norm_label": "id",
+      "id": "routes_tasks_id"
     },
     {
       "label": "tasks",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L112",
-      "id": "routes_tasks_tasks",
       "community": 51,
-      "norm_label": "tasks"
+      "norm_label": "tasks",
+      "id": "routes_tasks_tasks"
     },
     {
       "label": "task",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L137",
-      "id": "routes_tasks_task",
       "community": 51,
-      "norm_label": "task"
+      "norm_label": "task",
+      "id": "routes_tasks_task"
     },
     {
       "label": "dueDateValidation",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L178",
-      "id": "routes_tasks_duedatevalidation",
       "community": 51,
-      "norm_label": "duedatevalidation"
+      "norm_label": "duedatevalidation",
+      "id": "routes_tasks_duedatevalidation"
     },
     {
       "label": "validCoaches",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L185",
-      "id": "routes_tasks_validcoaches",
       "community": 51,
-      "norm_label": "validcoaches"
+      "norm_label": "validcoaches",
+      "id": "routes_tasks_validcoaches"
     },
     {
       "label": "parsed",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L187",
-      "id": "routes_tasks_parsed",
       "community": 51,
-      "norm_label": "parsed"
+      "norm_label": "parsed",
+      "id": "routes_tasks_parsed"
     },
     {
       "label": "coach",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L191",
-      "id": "routes_tasks_coach",
       "community": 51,
-      "norm_label": "coach"
+      "norm_label": "coach",
+      "id": "routes_tasks_coach"
     },
     {
       "label": "insertStmt",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L199",
-      "id": "routes_tasks_insertstmt",
       "community": 51,
-      "norm_label": "insertstmt"
+      "norm_label": "insertstmt",
+      "id": "routes_tasks_insertstmt"
     },
     {
       "label": "createdTasks",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L204",
-      "id": "routes_tasks_createdtasks",
       "community": 51,
-      "norm_label": "createdtasks"
+      "norm_label": "createdtasks",
+      "id": "routes_tasks_createdtasks"
     },
     {
       "label": "dueDateFormatted",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L205",
-      "id": "routes_tasks_duedateformatted",
       "community": 51,
-      "norm_label": "duedateformatted"
+      "norm_label": "duedateformatted",
+      "id": "routes_tasks_duedateformatted"
     },
     {
       "label": "result",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L211",
-      "id": "routes_tasks_result",
       "community": 51,
-      "norm_label": "result"
+      "norm_label": "result",
+      "id": "routes_tasks_result"
     },
     {
       "label": "updates",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L287",
-      "id": "routes_tasks_updates",
       "community": 51,
-      "norm_label": "updates"
+      "norm_label": "updates",
+      "id": "routes_tasks_updates"
     },
     {
       "label": "values",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L288",
-      "id": "routes_tasks_values",
       "community": 51,
-      "norm_label": "values"
+      "norm_label": "values",
+      "id": "routes_tasks_values"
     },
     {
       "label": "stmt",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L308",
-      "id": "routes_tasks_stmt",
       "community": 51,
-      "norm_label": "stmt"
+      "norm_label": "stmt",
+      "id": "routes_tasks_stmt"
     },
     {
       "label": "admin",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L367",
-      "id": "routes_tasks_admin",
       "community": 51,
-      "norm_label": "admin"
+      "norm_label": "admin",
+      "id": "routes_tasks_admin"
     },
     {
       "label": "trimmed",
       "file_type": "code",
       "source_file": "tasks.js",
       "source_location": "L404",
-      "id": "routes_tasks_trimmed",
       "community": 51,
-      "norm_label": "trimmed"
+      "norm_label": "trimmed",
+      "id": "routes_tasks_trimmed"
     },
     {
       "label": "TaskCard.jsx",
@@ -1448,7 +1484,7 @@
       "file_type": "code",
       "source_file": "server/cron.js",
       "source_location": "L78",
-      "community": 97,
+      "community": 93,
       "norm_label": "schedulejobs()",
       "id": "server_cron_schedulejobs"
     },
@@ -4697,7 +4733,7 @@
       "file_type": "document",
       "source_file": "docs/API.md",
       "source_location": "L391",
-      "community": 94,
+      "community": 75,
       "norm_label": "code:json ({)",
       "id": "docs_api_codeblock_24"
     },
@@ -10754,7 +10790,7 @@
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L1",
-      "community": 169,
+      "community": 63,
       "norm_label": "test-with-coaches-route.js",
       "id": "server_test_with_coaches_route_js"
     },
@@ -10763,7 +10799,7 @@
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L2",
-      "community": 169,
+      "community": 63,
       "norm_label": "express",
       "id": "server_test_with_coaches_route_express"
     },
@@ -10772,7 +10808,7 @@
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L3",
-      "community": 169,
+      "community": 63,
       "norm_label": "cors",
       "id": "server_test_with_coaches_route_cors"
     },
@@ -10781,7 +10817,7 @@
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L4",
-      "community": 169,
+      "community": 63,
       "norm_label": "{ authenticatetoken, requireadmin }",
       "id": "server_test_with_coaches_route_authenticatetoken_requireadmin"
     },
@@ -10790,7 +10826,7 @@
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L6",
-      "community": 169,
+      "community": 63,
       "norm_label": "app",
       "id": "server_test_with_coaches_route_app"
     },
@@ -10799,7 +10835,7 @@
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L11",
-      "community": 169,
+      "community": 63,
       "norm_label": "corsoptions",
       "id": "server_test_with_coaches_route_corsoptions"
     },
@@ -10880,7 +10916,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L1",
-      "community": 63,
+      "community": 93,
       "norm_label": "test-with-notifications-route.js",
       "id": "server_test_with_notifications_route_js"
     },
@@ -10889,7 +10925,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L2",
-      "community": 63,
+      "community": 93,
       "norm_label": "express",
       "id": "server_test_with_notifications_route_express"
     },
@@ -10898,7 +10934,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L3",
-      "community": 63,
+      "community": 93,
       "norm_label": "cors",
       "id": "server_test_with_notifications_route_cors"
     },
@@ -10907,7 +10943,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L4",
-      "community": 63,
+      "community": 93,
       "norm_label": "{ authenticatetoken, requireadmin }",
       "id": "server_test_with_notifications_route_authenticatetoken_requireadmin"
     },
@@ -10916,7 +10952,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L5",
-      "community": 63,
+      "community": 93,
       "norm_label": "{ schedulejobs }",
       "id": "server_test_with_notifications_route_schedulejobs"
     },
@@ -10925,7 +10961,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L7",
-      "community": 63,
+      "community": 93,
       "norm_label": "app",
       "id": "server_test_with_notifications_route_app"
     },
@@ -10934,7 +10970,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L12",
-      "community": 63,
+      "community": 93,
       "norm_label": "corsoptions",
       "id": "server_test_with_notifications_route_corsoptions"
     },
@@ -14867,7 +14903,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L596",
-      "community": 32,
+      "community": 150,
       "norm_label": "task 6: implement login endpoint (red)",
       "id": "plans_2026_05_17_phase1_auth_system_task_6_implement_login_endpoint_red"
     },
@@ -14876,7 +14912,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L607",
-      "community": 32,
+      "community": 150,
       "norm_label": "code:javascript (import request from 'supertest';)",
       "id": "plans_2026_05_17_phase1_auth_system_codeblock_28"
     },
@@ -14885,7 +14921,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L709",
-      "community": 32,
+      "community": 150,
       "norm_label": "code:bash (cd d:\\cursor_new\\server)",
       "id": "plans_2026_05_17_phase1_auth_system_codeblock_29"
     },
@@ -15047,7 +15083,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L1130",
-      "community": 143,
+      "community": 32,
       "norm_label": "task 11: create protectedroute component (red)",
       "id": "plans_2026_05_17_phase1_auth_system_task_11_create_protectedroute_component_red"
     },
@@ -15056,7 +15092,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L1140",
-      "community": 143,
+      "community": 32,
       "norm_label": "code:javascript (import { render, screen } from '@testing-library/react';)",
       "id": "plans_2026_05_17_phase1_auth_system_codeblock_43"
     },
@@ -15065,7 +15101,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L1226",
-      "community": 143,
+      "community": 32,
       "norm_label": "code:bash (cd d:\\cursor_new\\client)",
       "id": "plans_2026_05_17_phase1_auth_system_codeblock_44"
     },
@@ -16505,7 +16541,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L870",
-      "community": 62,
+      "community": 148,
       "norm_label": "best practices",
       "id": "claude_master_capabilities_best_practices"
     },
@@ -16514,7 +16550,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L872",
-      "community": 62,
+      "community": 148,
       "norm_label": "code conventions (language-neutral)",
       "id": "claude_master_capabilities_code_conventions_language_neutral"
     },
@@ -16523,7 +16559,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L882",
-      "community": 62,
+      "community": 148,
       "norm_label": "agent best practices",
       "id": "claude_master_capabilities_agent_best_practices"
     },
@@ -16532,7 +16568,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L892",
-      "community": 62,
+      "community": 148,
       "norm_label": "documentation best practices",
       "id": "claude_master_capabilities_documentation_best_practices"
     },
@@ -16685,7 +16721,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1133",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:bash (#!/bin/bash)",
       "id": "claude_master_capabilities_codeblock_63"
     },
@@ -16694,7 +16730,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1150",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:bash (#!/bin/bash)",
       "id": "claude_master_capabilities_codeblock_64"
     },
@@ -16721,7 +16757,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1206",
-      "community": 24,
+      "community": 156,
       "norm_label": "code:bash (# show all open work items)",
       "id": "claude_master_capabilities_codeblock_67"
     },
@@ -16730,7 +16766,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1238",
-      "community": 24,
+      "community": 156,
       "norm_label": "code:bash (# session 1: start work)",
       "id": "claude_master_capabilities_codeblock_68"
     },
@@ -16739,7 +16775,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1265",
-      "community": 148,
+      "community": 24,
       "norm_label": "claude code cli",
       "id": "claude_master_capabilities_claude_code_cli"
     },
@@ -16748,7 +16784,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1269",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:bash (# macos)",
       "id": "claude_master_capabilities_codeblock_69"
     },
@@ -16757,7 +16793,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1286",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:bash (claude-code --version)",
       "id": "claude_master_capabilities_codeblock_70"
     },
@@ -16784,7 +16820,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1306",
-      "community": 24,
+      "community": 156,
       "norm_label": "code:bash (# install from jetbrains marketplace)",
       "id": "claude_master_capabilities_codeblock_72"
     },
@@ -16793,7 +16829,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1317",
-      "community": 24,
+      "community": 156,
       "norm_label": "mcp servers (model context protocol)",
       "id": "claude_master_capabilities_mcp_servers_model_context_protocol"
     },
@@ -16802,7 +16838,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1321",
-      "community": 24,
+      "community": 156,
       "norm_label": "code:bash (# create mcp config file)",
       "id": "claude_master_capabilities_codeblock_73"
     },
@@ -16820,7 +16856,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1365",
-      "community": 148,
+      "community": 24,
       "norm_label": "custom skills & agents",
       "id": "claude_master_capabilities_custom_skills_agents"
     },
@@ -16838,7 +16874,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1386",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:markdown (---)",
       "id": "claude_master_capabilities_codeblock_76"
     },
@@ -16847,7 +16883,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1402",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:json ({)",
       "id": "claude_master_capabilities_codeblock_77"
     },
@@ -16856,7 +16892,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1416",
-      "community": 24,
+      "community": 156,
       "norm_label": "testing frameworks",
       "id": "claude_master_capabilities_testing_frameworks"
     },
@@ -16865,7 +16901,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1420",
-      "community": 24,
+      "community": 156,
       "norm_label": "code:bash (# javascript/node.js)",
       "id": "claude_master_capabilities_codeblock_78"
     },
@@ -16874,7 +16910,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1436",
-      "community": 24,
+      "community": 156,
       "norm_label": "code:bash (# jest config (package.json or jest.config.js))",
       "id": "claude_master_capabilities_codeblock_79"
     },
@@ -16910,7 +16946,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1494",
-      "community": 150,
+      "community": 62,
       "norm_label": "plugin checklist for new projects",
       "id": "claude_master_capabilities_plugin_checklist_for_new_projects"
     },
@@ -16919,7 +16955,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1496",
-      "community": 150,
+      "community": 62,
       "norm_label": "code:bash (# step 1: initialize claude code)",
       "id": "claude_master_capabilities_codeblock_82"
     },
@@ -16928,7 +16964,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1534",
-      "community": 150,
+      "community": 62,
       "norm_label": "for agents",
       "id": "claude_master_capabilities_for_agents"
     },
@@ -16937,7 +16973,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1541",
-      "community": 150,
+      "community": 62,
       "norm_label": "for projects",
       "id": "claude_master_capabilities_for_projects"
     },
@@ -16946,7 +16982,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1548",
-      "community": 150,
+      "community": 62,
       "norm_label": "for teams",
       "id": "claude_master_capabilities_for_teams"
     },
@@ -16955,7 +16991,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L922",
-      "community": 150,
+      "community": 62,
       "norm_label": "distribution & usage",
       "id": "claude_master_capabilities_distribution_usage"
     },
@@ -18905,6 +18941,36 @@
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "check-task.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "check_task_js",
+      "target": "cursor_new_check_task_db",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "check-task.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "check_task_js",
+      "target": "cursor_new_check_task_task",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "check-task.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "check_task_js",
+      "target": "cursor_new_check_task_links",
+      "confidence_score": 1.0
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -42290,5 +42356,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "bca91637dbe7a5205e1359d76787762552a81af6"
+  "built_at_commit": "0f2b71c8e0e37e9a3e6627afbb985c2ad9a3144d"
 }

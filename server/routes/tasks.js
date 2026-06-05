@@ -156,6 +156,8 @@ router.get('/:id', (req, res) => {
 router.post('/', requireAdmin, (req, res) => {
   const { coach_ids, coach_id, title, description, priority, due_date, links } = req.body;
 
+  console.log('[DEBUG] POST /api/tasks - links received:', links);
+
   // Support both single coach_id (legacy) and multiple coach_ids (new)
   const coachIdsArray = coach_ids && Array.isArray(coach_ids) ? coach_ids : (coach_id ? [coach_id] : []);
 
@@ -206,8 +208,11 @@ router.post('/', requireAdmin, (req, res) => {
     const notificationMessage = `You've got a new challenge! 🎯 '${title}' — let's make it happen by ${dueDateFormatted}.`;
 
     const linksJson = links && links.length > 0 ? JSON.stringify(links) : null;
+    console.log('[DEBUG] linksJson:', linksJson);
+    console.log('[DEBUG] typeof linksJson:', typeof linksJson);
 
     for (const coachId of validCoaches) {
+      console.log('[DEBUG] Inserting task with:', { coachId, title, priority, due_date, linksJson });
       const result = insertStmt.run(coachId, title, description || null, priority, due_date, linksJson);
       const taskId = result.lastInsertRowid;
       createdTasks.push({ id: taskId, coach_id: coachId });
