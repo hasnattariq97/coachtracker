@@ -188,17 +188,31 @@ router.post('/', requireAdmin, (req, res) => {
       createNotification(coachId, taskId, 'assigned', notificationMessage);
     }
 
-    res.json({
-      tasks: createdTasks.map(t => ({
+    // Backward compatible: single coach returns { id, ... }, multiple returns { tasks: [...] }
+    if (createdTasks.length === 1) {
+      const t = createdTasks[0];
+      res.json({
         id: t.id,
         coach_id: t.coach_id,
         title,
-        description: description || null,
+        description: description !== undefined ? description : null,
         priority,
         due_date,
         status: 'assigned'
-      }))
-    });
+      });
+    } else {
+      res.json({
+        tasks: createdTasks.map(t => ({
+          id: t.id,
+          coach_id: t.coach_id,
+          title,
+          description: description !== undefined ? description : null,
+          priority,
+          due_date,
+          status: 'assigned'
+        }))
+      });
+    }
   } catch (e) {
     console.error(e);
     res.status(500).json({ error: 'Internal server error' });

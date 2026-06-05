@@ -1,22 +1,25 @@
-const Anthropic = require('@anthropic-ai/sdk');
 const db = require('../db');
+let client = null;
 
-const client = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
-});
+// Only initialize Groq client in production or when explicitly testing
+if (process.env.NODE_ENV !== 'test' && process.env.GROQ_API_KEY) {
+  const Groq = require('groq-sdk');
+  client = new Groq({
+    apiKey: process.env.GROQ_API_KEY,
+  });
+}
 
 // Configuration
 const AGENT_TIMEOUT_MS = 10000;  // 10s per agent
 const SWARM_TIMEOUT_MS = 30000;  // 30s total
-const ANTHROPIC_MODEL = 'claude-opus-4-8';
+const GROQ_MODEL = 'llama-3.3-70b-versatile';
 
 /**
  * Main entry point: queue coaching insights analysis
  * Called asynchronously from task completion/delay-reason handlers
  */
 async function queueCoachingInsights(coachId, taskId, eventType) {
-  if (process.env.COACHING_INSIGHTS_ENABLED !== 'true') {
-    console.log('[Coaching Insights] Feature disabled, skipping analysis');
+  if (process.env.COACHING_INSIGHTS_ENABLED !== 'true' || process.env.NODE_ENV === 'test') {
     return;
   }
 
@@ -42,6 +45,10 @@ async function queueCoachingInsights(coachId, taskId, eventType) {
  * Runs asynchronously, creates notification on completion
  */
 async function analyzeCoachBehavior(coachId, taskId, eventType, coachHistory, task) {
+  if (process.env.NODE_ENV === 'test' || !client) {
+    return;
+  }
+
   const startTime = Date.now();
 
   try {
@@ -85,7 +92,7 @@ function fetchCoachHistory(coachId, limit = 10) {
 }
 
 /**
- * Call 3 agents in parallel via Claude API
+ * Call 3 agents in parallel via Groq API
  * Returns: { pattern_agent, growth_agent, risk_agent, consensus }
  */
 async function callAgentSwarm(coachHistory, task, eventType) {
@@ -139,21 +146,22 @@ Event type: ${eventType}
  */
 async function callPatternAgent(context) {
   try {
-    const message = await client.messages.create({
-      model: ANTHROPIC_MODEL,
-      max_tokens: 500,
-      system: `You are a Pattern Analysis Agent. Analyze a coach's task completion history and current event to identify patterns.
+    const systemPrompt = `You are a Pattern Analysis Agent. Analyze a coach's task completion history and current event to identify patterns.
 Focus on: on-time completion rate, delays, consistency, patterns by task type or deadline.
-Respond with 2-3 specific observations about this coach's patterns. Be concise and actionable.`,
+Respond with 2-3 specific observations about this coach's patterns. Be concise and actionable.`;
+
+    const message = await client.chat.completions.create({
+      model: GROQ_MODEL,
+      max_tokens: 500,
       messages: [
         {
           role: 'user',
-          content: `Analyze this coach's patterns:\n${context}`,
+          content: `${systemPrompt}\n\nAnalyze this coach's patterns:\n${context}`,
         },
       ],
     });
 
-    return message.content[0].type === 'text' ? message.content[0].text : null;
+    return message.choices[0]?.message?.content || null;
   } catch (error) {
     console.error('[Pattern Agent] Error:', error.message);
     return null;
@@ -165,21 +173,22 @@ Respond with 2-3 specific observations about this coach's patterns. Be concise a
  */
 async function callGrowthAgent(context) {
   try {
-    const message = await client.messages.create({
-      model: ANTHROPIC_MODEL,
-      max_tokens: 500,
-      system: `You are a Growth Coach Agent. Identify learning opportunities and professional growth from a coach's task performance.
+    const systemPrompt = `You are a Growth Coach Agent. Identify learning opportunities and professional growth from a coach's task performance.
 Focus on: strengths to leverage, skills to develop, positive momentum.
-Respond with 1-2 encouraging observations and a concrete growth opportunity. Use coaching tone (supportive, growth-focused).`,
+Respond with 1-2 encouraging observations and a concrete growth opportunity. Use coaching tone (supportive, growth-focused).`;
+
+    const message = await client.chat.completions.create({
+      model: GROQ_MODEL,
+      max_tokens: 500,
       messages: [
         {
           role: 'user',
-          content: `Identify growth opportunities for this coach:\n${context}`,
+          content: `${systemPrompt}\n\nIdentify growth opportunities for this coach:\n${context}`,
         },
       ],
     });
 
-    return message.content[0].type === 'text' ? message.content[0].text : null;
+    return message.choices[0]?.message?.content || null;
   } catch (error) {
     console.error('[Growth Agent] Error:', error.message);
     return null;
@@ -191,21 +200,22 @@ Respond with 1-2 encouraging observations and a concrete growth opportunity. Use
  */
 async function callRiskAgent(context) {
   try {
-    const message = await client.messages.create({
-      model: ANTHROPIC_MODEL,
-      max_tokens: 500,
-      system: `You are a Risk Analysis Agent. Identify risk factors and recurring blockers in a coach's task completion.
+    const systemPrompt = `You are a Risk Analysis Agent. Identify risk factors and recurring blockers in a coach's task completion.
 Focus on: recurring delay patterns, high-risk task types, external blockers, workload concerns.
-Respond with observations about risks (if any) and preventive recommendations. If no risks, say so clearly.`,
+Respond with observations about risks (if any) and preventive recommendations. If no risks, say so clearly.`;
+
+    const message = await client.chat.completions.create({
+      model: GROQ_MODEL,
+      max_tokens: 500,
       messages: [
         {
           role: 'user',
-          content: `Analyze risks and blockers for this coach:\n${context}`,
+          content: `${systemPrompt}\n\nAnalyze risks and blockers for this coach:\n${context}`,
         },
       ],
     });
 
-    return message.content[0].type === 'text' ? message.content[0].text : null;
+    return message.choices[0]?.message?.content || null;
   } catch (error) {
     console.error('[Risk Agent] Error:', error.message);
     return null;

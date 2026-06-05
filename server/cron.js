@@ -73,10 +73,22 @@ const overdueJob = () => {
   }
 };
 
+let scheduledTasks = [];
+
 const scheduleJobs = () => {
-  cron.schedule('0 * * * *', midpointNudgeJob);
-  cron.schedule('0 * * * *', overdueJob);
+  const task1 = cron.schedule('0 * * * *', midpointNudgeJob);
+  const task2 = cron.schedule('0 * * * *', overdueJob);
+
+  task1.unref?.();
+  task2.unref?.();
+
+  scheduledTasks = [task1, task2];
   console.log('✓ Cron jobs scheduled (hourly)');
 };
 
-module.exports = { scheduleJobs };
+const stopJobs = () => {
+  scheduledTasks.forEach(task => task?.stop?.());
+  scheduledTasks = [];
+};
+
+module.exports = { scheduleJobs, stopJobs };

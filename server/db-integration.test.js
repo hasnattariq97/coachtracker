@@ -7,22 +7,16 @@ describe('db.js Module Integration', () => {
   const dbPath = path.join(__dirname, 'tracker.db');
 
   beforeAll(() => {
-    if (fs.existsSync(dbPath)) {
-      fs.unlinkSync(dbPath);
-    }
-    if (fs.existsSync(dbPath + '-shm')) fs.unlinkSync(dbPath + '-shm');
-    if (fs.existsSync(dbPath + '-wal')) fs.unlinkSync(dbPath + '-wal');
-
+    // Don't delete database; just clear tables
     db = require('./db.js');
+    db.exec("DELETE FROM notifications; DELETE FROM tasks; DELETE FROM users WHERE email != 'admin@tracker.com';");
   });
 
   afterAll(() => {
-    if (db) db.close();
-    if (fs.existsSync(dbPath)) {
-      fs.unlinkSync(dbPath);
+    if (db) {
+      db.exec("DELETE FROM notifications; DELETE FROM tasks; DELETE FROM users WHERE email != 'admin@tracker.com';");
+      db.close?.();
     }
-    if (fs.existsSync(dbPath + '-shm')) fs.unlinkSync(dbPath + '-shm');
-    if (fs.existsSync(dbPath + '-wal')) fs.unlinkSync(dbPath + '-wal');
   });
 
   test('db module is a valid database instance', () => {
