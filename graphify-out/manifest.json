@@ -335,17 +335,17 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\cron.js": {
-    "mtime": 1780469427.3685038,
-    "ast_hash": "cb2f37b007fc09e7490e0baf5711917b",
+    "mtime": 1780649579.6645079,
+    "ast_hash": "7f3b4091355f030db338694cbd5ba1ec",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\db-integration.test.js": {
-    "mtime": 1779040755.0706341,
-    "ast_hash": "db5df2d8ba881a68e069b96f2fe87516",
+    "mtime": 1780650755.4520037,
+    "ast_hash": "3aa982b144d2094ae6c80d2850d86eac",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\db.js": {
-    "mtime": 1780636946.4764822,
+    "mtime": 1780650712.4743838,
     "ast_hash": "eda3a21c9dfb2187836fc5f22c56b658",
     "semantic_hash": ""
   },
@@ -365,8 +365,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\jest.config.js": {
-    "mtime": 1779040598.1933568,
-    "ast_hash": "67c77a62bb618737ebb57d4ca2d186cf",
+    "mtime": 1780649600.5697389,
+    "ast_hash": "508953d319dda126efff786b2bd101ea",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\package.json": {
@@ -392,6 +392,11 @@
   "D:\\Cursor_new\\server\\test-no-routes.js": {
     "mtime": 1780560680.7431433,
     "ast_hash": "af78e60e566b9939a393429d6af6469d",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\server\\test-setup.js": {
+    "mtime": 1780650537.775236,
+    "ast_hash": "9ce14f108a52d0190f64c2827c1f1faa",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\test-simple.js": {
@@ -440,8 +445,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\coaching-insights.js": {
-    "mtime": 1780645611.4268446,
-    "ast_hash": "04e09bfd1676390bc50f2997d37c52cb",
+    "mtime": 1780650590.7970111,
+    "ast_hash": "cc7aa7e0523bee9ccf357b0f753db6e1",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\notifications.js": {
@@ -450,8 +455,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\tasks.js": {
-    "mtime": 1780584710.275175,
-    "ast_hash": "e619f7fa482248fd77a799eb83e65d57",
+    "mtime": 1780649567.5915947,
+    "ast_hash": "2b35f52b64ad94ab6c9f78fc2798b675",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\__tests__\\coaching-insights.test.js": {

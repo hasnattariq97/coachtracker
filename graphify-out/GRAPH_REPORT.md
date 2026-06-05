@@ -1,16 +1,16 @@
 # Graph Report - Cursor_new  (2026-06-05)
 
 ## Corpus Check
-- 194 files · ~213,941 words
+- 195 files · ~214,091 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1993 nodes · 2194 edges · 160 communities (153 shown, 7 thin omitted)
+- 2098 nodes · 2314 edges · 168 communities (161 shown, 7 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c7fa47ea`
+- Built from commit: `12eaa7a3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -151,15 +151,23 @@
 - [[_COMMUNITY_Community 148|Community 148]]
 - [[_COMMUNITY_Community 149|Community 149]]
 - [[_COMMUNITY_Community 150|Community 150]]
+- [[_COMMUNITY_Community 151|Community 151]]
 - [[_COMMUNITY_Community 152|Community 152]]
 - [[_COMMUNITY_Community 153|Community 153]]
 - [[_COMMUNITY_Community 154|Community 154]]
+- [[_COMMUNITY_Community 155|Community 155]]
 - [[_COMMUNITY_Community 156|Community 156]]
 - [[_COMMUNITY_Community 157|Community 157]]
 - [[_COMMUNITY_Community 158|Community 158]]
 - [[_COMMUNITY_Community 159|Community 159]]
 - [[_COMMUNITY_Community 160|Community 160]]
 - [[_COMMUNITY_Community 161|Community 161]]
+- [[_COMMUNITY_Community 162|Community 162]]
+- [[_COMMUNITY_Community 163|Community 163]]
+- [[_COMMUNITY_Community 164|Community 164]]
+- [[_COMMUNITY_Community 165|Community 165]]
+- [[_COMMUNITY_Community 166|Community 166]]
+- [[_COMMUNITY_Community 167|Community 167]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Build Roadmap — Coach Task Tracker` - 21 edges
@@ -170,8 +178,8 @@
 6. `E2E Testing with Agent-Browser — Coach Task Tracker` - 15 edges
 7. `Phase 6 Handoff — Security Audit & Polish Complete` - 15 edges
 8. `Master Capabilities Reference` - 15 edges
-9. `Coach Task Tracker` - 14 edges
-10. `Phase 7 Design: Multi-Agent Coaching Insights` - 14 edges
+9. `Phase 7 Handoff — Multi-Agent Coaching Insights` - 14 edges
+10. `Coach Task Tracker` - 14 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `TestComponent()` --calls--> `useAuth()`  [EXTRACTED]
@@ -185,7 +193,7 @@
 - `CoachDashboard()` --calls--> `useAuth()`  [EXTRACTED]
   client/src/pages/coach/Dashboard.jsx → client/src/context/AuthContext.jsx
 
-## Communities (160 total, 7 thin omitted)
+## Communities (168 total, 7 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.17
@@ -360,8 +368,8 @@ Cohesion: 0.08
 Nodes (23): After (Solution), Before (Problem), Coach Display Row, code:block1 (Q3 Team Alignment Workshop  [MEDIUM] [Coach A]      [0/2 don), code:block2 (Q3 Team Alignment Workshop  [MEDIUM] [Coach A ○, Sarah Chen ), code:javascript (// Group tasks by unique signature: title + description + pr), code:block4 (┌─ David Lee        ○  (pending, gray)), code:javascript (const idsToDelete = Array.isArray(deleteTarget) ? deleteTarg) (+15 more)
 
 ### Community 49 - "Community 49"
-Cohesion: 0.12
-Nodes (33): analyzeCoachBehavior(), Anthropic, buildConsensus(), buildContext(), callAgentSwarm(), callGrowthAgent(), callPatternAgent(), callRiskAgent() (+25 more)
+Cohesion: 0.13
+Nodes (34): analyzeCoachBehavior(), Anthropic, buildConsensus(), buildContext(), callAgentSwarm(), callGrowthAgent(), callPatternAgent(), callRiskAgent() (+26 more)
 
 ### Community 50 - "Community 50"
 Cohesion: 0.11
@@ -392,8 +400,8 @@ Cohesion: 0.18
 Nodes (10): Agent Best Practices, Best Practices, Claude Core Capabilities, Code Conventions (Language-Neutral), Documentation Best Practices, Guarantees & Constraints, Master Capabilities Reference, Reasoning Powers (+2 more)
 
 ### Community 63 - "Community 63"
-Cohesion: 0.11
-Nodes (19): authenticateToken(), jwt, requireAdmin(), verifyToken(), app, { authenticateToken, requireAdmin }, cors, corsOptions (+11 more)
+Cohesion: 0.09
+Nodes (24): authenticateToken(), requireAdmin(), verifyToken(), app, { authenticateToken, requireAdmin }, coaches, db, express (+16 more)
 
 ### Community 64 - "Community 64"
 Cohesion: 0.29
@@ -436,8 +444,8 @@ Cohesion: 0.25
 Nodes (11): 400 Bad Request, 401 Unauthorized, 403 Forbidden, 409 Conflict, 500 Internal Server Error, code:json ({), code:json ({), code:json ({) (+3 more)
 
 ### Community 76 - "Community 76"
-Cohesion: 0.22
-Nodes (9): dependencies, @anthropic-ai/sdk, bcrypt, better-sqlite3, cors, dotenv, express, jsonwebtoken (+1 more)
+Cohesion: 0.18
+Nodes (11): dependencies, @anthropic-ai/sdk, bcrypt, better-sqlite3, cors, dotenv, express, @google/generative-ai (+3 more)
 
 ### Community 77 - "Community 77"
 Cohesion: 0.18
@@ -448,8 +456,8 @@ Cohesion: 0.29
 Nodes (7): Backend, Backend ✅ (complete), Backend ✅ (complete), Frontend, Frontend ✅ (already built and working), Frontend ✅ (already built and working), Phase 5 — Notifications System ✅
 
 ### Community 79 - "Community 79"
-Cohesion: 0.23
-Nodes (12): bcrypt, db, express, { generateToken }, isValidEmail(), normalizedEmail, router, token (+4 more)
+Cohesion: 0.21
+Nodes (13): bcrypt, db, express, { generateToken }, isValidEmail(), normalizedEmail, router, token (+5 more)
 
 ### Community 80 - "Community 80"
 Cohesion: 0.33
@@ -500,8 +508,8 @@ Cohesion: 0.25
 Nodes (8): dependencies, axios, lucide-react, react, react-dom, react-hot-toast, react-router-dom, @tailwindcss/postcss
 
 ### Community 93 - "Community 93"
-Cohesion: 0.15
-Nodes (13): createNotification(), cron, db, midpointNudgeJob(), overdueJob(), scheduleJobs(), app, { authenticateToken, requireAdmin } (+5 more)
+Cohesion: 0.12
+Nodes (14): scheduleJobs(), app, { authenticateToken, requireAdmin }, cors, corsOptions, db, express, { scheduleJobs } (+6 more)
 
 ### Community 94 - "Community 94"
 Cohesion: 0.32
@@ -512,12 +520,12 @@ Cohesion: 0.29
 Nodes (7): scripts, build, dev, lint, preview, test, test:e2e
 
 ### Community 96 - "Community 96"
-Cohesion: 0.29
-Nodes (6): app, { authenticateToken, requireAdmin }, coaches, db, express, result
+Cohesion: 0.04
+Nodes (46): Architecture, Backend Flow, Code Ready, code:block1 (Coach completes task), code:bash (# Check if coaching insights are enabled), code:bash (# 1. Start servers), code:bash (export ANTHROPIC_API_KEY="sk-ant-..."), code:bash (export COACHING_INSIGHTS_ENABLED=true) (+38 more)
 
 ### Community 97 - "Community 97"
-Cohesion: 0.29
-Nodes (6): app, { authenticateToken, requireAdmin }, cors, corsOptions, express, { scheduleJobs }
+Cohesion: 0.27
+Nodes (8): createNotification(), cron, db, midpointNudgeJob(), overdueJob(), scheduledTasks, stopJobs(), { stopJobs }
 
 ### Community 98 - "Community 98"
 Cohesion: 0.14
@@ -703,6 +711,10 @@ Nodes (6): db, express, id, notif, notifs, router
 Cohesion: 0.47
 Nodes (6): code:bash (# Step 1: Initialize Claude Code), Distribution & Usage, For Agents, For Projects, For Teams, Plugin Checklist for New Projects
 
+### Community 151 - "Community 151"
+Cohesion: 0.22
+Nodes (9): 5. Coaching-Tone Messaging Examples, code:block13 (✓ "You're 85% on-time — strong execution"), code:block14 (✓ "Great execution on deadline pressure — consider this appr), code:block15 (✓ "No risks detected — keep this momentum going"), code:block16 (✓ "Keep it up! Your deadline management is getting stronger.), Consensus Messages:, Growth Agent (Learning Opportunities):, Pattern Agent (Historical Analysis): (+1 more)
+
 ### Community 152 - "Community 152"
 Cohesion: 0.33
 Nodes (6): API Endpoints Verified, ✅ GET /api/notifications, ✅ POST /api/auth/login, ✅ POST /api/coaches, ✅ POST /api/tasks, ✅ PUT /api/tasks/{id}/complete
@@ -714,6 +726,10 @@ Nodes (6): Appendix: Test Screenshots, Screenshot 1: Login Page, Screenshot 2: A
 ### Community 154 - "Community 154"
 Cohesion: 0.33
 Nodes (6): ✅ Functionality, ✅ Monitoring, ✅ Performance, Production Readiness Assessment, ✅ Reliability, ✅ User Experience
+
+### Community 155 - "Community 155"
+Cohesion: 0.29
+Nodes (7): 3. Expandable Details Section - Confidence Scores, code:block6 (┌─────────────────────────────────────────┐), code:block7 (┌─────────────────────────────────────────┐), code:javascript (// Example 1: High confidence scores), Collapsed State (Default):, Expanded State (After clicking "Show Details"):, Test Data with Varying Confidence:
 
 ### Community 156 - "Community 156"
 Cohesion: 0.4
@@ -739,8 +755,32 @@ Nodes (4): ✅ Authentication, ✅ Authorization, ✅ Data Privacy, Security Obs
 Cohesion: 0.67
 Nodes (3): Test Approach, Test Methodology, Tools Used
 
+### Community 162 - "Community 162"
+Cohesion: 0.29
+Nodes (7): code:block17 (1. Coach clicks "Mark Complete" on task), code:block18 (Notification Bell has 5 notifications:), code:block19 (Low confidence (52-65%):), Integration Test Scenarios, Scenario 1: Coach Completes Task, Scenario 2: Multiple Notification Types, Scenario 3: Confidence Score Variations
+
+### Community 163 - "Community 163"
+Cohesion: 0.33
+Nodes (6): 2. NotificationBell Integration - type='coaching_insights' Detection, code:javascript (// In NotificationBell.jsx), code:block4 (Notification 1: type='assigned'          → Standard notifica), code:block5 (Notification 1: type='coaching_insights' → CoachingInsightCa), Example Scenarios:, Test Case: Conditional Rendering
+
+### Community 164 - "Community 164"
+Cohesion: 0.33
+Nodes (5): 4. Orange-Highlighted Growth Opportunity Section, code:html (<!-- Orange highlight with left border -->), HTML Structure:, Phase 7 Frontend - Test Examples, Tailwind Classes Used:
+
+### Community 165 - "Community 165"
+Cohesion: 0.33
+Nodes (6): Coaching-Tone Messaging, CoachingInsightCard Rendering, Expandable Details, NotificationBell Integration, Orange Growth Opportunity, Test Checklist for Frontend Features
+
+### Community 166 - "Community 166"
+Cohesion: 0.4
+Nodes (5): 1. CoachingInsightCard Component Rendering, code:json ({), code:block2 (┌─────────────────────────────────────────────────────────┐), Example Notification Data:, Visual Output:
+
+### Community 167 - "Community 167"
+Cohesion: 0.5
+Nodes (4): code:block10 (┌─────────────────────────────────┐), code:block11 (┌─────────────────────────────────┐), code:block12 (┌─────────────────────────────────┐), Visual Examples:
+
 ## Knowledge Gaps
-- **1091 isolated node(s):** `✅ Automated Testing (Vitest)`, `✅ Manual Chrome DevTools Testing`, `✅ Code Documentation`, `Functionality ✅`, `Quality ✅` (+1086 more)
+- **1150 isolated node(s):** `code:json ({)`, `code:block2 (┌─────────────────────────────────────────────────────────┐)`, `code:javascript (// In NotificationBell.jsx)`, `code:block4 (Notification 1: type='assigned'          → Standard notifica)`, `code:block5 (Notification 1: type='coaching_insights' → CoachingInsightCa)` (+1145 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -749,12 +789,12 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Master Capabilities Reference` connect `Community 62` to `Community 64`, `Community 7`, `Community 13`, `Community 145`, `Community 19`, `Community 22`, `Community 23`, `Community 150`, `Community 61`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
-- **Why does `Integrated Frameworks` connect `Community 13` to `Community 62`?**
+- **Why does `requireAdmin()` connect `Community 63` to `Community 77`, `Community 79`, `Community 51`, `Community 120`, `Community 93`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
-- **Why does `Installation & Setup` connect `Community 145` to `Community 24`, `Community 156`, `Community 148`, `Community 62`?**
+- **Why does `Available Tools` connect `Community 22` to `Community 62`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
-- **What connects `✅ Automated Testing (Vitest)`, `✅ Manual Chrome DevTools Testing`, `✅ Code Documentation` to the rest of the system?**
-  _1091 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `code:json ({)`, `code:block2 (┌─────────────────────────────────────────────────────────┐)`, `code:javascript (// In NotificationBell.jsx)` to the rest of the system?**
+  _1150 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**
