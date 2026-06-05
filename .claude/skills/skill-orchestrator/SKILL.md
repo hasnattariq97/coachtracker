@@ -1,4 +1,14 @@
-# skill-orchestrator.md — How Claude Self-Orchestrates This Project
+---
+name: skill-orchestrator
+description: How Claude self-orchestrates work on the Coach Task Tracker project
+phase: "0"
+status: "active"
+owner: "automation"
+last_updated: "2026-06-04T00:00:00Z"
+beads: []
+---
+
+# skill-orchestrator — How Claude Self-Orchestrates This Project
 
 ## Start of Every Session
 1. Read CLAUDE.md for project overview and file map

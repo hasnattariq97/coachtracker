@@ -170,12 +170,48 @@ Phased implementation checklist. Find the first unchecked task and read the rele
 
 ---
 
+## Phase 6+ — E2E Testing with Agent-Browser ✅ VERIFIED & PASSING
+
+**Feature:** Rust-based browser automation for deterministic, LLM-friendly E2E testing with element refs.
+
+### Implementation ✅ (Complete)
+- [x] Installed agent-browser v0.27.1 (`client/node_modules/agent-browser`)
+- [x] Created helper class: `client/src/__tests__/e2e/agent-browser.helper.js`
+- [x] Admin workflow tests: `client/src/__tests__/e2e/admin.workflow.test.js` (4/4 ✅)
+- [x] Coach workflow tests: `client/src/__tests__/e2e/coach.workflow.test.js` (5/5 ✅)
+- [x] Simple verification tests: `client/src/__tests__/e2e/simple.test.js` (2/2 ✅)
+- [x] Configuration: `client/agent-browser.config.js`
+- [x] npm script: `npm run test:e2e`
+- [x] Documentation: `docs/E2E-AGENT-BROWSER.md`
+- [x] Handoff guide: `docs/HANDOFF-AGENT-BROWSER.md`
+- [x] Demo/verification: `client/test-agent-browser.js` ✓ Verified
+- [x] Session summary: `docs/SESSION-SUMMARY-AGENT-BROWSER.md`
+
+### Test Results ✅
+**11/11 tests passing:**
+- Admin page navigation: 4/4 ✅
+- Coach page navigation: 5/5 ✅
+- Basic functionality: 2/2 ✅
+
+### Key Features ✅
+- Element refs (`@e1`, `@e2`) — stable, deterministic
+- Accessibility tree snapshots — structured text output
+- Screenshot capture — PNG screenshots working
+- Page navigation — all routes accessible
+- Standalone CLI — works outside Claude Code
+- CI/CD ready — perfect for GitHub Actions pipelines
+
+**Status:** 11/11 tests passing, ready for Phase 7 integration
+
+---
+
 ## Phase 7 — Multi-Agent Coaching Insights (Deferred/Optional)
 When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm analyzes:
 - [ ] Pattern Agent: compares to historical coach data
 - [ ] Growth Agent: identifies learning opportunities  
 - [ ] Risk Agent: flags recurring delays or blockers
 - [ ] Results stored as coaching_insights notifications to coach
+- [ ] Can verify UI state with agent-browser in live app
 
 ---
 
@@ -191,11 +227,13 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 | 4 | Coach Dashboard | ✅ Complete | — |
 | 5 | Notifications | ✅ Complete | 8/8 |
 | 6 | Security Audit | ✅ Complete | 33/33 |
+| 6+ | Agent-Browser E2E Testing | ✅ Complete | ✅ Verified |
 | 7 | Multi-Agent Insights | ⏳ Deferred | — |
 
 **Total Tests Passing:** 64+ (including 33 Phase 6 security tests)  
+**E2E Testing:** Agent-browser integration complete and verified  
 **Security Findings:** 11/11 resolved (0 critical, 0 active bypasses)
-**Features Complete:** 7/7 (plus Phase 3+ multi-coach enhancement)
+**Features Complete:** 8/8 (plus Phase 3+ multi-coach, Phase 6+ E2E testing)
 
 ---
 
@@ -210,6 +248,7 @@ cd client && npm run dev &            # Frontend on :5173
 ### Run Tests
 ```bash
 cd server && NODE_ENV=test npm test   # 64+ tests pass
+cd client && npm run test:e2e         # E2E tests with agent-browser
 ```
 
 ### Login Credentials
@@ -220,6 +259,9 @@ cd server && NODE_ENV=test npm test   # 64+ tests pass
 
 ## Handoff & Documentation
 - **Comprehensive Handoff:** [@docs/HANDOFF.md](HANDOFF.md)
+- **Agent-Browser E2E Testing:** [@docs/HANDOFF-AGENT-BROWSER.md](HANDOFF-AGENT-BROWSER.md)
+- **E2E Testing Guide:** [@docs/E2E-AGENT-BROWSER.md](E2E-AGENT-BROWSER.md)
+- **E2E Test Coverage & Roadmap:** [@docs/E2E-TEST-COVERAGE.md](E2E-TEST-COVERAGE.md) ← Current: 11/11 passing
 - **Development Workflow:** [@docs/CONTRIBUTING.md](CONTRIBUTING.md)
 - **API Endpoints:** [@docs/API.md](API.md)
 - **Architecture Decisions:** [@docs/ARCHITECTURE.md](ARCHITECTURE.md)

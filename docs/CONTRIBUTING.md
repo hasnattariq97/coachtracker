@@ -137,6 +137,8 @@ Additional frontend conventions:
 - Empty states with coaching-tone copy
 
 ### Testing (Superpowers: RED-GREEN-REFACTOR)
+
+**Unit & Integration Tests:**
 - **RED:** Write failing test first (specify what should happen)
 - **GREEN:** Write minimal code to pass test
 - **REFACTOR:** Improve code without breaking tests
@@ -145,6 +147,13 @@ Additional frontend conventions:
 - Use real SQLite in-memory DB (not mocks)
 - Target 80%+ coverage for critical paths (auth, notifications, tasks)
 - See [@.claude/skills/skill-testing/SKILL.md](../.claude/skills/skill-testing/SKILL.md) for patterns
+
+**End-to-End Testing (Agent-Browser):**
+- Use agent-browser for E2E tests with deterministic element refs (`@e1`, `@e2`)
+- Test complete workflows: admin assigns → coach notified → coach completes → admin notified
+- Run: `npm run test:e2e` (both backend and frontend must be running)
+- See [@docs/E2E-AGENT-BROWSER.md](E2E-AGENT-BROWSER.md) for complete guide
+- Perfect for CI/CD pipelines and multi-agent testing (Phase 7+)
 
 ## Coaching Tone
 
