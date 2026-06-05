@@ -4,40 +4,445 @@
   "graph": {},
   "nodes": [
     {
+      "label": "TaskDetailSlideOver.jsx",
+      "file_type": "code",
+      "source_file": "client/src/components/TaskDetailSlideOver.jsx",
+      "source_location": "L1",
+      "id": "client_src_components_taskdetailslideover_jsx",
+      "community": 44,
+      "norm_label": "taskdetailslideover.jsx"
+    },
+    {
+      "label": "Field()",
+      "file_type": "code",
+      "source_file": "client/src/components/TaskDetailSlideOver.jsx",
+      "source_location": "L6",
+      "id": "components_taskdetailslideover_field",
+      "community": 44,
+      "norm_label": "field()"
+    },
+    {
+      "label": "TaskDetailSlideOver()",
+      "file_type": "code",
+      "source_file": "client/src/components/TaskDetailSlideOver.jsx",
+      "source_location": "L18",
+      "id": "components_taskdetailslideover_taskdetailslideover",
+      "community": 44,
+      "norm_label": "taskdetailslideover()"
+    },
+    {
+      "label": "AssignTask.jsx",
+      "file_type": "code",
+      "source_file": "client/src/pages/admin/AssignTask.jsx",
+      "source_location": "L1",
+      "id": "client_src_pages_admin_assigntask_jsx",
+      "community": 44,
+      "norm_label": "assigntask.jsx"
+    },
+    {
+      "label": "AssignTask()",
+      "file_type": "code",
+      "source_file": "client/src/pages/admin/AssignTask.jsx",
+      "source_location": "L9",
+      "id": "admin_assigntask_assigntask",
+      "community": 44,
+      "norm_label": "assigntask()"
+    },
+    {
+      "label": "db.js",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L1",
+      "id": "server_db_js",
+      "community": 146,
+      "norm_label": "db.js"
+    },
+    {
+      "label": "Database",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L1",
+      "id": "server_db_database",
+      "community": 146,
+      "norm_label": "database"
+    },
+    {
+      "label": "bcrypt",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L2",
+      "id": "server_db_bcrypt",
+      "community": 146,
+      "norm_label": "bcrypt"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L3",
+      "id": "server_db_path",
+      "community": 146,
+      "norm_label": "path"
+    },
+    {
+      "label": "dbPath",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L5",
+      "id": "server_db_dbpath",
+      "community": 146,
+      "norm_label": "dbpath"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L6",
+      "id": "server_db_db",
+      "community": 146,
+      "norm_label": "db"
+    },
+    {
+      "label": "adminExists",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L48",
+      "id": "server_db_adminexists",
+      "community": 146,
+      "norm_label": "adminexists"
+    },
+    {
+      "label": "hashedPassword",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L72",
+      "id": "server_db_hashedpassword",
+      "community": 146,
+      "norm_label": "hashedpassword"
+    },
+    {
+      "label": "cols",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L81",
+      "id": "server_db_cols",
+      "community": 146,
+      "norm_label": "cols"
+    },
+    {
+      "label": "constraintExists",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L89",
+      "id": "server_db_constraintexists",
+      "community": 146,
+      "norm_label": "constraintexists"
+    },
+    {
+      "label": "tasks.js",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L1",
+      "id": "server_routes_tasks_js",
+      "community": 51,
+      "norm_label": "tasks.js"
+    },
+    {
+      "label": "express",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L9",
+      "id": "routes_tasks_express",
+      "community": 51,
+      "norm_label": "express"
+    },
+    {
+      "label": "router",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L10",
+      "id": "routes_tasks_router",
+      "community": 51,
+      "norm_label": "router"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L11",
+      "id": "routes_tasks_db",
+      "community": 51,
+      "norm_label": "db"
+    },
+    {
+      "label": "{ requireAdmin, requireCoach }",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L12",
+      "id": "routes_tasks_requireadmin_requirecoach",
+      "community": 51,
+      "norm_label": "{ requireadmin, requirecoach }"
+    },
+    {
+      "label": "{ queueCoachingInsights }",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L13",
+      "id": "routes_tasks_queuecoachinginsights",
+      "community": 51,
+      "norm_label": "{ queuecoachinginsights }"
+    },
+    {
+      "label": "createNotification()",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L15",
+      "id": "routes_tasks_createnotification",
+      "community": 51,
+      "norm_label": "createnotification()"
+    },
+    {
+      "label": "formatDueDate()",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L21",
+      "id": "routes_tasks_formatduedate",
+      "community": 51,
+      "norm_label": "formatduedate()"
+    },
+    {
+      "label": "validateDueDate()",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L26",
+      "id": "routes_tasks_validateduedate",
+      "community": 51,
+      "norm_label": "validateduedate()"
+    },
+    {
+      "label": "VALID_STATUSES",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L37",
+      "id": "routes_tasks_valid_statuses",
+      "community": 51,
+      "norm_label": "valid_statuses"
+    },
+    {
+      "label": "VALID_PRIORITIES",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L38",
+      "id": "routes_tasks_valid_priorities",
+      "community": 51,
+      "norm_label": "valid_priorities"
+    },
+    {
+      "label": "getTaskWithCoachName()",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L40",
+      "id": "routes_tasks_gettaskwithcoachname",
+      "community": 51,
+      "norm_label": "gettaskwithcoachname()"
+    },
+    {
+      "label": "getTasksQuery()",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L55",
+      "id": "routes_tasks_gettasksquery",
+      "community": 51,
+      "norm_label": "gettasksquery()"
+    },
+    {
+      "label": "params",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L77",
+      "id": "routes_tasks_params",
+      "community": 51,
+      "norm_label": "params"
+    },
+    {
+      "label": "id",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L80",
+      "id": "routes_tasks_id",
+      "community": 51,
+      "norm_label": "id"
+    },
+    {
+      "label": "tasks",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L97",
+      "id": "routes_tasks_tasks",
+      "community": 51,
+      "norm_label": "tasks"
+    },
+    {
+      "label": "task",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L122",
+      "id": "routes_tasks_task",
+      "community": 51,
+      "norm_label": "task"
+    },
+    {
+      "label": "dueDateValidation",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L163",
+      "id": "routes_tasks_duedatevalidation",
+      "community": 51,
+      "norm_label": "duedatevalidation"
+    },
+    {
+      "label": "validCoaches",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L170",
+      "id": "routes_tasks_validcoaches",
+      "community": 51,
+      "norm_label": "validcoaches"
+    },
+    {
+      "label": "parsed",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L172",
+      "id": "routes_tasks_parsed",
+      "community": 51,
+      "norm_label": "parsed"
+    },
+    {
+      "label": "coach",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L176",
+      "id": "routes_tasks_coach",
+      "community": 51,
+      "norm_label": "coach"
+    },
+    {
+      "label": "insertStmt",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L184",
+      "id": "routes_tasks_insertstmt",
+      "community": 51,
+      "norm_label": "insertstmt"
+    },
+    {
+      "label": "createdTasks",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L189",
+      "id": "routes_tasks_createdtasks",
+      "community": 51,
+      "norm_label": "createdtasks"
+    },
+    {
+      "label": "dueDateFormatted",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L190",
+      "id": "routes_tasks_duedateformatted",
+      "community": 51,
+      "norm_label": "duedateformatted"
+    },
+    {
+      "label": "result",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L196",
+      "id": "routes_tasks_result",
+      "community": 51,
+      "norm_label": "result"
+    },
+    {
+      "label": "updates",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L272",
+      "id": "routes_tasks_updates",
+      "community": 51,
+      "norm_label": "updates"
+    },
+    {
+      "label": "values",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L273",
+      "id": "routes_tasks_values",
+      "community": 51,
+      "norm_label": "values"
+    },
+    {
+      "label": "stmt",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L293",
+      "id": "routes_tasks_stmt",
+      "community": 51,
+      "norm_label": "stmt"
+    },
+    {
+      "label": "admin",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L352",
+      "id": "routes_tasks_admin",
+      "community": 51,
+      "norm_label": "admin"
+    },
+    {
+      "label": "trimmed",
+      "file_type": "code",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L389",
+      "id": "routes_tasks_trimmed",
+      "community": 51,
+      "norm_label": "trimmed"
+    },
+    {
       "label": "CoachesPage.jsx",
       "file_type": "code",
       "source_file": "CoachesPage.jsx",
       "source_location": "L1",
-      "id": "coachespage_jsx",
       "community": 44,
-      "norm_label": "coachespage.jsx"
+      "norm_label": "coachespage.jsx",
+      "id": "coachespage_jsx"
     },
     {
       "label": "CoachForm()",
       "file_type": "code",
       "source_file": "CoachesPage.jsx",
       "source_location": "L11",
-      "id": "admin_coachespage_coachform",
       "community": 44,
-      "norm_label": "coachform()"
+      "norm_label": "coachform()",
+      "id": "admin_coachespage_coachform"
     },
     {
       "label": "CoachCard()",
       "file_type": "code",
       "source_file": "CoachesPage.jsx",
       "source_location": "L44",
-      "id": "admin_coachespage_coachcard",
       "community": 44,
-      "norm_label": "coachcard()"
+      "norm_label": "coachcard()",
+      "id": "admin_coachespage_coachcard"
     },
     {
       "label": "CoachesPage()",
       "file_type": "code",
       "source_file": "CoachesPage.jsx",
       "source_location": "L115",
-      "id": "admin_coachespage_coachespage",
       "community": 44,
-      "norm_label": "coachespage()"
+      "norm_label": "coachespage()",
+      "id": "admin_coachespage_coachespage"
     },
     {
       "label": "CoachingInsightCard.jsx",
@@ -1568,276 +1973,6 @@
       "community": 49,
       "norm_label": "createcoachinginsightnotification()",
       "id": "routes_coaching_insights_createcoachinginsightnotification"
-    },
-    {
-      "label": "tasks.js",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L1",
-      "community": 51,
-      "norm_label": "tasks.js",
-      "id": "server_routes_tasks_js"
-    },
-    {
-      "label": "express",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L9",
-      "community": 51,
-      "norm_label": "express",
-      "id": "routes_tasks_express"
-    },
-    {
-      "label": "router",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L10",
-      "community": 51,
-      "norm_label": "router",
-      "id": "routes_tasks_router"
-    },
-    {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L11",
-      "community": 51,
-      "norm_label": "db",
-      "id": "routes_tasks_db"
-    },
-    {
-      "label": "{ requireAdmin, requireCoach }",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L12",
-      "community": 51,
-      "norm_label": "{ requireadmin, requirecoach }",
-      "id": "routes_tasks_requireadmin_requirecoach"
-    },
-    {
-      "label": "{ queueCoachingInsights }",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L13",
-      "community": 51,
-      "norm_label": "{ queuecoachinginsights }",
-      "id": "routes_tasks_queuecoachinginsights"
-    },
-    {
-      "label": "createNotification()",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L15",
-      "community": 51,
-      "norm_label": "createnotification()",
-      "id": "routes_tasks_createnotification"
-    },
-    {
-      "label": "formatDueDate()",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L21",
-      "community": 51,
-      "norm_label": "formatduedate()",
-      "id": "routes_tasks_formatduedate"
-    },
-    {
-      "label": "validateDueDate()",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L26",
-      "community": 51,
-      "norm_label": "validateduedate()",
-      "id": "routes_tasks_validateduedate"
-    },
-    {
-      "label": "VALID_STATUSES",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L37",
-      "community": 51,
-      "norm_label": "valid_statuses",
-      "id": "routes_tasks_valid_statuses"
-    },
-    {
-      "label": "VALID_PRIORITIES",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L38",
-      "community": 51,
-      "norm_label": "valid_priorities",
-      "id": "routes_tasks_valid_priorities"
-    },
-    {
-      "label": "getTaskWithCoachName()",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L40",
-      "community": 51,
-      "norm_label": "gettaskwithcoachname()",
-      "id": "routes_tasks_gettaskwithcoachname"
-    },
-    {
-      "label": "getTasksQuery()",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L50",
-      "community": 51,
-      "norm_label": "gettasksquery()",
-      "id": "routes_tasks_gettasksquery"
-    },
-    {
-      "label": "params",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L68",
-      "community": 51,
-      "norm_label": "params",
-      "id": "routes_tasks_params"
-    },
-    {
-      "label": "id",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L71",
-      "community": 51,
-      "norm_label": "id",
-      "id": "routes_tasks_id"
-    },
-    {
-      "label": "tasks",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L88",
-      "community": 51,
-      "norm_label": "tasks",
-      "id": "routes_tasks_tasks"
-    },
-    {
-      "label": "task",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L113",
-      "community": 51,
-      "norm_label": "task",
-      "id": "routes_tasks_task"
-    },
-    {
-      "label": "dueDateValidation",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L154",
-      "community": 51,
-      "norm_label": "duedatevalidation",
-      "id": "routes_tasks_duedatevalidation"
-    },
-    {
-      "label": "validCoaches",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L161",
-      "community": 51,
-      "norm_label": "validcoaches",
-      "id": "routes_tasks_validcoaches"
-    },
-    {
-      "label": "parsed",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L163",
-      "community": 51,
-      "norm_label": "parsed",
-      "id": "routes_tasks_parsed"
-    },
-    {
-      "label": "coach",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L167",
-      "community": 51,
-      "norm_label": "coach",
-      "id": "routes_tasks_coach"
-    },
-    {
-      "label": "insertStmt",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L175",
-      "community": 51,
-      "norm_label": "insertstmt",
-      "id": "routes_tasks_insertstmt"
-    },
-    {
-      "label": "createdTasks",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L180",
-      "community": 51,
-      "norm_label": "createdtasks",
-      "id": "routes_tasks_createdtasks"
-    },
-    {
-      "label": "dueDateFormatted",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L181",
-      "community": 51,
-      "norm_label": "duedateformatted",
-      "id": "routes_tasks_duedateformatted"
-    },
-    {
-      "label": "result",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L185",
-      "community": 51,
-      "norm_label": "result",
-      "id": "routes_tasks_result"
-    },
-    {
-      "label": "updates",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L259",
-      "community": 51,
-      "norm_label": "updates",
-      "id": "routes_tasks_updates"
-    },
-    {
-      "label": "values",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L260",
-      "community": 51,
-      "norm_label": "values",
-      "id": "routes_tasks_values"
-    },
-    {
-      "label": "stmt",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L280",
-      "community": 51,
-      "norm_label": "stmt",
-      "id": "routes_tasks_stmt"
-    },
-    {
-      "label": "admin",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L339",
-      "community": 51,
-      "norm_label": "admin",
-      "id": "routes_tasks_admin"
-    },
-    {
-      "label": "trimmed",
-      "file_type": "code",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L376",
-      "community": 51,
-      "norm_label": "trimmed",
-      "id": "routes_tasks_trimmed"
     },
     {
       "label": "test-setup.js",
@@ -8824,87 +8959,6 @@
       "id": "db_js"
     },
     {
-      "label": "Database",
-      "file_type": "code",
-      "source_file": "db.js",
-      "source_location": "L1",
-      "community": 146,
-      "norm_label": "database",
-      "id": "server_db_database"
-    },
-    {
-      "label": "bcrypt",
-      "file_type": "code",
-      "source_file": "db.js",
-      "source_location": "L2",
-      "community": 146,
-      "norm_label": "bcrypt",
-      "id": "server_db_bcrypt"
-    },
-    {
-      "label": "path",
-      "file_type": "code",
-      "source_file": "db.js",
-      "source_location": "L3",
-      "community": 146,
-      "norm_label": "path",
-      "id": "server_db_path"
-    },
-    {
-      "label": "dbPath",
-      "file_type": "code",
-      "source_file": "db.js",
-      "source_location": "L5",
-      "community": 146,
-      "norm_label": "dbpath",
-      "id": "server_db_dbpath"
-    },
-    {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "db.js",
-      "source_location": "L6",
-      "community": 146,
-      "norm_label": "db",
-      "id": "server_db_db"
-    },
-    {
-      "label": "adminExists",
-      "file_type": "code",
-      "source_file": "db.js",
-      "source_location": "L48",
-      "community": 146,
-      "norm_label": "adminexists",
-      "id": "server_db_adminexists"
-    },
-    {
-      "label": "hashedPassword",
-      "file_type": "code",
-      "source_file": "db.js",
-      "source_location": "L72",
-      "community": 146,
-      "norm_label": "hashedpassword",
-      "id": "server_db_hashedpassword"
-    },
-    {
-      "label": "cols",
-      "file_type": "code",
-      "source_file": "db.js",
-      "source_location": "L81",
-      "community": 146,
-      "norm_label": "cols",
-      "id": "server_db_cols"
-    },
-    {
-      "label": "constraintExists",
-      "file_type": "code",
-      "source_file": "db.js",
-      "source_location": "L89",
-      "community": 146,
-      "norm_label": "constraintexists",
-      "id": "server_db_constraintexists"
-    },
-    {
       "label": "package.json",
       "file_type": "code",
       "source_file": "package.json",
@@ -8993,24 +9047,6 @@
       "community": 44,
       "norm_label": "taskdetailslideover.jsx",
       "id": "components_taskdetailslideover_jsx"
-    },
-    {
-      "label": "Field()",
-      "file_type": "code",
-      "source_file": "components/TaskDetailSlideOver.jsx",
-      "source_location": "L6",
-      "community": 44,
-      "norm_label": "field()",
-      "id": "components_taskdetailslideover_field"
-    },
-    {
-      "label": "TaskDetailSlideOver()",
-      "file_type": "code",
-      "source_file": "components/TaskDetailSlideOver.jsx",
-      "source_location": "L18",
-      "community": 44,
-      "norm_label": "taskdetailslideover()",
-      "id": "components_taskdetailslideover_taskdetailslideover"
     },
     {
       "label": "TaskBoard.jsx",
@@ -9200,15 +9236,6 @@
       "community": 74,
       "norm_label": "questions?",
       "id": "cursor_new_quick_fix_questions"
-    },
-    {
-      "label": "TaskDetailSlideOver.jsx",
-      "file_type": "code",
-      "source_file": "client/src/components/TaskDetailSlideOver.jsx",
-      "source_location": "L1",
-      "community": 44,
-      "norm_label": "taskdetailslideover.jsx",
-      "id": "client_src_components_taskdetailslideover_jsx"
     },
     {
       "label": "TaskBoard.jsx",
@@ -11387,24 +11414,6 @@
       "community": 72,
       "norm_label": "verification checklist",
       "id": "docs_handoff_multi_coach_verification_checklist"
-    },
-    {
-      "label": "AssignTask.jsx",
-      "file_type": "code",
-      "source_file": "client/src/pages/admin/AssignTask.jsx",
-      "source_location": "L1",
-      "community": 44,
-      "norm_label": "assigntask.jsx",
-      "id": "client_src_pages_admin_assigntask_jsx"
-    },
-    {
-      "label": "AssignTask()",
-      "file_type": "code",
-      "source_file": "client/src/pages/admin/AssignTask.jsx",
-      "source_location": "L9",
-      "community": 44,
-      "norm_label": "assigntask()",
-      "id": "admin_assigntask_assigntask"
     },
     {
       "label": "PHASE6-HANDOFF.md",
@@ -13844,15 +13853,6 @@
       "community": 65,
       "norm_label": "notifs",
       "id": "security_phase6_validation_test_notifs"
-    },
-    {
-      "label": "db.js",
-      "file_type": "code",
-      "source_file": "server/db.js",
-      "source_location": "L1",
-      "community": 146,
-      "norm_label": "db.js",
-      "id": "server_db_js"
     },
     {
       "label": "notifications.js",
@@ -18897,15 +18897,1034 @@
   ],
   "links": [
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/TaskDetailSlideOver.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_components_taskdetailslideover_jsx",
+      "target": "components_taskdetailslideover_field"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/TaskDetailSlideOver.jsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_components_taskdetailslideover_jsx",
+      "target": "components_taskdetailslideover_taskdetailslideover"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/pages/admin/TaskBoard.jsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_pages_admin_taskboard_jsx",
+      "target": "client_src_components_taskdetailslideover_jsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/TaskDetailSlideOver.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_components_taskdetailslideover_jsx",
+      "target": "client_src_components_ui_badge_jsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/TaskDetailSlideOver.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_components_taskdetailslideover_jsx",
+      "target": "client_src_components_ui_button_jsx"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/TaskDetailSlideOver.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_taskdetailslideover_jsx",
+      "target": "components_taskdetailslideover_field"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/TaskDetailSlideOver.jsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_taskdetailslideover_jsx",
+      "target": "components_taskdetailslideover_taskdetailslideover"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/pages/admin/AssignTask.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_pages_admin_assigntask_jsx",
+      "target": "admin_assigntask_assigntask"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/pages/admin/AssignTask.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_pages_admin_assigntask_jsx",
+      "target": "client_src_components_ui_button_jsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/pages/admin/AssignTask.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_pages_admin_assigntask_jsx",
+      "target": "client_src_components_ui_card_jsx"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_database"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_bcrypt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_path"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_dbpath"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_adminexists"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_hashedpassword"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L81",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_cols"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L89",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_constraintexists"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "server_db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/cron.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_cron_js",
+      "target": "server_db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_index_js",
+      "target": "server_db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/coaches.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_coaches_js",
+      "target": "server_db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/routes/notifications.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_tests_routes_notifications_test_js",
+      "target": "server_db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/routes/tasks.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_tests_routes_tasks_test_js",
+      "target": "server_db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/security/phase6-validation.test.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_tests_security_phase6_validation_test_js",
+      "target": "server_db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/notifications.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_notifications_js",
+      "target": "server_db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/auth.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_auth_js",
+      "target": "server_db_js"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_database"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_bcrypt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_path"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_dbpath"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_adminexists"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_hashedpassword"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L81",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_cols"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L89",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_constraintexists"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_express"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_router"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_db"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "server_auth_requireadmin"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "server_auth_requirecoach"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_requireadmin_requirecoach"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_coaching_insights_queuecoachinginsights"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_queuecoachinginsights"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_createnotification"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_formatduedate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_validateduedate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_valid_statuses"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_valid_priorities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_gettaskwithcoachname"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_gettasksquery"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_params"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L323",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_id"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L97",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_tasks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L348",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_task"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L212",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_duedatevalidation"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L160",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_validcoaches"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L162",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_parsed"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L365",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_coach"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L174",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_insertstmt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L179",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_createdtasks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L168",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_duedateformatted"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L165",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_result"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L224",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_updates"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L225",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_values"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L297",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_stmt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L363",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_admin"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L338",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "routes_tasks_trimmed"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "server_routes_coaching_insights_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/routes/tasks.test.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_tests_routes_tasks_test_js",
+      "target": "server_routes_tasks_js"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_express"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_router"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_requireadmin_requirecoach"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_queuecoachinginsights"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_createnotification"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_formatduedate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_validateduedate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_valid_statuses"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_valid_priorities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_gettaskwithcoachname"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_gettasksquery"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L68",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_params"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L347",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_id"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L98",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_tasks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L372",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_task"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L233",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_duedatevalidation"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L161",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_validcoaches"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L163",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_parsed"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L389",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_coach"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L175",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_insertstmt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L180",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_createdtasks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L181",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_duedateformatted"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L185",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_result"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L245",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_updates"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L246",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_values"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L318",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_stmt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L387",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_admin"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tasks.js",
+      "source_location": "L362",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tasks_js",
+      "target": "routes_tasks_trimmed"
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "CoachesPage.jsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "coachespage_jsx",
-      "target": "ui_skeleton_cardskeleton",
-      "confidence_score": 1.0
+      "target": "ui_skeleton_cardskeleton"
     },
     {
       "relation": "contains",
@@ -18913,9 +19932,9 @@
       "source_file": "CoachesPage.jsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "coachespage_jsx",
-      "target": "admin_coachespage_coachform",
-      "confidence_score": 1.0
+      "target": "admin_coachespage_coachform"
     },
     {
       "relation": "contains",
@@ -18923,9 +19942,9 @@
       "source_file": "CoachesPage.jsx",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "coachespage_jsx",
-      "target": "admin_coachespage_coachcard",
-      "confidence_score": 1.0
+      "target": "admin_coachespage_coachcard"
     },
     {
       "relation": "contains",
@@ -18933,9 +19952,9 @@
       "source_file": "CoachesPage.jsx",
       "source_location": "L115",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "coachespage_jsx",
-      "target": "admin_coachespage_coachespage",
-      "confidence_score": 1.0
+      "target": "admin_coachespage_coachespage"
     },
     {
       "relation": "contains",
@@ -20030,17 +21049,6 @@
       "target": "server_cron_js"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/cron.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_cron_js",
-      "target": "server_db_js"
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -20797,17 +21805,6 @@
       "target": "routes_coaching_insights_createcoachinginsightnotification"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "server_routes_coaching_insights_js"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "routes/coaching-insights.js",
@@ -20837,17 +21834,6 @@
       "confidence_score": 1.0,
       "source": "routes_coaching_insights_queuecoachinginsights",
       "target": "routes_coaching_insights_fetchcoachhistory"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_coaching_insights_queuecoachinginsights"
     },
     {
       "relation": "imports",
@@ -21306,630 +22292,6 @@
       "confidence_score": 1.0,
       "source": "coaching_insights_js",
       "target": "routes_coaching_insights_createcoachinginsightnotification"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_express"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_router"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_db"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "server_auth_requireadmin"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "server_auth_requirecoach"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_requireadmin_requirecoach"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_queuecoachinginsights"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_createnotification"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_formatduedate"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_validateduedate"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L36",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_valid_statuses"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L37",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_valid_priorities"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_gettaskwithcoachname"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L49",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_gettasksquery"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L67",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_params"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L323",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_id"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L97",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_tasks"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L348",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_task"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L212",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_duedatevalidation"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L160",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_validcoaches"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L162",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_parsed"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L365",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_coach"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L174",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_insertstmt"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L179",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_createdtasks"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L168",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_duedateformatted"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L165",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_result"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L224",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_updates"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L225",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_values"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L297",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_stmt"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L363",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_admin"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L338",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "routes_tasks_trimmed"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/__tests__/routes/tasks.test.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_tests_routes_tasks_test_js",
-      "target": "server_routes_tasks_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "server_db_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_express"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_router"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_db"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_requireadmin_requirecoach"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_queuecoachinginsights"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_createnotification"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_formatduedate"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L26",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_validateduedate"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L37",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_valid_statuses"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L38",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_valid_priorities"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L40",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_gettaskwithcoachname"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L50",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_gettasksquery"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L68",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_params"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L347",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_id"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L98",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_tasks"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L372",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_task"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L233",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_duedatevalidation"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L161",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_validcoaches"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L163",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_parsed"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L389",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_coach"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L175",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_insertstmt"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L180",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_createdtasks"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L181",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_duedateformatted"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L185",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_result"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L245",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_updates"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L246",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_values"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L318",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_stmt"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L387",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_admin"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tasks.js",
-      "source_location": "L362",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tasks_js",
-      "target": "routes_tasks_trimmed"
     },
     {
       "relation": "contains",
@@ -29949,186 +30311,6 @@
       "target": "db_js"
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_database"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_bcrypt"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_path"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_dbpath"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_db"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L47",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_adminexists"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L71",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_hashedpassword"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L81",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_cols"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L89",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_constraintexists"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db_js",
-      "target": "server_db_database"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db_js",
-      "target": "server_db_bcrypt"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db_js",
-      "target": "server_db_path"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db_js",
-      "target": "server_db_dbpath"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db_js",
-      "target": "server_db_db"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L46",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db_js",
-      "target": "server_db_adminexists"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L48",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db_js",
-      "target": "server_db_hashedpassword"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L81",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db_js",
-      "target": "server_db_cols"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L89",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db_js",
-      "target": "server_db_constraintexists"
-    },
-    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -30262,26 +30444,6 @@
       "target": "admin_taskboard_taskboard"
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "components/TaskDetailSlideOver.jsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "components_taskdetailslideover_jsx",
-      "target": "components_taskdetailslideover_field"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "components/TaskDetailSlideOver.jsx",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "components_taskdetailslideover_jsx",
-      "target": "components_taskdetailslideover_taskdetailslideover"
-    },
-    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -30291,26 +30453,6 @@
       "confidence_score": 1.0,
       "source": "pages_admin_taskboard_jsx",
       "target": "components_taskdetailslideover_jsx"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/components/TaskDetailSlideOver.jsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_components_taskdetailslideover_jsx",
-      "target": "components_taskdetailslideover_field"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/components/TaskDetailSlideOver.jsx",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_components_taskdetailslideover_jsx",
-      "target": "components_taskdetailslideover_taskdetailslideover"
     },
     {
       "relation": "imports",
@@ -30512,39 +30654,6 @@
       "confidence_score": 1.0,
       "source": "cursor_new_quick_fix_one_liner_linux_mac",
       "target": "cursor_new_quick_fix_codeblock_8"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/pages/admin/TaskBoard.jsx",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_pages_admin_taskboard_jsx",
-      "target": "client_src_components_taskdetailslideover_jsx"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/components/TaskDetailSlideOver.jsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_components_taskdetailslideover_jsx",
-      "target": "client_src_components_ui_badge_jsx"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/components/TaskDetailSlideOver.jsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_components_taskdetailslideover_jsx",
-      "target": "client_src_components_ui_button_jsx"
     },
     {
       "relation": "imports",
@@ -32278,17 +32387,6 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "server/index.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_index_js",
-      "target": "server_db_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "server/index.test.js",
       "source_location": "L10",
       "weight": 1.0,
@@ -32425,17 +32523,6 @@
       "confidence_score": 1.0,
       "source": "server_routes_coaches_js",
       "target": "routes_coaches_conflict"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/coaches.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_coaches_js",
-      "target": "server_db_js"
     },
     {
       "relation": "contains",
@@ -33376,38 +33463,6 @@
       "confidence_score": 1.0,
       "source": "docs_handoff_multi_coach_migration_notes",
       "target": "docs_handoff_multi_coach_for_new_code"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/pages/admin/AssignTask.jsx",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_pages_admin_assigntask_jsx",
-      "target": "admin_assigntask_assigntask"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/pages/admin/AssignTask.jsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_pages_admin_assigntask_jsx",
-      "target": "client_src_components_ui_button_jsx"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/pages/admin/AssignTask.jsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_pages_admin_assigntask_jsx",
-      "target": "client_src_components_ui_card_jsx"
     },
     {
       "relation": "contains",
@@ -36001,17 +36056,6 @@
       "target": "routes_notifications_test_express"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/__tests__/routes/notifications.test.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_tests_routes_notifications_test_js",
-      "target": "server_db_js"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/__tests__/routes/notifications.test.js",
@@ -36203,17 +36247,6 @@
       "target": "routes_tasks_test_express"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/__tests__/routes/tasks.test.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_tests_routes_tasks_test_js",
-      "target": "server_db_js"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server/__tests__/routes/tasks.test.js",
@@ -36332,17 +36365,6 @@
       "confidence_score": 1.0,
       "source": "server_tests_security_phase6_validation_test_js",
       "target": "security_phase6_validation_test_app"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/__tests__/security/phase6-validation.test.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_tests_security_phase6_validation_test_js",
-      "target": "server_db_js"
     },
     {
       "relation": "contains",
@@ -36483,28 +36505,6 @@
       "confidence_score": 1.0,
       "source": "server_tests_security_phase6_validation_test_js",
       "target": "security_phase6_validation_test_notifs"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/notifications.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_notifications_js",
-      "target": "server_db_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/auth.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_auth_js",
-      "target": "server_db_js"
     },
     {
       "relation": "contains",
@@ -42251,5 +42251,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ac27be4c90bbaf7543902a9142aadbe4f2be38c2"
+  "built_at_commit": "ed63215c6b14cc7f255c0a9ddf6c033c033f457c"
 }

@@ -195,8 +195,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\src\\components\\TaskDetailSlideOver.jsx": {
-    "mtime": 1780577853.7161405,
-    "ast_hash": "bcc6a02d8c1f6a5116b76c5dec068943",
+    "mtime": 1780654327.8983634,
+    "ast_hash": "2aa8a0bbfb53513eadf7a22117d04493",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\src\\components\\ui\\Badge.jsx": {
@@ -260,8 +260,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\src\\pages\\admin\\AssignTask.jsx": {
-    "mtime": 1780574499.0493982,
-    "ast_hash": "bec6bc271bbb858fec2d4b0b15bbf6b2",
+    "mtime": 1780654249.256885,
+    "ast_hash": "4958a0fd7918fae99e973e07a87075f9",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\src\\pages\\admin\\CoachesPage.jsx": {
@@ -345,8 +345,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\db.js": {
-    "mtime": 1780650712.4743838,
-    "ast_hash": "eda3a21c9dfb2187836fc5f22c56b658",
+    "mtime": 1780654259.0645425,
+    "ast_hash": "c77ad978132e1a98e79c8fc11f6bb262",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\db.test.js": {
@@ -455,8 +455,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\tasks.js": {
-    "mtime": 1780649567.5915947,
-    "ast_hash": "2b35f52b64ad94ab6c9f78fc2798b675",
+    "mtime": 1780654299.9524508,
+    "ast_hash": "d94b440a9708dd1ff9cf28f18e3c66c9",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\__tests__\\coaching-insights.test.js": {

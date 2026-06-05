@@ -1,7 +1,7 @@
 # Graph Report - Cursor_new  (2026-06-05)
 
 ## Corpus Check
-- 195 files · ~214,078 words
+- 195 files · ~214,546 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ac27be4c`
+- Built from commit: `ed63215c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -806,7 +806,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Why does `Available Tools` connect `Community 22` to `Community 62`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
-- **Why does `requireAdmin()` connect `Community 148` to `Community 168`, `Community 169`, `Community 77`, `Community 79`, `Community 51`, `Community 150`, `Community 120`, `Community 93`, `Community 63`?**
+- **Why does `Installation & Setup` connect `Community 145` to `Community 24`, `Community 156`, `Community 62`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **What connects `code:json ({)`, `code:block2 (┌─────────────────────────────────────────────────────────┐)`, `code:javascript (// In NotificationBell.jsx)` to the rest of the system?**
   _1150 weakly-connected nodes found - possible documentation gaps or missing edges._

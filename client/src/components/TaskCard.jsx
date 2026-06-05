@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
-import { CheckCircle2, Clock, AlertTriangle, MessageSquare } from 'lucide-react';
+import { CheckCircle2, Clock, AlertTriangle, MessageSquare, Link as LinkIcon, ExternalLink } from 'lucide-react';
 import Badge from './ui/Badge';
 import Button from './ui/Button';
 import DelayReasonModal from './DelayReasonModal';
@@ -88,6 +88,33 @@ const TaskCard = ({ task, onRefresh }) => {
                 <MessageSquare size={11} /> Delay reason submitted
               </p>
               <p className="text-xs text-amber-600">{task.delay_reason}</p>
+            </div>
+          )}
+
+          {task.links && task.links.length > 0 && (
+            <div className="mb-3 space-y-2">
+              <p className="text-xs font-semibold text-slate-600 flex items-center gap-1">
+                <LinkIcon size={12} /> 📎 Resources
+              </p>
+              <div className="space-y-1.5">
+                {task.links.map((link, idx) => (
+                  <a
+                    key={idx}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between p-2 bg-primary-50 hover:bg-primary-100 border border-primary-200 rounded-lg transition-colors group text-xs"
+                  >
+                    <div className="flex items-center gap-1.5 min-w-0 flex-1">
+                      <LinkIcon size={12} className="text-primary-600 flex-shrink-0" />
+                      <div className="min-w-0">
+                        <p className="font-medium text-primary-900 truncate">{link.label}</p>
+                      </div>
+                    </div>
+                    <ExternalLink size={12} className="text-primary-400 group-hover:text-primary-600 flex-shrink-0 ml-1" />
+                  </a>
+                ))}
+              </div>
             </div>
           )}
 
