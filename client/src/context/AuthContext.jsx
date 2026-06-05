@@ -3,6 +3,11 @@ import axios from 'axios';
 
 const AuthContext = createContext();
 
+// Set axios base URL for production
+if (import.meta.env.VITE_API_URL) {
+  axios.defaults.baseURL = import.meta.env.VITE_API_URL;
+}
+
 const decodeToken = (token) => {
   try {
     const parts = token.split('.');
