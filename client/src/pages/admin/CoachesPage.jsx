@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
-import { Users, UserPlus, Pencil, Trash2, Mail } from 'lucide-react';
+import { Users, UserPlus, Pencil, Trash2, Mail, MoreVertical } from 'lucide-react';
 import Card from '../../components/ui/Card';
 import Button from '../../components/ui/Button';
 import Modal from '../../components/ui/Modal';
@@ -42,30 +42,57 @@ const CoachForm = ({ initial = {}, onSubmit, loading }) => {
 };
 
 const CoachCard = ({ coach, onEdit, onDelete }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
   const total = (coach.assigned || 0) + (coach.completed || 0) + (coach.overdue || 0);
   const initials = coach.name?.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2) || '??';
 
   return (
-    <Card className="flex flex-col gap-4 fade-in">
+    <Card className="flex flex-col gap-4 fade-in relative">
       <div className="flex items-start justify-between">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 flex-1 min-w-0">
           <div className="w-11 h-11 rounded-xl bg-primary-100 text-primary-700 font-bold text-sm flex items-center justify-center shrink-0">
             {initials}
           </div>
-          <div className="min-w-0">
+          <div className="min-w-0 flex-1">
             <p className="font-heading font-semibold text-primary-900 truncate">{coach.name}</p>
             <p className="text-xs text-slate-400 flex items-center gap-1 truncate">
               <Mail size={10} />{coach.email}
             </p>
           </div>
         </div>
-        <div className="flex gap-1 shrink-0">
-          <button onClick={() => onEdit(coach)} className="w-8 h-8 flex items-center justify-center rounded-lg text-slate-400 hover:text-primary-600 hover:bg-primary-50 transition-colors" aria-label="Edit coach">
-            <Pencil size={14} />
+
+        {/* Action Menu */}
+        <div className="relative shrink-0 ml-2">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="w-8 h-8 flex items-center justify-center rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
+            aria-label="Actions"
+          >
+            <MoreVertical size={16} />
           </button>
-          <button onClick={() => onDelete(coach)} className="w-8 h-8 flex items-center justify-center rounded-lg text-slate-400 hover:text-red-600 hover:bg-red-50 transition-colors" aria-label="Delete coach">
-            <Trash2 size={14} />
-          </button>
+
+          {menuOpen && (
+            <div className="absolute right-0 mt-1 bg-white rounded-lg shadow-lg border border-slate-200 z-10 min-w-[120px]">
+              <button
+                onClick={() => {
+                  onEdit(coach);
+                  setMenuOpen(false);
+                }}
+                className="w-full px-3 py-2 text-left text-sm text-primary-600 hover:bg-primary-50 flex items-center gap-2 first:rounded-t-lg"
+              >
+                <Pencil size={14} /> Edit
+              </button>
+              <button
+                onClick={() => {
+                  onDelete(coach);
+                  setMenuOpen(false);
+                }}
+                className="w-full px-3 py-2 text-left text-sm text-red-600 hover:bg-red-50 flex items-center gap-2 last:rounded-b-lg border-t border-slate-100"
+              >
+                <Trash2 size={14} /> Delete
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
