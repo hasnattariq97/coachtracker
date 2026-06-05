@@ -4,1804 +4,1858 @@
   "graph": {},
   "nodes": [
     {
+      "label": "CoachesPage.jsx",
+      "file_type": "code",
+      "source_file": "CoachesPage.jsx",
+      "source_location": "L1",
+      "id": "coachespage_jsx",
+      "community": 44,
+      "norm_label": "coachespage.jsx"
+    },
+    {
+      "label": "CoachForm()",
+      "file_type": "code",
+      "source_file": "CoachesPage.jsx",
+      "source_location": "L11",
+      "id": "admin_coachespage_coachform",
+      "community": 44,
+      "norm_label": "coachform()"
+    },
+    {
+      "label": "CoachCard()",
+      "file_type": "code",
+      "source_file": "CoachesPage.jsx",
+      "source_location": "L44",
+      "id": "admin_coachespage_coachcard",
+      "community": 44,
+      "norm_label": "coachcard()"
+    },
+    {
+      "label": "CoachesPage()",
+      "file_type": "code",
+      "source_file": "CoachesPage.jsx",
+      "source_location": "L115",
+      "id": "admin_coachespage_coachespage",
+      "community": 44,
+      "norm_label": "coachespage()"
+    },
+    {
+      "label": "CoachingInsightCard.jsx",
+      "file_type": "code",
+      "source_file": "CoachingInsightCard.jsx",
+      "source_location": "L1",
+      "community": 83,
+      "norm_label": "coachinginsightcard.jsx",
+      "id": "coachinginsightcard_jsx"
+    },
+    {
+      "label": "CoachingInsightCard()",
+      "file_type": "code",
+      "source_file": "CoachingInsightCard.jsx",
+      "source_location": "L1",
+      "community": 83,
+      "norm_label": "coachinginsightcard()",
+      "id": "components_coachinginsightcard_coachinginsightcard"
+    },
+    {
       "label": "PHASE7-FRONTEND-EXAMPLES.md",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L1",
-      "id": "client_phase7_frontend_examples_md",
       "community": 164,
-      "norm_label": "phase7-frontend-examples.md"
+      "norm_label": "phase7-frontend-examples.md",
+      "id": "client_phase7_frontend_examples_md"
     },
     {
       "label": "Phase 7 Frontend - Test Examples",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L1",
-      "id": "client_phase7_frontend_examples_phase_7_frontend_test_examples",
       "community": 164,
-      "norm_label": "phase 7 frontend - test examples"
+      "norm_label": "phase 7 frontend - test examples",
+      "id": "client_phase7_frontend_examples_phase_7_frontend_test_examples"
     },
     {
       "label": "1. CoachingInsightCard Component Rendering",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L3",
-      "id": "client_phase7_frontend_examples_1_coachinginsightcard_component_rendering",
       "community": 166,
-      "norm_label": "1. coachinginsightcard component rendering"
+      "norm_label": "1. coachinginsightcard component rendering",
+      "id": "client_phase7_frontend_examples_1_coachinginsightcard_component_rendering"
     },
     {
       "label": "Example Notification Data:",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L5",
-      "id": "client_phase7_frontend_examples_example_notification_data",
       "community": 166,
-      "norm_label": "example notification data:"
+      "norm_label": "example notification data:",
+      "id": "client_phase7_frontend_examples_example_notification_data"
     },
     {
       "label": "code:json ({)",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L6",
-      "id": "client_phase7_frontend_examples_codeblock_1",
       "community": 166,
-      "norm_label": "code:json ({)"
+      "norm_label": "code:json ({)",
+      "id": "client_phase7_frontend_examples_codeblock_1"
     },
     {
       "label": "Visual Output:",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L36",
-      "id": "client_phase7_frontend_examples_visual_output",
       "community": 166,
-      "norm_label": "visual output:"
+      "norm_label": "visual output:",
+      "id": "client_phase7_frontend_examples_visual_output"
     },
     {
       "label": "code:block2 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L37",
-      "id": "client_phase7_frontend_examples_codeblock_2",
       "community": 166,
-      "norm_label": "code:block2 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)"
+      "norm_label": "code:block2 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
+      "id": "client_phase7_frontend_examples_codeblock_2"
     },
     {
       "label": "2. NotificationBell Integration - type='coaching_insights' Detection",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L54",
-      "id": "client_phase7_frontend_examples_2_notificationbell_integration_type_coaching_insights_detection",
       "community": 163,
-      "norm_label": "2. notificationbell integration - type='coaching_insights' detection"
+      "norm_label": "2. notificationbell integration - type='coaching_insights' detection",
+      "id": "client_phase7_frontend_examples_2_notificationbell_integration_type_coaching_insights_detection"
     },
     {
       "label": "Test Case: Conditional Rendering",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L56",
-      "id": "client_phase7_frontend_examples_test_case_conditional_rendering",
       "community": 163,
-      "norm_label": "test case: conditional rendering"
+      "norm_label": "test case: conditional rendering",
+      "id": "client_phase7_frontend_examples_test_case_conditional_rendering"
     },
     {
       "label": "code:javascript (// In NotificationBell.jsx)",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L57",
-      "id": "client_phase7_frontend_examples_codeblock_3",
       "community": 163,
-      "norm_label": "code:javascript (// in notificationbell.jsx)"
+      "norm_label": "code:javascript (// in notificationbell.jsx)",
+      "id": "client_phase7_frontend_examples_codeblock_3"
     },
     {
       "label": "Example Scenarios:",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L77",
-      "id": "client_phase7_frontend_examples_example_scenarios",
       "community": 163,
-      "norm_label": "example scenarios:"
+      "norm_label": "example scenarios:",
+      "id": "client_phase7_frontend_examples_example_scenarios"
     },
     {
       "label": "code:block4 (Notification 1: type='assigned'          \u2192 Standard notifica)",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L80",
-      "id": "client_phase7_frontend_examples_codeblock_4",
       "community": 163,
-      "norm_label": "code:block4 (notification 1: type='assigned'          \u2192 standard notifica)"
+      "norm_label": "code:block4 (notification 1: type='assigned'          \u2192 standard notifica)",
+      "id": "client_phase7_frontend_examples_codeblock_4"
     },
     {
       "label": "code:block5 (Notification 1: type='coaching_insights' \u2192 CoachingInsightCa)",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L89",
-      "id": "client_phase7_frontend_examples_codeblock_5",
       "community": 163,
-      "norm_label": "code:block5 (notification 1: type='coaching_insights' \u2192 coachinginsightca)"
+      "norm_label": "code:block5 (notification 1: type='coaching_insights' \u2192 coachinginsightca)",
+      "id": "client_phase7_frontend_examples_codeblock_5"
     },
     {
       "label": "3. Expandable Details Section - Confidence Scores",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L98",
-      "id": "client_phase7_frontend_examples_3_expandable_details_section_confidence_scores",
       "community": 155,
-      "norm_label": "3. expandable details section - confidence scores"
+      "norm_label": "3. expandable details section - confidence scores",
+      "id": "client_phase7_frontend_examples_3_expandable_details_section_confidence_scores"
     },
     {
       "label": "Collapsed State (Default):",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L100",
-      "id": "client_phase7_frontend_examples_collapsed_state_default",
       "community": 155,
-      "norm_label": "collapsed state (default):"
+      "norm_label": "collapsed state (default):",
+      "id": "client_phase7_frontend_examples_collapsed_state_default"
     },
     {
       "label": "code:block6 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L101",
-      "id": "client_phase7_frontend_examples_codeblock_6",
       "community": 155,
-      "norm_label": "code:block6 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)"
+      "norm_label": "code:block6 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
+      "id": "client_phase7_frontend_examples_codeblock_6"
     },
     {
       "label": "Expanded State (After clicking \"Show Details\"):",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L112",
-      "id": "client_phase7_frontend_examples_expanded_state_after_clicking_show_details",
       "community": 155,
-      "norm_label": "expanded state (after clicking \"show details\"):"
+      "norm_label": "expanded state (after clicking \"show details\"):",
+      "id": "client_phase7_frontend_examples_expanded_state_after_clicking_show_details"
     },
     {
       "label": "code:block7 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L113",
-      "id": "client_phase7_frontend_examples_codeblock_7",
       "community": 155,
-      "norm_label": "code:block7 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)"
+      "norm_label": "code:block7 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
+      "id": "client_phase7_frontend_examples_codeblock_7"
     },
     {
       "label": "Test Data with Varying Confidence:",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L138",
-      "id": "client_phase7_frontend_examples_test_data_with_varying_confidence",
       "community": 155,
-      "norm_label": "test data with varying confidence:"
+      "norm_label": "test data with varying confidence:",
+      "id": "client_phase7_frontend_examples_test_data_with_varying_confidence"
     },
     {
       "label": "code:javascript (// Example 1: High confidence scores)",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L139",
-      "id": "client_phase7_frontend_examples_codeblock_8",
       "community": 155,
-      "norm_label": "code:javascript (// example 1: high confidence scores)"
+      "norm_label": "code:javascript (// example 1: high confidence scores)",
+      "id": "client_phase7_frontend_examples_codeblock_8"
     },
     {
       "label": "4. Orange-Highlighted Growth Opportunity Section",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L164",
-      "id": "client_phase7_frontend_examples_4_orange_highlighted_growth_opportunity_section",
       "community": 164,
-      "norm_label": "4. orange-highlighted growth opportunity section"
+      "norm_label": "4. orange-highlighted growth opportunity section",
+      "id": "client_phase7_frontend_examples_4_orange_highlighted_growth_opportunity_section"
     },
     {
       "label": "HTML Structure:",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L166",
-      "id": "client_phase7_frontend_examples_html_structure",
       "community": 164,
-      "norm_label": "html structure:"
+      "norm_label": "html structure:",
+      "id": "client_phase7_frontend_examples_html_structure"
     },
     {
       "label": "code:html (<!-- Orange highlight with left border -->)",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L167",
-      "id": "client_phase7_frontend_examples_codeblock_9",
       "community": 164,
-      "norm_label": "code:html (<!-- orange highlight with left border -->)"
+      "norm_label": "code:html (<!-- orange highlight with left border -->)",
+      "id": "client_phase7_frontend_examples_codeblock_9"
     },
     {
       "label": "Tailwind Classes Used:",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L183",
-      "id": "client_phase7_frontend_examples_tailwind_classes_used",
       "community": 164,
-      "norm_label": "tailwind classes used:"
+      "norm_label": "tailwind classes used:",
+      "id": "client_phase7_frontend_examples_tailwind_classes_used"
     },
     {
       "label": "Visual Examples:",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L190",
-      "id": "client_phase7_frontend_examples_visual_examples",
       "community": 167,
-      "norm_label": "visual examples:"
+      "norm_label": "visual examples:",
+      "id": "client_phase7_frontend_examples_visual_examples"
     },
     {
       "label": "code:block10 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L193",
-      "id": "client_phase7_frontend_examples_codeblock_10",
       "community": 167,
-      "norm_label": "code:block10 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)"
+      "norm_label": "code:block10 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
+      "id": "client_phase7_frontend_examples_codeblock_10"
     },
     {
       "label": "code:block11 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L202",
-      "id": "client_phase7_frontend_examples_codeblock_11",
       "community": 167,
-      "norm_label": "code:block11 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)"
+      "norm_label": "code:block11 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
+      "id": "client_phase7_frontend_examples_codeblock_11"
     },
     {
       "label": "code:block12 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L211",
-      "id": "client_phase7_frontend_examples_codeblock_12",
       "community": 167,
-      "norm_label": "code:block12 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)"
+      "norm_label": "code:block12 (\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510)",
+      "id": "client_phase7_frontend_examples_codeblock_12"
     },
     {
       "label": "5. Coaching-Tone Messaging Examples",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L221",
-      "id": "client_phase7_frontend_examples_5_coaching_tone_messaging_examples",
       "community": 151,
-      "norm_label": "5. coaching-tone messaging examples"
+      "norm_label": "5. coaching-tone messaging examples",
+      "id": "client_phase7_frontend_examples_5_coaching_tone_messaging_examples"
     },
     {
       "label": "Pattern Agent (Historical Analysis):",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L223",
-      "id": "client_phase7_frontend_examples_pattern_agent_historical_analysis",
       "community": 151,
-      "norm_label": "pattern agent (historical analysis):"
+      "norm_label": "pattern agent (historical analysis):",
+      "id": "client_phase7_frontend_examples_pattern_agent_historical_analysis"
     },
     {
       "label": "code:block13 (\u2713 \"You're 85% on-time \u2014 strong execution\")",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L224",
-      "id": "client_phase7_frontend_examples_codeblock_13",
       "community": 151,
-      "norm_label": "code:block13 (\u2713 \"you're 85% on-time \u2014 strong execution\")"
+      "norm_label": "code:block13 (\u2713 \"you're 85% on-time \u2014 strong execution\")",
+      "id": "client_phase7_frontend_examples_codeblock_13"
     },
     {
       "label": "Growth Agent (Learning Opportunities):",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L231",
-      "id": "client_phase7_frontend_examples_growth_agent_learning_opportunities",
       "community": 151,
-      "norm_label": "growth agent (learning opportunities):"
+      "norm_label": "growth agent (learning opportunities):",
+      "id": "client_phase7_frontend_examples_growth_agent_learning_opportunities"
     },
     {
       "label": "code:block14 (\u2713 \"Great execution on deadline pressure \u2014 consider this appr)",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L232",
-      "id": "client_phase7_frontend_examples_codeblock_14",
       "community": 151,
-      "norm_label": "code:block14 (\u2713 \"great execution on deadline pressure \u2014 consider this appr)"
+      "norm_label": "code:block14 (\u2713 \"great execution on deadline pressure \u2014 consider this appr)",
+      "id": "client_phase7_frontend_examples_codeblock_14"
     },
     {
       "label": "Risk Agent (Blocker Detection):",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L239",
-      "id": "client_phase7_frontend_examples_risk_agent_blocker_detection",
       "community": 151,
-      "norm_label": "risk agent (blocker detection):"
+      "norm_label": "risk agent (blocker detection):",
+      "id": "client_phase7_frontend_examples_risk_agent_blocker_detection"
     },
     {
       "label": "code:block15 (\u2713 \"No risks detected \u2014 keep this momentum going\")",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L240",
-      "id": "client_phase7_frontend_examples_codeblock_15",
       "community": 151,
-      "norm_label": "code:block15 (\u2713 \"no risks detected \u2014 keep this momentum going\")"
+      "norm_label": "code:block15 (\u2713 \"no risks detected \u2014 keep this momentum going\")",
+      "id": "client_phase7_frontend_examples_codeblock_15"
     },
     {
       "label": "Consensus Messages:",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L247",
-      "id": "client_phase7_frontend_examples_consensus_messages",
       "community": 151,
-      "norm_label": "consensus messages:"
+      "norm_label": "consensus messages:",
+      "id": "client_phase7_frontend_examples_consensus_messages"
     },
     {
       "label": "code:block16 (\u2713 \"Keep it up! Your deadline management is getting stronger.)",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L248",
-      "id": "client_phase7_frontend_examples_codeblock_16",
       "community": 151,
-      "norm_label": "code:block16 (\u2713 \"keep it up! your deadline management is getting stronger.)"
+      "norm_label": "code:block16 (\u2713 \"keep it up! your deadline management is getting stronger.)",
+      "id": "client_phase7_frontend_examples_codeblock_16"
     },
     {
       "label": "Test Checklist for Frontend Features",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L257",
-      "id": "client_phase7_frontend_examples_test_checklist_for_frontend_features",
       "community": 165,
-      "norm_label": "test checklist for frontend features"
+      "norm_label": "test checklist for frontend features",
+      "id": "client_phase7_frontend_examples_test_checklist_for_frontend_features"
     },
     {
       "label": "CoachingInsightCard Rendering",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L259",
-      "id": "client_phase7_frontend_examples_coachinginsightcard_rendering",
       "community": 165,
-      "norm_label": "coachinginsightcard rendering"
+      "norm_label": "coachinginsightcard rendering",
+      "id": "client_phase7_frontend_examples_coachinginsightcard_rendering"
     },
     {
       "label": "NotificationBell Integration",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L266",
-      "id": "client_phase7_frontend_examples_notificationbell_integration",
       "community": 165,
-      "norm_label": "notificationbell integration"
+      "norm_label": "notificationbell integration",
+      "id": "client_phase7_frontend_examples_notificationbell_integration"
     },
     {
       "label": "Expandable Details",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L273",
-      "id": "client_phase7_frontend_examples_expandable_details",
       "community": 165,
-      "norm_label": "expandable details"
+      "norm_label": "expandable details",
+      "id": "client_phase7_frontend_examples_expandable_details"
     },
     {
       "label": "Orange Growth Opportunity",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L281",
-      "id": "client_phase7_frontend_examples_orange_growth_opportunity",
       "community": 165,
-      "norm_label": "orange growth opportunity"
+      "norm_label": "orange growth opportunity",
+      "id": "client_phase7_frontend_examples_orange_growth_opportunity"
     },
     {
       "label": "Coaching-Tone Messaging",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L289",
-      "id": "client_phase7_frontend_examples_coaching_tone_messaging",
       "community": 165,
-      "norm_label": "coaching-tone messaging"
+      "norm_label": "coaching-tone messaging",
+      "id": "client_phase7_frontend_examples_coaching_tone_messaging"
     },
     {
       "label": "Integration Test Scenarios",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L299",
-      "id": "client_phase7_frontend_examples_integration_test_scenarios",
       "community": 162,
-      "norm_label": "integration test scenarios"
+      "norm_label": "integration test scenarios",
+      "id": "client_phase7_frontend_examples_integration_test_scenarios"
     },
     {
       "label": "Scenario 1: Coach Completes Task",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L301",
-      "id": "client_phase7_frontend_examples_scenario_1_coach_completes_task",
       "community": 162,
-      "norm_label": "scenario 1: coach completes task"
+      "norm_label": "scenario 1: coach completes task",
+      "id": "client_phase7_frontend_examples_scenario_1_coach_completes_task"
     },
     {
       "label": "code:block17 (1. Coach clicks \"Mark Complete\" on task)",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L302",
-      "id": "client_phase7_frontend_examples_codeblock_17",
       "community": 162,
-      "norm_label": "code:block17 (1. coach clicks \"mark complete\" on task)"
+      "norm_label": "code:block17 (1. coach clicks \"mark complete\" on task)",
+      "id": "client_phase7_frontend_examples_codeblock_17"
     },
     {
       "label": "Scenario 2: Multiple Notification Types",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L318",
-      "id": "client_phase7_frontend_examples_scenario_2_multiple_notification_types",
       "community": 162,
-      "norm_label": "scenario 2: multiple notification types"
+      "norm_label": "scenario 2: multiple notification types",
+      "id": "client_phase7_frontend_examples_scenario_2_multiple_notification_types"
     },
     {
       "label": "code:block18 (Notification Bell has 5 notifications:)",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L319",
-      "id": "client_phase7_frontend_examples_codeblock_18",
       "community": 162,
-      "norm_label": "code:block18 (notification bell has 5 notifications:)"
+      "norm_label": "code:block18 (notification bell has 5 notifications:)",
+      "id": "client_phase7_frontend_examples_codeblock_18"
     },
     {
       "label": "Scenario 3: Confidence Score Variations",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L330",
-      "id": "client_phase7_frontend_examples_scenario_3_confidence_score_variations",
       "community": 162,
-      "norm_label": "scenario 3: confidence score variations"
+      "norm_label": "scenario 3: confidence score variations",
+      "id": "client_phase7_frontend_examples_scenario_3_confidence_score_variations"
     },
     {
       "label": "code:block19 (Low confidence (52-65%):)",
       "file_type": "document",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L331",
-      "id": "client_phase7_frontend_examples_codeblock_19",
       "community": 162,
-      "norm_label": "code:block19 (low confidence (52-65%):)"
+      "norm_label": "code:block19 (low confidence (52-65%):)",
+      "id": "client_phase7_frontend_examples_codeblock_19"
     },
     {
       "label": "HANDOFF-PHASE7.md",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L1",
-      "id": "docs_handoff_phase7_md",
       "community": 96,
-      "norm_label": "handoff-phase7.md"
+      "norm_label": "handoff-phase7.md",
+      "id": "docs_handoff_phase7_md"
     },
     {
       "label": "Phase 7 Handoff \u2014 Multi-Agent Coaching Insights",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L9",
-      "id": "docs_handoff_phase7_phase_7_handoff_multi_agent_coaching_insights",
       "community": 96,
-      "norm_label": "phase 7 handoff \u2014 multi-agent coaching insights"
+      "norm_label": "phase 7 handoff \u2014 multi-agent coaching insights",
+      "id": "docs_handoff_phase7_phase_7_handoff_multi_agent_coaching_insights"
     },
     {
       "label": "What Was Built",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L15",
-      "id": "docs_handoff_phase7_what_was_built",
       "community": 96,
-      "norm_label": "what was built"
+      "norm_label": "what was built",
+      "id": "docs_handoff_phase7_what_was_built"
     },
     {
       "label": "Feature Overview",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L17",
-      "id": "docs_handoff_phase7_feature_overview",
       "community": 96,
-      "norm_label": "feature overview"
+      "norm_label": "feature overview",
+      "id": "docs_handoff_phase7_feature_overview"
     },
     {
       "label": "The 3-Agent Swarm",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L22",
-      "id": "docs_handoff_phase7_the_3_agent_swarm",
       "community": 96,
-      "norm_label": "the 3-agent swarm"
+      "norm_label": "the 3-agent swarm",
+      "id": "docs_handoff_phase7_the_3_agent_swarm"
     },
     {
       "label": "Architecture",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L44",
-      "id": "docs_handoff_phase7_architecture",
       "community": 96,
-      "norm_label": "architecture"
+      "norm_label": "architecture",
+      "id": "docs_handoff_phase7_architecture"
     },
     {
       "label": "Backend Flow",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L46",
-      "id": "docs_handoff_phase7_backend_flow",
       "community": 96,
-      "norm_label": "backend flow"
+      "norm_label": "backend flow",
+      "id": "docs_handoff_phase7_backend_flow"
     },
     {
       "label": "code:block1 (Coach completes task)",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L48",
-      "id": "docs_handoff_phase7_codeblock_1",
       "community": 96,
-      "norm_label": "code:block1 (coach completes task)"
+      "norm_label": "code:block1 (coach completes task)",
+      "id": "docs_handoff_phase7_codeblock_1"
     },
     {
       "label": "Files Changed",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L68",
-      "id": "docs_handoff_phase7_files_changed",
       "community": 96,
-      "norm_label": "files changed"
+      "norm_label": "files changed",
+      "id": "docs_handoff_phase7_files_changed"
     },
     {
       "label": "How to Use",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L91",
-      "id": "docs_handoff_phase7_how_to_use",
       "community": 96,
-      "norm_label": "how to use"
+      "norm_label": "how to use",
+      "id": "docs_handoff_phase7_how_to_use"
     },
     {
       "label": "For Coaches",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L93",
-      "id": "docs_handoff_phase7_for_coaches",
       "community": 96,
-      "norm_label": "for coaches"
+      "norm_label": "for coaches",
+      "id": "docs_handoff_phase7_for_coaches"
     },
     {
       "label": "For Admins",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L105",
-      "id": "docs_handoff_phase7_for_admins",
       "community": 96,
-      "norm_label": "for admins"
+      "norm_label": "for admins",
+      "id": "docs_handoff_phase7_for_admins"
     },
     {
       "label": "code:bash (# Check if coaching insights are enabled)",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L108",
-      "id": "docs_handoff_phase7_codeblock_2",
       "community": 96,
-      "norm_label": "code:bash (# check if coaching insights are enabled)"
+      "norm_label": "code:bash (# check if coaching insights are enabled)",
+      "id": "docs_handoff_phase7_codeblock_2"
     },
     {
       "label": "Testing",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L130",
-      "id": "docs_handoff_phase7_testing",
       "community": 96,
-      "norm_label": "testing"
+      "norm_label": "testing",
+      "id": "docs_handoff_phase7_testing"
     },
     {
       "label": "Test Coverage",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L132",
-      "id": "docs_handoff_phase7_test_coverage",
       "community": 96,
-      "norm_label": "test coverage"
+      "norm_label": "test coverage",
+      "id": "docs_handoff_phase7_test_coverage"
     },
     {
       "label": "Manual Testing",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L147",
-      "id": "docs_handoff_phase7_manual_testing",
       "community": 96,
-      "norm_label": "manual testing"
+      "norm_label": "manual testing",
+      "id": "docs_handoff_phase7_manual_testing"
     },
     {
       "label": "code:bash (# 1. Start servers)",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L150",
-      "id": "docs_handoff_phase7_codeblock_3",
       "community": 96,
-      "norm_label": "code:bash (# 1. start servers)"
+      "norm_label": "code:bash (# 1. start servers)",
+      "id": "docs_handoff_phase7_codeblock_3"
     },
     {
       "label": "Deployment",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L169",
-      "id": "docs_handoff_phase7_deployment",
       "community": 96,
-      "norm_label": "deployment"
+      "norm_label": "deployment",
+      "id": "docs_handoff_phase7_deployment"
     },
     {
       "label": "Prerequisites",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L171",
-      "id": "docs_handoff_phase7_prerequisites",
       "community": 96,
-      "norm_label": "prerequisites"
+      "norm_label": "prerequisites",
+      "id": "docs_handoff_phase7_prerequisites"
     },
     {
       "label": "code:bash (export ANTHROPIC_API_KEY=\"sk-ant-...\")",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L174",
-      "id": "docs_handoff_phase7_codeblock_4",
       "community": 96,
-      "norm_label": "code:bash (export anthropic_api_key=\"sk-ant-...\")"
+      "norm_label": "code:bash (export anthropic_api_key=\"sk-ant-...\")",
+      "id": "docs_handoff_phase7_codeblock_4"
     },
     {
       "label": "code:bash (export COACHING_INSIGHTS_ENABLED=true)",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L179",
-      "id": "docs_handoff_phase7_codeblock_5",
       "community": 96,
-      "norm_label": "code:bash (export coaching_insights_enabled=true)"
+      "norm_label": "code:bash (export coaching_insights_enabled=true)",
+      "id": "docs_handoff_phase7_codeblock_5"
     },
     {
       "label": "code:bash (# Adds metadata & insights_status columns)",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L184",
-      "id": "docs_handoff_phase7_codeblock_6",
       "community": 96,
-      "norm_label": "code:bash (# adds metadata & insights_status columns)"
+      "norm_label": "code:bash (# adds metadata & insights_status columns)",
+      "id": "docs_handoff_phase7_codeblock_6"
     },
     {
       "label": "Environment Variables",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L189",
-      "id": "docs_handoff_phase7_environment_variables",
       "community": 96,
-      "norm_label": "environment variables"
+      "norm_label": "environment variables",
+      "id": "docs_handoff_phase7_environment_variables"
     },
     {
       "label": "code:bash (ANTHROPIC_API_KEY=sk-ant-...              # Required for Cla)",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L191",
-      "id": "docs_handoff_phase7_codeblock_7",
       "community": 96,
-      "norm_label": "code:bash (anthropic_api_key=sk-ant-...              # required for cla)"
+      "norm_label": "code:bash (anthropic_api_key=sk-ant-...              # required for cla)",
+      "id": "docs_handoff_phase7_codeblock_7"
     },
     {
       "label": "Scaling Considerations",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L197",
-      "id": "docs_handoff_phase7_scaling_considerations",
       "community": 96,
-      "norm_label": "scaling considerations"
+      "norm_label": "scaling considerations",
+      "id": "docs_handoff_phase7_scaling_considerations"
     },
     {
       "label": "Future Enhancements (Phase 8+)",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L206",
-      "id": "docs_handoff_phase7_future_enhancements_phase_8",
       "community": 96,
-      "norm_label": "future enhancements (phase 8+)"
+      "norm_label": "future enhancements (phase 8+)",
+      "id": "docs_handoff_phase7_future_enhancements_phase_8"
     },
     {
       "label": "Short Term",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L208",
-      "id": "docs_handoff_phase7_short_term",
       "community": 96,
-      "norm_label": "short term"
+      "norm_label": "short term",
+      "id": "docs_handoff_phase7_short_term"
     },
     {
       "label": "Medium Term",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L213",
-      "id": "docs_handoff_phase7_medium_term",
       "community": 96,
-      "norm_label": "medium term"
+      "norm_label": "medium term",
+      "id": "docs_handoff_phase7_medium_term"
     },
     {
       "label": "Long Term",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L218",
-      "id": "docs_handoff_phase7_long_term",
       "community": 96,
-      "norm_label": "long term"
+      "norm_label": "long term",
+      "id": "docs_handoff_phase7_long_term"
     },
     {
       "label": "Known Limitations",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L225",
-      "id": "docs_handoff_phase7_known_limitations",
       "community": 96,
-      "norm_label": "known limitations"
+      "norm_label": "known limitations",
+      "id": "docs_handoff_phase7_known_limitations"
     },
     {
       "label": "Performance Metrics",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L243",
-      "id": "docs_handoff_phase7_performance_metrics",
       "community": 96,
-      "norm_label": "performance metrics"
+      "norm_label": "performance metrics",
+      "id": "docs_handoff_phase7_performance_metrics"
     },
     {
       "label": "Security & Compliance",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L253",
-      "id": "docs_handoff_phase7_security_compliance",
       "community": 96,
-      "norm_label": "security & compliance"
+      "norm_label": "security & compliance",
+      "id": "docs_handoff_phase7_security_compliance"
     },
     {
       "label": "Data Handling",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L255",
-      "id": "docs_handoff_phase7_data_handling",
       "community": 96,
-      "norm_label": "data handling"
+      "norm_label": "data handling",
+      "id": "docs_handoff_phase7_data_handling"
     },
     {
       "label": "Privacy",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L261",
-      "id": "docs_handoff_phase7_privacy",
       "community": 96,
-      "norm_label": "privacy"
+      "norm_label": "privacy",
+      "id": "docs_handoff_phase7_privacy"
     },
     {
       "label": "Compliance",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L267",
-      "id": "docs_handoff_phase7_compliance",
       "community": 96,
-      "norm_label": "compliance"
+      "norm_label": "compliance",
+      "id": "docs_handoff_phase7_compliance"
     },
     {
       "label": "Handoff Checklist",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L274",
-      "id": "docs_handoff_phase7_handoff_checklist",
       "community": 96,
-      "norm_label": "handoff checklist"
+      "norm_label": "handoff checklist",
+      "id": "docs_handoff_phase7_handoff_checklist"
     },
     {
       "label": "Code Ready",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L276",
-      "id": "docs_handoff_phase7_code_ready",
       "community": 96,
-      "norm_label": "code ready"
+      "norm_label": "code ready",
+      "id": "docs_handoff_phase7_code_ready"
     },
     {
       "label": "Documentation",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L284",
-      "id": "docs_handoff_phase7_documentation",
       "community": 96,
-      "norm_label": "documentation"
+      "norm_label": "documentation",
+      "id": "docs_handoff_phase7_documentation"
     },
     {
       "label": "Testing",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L291",
-      "id": "docs_handoff_phase7_testing_291",
       "community": 96,
-      "norm_label": "testing"
+      "norm_label": "testing",
+      "id": "docs_handoff_phase7_testing_291"
     },
     {
       "label": "Deployment Ready",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L298",
-      "id": "docs_handoff_phase7_deployment_ready",
       "community": 96,
-      "norm_label": "deployment ready"
+      "norm_label": "deployment ready",
+      "id": "docs_handoff_phase7_deployment_ready"
     },
     {
       "label": "Next Steps",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L307",
-      "id": "docs_handoff_phase7_next_steps",
       "community": 96,
-      "norm_label": "next steps"
+      "norm_label": "next steps",
+      "id": "docs_handoff_phase7_next_steps"
     },
     {
       "label": "Immediate (Day 1)",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L309",
-      "id": "docs_handoff_phase7_immediate_day_1",
       "community": 96,
-      "norm_label": "immediate (day 1)"
+      "norm_label": "immediate (day 1)",
+      "id": "docs_handoff_phase7_immediate_day_1"
     },
     {
       "label": "Week 1",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L314",
-      "id": "docs_handoff_phase7_week_1",
       "community": 96,
-      "norm_label": "week 1"
+      "norm_label": "week 1",
+      "id": "docs_handoff_phase7_week_1"
     },
     {
       "label": "Month 1",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L319",
-      "id": "docs_handoff_phase7_month_1",
       "community": 96,
-      "norm_label": "month 1"
+      "norm_label": "month 1",
+      "id": "docs_handoff_phase7_month_1"
     },
     {
       "label": "Support",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L326",
-      "id": "docs_handoff_phase7_support",
       "community": 96,
-      "norm_label": "support"
+      "norm_label": "support",
+      "id": "docs_handoff_phase7_support"
     },
     {
       "label": "Common Questions",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L328",
-      "id": "docs_handoff_phase7_common_questions",
       "community": 96,
-      "norm_label": "common questions"
+      "norm_label": "common questions",
+      "id": "docs_handoff_phase7_common_questions"
     },
     {
       "label": "References",
       "file_type": "document",
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L347",
-      "id": "docs_handoff_phase7_references",
       "community": 96,
-      "norm_label": "references"
+      "norm_label": "references",
+      "id": "docs_handoff_phase7_references"
     },
     {
       "label": "cron.js",
       "file_type": "code",
       "source_file": "server/cron.js",
       "source_location": "L1",
-      "id": "server_cron_js",
       "community": 97,
-      "norm_label": "cron.js"
+      "norm_label": "cron.js",
+      "id": "server_cron_js"
     },
     {
       "label": "cron",
       "file_type": "code",
       "source_file": "server/cron.js",
       "source_location": "L9",
-      "id": "server_cron_cron",
       "community": 97,
-      "norm_label": "cron"
+      "norm_label": "cron",
+      "id": "server_cron_cron"
     },
     {
       "label": "db",
       "file_type": "code",
       "source_file": "server/cron.js",
       "source_location": "L10",
-      "id": "server_cron_db",
       "community": 97,
-      "norm_label": "db"
+      "norm_label": "db",
+      "id": "server_cron_db"
     },
     {
       "label": "createNotification()",
       "file_type": "code",
       "source_file": "server/cron.js",
       "source_location": "L12",
-      "id": "server_cron_createnotification",
       "community": 97,
-      "norm_label": "createnotification()"
+      "norm_label": "createnotification()",
+      "id": "server_cron_createnotification"
     },
     {
       "label": "midpointNudgeJob()",
       "file_type": "code",
       "source_file": "server/cron.js",
       "source_location": "L18",
-      "id": "server_cron_midpointnudgejob",
       "community": 97,
-      "norm_label": "midpointnudgejob()"
+      "norm_label": "midpointnudgejob()",
+      "id": "server_cron_midpointnudgejob"
     },
     {
       "label": "overdueJob()",
       "file_type": "code",
       "source_file": "server/cron.js",
       "source_location": "L46",
-      "id": "server_cron_overduejob",
       "community": 97,
-      "norm_label": "overduejob()"
+      "norm_label": "overduejob()",
+      "id": "server_cron_overduejob"
     },
     {
       "label": "scheduledTasks",
       "file_type": "code",
       "source_file": "server/cron.js",
       "source_location": "L76",
-      "id": "server_cron_scheduledtasks",
       "community": 97,
-      "norm_label": "scheduledtasks"
+      "norm_label": "scheduledtasks",
+      "id": "server_cron_scheduledtasks"
     },
     {
       "label": "scheduleJobs()",
       "file_type": "code",
       "source_file": "server/cron.js",
       "source_location": "L78",
-      "id": "server_cron_schedulejobs",
-      "community": 93,
-      "norm_label": "schedulejobs()"
+      "community": 97,
+      "norm_label": "schedulejobs()",
+      "id": "server_cron_schedulejobs"
     },
     {
       "label": "stopJobs()",
       "file_type": "code",
       "source_file": "server/cron.js",
       "source_location": "L89",
-      "id": "server_cron_stopjobs",
       "community": 97,
-      "norm_label": "stopjobs()"
+      "norm_label": "stopjobs()",
+      "id": "server_cron_stopjobs"
     },
     {
       "label": "db-integration.test.js",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L1",
-      "id": "server_db_integration_test_js",
       "community": 29,
-      "norm_label": "db-integration.test.js"
+      "norm_label": "db-integration.test.js",
+      "id": "server_db_integration_test_js"
     },
     {
       "label": "fs",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L1",
-      "id": "server_db_integration_test_fs",
       "community": 29,
-      "norm_label": "fs"
+      "norm_label": "fs",
+      "id": "server_db_integration_test_fs"
     },
     {
       "label": "path",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L2",
-      "id": "server_db_integration_test_path",
       "community": 29,
-      "norm_label": "path"
+      "norm_label": "path",
+      "id": "server_db_integration_test_path"
     },
     {
       "label": "bcrypt",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L3",
-      "id": "server_db_integration_test_bcrypt",
       "community": 29,
-      "norm_label": "bcrypt"
+      "norm_label": "bcrypt",
+      "id": "server_db_integration_test_bcrypt"
     },
     {
       "label": "dbPath",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L7",
-      "id": "server_db_integration_test_dbpath",
       "community": 29,
-      "norm_label": "dbpath"
+      "norm_label": "dbpath",
+      "id": "server_db_integration_test_dbpath"
     },
     {
       "label": "admin",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L33",
-      "id": "server_db_integration_test_admin",
       "community": 29,
-      "norm_label": "admin"
+      "norm_label": "admin",
+      "id": "server_db_integration_test_admin"
     },
     {
       "label": "isValid",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L43",
-      "id": "server_db_integration_test_isvalid",
       "community": 29,
-      "norm_label": "isvalid"
+      "norm_label": "isvalid",
+      "id": "server_db_integration_test_isvalid"
     },
     {
       "label": "hash",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L49",
-      "id": "server_db_integration_test_hash",
       "community": 29,
-      "norm_label": "hash"
+      "norm_label": "hash",
+      "id": "server_db_integration_test_hash"
     },
     {
       "label": "result",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L50",
-      "id": "server_db_integration_test_result",
       "community": 29,
-      "norm_label": "result"
+      "norm_label": "result",
+      "id": "server_db_integration_test_result"
     },
     {
       "label": "coach",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L53",
-      "id": "server_db_integration_test_coach",
       "community": 29,
-      "norm_label": "coach"
+      "norm_label": "coach",
+      "id": "server_db_integration_test_coach"
     },
     {
       "label": "coachResult",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L61",
-      "id": "server_db_integration_test_coachresult",
       "community": 29,
-      "norm_label": "coachresult"
+      "norm_label": "coachresult",
+      "id": "server_db_integration_test_coachresult"
     },
     {
       "label": "taskResult",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L65",
-      "id": "server_db_integration_test_taskresult",
       "community": 29,
-      "norm_label": "taskresult"
+      "norm_label": "taskresult",
+      "id": "server_db_integration_test_taskresult"
     },
     {
       "label": "task",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L70",
-      "id": "server_db_integration_test_task",
       "community": 29,
-      "norm_label": "task"
+      "norm_label": "task",
+      "id": "server_db_integration_test_task"
     },
     {
       "label": "notifResult",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L90",
-      "id": "server_db_integration_test_notifresult",
       "community": 29,
-      "norm_label": "notifresult"
+      "norm_label": "notifresult",
+      "id": "server_db_integration_test_notifresult"
     },
     {
       "label": "notif",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L95",
-      "id": "server_db_integration_test_notif",
       "community": 29,
-      "norm_label": "notif"
+      "norm_label": "notif",
+      "id": "server_db_integration_test_notif"
     },
     {
       "label": "tasksBefore",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L119",
-      "id": "server_db_integration_test_tasksbefore",
       "community": 29,
-      "norm_label": "tasksbefore"
+      "norm_label": "tasksbefore",
+      "id": "server_db_integration_test_tasksbefore"
     },
     {
       "label": "tasksAfter",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L124",
-      "id": "server_db_integration_test_tasksafter",
       "community": 29,
-      "norm_label": "tasksafter"
+      "norm_label": "tasksafter",
+      "id": "server_db_integration_test_tasksafter"
     },
     {
       "label": "notifsBefore",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L145",
-      "id": "server_db_integration_test_notifsbefore",
       "community": 29,
-      "norm_label": "notifsbefore"
+      "norm_label": "notifsbefore",
+      "id": "server_db_integration_test_notifsbefore"
     },
     {
       "label": "notifsAfter",
       "file_type": "code",
       "source_file": "server/db-integration.test.js",
       "source_location": "L150",
-      "id": "server_db_integration_test_notifsafter",
       "community": 29,
-      "norm_label": "notifsafter"
+      "norm_label": "notifsafter",
+      "id": "server_db_integration_test_notifsafter"
     },
     {
       "label": "jest.config.js",
       "file_type": "code",
       "source_file": "server/jest.config.js",
       "source_location": "L1",
-      "id": "server_jest_config_js",
       "community": 56,
-      "norm_label": "jest.config.js"
+      "norm_label": "jest.config.js",
+      "id": "server_jest_config_js"
     },
     {
       "label": "package.json",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L1",
-      "id": "server_package_json",
       "community": 28,
-      "norm_label": "package.json"
+      "norm_label": "package.json",
+      "id": "server_package_json"
     },
     {
       "label": "name",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L2",
-      "id": "server_package_name",
       "community": 28,
-      "norm_label": "name"
+      "norm_label": "name",
+      "id": "server_package_name"
     },
     {
       "label": "version",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L3",
-      "id": "server_package_version",
       "community": 28,
-      "norm_label": "version"
+      "norm_label": "version",
+      "id": "server_package_version"
     },
     {
       "label": "description",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L4",
-      "id": "server_package_description",
       "community": 28,
-      "norm_label": "description"
+      "norm_label": "description",
+      "id": "server_package_description"
     },
     {
       "label": "main",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L5",
-      "id": "server_package_main",
       "community": 28,
-      "norm_label": "main"
+      "norm_label": "main",
+      "id": "server_package_main"
     },
     {
       "label": "scripts",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L6",
-      "id": "server_package_scripts",
       "community": 28,
-      "norm_label": "scripts"
+      "norm_label": "scripts",
+      "id": "server_package_scripts"
     },
     {
       "label": "test",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L7",
-      "id": "server_package_scripts_test",
       "community": 28,
-      "norm_label": "test"
+      "norm_label": "test",
+      "id": "server_package_scripts_test"
     },
     {
       "label": "dev",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L8",
-      "id": "server_package_scripts_dev",
       "community": 28,
-      "norm_label": "dev"
+      "norm_label": "dev",
+      "id": "server_package_scripts_dev"
     },
     {
       "label": "keywords",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L10",
-      "id": "server_package_keywords",
       "community": 28,
-      "norm_label": "keywords"
+      "norm_label": "keywords",
+      "id": "server_package_keywords"
     },
     {
       "label": "author",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L11",
-      "id": "server_package_author",
       "community": 28,
-      "norm_label": "author"
+      "norm_label": "author",
+      "id": "server_package_author"
     },
     {
       "label": "license",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L12",
-      "id": "server_package_license",
       "community": 28,
-      "norm_label": "license"
+      "norm_label": "license",
+      "id": "server_package_license"
     },
     {
       "label": "type",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L13",
-      "id": "server_package_type",
       "community": 28,
-      "norm_label": "type"
+      "norm_label": "type",
+      "id": "server_package_type"
     },
     {
       "label": "dependencies",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L14",
-      "id": "server_package_dependencies",
       "community": 76,
-      "norm_label": "dependencies"
+      "norm_label": "dependencies",
+      "id": "server_package_dependencies"
     },
     {
       "label": "@anthropic-ai/sdk",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L15",
-      "id": "server_package_dependencies_anthropic_ai_sdk",
       "community": 76,
-      "norm_label": "@anthropic-ai/sdk"
+      "norm_label": "@anthropic-ai/sdk",
+      "id": "server_package_dependencies_anthropic_ai_sdk"
     },
     {
       "label": "@google/generative-ai",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L16",
-      "id": "server_package_dependencies_google_generative_ai",
       "community": 76,
-      "norm_label": "@google/generative-ai"
+      "norm_label": "@google/generative-ai",
+      "id": "server_package_dependencies_google_generative_ai"
     },
     {
       "label": "bcrypt",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L17",
-      "id": "server_package_dependencies_bcrypt",
       "community": 76,
-      "norm_label": "bcrypt"
+      "norm_label": "bcrypt",
+      "id": "server_package_dependencies_bcrypt"
     },
     {
       "label": "better-sqlite3",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L18",
-      "id": "server_package_dependencies_better_sqlite3",
       "community": 76,
-      "norm_label": "better-sqlite3"
+      "norm_label": "better-sqlite3",
+      "id": "server_package_dependencies_better_sqlite3"
     },
     {
       "label": "cors",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L19",
-      "id": "server_package_dependencies_cors",
       "community": 76,
-      "norm_label": "cors"
+      "norm_label": "cors",
+      "id": "server_package_dependencies_cors"
     },
     {
       "label": "dotenv",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L20",
-      "id": "server_package_dependencies_dotenv",
       "community": 76,
-      "norm_label": "dotenv"
+      "norm_label": "dotenv",
+      "id": "server_package_dependencies_dotenv"
     },
     {
       "label": "express",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L21",
-      "id": "server_package_dependencies_express",
       "community": 76,
-      "norm_label": "express"
+      "norm_label": "express",
+      "id": "server_package_dependencies_express"
     },
     {
       "label": "groq-sdk",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L22",
-      "id": "server_package_dependencies_groq_sdk",
       "community": 76,
-      "norm_label": "groq-sdk"
+      "norm_label": "groq-sdk",
+      "id": "server_package_dependencies_groq_sdk"
     },
     {
       "label": "jsonwebtoken",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L23",
-      "id": "server_package_dependencies_jsonwebtoken",
       "community": 76,
-      "norm_label": "jsonwebtoken"
+      "norm_label": "jsonwebtoken",
+      "id": "server_package_dependencies_jsonwebtoken"
     },
     {
       "label": "node-cron",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L24",
-      "id": "server_package_dependencies_node_cron",
       "community": 76,
-      "norm_label": "node-cron"
+      "norm_label": "node-cron",
+      "id": "server_package_dependencies_node_cron"
     },
     {
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L26",
-      "id": "server_package_devdependencies",
       "community": 28,
-      "norm_label": "devdependencies"
+      "norm_label": "devdependencies",
+      "id": "server_package_devdependencies"
     },
     {
       "label": "jest",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L27",
-      "id": "server_package_devdependencies_jest",
       "community": 28,
-      "norm_label": "jest"
+      "norm_label": "jest",
+      "id": "server_package_devdependencies_jest"
     },
     {
       "label": "supertest",
       "file_type": "code",
       "source_file": "server/package.json",
       "source_location": "L28",
-      "id": "server_package_devdependencies_supertest",
       "community": 28,
-      "norm_label": "supertest"
+      "norm_label": "supertest",
+      "id": "server_package_devdependencies_supertest"
     },
     {
       "label": "coaching-insights.js",
       "file_type": "code",
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L1",
-      "id": "server_routes_coaching_insights_js",
       "community": 49,
-      "norm_label": "coaching-insights.js"
+      "norm_label": "coaching-insights.js",
+      "id": "server_routes_coaching_insights_js"
     },
     {
       "label": "db",
       "file_type": "code",
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L1",
-      "id": "routes_coaching_insights_db",
       "community": 49,
-      "norm_label": "db"
+      "norm_label": "db",
+      "id": "routes_coaching_insights_db"
     },
     {
       "label": "Groq",
       "file_type": "code",
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L6",
-      "id": "routes_coaching_insights_groq",
       "community": 49,
-      "norm_label": "groq"
+      "norm_label": "groq",
+      "id": "routes_coaching_insights_groq"
     },
     {
       "label": "queueCoachingInsights()",
       "file_type": "code",
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L21",
-      "id": "routes_coaching_insights_queuecoachinginsights",
       "community": 49,
-      "norm_label": "queuecoachinginsights()"
+      "norm_label": "queuecoachinginsights()",
+      "id": "routes_coaching_insights_queuecoachinginsights"
     },
     {
       "label": "analyzeCoachBehavior()",
       "file_type": "code",
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L47",
-      "id": "routes_coaching_insights_analyzecoachbehavior",
       "community": 49,
-      "norm_label": "analyzecoachbehavior()"
+      "norm_label": "analyzecoachbehavior()",
+      "id": "routes_coaching_insights_analyzecoachbehavior"
     },
     {
       "label": "fetchCoachHistory()",
       "file_type": "code",
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L75",
-      "id": "routes_coaching_insights_fetchcoachhistory",
       "community": 49,
-      "norm_label": "fetchcoachhistory()"
+      "norm_label": "fetchcoachhistory()",
+      "id": "routes_coaching_insights_fetchcoachhistory"
     },
     {
       "label": "callAgentSwarm()",
       "file_type": "code",
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L98",
-      "id": "routes_coaching_insights_callagentswarm",
       "community": 49,
-      "norm_label": "callagentswarm()"
+      "norm_label": "callagentswarm()",
+      "id": "routes_coaching_insights_callagentswarm"
     },
     {
       "label": "buildContext()",
       "file_type": "code",
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L119",
-      "id": "routes_coaching_insights_buildcontext",
       "community": 49,
-      "norm_label": "buildcontext()"
+      "norm_label": "buildcontext()",
+      "id": "routes_coaching_insights_buildcontext"
     },
     {
       "label": "callPatternAgent()",
       "file_type": "code",
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L147",
-      "id": "routes_coaching_insights_callpatternagent",
       "community": 49,
-      "norm_label": "callpatternagent()"
+      "norm_label": "callpatternagent()",
+      "id": "routes_coaching_insights_callpatternagent"
     },
     {
       "label": "callGrowthAgent()",
       "file_type": "code",
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L174",
-      "id": "routes_coaching_insights_callgrowthagent",
       "community": 49,
-      "norm_label": "callgrowthagent()"
+      "norm_label": "callgrowthagent()",
+      "id": "routes_coaching_insights_callgrowthagent"
     },
     {
       "label": "callRiskAgent()",
       "file_type": "code",
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L201",
-      "id": "routes_coaching_insights_callriskagent",
       "community": 49,
-      "norm_label": "callriskagent()"
+      "norm_label": "callriskagent()",
+      "id": "routes_coaching_insights_callriskagent"
     },
     {
       "label": "parseAgentResponse()",
       "file_type": "code",
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L228",
-      "id": "routes_coaching_insights_parseagentresponse",
       "community": 49,
-      "norm_label": "parseagentresponse()"
+      "norm_label": "parseagentresponse()",
+      "id": "routes_coaching_insights_parseagentresponse"
     },
     {
       "label": "extractSummary()",
       "file_type": "code",
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L238",
-      "id": "routes_coaching_insights_extractsummary",
       "community": 49,
-      "norm_label": "extractsummary()"
+      "norm_label": "extractsummary()",
+      "id": "routes_coaching_insights_extractsummary"
     },
     {
       "label": "extractConfidence()",
       "file_type": "code",
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L244",
-      "id": "routes_coaching_insights_extractconfidence",
       "community": 49,
-      "norm_label": "extractconfidence()"
+      "norm_label": "extractconfidence()",
+      "id": "routes_coaching_insights_extractconfidence"
     },
     {
       "label": "buildConsensus()",
       "file_type": "code",
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L261",
-      "id": "routes_coaching_insights_buildconsensus",
       "community": 49,
-      "norm_label": "buildconsensus()"
+      "norm_label": "buildconsensus()",
+      "id": "routes_coaching_insights_buildconsensus"
     },
     {
       "label": "createCoachingInsightNotification()",
       "file_type": "code",
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L282",
-      "id": "routes_coaching_insights_createcoachinginsightnotification",
       "community": 49,
-      "norm_label": "createcoachinginsightnotification()"
+      "norm_label": "createcoachinginsightnotification()",
+      "id": "routes_coaching_insights_createcoachinginsightnotification"
     },
     {
       "label": "tasks.js",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L1",
-      "id": "server_routes_tasks_js",
       "community": 51,
-      "norm_label": "tasks.js"
+      "norm_label": "tasks.js",
+      "id": "server_routes_tasks_js"
     },
     {
       "label": "express",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L9",
-      "id": "routes_tasks_express",
       "community": 51,
-      "norm_label": "express"
+      "norm_label": "express",
+      "id": "routes_tasks_express"
     },
     {
       "label": "router",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L10",
-      "id": "routes_tasks_router",
       "community": 51,
-      "norm_label": "router"
+      "norm_label": "router",
+      "id": "routes_tasks_router"
     },
     {
       "label": "db",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L11",
-      "id": "routes_tasks_db",
       "community": 51,
-      "norm_label": "db"
+      "norm_label": "db",
+      "id": "routes_tasks_db"
     },
     {
       "label": "{ requireAdmin, requireCoach }",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L12",
-      "id": "routes_tasks_requireadmin_requirecoach",
       "community": 51,
-      "norm_label": "{ requireadmin, requirecoach }"
+      "norm_label": "{ requireadmin, requirecoach }",
+      "id": "routes_tasks_requireadmin_requirecoach"
     },
     {
       "label": "{ queueCoachingInsights }",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L13",
-      "id": "routes_tasks_queuecoachinginsights",
       "community": 51,
-      "norm_label": "{ queuecoachinginsights }"
+      "norm_label": "{ queuecoachinginsights }",
+      "id": "routes_tasks_queuecoachinginsights"
     },
     {
       "label": "createNotification()",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L15",
-      "id": "routes_tasks_createnotification",
       "community": 51,
-      "norm_label": "createnotification()"
+      "norm_label": "createnotification()",
+      "id": "routes_tasks_createnotification"
     },
     {
       "label": "formatDueDate()",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L21",
-      "id": "routes_tasks_formatduedate",
       "community": 51,
-      "norm_label": "formatduedate()"
+      "norm_label": "formatduedate()",
+      "id": "routes_tasks_formatduedate"
     },
     {
       "label": "validateDueDate()",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L26",
-      "id": "routes_tasks_validateduedate",
       "community": 51,
-      "norm_label": "validateduedate()"
+      "norm_label": "validateduedate()",
+      "id": "routes_tasks_validateduedate"
     },
     {
       "label": "VALID_STATUSES",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L37",
-      "id": "routes_tasks_valid_statuses",
       "community": 51,
-      "norm_label": "valid_statuses"
+      "norm_label": "valid_statuses",
+      "id": "routes_tasks_valid_statuses"
     },
     {
       "label": "VALID_PRIORITIES",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L38",
-      "id": "routes_tasks_valid_priorities",
       "community": 51,
-      "norm_label": "valid_priorities"
+      "norm_label": "valid_priorities",
+      "id": "routes_tasks_valid_priorities"
     },
     {
       "label": "getTaskWithCoachName()",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L40",
-      "id": "routes_tasks_gettaskwithcoachname",
       "community": 51,
-      "norm_label": "gettaskwithcoachname()"
+      "norm_label": "gettaskwithcoachname()",
+      "id": "routes_tasks_gettaskwithcoachname"
     },
     {
       "label": "getTasksQuery()",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L50",
-      "id": "routes_tasks_gettasksquery",
       "community": 51,
-      "norm_label": "gettasksquery()"
+      "norm_label": "gettasksquery()",
+      "id": "routes_tasks_gettasksquery"
     },
     {
       "label": "params",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L68",
-      "id": "routes_tasks_params",
       "community": 51,
-      "norm_label": "params"
+      "norm_label": "params",
+      "id": "routes_tasks_params"
     },
     {
       "label": "id",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L71",
-      "id": "routes_tasks_id",
       "community": 51,
-      "norm_label": "id"
+      "norm_label": "id",
+      "id": "routes_tasks_id"
     },
     {
       "label": "tasks",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L88",
-      "id": "routes_tasks_tasks",
       "community": 51,
-      "norm_label": "tasks"
+      "norm_label": "tasks",
+      "id": "routes_tasks_tasks"
     },
     {
       "label": "task",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L113",
-      "id": "routes_tasks_task",
       "community": 51,
-      "norm_label": "task"
+      "norm_label": "task",
+      "id": "routes_tasks_task"
     },
     {
       "label": "dueDateValidation",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L154",
-      "id": "routes_tasks_duedatevalidation",
       "community": 51,
-      "norm_label": "duedatevalidation"
+      "norm_label": "duedatevalidation",
+      "id": "routes_tasks_duedatevalidation"
     },
     {
       "label": "validCoaches",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L161",
-      "id": "routes_tasks_validcoaches",
       "community": 51,
-      "norm_label": "validcoaches"
+      "norm_label": "validcoaches",
+      "id": "routes_tasks_validcoaches"
     },
     {
       "label": "parsed",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L163",
-      "id": "routes_tasks_parsed",
       "community": 51,
-      "norm_label": "parsed"
+      "norm_label": "parsed",
+      "id": "routes_tasks_parsed"
     },
     {
       "label": "coach",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L167",
-      "id": "routes_tasks_coach",
       "community": 51,
-      "norm_label": "coach"
+      "norm_label": "coach",
+      "id": "routes_tasks_coach"
     },
     {
       "label": "insertStmt",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L175",
-      "id": "routes_tasks_insertstmt",
       "community": 51,
-      "norm_label": "insertstmt"
+      "norm_label": "insertstmt",
+      "id": "routes_tasks_insertstmt"
     },
     {
       "label": "createdTasks",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L180",
-      "id": "routes_tasks_createdtasks",
       "community": 51,
-      "norm_label": "createdtasks"
+      "norm_label": "createdtasks",
+      "id": "routes_tasks_createdtasks"
     },
     {
       "label": "dueDateFormatted",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L181",
-      "id": "routes_tasks_duedateformatted",
       "community": 51,
-      "norm_label": "duedateformatted"
+      "norm_label": "duedateformatted",
+      "id": "routes_tasks_duedateformatted"
     },
     {
       "label": "result",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L185",
-      "id": "routes_tasks_result",
       "community": 51,
-      "norm_label": "result"
+      "norm_label": "result",
+      "id": "routes_tasks_result"
     },
     {
       "label": "updates",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L259",
-      "id": "routes_tasks_updates",
       "community": 51,
-      "norm_label": "updates"
+      "norm_label": "updates",
+      "id": "routes_tasks_updates"
     },
     {
       "label": "values",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L260",
-      "id": "routes_tasks_values",
       "community": 51,
-      "norm_label": "values"
+      "norm_label": "values",
+      "id": "routes_tasks_values"
     },
     {
       "label": "stmt",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L280",
-      "id": "routes_tasks_stmt",
       "community": 51,
-      "norm_label": "stmt"
+      "norm_label": "stmt",
+      "id": "routes_tasks_stmt"
     },
     {
       "label": "admin",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L339",
-      "id": "routes_tasks_admin",
       "community": 51,
-      "norm_label": "admin"
+      "norm_label": "admin",
+      "id": "routes_tasks_admin"
     },
     {
       "label": "trimmed",
       "file_type": "code",
       "source_file": "server/routes/tasks.js",
       "source_location": "L376",
-      "id": "routes_tasks_trimmed",
       "community": 51,
-      "norm_label": "trimmed"
+      "norm_label": "trimmed",
+      "id": "routes_tasks_trimmed"
     },
     {
       "label": "test-setup.js",
       "file_type": "code",
       "source_file": "server/test-setup.js",
       "source_location": "L1",
-      "id": "server_test_setup_js",
       "community": 97,
-      "norm_label": "test-setup.js"
+      "norm_label": "test-setup.js",
+      "id": "server_test_setup_js"
     },
     {
       "label": "{ stopJobs }",
       "file_type": "code",
       "source_file": "server/test-setup.js",
       "source_location": "L9",
-      "id": "server_test_setup_stopjobs",
       "community": 97,
-      "norm_label": "{ stopjobs }"
+      "norm_label": "{ stopjobs }",
+      "id": "server_test_setup_stopjobs"
     },
     {
       "label": "TESTING-COMPLETE-SUMMARY.md",
@@ -8752,24 +8806,6 @@
       "id": "components_notificationbell_notificationbell"
     },
     {
-      "label": "CoachingInsightCard.jsx",
-      "file_type": "code",
-      "source_file": "CoachingInsightCard.jsx",
-      "source_location": "L1",
-      "community": 83,
-      "norm_label": "coachinginsightcard.jsx",
-      "id": "coachinginsightcard_jsx"
-    },
-    {
-      "label": "CoachingInsightCard()",
-      "file_type": "code",
-      "source_file": "CoachingInsightCard.jsx",
-      "source_location": "L4",
-      "community": 83,
-      "norm_label": "coachinginsightcard()",
-      "id": "components_coachinginsightcard_coachinginsightcard"
-    },
-    {
       "label": "coaching-insights.test.js",
       "file_type": "code",
       "source_file": "__tests__/coaching-insights.test.js",
@@ -10142,7 +10178,7 @@
       "file_type": "code",
       "source_file": "server/auth.js",
       "source_location": "L9",
-      "community": 79,
+      "community": 63,
       "norm_label": "jwt",
       "id": "server_auth_jwt"
     },
@@ -10178,7 +10214,7 @@
       "file_type": "code",
       "source_file": "server/auth.js",
       "source_location": "L57",
-      "community": 63,
+      "community": 148,
       "norm_label": "requireadmin()",
       "id": "server_auth_requireadmin"
     },
@@ -10187,7 +10223,7 @@
       "file_type": "code",
       "source_file": "server/auth.js",
       "source_location": "L64",
-      "community": 77,
+      "community": 63,
       "norm_label": "requirecoach()",
       "id": "server_auth_requirecoach"
     },
@@ -10403,7 +10439,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L1",
-      "community": 63,
+      "community": 150,
       "norm_label": "test-api.js",
       "id": "server_test_api_js"
     },
@@ -10412,7 +10448,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L2",
-      "community": 63,
+      "community": 150,
       "norm_label": "express",
       "id": "server_test_api_express"
     },
@@ -10421,7 +10457,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L3",
-      "community": 63,
+      "community": 150,
       "norm_label": "db",
       "id": "server_test_api_db"
     },
@@ -10430,7 +10466,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L4",
-      "community": 63,
+      "community": 150,
       "norm_label": "{ authenticatetoken, requireadmin }",
       "id": "server_test_api_authenticatetoken_requireadmin"
     },
@@ -10439,7 +10475,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L6",
-      "community": 63,
+      "community": 150,
       "norm_label": "app",
       "id": "server_test_api_app"
     },
@@ -10448,7 +10484,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L24",
-      "community": 63,
+      "community": 150,
       "norm_label": "result",
       "id": "server_test_api_result"
     },
@@ -10457,7 +10493,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L33",
-      "community": 63,
+      "community": 150,
       "norm_label": "coaches",
       "id": "server_test_api_coaches"
     },
@@ -10655,7 +10691,7 @@
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L1",
-      "community": 63,
+      "community": 169,
       "norm_label": "test-with-coaches-route.js",
       "id": "server_test_with_coaches_route_js"
     },
@@ -10664,7 +10700,7 @@
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L2",
-      "community": 63,
+      "community": 169,
       "norm_label": "express",
       "id": "server_test_with_coaches_route_express"
     },
@@ -10673,7 +10709,7 @@
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L3",
-      "community": 63,
+      "community": 169,
       "norm_label": "cors",
       "id": "server_test_with_coaches_route_cors"
     },
@@ -10682,7 +10718,7 @@
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L4",
-      "community": 63,
+      "community": 169,
       "norm_label": "{ authenticatetoken, requireadmin }",
       "id": "server_test_with_coaches_route_authenticatetoken_requireadmin"
     },
@@ -10691,7 +10727,7 @@
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L6",
-      "community": 63,
+      "community": 169,
       "norm_label": "app",
       "id": "server_test_with_coaches_route_app"
     },
@@ -10700,7 +10736,7 @@
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L11",
-      "community": 63,
+      "community": 169,
       "norm_label": "corsoptions",
       "id": "server_test_with_coaches_route_corsoptions"
     },
@@ -10781,7 +10817,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L1",
-      "community": 93,
+      "community": 168,
       "norm_label": "test-with-notifications-route.js",
       "id": "server_test_with_notifications_route_js"
     },
@@ -10790,7 +10826,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L2",
-      "community": 93,
+      "community": 168,
       "norm_label": "express",
       "id": "server_test_with_notifications_route_express"
     },
@@ -10799,7 +10835,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L3",
-      "community": 93,
+      "community": 168,
       "norm_label": "cors",
       "id": "server_test_with_notifications_route_cors"
     },
@@ -10808,7 +10844,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L4",
-      "community": 93,
+      "community": 168,
       "norm_label": "{ authenticatetoken, requireadmin }",
       "id": "server_test_with_notifications_route_authenticatetoken_requireadmin"
     },
@@ -10817,7 +10853,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L5",
-      "community": 93,
+      "community": 168,
       "norm_label": "{ schedulejobs }",
       "id": "server_test_with_notifications_route_schedulejobs"
     },
@@ -10826,7 +10862,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L7",
-      "community": 93,
+      "community": 168,
       "norm_label": "app",
       "id": "server_test_with_notifications_route_app"
     },
@@ -10835,7 +10871,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L12",
-      "community": 93,
+      "community": 168,
       "norm_label": "corsoptions",
       "id": "server_test_with_notifications_route_corsoptions"
     },
@@ -10844,7 +10880,7 @@
       "file_type": "code",
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L1",
-      "community": 63,
+      "community": 148,
       "norm_label": "test-with-tasks-route.js",
       "id": "server_test_with_tasks_route_js"
     },
@@ -10853,7 +10889,7 @@
       "file_type": "code",
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L2",
-      "community": 63,
+      "community": 148,
       "norm_label": "express",
       "id": "server_test_with_tasks_route_express"
     },
@@ -10862,7 +10898,7 @@
       "file_type": "code",
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L3",
-      "community": 63,
+      "community": 148,
       "norm_label": "cors",
       "id": "server_test_with_tasks_route_cors"
     },
@@ -10871,7 +10907,7 @@
       "file_type": "code",
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L4",
-      "community": 63,
+      "community": 148,
       "norm_label": "{ authenticatetoken, requireadmin }",
       "id": "server_test_with_tasks_route_authenticatetoken_requireadmin"
     },
@@ -10880,7 +10916,7 @@
       "file_type": "code",
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L6",
-      "community": 63,
+      "community": 148,
       "norm_label": "app",
       "id": "server_test_with_tasks_route_app"
     },
@@ -10889,7 +10925,7 @@
       "file_type": "code",
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L11",
-      "community": 63,
+      "community": 148,
       "norm_label": "corsoptions",
       "id": "server_test_with_tasks_route_corsoptions"
     },
@@ -12989,33 +13025,6 @@
       "community": 44,
       "norm_label": "coachespage.jsx",
       "id": "client_src_pages_admin_coachespage_jsx"
-    },
-    {
-      "label": "CoachForm()",
-      "file_type": "code",
-      "source_file": "client/src/pages/admin/CoachesPage.jsx",
-      "source_location": "L11",
-      "community": 44,
-      "norm_label": "coachform()",
-      "id": "admin_coachespage_coachform"
-    },
-    {
-      "label": "CoachCard()",
-      "file_type": "code",
-      "source_file": "client/src/pages/admin/CoachesPage.jsx",
-      "source_location": "L42",
-      "community": 44,
-      "norm_label": "coachcard()",
-      "id": "admin_coachespage_coachcard"
-    },
-    {
-      "label": "CoachesPage()",
-      "file_type": "code",
-      "source_file": "client/src/pages/admin/CoachesPage.jsx",
-      "source_location": "L86",
-      "community": 44,
-      "norm_label": "coachespage()",
-      "id": "admin_coachespage_coachespage"
     },
     {
       "label": "Dashboard.jsx",
@@ -16487,7 +16496,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L870",
-      "community": 62,
+      "community": 170,
       "norm_label": "best practices",
       "id": "claude_master_capabilities_best_practices"
     },
@@ -16496,7 +16505,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L872",
-      "community": 62,
+      "community": 170,
       "norm_label": "code conventions (language-neutral)",
       "id": "claude_master_capabilities_code_conventions_language_neutral"
     },
@@ -16505,7 +16514,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L882",
-      "community": 62,
+      "community": 170,
       "norm_label": "agent best practices",
       "id": "claude_master_capabilities_agent_best_practices"
     },
@@ -16514,7 +16523,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L892",
-      "community": 62,
+      "community": 170,
       "norm_label": "documentation best practices",
       "id": "claude_master_capabilities_documentation_best_practices"
     },
@@ -16667,7 +16676,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1133",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:bash (#!/bin/bash)",
       "id": "claude_master_capabilities_codeblock_63"
     },
@@ -16676,7 +16685,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1150",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:bash (#!/bin/bash)",
       "id": "claude_master_capabilities_codeblock_64"
     },
@@ -16703,7 +16712,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1206",
-      "community": 24,
+      "community": 156,
       "norm_label": "code:bash (# show all open work items)",
       "id": "claude_master_capabilities_codeblock_67"
     },
@@ -16712,7 +16721,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1238",
-      "community": 24,
+      "community": 156,
       "norm_label": "code:bash (# session 1: start work)",
       "id": "claude_master_capabilities_codeblock_68"
     },
@@ -16721,7 +16730,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1265",
-      "community": 148,
+      "community": 24,
       "norm_label": "claude code cli",
       "id": "claude_master_capabilities_claude_code_cli"
     },
@@ -16730,7 +16739,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1269",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:bash (# macos)",
       "id": "claude_master_capabilities_codeblock_69"
     },
@@ -16739,7 +16748,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1286",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:bash (claude-code --version)",
       "id": "claude_master_capabilities_codeblock_70"
     },
@@ -16766,7 +16775,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1306",
-      "community": 24,
+      "community": 156,
       "norm_label": "code:bash (# install from jetbrains marketplace)",
       "id": "claude_master_capabilities_codeblock_72"
     },
@@ -16775,7 +16784,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1317",
-      "community": 24,
+      "community": 156,
       "norm_label": "mcp servers (model context protocol)",
       "id": "claude_master_capabilities_mcp_servers_model_context_protocol"
     },
@@ -16784,7 +16793,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1321",
-      "community": 24,
+      "community": 156,
       "norm_label": "code:bash (# create mcp config file)",
       "id": "claude_master_capabilities_codeblock_73"
     },
@@ -16802,7 +16811,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1365",
-      "community": 148,
+      "community": 24,
       "norm_label": "custom skills & agents",
       "id": "claude_master_capabilities_custom_skills_agents"
     },
@@ -16820,7 +16829,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1386",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:markdown (---)",
       "id": "claude_master_capabilities_codeblock_76"
     },
@@ -16829,7 +16838,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1402",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:json ({)",
       "id": "claude_master_capabilities_codeblock_77"
     },
@@ -16838,7 +16847,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1416",
-      "community": 24,
+      "community": 156,
       "norm_label": "testing frameworks",
       "id": "claude_master_capabilities_testing_frameworks"
     },
@@ -16847,7 +16856,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1420",
-      "community": 24,
+      "community": 156,
       "norm_label": "code:bash (# javascript/node.js)",
       "id": "claude_master_capabilities_codeblock_78"
     },
@@ -16856,7 +16865,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1436",
-      "community": 24,
+      "community": 156,
       "norm_label": "code:bash (# jest config (package.json or jest.config.js))",
       "id": "claude_master_capabilities_codeblock_79"
     },
@@ -16892,7 +16901,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1494",
-      "community": 150,
+      "community": 62,
       "norm_label": "plugin checklist for new projects",
       "id": "claude_master_capabilities_plugin_checklist_for_new_projects"
     },
@@ -16901,7 +16910,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1496",
-      "community": 150,
+      "community": 62,
       "norm_label": "code:bash (# step 1: initialize claude code)",
       "id": "claude_master_capabilities_codeblock_82"
     },
@@ -16910,7 +16919,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1534",
-      "community": 150,
+      "community": 62,
       "norm_label": "for agents",
       "id": "claude_master_capabilities_for_agents"
     },
@@ -16919,7 +16928,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1541",
-      "community": 150,
+      "community": 62,
       "norm_label": "for projects",
       "id": "claude_master_capabilities_for_projects"
     },
@@ -16928,7 +16937,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1548",
-      "community": 150,
+      "community": 62,
       "norm_label": "for teams",
       "id": "claude_master_capabilities_for_teams"
     },
@@ -16937,7 +16946,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L922",
-      "community": 150,
+      "community": 62,
       "norm_label": "distribution & usage",
       "id": "claude_master_capabilities_distribution_usage"
     },
@@ -18888,14 +18897,95 @@
   ],
   "links": [
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "CoachesPage.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "coachespage_jsx",
+      "target": "ui_skeleton_cardskeleton",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CoachesPage.jsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "coachespage_jsx",
+      "target": "admin_coachespage_coachform",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CoachesPage.jsx",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "coachespage_jsx",
+      "target": "admin_coachespage_coachcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CoachesPage.jsx",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "coachespage_jsx",
+      "target": "admin_coachespage_coachespage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/pages/admin/CoachesPage.jsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_pages_admin_coachespage_jsx",
+      "target": "admin_coachespage_coachform"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/pages/admin/CoachesPage.jsx",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_pages_admin_coachespage_jsx",
+      "target": "admin_coachespage_coachcard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/pages/admin/CoachesPage.jsx",
+      "source_location": "L86",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_pages_admin_coachespage_jsx",
+      "target": "admin_coachespage_coachespage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CoachingInsightCard.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "coachinginsightcard_jsx",
+      "target": "components_coachinginsightcard_coachinginsightcard"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_md",
-      "target": "client_phase7_frontend_examples_phase_7_frontend_test_examples",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_phase_7_frontend_test_examples"
     },
     {
       "relation": "contains",
@@ -18903,9 +18993,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_phase_7_frontend_test_examples",
-      "target": "client_phase7_frontend_examples_1_coachinginsightcard_component_rendering",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_1_coachinginsightcard_component_rendering"
     },
     {
       "relation": "contains",
@@ -18913,9 +19003,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_phase_7_frontend_test_examples",
-      "target": "client_phase7_frontend_examples_2_notificationbell_integration_type_coaching_insights_detection",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_2_notificationbell_integration_type_coaching_insights_detection"
     },
     {
       "relation": "contains",
@@ -18923,9 +19013,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L98",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_phase_7_frontend_test_examples",
-      "target": "client_phase7_frontend_examples_3_expandable_details_section_confidence_scores",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_3_expandable_details_section_confidence_scores"
     },
     {
       "relation": "contains",
@@ -18933,9 +19023,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L164",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_phase_7_frontend_test_examples",
-      "target": "client_phase7_frontend_examples_4_orange_highlighted_growth_opportunity_section",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_4_orange_highlighted_growth_opportunity_section"
     },
     {
       "relation": "contains",
@@ -18943,9 +19033,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L221",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_phase_7_frontend_test_examples",
-      "target": "client_phase7_frontend_examples_5_coaching_tone_messaging_examples",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_5_coaching_tone_messaging_examples"
     },
     {
       "relation": "contains",
@@ -18953,9 +19043,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L257",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_phase_7_frontend_test_examples",
-      "target": "client_phase7_frontend_examples_test_checklist_for_frontend_features",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_test_checklist_for_frontend_features"
     },
     {
       "relation": "contains",
@@ -18963,9 +19053,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L299",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_phase_7_frontend_test_examples",
-      "target": "client_phase7_frontend_examples_integration_test_scenarios",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_integration_test_scenarios"
     },
     {
       "relation": "contains",
@@ -18973,9 +19063,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_1_coachinginsightcard_component_rendering",
-      "target": "client_phase7_frontend_examples_example_notification_data",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_example_notification_data"
     },
     {
       "relation": "contains",
@@ -18983,9 +19073,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_1_coachinginsightcard_component_rendering",
-      "target": "client_phase7_frontend_examples_visual_output",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_visual_output"
     },
     {
       "relation": "contains",
@@ -18993,9 +19083,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_example_notification_data",
-      "target": "client_phase7_frontend_examples_codeblock_1",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_1"
     },
     {
       "relation": "contains",
@@ -19003,9 +19093,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_visual_output",
-      "target": "client_phase7_frontend_examples_codeblock_2",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_2"
     },
     {
       "relation": "contains",
@@ -19013,9 +19103,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_2_notificationbell_integration_type_coaching_insights_detection",
-      "target": "client_phase7_frontend_examples_test_case_conditional_rendering",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_test_case_conditional_rendering"
     },
     {
       "relation": "contains",
@@ -19023,9 +19113,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_2_notificationbell_integration_type_coaching_insights_detection",
-      "target": "client_phase7_frontend_examples_example_scenarios",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_example_scenarios"
     },
     {
       "relation": "contains",
@@ -19033,9 +19123,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_test_case_conditional_rendering",
-      "target": "client_phase7_frontend_examples_codeblock_3",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_3"
     },
     {
       "relation": "contains",
@@ -19043,9 +19133,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L80",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_example_scenarios",
-      "target": "client_phase7_frontend_examples_codeblock_4",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_4"
     },
     {
       "relation": "contains",
@@ -19053,9 +19143,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L89",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_example_scenarios",
-      "target": "client_phase7_frontend_examples_codeblock_5",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_5"
     },
     {
       "relation": "contains",
@@ -19063,9 +19153,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L100",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_3_expandable_details_section_confidence_scores",
-      "target": "client_phase7_frontend_examples_collapsed_state_default",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_collapsed_state_default"
     },
     {
       "relation": "contains",
@@ -19073,9 +19163,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L112",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_3_expandable_details_section_confidence_scores",
-      "target": "client_phase7_frontend_examples_expanded_state_after_clicking_show_details",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_expanded_state_after_clicking_show_details"
     },
     {
       "relation": "contains",
@@ -19083,9 +19173,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L138",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_3_expandable_details_section_confidence_scores",
-      "target": "client_phase7_frontend_examples_test_data_with_varying_confidence",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_test_data_with_varying_confidence"
     },
     {
       "relation": "contains",
@@ -19093,9 +19183,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L101",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_collapsed_state_default",
-      "target": "client_phase7_frontend_examples_codeblock_6",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_6"
     },
     {
       "relation": "contains",
@@ -19103,9 +19193,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L113",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_expanded_state_after_clicking_show_details",
-      "target": "client_phase7_frontend_examples_codeblock_7",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_7"
     },
     {
       "relation": "contains",
@@ -19113,9 +19203,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L139",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_test_data_with_varying_confidence",
-      "target": "client_phase7_frontend_examples_codeblock_8",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_8"
     },
     {
       "relation": "contains",
@@ -19123,9 +19213,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L166",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_4_orange_highlighted_growth_opportunity_section",
-      "target": "client_phase7_frontend_examples_html_structure",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_html_structure"
     },
     {
       "relation": "contains",
@@ -19133,9 +19223,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L183",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_4_orange_highlighted_growth_opportunity_section",
-      "target": "client_phase7_frontend_examples_tailwind_classes_used",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_tailwind_classes_used"
     },
     {
       "relation": "contains",
@@ -19143,9 +19233,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L190",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_4_orange_highlighted_growth_opportunity_section",
-      "target": "client_phase7_frontend_examples_visual_examples",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_visual_examples"
     },
     {
       "relation": "contains",
@@ -19153,9 +19243,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L167",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_html_structure",
-      "target": "client_phase7_frontend_examples_codeblock_9",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_9"
     },
     {
       "relation": "contains",
@@ -19163,9 +19253,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L193",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_visual_examples",
-      "target": "client_phase7_frontend_examples_codeblock_10",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_10"
     },
     {
       "relation": "contains",
@@ -19173,9 +19263,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L202",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_visual_examples",
-      "target": "client_phase7_frontend_examples_codeblock_11",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_11"
     },
     {
       "relation": "contains",
@@ -19183,9 +19273,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L211",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_visual_examples",
-      "target": "client_phase7_frontend_examples_codeblock_12",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_12"
     },
     {
       "relation": "contains",
@@ -19193,9 +19283,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L223",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_5_coaching_tone_messaging_examples",
-      "target": "client_phase7_frontend_examples_pattern_agent_historical_analysis",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_pattern_agent_historical_analysis"
     },
     {
       "relation": "contains",
@@ -19203,9 +19293,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L231",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_5_coaching_tone_messaging_examples",
-      "target": "client_phase7_frontend_examples_growth_agent_learning_opportunities",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_growth_agent_learning_opportunities"
     },
     {
       "relation": "contains",
@@ -19213,9 +19303,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L239",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_5_coaching_tone_messaging_examples",
-      "target": "client_phase7_frontend_examples_risk_agent_blocker_detection",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_risk_agent_blocker_detection"
     },
     {
       "relation": "contains",
@@ -19223,9 +19313,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L247",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_5_coaching_tone_messaging_examples",
-      "target": "client_phase7_frontend_examples_consensus_messages",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_consensus_messages"
     },
     {
       "relation": "contains",
@@ -19233,9 +19323,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L224",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_pattern_agent_historical_analysis",
-      "target": "client_phase7_frontend_examples_codeblock_13",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_13"
     },
     {
       "relation": "contains",
@@ -19243,9 +19333,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L232",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_growth_agent_learning_opportunities",
-      "target": "client_phase7_frontend_examples_codeblock_14",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_14"
     },
     {
       "relation": "contains",
@@ -19253,9 +19343,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L240",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_risk_agent_blocker_detection",
-      "target": "client_phase7_frontend_examples_codeblock_15",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_15"
     },
     {
       "relation": "contains",
@@ -19263,9 +19353,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L248",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_consensus_messages",
-      "target": "client_phase7_frontend_examples_codeblock_16",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_16"
     },
     {
       "relation": "contains",
@@ -19273,9 +19363,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L259",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_test_checklist_for_frontend_features",
-      "target": "client_phase7_frontend_examples_coachinginsightcard_rendering",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_coachinginsightcard_rendering"
     },
     {
       "relation": "contains",
@@ -19283,9 +19373,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L266",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_test_checklist_for_frontend_features",
-      "target": "client_phase7_frontend_examples_notificationbell_integration",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_notificationbell_integration"
     },
     {
       "relation": "contains",
@@ -19293,9 +19383,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L273",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_test_checklist_for_frontend_features",
-      "target": "client_phase7_frontend_examples_expandable_details",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_expandable_details"
     },
     {
       "relation": "contains",
@@ -19303,9 +19393,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L281",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_test_checklist_for_frontend_features",
-      "target": "client_phase7_frontend_examples_orange_growth_opportunity",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_orange_growth_opportunity"
     },
     {
       "relation": "contains",
@@ -19313,9 +19403,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L289",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_test_checklist_for_frontend_features",
-      "target": "client_phase7_frontend_examples_coaching_tone_messaging",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_coaching_tone_messaging"
     },
     {
       "relation": "contains",
@@ -19323,9 +19413,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L301",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_integration_test_scenarios",
-      "target": "client_phase7_frontend_examples_scenario_1_coach_completes_task",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_scenario_1_coach_completes_task"
     },
     {
       "relation": "contains",
@@ -19333,9 +19423,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L318",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_integration_test_scenarios",
-      "target": "client_phase7_frontend_examples_scenario_2_multiple_notification_types",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_scenario_2_multiple_notification_types"
     },
     {
       "relation": "contains",
@@ -19343,9 +19433,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L330",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_integration_test_scenarios",
-      "target": "client_phase7_frontend_examples_scenario_3_confidence_score_variations",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_scenario_3_confidence_score_variations"
     },
     {
       "relation": "contains",
@@ -19353,9 +19443,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L302",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_scenario_1_coach_completes_task",
-      "target": "client_phase7_frontend_examples_codeblock_17",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_17"
     },
     {
       "relation": "contains",
@@ -19363,9 +19453,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L319",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_scenario_2_multiple_notification_types",
-      "target": "client_phase7_frontend_examples_codeblock_18",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_18"
     },
     {
       "relation": "contains",
@@ -19373,9 +19463,9 @@
       "source_file": "client/PHASE7-FRONTEND-EXAMPLES.md",
       "source_location": "L331",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "client_phase7_frontend_examples_scenario_3_confidence_score_variations",
-      "target": "client_phase7_frontend_examples_codeblock_19",
-      "confidence_score": 1.0
+      "target": "client_phase7_frontend_examples_codeblock_19"
     },
     {
       "relation": "contains",
@@ -19383,9 +19473,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_md",
-      "target": "docs_handoff_phase7_phase_7_handoff_multi_agent_coaching_insights",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_phase_7_handoff_multi_agent_coaching_insights"
     },
     {
       "relation": "contains",
@@ -19393,9 +19483,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_phase_7_handoff_multi_agent_coaching_insights",
-      "target": "docs_handoff_phase7_what_was_built",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_what_was_built"
     },
     {
       "relation": "contains",
@@ -19403,9 +19493,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_phase_7_handoff_multi_agent_coaching_insights",
-      "target": "docs_handoff_phase7_architecture",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_architecture"
     },
     {
       "relation": "contains",
@@ -19413,9 +19503,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L91",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_phase_7_handoff_multi_agent_coaching_insights",
-      "target": "docs_handoff_phase7_how_to_use",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_how_to_use"
     },
     {
       "relation": "contains",
@@ -19423,9 +19513,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L130",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_phase_7_handoff_multi_agent_coaching_insights",
-      "target": "docs_handoff_phase7_testing",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_testing"
     },
     {
       "relation": "contains",
@@ -19433,9 +19523,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L169",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_phase_7_handoff_multi_agent_coaching_insights",
-      "target": "docs_handoff_phase7_deployment",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_deployment"
     },
     {
       "relation": "contains",
@@ -19443,9 +19533,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L206",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_phase_7_handoff_multi_agent_coaching_insights",
-      "target": "docs_handoff_phase7_future_enhancements_phase_8",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_future_enhancements_phase_8"
     },
     {
       "relation": "contains",
@@ -19453,9 +19543,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L225",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_phase_7_handoff_multi_agent_coaching_insights",
-      "target": "docs_handoff_phase7_known_limitations",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_known_limitations"
     },
     {
       "relation": "contains",
@@ -19463,9 +19553,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L243",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_phase_7_handoff_multi_agent_coaching_insights",
-      "target": "docs_handoff_phase7_performance_metrics",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_performance_metrics"
     },
     {
       "relation": "contains",
@@ -19473,9 +19563,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L253",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_phase_7_handoff_multi_agent_coaching_insights",
-      "target": "docs_handoff_phase7_security_compliance",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_security_compliance"
     },
     {
       "relation": "contains",
@@ -19483,9 +19573,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L274",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_phase_7_handoff_multi_agent_coaching_insights",
-      "target": "docs_handoff_phase7_handoff_checklist",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_handoff_checklist"
     },
     {
       "relation": "contains",
@@ -19493,9 +19583,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L307",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_phase_7_handoff_multi_agent_coaching_insights",
-      "target": "docs_handoff_phase7_next_steps",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_next_steps"
     },
     {
       "relation": "contains",
@@ -19503,9 +19593,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L326",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_phase_7_handoff_multi_agent_coaching_insights",
-      "target": "docs_handoff_phase7_support",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_support"
     },
     {
       "relation": "contains",
@@ -19513,9 +19603,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L347",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_phase_7_handoff_multi_agent_coaching_insights",
-      "target": "docs_handoff_phase7_references",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_references"
     },
     {
       "relation": "contains",
@@ -19523,9 +19613,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_what_was_built",
-      "target": "docs_handoff_phase7_feature_overview",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_feature_overview"
     },
     {
       "relation": "contains",
@@ -19533,9 +19623,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_what_was_built",
-      "target": "docs_handoff_phase7_the_3_agent_swarm",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_the_3_agent_swarm"
     },
     {
       "relation": "contains",
@@ -19543,9 +19633,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_architecture",
-      "target": "docs_handoff_phase7_backend_flow",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_backend_flow"
     },
     {
       "relation": "contains",
@@ -19553,9 +19643,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_architecture",
-      "target": "docs_handoff_phase7_files_changed",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_files_changed"
     },
     {
       "relation": "contains",
@@ -19563,9 +19653,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_backend_flow",
-      "target": "docs_handoff_phase7_codeblock_1",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_codeblock_1"
     },
     {
       "relation": "contains",
@@ -19573,9 +19663,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L93",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_how_to_use",
-      "target": "docs_handoff_phase7_for_coaches",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_for_coaches"
     },
     {
       "relation": "contains",
@@ -19583,9 +19673,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L105",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_how_to_use",
-      "target": "docs_handoff_phase7_for_admins",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_for_admins"
     },
     {
       "relation": "contains",
@@ -19593,9 +19683,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L108",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_for_admins",
-      "target": "docs_handoff_phase7_codeblock_2",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_codeblock_2"
     },
     {
       "relation": "contains",
@@ -19603,9 +19693,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L132",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_testing",
-      "target": "docs_handoff_phase7_test_coverage",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_test_coverage"
     },
     {
       "relation": "contains",
@@ -19613,9 +19703,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L147",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_testing",
-      "target": "docs_handoff_phase7_manual_testing",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_manual_testing"
     },
     {
       "relation": "contains",
@@ -19623,9 +19713,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L150",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_manual_testing",
-      "target": "docs_handoff_phase7_codeblock_3",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_codeblock_3"
     },
     {
       "relation": "contains",
@@ -19633,9 +19723,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L171",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_deployment",
-      "target": "docs_handoff_phase7_prerequisites",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_prerequisites"
     },
     {
       "relation": "contains",
@@ -19643,9 +19733,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L189",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_deployment",
-      "target": "docs_handoff_phase7_environment_variables",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_environment_variables"
     },
     {
       "relation": "contains",
@@ -19653,9 +19743,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L197",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_deployment",
-      "target": "docs_handoff_phase7_scaling_considerations",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_scaling_considerations"
     },
     {
       "relation": "contains",
@@ -19663,9 +19753,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L174",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_prerequisites",
-      "target": "docs_handoff_phase7_codeblock_4",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_codeblock_4"
     },
     {
       "relation": "contains",
@@ -19673,9 +19763,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L179",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_prerequisites",
-      "target": "docs_handoff_phase7_codeblock_5",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_codeblock_5"
     },
     {
       "relation": "contains",
@@ -19683,9 +19773,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L184",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_prerequisites",
-      "target": "docs_handoff_phase7_codeblock_6",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_codeblock_6"
     },
     {
       "relation": "contains",
@@ -19693,9 +19783,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L191",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_environment_variables",
-      "target": "docs_handoff_phase7_codeblock_7",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_codeblock_7"
     },
     {
       "relation": "contains",
@@ -19703,9 +19793,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L208",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_future_enhancements_phase_8",
-      "target": "docs_handoff_phase7_short_term",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_short_term"
     },
     {
       "relation": "contains",
@@ -19713,9 +19803,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L213",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_future_enhancements_phase_8",
-      "target": "docs_handoff_phase7_medium_term",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_medium_term"
     },
     {
       "relation": "contains",
@@ -19723,9 +19813,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L218",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_future_enhancements_phase_8",
-      "target": "docs_handoff_phase7_long_term",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_long_term"
     },
     {
       "relation": "contains",
@@ -19733,9 +19823,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L255",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_security_compliance",
-      "target": "docs_handoff_phase7_data_handling",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_data_handling"
     },
     {
       "relation": "contains",
@@ -19743,9 +19833,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L261",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_security_compliance",
-      "target": "docs_handoff_phase7_privacy",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_privacy"
     },
     {
       "relation": "contains",
@@ -19753,9 +19843,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L267",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_security_compliance",
-      "target": "docs_handoff_phase7_compliance",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_compliance"
     },
     {
       "relation": "contains",
@@ -19763,9 +19853,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L276",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_handoff_checklist",
-      "target": "docs_handoff_phase7_code_ready",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_code_ready"
     },
     {
       "relation": "contains",
@@ -19773,9 +19863,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L284",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_handoff_checklist",
-      "target": "docs_handoff_phase7_documentation",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_documentation"
     },
     {
       "relation": "contains",
@@ -19783,9 +19873,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L291",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_handoff_checklist",
-      "target": "docs_handoff_phase7_testing_291",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_testing_291"
     },
     {
       "relation": "contains",
@@ -19793,9 +19883,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L298",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_handoff_checklist",
-      "target": "docs_handoff_phase7_deployment_ready",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_deployment_ready"
     },
     {
       "relation": "contains",
@@ -19803,9 +19893,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L309",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_next_steps",
-      "target": "docs_handoff_phase7_immediate_day_1",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_immediate_day_1"
     },
     {
       "relation": "contains",
@@ -19813,9 +19903,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L314",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_next_steps",
-      "target": "docs_handoff_phase7_week_1",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_week_1"
     },
     {
       "relation": "contains",
@@ -19823,9 +19913,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L319",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_next_steps",
-      "target": "docs_handoff_phase7_month_1",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_month_1"
     },
     {
       "relation": "contains",
@@ -19833,9 +19923,9 @@
       "source_file": "docs/HANDOFF-PHASE7.md",
       "source_location": "L328",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_handoff_phase7_support",
-      "target": "docs_handoff_phase7_common_questions",
-      "confidence_score": 1.0
+      "target": "docs_handoff_phase7_common_questions"
     },
     {
       "relation": "contains",
@@ -19893,9 +19983,9 @@
       "source_file": "server/cron.js",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_cron_js",
-      "target": "server_cron_scheduledtasks",
-      "confidence_score": 1.0
+      "target": "server_cron_scheduledtasks"
     },
     {
       "relation": "contains",
@@ -19913,9 +20003,9 @@
       "source_file": "server/cron.js",
       "source_location": "L89",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_cron_js",
-      "target": "server_cron_stopjobs",
-      "confidence_score": 1.0
+      "target": "server_cron_stopjobs"
     },
     {
       "relation": "imports_from",
@@ -19924,9 +20014,9 @@
       "source_file": "server/test-setup.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_setup_js",
-      "target": "server_cron_js",
-      "confidence_score": 1.0
+      "target": "server_cron_js"
     },
     {
       "relation": "imports_from",
@@ -20012,9 +20102,9 @@
       "source_file": "server/test-setup.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_setup_js",
-      "target": "server_cron_stopjobs",
-      "confidence_score": 1.0
+      "target": "server_cron_stopjobs"
     },
     {
       "relation": "contains",
@@ -20432,9 +20522,9 @@
       "source_file": "server/package.json",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_package_dependencies",
-      "target": "server_package_dependencies_google_generative_ai",
-      "confidence_score": 1.0
+      "target": "server_package_dependencies_google_generative_ai"
     },
     {
       "relation": "contains",
@@ -20492,9 +20582,9 @@
       "source_file": "server/package.json",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_package_dependencies",
-      "target": "server_package_dependencies_groq_sdk",
-      "confidence_score": 1.0
+      "target": "server_package_dependencies_groq_sdk"
     },
     {
       "relation": "contains",
@@ -20562,9 +20652,9 @@
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_routes_coaching_insights_js",
-      "target": "routes_coaching_insights_db",
-      "confidence_score": 1.0
+      "target": "routes_coaching_insights_db"
     },
     {
       "relation": "contains",
@@ -20572,9 +20662,9 @@
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_routes_coaching_insights_js",
-      "target": "routes_coaching_insights_groq",
-      "confidence_score": 1.0
+      "target": "routes_coaching_insights_groq"
     },
     {
       "relation": "contains",
@@ -20582,9 +20672,9 @@
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_routes_coaching_insights_js",
-      "target": "routes_coaching_insights_queuecoachinginsights",
-      "confidence_score": 1.0
+      "target": "routes_coaching_insights_queuecoachinginsights"
     },
     {
       "relation": "contains",
@@ -20592,9 +20682,9 @@
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_routes_coaching_insights_js",
-      "target": "routes_coaching_insights_analyzecoachbehavior",
-      "confidence_score": 1.0
+      "target": "routes_coaching_insights_analyzecoachbehavior"
     },
     {
       "relation": "contains",
@@ -20602,9 +20692,9 @@
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L75",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_routes_coaching_insights_js",
-      "target": "routes_coaching_insights_fetchcoachhistory",
-      "confidence_score": 1.0
+      "target": "routes_coaching_insights_fetchcoachhistory"
     },
     {
       "relation": "contains",
@@ -20612,9 +20702,9 @@
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L98",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_routes_coaching_insights_js",
-      "target": "routes_coaching_insights_callagentswarm",
-      "confidence_score": 1.0
+      "target": "routes_coaching_insights_callagentswarm"
     },
     {
       "relation": "contains",
@@ -20622,9 +20712,9 @@
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L119",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_routes_coaching_insights_js",
-      "target": "routes_coaching_insights_buildcontext",
-      "confidence_score": 1.0
+      "target": "routes_coaching_insights_buildcontext"
     },
     {
       "relation": "contains",
@@ -20632,9 +20722,9 @@
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L147",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_routes_coaching_insights_js",
-      "target": "routes_coaching_insights_callpatternagent",
-      "confidence_score": 1.0
+      "target": "routes_coaching_insights_callpatternagent"
     },
     {
       "relation": "contains",
@@ -20642,9 +20732,9 @@
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L174",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_routes_coaching_insights_js",
-      "target": "routes_coaching_insights_callgrowthagent",
-      "confidence_score": 1.0
+      "target": "routes_coaching_insights_callgrowthagent"
     },
     {
       "relation": "contains",
@@ -20652,9 +20742,9 @@
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L201",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_routes_coaching_insights_js",
-      "target": "routes_coaching_insights_callriskagent",
-      "confidence_score": 1.0
+      "target": "routes_coaching_insights_callriskagent"
     },
     {
       "relation": "contains",
@@ -20662,9 +20752,9 @@
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L228",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_routes_coaching_insights_js",
-      "target": "routes_coaching_insights_parseagentresponse",
-      "confidence_score": 1.0
+      "target": "routes_coaching_insights_parseagentresponse"
     },
     {
       "relation": "contains",
@@ -20672,9 +20762,9 @@
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L238",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_routes_coaching_insights_js",
-      "target": "routes_coaching_insights_extractsummary",
-      "confidence_score": 1.0
+      "target": "routes_coaching_insights_extractsummary"
     },
     {
       "relation": "contains",
@@ -20682,9 +20772,9 @@
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L244",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_routes_coaching_insights_js",
-      "target": "routes_coaching_insights_extractconfidence",
-      "confidence_score": 1.0
+      "target": "routes_coaching_insights_extractconfidence"
     },
     {
       "relation": "contains",
@@ -20692,9 +20782,9 @@
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L261",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_routes_coaching_insights_js",
-      "target": "routes_coaching_insights_buildconsensus",
-      "confidence_score": 1.0
+      "target": "routes_coaching_insights_buildconsensus"
     },
     {
       "relation": "contains",
@@ -20702,9 +20792,9 @@
       "source_file": "server/routes/coaching-insights.js",
       "source_location": "L282",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_routes_coaching_insights_js",
-      "target": "routes_coaching_insights_createcoachinginsightnotification",
-      "confidence_score": 1.0
+      "target": "routes_coaching_insights_createcoachinginsightnotification"
     },
     {
       "relation": "imports_from",
@@ -20713,9 +20803,9 @@
       "source_file": "server/routes/tasks.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_routes_tasks_js",
-      "target": "server_routes_coaching_insights_js",
-      "confidence_score": 1.0
+      "target": "server_routes_coaching_insights_js"
     },
     {
       "relation": "contains",
@@ -20755,9 +20845,9 @@
       "source_file": "server/routes/tasks.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_routes_tasks_js",
-      "target": "routes_coaching_insights_queuecoachinginsights",
-      "confidence_score": 1.0
+      "target": "routes_coaching_insights_queuecoachinginsights"
     },
     {
       "relation": "imports",
@@ -21285,9 +21375,9 @@
       "source_file": "server/routes/tasks.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_routes_tasks_js",
-      "target": "routes_tasks_queuecoachinginsights",
-      "confidence_score": 1.0
+      "target": "routes_tasks_queuecoachinginsights"
     },
     {
       "relation": "contains",
@@ -21847,9 +21937,9 @@
       "source_file": "server/test-setup.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_test_setup_js",
-      "target": "server_test_setup_stopjobs",
-      "confidence_score": 1.0
+      "target": "server_test_setup_stopjobs"
     },
     {
       "relation": "contains",
@@ -29848,16 +29938,6 @@
       "target": "components_notificationbell_notificationbell"
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CoachingInsightCard.jsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "coachinginsightcard_jsx",
-      "target": "components_coachinginsightcard_coachinginsightcard"
-    },
-    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -35538,36 +35618,6 @@
       "confidence_score": 1.0,
       "source": "client_src_pages_loginpage_test_jsx",
       "target": "pages_loginpage_test_user"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/pages/admin/CoachesPage.jsx",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_pages_admin_coachespage_jsx",
-      "target": "admin_coachespage_coachform"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/pages/admin/CoachesPage.jsx",
-      "source_location": "L42",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_pages_admin_coachespage_jsx",
-      "target": "admin_coachespage_coachcard"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/pages/admin/CoachesPage.jsx",
-      "source_location": "L86",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_pages_admin_coachespage_jsx",
-      "target": "admin_coachespage_coachespage"
     },
     {
       "relation": "contains",
@@ -42201,5 +42251,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "12eaa7a36e29abc6c690e0f426d5bba1950640d8"
+  "built_at_commit": "ac27be4c90bbaf7543902a9142aadbe4f2be38c2"
 }

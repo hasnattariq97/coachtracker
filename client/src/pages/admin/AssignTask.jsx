@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import toast from 'react-hot-toast';
-import { PlusCircle, ChevronLeft, Check } from 'lucide-react';
+import { PlusCircle, ChevronLeft, Check, Link as LinkIcon, X } from 'lucide-react';
 import Card from '../../components/ui/Card';
 import Button from '../../components/ui/Button';
 
@@ -11,7 +11,8 @@ const AssignTask = () => {
   const [coachesError, setCoachesError] = useState(false);
   const [loading, setLoading]     = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
-  const [form, setForm]           = useState({ coach_ids: [], title: '', description: '', priority: 'medium', due_date: '' });
+  const [form, setForm]           = useState({ coach_ids: [], title: '', description: '', priority: 'medium', due_date: '', links: [] });
+  const [newLink, setNewLink]     = useState({ label: '', url: '' });
   const dropdownRef = useRef(null);
   const navigate = useNavigate();
 
@@ -52,6 +53,29 @@ const AssignTask = () => {
     }));
   };
 
+  const addLink = () => {
+    if (!newLink.label.trim() || !newLink.url.trim()) {
+      toast.error('Please enter both label and URL');
+      return;
+    }
+    if (!newLink.url.match(/^https?:\/\//)) {
+      toast.error('URL must start with http:// or https://');
+      return;
+    }
+    setForm(f => ({
+      ...f,
+      links: [...f.links, { label: newLink.label, url: newLink.url }]
+    }));
+    setNewLink({ label: '', url: '' });
+  };
+
+  const removeLink = (index) => {
+    setForm(f => ({
+      ...f,
+      links: f.links.filter((_, i) => i !== index)
+    }));
+  };
+
   const selectedCoaches = coaches.filter(c => form.coach_ids.includes(c.id));
   const minDate = new Date().toISOString().split('T')[0];
 
@@ -65,6 +89,7 @@ const AssignTask = () => {
         priority: form.priority,
         due_date: new Date(form.due_date).toISOString(),
         coach_ids: form.coach_ids,
+        links: form.links,
       });
       toast.success(`Task assigned to ${selectedCoaches.length} coach${selectedCoaches.length > 1 ? 'es' : ''}! 🎯`);
       navigate('/admin/tasks');
@@ -240,7 +265,72 @@ const AssignTask = () => {
             </div>
           </div>
 
-          <div className="flex gap-3 pt-2">
+          {/* Resources/Links Section */}
+          <div className="pt-2 border-t border-slate-200">
+            <label className="block text-sm font-medium text-primary-800 mb-3">
+              📎 Attach Resources <span className="text-slate-400 font-normal">(optional)</span>
+            </label>
+            <p className="text-xs text-slate-500 mb-3">
+              Add links to docs, sheets, drives, or other resources your coach will need.
+            </p>
+
+            {/* Add Link Form */}
+            <div className="space-y-2 mb-4 p-3 bg-slate-50 rounded-lg border border-slate-200">
+              <div className="grid grid-cols-2 gap-2">
+                <input
+                  type="text"
+                  placeholder="e.g., Google Sheet, Design Doc"
+                  value={newLink.label}
+                  onChange={(e) => setNewLink(l => ({ ...l, label: e.target.value }))}
+                  className="px-3 py-2 border border-slate-200 rounded-lg text-sm bg-white focus:border-primary-400 focus:ring-2 focus:ring-primary-100 outline-none transition-all"
+                />
+                <input
+                  type="url"
+                  placeholder="https://..."
+                  value={newLink.url}
+                  onChange={(e) => setNewLink(l => ({ ...l, url: e.target.value }))}
+                  className="px-3 py-2 border border-slate-200 rounded-lg text-sm bg-white focus:border-primary-400 focus:ring-2 focus:ring-primary-100 outline-none transition-all"
+                />
+              </div>
+              <button
+                type="button"
+                onClick={addLink}
+                className="w-full px-3 py-2 bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+              >
+                <LinkIcon size={14} /> Add Link
+              </button>
+            </div>
+
+            {/* Links List */}
+            {form.links.length > 0 && (
+              <div className="space-y-2 mb-4">
+                {form.links.map((link, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-center justify-between p-3 bg-primary-50 border border-primary-200 rounded-lg group"
+                  >
+                    <div className="flex items-center gap-2 min-w-0">
+                      <LinkIcon size={14} className="text-primary-600 flex-shrink-0" />
+                      <div className="min-w-0">
+                        <p className="text-sm font-medium text-primary-900">{link.label}</p>
+                        <p className="text-xs text-primary-600 truncate">{link.url}</p>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => removeLink(idx)}
+                      className="ml-2 p-1.5 hover:bg-red-100 text-slate-400 hover:text-red-600 rounded-lg transition-colors flex-shrink-0"
+                      aria-label="Remove link"
+                    >
+                      <X size={16} />
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div className="flex gap-3 pt-4">
             <Button type="button" variant="secondary" className="flex-1" onClick={() => navigate(-1)}>Cancel</Button>
             <Button type="submit" loading={loading} icon={PlusCircle} className="flex-1">Assign Task</Button>
           </div>

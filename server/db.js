@@ -126,4 +126,12 @@ try {
   if (!e.message.includes('duplicate column')) throw e;
 }
 
+// Add links column for task resources
+try {
+  db.exec(`ALTER TABLE tasks ADD COLUMN links TEXT;`);
+  console.log('✓ Added links column to tasks');
+} catch (e) {
+  if (!e.message.includes('duplicate column')) throw e;
+}
+
 module.exports = db;

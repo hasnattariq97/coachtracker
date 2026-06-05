@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, Pencil, Trash2, Calendar, User, Tag, Clock, MessageSquare } from 'lucide-react';
+import { X, Pencil, Trash2, Calendar, User, Tag, Clock, MessageSquare, Link as LinkIcon, ExternalLink } from 'lucide-react';
 import Badge from './ui/Badge';
 import Button from './ui/Button';
 
@@ -118,6 +118,34 @@ const TaskDetailSlideOver = ({ task, instances, onClose, onEdit, onDelete, onRef
                 <MessageSquare size={12} /> Delay Reason
               </p>
               <p className="text-sm text-amber-800 leading-relaxed">{task.delay_reason}</p>
+            </div>
+          )}
+
+          {task.links && task.links.length > 0 && (
+            <div className="space-y-3">
+              <p className="text-xs font-semibold text-slate-600 flex items-center gap-1.5">
+                <LinkIcon size={13} /> 📎 Resources
+              </p>
+              <div className="space-y-2">
+                {task.links.map((link, idx) => (
+                  <a
+                    key={idx}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between p-3 bg-primary-50 hover:bg-primary-100 border border-primary-200 rounded-lg transition-colors group"
+                  >
+                    <div className="flex items-center gap-2 min-w-0">
+                      <LinkIcon size={14} className="text-primary-600 flex-shrink-0" />
+                      <div className="min-w-0">
+                        <p className="text-sm font-medium text-primary-900">{link.label}</p>
+                        <p className="text-xs text-primary-600 truncate">{link.url}</p>
+                      </div>
+                    </div>
+                    <ExternalLink size={14} className="text-primary-400 group-hover:text-primary-600 flex-shrink-0 ml-2" />
+                  </a>
+                ))}
+              </div>
             </div>
           )}
         </div>

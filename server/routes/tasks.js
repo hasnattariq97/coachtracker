@@ -38,13 +38,18 @@ const VALID_STATUSES = ['assigned', 'in_progress', 'completed', 'overdue'];
 const VALID_PRIORITIES = ['low', 'medium', 'high'];
 
 const getTaskWithCoachName = (taskId) => {
-  return db.prepare(`
+  const task = db.prepare(`
     SELECT t.*, u.name as coach_name,
       CAST((julianday(t.due_date) - julianday('now')) AS INTEGER) as days_left
     FROM tasks t
     JOIN users u ON t.coach_id = u.id
     WHERE t.id = ?
   `).get(taskId);
+
+  if (task && task.links) {
+    task.links = JSON.parse(task.links);
+  }
+  return task;
 };
 
 const getTasksQuery = (whereClause = '', params = []) => {
@@ -56,7 +61,11 @@ const getTasksQuery = (whereClause = '', params = []) => {
     ${whereClause ? 'WHERE ' + whereClause : ''}
     ORDER BY t.due_date ASC
   `;
-  return db.prepare(sql).all(...params);
+  const tasks = db.prepare(sql).all(...params);
+  return tasks.map(task => ({
+    ...task,
+    links: task.links ? JSON.parse(task.links) : []
+  }));
 };
 
 // BATCH A: Read Endpoints
@@ -130,7 +139,7 @@ router.get('/:id', (req, res) => {
 // BATCH B: Write Endpoints
 
 router.post('/', requireAdmin, (req, res) => {
-  const { coach_ids, coach_id, title, description, priority, due_date } = req.body;
+  const { coach_ids, coach_id, title, description, priority, due_date, links } = req.body;
 
   // Support both single coach_id (legacy) and multiple coach_ids (new)
   const coachIdsArray = coach_ids && Array.isArray(coach_ids) ? coach_ids : (coach_id ? [coach_id] : []);
@@ -173,16 +182,18 @@ router.post('/', requireAdmin, (req, res) => {
 
     // Create tasks in loop (one per coach)
     const insertStmt = db.prepare(`
-      INSERT INTO tasks (coach_id, title, description, priority, due_date, status, assigned_at)
-      VALUES (?, ?, ?, ?, ?, 'assigned', datetime('now'))
+      INSERT INTO tasks (coach_id, title, description, priority, due_date, status, assigned_at, links)
+      VALUES (?, ?, ?, ?, ?, 'assigned', datetime('now'), ?)
     `);
 
     const createdTasks = [];
     const dueDateFormatted = formatDueDate(due_date);
     const notificationMessage = `You've got a new challenge! 🎯 '${title}' — let's make it happen by ${dueDateFormatted}.`;
 
+    const linksJson = links && links.length > 0 ? JSON.stringify(links) : null;
+
     for (const coachId of validCoaches) {
-      const result = insertStmt.run(coachId, title, description || null, priority, due_date);
+      const result = insertStmt.run(coachId, title, description || null, priority, due_date, linksJson);
       const taskId = result.lastInsertRowid;
       createdTasks.push({ id: taskId, coach_id: coachId });
       createNotification(coachId, taskId, 'assigned', notificationMessage);
@@ -198,6 +209,7 @@ router.post('/', requireAdmin, (req, res) => {
         description: description !== undefined ? description : null,
         priority,
         due_date,
+        links: links || [],
         status: 'assigned'
       });
     } else {
@@ -209,6 +221,7 @@ router.post('/', requireAdmin, (req, res) => {
           description: description !== undefined ? description : null,
           priority,
           due_date,
+          links: links || [],
           status: 'assigned'
         }))
       });
