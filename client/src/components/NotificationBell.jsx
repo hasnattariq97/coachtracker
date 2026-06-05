@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Bell, CheckCheck, X } from 'lucide-react';
 import toast from 'react-hot-toast';
 import axios from 'axios';
+import CoachingInsightCard from './CoachingInsightCard';
 
 const typeStyles = {
   assigned:       'border-l-primary-500',
@@ -143,27 +144,35 @@ const NotificationBell = () => {
               </div>
             ) : (
               notifications.slice(0, 20).map(n => (
-                <button
-                  key={n.id}
-                  onClick={() => markRead(n.id)}
-                  className={`
-                    w-full text-left px-4 py-3 border-b border-slate-50 border-l-4
-                    hover:bg-slate-50 transition-colors
-                    ${typeStyles[n.type] || 'border-l-slate-300'}
-                    ${!n.read ? 'bg-primary-50/50' : 'bg-white'}
-                  `}
-                >
-                  <div className="flex items-start gap-2.5">
-                    <span className="text-base mt-0.5 shrink-0">{typeIcons[n.type] || '🔔'}</span>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-xs text-slate-700 leading-snug">{n.message}</p>
-                      <p className="text-[10px] text-slate-400 mt-1">
-                        {new Date(n.created_at).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
-                      </p>
-                    </div>
-                    {!n.read && <span className="w-2 h-2 bg-primary-500 rounded-full shrink-0 mt-1.5" />}
-                  </div>
-                </button>
+                <div key={n.id} className="border-b border-slate-50">
+                  {n.type === 'coaching_insights' ? (
+                    <CoachingInsightCard
+                      notification={n}
+                      onDismiss={() => markRead(n.id)}
+                    />
+                  ) : (
+                    <button
+                      onClick={() => markRead(n.id)}
+                      className={`
+                        w-full text-left px-4 py-3 border-l-4
+                        hover:bg-slate-50 transition-colors
+                        ${typeStyles[n.type] || 'border-l-slate-300'}
+                        ${!n.read ? 'bg-primary-50/50' : 'bg-white'}
+                      `}
+                    >
+                      <div className="flex items-start gap-2.5">
+                        <span className="text-base mt-0.5 shrink-0">{typeIcons[n.type] || '🔔'}</span>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-xs text-slate-700 leading-snug">{n.message}</p>
+                          <p className="text-[10px] text-slate-400 mt-1">
+                            {new Date(n.created_at).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
+                          </p>
+                        </div>
+                        {!n.read && <span className="w-2 h-2 bg-primary-500 rounded-full shrink-0 mt-1.5" />}
+                      </div>
+                    </button>
+                  )}
+                </div>
               ))
             )}
           </div>
