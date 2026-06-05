@@ -46,8 +46,13 @@ const getTaskWithCoachName = (taskId) => {
     WHERE t.id = ?
   `).get(taskId);
 
-  if (task && task.links) {
-    task.links = JSON.parse(task.links);
+  if (task) {
+    try {
+      task.links = task.links ? JSON.parse(task.links) : [];
+    } catch (e) {
+      console.error('Error parsing links for task', taskId, ':', e);
+      task.links = [];
+    }
   }
   return task;
 };
@@ -62,10 +67,20 @@ const getTasksQuery = (whereClause = '', params = []) => {
     ORDER BY t.due_date ASC
   `;
   const tasks = db.prepare(sql).all(...params);
-  return tasks.map(task => ({
-    ...task,
-    links: task.links ? JSON.parse(task.links) : []
-  }));
+  return tasks.map(task => {
+    try {
+      return {
+        ...task,
+        links: task.links ? JSON.parse(task.links) : []
+      };
+    } catch (e) {
+      console.error('Error parsing links for task', task.id, ':', e);
+      return {
+        ...task,
+        links: []
+      };
+    }
+  });
 };
 
 // BATCH A: Read Endpoints
