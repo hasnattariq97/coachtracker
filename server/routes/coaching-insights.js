@@ -148,7 +148,8 @@ async function callPatternAgent(context) {
   try {
     const systemPrompt = `You are a Pattern Analysis Agent. Analyze a coach's task completion history and current event to identify patterns.
 Focus on: on-time completion rate, delays, consistency, patterns by task type or deadline.
-Respond with 2-3 specific observations about this coach's patterns. Be concise and actionable.`;
+Respond with 2-3 specific observations about this coach's patterns. Be concise and actionable.
+IMPORTANT: Vary your observations - mention specific metrics (e.g., "3 of last 5 tasks on-time") or patterns (e.g., "tends to slip on high-priority tasks"). Avoid generic praise.`;
 
     const message = await client.chat.completions.create({
       model: GROQ_MODEL,
@@ -175,7 +176,8 @@ async function callGrowthAgent(context) {
   try {
     const systemPrompt = `You are a Growth Coach Agent. Identify learning opportunities and professional growth from a coach's task performance.
 Focus on: strengths to leverage, skills to develop, positive momentum.
-Respond with 1-2 encouraging observations and a concrete growth opportunity. Use coaching tone (supportive, growth-focused).`;
+Respond with 1-2 encouraging observations and a concrete growth opportunity. Use coaching tone (supportive, growth-focused).
+IMPORTANT: Avoid starting with "Excellent!" or generic praise. Instead, be specific about what this coach did well or can improve.`;
 
     const message = await client.chat.completions.create({
       model: GROQ_MODEL,
@@ -283,10 +285,15 @@ function createCoachingInsightNotification(coachId, taskId, results, status) {
   const task = db.prepare('SELECT title FROM tasks WHERE id = ?').get(taskId);
   if (!task) return;
 
-  const message =
-    status === 'success' && results
-      ? results.consensus || 'Great work! Keep this momentum going.'
-      : 'Insights pending. Check back soon!';
+  let message;
+  if (status === 'success' && results) {
+    // Create a more varied message by combining task context
+    const taskTitle = task.title.length > 30 ? task.title.substring(0, 27) + '...' : task.title;
+    const consensus = results.consensus || 'Great work! Keep this momentum going.';
+    message = `On "${taskTitle}": ${consensus}`;
+  } else {
+    message = 'Insights pending. Check back soon!';
+  }
 
   const metadata = results ? JSON.stringify(results) : null;
 
