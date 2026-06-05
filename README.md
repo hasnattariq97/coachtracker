@@ -103,17 +103,20 @@ d:\Cursor_new\
 ### Admin
 - Create and manage coaches
 - Assign tasks with priority and deadline (single or multiple coaches)
+- **Attach resource links** (Google Sheets, Drive, Docs, etc.) to tasks
 - Multi-coach assignment: assign one task to several coaches with individual notifications
 - View all task progress
 - Read delay reasons from coaches
 - Get notifications when tasks complete or are overdue
 
 ### Coach
-- View assigned tasks
+- View assigned tasks with attached resources
+- **Click links** to access docs, sheets, and drive folders
 - Mark tasks as complete
 - Submit delay reasons for overdue tasks
 - Get auto-nudged at task midpoint
 - Get overdue notifications
+- Receive **coaching insights** (AI analysis of performance patterns)
 
 ### Automated
 - **Midpoint nudge**: Coach notified when 50% of task time has elapsed

@@ -212,8 +212,32 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 - [x] Risk Agent: flags recurring delays or blockers
 - [x] Results stored as coaching_insights notifications to coach
 - [x] Can verify UI state with agent-browser in live app
+- [x] Messages diversified by task context and specific metrics (not generic praise)
 
 **Implementation:** Async fire-and-forget via **Groq API** (free tier, no credit card). Uses llama-3.3-70b-versatile model. Agents call in parallel (10s timeout each, 30s total). Results stored in notifications table with structured metadata. UI renders special card with expandable details. **Setup:** Get free Groq key at https://console.groq.com, add `GROQ_API_KEY=gsk_...` to `server/.env`.
+
+---
+
+## Phase 7+ — Task Resource Links ✅
+**Feature:** Attach resource links (Google Sheets, Drive folders, Docs, etc.) to task assignments so coaches can access all context in one place.
+
+### Backend ✅
+- [x] server/db.js: `links` TEXT column on tasks table (stores JSON array)
+- [x] server/routes/tasks.js POST: accepts `links` parameter (array of {label, url})
+- [x] Validates URLs (must be http/https)
+- [x] Stores as JSON, returns in task responses
+- [x] Multi-coach assignment: each coach gets identical links
+
+### Frontend ✅
+- [x] client/src/pages/admin/AssignTask.jsx: "📎 Attach Resources" section
+- [x] Add Link button: label + URL validation
+- [x] Remove Link button: per-link deletion
+- [x] Display shows teal link cards before form submission
+- [x] client/src/components/TaskCard.jsx: "📎 Resources" section with clickable links
+- [x] client/src/components/TaskDetailSlideOver.jsx: Admin modal shows links
+- [x] Links open in new tab with external link icon
+
+**Verified:** Links saved to database ✅ Display on coach dashboard ✅ Clickable and functional ✅
 
 ---
 
@@ -231,11 +255,12 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 | 6 | Security Audit | ✅ Complete | 33/33 |
 | 6+ | Agent-Browser E2E Testing | ✅ Complete | 11/11 |
 | 7 | Multi-Agent Insights | ✅ Complete | 15+ tests |
+| 7+ | Task Resource Links | ✅ Complete | ✅ E2E verified |
 
 **Total Tests Passing:** 119+ (108 backend unit/integration + 11 E2E via agent-browser)  
 **E2E Testing:** Agent-browser integration complete and verified  
 **Security Findings:** 11/11 resolved (0 critical, 0 active bypasses)
-**Features Complete:** 9/9 (plus Phase 3+ multi-coach, Phase 6+ E2E testing, Phase 7 coaching insights)
+**Features Complete:** 11/11 (Phases 0-7 plus multi-coach & resource links)
 
 ---
 

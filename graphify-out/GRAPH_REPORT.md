@@ -1,16 +1,16 @@
 # Graph Report - Cursor_new  (2026-06-05)
 
 ## Corpus Check
-- 198 files · ~214,930 words
+- 198 files · ~215,013 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2113 nodes · 2331 edges · 171 communities (164 shown, 7 thin omitted)
+- 2113 nodes · 2332 edges · 171 communities (164 shown, 7 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `895cc8df`
+- Built from commit: `15ad1953`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -283,8 +283,8 @@ Cohesion: 0.17
 Nodes (12): 1. Local Memory (.claude/projects/*/memory/), 2. AgentDB (Ruflo Vector Database), 3. SONA Learning (Neural Trajectories), code:block35 (.claude/projects/{project_name}/memory/), code:markdown (---), code:markdown (---), code:markdown (---), code:markdown (---) (+4 more)
 
 ### Community 24 - "Community 24"
-Cohesion: 0.15
-Nodes (16): Beads Work-Tracking System, code:bash (# Create .beads/ directory structure), code:bash (# Create helper script at .claude/hooks/bootstrap-beads.sh), code:json ({), code:bash (#!/bin/bash), code:yaml (---), code:bash (# Show all open work items), code:bash (# Session 1: Start work) (+8 more)
+Cohesion: 0.16
+Nodes (16): Beads Work-Tracking System, Claude Code CLI, code:bash (# Create .beads/ directory structure), code:bash (# Create helper script at .claude/hooks/bootstrap-beads.sh), code:json ({), code:bash (#!/bin/bash), code:bash (#!/bin/bash), code:bash (#!/bin/bash) (+8 more)
 
 ### Community 27 - "Community 27"
 Cohesion: 0.11
@@ -308,7 +308,7 @@ Nodes (11): code:bash (cd d:\Cursor_new\server), code:bash (cd d:\Cursor_new\cli
 
 ### Community 32 - "Community 32"
 Cohesion: 0.15
-Nodes (12): code:javascript (import { render, screen, waitFor } from '@testing-library/re), code:bash (cd d:\Cursor_new\client), code:javascript (import { render, screen } from '@testing-library/react';), code:bash (cd d:\Cursor_new\client), code:javascript (import { render, screen, waitFor } from '@testing-library/re), code:bash (cd d:\Cursor_new\client), Phase 1: Auth System Implementation Plan, Security Checklist (Final Review) (+4 more)
+Nodes (12): code:javascript (import request from 'supertest';), code:bash (cd d:\Cursor_new\server), code:javascript (import { render, screen, waitFor } from '@testing-library/re), code:bash (cd d:\Cursor_new\client), code:javascript (import { render, screen, waitFor } from '@testing-library/re), code:bash (cd d:\Cursor_new\client), Phase 1: Auth System Implementation Plan, Security Checklist (Final Review) (+4 more)
 
 ### Community 33 - "Community 33"
 Cohesion: 0.25
@@ -399,8 +399,8 @@ Cohesion: 0.29
 Nodes (7): Building a Feature (Superpowers Cycle), code:block45 (1. BRAINSTORM), code:block46 (1. REPRODUCE), code:block47 (Task: Build multi-user system), Debugging a Bug (Systematic Approach), Parallel Agent Development, Patterns & Workflows
 
 ### Community 62 - "Community 62"
-Cohesion: 0.14
-Nodes (16): Agent Best Practices, Best Practices, Claude Core Capabilities, Code Conventions (Language-Neutral), code:bash (# Step 1: Initialize Claude Code), Distribution & Usage, Documentation Best Practices, For Agents (+8 more)
+Cohesion: 0.19
+Nodes (12): Claude Core Capabilities, code:bash (# Step 1: Initialize Claude Code), Distribution & Usage, For Agents, For Projects, For Teams, Guarantees & Constraints, Master Capabilities Reference (+4 more)
 
 ### Community 63 - "Community 63"
 Cohesion: 0.08
@@ -703,8 +703,8 @@ Cohesion: 0.22
 Nodes (9): Coaching Insights Analysis Results, code:block10 (Confidence: 75%), code:block11 ("I'm thrilled to see you've completed the 'Chrome DevTools E), code:block8 (Confidence: 70%), code:block9 (Confidence: 50%), Consensus Message ✅, Growth Agent ✅, Pattern Agent ✅ (+1 more)
 
 ### Community 148 - "Community 148"
-Cohesion: 0.29
-Nodes (8): Claude Code CLI, code:bash (#!/bin/bash), code:bash (#!/bin/bash), code:bash (# macOS), code:bash (claude-code --version), code:markdown (---), code:json ({), Custom Skills & Agents
+Cohesion: 0.5
+Nodes (4): Agent Best Practices, Best Practices, Code Conventions (Language-Neutral), Documentation Best Practices
 
 ### Community 149 - "Community 149"
 Cohesion: 0.29
@@ -712,7 +712,7 @@ Nodes (6): db, express, id, notif, notifs, router
 
 ### Community 150 - "Community 150"
 Cohesion: 0.67
-Nodes (3): code:javascript (import request from 'supertest';), code:bash (cd d:\Cursor_new\server), Task 6: Implement Login Endpoint (RED)
+Nodes (3): code:javascript (import { render, screen } from '@testing-library/react';), code:bash (cd d:\Cursor_new\client), Task 11: Create ProtectedRoute Component (RED)
 
 ### Community 151 - "Community 151"
 Cohesion: 0.22
@@ -735,8 +735,8 @@ Cohesion: 0.29
 Nodes (7): 3. Expandable Details Section - Confidence Scores, code:block6 (┌─────────────────────────────────────────┐), code:block7 (┌─────────────────────────────────────────┐), code:javascript (// Example 1: High confidence scores), Collapsed State (Default):, Expanded State (After clicking "Show Details"):, Test Data with Varying Confidence:
 
 ### Community 156 - "Community 156"
-Cohesion: 0.4
-Nodes (5): code:json ({), code:bash (# Structure), code:bash (# JavaScript), code:bash (# .eslintrc.json), Security & Linting
+Cohesion: 0.15
+Nodes (13): code:bash (# Show all open work items), code:bash (# Session 1: Start work), code:bash (# Install from JetBrains Marketplace), code:bash (# Create MCP config file), code:json ({), code:bash (# Structure), code:bash (# JavaScript/Node.js), code:bash (# Jest config (package.json or jest.config.js)) (+5 more)
 
 ### Community 157 - "Community 157"
 Cohesion: 0.4
@@ -795,21 +795,21 @@ Cohesion: 0.5
 Nodes (3): coach, db, result
 
 ## Knowledge Gaps
-- **1159 isolated node(s):** `db`, `coach`, `result`, `db`, `bcrypt` (+1154 more)
+- **1158 isolated node(s):** `db`, `coach`, `result`, `db`, `bcrypt` (+1153 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Master Capabilities Reference` connect `Community 62` to `Community 64`, `Community 7`, `Community 13`, `Community 145`, `Community 19`, `Community 22`, `Community 23`, `Community 61`?**
+- **Why does `Master Capabilities Reference` connect `Community 62` to `Community 64`, `Community 7`, `Community 13`, `Community 145`, `Community 19`, `Community 148`, `Community 22`, `Community 23`, `Community 61`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
-- **Why does `Installation & Setup` connect `Community 145` to `Community 24`, `Community 156`, `Community 148`, `Community 62`?**
+- **Why does `Installation & Setup` connect `Community 145` to `Community 24`, `Community 156`, `Community 62`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Why does `requireAdmin()` connect `Community 63` to `Community 168`, `Community 77`, `Community 79`, `Community 51`, `Community 120`, `Community 93`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `db`, `coach`, `result` to the rest of the system?**
-  _1159 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1158 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**

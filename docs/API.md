@@ -166,6 +166,22 @@ Assign a task to one or more coaches (admin only). Creates 'assigned' notificati
 }
 ```
 
+**Request (with resource links - optional):**
+```json
+{
+  "coach_ids": [1, 2],
+  "title": "Strategy Review",
+  "description": "Review using attached resources",
+  "priority": "high",
+  "due_date": "2026-05-20T18:00:00Z",
+  "links": [
+    { "label": "Q3 Metrics Sheet", "url": "https://docs.google.com/spreadsheets/d/abc123/edit" },
+    { "label": "Strategy Templates", "url": "https://drive.google.com/drive/folders/xyz789" },
+    { "label": "Guidelines", "url": "https://docs.google.com/document/d/doc456/edit" }
+  ]
+}
+```
+
 **Response (200) - single coach:**
 ```json
 {
@@ -213,10 +229,11 @@ Assign a task to one or more coaches (admin only). Creates 'assigned' notificati
 **Notes:**
 - Use `coach_id` (integer) to assign to a single coach (backward compatible)
 - Use `coach_ids` (array of integers) to assign to multiple coaches
-- Each coach receives their own task instance with identical title/description/priority/due_date
+- Each coach receives their own task instance with identical title/description/priority/due_date/links
 - Each coach receives their own notification
 - Validation is atomic — if any coach_id is invalid, no tasks are created
 - Notifications are idempotent (checked via task_id, type, user_id composite key)
+- **Links (optional):** Array of `{label, url}` objects. Links are displayed on coach dashboard and task cards. All coaches receive the same links. URLs must start with `http://` or `https://`.
 
 ### GET /api/tasks/:id
 Get single task detail (admin or task owner).
