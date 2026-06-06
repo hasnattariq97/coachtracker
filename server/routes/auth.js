@@ -80,4 +80,21 @@ router.post('/login', async (req, res) => {
   }
 });
 
+router.post('/setup', async (req, res) => {
+  try {
+    // Delete existing admin user if it exists
+    await db.prepare('DELETE FROM users WHERE email = $1').run('admin@tracker.com');
+
+    // Create new admin user
+    const result = await db.prepare(
+      'INSERT INTO users (name, email, password_hash, role) VALUES ($1, $2, $3, $4) RETURNING *'
+    ).run('Admin', 'admin@tracker.com', '$2b$12$f/iWUwb/VZoNRiVj0tAIJO0xjwWwSXZyibakaHTT25JAbzQ6OB30q', 'admin');
+
+    res.json({ message: 'Admin user created', user: result.rows[0] });
+  } catch (error) {
+    console.error('Setup error:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
 module.exports = router;
