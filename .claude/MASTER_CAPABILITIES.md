@@ -996,7 +996,6 @@ git hooks install  # If graphify provides it
 npx ruflo init
 
 # Install MCP servers
-npx mcp install @supabase/supabase-mcp
 npx mcp install @anthropic-ai/resources-mcp
 
 # Or via MCP server directory
@@ -1009,7 +1008,6 @@ npx mcp install @anthropic-ai/resources-mcp
 
 **Repositories:**
 - Core: https://github.com/anthropics/ruflo
-- Supabase MCP: https://github.com/supabase/supabase-mcp
 - Custom agent skills: `.claude/skills/` (project-local)
 
 **Invoke Phase Builder:**
@@ -1323,10 +1321,6 @@ code --install-extension anthropic.claude-code
 ~/.claude/mcp.json
 {
   "mcpServers": {
-    "supabase": {
-      "command": "node",
-      "args": ["node_modules/@supabase/supabase-mcp/build/index.js"]
-    },
     "git": {
       "command": "npx",
       "args": ["git-mcp"]
@@ -1336,7 +1330,6 @@ code --install-extension anthropic.claude-code
 ```
 
 **Available MCP Servers:**
-- **Supabase:** https://github.com/supabase/supabase-mcp — Database operations
 - **GitHub:** https://github.com/anthropics/github-mcp — Issue/PR management
 - **Google Drive:** https://github.com/anthropics/google-drive-mcp — File access
 - **Gmail:** https://github.com/anthropics/gmail-mcp — Email operations
@@ -1347,16 +1340,7 @@ code --install-extension anthropic.claude-code
 
 ```json
 {
-  "mcpServers": [
-    {
-      "name": "supabase",
-      "enabled": true,
-      "config": {
-        "projectId": "your-project-id",
-        "apiKey": "your-api-key"
-      }
-    }
-  ]
+  "mcpServers": []
 }
 ```
 
