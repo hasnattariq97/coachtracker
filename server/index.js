@@ -51,7 +51,7 @@ app.use((err, req, res, next) => {
 if (require.main === module) {
   const server = app.listen(PORT, () => {
     console.log(`✓ Server running on http://localhost:${PORT}`);
-    console.log(`✓ Database: server/tracker.db`);
+    console.log(`✓ Database: PostgreSQL (Supabase)`);
     scheduleJobs();
   });
 
