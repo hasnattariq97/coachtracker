@@ -121,9 +121,10 @@ const db = {
       const result = await query(sql, params);
       return result.rows;
     },
-    run: (...params) => query(sql, params),
-    get: (...params) => query(sql, params).then(res => res.rows[0]),
-    all: (...params) => query(sql, params).then(res => res.rows)
+    run: async (...params) => {
+      const result = await query(sql, params);
+      return result;
+    }
   }),
   exec: (sql) => query(sql, []),
   pragma: () => {} // No-op for PostgreSQL
