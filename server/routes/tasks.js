@@ -12,10 +12,14 @@ const db = require('../db');
 const { requireAdmin, requireCoach } = require('../auth');
 const { queueCoachingInsights } = require('./coaching-insights');
 
-const createNotification = (userId, taskId, type, message) => {
-  db.prepare(
-    'INSERT OR IGNORE INTO notifications (user_id, task_id, type, message) VALUES (?, ?, ?, ?)'
-  ).run(userId, taskId, type, message);
+const createNotification = async (userId, taskId, type, message) => {
+  try {
+    await db.prepare(
+      'INSERT INTO notifications (user_id, task_id, type, message) VALUES (?, ?, ?, ?) ON CONFLICT (user_id, task_id, type) DO NOTHING'
+    ).run(userId, taskId, type, message);
+  } catch (err) {
+    console.error('[createNotification] Error:', err.message);
+  }
 };
 
 const formatDueDate = (dueDate) => {
@@ -37,10 +41,10 @@ const validateDueDate = (dueDate) => {
 const VALID_STATUSES = ['assigned', 'in_progress', 'completed', 'overdue'];
 const VALID_PRIORITIES = ['low', 'medium', 'high'];
 
-const getTaskWithCoachName = (taskId) => {
-  const task = db.prepare(`
+const getTaskWithCoachName = async (taskId) => {
+  const task = await db.prepare(`
     SELECT t.*, u.name as coach_name,
-      CAST((julianday(t.due_date) - julianday('now')) AS INTEGER) as days_left
+      EXTRACT(DAY FROM (t.due_date - NOW()))::INTEGER as days_left
     FROM tasks t
     JOIN users u ON t.coach_id = u.id
     WHERE t.id = ?
@@ -57,16 +61,16 @@ const getTaskWithCoachName = (taskId) => {
   return task;
 };
 
-const getTasksQuery = (whereClause = '', params = []) => {
+const getTasksQuery = async (whereClause = '', params = []) => {
   const sql = `
     SELECT t.*, u.name as coach_name,
-      CAST((julianday(t.due_date) - julianday('now')) AS INTEGER) as days_left
+      EXTRACT(DAY FROM (t.due_date - NOW()))::INTEGER as days_left
     FROM tasks t
     JOIN users u ON t.coach_id = u.id
     ${whereClause ? 'WHERE ' + whereClause : ''}
     ORDER BY t.due_date ASC
   `;
-  const tasks = db.prepare(sql).all(...params);
+  const tasks = await db.prepare(sql).all(...params);
   return tasks.map(task => {
     try {
       return {
@@ -85,7 +89,7 @@ const getTasksQuery = (whereClause = '', params = []) => {
 
 // BATCH A: Read Endpoints
 
-router.get('/', requireAdmin, (req, res) => {
+router.get('/', requireAdmin, async (req, res) => {
   try {
     const { coach_id, status } = req.query;
     let whereClause = '';
@@ -109,7 +113,7 @@ router.get('/', requireAdmin, (req, res) => {
       params.push(status);
     }
 
-    const tasks = getTasksQuery(whereClause, params);
+    const tasks = await getTasksQuery(whereClause, params);
     res.json(tasks);
   } catch (e) {
     console.error(e);
@@ -117,9 +121,9 @@ router.get('/', requireAdmin, (req, res) => {
   }
 });
 
-router.get('/mine', requireCoach, (req, res) => {
+router.get('/mine', requireCoach, async (req, res) => {
   try {
-    const tasks = getTasksQuery('t.coach_id = ?', [req.user.id]);
+    const tasks = await getTasksQuery('t.coach_id = ?', [req.user.id]);
     res.json(tasks);
   } catch (e) {
     console.error(e);
@@ -127,14 +131,14 @@ router.get('/mine', requireCoach, (req, res) => {
   }
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
   const id = Number.parseInt(req.params.id, 10);
   if (!Number.isInteger(id)) {
     return res.status(400).json({ error: 'Invalid task id' });
   }
 
   try {
-    const task = getTaskWithCoachName(id);
+    const task = await getTaskWithCoachName(id);
 
     if (!task) {
       return res.status(404).json({ error: 'Task not found' });
@@ -153,7 +157,7 @@ router.get('/:id', (req, res) => {
 
 // BATCH B: Write Endpoints
 
-router.post('/', requireAdmin, (req, res) => {
+router.post('/', requireAdmin, async (req, res) => {
   const { coach_ids, coach_id, title, description, priority, due_date, links } = req.body;
 
   console.log('[DEBUG] POST /api/tasks - links received:', links);
@@ -190,7 +194,7 @@ router.post('/', requireAdmin, (req, res) => {
       if (!Number.isInteger(parsed)) {
         return res.status(400).json({ error: `Invalid coach_id: ${cId}` });
       }
-      const coach = db.prepare('SELECT id FROM users WHERE id = ? AND role = ?').get(parsed, 'coach');
+      const coach = await db.prepare('SELECT id FROM users WHERE id = ? AND role = ?').get(parsed, 'coach');
       if (!coach) {
         return res.status(400).json({ error: `Invalid coach_id: ${parsed}` });
       }
@@ -200,7 +204,8 @@ router.post('/', requireAdmin, (req, res) => {
     // Create tasks in loop (one per coach)
     const insertStmt = db.prepare(`
       INSERT INTO tasks (coach_id, title, description, priority, due_date, status, assigned_at, links)
-      VALUES (?, ?, ?, ?, ?, 'assigned', datetime('now'), ?)
+      VALUES (?, ?, ?, ?, ?, 'assigned', NOW(), ?)
+      RETURNING id
     `);
 
     const createdTasks = [];
@@ -213,10 +218,10 @@ router.post('/', requireAdmin, (req, res) => {
 
     for (const coachId of validCoaches) {
       console.log('[DEBUG] Inserting task with:', { coachId, title, priority, due_date, linksJson });
-      const result = insertStmt.run(coachId, title, description || null, priority, due_date, linksJson);
-      const taskId = result.lastInsertRowid;
+      const result = await insertStmt.run(coachId, title, description || null, priority, due_date, linksJson);
+      const taskId = result.rows[0]?.id;
       createdTasks.push({ id: taskId, coach_id: coachId });
-      createNotification(coachId, taskId, 'assigned', notificationMessage);
+      await createNotification(coachId, taskId, 'assigned', notificationMessage);
     }
 
     // Backward compatible: single coach returns { id, ... }, multiple returns { tasks: [...] }
@@ -252,7 +257,7 @@ router.post('/', requireAdmin, (req, res) => {
   }
 });
 
-router.put('/:id', requireAdmin, (req, res) => {
+router.put('/:id', requireAdmin, async (req, res) => {
   const id = Number.parseInt(req.params.id, 10);
   if (!Number.isInteger(id)) {
     return res.status(400).json({ error: 'Invalid task id' });
@@ -284,7 +289,7 @@ router.put('/:id', requireAdmin, (req, res) => {
   }
 
   try {
-    const task = db.prepare('SELECT id FROM tasks WHERE id = ?').get(id);
+    const task = await db.prepare('SELECT id FROM tasks WHERE id = ?').get(id);
     if (!task) {
       return res.status(404).json({ error: 'Task not found' });
     }
@@ -311,7 +316,7 @@ router.put('/:id', requireAdmin, (req, res) => {
 
     values.push(id);
     const stmt = db.prepare(`UPDATE tasks SET ${updates.join(', ')} WHERE id = ?`);
-    stmt.run(...values);
+    await stmt.run(...values);
 
     res.json({ id });
   } catch (e) {
@@ -320,19 +325,19 @@ router.put('/:id', requireAdmin, (req, res) => {
   }
 });
 
-router.delete('/:id', requireAdmin, (req, res) => {
+router.delete('/:id', requireAdmin, async (req, res) => {
   const id = Number.parseInt(req.params.id, 10);
   if (!Number.isInteger(id)) {
     return res.status(400).json({ error: 'Invalid task id' });
   }
 
   try {
-    const task = db.prepare('SELECT id FROM tasks WHERE id = ?').get(id);
+    const task = await db.prepare('SELECT id FROM tasks WHERE id = ?').get(id);
     if (!task) {
       return res.status(404).json({ error: 'Task not found' });
     }
 
-    db.prepare('DELETE FROM tasks WHERE id = ?').run(id);
+    await db.prepare('DELETE FROM tasks WHERE id = ?').run(id);
     res.json({ success: true });
   } catch (e) {
     console.error(e);
@@ -342,14 +347,14 @@ router.delete('/:id', requireAdmin, (req, res) => {
 
 // BATCH C: Coach Actions
 
-router.put('/:id/complete', requireCoach, (req, res) => {
+router.put('/:id/complete', requireCoach, async (req, res) => {
   const id = Number.parseInt(req.params.id, 10);
   if (!Number.isInteger(id)) {
     return res.status(400).json({ error: 'Invalid task id' });
   }
 
   try {
-    const task = db.prepare('SELECT * FROM tasks WHERE id = ?').get(id);
+    const task = await db.prepare('SELECT * FROM tasks WHERE id = ?').get(id);
     if (!task) {
       return res.status(404).json({ error: 'Task not found' });
     }
@@ -364,16 +369,16 @@ router.put('/:id/complete', requireCoach, (req, res) => {
 
     const stmt = db.prepare(`
       UPDATE tasks
-      SET status = 'completed', completed_at = datetime('now')
+      SET status = 'completed', completed_at = NOW()
       WHERE id = ?
     `);
-    stmt.run(id);
+    await stmt.run(id);
 
-    const admin = db.prepare("SELECT id FROM users WHERE role = 'admin' LIMIT 1").get();
+    const admin = await db.prepare("SELECT id FROM users WHERE role = 'admin' LIMIT 1").get();
     if (admin) {
-      const coach = db.prepare('SELECT name FROM users WHERE id = ?').get(task.coach_id);
+      const coach = await db.prepare('SELECT name FROM users WHERE id = ?').get(task.coach_id);
       const message = `🎉 ${coach.name} just completed '${task.title}'!`;
-      createNotification(admin.id, id, 'completed', message);
+      await createNotification(admin.id, id, 'completed', message);
     }
 
     // Queue coaching insights (async, non-blocking)
@@ -390,7 +395,7 @@ router.put('/:id/complete', requireCoach, (req, res) => {
   }
 });
 
-router.put('/:id/delay-reason', requireCoach, (req, res) => {
+router.put('/:id/delay-reason', requireCoach, async (req, res) => {
   const id = Number.parseInt(req.params.id, 10);
   if (!Number.isInteger(id)) {
     return res.status(400).json({ error: 'Invalid task id' });
@@ -416,7 +421,7 @@ router.put('/:id/delay-reason', requireCoach, (req, res) => {
   }
 
   try {
-    const task = db.prepare('SELECT * FROM tasks WHERE id = ?').get(id);
+    const task = await db.prepare('SELECT * FROM tasks WHERE id = ?').get(id);
     if (!task) {
       return res.status(404).json({ error: 'Task not found' });
     }
@@ -429,13 +434,13 @@ router.put('/:id/delay-reason', requireCoach, (req, res) => {
       return res.status(409).json({ error: 'Cannot submit delay reason for completed task' });
     }
 
-    db.prepare('UPDATE tasks SET delay_reason = ? WHERE id = ?').run(trimmed, id);
+    await db.prepare('UPDATE tasks SET delay_reason = ? WHERE id = ?').run(trimmed, id);
 
-    const admin = db.prepare("SELECT id FROM users WHERE role = 'admin' LIMIT 1").get();
+    const admin = await db.prepare("SELECT id FROM users WHERE role = 'admin' LIMIT 1").get();
     if (admin) {
-      const coach = db.prepare('SELECT name FROM users WHERE id = ?').get(task.coach_id);
+      const coach = await db.prepare('SELECT name FROM users WHERE id = ?').get(task.coach_id);
       const message = `${coach.name} submitted a reason for delay on '${task.title}'`;
-      createNotification(admin.id, id, 'delay_submitted', message);
+      await createNotification(admin.id, id, 'delay_submitted', message);
     }
 
     // Queue coaching insights (async, non-blocking)

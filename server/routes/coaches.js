@@ -7,10 +7,10 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const validateEmail = (email) => EMAIL_REGEX.test(email);
 
 // GET /api/coaches — list all coaches with task counts
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   console.log('[GET /coaches] Route called');
   try {
-    const coaches = db.prepare(`
+    const coaches = await db.prepare(`
       SELECT
         u.id, u.name, u.email, u.role,
         COUNT(CASE WHEN t.status IN ('assigned','in_progress') THEN 1 END) AS assigned,
@@ -61,15 +61,16 @@ router.post('/', async (req, res) => {
   }
 
   try {
-    const existing = db.prepare('SELECT id FROM users WHERE email = ?').get(trimmedEmail);
+    const existing = await db.prepare('SELECT id FROM users WHERE email = ?').get(trimmedEmail);
     if (existing) return res.status(409).json({ error: 'Email already exists' });
 
     const hash = await bcrypt.hash(password, 10);
-    const { lastInsertRowid } = db.prepare(
-      'INSERT INTO users (name, email, password_hash, role) VALUES (?, ?, ?, ?)'
+    const result = await db.prepare(
+      'INSERT INTO users (name, email, password_hash, role) VALUES (?, ?, ?, ?) RETURNING id'
     ).run(trimmedName, trimmedEmail, hash, 'coach');
 
-    res.json({ id: lastInsertRowid, name: trimmedName, email: trimmedEmail, role: 'coach' });
+    const newId = result.rows[0]?.id;
+    res.json({ id: newId, name: trimmedName, email: trimmedEmail, role: 'coach' });
   } catch (err) {
     res.status(500).json({ error: 'Internal server error' });
   }
@@ -85,7 +86,7 @@ router.put('/:id', async (req, res) => {
   }
 
   try {
-    const coach = db.prepare('SELECT id FROM users WHERE id = ? AND role = ?').get(id, 'coach');
+    const coach = await db.prepare('SELECT id FROM users WHERE id = ? AND role = ?').get(id, 'coach');
     if (!coach) return res.status(404).json({ error: 'Coach not found' });
 
     if (name !== undefined) {
@@ -96,7 +97,7 @@ router.put('/:id', async (req, res) => {
       if (trimmedName.length === 0 || trimmedName.length > 100) {
         return res.status(400).json({ error: 'Name must be 1-100 characters' });
       }
-      db.prepare('UPDATE users SET name = ? WHERE id = ?').run(trimmedName, id);
+      await db.prepare('UPDATE users SET name = ? WHERE id = ?').run(trimmedName, id);
     }
 
     if (email !== undefined) {
@@ -110,9 +111,9 @@ router.put('/:id', async (req, res) => {
       if (!validateEmail(trimmedEmail)) {
         return res.status(400).json({ error: 'Invalid email format' });
       }
-      const conflict = db.prepare('SELECT id FROM users WHERE email = ? AND id != ?').get(trimmedEmail, id);
+      const conflict = await db.prepare('SELECT id FROM users WHERE email = ? AND id != ?').get(trimmedEmail, id);
       if (conflict) return res.status(409).json({ error: 'Email already in use' });
-      db.prepare('UPDATE users SET email = ? WHERE id = ?').run(trimmedEmail, id);
+      await db.prepare('UPDATE users SET email = ? WHERE id = ?').run(trimmedEmail, id);
     }
 
     if (password !== undefined) {
@@ -123,7 +124,7 @@ router.put('/:id', async (req, res) => {
         return res.status(400).json({ error: 'Password must be at least 6 characters' });
       }
       const hash = await bcrypt.hash(password, 10);
-      db.prepare('UPDATE users SET password_hash = ? WHERE id = ?').run(hash, id);
+      await db.prepare('UPDATE users SET password_hash = ? WHERE id = ?').run(hash, id);
     }
 
     res.json({ id });
@@ -133,7 +134,7 @@ router.put('/:id', async (req, res) => {
 });
 
 // DELETE /api/coaches/:id
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
   const id = Number.parseInt(req.params.id, 10);
 
   if (!Number.isInteger(id)) {
@@ -141,10 +142,10 @@ router.delete('/:id', (req, res) => {
   }
 
   try {
-    const coach = db.prepare('SELECT id FROM users WHERE id = ? AND role = ?').get(id, 'coach');
+    const coach = await db.prepare('SELECT id FROM users WHERE id = ? AND role = ?').get(id, 'coach');
     if (!coach) return res.status(404).json({ error: 'Coach not found' });
 
-    db.prepare('DELETE FROM users WHERE id = ?').run(id);
+    await db.prepare('DELETE FROM users WHERE id = ?').run(id);
     res.json({ success: true });
   } catch (err) {
     res.status(500).json({ error: 'Internal server error' });

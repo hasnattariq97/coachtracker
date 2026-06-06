@@ -25,8 +25,8 @@ async function queueCoachingInsights(coachId, taskId, eventType) {
 
   try {
     // Fetch coach history and task context
-    const coachHistory = fetchCoachHistory(coachId, 10);
-    const task = db.prepare('SELECT * FROM tasks WHERE id = ?').get(taskId);
+    const coachHistory = await fetchCoachHistory(coachId, 10);
+    const task = await db.prepare('SELECT * FROM tasks WHERE id = ?').get(taskId);
 
     if (!task) {
       console.error(`[Coaching Insights] Task ${taskId} not found`);
@@ -72,8 +72,8 @@ async function analyzeCoachBehavior(coachId, taskId, eventType, coachHistory, ta
 /**
  * Fetch coach's recent task history for context
  */
-function fetchCoachHistory(coachId, limit = 10) {
-  const rows = db.prepare(`
+async function fetchCoachHistory(coachId, limit = 10) {
+  const rows = await db.prepare(`
     SELECT id, title, status, completed_at, delay_reason, due_date, assigned_at
     FROM tasks
     WHERE coach_id = ?
@@ -281,8 +281,8 @@ function buildConsensus(patternResponse, growthResponse, riskResponse) {
 /**
  * Create notification with coaching insights results
  */
-function createCoachingInsightNotification(coachId, taskId, results, status) {
-  const task = db.prepare('SELECT title FROM tasks WHERE id = ?').get(taskId);
+async function createCoachingInsightNotification(coachId, taskId, results, status) {
+  const task = await db.prepare('SELECT title FROM tasks WHERE id = ?').get(taskId);
   if (!task) return;
 
   let message;
@@ -297,19 +297,23 @@ function createCoachingInsightNotification(coachId, taskId, results, status) {
 
   const metadata = results ? JSON.stringify(results) : null;
 
-  db.prepare(`
-    INSERT INTO notifications
-    (user_id, task_id, task_title, type, message, metadata, insights_status, read, created_at)
-    VALUES (?, ?, ?, 'coaching_insights', ?, ?, ?, 0, ?)
-  `).run(
-    coachId,
-    taskId,
-    task.title,
-    message,
-    metadata,
-    status,
-    new Date().toISOString()
-  );
+  try {
+    await db.prepare(`
+      INSERT INTO notifications
+      (user_id, task_id, task_title, type, message, metadata, insights_status, read, created_at)
+      VALUES (?, ?, ?, 'coaching_insights', ?, ?, ?, 0, ?)
+    `).run(
+      coachId,
+      taskId,
+      task.title,
+      message,
+      metadata,
+      status,
+      new Date().toISOString()
+    );
+  } catch (err) {
+    console.error('[createCoachingInsightNotification] Error:', err.message);
+  }
 }
 
 module.exports = {

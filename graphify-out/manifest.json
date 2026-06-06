@@ -115,8 +115,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\package.json": {
-    "mtime": 1780580825.7503648,
-    "ast_hash": "07749dbf65a556e3e626850d84cdfbb4",
+    "mtime": 1780666078.8311107,
+    "ast_hash": "f7c930d039aeed7e5a4829e73e161f13",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\postcss.config.js": {
@@ -132,6 +132,11 @@
   "D:\\Cursor_new\\client\\test-agent-browser.js": {
     "mtime": 1780581512.3048663,
     "ast_hash": "93e2c3e3e7f6ff9861fef842049c57cd",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\vercel.json": {
+    "mtime": 1780683139.6024337,
+    "ast_hash": "61bd31a2b0ac08f10f13c932b32d6ca1",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\vite.config.js": {
@@ -255,8 +260,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\src\\context\\AuthContext.jsx": {
-    "mtime": 1780471476.9874885,
-    "ast_hash": "5be1ef6b0a3368662a17c823da2f46d8",
+    "mtime": 1780682590.3860736,
+    "ast_hash": "da5865f60cbc546502ddf6c011767339",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\src\\context\\AuthContext.test.jsx": {
@@ -360,8 +365,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\db.js": {
-    "mtime": 1780654259.0645425,
-    "ast_hash": "c77ad978132e1a98e79c8fc11f6bb262",
+    "mtime": 1780739468.4842224,
+    "ast_hash": "edd93de946d1ee5e2fe33b14c095da6b",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\db.test.js": {
@@ -370,8 +375,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\index.js": {
-    "mtime": 1780572812.1894913,
-    "ast_hash": "609f74b1382f99683b842a114e6e3340",
+    "mtime": 1780734281.20709,
+    "ast_hash": "8cbeca34112c93dec492590b8cc79122",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\index.test.js": {
@@ -385,8 +390,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\package.json": {
-    "mtime": 1780645402.3890078,
-    "ast_hash": "0be06842a6037808c0bf9428042a4e20",
+    "mtime": 1780734244.5482945,
+    "ast_hash": "9f65a1822f52f7517eca6c1df9bc2574",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\test-api.js": {
@@ -954,9 +959,14 @@
     "ast_hash": "b89c06e6308f66d631499779c5652141",
     "semantic_hash": ""
   },
+  "D:\\Cursor_new\\docs\\POSTGRESQL-MIGRATION.md": {
+    "mtime": 1780737623.716681,
+    "ast_hash": "5eafd267045bf02d98728d4d8926b76a",
+    "semantic_hash": ""
+  },
   "D:\\Cursor_new\\docs\\ROADMAP.md": {
-    "mtime": 1780659122.7916458,
-    "ast_hash": "74d349a1cb3fd4944336d8cf516af83e",
+    "mtime": 1780737603.886167,
+    "ast_hash": "a3addbceec47f17b34c902615f48e908",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\docs\\RUFLO.md": {

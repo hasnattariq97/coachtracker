@@ -58,7 +58,7 @@ router.post('/login', async (req, res) => {
     const normalizedEmail = email.trim().toLowerCase();
 
     // Query user by email (case-insensitive)
-    const user = db.prepare('SELECT * FROM users WHERE LOWER(email) = ?').get(normalizedEmail);
+    const user = await db.prepare('SELECT * FROM users WHERE LOWER(email) = ?').get(normalizedEmail);
     if (!user) {
       return res.status(401).json({ error: 'Invalid email or password' });
     }
