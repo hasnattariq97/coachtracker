@@ -1,3 +1,11 @@
+/**
+ * @phase 7
+ * @status active
+ * @owner phase-builder
+ * @last_updated 2026-06-06
+ * @beads ["groq_insights", "coaching_insights_pattern"]
+ */
+
 const db = require('../db');
 let client = null;
 
@@ -26,7 +34,7 @@ async function queueCoachingInsights(coachId, taskId, eventType) {
   try {
     // Fetch coach history and task context
     const coachHistory = await fetchCoachHistory(coachId, 10);
-    const task = await db.prepare('SELECT * FROM tasks WHERE id = ?').get(taskId);
+    const task = await db.queryOne('SELECT * FROM tasks WHERE id = $1', [taskId]);
 
     if (!task) {
       console.error(`[Coaching Insights] Task ${taskId} not found`);
@@ -61,11 +69,11 @@ async function analyzeCoachBehavior(coachId, taskId, eventType, coachHistory, ta
     ]);
 
     // Create notification with results
-    createCoachingInsightNotification(coachId, taskId, results, 'success');
+    await createCoachingInsightNotification(coachId, taskId, results, 'success');
     console.log(`[Coaching Insights] Analysis complete for coach ${coachId}, task ${taskId} (${Date.now() - startTime}ms)`);
   } catch (error) {
     console.error(`[Coaching Insights] Analysis failed:`, error.message);
-    createCoachingInsightNotification(coachId, taskId, null, 'timeout');
+    await createCoachingInsightNotification(coachId, taskId, null, 'timeout');
   }
 }
 
@@ -73,13 +81,13 @@ async function analyzeCoachBehavior(coachId, taskId, eventType, coachHistory, ta
  * Fetch coach's recent task history for context
  */
 async function fetchCoachHistory(coachId, limit = 10) {
-  const rows = await db.prepare(`
+  const rows = await db.queryAll(`
     SELECT id, title, status, completed_at, delay_reason, due_date, assigned_at
     FROM tasks
-    WHERE coach_id = ?
+    WHERE coach_id = $1
     ORDER BY assigned_at DESC
-    LIMIT ?
-  `).all(coachId, limit);
+    LIMIT $2
+  `, [coachId, limit]);
 
   return rows.map(row => ({
     id: row.id,
@@ -282,7 +290,7 @@ function buildConsensus(patternResponse, growthResponse, riskResponse) {
  * Create notification with coaching insights results
  */
 async function createCoachingInsightNotification(coachId, taskId, results, status) {
-  const task = await db.prepare('SELECT title FROM tasks WHERE id = ?').get(taskId);
+  const task = await db.queryOne('SELECT title FROM tasks WHERE id = $1', [taskId]);
   if (!task) return;
 
   let message;
@@ -298,19 +306,19 @@ async function createCoachingInsightNotification(coachId, taskId, results, statu
   const metadata = results ? JSON.stringify(results) : null;
 
   try {
-    await db.prepare(`
+    await db.run(`
       INSERT INTO notifications
       (user_id, task_id, task_title, type, message, metadata, insights_status, read, created_at)
-      VALUES (?, ?, ?, 'coaching_insights', ?, ?, ?, 0, ?)
-    `).run(
+      VALUES ($1, $2, $3, 'coaching_insights', $4, $5, $6, 0, $7)
+    `, [
       coachId,
       taskId,
       task.title,
       message,
       metadata,
       status,
-      new Date().toISOString()
-    );
+      new Date().toISOString(),
+    ]);
   } catch (err) {
     console.error('[createCoachingInsightNotification] Error:', err.message);
   }

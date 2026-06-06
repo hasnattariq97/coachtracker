@@ -10,7 +10,7 @@ const validateEmail = (email) => EMAIL_REGEX.test(email);
 router.get('/', async (req, res) => {
   console.log('[GET /coaches] Route called');
   try {
-    const coaches = await db.prepare(`
+    const coaches = await db.queryAll(`
       SELECT
         u.id, u.name, u.email, u.role,
         COUNT(CASE WHEN t.status IN ('assigned','in_progress') THEN 1 END) AS assigned,
@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
       WHERE u.role = 'coach'
       GROUP BY u.id
       ORDER BY u.name
-    `).all();
+    `);
     res.json(coaches);
   } catch (err) {
     console.error('GET /api/coaches error:', err.message);
@@ -61,13 +61,14 @@ router.post('/', async (req, res) => {
   }
 
   try {
-    const existing = await db.prepare('SELECT id FROM users WHERE email = ?').get(trimmedEmail);
+    const existing = await db.query('SELECT id FROM users WHERE email = $1', [trimmedEmail]);
     if (existing) return res.status(409).json({ error: 'Email already exists' });
 
     const hash = await bcrypt.hash(password, 10);
-    const result = await db.prepare(
-      'INSERT INTO users (name, email, password_hash, role) VALUES (?, ?, ?, ?) RETURNING id'
-    ).run(trimmedName, trimmedEmail, hash, 'coach');
+    const result = await db.run(
+      'INSERT INTO users (name, email, password_hash, role) VALUES ($1, $2, $3, $4) RETURNING id',
+      [trimmedName, trimmedEmail, hash, 'coach']
+    );
 
     const newId = result.rows[0]?.id;
     res.json({ id: newId, name: trimmedName, email: trimmedEmail, role: 'coach' });
@@ -86,7 +87,7 @@ router.put('/:id', async (req, res) => {
   }
 
   try {
-    const coach = await db.prepare('SELECT id FROM users WHERE id = ? AND role = ?').get(id, 'coach');
+    const coach = await db.query('SELECT id FROM users WHERE id = $1 AND role = $2', [id, 'coach']);
     if (!coach) return res.status(404).json({ error: 'Coach not found' });
 
     if (name !== undefined) {
@@ -97,7 +98,7 @@ router.put('/:id', async (req, res) => {
       if (trimmedName.length === 0 || trimmedName.length > 100) {
         return res.status(400).json({ error: 'Name must be 1-100 characters' });
       }
-      await db.prepare('UPDATE users SET name = ? WHERE id = ?').run(trimmedName, id);
+      await db.run('UPDATE users SET name = $1 WHERE id = $2', [trimmedName, id]);
     }
 
     if (email !== undefined) {
@@ -111,9 +112,9 @@ router.put('/:id', async (req, res) => {
       if (!validateEmail(trimmedEmail)) {
         return res.status(400).json({ error: 'Invalid email format' });
       }
-      const conflict = await db.prepare('SELECT id FROM users WHERE email = ? AND id != ?').get(trimmedEmail, id);
+      const conflict = await db.query('SELECT id FROM users WHERE email = $1 AND id != $2', [trimmedEmail, id]);
       if (conflict) return res.status(409).json({ error: 'Email already in use' });
-      await db.prepare('UPDATE users SET email = ? WHERE id = ?').run(trimmedEmail, id);
+      await db.run('UPDATE users SET email = $1 WHERE id = $2', [trimmedEmail, id]);
     }
 
     if (password !== undefined) {
@@ -124,7 +125,7 @@ router.put('/:id', async (req, res) => {
         return res.status(400).json({ error: 'Password must be at least 6 characters' });
       }
       const hash = await bcrypt.hash(password, 10);
-      await db.prepare('UPDATE users SET password_hash = ? WHERE id = ?').run(hash, id);
+      await db.run('UPDATE users SET password_hash = $1 WHERE id = $2', [hash, id]);
     }
 
     res.json({ id });
@@ -142,10 +143,10 @@ router.delete('/:id', async (req, res) => {
   }
 
   try {
-    const coach = await db.prepare('SELECT id FROM users WHERE id = ? AND role = ?').get(id, 'coach');
+    const coach = await db.query('SELECT id FROM users WHERE id = $1 AND role = $2', [id, 'coach']);
     if (!coach) return res.status(404).json({ error: 'Coach not found' });
 
-    await db.prepare('DELETE FROM users WHERE id = ?').run(id);
+    await db.run('DELETE FROM users WHERE id = $1', [id]);
     res.json({ success: true });
   } catch (err) {
     res.status(500).json({ error: 'Internal server error' });
