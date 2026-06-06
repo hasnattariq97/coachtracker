@@ -80,4 +80,21 @@ router.post('/login', async (req, res) => {
   }
 });
 
+router.post('/seed-admin', async (req, res) => {
+  try {
+    const result = await db.prepare(
+      'INSERT INTO users (name, email, password_hash, role) VALUES ($1, $2, $3, $4) ON CONFLICT (email) DO NOTHING RETURNING *'
+    ).run('Admin', 'admin@tracker.com', '$2b$12$N9qo8uLOickgx2ZMRZoMyeIjZAgcg7b3XeKeUxWdeS86E36P4/tjO', 'admin');
+
+    if (result.rows && result.rows.length > 0) {
+      res.json({ message: 'Admin user created', user: result.rows[0] });
+    } else {
+      res.json({ message: 'Admin user already exists' });
+    }
+  } catch (error) {
+    console.error('Seed error:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
 module.exports = router;
