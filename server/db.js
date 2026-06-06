@@ -22,7 +22,12 @@ pool.on('error', (err) => {
 const query = async (text, params) => {
   const client = await pool.connect();
   try {
-    const result = await client.query(text, params);
+    // Convert SQLite-style ? placeholders to PostgreSQL-style $1, $2, etc.
+    let convertedText = text;
+    let paramIndex = 1;
+    convertedText = convertedText.replace(/\?/g, () => `$${paramIndex++}`);
+
+    const result = await client.query(convertedText, params);
     return result;
   } finally {
     client.release();
