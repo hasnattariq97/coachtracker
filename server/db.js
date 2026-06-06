@@ -93,13 +93,18 @@ const query = async (text, params) => {
     }
 
     // Seed admin user if it doesn't exist
-    await query(
+    const adminResult = await query(
       `INSERT INTO users (name, email, password_hash, role)
        VALUES ($1, $2, $3, $4)
-       ON CONFLICT (email) DO NOTHING`,
+       ON CONFLICT (email) DO UPDATE SET password_hash = EXCLUDED.password_hash
+       RETURNING id, email, role`,
       ['Admin', 'admin@tracker.com', '$2b$12$f/iWUwb/VZoNRiVj0tAIJO0xjwWwSXZyibakaHTT25JAbzQ6OB30q', 'admin']
     );
-    console.log('✓ Admin user seeded');
+    if (adminResult.rows && adminResult.rows[0]) {
+      console.log('✓ Admin user seeded:', adminResult.rows[0]);
+    } else {
+      console.log('✓ Admin user already exists');
+    }
 
     console.log('✓ PostgreSQL database ready');
   } catch (err) {

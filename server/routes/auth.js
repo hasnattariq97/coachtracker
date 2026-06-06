@@ -82,18 +82,27 @@ router.post('/login', async (req, res) => {
 
 router.post('/setup', async (req, res) => {
   try {
-    // Delete existing admin user if it exists
-    await db.prepare('DELETE FROM users WHERE email = $1').run('admin@tracker.com');
+    console.log('[SETUP] Starting admin user seeding...');
+
+    // Check if admin already exists
+    const existing = await db.prepare('SELECT id, email, role FROM users WHERE email = $1').get('admin@tracker.com');
+    if (existing) {
+      console.log('[SETUP] Admin user already exists:', existing);
+      return res.json({ message: 'Admin user already exists', user: existing, status: 'already_exists' });
+    }
 
     // Create new admin user
-    const result = await db.prepare(
-      'INSERT INTO users (name, email, password_hash, role) VALUES ($1, $2, $3, $4) RETURNING *'
+    const insertResult = await db.prepare(
+      'INSERT INTO users (name, email, password_hash, role) VALUES ($1, $2, $3, $4) RETURNING id, email, role'
     ).run('Admin', 'admin@tracker.com', '$2b$12$f/iWUwb/VZoNRiVj0tAIJO0xjwWwSXZyibakaHTT25JAbzQ6OB30q', 'admin');
 
-    res.json({ message: 'Admin user created', user: result.rows[0] });
+    const createdUser = insertResult.rows ? insertResult.rows[0] : insertResult;
+    console.log('[SETUP] ✓ Admin user created:', createdUser);
+    res.json({ message: 'Admin user created successfully', user: createdUser, status: 'created' });
   } catch (error) {
-    console.error('Setup error:', error);
-    res.status(500).json({ error: error.message });
+    console.error('[SETUP] ✗ Error:', error.message);
+    console.error('[SETUP] Stack:', error.stack);
+    res.status(500).json({ error: error.message, type: error.name });
   }
 });
 
