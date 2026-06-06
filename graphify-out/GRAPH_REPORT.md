@@ -1,16 +1,16 @@
 # Graph Report - Cursor_new  (2026-06-06)
 
 ## Corpus Check
-- 201 files · ~217,338 words
+- 201 files · ~217,430 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2191 nodes · 2434 edges · 175 communities (167 shown, 8 thin omitted)
+- 2195 nodes · 2486 edges · 174 communities (166 shown, 8 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `dd5bf36d`
+- Built from commit: `ff43b79d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -148,7 +148,6 @@
 - [[_COMMUNITY_Community 145|Community 145]]
 - [[_COMMUNITY_Community 146|Community 146]]
 - [[_COMMUNITY_Community 147|Community 147]]
-- [[_COMMUNITY_Community 148|Community 148]]
 - [[_COMMUNITY_Community 149|Community 149]]
 - [[_COMMUNITY_Community 150|Community 150]]
 - [[_COMMUNITY_Community 151|Community 151]]
@@ -184,9 +183,9 @@
 5. `Agent-Browser E2E Testing — Handoff & Implementation Guide` - 16 edges
 6. `E2E Testing with Agent-Browser — Coach Task Tracker` - 15 edges
 7. `authenticateToken()` - 15 edges
-8. `Phase 6 Handoff — Security Audit & Polish Complete` - 15 edges
-9. `Master Capabilities Reference` - 15 edges
-10. `Coach Task Tracker` - 14 edges
+8. `requireAdmin()` - 15 edges
+9. `Phase 6 Handoff — Security Audit & Polish Complete` - 15 edges
+10. `Master Capabilities Reference` - 15 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `ProtectedRoute()` --calls--> `useAuth()`  [EXTRACTED]
@@ -200,7 +199,7 @@
 - `TestComponent()` --calls--> `useAuth()`  [EXTRACTED]
   src/context/AuthContext.test.jsx → AuthContext.jsx
 
-## Communities (175 total, 8 thin omitted)
+## Communities (174 total, 8 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.14
@@ -383,8 +382,8 @@ Cohesion: 0.11
 Nodes (18): adminResult, adminTaskResult, adminUnread, app, coachResult, coachUnread, db, express (+10 more)
 
 ### Community 51 - "Community 51"
-Cohesion: 0.12
-Nodes (29): admin, coach, createdTasks, createNotification(), db, dueDateFormatted, dueDateValidation, express (+21 more)
+Cohesion: 0.16
+Nodes (30): admin, coach, createdTasks, createNotification(), db, dueDateFormatted, dueDateValidation, express (+22 more)
 
 ### Community 58 - "Community 58"
 Cohesion: 0.08
@@ -407,8 +406,8 @@ Cohesion: 0.18
 Nodes (10): Agent Best Practices, Best Practices, Claude Core Capabilities, Code Conventions (Language-Neutral), Documentation Best Practices, Guarantees & Constraints, Master Capabilities Reference, Reasoning Powers (+2 more)
 
 ### Community 63 - "Community 63"
-Cohesion: 0.1
-Nodes (19): authenticateToken(), jwt, requireCoach(), verifyToken(), app, { authenticateToken, requireAdmin }, cors, corsOptions (+11 more)
+Cohesion: 0.11
+Nodes (18): authenticateToken(), jwt, verifyToken(), app, { authenticateToken, requireAdmin }, cors, corsOptions, express (+10 more)
 
 ### Community 64 - "Community 64"
 Cohesion: 0.29
@@ -463,7 +462,7 @@ Cohesion: 0.29
 Nodes (7): Backend, Backend ✅ (complete), Backend ✅ (complete), Frontend, Frontend ✅ (already built and working), Frontend ✅ (already built and working), Phase 5 — Notifications System ✅
 
 ### Community 79 - "Community 79"
-Cohesion: 0.23
+Cohesion: 0.3
 Nodes (12): bcrypt, db, express, { generateToken }, isValidEmail(), normalizedEmail, router, token (+4 more)
 
 ### Community 80 - "Community 80"
@@ -535,8 +534,8 @@ Cohesion: 0.27
 Nodes (8): createNotification(), cron, db, midpointNudgeJob(), overdueJob(), scheduledTasks, stopJobs(), { stopJobs }
 
 ### Community 98 - "Community 98"
-Cohesion: 0.14
-Nodes (12): bcrypt, coach, coaches, conflict, db, existing, express, id (+4 more)
+Cohesion: 0.2
+Nodes (13): bcrypt, coach, coaches, conflict, db, existing, express, id (+5 more)
 
 ### Community 99 - "Community 99"
 Cohesion: 0.05
@@ -603,8 +602,8 @@ Cohesion: 0.17
 Nodes (11): Agent Commands, AgentDB Namespaces, code:bash (/phase-builder), code:bash (# Trigger phase builder for parallel development), Learning Loop, Option A: Development Acceleration (Parallel Agents), Option B: Product Feature (Multi-Agent Coaching), Option C: Enterprise Platform (+3 more)
 
 ### Community 120 - "Community 120"
-Cohesion: 0.22
-Nodes (12): requireAdmin(), scheduleJobs(), app, { authenticateToken, requireAdmin }, cors, corsOptions, db, express (+4 more)
+Cohesion: 0.13
+Nodes (18): requireAdmin(), scheduleJobs(), app, { authenticateToken, requireAdmin }, cors, corsOptions, db, express (+10 more)
 
 ### Community 121 - "Community 121"
 Cohesion: 0.18
@@ -706,12 +705,8 @@ Nodes (11): adminExists, bcrypt, cols, constraintExists, Database, db, dbPath, d
 Cohesion: 0.22
 Nodes (9): Coaching Insights Analysis Results, code:block10 (Confidence: 75%), code:block11 ("I'm thrilled to see you've completed the 'Chrome DevTools E), code:block8 (Confidence: 70%), code:block9 (Confidence: 50%), Consensus Message ✅, Growth Agent ✅, Pattern Agent ✅ (+1 more)
 
-### Community 148 - "Community 148"
-Cohesion: 0.29
-Nodes (6): app, { authenticateToken, requireAdmin }, cors, corsOptions, express, { scheduleJobs }
-
 ### Community 149 - "Community 149"
-Cohesion: 0.29
+Cohesion: 0.36
 Nodes (6): db, express, id, notif, notifs, router
 
 ### Community 150 - "Community 150"
@@ -811,7 +806,7 @@ Cohesion: 0.67
 Nodes (3): code:javascript (import request from 'supertest';), code:bash (cd d:\Cursor_new\server), Task 6: Implement Login Endpoint (RED)
 
 ## Knowledge Gaps
-- **1197 isolated node(s):** `{ Pool }`, `dns`, `Problem`, `Solution`, `Implementation Timeline` (+1192 more)
+- **1184 isolated node(s):** `start`, `test`, `dev`, `@anthropic-ai/sdk`, `@google/generative-ai` (+1179 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -820,12 +815,12 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Master Capabilities Reference` connect `Community 62` to `Community 64`, `Community 7`, `Community 171`, `Community 13`, `Community 22`, `Community 23`, `Community 24`, `Community 156`, `Community 61`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `requireAdmin()` connect `Community 120` to `Community 77`, `Community 79`, `Community 145`, `Community 51`, `Community 148`, `Community 93`, `Community 63`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `authenticateToken()` connect `Community 63` to `Community 77`, `Community 79`, `Community 145`, `Community 50`, `Community 148`, `Community 117`, `Community 120`, `Community 93`?**
+- **Why does `Integrated Frameworks` connect `Community 13` to `Community 62`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **What connects `{ Pool }`, `dns`, `Problem` to the rest of the system?**
-  _1197 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `Phase 1: Auth System Implementation Plan` connect `Community 32` to `Community 33`, `Community 34`, `Community 35`, `Community 36`, `Community 37`, `Community 38`, `Community 40`, `Community 41`, `Community 42`, `Community 43`, `Community 104`, `Community 45`, `Community 174`, `Community 31`?**
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+- **What connects `start`, `test`, `dev` to the rest of the system?**
+  _1184 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.14 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

@@ -1,5 +1,4 @@
 const { Pool } = require('pg');
-const bcrypt = require('bcrypt');
 const dns = require('dns');
 
 // Force IPv4 only (fixes Render + Supabase connectivity)
@@ -30,90 +29,68 @@ const query = async (text, params) => {
   }
 };
 
-// Create tables on startup
+// Initialize database in background (non-blocking)
+// Tables already exist in Supabase, so this is just a safety check
 (async () => {
   try {
-    await query(`
-      CREATE TABLE IF NOT EXISTS users (
-        id SERIAL PRIMARY KEY,
-        name TEXT NOT NULL DEFAULT '',
-        email TEXT UNIQUE NOT NULL,
-        password_hash TEXT NOT NULL,
-        role TEXT NOT NULL CHECK (role IN ('admin', 'coach')),
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-      );
-
-      CREATE TABLE IF NOT EXISTS tasks (
-        id SERIAL PRIMARY KEY,
-        coach_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-        title TEXT NOT NULL,
-        description TEXT,
-        status TEXT NOT NULL CHECK (status IN ('assigned', 'in_progress', 'completed', 'overdue')),
-        priority TEXT NOT NULL CHECK (priority IN ('low', 'medium', 'high')),
-        assigned_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        due_date TIMESTAMP NOT NULL,
-        completed_at TIMESTAMP,
-        delay_reason TEXT,
-        links TEXT
-      );
-
-      CREATE TABLE IF NOT EXISTS notifications (
-        id SERIAL PRIMARY KEY,
-        user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-        task_id INTEGER REFERENCES tasks(id) ON DELETE CASCADE,
-        task_title TEXT,
-        type TEXT NOT NULL,
-        message TEXT NOT NULL,
-        metadata TEXT,
-        insights_status TEXT DEFAULT 'pending',
-        read INTEGER DEFAULT 0,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-      );
-
-      CREATE UNIQUE INDEX IF NOT EXISTS unique_notification_dedup
-      ON notifications(user_id, task_id, type)
-      WHERE task_id IS NOT NULL;
+    // Check if users table exists
+    const checkTable = await query(`
+      SELECT EXISTS (
+        SELECT 1 FROM information_schema.tables
+        WHERE table_name = 'users'
+      ) as exists;
     `);
 
-    // Seed admin user
-    const adminExists = await query('SELECT id FROM users WHERE email = $1', ['admin@tracker.com']);
-    if (adminExists.rows.length === 0) {
-      let seedPassword = process.env.ADMIN_SEED_PASSWORD;
-
-      if (!seedPassword) {
-        const defaultPassword = 'admin123';
-        if (process.env.NODE_ENV === 'production') {
-          throw new Error(
-            'ADMIN_SEED_PASSWORD environment variable is required in production. ' +
-            'Set a strong password before first startup.'
-          );
-        }
-        console.warn(
-          '⚠️  Using default seed password "admin123" for admin@tracker.com. ' +
-          'Set ADMIN_SEED_PASSWORD environment variable to use a custom password.'
+    if (!checkTable.rows[0].exists) {
+      // Only create tables if they don't exist
+      await query(`
+        CREATE TABLE users (
+          id SERIAL PRIMARY KEY,
+          name TEXT NOT NULL DEFAULT '',
+          email TEXT UNIQUE NOT NULL,
+          password_hash TEXT NOT NULL,
+          role TEXT NOT NULL CHECK (role IN ('admin', 'coach')),
+          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );
-        seedPassword = defaultPassword;
-      }
 
-      if (seedPassword === 'admin123' && process.env.NODE_ENV === 'production') {
-        throw new Error('ADMIN_SEED_PASSWORD cannot be "admin123" in production');
-      }
+        CREATE TABLE tasks (
+          id SERIAL PRIMARY KEY,
+          coach_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+          title TEXT NOT NULL,
+          description TEXT,
+          status TEXT NOT NULL CHECK (status IN ('assigned', 'in_progress', 'completed', 'overdue')),
+          priority TEXT NOT NULL CHECK (priority IN ('low', 'medium', 'high')),
+          assigned_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+          due_date TIMESTAMP NOT NULL,
+          completed_at TIMESTAMP,
+          delay_reason TEXT,
+          links TEXT
+        );
 
-      const hashedPassword = bcrypt.hashSync(seedPassword, 12);
-      await query('INSERT INTO users (email, password_hash, role) VALUES ($1, $2, $3)', [
-        'admin@tracker.com',
-        hashedPassword,
-        'admin'
-      ]);
+        CREATE TABLE notifications (
+          id SERIAL PRIMARY KEY,
+          user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+          task_id INTEGER REFERENCES tasks(id) ON DELETE CASCADE,
+          task_title TEXT,
+          type TEXT NOT NULL,
+          message TEXT NOT NULL,
+          metadata TEXT,
+          insights_status TEXT DEFAULT 'pending',
+          read INTEGER DEFAULT 0,
+          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        );
 
-      const passwordDisplay = seedPassword === 'admin123' ? 'admin123 (dev)' : '[custom password set via env]';
-      console.log(`✓ Seeded admin user: admin@tracker.com / ${passwordDisplay}`);
+        CREATE UNIQUE INDEX unique_notification_dedup
+        ON notifications(user_id, task_id, type)
+        WHERE task_id IS NOT NULL;
+      `);
+      console.log('✓ Created database tables');
     }
 
-    console.log('✓ PostgreSQL database initialized');
+    console.log('✓ PostgreSQL database ready');
   } catch (err) {
-    console.error('Failed to initialize database:', err.message);
-    process.exit(1);
+    // Non-blocking: log but don't crash server
+    console.warn('⚠️  Database initialization warning:', err.message);
   }
 })();
 

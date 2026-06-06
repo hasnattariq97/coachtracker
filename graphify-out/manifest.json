@@ -390,8 +390,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\package.json": {
-    "mtime": 1780734244.5482945,
-    "ast_hash": "9f65a1822f52f7517eca6c1df9bc2574",
+    "mtime": 1780752909.3577268,
+    "ast_hash": "281ce4dfbe81655c73162293e669480d",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\test-api.js": {
@@ -450,8 +450,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\auth.js": {
-    "mtime": 1779041980.2824254,
-    "ast_hash": "0fabc4e5269535e75a9851250931de61",
+    "mtime": 1780752689.132555,
+    "ast_hash": "a730435b89f18c53af4e0823442da600",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\auth.test.js": {
@@ -460,23 +460,23 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\coaches.js": {
-    "mtime": 1780571836.815781,
-    "ast_hash": "c07eee63152722a70ccd9372e29eec22",
+    "mtime": 1780752768.6549945,
+    "ast_hash": "81fb90fd211c05708b901eddb917af22",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\coaching-insights.js": {
-    "mtime": 1780658951.6077578,
-    "ast_hash": "11711e0dcbcf0c9440bba40260ca94fe",
+    "mtime": 1780752895.372249,
+    "ast_hash": "9e237d8ed6304d9cf9c3bf371edd557b",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\notifications.js": {
-    "mtime": 1780469443.4356737,
-    "ast_hash": "371efb4854e8fab1b75341fb569efb72",
+    "mtime": 1780752871.5353553,
+    "ast_hash": "e95c67288f2638b5bdf12d4edaec0493",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\tasks.js": {
-    "mtime": 1780658620.4165652,
-    "ast_hash": "03781e2563c300aeadf57e5c423c70b4",
+    "mtime": 1780752852.248492,
+    "ast_hash": "e719a52be31d400bafa1a91a416e3f21",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\__tests__\\coaching-insights.test.js": {
