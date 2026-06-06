@@ -1,8 +1,14 @@
 const { Pool } = require('pg');
 const bcrypt = require('bcrypt');
+const dns = require('dns');
+
+// Force IPv4 only (fixes Render + Supabase connectivity)
+dns.setDefaultResultOrder('ipv4first');
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
+  idleTimeoutMillis: 30000,
+  connectionTimeoutMillis: 10000,
 });
 
 pool.on('error', (err) => {
