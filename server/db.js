@@ -92,6 +92,15 @@ const query = async (text, params) => {
       console.log('✓ Created database tables');
     }
 
+    // Seed admin user if it doesn't exist
+    await query(
+      `INSERT INTO users (name, email, password_hash, role)
+       VALUES ($1, $2, $3, $4)
+       ON CONFLICT (email) DO NOTHING`,
+      ['Admin', 'admin@tracker.com', '$2b$12$N9qo8uLOickgx2ZMRZoMyeIjZAgcg7b3XeKeUxWdeS86E36P4/tjO', 'admin']
+    );
+    console.log('✓ Admin user seeded');
+
     console.log('✓ PostgreSQL database ready');
   } catch (err) {
     // Non-blocking: log but don't crash server
