@@ -8,7 +8,7 @@ A dual-role web application for managing coaching tasks. Admins assign tasks wit
 - Node.js 16+
 - npm
 
-### Setup
+### Setup (Local Development)
 
 **Backend:**
 ```bash
@@ -16,12 +16,10 @@ cd server
 npm install
 
 # Setup environment variables (create .env file):
-# JWT_SECRET=your-secret-key-here
-# GROQ_API_KEY=gsk_...  (get free key at https://console.groq.com, no credit card needed)
-# COACHING_INSIGHTS_ENABLED=true (optional, for Phase 7 multi-agent coaching)
-
-echo "JWT_SECRET=your-secret-key-here" > .env
+echo "JWT_SECRET=test-secret-key-minimum-32-characters-requirement" > .env
 echo "GROQ_API_KEY=gsk_YOUR_KEY_HERE" >> .env
+echo "DATABASE_URL=postgresql://postgres:password@localhost:5432/coach_tracker" >> .env
+
 node index.js
 ```
 Runs on http://localhost:3001
@@ -33,6 +31,14 @@ npm install
 npm run dev
 ```
 Runs on http://localhost:5173
+
+### Production Deployment
+
+**Current Deployment (Live ✅):**
+- **Frontend:** https://coachtracker-theta.vercel.app (Vercel)
+- **Backend API:** https://spectacular-connection-production-d07b.up.railway.app (Railway)
+- **Database:** Railway PostgreSQL (persistent across redeploys)
+- **Status:** All systems operational ✓
 
 ### Default Login
 - Email: `admin@tracker.com`
