@@ -7,8 +7,8 @@ const AuthContext = createContext();
 if (import.meta.env.VITE_API_URL) {
   axios.defaults.baseURL = import.meta.env.VITE_API_URL;
 } else if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
-  // Production fallback: use Render backend
-  axios.defaults.baseURL = 'https://coach-tracker-api.onrender.com';
+  // Production fallback: use Railway backend
+  axios.defaults.baseURL = 'https://spectacular-connection-production-d07b.up.railway.app';
 }
 
 const decodeToken = (token) => {
