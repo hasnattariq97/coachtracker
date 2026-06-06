@@ -219,22 +219,19 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 ---
 
 ## Phase 7+ — Data Persistence with PostgreSQL ✅
-**Feature:** Migrate from SQLite to Supabase PostgreSQL to solve data loss on Render redeploys.
+**Feature:** Migrate from SQLite to Railway PostgreSQL to solve data loss on Render redeploys.
 
 ### Implementation ✅ (Complete — 2026-06-06)
-- [x] Created Supabase free PostgreSQL database
+- [x] Created Railway free PostgreSQL database
 - [x] Installed `pg` package, removed `better-sqlite3`
 - [x] Rewrote `server/db.js` for async PostgreSQL operations
 - [x] Auto-creates tables on startup, seeds admin user
-- [x] Fixed critical hostname issue: use `PROJECT_ID.supabase.co` (NOT `db.PROJECT_ID.supabase.co`)
 - [x] Forced IPv4 DNS with `dns.setDefaultResultOrder('ipv4first')`
 - [x] Increased connection timeout to 30s for SSL handshake
 - [x] Added to Render environment: `DATABASE_URL=postgresql://...`
 - [x] Verified data persists across Render redeploys ✅
 
-**Result:** Data no longer lost on redeploy! Database survives service restarts, auto-backed up by Supabase.
-
-**Key Lesson (Critical!):** Supabase hostname is `PROJECT_ID.supabase.co` — the `db.` prefix doesn't exist and causes `ENOTFOUND` errors.
+**Result:** Data no longer lost on redeploy! Database survives service restarts with Railway PostgreSQL.
 
 ---
 
@@ -276,13 +273,13 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 | 6+ | Agent-Browser E2E Testing | ✅ Complete | 11/11 |
 | 7 | Multi-Agent Insights | ✅ Complete | 15+ tests |
 | 7+ | Task Resource Links | ✅ Complete | ✅ E2E verified |
-| 7+ | PostgreSQL (Supabase) | ✅ Complete | ✅ Verified (2026-06-06) |
+| 7+ | PostgreSQL (Railway) | ✅ Complete | ✅ Verified (2026-06-06) |
 
 **Total Tests Passing:** 119+ (108 backend unit/integration + 11 E2E via agent-browser)  
 **E2E Testing:** Agent-browser integration complete and verified  
 **Security Findings:** 11/11 resolved (0 critical, 0 active bypasses)  
 **Features Complete:** 12/12 (Phases 0-7 plus multi-coach, resource links, persistent database)  
-**Database:** PostgreSQL (Supabase) — data persists across Render redeploys ✅
+**Database:** PostgreSQL (Railway) — data persists across Render redeploys ✅
 
 ---
 

@@ -1,7 +1,7 @@
 const { Pool } = require('pg');
 const dns = require('dns');
 
-// Force IPv4 only (fixes Render + Supabase connectivity)
+// Force IPv4 only (fixes Railway PostgreSQL connectivity)
 dns.setDefaultResultOrder('ipv4first');
 
 const pool = new Pool({
@@ -35,7 +35,7 @@ const query = async (text, params) => {
 };
 
 // Initialize database in background (non-blocking)
-// Tables already exist in Supabase, so this is just a safety check
+// Check if tables exist and create them if needed
 (async () => {
   try {
     // Check if users table exists
