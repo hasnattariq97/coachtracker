@@ -4,337 +4,760 @@
   "graph": {},
   "nodes": [
     {
+      "label": "db.js",
+      "file_type": "code",
+      "source_file": "db.js",
+      "source_location": "L1",
+      "id": "db_js",
+      "community": 146,
+      "norm_label": "db.js"
+    },
+    {
+      "label": "{ Pool }",
+      "file_type": "code",
+      "source_file": "db.js",
+      "source_location": "L1",
+      "id": "server_db_pool",
+      "community": 146,
+      "norm_label": "{ pool }"
+    },
+    {
+      "label": "dns",
+      "file_type": "code",
+      "source_file": "db.js",
+      "source_location": "L2",
+      "id": "server_db_dns",
+      "community": 146,
+      "norm_label": "dns"
+    },
+    {
+      "label": "query()",
+      "file_type": "code",
+      "source_file": "db.js",
+      "source_location": "L22",
+      "id": "server_db_query",
+      "community": 146,
+      "norm_label": "query()"
+    },
+    {
+      "label": "queryOne()",
+      "file_type": "code",
+      "source_file": "db.js",
+      "source_location": "L103",
+      "id": "server_db_queryone",
+      "community": 146,
+      "norm_label": "queryone()"
+    },
+    {
+      "label": "queryAll()",
+      "file_type": "code",
+      "source_file": "db.js",
+      "source_location": "L108",
+      "id": "server_db_queryall",
+      "community": 146,
+      "norm_label": "queryall()"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "db.js",
+      "source_location": "L113",
+      "id": "server_db_run",
+      "community": 146,
+      "norm_label": "run()"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "db.js",
+      "source_location": "L119",
+      "id": "server_db_db",
+      "community": 146,
+      "norm_label": "db"
+    },
+    {
+      "label": "auth.js",
+      "file_type": "code",
+      "source_file": "auth.js",
+      "source_location": "L1",
+      "community": 79,
+      "norm_label": "auth.js",
+      "id": "auth_js"
+    },
+    {
+      "label": "express",
+      "file_type": "code",
+      "source_file": "auth.js",
+      "source_location": "L9",
+      "community": 79,
+      "norm_label": "express",
+      "id": "routes_auth_express"
+    },
+    {
+      "label": "bcrypt",
+      "file_type": "code",
+      "source_file": "auth.js",
+      "source_location": "L10",
+      "community": 79,
+      "norm_label": "bcrypt",
+      "id": "routes_auth_bcrypt"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "auth.js",
+      "source_location": "L11",
+      "community": 79,
+      "norm_label": "db",
+      "id": "routes_auth_db"
+    },
+    {
+      "label": "{ generateToken }",
+      "file_type": "code",
+      "source_file": "auth.js",
+      "source_location": "L12",
+      "community": 79,
+      "norm_label": "{ generatetoken }",
+      "id": "routes_auth_generatetoken"
+    },
+    {
+      "label": "router",
+      "file_type": "code",
+      "source_file": "auth.js",
+      "source_location": "L14",
+      "community": 79,
+      "norm_label": "router",
+      "id": "routes_auth_router"
+    },
+    {
+      "label": "isValidEmail()",
+      "file_type": "code",
+      "source_file": "auth.js",
+      "source_location": "L16",
+      "community": 79,
+      "norm_label": "isvalidemail()",
+      "id": "routes_auth_isvalidemail"
+    },
+    {
+      "label": "validateLoginInput()",
+      "file_type": "code",
+      "source_file": "auth.js",
+      "source_location": "L21",
+      "community": 79,
+      "norm_label": "validatelogininput()",
+      "id": "routes_auth_validatelogininput"
+    },
+    {
+      "label": "validationErrors",
+      "file_type": "code",
+      "source_file": "auth.js",
+      "source_location": "L52",
+      "community": 79,
+      "norm_label": "validationerrors",
+      "id": "routes_auth_validationerrors"
+    },
+    {
+      "label": "normalizedEmail",
+      "file_type": "code",
+      "source_file": "auth.js",
+      "source_location": "L58",
+      "community": 79,
+      "norm_label": "normalizedemail",
+      "id": "routes_auth_normalizedemail"
+    },
+    {
+      "label": "token",
+      "file_type": "code",
+      "source_file": "auth.js",
+      "source_location": "L73",
+      "community": 79,
+      "norm_label": "token",
+      "id": "routes_auth_token"
+    },
+    {
+      "label": "RAILWAY_DEPLOY.md",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L1",
+      "community": 93,
+      "norm_label": "railway_deploy.md",
+      "id": "railway_deploy_md"
+    },
+    {
+      "label": "Railway Deployment \u2014 Coach Tracker",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L1",
+      "community": 93,
+      "norm_label": "railway deployment \u2014 coach tracker",
+      "id": "cursor_new_railway_deploy_railway_deployment_coach_tracker"
+    },
+    {
+      "label": "Step 1: Open PowerShell as Administrator",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L7",
+      "community": 93,
+      "norm_label": "step 1: open powershell as administrator",
+      "id": "cursor_new_railway_deploy_step_1_open_powershell_as_administrator"
+    },
+    {
+      "label": "code:powershell (cd d:\\Cursor_new)",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L12",
+      "community": 93,
+      "norm_label": "code:powershell (cd d:\\cursor_new)",
+      "id": "cursor_new_railway_deploy_codeblock_1"
+    },
+    {
+      "label": "Step 2: Install Railway CLI",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L18",
+      "community": 93,
+      "norm_label": "step 2: install railway cli",
+      "id": "cursor_new_railway_deploy_step_2_install_railway_cli"
+    },
+    {
+      "label": "code:powershell (npm install -g @railway/cli)",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L20",
+      "community": 93,
+      "norm_label": "code:powershell (npm install -g @railway/cli)",
+      "id": "cursor_new_railway_deploy_codeblock_2"
+    },
+    {
+      "label": "code:block3 (\u2705 added X packages)",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L25",
+      "community": 93,
+      "norm_label": "code:block3 (\u2705 added x packages)",
+      "id": "cursor_new_railway_deploy_codeblock_3"
+    },
+    {
+      "label": "Step 3: Login to Railway",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L31",
+      "community": 93,
+      "norm_label": "step 3: login to railway",
+      "id": "cursor_new_railway_deploy_step_3_login_to_railway"
+    },
+    {
+      "label": "code:powershell (npx railway login)",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L33",
+      "community": 93,
+      "norm_label": "code:powershell (npx railway login)",
+      "id": "cursor_new_railway_deploy_codeblock_4"
+    },
+    {
+      "label": "Step 4: Link to Your Project",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L41",
+      "community": 93,
+      "norm_label": "step 4: link to your project",
+      "id": "cursor_new_railway_deploy_step_4_link_to_your_project"
+    },
+    {
+      "label": "code:powershell (npx railway link)",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L43",
+      "community": 93,
+      "norm_label": "code:powershell (npx railway link)",
+      "id": "cursor_new_railway_deploy_codeblock_5"
+    },
+    {
+      "label": "Step 5: Navigate to Server Folder",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L53",
+      "community": 93,
+      "norm_label": "step 5: navigate to server folder",
+      "id": "cursor_new_railway_deploy_step_5_navigate_to_server_folder"
+    },
+    {
+      "label": "code:powershell (cd server)",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L55",
+      "community": 93,
+      "norm_label": "code:powershell (cd server)",
+      "id": "cursor_new_railway_deploy_codeblock_6"
+    },
+    {
+      "label": "Step 6: Add Node.js Service",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L61",
+      "community": 93,
+      "norm_label": "step 6: add node.js service",
+      "id": "cursor_new_railway_deploy_step_6_add_node_js_service"
+    },
+    {
+      "label": "code:powershell (npx railway service add)",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L63",
+      "community": 93,
+      "norm_label": "code:powershell (npx railway service add)",
+      "id": "cursor_new_railway_deploy_codeblock_7"
+    },
+    {
+      "label": "Step 7: Deploy Your Backend",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L73",
+      "community": 93,
+      "norm_label": "step 7: deploy your backend",
+      "id": "cursor_new_railway_deploy_step_7_deploy_your_backend"
+    },
+    {
+      "label": "code:powershell (npx railway up)",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L75",
+      "community": 93,
+      "norm_label": "code:powershell (npx railway up)",
+      "id": "cursor_new_railway_deploy_codeblock_8"
+    },
+    {
+      "label": "code:block9 (Building...)",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L82",
+      "community": 93,
+      "norm_label": "code:block9 (building...)",
+      "id": "cursor_new_railway_deploy_codeblock_9"
+    },
+    {
+      "label": "Step 8: Go to Railway Dashboard & Add PostgreSQL",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L92",
+      "community": 93,
+      "norm_label": "step 8: go to railway dashboard & add postgresql",
+      "id": "cursor_new_railway_deploy_step_8_go_to_railway_dashboard_add_postgresql"
+    },
+    {
+      "label": "Step 9: Set Environment Variables",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L102",
+      "community": 93,
+      "norm_label": "step 9: set environment variables",
+      "id": "cursor_new_railway_deploy_step_9_set_environment_variables"
+    },
+    {
+      "label": "code:block10 (CLIENT_ORIGIN = https://coachtracker-theta.vercel.app)",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L110",
+      "community": 93,
+      "norm_label": "code:block10 (client_origin = https://coachtracker-theta.vercel.app)",
+      "id": "cursor_new_railway_deploy_codeblock_10"
+    },
+    {
+      "label": "Step 10: Generate Domain",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L122",
+      "community": 93,
+      "norm_label": "step 10: generate domain",
+      "id": "cursor_new_railway_deploy_step_10_generate_domain"
+    },
+    {
+      "label": "Step 11: Update Vercel Frontend",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L132",
+      "community": 93,
+      "norm_label": "step 11: update vercel frontend",
+      "id": "cursor_new_railway_deploy_step_11_update_vercel_frontend"
+    },
+    {
+      "label": "Step 12: Test",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L144",
+      "community": 93,
+      "norm_label": "step 12: test",
+      "id": "cursor_new_railway_deploy_step_12_test"
+    },
+    {
+      "label": "Done! \ud83d\ude80",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L160",
+      "community": 93,
+      "norm_label": "done! \ud83d\ude80",
+      "id": "cursor_new_railway_deploy_done"
+    },
+    {
+      "label": "Troubleshooting",
+      "file_type": "document",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L171",
+      "community": 93,
+      "norm_label": "troubleshooting",
+      "id": "cursor_new_railway_deploy_troubleshooting"
+    },
+    {
+      "label": "RAILWAY_DEPLOY.sh",
+      "file_type": "code",
+      "source_file": "RAILWAY_DEPLOY.sh",
+      "source_location": "L1",
+      "community": 176,
+      "norm_label": "railway_deploy.sh",
+      "id": "railway_deploy_sh"
+    },
+    {
+      "label": "db.js",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L1",
+      "community": 146,
+      "norm_label": "db.js",
+      "id": "server_db_js"
+    },
+    {
       "label": "DEPLOYMENT-SESSION-2026-06-06.md",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L1",
-      "id": "deployment_session_2026_06_06_md",
       "community": 149,
-      "norm_label": "deployment-session-2026-06-06.md"
+      "norm_label": "deployment-session-2026-06-06.md",
+      "id": "deployment_session_2026_06_06_md"
     },
     {
       "label": "Deployment Session \u2014 2026-06-06",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L9",
-      "id": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
       "community": 149,
-      "norm_label": "deployment session \u2014 2026-06-06"
+      "norm_label": "deployment session \u2014 2026-06-06",
+      "id": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06"
     },
     {
       "label": "Current State",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L17",
-      "id": "docs_deployment_session_2026_06_06_current_state",
       "community": 149,
-      "norm_label": "current state"
+      "norm_label": "current state",
+      "id": "docs_deployment_session_2026_06_06_current_state"
     },
     {
       "label": "\u2705 What's Working",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L19",
-      "id": "docs_deployment_session_2026_06_06_what_s_working",
       "community": 149,
-      "norm_label": "\u2705 what's working"
+      "norm_label": "\u2705 what's working",
+      "id": "docs_deployment_session_2026_06_06_what_s_working"
     },
     {
       "label": "\u274c What's Broken",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L36",
-      "id": "docs_deployment_session_2026_06_06_what_s_broken",
       "community": 149,
-      "norm_label": "\u274c what's broken"
+      "norm_label": "\u274c what's broken",
+      "id": "docs_deployment_session_2026_06_06_what_s_broken"
     },
     {
       "label": "Technical Deep Dive",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L45",
-      "id": "docs_deployment_session_2026_06_06_technical_deep_dive",
       "community": 149,
-      "norm_label": "technical deep dive"
+      "norm_label": "technical deep dive",
+      "id": "docs_deployment_session_2026_06_06_technical_deep_dive"
     },
     {
       "label": "Issue 1: Missing `await` on PostgreSQL Queries (FIXED \u2705)",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L47",
-      "id": "docs_deployment_session_2026_06_06_issue_1_missing_await_on_postgresql_queries_fixed",
       "community": 149,
-      "norm_label": "issue 1: missing `await` on postgresql queries (fixed \u2705)"
+      "norm_label": "issue 1: missing `await` on postgresql queries (fixed \u2705)",
+      "id": "docs_deployment_session_2026_06_06_issue_1_missing_await_on_postgresql_queries_fixed"
     },
     {
       "label": "code:javascript (// WRONG - .get() returns Promise, not data)",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L52",
-      "id": "docs_deployment_session_2026_06_06_codeblock_1",
       "community": 149,
-      "norm_label": "code:javascript (// wrong - .get() returns promise, not data)"
+      "norm_label": "code:javascript (// wrong - .get() returns promise, not data)",
+      "id": "docs_deployment_session_2026_06_06_codeblock_1"
     },
     {
       "label": "Issue 2: Database Initialization Timeout (FIXED \u2705)",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L68",
-      "id": "docs_deployment_session_2026_06_06_issue_2_database_initialization_timeout_fixed",
       "community": 149,
-      "norm_label": "issue 2: database initialization timeout (fixed \u2705)"
+      "norm_label": "issue 2: database initialization timeout (fixed \u2705)",
+      "id": "docs_deployment_session_2026_06_06_issue_2_database_initialization_timeout_fixed"
     },
     {
       "label": "code:block2 (Failed to initialize database: Connection terminated due to )",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L73",
-      "id": "docs_deployment_session_2026_06_06_codeblock_2",
       "community": 149,
-      "norm_label": "code:block2 (failed to initialize database: connection terminated due to )"
+      "norm_label": "code:block2 (failed to initialize database: connection terminated due to )",
+      "id": "docs_deployment_session_2026_06_06_codeblock_2"
     },
     {
       "label": "Issue 3: Password Mismatch (NEEDS FIX NOW)",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L86",
-      "id": "docs_deployment_session_2026_06_06_issue_3_password_mismatch_needs_fix_now",
       "community": 149,
-      "norm_label": "issue 3: password mismatch (needs fix now)"
+      "norm_label": "issue 3: password mismatch (needs fix now)",
+      "id": "docs_deployment_session_2026_06_06_issue_3_password_mismatch_needs_fix_now"
     },
     {
       "label": "code:block3 (Database Admin User:)",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L89",
-      "id": "docs_deployment_session_2026_06_06_codeblock_3",
       "community": 149,
-      "norm_label": "code:block3 (database admin user:)"
+      "norm_label": "code:block3 (database admin user:)",
+      "id": "docs_deployment_session_2026_06_06_codeblock_3"
     },
     {
       "label": "Database State",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L108",
-      "id": "docs_deployment_session_2026_06_06_database_state",
       "community": 149,
-      "norm_label": "database state"
+      "norm_label": "database state",
+      "id": "docs_deployment_session_2026_06_06_database_state"
     },
     {
       "label": "Users Table",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L110",
-      "id": "docs_deployment_session_2026_06_06_users_table",
       "community": 149,
-      "norm_label": "users table"
+      "norm_label": "users table",
+      "id": "docs_deployment_session_2026_06_06_users_table"
     },
     {
       "label": "code:sql (SELECT * FROM users;)",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L111",
-      "id": "docs_deployment_session_2026_06_06_codeblock_4",
       "community": 149,
-      "norm_label": "code:sql (select * from users;)"
+      "norm_label": "code:sql (select * from users;)",
+      "id": "docs_deployment_session_2026_06_06_codeblock_4"
     },
     {
       "label": "Tables Created",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L118",
-      "id": "docs_deployment_session_2026_06_06_tables_created",
       "community": 149,
-      "norm_label": "tables created"
+      "norm_label": "tables created",
+      "id": "docs_deployment_session_2026_06_06_tables_created"
     },
     {
       "label": "Indexes",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L123",
-      "id": "docs_deployment_session_2026_06_06_indexes",
       "community": 149,
-      "norm_label": "indexes"
+      "norm_label": "indexes",
+      "id": "docs_deployment_session_2026_06_06_indexes"
     },
     {
       "label": "Environment Variables (Render)",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L128",
-      "id": "docs_deployment_session_2026_06_06_environment_variables_render",
       "community": 149,
-      "norm_label": "environment variables (render)"
+      "norm_label": "environment variables (render)",
+      "id": "docs_deployment_session_2026_06_06_environment_variables_render"
     },
     {
       "label": "code:block5 (ADMIN_SEED_PASSWORD = ProductionPassword123!)",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L130",
-      "id": "docs_deployment_session_2026_06_06_codeblock_5",
       "community": 149,
-      "norm_label": "code:block5 (admin_seed_password = productionpassword123!)"
+      "norm_label": "code:block5 (admin_seed_password = productionpassword123!)",
+      "id": "docs_deployment_session_2026_06_06_codeblock_5"
     },
     {
       "label": "Git History",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L143",
-      "id": "docs_deployment_session_2026_06_06_git_history",
       "community": 149,
-      "norm_label": "git history"
+      "norm_label": "git history",
+      "id": "docs_deployment_session_2026_06_06_git_history"
     },
     {
       "label": "What Changed in Code",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L153",
-      "id": "docs_deployment_session_2026_06_06_what_changed_in_code",
       "community": 149,
-      "norm_label": "what changed in code"
+      "norm_label": "what changed in code",
+      "id": "docs_deployment_session_2026_06_06_what_changed_in_code"
     },
     {
       "label": "server/db.js",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L155",
-      "id": "docs_deployment_session_2026_06_06_server_db_js",
       "community": 149,
-      "norm_label": "server/db.js"
+      "norm_label": "server/db.js",
+      "id": "docs_deployment_session_2026_06_06_server_db_js"
     },
     {
       "label": "code:javascript (// NEW helpers)",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L160",
-      "id": "docs_deployment_session_2026_06_06_codeblock_6",
       "community": 149,
-      "norm_label": "code:javascript (// new helpers)"
+      "norm_label": "code:javascript (// new helpers)",
+      "id": "docs_deployment_session_2026_06_06_codeblock_6"
     },
     {
       "label": "server/routes/auth.js",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L180",
-      "id": "docs_deployment_session_2026_06_06_server_routes_auth_js",
       "community": 149,
-      "norm_label": "server/routes/auth.js"
+      "norm_label": "server/routes/auth.js",
+      "id": "docs_deployment_session_2026_06_06_server_routes_auth_js"
     },
     {
       "label": "All Route Files (coaches.js, tasks.js, notifications.js, coaching-insights.js)",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L184",
-      "id": "docs_deployment_session_2026_06_06_all_route_files_coaches_js_tasks_js_notifications_js_coaching_insights_js",
       "community": 149,
-      "norm_label": "all route files (coaches.js, tasks.js, notifications.js, coaching-insights.js)"
+      "norm_label": "all route files (coaches.js, tasks.js, notifications.js, coaching-insights.js)",
+      "id": "docs_deployment_session_2026_06_06_all_route_files_coaches_js_tasks_js_notifications_js_coaching_insights_js"
     },
     {
       "label": "Next Steps (Priority Order)",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L193",
-      "id": "docs_deployment_session_2026_06_06_next_steps_priority_order",
       "community": 149,
-      "norm_label": "next steps (priority order)"
+      "norm_label": "next steps (priority order)",
+      "id": "docs_deployment_session_2026_06_06_next_steps_priority_order"
     },
     {
       "label": "1. Fix Password Mismatch (BLOCKING)",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L195",
-      "id": "docs_deployment_session_2026_06_06_1_fix_password_mismatch_blocking",
       "community": 149,
-      "norm_label": "1. fix password mismatch (blocking)"
+      "norm_label": "1. fix password mismatch (blocking)",
+      "id": "docs_deployment_session_2026_06_06_1_fix_password_mismatch_blocking"
     },
     {
       "label": "code:sql (-- Generate bcrypt hash for \"ProductionPassword123!\")",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L199",
-      "id": "docs_deployment_session_2026_06_06_codeblock_7",
       "community": 149,
-      "norm_label": "code:sql (-- generate bcrypt hash for \"productionpassword123!\")"
+      "norm_label": "code:sql (-- generate bcrypt hash for \"productionpassword123!\")",
+      "id": "docs_deployment_session_2026_06_06_codeblock_7"
     },
     {
       "label": "2. Test Login",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L214",
-      "id": "docs_deployment_session_2026_06_06_2_test_login",
       "community": 149,
-      "norm_label": "2. test login"
+      "norm_label": "2. test login",
+      "id": "docs_deployment_session_2026_06_06_2_test_login"
     },
     {
       "label": "code:block8 (Frontend: https://coachtracker-theta.vercel.app)",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L216",
-      "id": "docs_deployment_session_2026_06_06_codeblock_8",
       "community": 149,
-      "norm_label": "code:block8 (frontend: https://coachtracker-theta.vercel.app)"
+      "norm_label": "code:block8 (frontend: https://coachtracker-theta.vercel.app)",
+      "id": "docs_deployment_session_2026_06_06_codeblock_8"
     },
     {
       "label": "3. Verify Full Flow",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L223",
-      "id": "docs_deployment_session_2026_06_06_3_verify_full_flow",
       "community": 149,
-      "norm_label": "3. verify full flow"
+      "norm_label": "3. verify full flow",
+      "id": "docs_deployment_session_2026_06_06_3_verify_full_flow"
     },
     {
       "label": "4. Known Non-Critical Issues",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L231",
-      "id": "docs_deployment_session_2026_06_06_4_known_non_critical_issues",
       "community": 149,
-      "norm_label": "4. known non-critical issues"
+      "norm_label": "4. known non-critical issues",
+      "id": "docs_deployment_session_2026_06_06_4_known_non_critical_issues"
     },
     {
       "label": "Troubleshooting Checklist",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L237",
-      "id": "docs_deployment_session_2026_06_06_troubleshooting_checklist",
       "community": 149,
-      "norm_label": "troubleshooting checklist"
+      "norm_label": "troubleshooting checklist",
+      "id": "docs_deployment_session_2026_06_06_troubleshooting_checklist"
     },
     {
       "label": "Key Files & Locations",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L250",
-      "id": "docs_deployment_session_2026_06_06_key_files_locations",
       "community": 149,
-      "norm_label": "key files & locations"
+      "norm_label": "key files & locations",
+      "id": "docs_deployment_session_2026_06_06_key_files_locations"
     },
     {
       "label": "Deployment URLs",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L265",
-      "id": "docs_deployment_session_2026_06_06_deployment_urls",
       "community": 149,
-      "norm_label": "deployment urls"
+      "norm_label": "deployment urls",
+      "id": "docs_deployment_session_2026_06_06_deployment_urls"
     },
     {
       "label": "Session Summary",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L276",
-      "id": "docs_deployment_session_2026_06_06_session_summary",
       "community": 149,
-      "norm_label": "session summary"
+      "norm_label": "session summary",
+      "id": "docs_deployment_session_2026_06_06_session_summary"
     },
     {
       "label": "For Next Agent/Developer",
       "file_type": "document",
       "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
       "source_location": "L296",
-      "id": "docs_deployment_session_2026_06_06_for_next_agent_developer",
       "community": 149,
-      "norm_label": "for next agent/developer"
+      "norm_label": "for next agent/developer",
+      "id": "docs_deployment_session_2026_06_06_for_next_agent_developer"
     },
     {
       "label": "cron.js",
@@ -418,51 +841,6 @@
       "id": "server_cron_stopjobs"
     },
     {
-      "label": "db.js",
-      "file_type": "code",
-      "source_file": "db.js",
-      "source_location": "L1",
-      "community": 146,
-      "norm_label": "db.js",
-      "id": "db_js"
-    },
-    {
-      "label": "{ Pool }",
-      "file_type": "code",
-      "source_file": "db.js",
-      "source_location": "L1",
-      "community": 146,
-      "norm_label": "{ pool }",
-      "id": "server_db_pool"
-    },
-    {
-      "label": "dns",
-      "file_type": "code",
-      "source_file": "db.js",
-      "source_location": "L2",
-      "community": 146,
-      "norm_label": "dns",
-      "id": "server_db_dns"
-    },
-    {
-      "label": "query()",
-      "file_type": "code",
-      "source_file": "db.js",
-      "source_location": "L22",
-      "community": 146,
-      "norm_label": "query()",
-      "id": "server_db_query"
-    },
-    {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "db.js",
-      "source_location": "L98",
-      "community": 146,
-      "norm_label": "db",
-      "id": "server_db_db"
-    },
-    {
       "label": "auth.js",
       "file_type": "code",
       "source_file": "routes/auth.js",
@@ -470,96 +848,6 @@
       "community": 79,
       "norm_label": "auth.js",
       "id": "routes_auth_js"
-    },
-    {
-      "label": "express",
-      "file_type": "code",
-      "source_file": "routes/auth.js",
-      "source_location": "L9",
-      "community": 79,
-      "norm_label": "express",
-      "id": "routes_auth_express"
-    },
-    {
-      "label": "bcrypt",
-      "file_type": "code",
-      "source_file": "routes/auth.js",
-      "source_location": "L10",
-      "community": 79,
-      "norm_label": "bcrypt",
-      "id": "routes_auth_bcrypt"
-    },
-    {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "routes/auth.js",
-      "source_location": "L11",
-      "community": 79,
-      "norm_label": "db",
-      "id": "routes_auth_db"
-    },
-    {
-      "label": "{ generateToken }",
-      "file_type": "code",
-      "source_file": "routes/auth.js",
-      "source_location": "L12",
-      "community": 79,
-      "norm_label": "{ generatetoken }",
-      "id": "routes_auth_generatetoken"
-    },
-    {
-      "label": "router",
-      "file_type": "code",
-      "source_file": "routes/auth.js",
-      "source_location": "L14",
-      "community": 79,
-      "norm_label": "router",
-      "id": "routes_auth_router"
-    },
-    {
-      "label": "isValidEmail()",
-      "file_type": "code",
-      "source_file": "routes/auth.js",
-      "source_location": "L16",
-      "community": 79,
-      "norm_label": "isvalidemail()",
-      "id": "routes_auth_isvalidemail"
-    },
-    {
-      "label": "validateLoginInput()",
-      "file_type": "code",
-      "source_file": "routes/auth.js",
-      "source_location": "L21",
-      "community": 79,
-      "norm_label": "validatelogininput()",
-      "id": "routes_auth_validatelogininput"
-    },
-    {
-      "label": "validationErrors",
-      "file_type": "code",
-      "source_file": "routes/auth.js",
-      "source_location": "L52",
-      "community": 79,
-      "norm_label": "validationerrors",
-      "id": "routes_auth_validationerrors"
-    },
-    {
-      "label": "normalizedEmail",
-      "file_type": "code",
-      "source_file": "routes/auth.js",
-      "source_location": "L58",
-      "community": 79,
-      "norm_label": "normalizedemail",
-      "id": "routes_auth_normalizedemail"
-    },
-    {
-      "label": "token",
-      "file_type": "code",
-      "source_file": "routes/auth.js",
-      "source_location": "L73",
-      "community": 79,
-      "norm_label": "token",
-      "id": "routes_auth_token"
     },
     {
       "label": "coaches.js",
@@ -791,7 +1079,7 @@
       "file_type": "code",
       "source_file": "routes/notifications.js",
       "source_location": "L1",
-      "community": 50,
+      "community": 171,
       "norm_label": "notifications.js",
       "id": "routes_notifications_js"
     },
@@ -800,7 +1088,7 @@
       "file_type": "code",
       "source_file": "routes/notifications.js",
       "source_location": "L9",
-      "community": 50,
+      "community": 171,
       "norm_label": "express",
       "id": "routes_notifications_express"
     },
@@ -809,7 +1097,7 @@
       "file_type": "code",
       "source_file": "routes/notifications.js",
       "source_location": "L10",
-      "community": 50,
+      "community": 171,
       "norm_label": "router",
       "id": "routes_notifications_router"
     },
@@ -818,7 +1106,7 @@
       "file_type": "code",
       "source_file": "routes/notifications.js",
       "source_location": "L11",
-      "community": 50,
+      "community": 171,
       "norm_label": "db",
       "id": "routes_notifications_db"
     },
@@ -827,7 +1115,7 @@
       "file_type": "code",
       "source_file": "routes/notifications.js",
       "source_location": "L30",
-      "community": 50,
+      "community": 171,
       "norm_label": "id",
       "id": "routes_notifications_id"
     },
@@ -2906,7 +3194,7 @@
       "file_type": "document",
       "source_file": "docs/API.md",
       "source_location": "L110",
-      "community": 150,
+      "community": 73,
       "norm_label": "tasks",
       "id": "docs_api_tasks"
     },
@@ -2915,7 +3203,7 @@
       "file_type": "document",
       "source_file": "docs/API.md",
       "source_location": "L112",
-      "community": 150,
+      "community": 73,
       "norm_label": "get /api/tasks",
       "id": "docs_api_get_api_tasks"
     },
@@ -2924,7 +3212,7 @@
       "file_type": "document",
       "source_file": "docs/API.md",
       "source_location": "L120",
-      "community": 150,
+      "community": 73,
       "norm_label": "code:json ([)",
       "id": "docs_api_codeblock_10"
     },
@@ -2933,7 +3221,7 @@
       "file_type": "document",
       "source_file": "docs/API.md",
       "source_location": "L139",
-      "community": 150,
+      "community": 73,
       "norm_label": "get /api/tasks/mine",
       "id": "docs_api_get_api_tasks_mine"
     },
@@ -2996,7 +3284,7 @@
       "file_type": "document",
       "source_file": "docs/API.md",
       "source_location": "L238",
-      "community": 150,
+      "community": 73,
       "norm_label": "get /api/tasks/:id",
       "id": "docs_api_get_api_tasks_id"
     },
@@ -3023,7 +3311,7 @@
       "file_type": "document",
       "source_file": "docs/API.md",
       "source_location": "L256",
-      "community": 150,
+      "community": 73,
       "norm_label": "code:json ({)",
       "id": "docs_api_codeblock_17"
     },
@@ -3032,7 +3320,7 @@
       "file_type": "document",
       "source_file": "docs/API.md",
       "source_location": "L262",
-      "community": 150,
+      "community": 73,
       "norm_label": "delete /api/tasks/:id",
       "id": "docs_api_delete_api_tasks_id"
     },
@@ -3140,7 +3428,7 @@
       "file_type": "document",
       "source_file": "docs/API.md",
       "source_location": "L398",
-      "community": 75,
+      "community": 94,
       "norm_label": "code:json ({)",
       "id": "docs_api_codeblock_24"
     },
@@ -3899,15 +4187,6 @@
       "community": 44,
       "norm_label": "assigntask()",
       "id": "admin_assigntask_assigntask"
-    },
-    {
-      "label": "db.js",
-      "file_type": "code",
-      "source_file": "server/db.js",
-      "source_location": "L1",
-      "community": 146,
-      "norm_label": "db.js",
-      "id": "server_db_js"
     },
     {
       "label": "Database",
@@ -11789,7 +12068,7 @@
       "file_type": "code",
       "source_file": "server/auth.js",
       "source_location": "L57",
-      "community": 171,
+      "community": 63,
       "norm_label": "requireadmin()",
       "id": "server_auth_requireadmin"
     },
@@ -11798,7 +12077,7 @@
       "file_type": "code",
       "source_file": "server/auth.js",
       "source_location": "L64",
-      "community": 63,
+      "community": 77,
       "norm_label": "requirecoach()",
       "id": "server_auth_requirecoach"
     },
@@ -12122,7 +12401,7 @@
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L1",
-      "community": 177,
+      "community": 63,
       "norm_label": "test-with-coaches-route.js",
       "id": "server_test_with_coaches_route_js"
     },
@@ -12131,7 +12410,7 @@
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L2",
-      "community": 177,
+      "community": 63,
       "norm_label": "express",
       "id": "server_test_with_coaches_route_express"
     },
@@ -12140,7 +12419,7 @@
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L3",
-      "community": 177,
+      "community": 63,
       "norm_label": "cors",
       "id": "server_test_with_coaches_route_cors"
     },
@@ -12149,7 +12428,7 @@
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L4",
-      "community": 177,
+      "community": 63,
       "norm_label": "{ authenticatetoken, requireadmin }",
       "id": "server_test_with_coaches_route_authenticatetoken_requireadmin"
     },
@@ -12158,7 +12437,7 @@
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L6",
-      "community": 177,
+      "community": 63,
       "norm_label": "app",
       "id": "server_test_with_coaches_route_app"
     },
@@ -12167,7 +12446,7 @@
       "file_type": "code",
       "source_file": "server/test-with-coaches-route.js",
       "source_location": "L11",
-      "community": 177,
+      "community": 63,
       "norm_label": "corsoptions",
       "id": "server_test_with_coaches_route_corsoptions"
     },
@@ -12176,7 +12455,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L1",
-      "community": 93,
+      "community": 63,
       "norm_label": "test-with-db.js",
       "id": "server_test_with_db_js"
     },
@@ -12185,7 +12464,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L2",
-      "community": 93,
+      "community": 63,
       "norm_label": "express",
       "id": "server_test_with_db_express"
     },
@@ -12194,7 +12473,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L3",
-      "community": 93,
+      "community": 63,
       "norm_label": "cors",
       "id": "server_test_with_db_cors"
     },
@@ -12203,7 +12482,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L4",
-      "community": 93,
+      "community": 63,
       "norm_label": "db",
       "id": "server_test_with_db_db"
     },
@@ -12212,7 +12491,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L5",
-      "community": 93,
+      "community": 63,
       "norm_label": "{ authenticatetoken, requireadmin }",
       "id": "server_test_with_db_authenticatetoken_requireadmin"
     },
@@ -12221,7 +12500,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L6",
-      "community": 93,
+      "community": 63,
       "norm_label": "{ schedulejobs }",
       "id": "server_test_with_db_schedulejobs"
     },
@@ -12230,7 +12509,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L8",
-      "community": 93,
+      "community": 63,
       "norm_label": "app",
       "id": "server_test_with_db_app"
     },
@@ -12239,7 +12518,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L13",
-      "community": 93,
+      "community": 63,
       "norm_label": "corsoptions",
       "id": "server_test_with_db_corsoptions"
     },
@@ -12248,7 +12527,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L1",
-      "community": 176,
+      "community": 63,
       "norm_label": "test-with-notifications-route.js",
       "id": "server_test_with_notifications_route_js"
     },
@@ -12257,7 +12536,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L2",
-      "community": 176,
+      "community": 63,
       "norm_label": "express",
       "id": "server_test_with_notifications_route_express"
     },
@@ -12266,7 +12545,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L3",
-      "community": 176,
+      "community": 63,
       "norm_label": "cors",
       "id": "server_test_with_notifications_route_cors"
     },
@@ -12275,7 +12554,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L4",
-      "community": 176,
+      "community": 63,
       "norm_label": "{ authenticatetoken, requireadmin }",
       "id": "server_test_with_notifications_route_authenticatetoken_requireadmin"
     },
@@ -12284,7 +12563,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L5",
-      "community": 176,
+      "community": 63,
       "norm_label": "{ schedulejobs }",
       "id": "server_test_with_notifications_route_schedulejobs"
     },
@@ -12293,7 +12572,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L7",
-      "community": 176,
+      "community": 63,
       "norm_label": "app",
       "id": "server_test_with_notifications_route_app"
     },
@@ -12302,7 +12581,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L12",
-      "community": 176,
+      "community": 63,
       "norm_label": "corsoptions",
       "id": "server_test_with_notifications_route_corsoptions"
     },
@@ -12311,7 +12590,7 @@
       "file_type": "code",
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L1",
-      "community": 171,
+      "community": 63,
       "norm_label": "test-with-tasks-route.js",
       "id": "server_test_with_tasks_route_js"
     },
@@ -12320,7 +12599,7 @@
       "file_type": "code",
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L2",
-      "community": 171,
+      "community": 63,
       "norm_label": "express",
       "id": "server_test_with_tasks_route_express"
     },
@@ -12329,7 +12608,7 @@
       "file_type": "code",
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L3",
-      "community": 171,
+      "community": 63,
       "norm_label": "cors",
       "id": "server_test_with_tasks_route_cors"
     },
@@ -12338,7 +12617,7 @@
       "file_type": "code",
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L4",
-      "community": 171,
+      "community": 63,
       "norm_label": "{ authenticatetoken, requireadmin }",
       "id": "server_test_with_tasks_route_authenticatetoken_requireadmin"
     },
@@ -12347,7 +12626,7 @@
       "file_type": "code",
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L6",
-      "community": 171,
+      "community": 63,
       "norm_label": "app",
       "id": "server_test_with_tasks_route_app"
     },
@@ -12356,7 +12635,7 @@
       "file_type": "code",
       "source_file": "server/test-with-tasks-route.js",
       "source_location": "L11",
-      "community": 171,
+      "community": 63,
       "norm_label": "corsoptions",
       "id": "server_test_with_tasks_route_corsoptions"
     },
@@ -15191,7 +15470,7 @@
       "file_type": "code",
       "source_file": "server/routes/notifications.js",
       "source_location": "L1",
-      "community": 50,
+      "community": 171,
       "norm_label": "notifications.js",
       "id": "server_routes_notifications_js"
     },
@@ -15200,7 +15479,7 @@
       "file_type": "code",
       "source_file": "server/routes/notifications.js",
       "source_location": "L15",
-      "community": 50,
+      "community": 171,
       "norm_label": "notifs",
       "id": "routes_notifications_notifs"
     },
@@ -15209,7 +15488,7 @@
       "file_type": "code",
       "source_file": "server/routes/notifications.js",
       "source_location": "L36",
-      "community": 50,
+      "community": 171,
       "norm_label": "notif",
       "id": "routes_notifications_notif"
     },
@@ -15311,15 +15590,6 @@
       "community": 57,
       "norm_label": "vitest.config.js",
       "id": "vitest_config_js"
-    },
-    {
-      "label": "auth.js",
-      "file_type": "code",
-      "source_file": "auth.js",
-      "source_location": "L1",
-      "community": 79,
-      "norm_label": "auth.js",
-      "id": "auth_js"
     },
     {
       "label": "auth.test.js",
@@ -20105,372 +20375,72 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "deployment_session_2026_06_06_md",
-      "target": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L17",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
-      "target": "docs_deployment_session_2026_06_06_current_state",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L45",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
-      "target": "docs_deployment_session_2026_06_06_technical_deep_dive",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L108",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
-      "target": "docs_deployment_session_2026_06_06_database_state",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L128",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
-      "target": "docs_deployment_session_2026_06_06_environment_variables_render",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L143",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
-      "target": "docs_deployment_session_2026_06_06_git_history",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L153",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
-      "target": "docs_deployment_session_2026_06_06_what_changed_in_code",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L193",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
-      "target": "docs_deployment_session_2026_06_06_next_steps_priority_order",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L237",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
-      "target": "docs_deployment_session_2026_06_06_troubleshooting_checklist",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L250",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
-      "target": "docs_deployment_session_2026_06_06_key_files_locations",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L265",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
-      "target": "docs_deployment_session_2026_06_06_deployment_urls",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L276",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
-      "target": "docs_deployment_session_2026_06_06_session_summary",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L296",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
-      "target": "docs_deployment_session_2026_06_06_for_next_agent_developer",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L19",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_current_state",
-      "target": "docs_deployment_session_2026_06_06_what_s_working",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L36",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_current_state",
-      "target": "docs_deployment_session_2026_06_06_what_s_broken",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L47",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_technical_deep_dive",
-      "target": "docs_deployment_session_2026_06_06_issue_1_missing_await_on_postgresql_queries_fixed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L68",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_technical_deep_dive",
-      "target": "docs_deployment_session_2026_06_06_issue_2_database_initialization_timeout_fixed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L86",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_technical_deep_dive",
-      "target": "docs_deployment_session_2026_06_06_issue_3_password_mismatch_needs_fix_now",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L52",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_issue_1_missing_await_on_postgresql_queries_fixed",
-      "target": "docs_deployment_session_2026_06_06_codeblock_1",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L73",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_issue_2_database_initialization_timeout_fixed",
-      "target": "docs_deployment_session_2026_06_06_codeblock_2",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L89",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_issue_3_password_mismatch_needs_fix_now",
-      "target": "docs_deployment_session_2026_06_06_codeblock_3",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L110",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_database_state",
-      "target": "docs_deployment_session_2026_06_06_users_table",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L118",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_database_state",
-      "target": "docs_deployment_session_2026_06_06_tables_created",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L123",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_database_state",
-      "target": "docs_deployment_session_2026_06_06_indexes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L111",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_users_table",
-      "target": "docs_deployment_session_2026_06_06_codeblock_4",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L130",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_environment_variables_render",
-      "target": "docs_deployment_session_2026_06_06_codeblock_5",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L155",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_what_changed_in_code",
-      "target": "docs_deployment_session_2026_06_06_server_db_js",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L180",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_what_changed_in_code",
-      "target": "docs_deployment_session_2026_06_06_server_routes_auth_js",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L184",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_what_changed_in_code",
-      "target": "docs_deployment_session_2026_06_06_all_route_files_coaches_js_tasks_js_notifications_js_coaching_insights_js",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L160",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_server_db_js",
-      "target": "docs_deployment_session_2026_06_06_codeblock_6",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L195",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_next_steps_priority_order",
-      "target": "docs_deployment_session_2026_06_06_1_fix_password_mismatch_blocking",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L214",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_next_steps_priority_order",
-      "target": "docs_deployment_session_2026_06_06_2_test_login",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L223",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_next_steps_priority_order",
-      "target": "docs_deployment_session_2026_06_06_3_verify_full_flow",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L231",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_next_steps_priority_order",
-      "target": "docs_deployment_session_2026_06_06_4_known_non_critical_issues",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L199",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_1_fix_password_mismatch_blocking",
-      "target": "docs_deployment_session_2026_06_06_codeblock_7",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
-      "source_location": "L216",
-      "weight": 1.0,
-      "source": "docs_deployment_session_2026_06_06_2_test_login",
-      "target": "docs_deployment_session_2026_06_06_codeblock_8",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "cron.js",
-      "source_location": "L9",
+      "source_file": "db.js",
+      "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "cron_js",
-      "target": "server_cron_cron"
+      "source": "db_js",
+      "target": "server_db_pool"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_dns"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_query"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L98",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_queryone"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L103",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_queryall"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L108",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_run"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_db"
     },
     {
       "relation": "imports_from",
@@ -20482,6 +20452,1418 @@
       "confidence_score": 1.0,
       "source": "cron_js",
       "target": "db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_auth_js",
+      "target": "db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/coaches.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_coaches_js",
+      "target": "db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/coaching-insights.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_coaching_insights_js",
+      "target": "db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/notifications.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_notifications_js",
+      "target": "db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/tasks.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_tasks_js",
+      "target": "db_js"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_bcrypt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_hashedpassword"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "index.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "index_js",
+      "target": "db_js"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_database"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_path"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_dbpath"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_adminexists"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L81",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_cols"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db.js",
+      "source_location": "L89",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_js",
+      "target": "server_db_constraintexists"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "__tests__/coaching-insights.test.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_coaching_insights_test_js",
+      "target": "db_js"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_pool"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_dns"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L99",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_queryone",
+      "target": "server_db_query"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L104",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_queryall",
+      "target": "server_db_query"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L109",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_run",
+      "target": "server_db_query"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_query"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L98",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_queryone"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L103",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_queryall"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L108",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_run"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_js",
+      "target": "routes_auth_express"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_js",
+      "target": "routes_auth_bcrypt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_js",
+      "target": "routes_auth_db"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_js",
+      "target": "server_auth_generatetoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_js",
+      "target": "routes_auth_generatetoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_js",
+      "target": "routes_auth_router"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_js",
+      "target": "routes_auth_isvalidemail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_js",
+      "target": "routes_auth_validatelogininput"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_js",
+      "target": "routes_auth_validationerrors"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_js",
+      "target": "routes_auth_normalizedemail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_js",
+      "target": "routes_auth_token"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_js",
+      "target": "server_auth_jwt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_js",
+      "target": "server_auth_verifytoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_js",
+      "target": "server_auth_authenticatetoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_js",
+      "target": "server_auth_requireadmin"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L63",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_js",
+      "target": "server_auth_requirecoach"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.test.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_test_js",
+      "target": "auth_js"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L61",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth_js",
+      "target": "routes_auth_user"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_auth_js",
+      "target": "routes_auth_express"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/auth.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_auth_js",
+      "target": "routes_auth_express"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_auth_js",
+      "target": "routes_auth_bcrypt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/auth.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_auth_js",
+      "target": "routes_auth_bcrypt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_auth_js",
+      "target": "routes_auth_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/auth.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_auth_js",
+      "target": "routes_auth_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_auth_js",
+      "target": "routes_auth_generatetoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/auth.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_auth_js",
+      "target": "routes_auth_generatetoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_auth_js",
+      "target": "routes_auth_router"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/auth.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_auth_js",
+      "target": "routes_auth_router"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_auth_validatelogininput",
+      "target": "routes_auth_isvalidemail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_auth_js",
+      "target": "routes_auth_isvalidemail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_auth_js",
+      "target": "routes_auth_validatelogininput"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth.js",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_auth_js",
+      "target": "routes_auth_validationerrors"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth.js",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_auth_js",
+      "target": "routes_auth_normalizedemail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "routes/auth.js",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "routes_auth_js",
+      "target": "routes_auth_token"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/auth.js",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_auth_js",
+      "target": "routes_auth_token"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "railway_deploy_md",
+      "target": "cursor_new_railway_deploy_railway_deployment_coach_tracker"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_railway_deployment_coach_tracker",
+      "target": "cursor_new_railway_deploy_step_1_open_powershell_as_administrator"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_railway_deployment_coach_tracker",
+      "target": "cursor_new_railway_deploy_step_2_install_railway_cli"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_railway_deployment_coach_tracker",
+      "target": "cursor_new_railway_deploy_step_3_login_to_railway"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_railway_deployment_coach_tracker",
+      "target": "cursor_new_railway_deploy_step_4_link_to_your_project"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_railway_deployment_coach_tracker",
+      "target": "cursor_new_railway_deploy_step_5_navigate_to_server_folder"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_railway_deployment_coach_tracker",
+      "target": "cursor_new_railway_deploy_step_6_add_node_js_service"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_railway_deployment_coach_tracker",
+      "target": "cursor_new_railway_deploy_step_7_deploy_your_backend"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L92",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_railway_deployment_coach_tracker",
+      "target": "cursor_new_railway_deploy_step_8_go_to_railway_dashboard_add_postgresql"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L102",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_railway_deployment_coach_tracker",
+      "target": "cursor_new_railway_deploy_step_9_set_environment_variables"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_railway_deployment_coach_tracker",
+      "target": "cursor_new_railway_deploy_step_10_generate_domain"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L132",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_railway_deployment_coach_tracker",
+      "target": "cursor_new_railway_deploy_step_11_update_vercel_frontend"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L144",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_railway_deployment_coach_tracker",
+      "target": "cursor_new_railway_deploy_step_12_test"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L160",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_railway_deployment_coach_tracker",
+      "target": "cursor_new_railway_deploy_done"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L171",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_railway_deployment_coach_tracker",
+      "target": "cursor_new_railway_deploy_troubleshooting"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_step_1_open_powershell_as_administrator",
+      "target": "cursor_new_railway_deploy_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_step_2_install_railway_cli",
+      "target": "cursor_new_railway_deploy_codeblock_2"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_step_2_install_railway_cli",
+      "target": "cursor_new_railway_deploy_codeblock_3"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_step_3_login_to_railway",
+      "target": "cursor_new_railway_deploy_codeblock_4"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_step_4_link_to_your_project",
+      "target": "cursor_new_railway_deploy_codeblock_5"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_step_5_navigate_to_server_folder",
+      "target": "cursor_new_railway_deploy_codeblock_6"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_step_6_add_node_js_service",
+      "target": "cursor_new_railway_deploy_codeblock_7"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_step_7_deploy_your_backend",
+      "target": "cursor_new_railway_deploy_codeblock_8"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_step_7_deploy_your_backend",
+      "target": "cursor_new_railway_deploy_codeblock_9"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "RAILWAY_DEPLOY.md",
+      "source_location": "L110",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cursor_new_railway_deploy_step_9_set_environment_variables",
+      "target": "cursor_new_railway_deploy_codeblock_10"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_bcrypt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_hashedpassword"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/tasks.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_tasks_js",
+      "target": "server_db_js"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_database"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_path"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_dbpath"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_adminexists"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L81",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_cols"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L89",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db_js",
+      "target": "server_db_constraintexists"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/cron.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_cron_js",
+      "target": "server_db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/index.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_index_js",
+      "target": "server_db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/coaches.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_coaches_js",
+      "target": "server_db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/routes/notifications.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_tests_routes_notifications_test_js",
+      "target": "server_db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/routes/tasks.test.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_tests_routes_tasks_test_js",
+      "target": "server_db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/security/phase6-validation.test.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_tests_security_phase6_validation_test_js",
+      "target": "server_db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/notifications.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_notifications_js",
+      "target": "server_db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/auth.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_auth_js",
+      "target": "server_db_js"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "deployment_session_2026_06_06_md",
+      "target": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
+      "target": "docs_deployment_session_2026_06_06_current_state"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
+      "target": "docs_deployment_session_2026_06_06_technical_deep_dive"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L108",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
+      "target": "docs_deployment_session_2026_06_06_database_state"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L128",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
+      "target": "docs_deployment_session_2026_06_06_environment_variables_render"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L143",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
+      "target": "docs_deployment_session_2026_06_06_git_history"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L153",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
+      "target": "docs_deployment_session_2026_06_06_what_changed_in_code"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L193",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
+      "target": "docs_deployment_session_2026_06_06_next_steps_priority_order"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L237",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
+      "target": "docs_deployment_session_2026_06_06_troubleshooting_checklist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L250",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
+      "target": "docs_deployment_session_2026_06_06_key_files_locations"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L265",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
+      "target": "docs_deployment_session_2026_06_06_deployment_urls"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L276",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
+      "target": "docs_deployment_session_2026_06_06_session_summary"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L296",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_deployment_session_2026_06_06",
+      "target": "docs_deployment_session_2026_06_06_for_next_agent_developer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_current_state",
+      "target": "docs_deployment_session_2026_06_06_what_s_working"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_current_state",
+      "target": "docs_deployment_session_2026_06_06_what_s_broken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_technical_deep_dive",
+      "target": "docs_deployment_session_2026_06_06_issue_1_missing_await_on_postgresql_queries_fixed"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_technical_deep_dive",
+      "target": "docs_deployment_session_2026_06_06_issue_2_database_initialization_timeout_fixed"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_technical_deep_dive",
+      "target": "docs_deployment_session_2026_06_06_issue_3_password_mismatch_needs_fix_now"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_issue_1_missing_await_on_postgresql_queries_fixed",
+      "target": "docs_deployment_session_2026_06_06_codeblock_1"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_issue_2_database_initialization_timeout_fixed",
+      "target": "docs_deployment_session_2026_06_06_codeblock_2"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_issue_3_password_mismatch_needs_fix_now",
+      "target": "docs_deployment_session_2026_06_06_codeblock_3"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L110",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_database_state",
+      "target": "docs_deployment_session_2026_06_06_users_table"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L118",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_database_state",
+      "target": "docs_deployment_session_2026_06_06_tables_created"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L123",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_database_state",
+      "target": "docs_deployment_session_2026_06_06_indexes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_users_table",
+      "target": "docs_deployment_session_2026_06_06_codeblock_4"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L130",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_environment_variables_render",
+      "target": "docs_deployment_session_2026_06_06_codeblock_5"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L155",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_what_changed_in_code",
+      "target": "docs_deployment_session_2026_06_06_server_db_js"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L180",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_what_changed_in_code",
+      "target": "docs_deployment_session_2026_06_06_server_routes_auth_js"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L184",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_what_changed_in_code",
+      "target": "docs_deployment_session_2026_06_06_all_route_files_coaches_js_tasks_js_notifications_js_coaching_insights_js"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L160",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_server_db_js",
+      "target": "docs_deployment_session_2026_06_06_codeblock_6"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L195",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_next_steps_priority_order",
+      "target": "docs_deployment_session_2026_06_06_1_fix_password_mismatch_blocking"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L214",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_next_steps_priority_order",
+      "target": "docs_deployment_session_2026_06_06_2_test_login"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L223",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_next_steps_priority_order",
+      "target": "docs_deployment_session_2026_06_06_3_verify_full_flow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L231",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_next_steps_priority_order",
+      "target": "docs_deployment_session_2026_06_06_4_known_non_critical_issues"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L199",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_1_fix_password_mismatch_blocking",
+      "target": "docs_deployment_session_2026_06_06_codeblock_7"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DEPLOYMENT-SESSION-2026-06-06.md",
+      "source_location": "L216",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_deployment_session_2026_06_06_2_test_login",
+      "target": "docs_deployment_session_2026_06_06_codeblock_8"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cron.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cron_js",
+      "target": "server_cron_cron"
     },
     {
       "relation": "contains",
@@ -20711,243 +22093,6 @@
       "target": "server_cron_stopjobs"
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_pool"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_dns"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_query"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_db"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/auth.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_auth_js",
-      "target": "db_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/coaches.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_coaches_js",
-      "target": "db_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/coaching-insights.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_coaching_insights_js",
-      "target": "db_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/notifications.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_notifications_js",
-      "target": "db_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/tasks.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_tasks_js",
-      "target": "db_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_bcrypt"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L71",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_hashedpassword"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "index.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "index_js",
-      "target": "db_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_database"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_path"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_dbpath"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L47",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_adminexists"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L81",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_cols"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "db.js",
-      "source_location": "L89",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "db_js",
-      "target": "server_db_constraintexists"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "__tests__/coaching-insights.test.js",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_coaching_insights_test_js",
-      "target": "db_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db_js",
-      "target": "server_db_db"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/auth.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_auth_js",
-      "target": "routes_auth_express"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/auth.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_auth_js",
-      "target": "routes_auth_bcrypt"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/auth.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_auth_js",
-      "target": "routes_auth_db"
-    },
-    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -20957,247 +22102,6 @@
       "confidence_score": 1.0,
       "source": "routes_auth_js",
       "target": "server_auth_generatetoken"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/auth.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_auth_js",
-      "target": "routes_auth_generatetoken"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/auth.js",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_auth_js",
-      "target": "routes_auth_router"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/auth.js",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_auth_js",
-      "target": "routes_auth_isvalidemail"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/auth.js",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_auth_js",
-      "target": "routes_auth_validatelogininput"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/auth.js",
-      "source_location": "L52",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_auth_js",
-      "target": "routes_auth_validationerrors"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/auth.js",
-      "source_location": "L58",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_auth_js",
-      "target": "routes_auth_normalizedemail"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "routes/auth.js",
-      "source_location": "L73",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_auth_js",
-      "target": "routes_auth_token"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "auth_js",
-      "target": "routes_auth_express"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/auth.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_auth_js",
-      "target": "routes_auth_express"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "auth_js",
-      "target": "routes_auth_bcrypt"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/auth.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_auth_js",
-      "target": "routes_auth_bcrypt"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "auth_js",
-      "target": "routes_auth_db"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/auth.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_auth_js",
-      "target": "routes_auth_db"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "auth_js",
-      "target": "routes_auth_generatetoken"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/auth.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_auth_js",
-      "target": "routes_auth_generatetoken"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.js",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "auth_js",
-      "target": "routes_auth_router"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/auth.js",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_auth_js",
-      "target": "routes_auth_router"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.js",
-      "source_location": "L31",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "routes_auth_validatelogininput",
-      "target": "routes_auth_isvalidemail"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.js",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "auth_js",
-      "target": "routes_auth_isvalidemail"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.js",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "auth_js",
-      "target": "routes_auth_validatelogininput"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.js",
-      "source_location": "L52",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "auth_js",
-      "target": "routes_auth_validationerrors"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.js",
-      "source_location": "L58",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "auth_js",
-      "target": "routes_auth_normalizedemail"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.js",
-      "source_location": "L73",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "auth_js",
-      "target": "routes_auth_token"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/auth.js",
-      "source_location": "L38",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_auth_js",
-      "target": "routes_auth_token"
     },
     {
       "relation": "contains",
@@ -23342,26 +24246,6 @@
       "confidence_score": 1.0,
       "source": "server_package_json",
       "target": "server_package_devdependencies"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db_js",
-      "target": "server_db_bcrypt"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L48",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db_js",
-      "target": "server_db_hashedpassword"
     },
     {
       "relation": "contains",
@@ -26694,17 +27578,6 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "server/routes/tasks.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_tasks_js",
-      "target": "server_db_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/tasks.js",
       "source_location": "L13",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -26999,154 +27872,6 @@
       "confidence_score": 1.0,
       "source": "client_src_pages_admin_assigntask_jsx",
       "target": "client_src_components_ui_card_jsx"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db_js",
-      "target": "server_db_database"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db_js",
-      "target": "server_db_path"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db_js",
-      "target": "server_db_dbpath"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L46",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db_js",
-      "target": "server_db_adminexists"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L81",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db_js",
-      "target": "server_db_cols"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L89",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_db_js",
-      "target": "server_db_constraintexists"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/cron.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_cron_js",
-      "target": "server_db_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/index.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_index_js",
-      "target": "server_db_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/coaches.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_coaches_js",
-      "target": "server_db_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/__tests__/routes/notifications.test.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_tests_routes_notifications_test_js",
-      "target": "server_db_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/__tests__/routes/tasks.test.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_tests_routes_tasks_test_js",
-      "target": "server_db_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/__tests__/security/phase6-validation.test.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_tests_security_phase6_validation_test_js",
-      "target": "server_db_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/notifications.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_notifications_js",
-      "target": "server_db_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/auth.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_auth_js",
-      "target": "server_db_js"
     },
     {
       "relation": "imports",
@@ -35927,16 +36652,6 @@
       "target": "server_auth_js"
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "auth_js",
-      "target": "server_auth_jwt"
-    },
-    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -35956,17 +36671,6 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "server_tests_routes_tasks_test_js",
-      "target": "server_auth_generatetoken"
-    },
-    {
-      "relation": "imports",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "context": "import",
-      "confidence_score": 1.0,
-      "source": "auth_js",
       "target": "server_auth_generatetoken"
     },
     {
@@ -36014,16 +36718,6 @@
       "target": "server_auth_verifytoken"
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.js",
-      "source_location": "L31",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "auth_js",
-      "target": "server_auth_verifytoken"
-    },
-    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -36145,16 +36839,6 @@
       "target": "server_auth_authenticatetoken"
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.js",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "auth_js",
-      "target": "server_auth_authenticatetoken"
-    },
-    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -36254,16 +36938,6 @@
       "target": "server_auth_requireadmin"
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.js",
-      "source_location": "L56",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "auth_js",
-      "target": "server_auth_requireadmin"
-    },
-    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -36284,16 +36958,6 @@
       "confidence_score": 1.0,
       "source": "server_auth_test_js",
       "target": "server_auth_requireadmin"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.js",
-      "source_location": "L63",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "auth_js",
-      "target": "server_auth_requirecoach"
     },
     {
       "relation": "imports",
@@ -40218,27 +40882,6 @@
       "confidence_score": 1.0,
       "source": "src_setup_test_js",
       "target": "src_setup_test_localstoragemock"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.test.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "auth_test_js",
-      "target": "auth_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "auth.js",
-      "source_location": "L61",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "auth_js",
-      "target": "routes_auth_user"
     },
     {
       "relation": "contains",
@@ -45652,5 +46295,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "680c9a0bfe9972eb9f3a56769fc80c30a66be3ad"
+  "built_at_commit": "59cfef687323be1727ce73eeabe9e1cd383bdd6b"
 }
