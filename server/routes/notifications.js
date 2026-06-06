@@ -2,7 +2,7 @@
  * @phase 5
  * @status active
  * @owner phase-builder
- * @last_updated 2026-06-06T00:00:00Z
+ * @last_updated 2026-06-03T00:00:00Z
  * @beads []
  */
 
@@ -12,13 +12,13 @@ const db = require('../db');
 
 router.get('/', async (req, res) => {
   try {
-    const notifs = await db.queryAll(`
+    const notifs = await db.prepare(`
       SELECT n.*, t.title as task_title
       FROM notifications n
       LEFT JOIN tasks t ON n.task_id = t.id
-      WHERE n.user_id = $1
+      WHERE n.user_id = ?
       ORDER BY n.created_at DESC
-    `, [req.user.id]);
+    `).all(req.user.id);
     res.json(notifs);
   } catch (e) {
     console.error(e);
@@ -33,7 +33,7 @@ router.put('/:id/read', async (req, res) => {
   }
 
   try {
-    const notif = await db.queryOne('SELECT user_id FROM notifications WHERE id = $1', [id]);
+    const notif = await db.prepare('SELECT user_id FROM notifications WHERE id = ?').get(id);
 
     if (!notif) {
       return res.status(404).json({ error: 'Notification not found' });
@@ -43,7 +43,7 @@ router.put('/:id/read', async (req, res) => {
       return res.status(403).json({ error: 'Access denied' });
     }
 
-    await db.run('UPDATE notifications SET read = 1 WHERE id = $1', [id]);
+    await db.prepare('UPDATE notifications SET read = 1 WHERE id = ?').run(id);
     res.json({ success: true });
   } catch (e) {
     console.error(e);
@@ -53,7 +53,7 @@ router.put('/:id/read', async (req, res) => {
 
 router.put('/read-all', async (req, res) => {
   try {
-    await db.run('UPDATE notifications SET read = 1 WHERE user_id = $1 AND read = 0', [req.user.id]);
+    await db.prepare('UPDATE notifications SET read = 1 WHERE user_id = ? AND read = 0').run(req.user.id);
     res.json({ success: true });
   } catch (e) {
     console.error(e);

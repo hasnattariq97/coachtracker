@@ -1,7 +1,7 @@
 # Graph Report - Cursor_new  (2026-06-06)
 
 ## Corpus Check
-- 201 files · ~217,330 words
+- 201 files · ~217,430 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2be6e1a6`
+- Built from commit: `ff43b79d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -446,8 +446,8 @@ Cohesion: 0.1
 Nodes (19): code:cmd (scripts\cleanup.cmd), code:bash (./scripts/cleanup.sh), code:bash (cd d:\Cursor_new\server), code:bash (cd d:\Cursor_new\client), code:cmd (scripts\cleanup.cmd), code:cmd (scripts\cleanup.cmd), code:bash (ps aux | grep node | grep -v grep | wc -l), code:bash (killall -9 node && sleep 2 && cd server && node index.js) (+11 more)
 
 ### Community 75 - "Community 75"
-Cohesion: 0.26
-Nodes (13): 400 Bad Request, 401 Unauthorized, 403 Forbidden, 409 Conflict, 500 Internal Server Error, code:json ({), code:json ({), code:json ({) (+5 more)
+Cohesion: 0.29
+Nodes (12): 400 Bad Request, 401 Unauthorized, 403 Forbidden, 409 Conflict, 500 Internal Server Error, code:json ({), code:json ({), code:json ({) (+4 more)
 
 ### Community 76 - "Community 76"
 Cohesion: 0.17
@@ -518,8 +518,8 @@ Cohesion: 0.25
 Nodes (7): app, { authenticateToken, requireAdmin }, cors, corsOptions, db, express, { scheduleJobs }
 
 ### Community 94 - "Community 94"
-Cohesion: 0.53
-Nodes (6): code:json ([), code:json ({), GET /api/notifications, Notifications, PUT /api/notifications/:id/read, PUT /api/notifications/read-all
+Cohesion: 0.48
+Nodes (7): code:json ([), code:json ({), code:json ({), GET /api/notifications, Notifications, PUT /api/notifications/:id/read, PUT /api/notifications/read-all
 
 ### Community 95 - "Community 95"
 Cohesion: 0.29
@@ -806,7 +806,7 @@ Cohesion: 0.67
 Nodes (3): code:javascript (import request from 'supertest';), code:bash (cd d:\Cursor_new\server), Task 6: Implement Login Endpoint (RED)
 
 ## Knowledge Gaps
-- **1184 isolated node(s):** `{ Pool }`, `dns`, `start`, `test`, `dev` (+1179 more)
+- **1184 isolated node(s):** `start`, `test`, `dev`, `@anthropic-ai/sdk`, `@google/generative-ai` (+1179 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -819,7 +819,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `Phase 1: Auth System Implementation Plan` connect `Community 32` to `Community 33`, `Community 34`, `Community 35`, `Community 36`, `Community 37`, `Community 38`, `Community 40`, `Community 41`, `Community 42`, `Community 43`, `Community 104`, `Community 45`, `Community 174`, `Community 31`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **What connects `{ Pool }`, `dns`, `start` to the rest of the system?**
+- **What connects `start`, `test`, `dev` to the rest of the system?**
   _1184 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.14 - nodes in this community are weakly interconnected._

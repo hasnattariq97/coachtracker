@@ -1,14 +1,8 @@
-require('dotenv').config();
 const { Pool } = require('pg');
 const dns = require('dns');
 
 // Force IPv4 only (fixes Render + Supabase connectivity)
 dns.setDefaultResultOrder('ipv4first');
-
-if (!process.env.DATABASE_URL) {
-  console.error('❌ DATABASE_URL not set in .env');
-  process.exit(1);
-}
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -24,26 +18,15 @@ pool.on('error', (err) => {
   console.error('Unexpected error on idle client', err);
 });
 
-// Helper: Get single row (matches old .get() behavior)
-const queryOne = async (text, params = []) => {
-  const result = await pool.query(text, params);
-  return result.rows[0] || null;
-};
-
-// Helper: Get all rows (matches old .all() behavior)
-const queryAll = async (text, params = []) => {
-  const result = await pool.query(text, params);
-  return result.rows;
-};
-
-// Helper: Execute query without returning rows (matches old .run() behavior)
-const run = async (text, params = []) => {
-  const result = await pool.query(text, params);
-  return {
-    lastID: result.rows[0]?.id,
-    changes: result.rowCount,
-    rows: result.rows,
-  };
+// Helper function to run queries
+const query = async (text, params) => {
+  const client = await pool.connect();
+  try {
+    const result = await client.query(text, params);
+    return result;
+  } finally {
+    client.release();
+  }
 };
 
 // Initialize database in background (non-blocking)
@@ -51,16 +34,16 @@ const run = async (text, params = []) => {
 (async () => {
   try {
     // Check if users table exists
-    const checkTable = await queryOne(`
+    const checkTable = await query(`
       SELECT EXISTS (
         SELECT 1 FROM information_schema.tables
         WHERE table_name = 'users'
       ) as exists;
     `);
 
-    if (!checkTable?.exists) {
+    if (!checkTable.rows[0].exists) {
       // Only create tables if they don't exist
-      await run(`
+      await query(`
         CREATE TABLE users (
           id SERIAL PRIMARY KEY,
           name TEXT NOT NULL DEFAULT '',
@@ -111,18 +94,17 @@ const run = async (text, params = []) => {
   }
 })();
 
-// Export async helpers (routes must use await)
-module.exports = {
-  // Get single row: db.query(sql, params)
-  query: queryOne,
-
-  // Get multiple rows: db.queryAll(sql, params)
-  queryAll: queryAll,
-
-  // Execute insert/update/delete: db.run(sql, params)
-  run: run,
-
-  // Raw pool access if needed
-  pool: pool,
+// Export a synchronous-like interface for compatibility
+const db = {
+  prepare: (sql) => ({
+    run: (...params) => query(sql, params),
+    get: (...params) => query(sql, params).then(res => res.rows[0]),
+    all: (...params) => query(sql, params).then(res => res.rows)
+  }),
+  exec: (sql) => query(sql, []),
+  pragma: () => {} // No-op for PostgreSQL
 };
 
+module.exports = db;
+module.exports.query = query;
+module.exports.pool = pool;
