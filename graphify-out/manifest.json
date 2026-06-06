@@ -104,6 +104,1506 @@
     "ast_hash": "e9d8be9caa34d327cac6f746f947cee0",
     "semantic_hash": ""
   },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\assign-test-task.js": {
+    "mtime": 1780753831.351865,
+    "ast_hash": "cb7124ec6bc2050af55febaffba8a7bb",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\check-task.js": {
+    "mtime": 1780753831.361804,
+    "ast_hash": "2783c6225e6e10b839292bce655680c2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\create-coach.js": {
+    "mtime": 1780753831.7667222,
+    "ast_hash": "71deb0b7313dda89498218a049393577",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\install-ruflo-plugins.ps1": {
+    "mtime": 1780753834.8680284,
+    "ast_hash": "a06c67214b633d215e89a2591b96df91",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\install-ruflo-plugins.sh": {
+    "mtime": 1780753834.9328537,
+    "ast_hash": "54c6802e704f4095188e484828f48b72",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\verify-ruflo-plugins.sh": {
+    "mtime": 1780753835.4724376,
+    "ast_hash": "58ed40cf81d95571a6a4bb1e1b24e424",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.beads\\_manifest.json": {
+    "mtime": 1780753830.6667888,
+    "ast_hash": "07e22764313762eb14b4567a0cc6d3c2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\settings.json": {
+    "mtime": 1780753830.8426802,
+    "ast_hash": "722dd2658cc963040292d5961d3d4bcb",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\hooks\\hooks-cursor.json": {
+    "mtime": 1780753830.749216,
+    "ast_hash": "57f01eca7fe6be6487162d72169aaf29",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\hooks\\hooks.json": {
+    "mtime": 1780753830.7532036,
+    "ast_hash": "0afaeab455952ba054be036794ec4c8d",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\hooks\\on-stop.sh": {
+    "mtime": 1780753830.756196,
+    "ast_hash": "ae942ecc14c5225f6e27ab6013ec9776",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\hooks\\post-tool-use.sh": {
+    "mtime": 1780753830.7681632,
+    "ast_hash": "77a8503a36931e761a1833124a771fda",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\hooks\\pre-tool-use-write-guard.sh": {
+    "mtime": 1780753830.7818463,
+    "ast_hash": "eda03d8e23ecb49943af8fd79f42ec20",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\hooks\\pre-tool-use.sh": {
+    "mtime": 1780753830.7918162,
+    "ast_hash": "680332a777f66fff13e07e86bec850b3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\hooks\\session-start": {
+    "mtime": 1780753830.828718,
+    "ast_hash": "e55a4e3097d740ffa0d42a766b14f28c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\brainstorming\\scripts\\helper.js": {
+    "mtime": 1780753830.8616302,
+    "ast_hash": "7578040376f1e0835523d8f06339c6b3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\brainstorming\\scripts\\start-server.sh": {
+    "mtime": 1780753830.8820858,
+    "ast_hash": "efdff28a7370ed60041f885ddb2e5a68",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\brainstorming\\scripts\\stop-server.sh": {
+    "mtime": 1780753830.8880706,
+    "ast_hash": "d57fdc1c3e2fb1a8285371b8bd26cad9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\systematic-debugging\\condition-based-waiting-example.ts": {
+    "mtime": 1780753831.0586135,
+    "ast_hash": "b76b763289c6c9662d2c16b87d58b452",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\systematic-debugging\\find-polluter.sh": {
+    "mtime": 1780753831.077562,
+    "ast_hash": "38024e264d2a121f9bcace784e293af3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\writing-skills\\render-graphs.js": {
+    "mtime": 1780753831.2281592,
+    "ast_hash": "8146396a77faca5a8b3358d1a274b654",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\agent-browser.config.js": {
+    "mtime": 1780753831.402727,
+    "ast_hash": "f864f74d98ec404a7b79f667fd7a1f90",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\eslint.config.js": {
+    "mtime": 1780753831.4066854,
+    "ast_hash": "fa91453358b56681481f75f81d1bfccd",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\package.json": {
+    "mtime": 1780753831.421643,
+    "ast_hash": "f7c930d039aeed7e5a4829e73e161f13",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\postcss.config.js": {
+    "mtime": 1780753831.424635,
+    "ast_hash": "9e94f5afd46d0b71c0f40431ba0394c2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\tailwind.config.js": {
+    "mtime": 1780753831.7128658,
+    "ast_hash": "dcf6e2c94e70124ff78a9a43dad073b7",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\test-agent-browser.js": {
+    "mtime": 1780753831.716856,
+    "ast_hash": "99fe528f209749c8c692fa073bfb8747",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\vercel.json": {
+    "mtime": 1780753831.7248335,
+    "ast_hash": "0db7ccb3aff36e97aa469126e9e17f99",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\vite.config.js": {
+    "mtime": 1780753831.7278259,
+    "ast_hash": "1647413fb458f96dc23d30fc5e0c5ee4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\vitest.config.js": {
+    "mtime": 1780753831.7318149,
+    "ast_hash": "6b8ace0d7dcb3cae249d530165aeab4e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\App.jsx": {
+    "mtime": 1780753831.4435859,
+    "ast_hash": "359e8218e7857f3be9309d154e7285d4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\main.jsx": {
+    "mtime": 1780753831.6440475,
+    "ast_hash": "51fd21c378330142b61bf8d1ef3795ef",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\setup.js": {
+    "mtime": 1780753831.7088761,
+    "ast_hash": "57adc8a06c55c18dc4cac3b20fbd88e5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\CoachingInsightCard.jsx": {
+    "mtime": 1780753831.502427,
+    "ast_hash": "512286289aad4487c6f47aa7575207fe",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\DelayReasonModal.jsx": {
+    "mtime": 1780753831.5094092,
+    "ast_hash": "5499ff3838de97ad329c2cdbbd5fd34f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\EditTaskModal.jsx": {
+    "mtime": 1780753831.5203786,
+    "ast_hash": "196c37197127a41bed4a6527c8d5e69a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\Header.jsx": {
+    "mtime": 1780753831.5293539,
+    "ast_hash": "d0f9fcc9baecf9e413b4f776c3e1f44a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\Layout.jsx": {
+    "mtime": 1780753831.5343413,
+    "ast_hash": "aa5ec702ae865ba858274740d9dcab08",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\NotificationBell.jsx": {
+    "mtime": 1780753831.539328,
+    "ast_hash": "425c475ee8baa4529971ff712edbcfac",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\ProtectedRoute.jsx": {
+    "mtime": 1780753831.545312,
+    "ast_hash": "4ab069f50fe267f2dc235f21077a6ba9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\ProtectedRoute.test.jsx": {
+    "mtime": 1780753831.5522933,
+    "ast_hash": "e5ab86fe56c3a6efb3c7915e2533bfe4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\Sidebar.jsx": {
+    "mtime": 1780753831.5572817,
+    "ast_hash": "eab4a7ef21135f1664406abc26d39eed",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\TaskCard.jsx": {
+    "mtime": 1780753831.563263,
+    "ast_hash": "27ed7ad9f8a38634fabee2a9eaec7b39",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\TaskDetailSlideOver.jsx": {
+    "mtime": 1780753831.5732374,
+    "ast_hash": "2aa8a0bbfb53513eadf7a22117d04493",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\ui\\Badge.jsx": {
+    "mtime": 1780753831.578226,
+    "ast_hash": "6376f86b3fa7344c2fc0698b7ae37117",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\ui\\Button.jsx": {
+    "mtime": 1780753831.5872002,
+    "ast_hash": "f758c5abfcdf61bfb17c674f4dacaccc",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\ui\\Card.jsx": {
+    "mtime": 1780753831.595178,
+    "ast_hash": "641ba6a652a2ca9c6dd558cbee7f2a02",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\ui\\EmptyState.jsx": {
+    "mtime": 1780753831.601162,
+    "ast_hash": "b6c3c9943fa3bd2434d801025ec26f71",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\ui\\KPICard.jsx": {
+    "mtime": 1780753831.6061485,
+    "ast_hash": "cd98e7a0f954dcddc7419944aaeb94d1",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\ui\\Modal.jsx": {
+    "mtime": 1780753831.6101384,
+    "ast_hash": "def8c81017c8338000e469ed4141c230",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\ui\\ProgressBar.jsx": {
+    "mtime": 1780753831.615127,
+    "ast_hash": "89972070a4ef5cbbfbc0fc043a39e0ff",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\components\\ui\\Skeleton.jsx": {
+    "mtime": 1780753831.6211095,
+    "ast_hash": "850e858d129076575153d17ef992e9a6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\context\\AuthContext.jsx": {
+    "mtime": 1780753831.626097,
+    "ast_hash": "3caf1e7f462b5b14c6e3d7e79b7991a2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\context\\AuthContext.test.jsx": {
+    "mtime": 1780753831.6320803,
+    "ast_hash": "301b477584dccc032f5764c4a1d06fe5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\pages\\LoginPage.jsx": {
+    "mtime": 1780753831.6480386,
+    "ast_hash": "38e7fc2ac5e3326b4ae1019359ae5b6e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\pages\\LoginPage.test.jsx": {
+    "mtime": 1780753831.6540232,
+    "ast_hash": "b9d8551394d8deb64467e56b890f2ad9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\pages\\admin\\AssignTask.jsx": {
+    "mtime": 1780753831.663995,
+    "ast_hash": "4958a0fd7918fae99e973e07a87075f9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\pages\\admin\\CoachesPage.jsx": {
+    "mtime": 1780753831.674965,
+    "ast_hash": "ea0dd08fd2f4393ffd7b7b64f282302d",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\pages\\admin\\Dashboard.jsx": {
+    "mtime": 1780753831.6829445,
+    "ast_hash": "d295285a6dd3c942e59a58f9fed85c65",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\pages\\admin\\TaskBoard.jsx": {
+    "mtime": 1780753831.689928,
+    "ast_hash": "d1c7fa293b57267de1bb9dff6ce1ad1c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\pages\\coach\\Dashboard.jsx": {
+    "mtime": 1780753831.6959107,
+    "ast_hash": "9d65595bd0d5742cf502ef5359059966",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\pages\\coach\\MyTasks.jsx": {
+    "mtime": 1780753831.7018952,
+    "ast_hash": "587299e9534ea5a9d06248aa62ae8538",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\__tests__\\e2e\\admin.workflow.test.js": {
+    "mtime": 1780753831.4515624,
+    "ast_hash": "a153e144c22988f44934c28222061eb7",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\__tests__\\e2e\\agent-browser.helper.js": {
+    "mtime": 1780753831.4595432,
+    "ast_hash": "e2d090714d5fd6d537f741fe92df1679",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\__tests__\\e2e\\coach.workflow.test.js": {
+    "mtime": 1780753831.4665222,
+    "ast_hash": "336d44c4e8045845c389fddfc68475e6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\__tests__\\e2e\\coaching-insights.e2e.test.js": {
+    "mtime": 1780753831.4735062,
+    "ast_hash": "61c68b450c4cd1b3194514cef94c3842",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\__tests__\\e2e\\phase7-coaching-insights.test.js": {
+    "mtime": 1780753831.4784915,
+    "ast_hash": "5d9af7e5268595c31c8717e508fd12c2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\__tests__\\e2e\\simple.test.js": {
+    "mtime": 1780753831.48647,
+    "ast_hash": "7a24d32867c1b01bb8e44dc9072137f2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\scripts\\cleanup.sh": {
+    "mtime": 1780753835.0141523,
+    "ast_hash": "abc475ea622aaba40d901da277089f69",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\auth.js": {
+    "mtime": 1780753835.0764966,
+    "ast_hash": "6fdfa7d4d544a018c755755438fe7198",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\auth.test.js": {
+    "mtime": 1780753835.0824814,
+    "ast_hash": "c61fa9e7566a9245580a06d2d0ddbda9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\cron.js": {
+    "mtime": 1780753835.1024277,
+    "ast_hash": "a8ae15a69c93ccdf665f6e3eeab6b00e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\db-integration.test.js": {
+    "mtime": 1780753835.117387,
+    "ast_hash": "b5fef83dc403a3d04554ae568b912b29",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\db.js": {
+    "mtime": 1780753835.1383324,
+    "ast_hash": "436bd2f75d60051a991c637a43cae758",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\db.test.js": {
+    "mtime": 1780753835.1512961,
+    "ast_hash": "1fa5629c0801bb9078a080d4f7606f50",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\index.js": {
+    "mtime": 1780753835.173239,
+    "ast_hash": "8cbeca34112c93dec492590b8cc79122",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\index.test.js": {
+    "mtime": 1780753835.1852052,
+    "ast_hash": "344524bc91839beadec7eb810b7e746a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\jest.config.js": {
+    "mtime": 1780753835.1971738,
+    "ast_hash": "448ea89cbe8468d62b49741628d510bd",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\package.json": {
+    "mtime": 1780753835.207147,
+    "ast_hash": "281ce4dfbe81655c73162293e669480d",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\test-api.js": {
+    "mtime": 1780753835.3248327,
+    "ast_hash": "b9fc3784916972f2b97cd52ae5ee72a0",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\test-db.js": {
+    "mtime": 1780753835.3358033,
+    "ast_hash": "7da86f1555ea9291d644ecab1a8404ed",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\test-minimal.js": {
+    "mtime": 1780753835.345778,
+    "ast_hash": "39fab00063f055242e409667ed68ef86",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\test-no-routes.js": {
+    "mtime": 1780753835.3557503,
+    "ast_hash": "5edfb918a4840fa7623e8acd88d730c3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\test-setup.js": {
+    "mtime": 1780753835.3687158,
+    "ast_hash": "f568038f139c1202aad755d0d1da03f6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\test-simple.js": {
+    "mtime": 1780753835.3816803,
+    "ast_hash": "abda90f81704d48f98112036faf8bd3b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\test-with-auth-route.js": {
+    "mtime": 1780753835.3906565,
+    "ast_hash": "dd3be91aff3eabbbae0ee436c8104954",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\test-with-coaches-route.js": {
+    "mtime": 1780753835.4026248,
+    "ast_hash": "497a1eedfeea641d84e374c5ea7a78be",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\test-with-db.js": {
+    "mtime": 1780753835.4145923,
+    "ast_hash": "89de573f6a4629492253bea1cfbb396a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\test-with-notifications-route.js": {
+    "mtime": 1780753835.425564,
+    "ast_hash": "df6bf006851eced56c0334b811780229",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\test-with-tasks-route.js": {
+    "mtime": 1780753835.4365358,
+    "ast_hash": "a1c0000bdbe12eda75209ab879b5d1af",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\routes\\auth.js": {
+    "mtime": 1780753835.213131,
+    "ast_hash": "551439104762585efe7c525256c03339",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\routes\\auth.test.js": {
+    "mtime": 1780753835.2270951,
+    "ast_hash": "725298ac63da978759e3bdf391b2ca76",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\routes\\coaches.js": {
+    "mtime": 1780753835.2440488,
+    "ast_hash": "3762e425d41c13627032c8b3359352a0",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\routes\\coaching-insights.js": {
+    "mtime": 1780753835.2590094,
+    "ast_hash": "5966b8552c63b135bc93191db490e4c3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\routes\\notifications.js": {
+    "mtime": 1780753835.2819476,
+    "ast_hash": "c28ae39c0f3612bc1fff4777523e3c96",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\routes\\tasks.js": {
+    "mtime": 1780753835.3038893,
+    "ast_hash": "e719a52be31d400bafa1a91a416e3f21",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\__tests__\\coaching-insights.test.js": {
+    "mtime": 1780753835.0350966,
+    "ast_hash": "01705ad68f1489b2fbf3d28effe080f8",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\__tests__\\routes\\notifications.test.js": {
+    "mtime": 1780753835.042586,
+    "ast_hash": "9e50b63ef5c9014befcff4e04a03ef52",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\__tests__\\routes\\tasks.test.js": {
+    "mtime": 1780753835.0505655,
+    "ast_hash": "814506d8ffdbc2373fbe0331c2fd7429",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\server\\__tests__\\security\\phase6-validation.test.js": {
+    "mtime": 1780753835.061536,
+    "ast_hash": "c1cc4775b88764eb32517d1f358e929c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\assign-test-task.js": {
+    "mtime": 1780753920.3927722,
+    "ast_hash": "cb7124ec6bc2050af55febaffba8a7bb",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\check-task.js": {
+    "mtime": 1780753920.4147127,
+    "ast_hash": "2783c6225e6e10b839292bce655680c2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\create-coach.js": {
+    "mtime": 1780753920.9183662,
+    "ast_hash": "71deb0b7313dda89498218a049393577",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\install-ruflo-plugins.ps1": {
+    "mtime": 1780753924.1748567,
+    "ast_hash": "a06c67214b633d215e89a2591b96df91",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\install-ruflo-plugins.sh": {
+    "mtime": 1780753924.2596302,
+    "ast_hash": "54c6802e704f4095188e484828f48b72",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\verify-ruflo-plugins.sh": {
+    "mtime": 1780753924.7370315,
+    "ast_hash": "58ed40cf81d95571a6a4bb1e1b24e424",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.beads\\_manifest.json": {
+    "mtime": 1780753919.2907195,
+    "ast_hash": "07e22764313762eb14b4567a0cc6d3c2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\settings.json": {
+    "mtime": 1780753919.5959022,
+    "ast_hash": "722dd2658cc963040292d5961d3d4bcb",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\hooks\\hooks-cursor.json": {
+    "mtime": 1780753919.4203773,
+    "ast_hash": "57f01eca7fe6be6487162d72169aaf29",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\hooks\\hooks.json": {
+    "mtime": 1780753919.427354,
+    "ast_hash": "0afaeab455952ba054be036794ec4c8d",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\hooks\\on-stop.sh": {
+    "mtime": 1780753919.4313421,
+    "ast_hash": "ae942ecc14c5225f6e27ab6013ec9776",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\hooks\\post-tool-use.sh": {
+    "mtime": 1780753919.4463022,
+    "ast_hash": "77a8503a36931e761a1833124a771fda",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\hooks\\pre-tool-use-write-guard.sh": {
+    "mtime": 1780753919.4612658,
+    "ast_hash": "eda03d8e23ecb49943af8fd79f42ec20",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\hooks\\pre-tool-use.sh": {
+    "mtime": 1780753919.4792154,
+    "ast_hash": "680332a777f66fff13e07e86bec850b3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\hooks\\session-start": {
+    "mtime": 1780753919.561993,
+    "ast_hash": "e55a4e3097d740ffa0d42a766b14f28c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\brainstorming\\scripts\\helper.js": {
+    "mtime": 1780753919.6278336,
+    "ast_hash": "7578040376f1e0835523d8f06339c6b3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\brainstorming\\scripts\\start-server.sh": {
+    "mtime": 1780753919.6607304,
+    "ast_hash": "efdff28a7370ed60041f885ddb2e5a68",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\brainstorming\\scripts\\stop-server.sh": {
+    "mtime": 1780753919.6677094,
+    "ast_hash": "d57fdc1c3e2fb1a8285371b8bd26cad9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\systematic-debugging\\condition-based-waiting-example.ts": {
+    "mtime": 1780753919.9300096,
+    "ast_hash": "b76b763289c6c9662d2c16b87d58b452",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\systematic-debugging\\find-polluter.sh": {
+    "mtime": 1780753919.9599292,
+    "ast_hash": "38024e264d2a121f9bcace784e293af3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\writing-skills\\render-graphs.js": {
+    "mtime": 1780753920.1873238,
+    "ast_hash": "8146396a77faca5a8b3358d1a274b654",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\agent-browser.config.js": {
+    "mtime": 1780753920.4695659,
+    "ast_hash": "f864f74d98ec404a7b79f667fd7a1f90",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\eslint.config.js": {
+    "mtime": 1780753920.4745524,
+    "ast_hash": "fa91453358b56681481f75f81d1bfccd",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\package.json": {
+    "mtime": 1780753920.5004838,
+    "ast_hash": "f7c930d039aeed7e5a4829e73e161f13",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\postcss.config.js": {
+    "mtime": 1780753920.5064812,
+    "ast_hash": "9e94f5afd46d0b71c0f40431ba0394c2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\tailwind.config.js": {
+    "mtime": 1780753920.8625157,
+    "ast_hash": "dcf6e2c94e70124ff78a9a43dad073b7",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\test-agent-browser.js": {
+    "mtime": 1780753920.8655064,
+    "ast_hash": "99fe528f209749c8c692fa073bfb8747",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\vercel.json": {
+    "mtime": 1780753920.8724897,
+    "ast_hash": "0db7ccb3aff36e97aa469126e9e17f99",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\vite.config.js": {
+    "mtime": 1780753920.87648,
+    "ast_hash": "1647413fb458f96dc23d30fc5e0c5ee4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\vitest.config.js": {
+    "mtime": 1780753920.882468,
+    "ast_hash": "6b8ace0d7dcb3cae249d530165aeab4e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\App.jsx": {
+    "mtime": 1780753920.5363882,
+    "ast_hash": "359e8218e7857f3be9309d154e7285d4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\main.jsx": {
+    "mtime": 1780753920.7807343,
+    "ast_hash": "51fd21c378330142b61bf8d1ef3795ef",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\setup.js": {
+    "mtime": 1780753920.856534,
+    "ast_hash": "57adc8a06c55c18dc4cac3b20fbd88e5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\CoachingInsightCard.jsx": {
+    "mtime": 1780753920.6261487,
+    "ast_hash": "512286289aad4487c6f47aa7575207fe",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\DelayReasonModal.jsx": {
+    "mtime": 1780753920.6351235,
+    "ast_hash": "5499ff3838de97ad329c2cdbbd5fd34f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\EditTaskModal.jsx": {
+    "mtime": 1780753920.6480904,
+    "ast_hash": "196c37197127a41bed4a6527c8d5e69a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\Header.jsx": {
+    "mtime": 1780753920.6610558,
+    "ast_hash": "d0f9fcc9baecf9e413b4f776c3e1f44a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\Layout.jsx": {
+    "mtime": 1780753920.6660495,
+    "ast_hash": "aa5ec702ae865ba858274740d9dcab08",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\NotificationBell.jsx": {
+    "mtime": 1780753920.670048,
+    "ast_hash": "425c475ee8baa4529971ff712edbcfac",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\ProtectedRoute.jsx": {
+    "mtime": 1780753920.6770117,
+    "ast_hash": "4ab069f50fe267f2dc235f21077a6ba9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\ProtectedRoute.test.jsx": {
+    "mtime": 1780753920.682998,
+    "ast_hash": "e5ab86fe56c3a6efb3c7915e2533bfe4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\Sidebar.jsx": {
+    "mtime": 1780753920.6889818,
+    "ast_hash": "eab4a7ef21135f1664406abc26d39eed",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\TaskCard.jsx": {
+    "mtime": 1780753920.695962,
+    "ast_hash": "27ed7ad9f8a38634fabee2a9eaec7b39",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\TaskDetailSlideOver.jsx": {
+    "mtime": 1780753920.7069328,
+    "ast_hash": "2aa8a0bbfb53513eadf7a22117d04493",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\ui\\Badge.jsx": {
+    "mtime": 1780753920.7149124,
+    "ast_hash": "6376f86b3fa7344c2fc0698b7ae37117",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\ui\\Button.jsx": {
+    "mtime": 1780753920.7228885,
+    "ast_hash": "f758c5abfcdf61bfb17c674f4dacaccc",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\ui\\Card.jsx": {
+    "mtime": 1780753920.7318661,
+    "ast_hash": "641ba6a652a2ca9c6dd558cbee7f2a02",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\ui\\EmptyState.jsx": {
+    "mtime": 1780753920.7358546,
+    "ast_hash": "b6c3c9943fa3bd2434d801025ec26f71",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\ui\\KPICard.jsx": {
+    "mtime": 1780753920.7398431,
+    "ast_hash": "cd98e7a0f954dcddc7419944aaeb94d1",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\ui\\Modal.jsx": {
+    "mtime": 1780753920.7448301,
+    "ast_hash": "def8c81017c8338000e469ed4141c230",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\ui\\ProgressBar.jsx": {
+    "mtime": 1780753920.7518134,
+    "ast_hash": "89972070a4ef5cbbfbc0fc043a39e0ff",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\components\\ui\\Skeleton.jsx": {
+    "mtime": 1780753920.7577958,
+    "ast_hash": "850e858d129076575153d17ef992e9a6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\context\\AuthContext.jsx": {
+    "mtime": 1780753920.7617865,
+    "ast_hash": "3caf1e7f462b5b14c6e3d7e79b7991a2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\context\\AuthContext.test.jsx": {
+    "mtime": 1780753920.7667756,
+    "ast_hash": "301b477584dccc032f5764c4a1d06fe5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\pages\\LoginPage.jsx": {
+    "mtime": 1780753920.784723,
+    "ast_hash": "38e7fc2ac5e3326b4ae1019359ae5b6e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\pages\\LoginPage.test.jsx": {
+    "mtime": 1780753920.7937,
+    "ast_hash": "b9d8551394d8deb64467e56b890f2ad9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\pages\\admin\\AssignTask.jsx": {
+    "mtime": 1780753920.8016787,
+    "ast_hash": "4958a0fd7918fae99e973e07a87075f9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\pages\\admin\\CoachesPage.jsx": {
+    "mtime": 1780753920.811651,
+    "ast_hash": "ea0dd08fd2f4393ffd7b7b64f282302d",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\pages\\admin\\Dashboard.jsx": {
+    "mtime": 1780753920.823619,
+    "ast_hash": "d295285a6dd3c942e59a58f9fed85c65",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\pages\\admin\\TaskBoard.jsx": {
+    "mtime": 1780753920.8296041,
+    "ast_hash": "d1c7fa293b57267de1bb9dff6ce1ad1c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\pages\\coach\\Dashboard.jsx": {
+    "mtime": 1780753920.8405755,
+    "ast_hash": "9d65595bd0d5742cf502ef5359059966",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\pages\\coach\\MyTasks.jsx": {
+    "mtime": 1780753920.848554,
+    "ast_hash": "587299e9534ea5a9d06248aa62ae8538",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\__tests__\\e2e\\admin.workflow.test.js": {
+    "mtime": 1780753920.5443673,
+    "ast_hash": "a153e144c22988f44934c28222061eb7",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\__tests__\\e2e\\agent-browser.helper.js": {
+    "mtime": 1780753920.5533423,
+    "ast_hash": "e2d090714d5fd6d537f741fe92df1679",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\__tests__\\e2e\\coach.workflow.test.js": {
+    "mtime": 1780753920.564314,
+    "ast_hash": "336d44c4e8045845c389fddfc68475e6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\__tests__\\e2e\\coaching-insights.e2e.test.js": {
+    "mtime": 1780753920.575285,
+    "ast_hash": "61c68b450c4cd1b3194514cef94c3842",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\__tests__\\e2e\\phase7-coaching-insights.test.js": {
+    "mtime": 1780753920.5842602,
+    "ast_hash": "5d9af7e5268595c31c8717e508fd12c2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\__tests__\\e2e\\simple.test.js": {
+    "mtime": 1780753920.6012151,
+    "ast_hash": "7a24d32867c1b01bb8e44dc9072137f2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\scripts\\cleanup.sh": {
+    "mtime": 1780753924.345402,
+    "ast_hash": "abc475ea622aaba40d901da277089f69",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\auth.js": {
+    "mtime": 1780753924.434163,
+    "ast_hash": "6fdfa7d4d544a018c755755438fe7198",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\auth.test.js": {
+    "mtime": 1780753924.4431398,
+    "ast_hash": "c61fa9e7566a9245580a06d2d0ddbda9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\cron.js": {
+    "mtime": 1780753924.4600935,
+    "ast_hash": "a8ae15a69c93ccdf665f6e3eeab6b00e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\db-integration.test.js": {
+    "mtime": 1780753924.471065,
+    "ast_hash": "b5fef83dc403a3d04554ae568b912b29",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\db.js": {
+    "mtime": 1780753924.485027,
+    "ast_hash": "436bd2f75d60051a991c637a43cae758",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\db.test.js": {
+    "mtime": 1780753924.494004,
+    "ast_hash": "1fa5629c0801bb9078a080d4f7606f50",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\index.js": {
+    "mtime": 1780753924.5109575,
+    "ast_hash": "8cbeca34112c93dec492590b8cc79122",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\index.test.js": {
+    "mtime": 1780753924.518937,
+    "ast_hash": "344524bc91839beadec7eb810b7e746a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\jest.config.js": {
+    "mtime": 1780753924.5309036,
+    "ast_hash": "448ea89cbe8468d62b49741628d510bd",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\package.json": {
+    "mtime": 1780753924.5368898,
+    "ast_hash": "281ce4dfbe81655c73162293e669480d",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\test-api.js": {
+    "mtime": 1780753924.632496,
+    "ast_hash": "b9fc3784916972f2b97cd52ae5ee72a0",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\test-db.js": {
+    "mtime": 1780753924.6384795,
+    "ast_hash": "7da86f1555ea9291d644ecab1a8404ed",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\test-minimal.js": {
+    "mtime": 1780753924.6434653,
+    "ast_hash": "39fab00063f055242e409667ed68ef86",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\test-no-routes.js": {
+    "mtime": 1780753924.6534617,
+    "ast_hash": "5edfb918a4840fa7623e8acd88d730c3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\test-setup.js": {
+    "mtime": 1780753924.661417,
+    "ast_hash": "f568038f139c1202aad755d0d1da03f6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\test-simple.js": {
+    "mtime": 1780753924.666405,
+    "ast_hash": "abda90f81704d48f98112036faf8bd3b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\test-with-auth-route.js": {
+    "mtime": 1780753924.675381,
+    "ast_hash": "dd3be91aff3eabbbae0ee436c8104954",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\test-with-coaches-route.js": {
+    "mtime": 1780753924.6813643,
+    "ast_hash": "497a1eedfeea641d84e374c5ea7a78be",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\test-with-db.js": {
+    "mtime": 1780753924.691346,
+    "ast_hash": "89de573f6a4629492253bea1cfbb396a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\test-with-notifications-route.js": {
+    "mtime": 1780753924.7023091,
+    "ast_hash": "df6bf006851eced56c0334b811780229",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\test-with-tasks-route.js": {
+    "mtime": 1780753924.7082925,
+    "ast_hash": "a1c0000bdbe12eda75209ab879b5d1af",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\routes\\auth.js": {
+    "mtime": 1780753924.5408843,
+    "ast_hash": "551439104762585efe7c525256c03339",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\routes\\auth.test.js": {
+    "mtime": 1780753924.5518484,
+    "ast_hash": "725298ac63da978759e3bdf391b2ca76",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\routes\\coaches.js": {
+    "mtime": 1780753924.564815,
+    "ast_hash": "3762e425d41c13627032c8b3359352a0",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\routes\\coaching-insights.js": {
+    "mtime": 1780753924.5757837,
+    "ast_hash": "5966b8552c63b135bc93191db490e4c3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\routes\\notifications.js": {
+    "mtime": 1780753924.5967276,
+    "ast_hash": "c28ae39c0f3612bc1fff4777523e3c96",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\routes\\tasks.js": {
+    "mtime": 1780753924.6146796,
+    "ast_hash": "e719a52be31d400bafa1a91a416e3f21",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\__tests__\\coaching-insights.test.js": {
+    "mtime": 1780753924.379311,
+    "ast_hash": "01705ad68f1489b2fbf3d28effe080f8",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\__tests__\\routes\\notifications.test.js": {
+    "mtime": 1780753924.3922746,
+    "ast_hash": "9e50b63ef5c9014befcff4e04a03ef52",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\__tests__\\routes\\tasks.test.js": {
+    "mtime": 1780753924.405241,
+    "ast_hash": "814506d8ffdbc2373fbe0331c2fd7429",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\server\\__tests__\\security\\phase6-validation.test.js": {
+    "mtime": 1780753924.4172091,
+    "ast_hash": "c1cc4775b88764eb32517d1f358e929c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\assign-test-task.js": {
+    "mtime": 1780753888.1841345,
+    "ast_hash": "cb7124ec6bc2050af55febaffba8a7bb",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\check-task.js": {
+    "mtime": 1780753888.2006023,
+    "ast_hash": "2783c6225e6e10b839292bce655680c2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\create-coach.js": {
+    "mtime": 1780753888.6918256,
+    "ast_hash": "71deb0b7313dda89498218a049393577",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\install-ruflo-plugins.ps1": {
+    "mtime": 1780753892.1105707,
+    "ast_hash": "a06c67214b633d215e89a2591b96df91",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\install-ruflo-plugins.sh": {
+    "mtime": 1780753892.1893704,
+    "ast_hash": "54c6802e704f4095188e484828f48b72",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\verify-ruflo-plugins.sh": {
+    "mtime": 1780753892.6690857,
+    "ast_hash": "58ed40cf81d95571a6a4bb1e1b24e424",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.beads\\_manifest.json": {
+    "mtime": 1780753887.4550834,
+    "ast_hash": "07e22764313762eb14b4567a0cc6d3c2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\settings.json": {
+    "mtime": 1780753887.6206398,
+    "ast_hash": "722dd2658cc963040292d5961d3d4bcb",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\hooks\\hooks-cursor.json": {
+    "mtime": 1780753887.5318801,
+    "ast_hash": "57f01eca7fe6be6487162d72169aaf29",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\hooks\\hooks.json": {
+    "mtime": 1780753887.5349054,
+    "ast_hash": "0afaeab455952ba054be036794ec4c8d",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\hooks\\on-stop.sh": {
+    "mtime": 1780753887.5378602,
+    "ast_hash": "ae942ecc14c5225f6e27ab6013ec9776",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\hooks\\post-tool-use.sh": {
+    "mtime": 1780753887.5488331,
+    "ast_hash": "77a8503a36931e761a1833124a771fda",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\hooks\\pre-tool-use-write-guard.sh": {
+    "mtime": 1780753887.5588045,
+    "ast_hash": "eda03d8e23ecb49943af8fd79f42ec20",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\hooks\\pre-tool-use.sh": {
+    "mtime": 1780753887.5747662,
+    "ast_hash": "680332a777f66fff13e07e86bec850b3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\hooks\\session-start": {
+    "mtime": 1780753887.6056805,
+    "ast_hash": "e55a4e3097d740ffa0d42a766b14f28c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\brainstorming\\scripts\\helper.js": {
+    "mtime": 1780753887.6415832,
+    "ast_hash": "7578040376f1e0835523d8f06339c6b3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\brainstorming\\scripts\\start-server.sh": {
+    "mtime": 1780753887.6605344,
+    "ast_hash": "efdff28a7370ed60041f885ddb2e5a68",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\brainstorming\\scripts\\stop-server.sh": {
+    "mtime": 1780753887.6645231,
+    "ast_hash": "d57fdc1c3e2fb1a8285371b8bd26cad9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\systematic-debugging\\condition-based-waiting-example.ts": {
+    "mtime": 1780753887.827088,
+    "ast_hash": "b76b763289c6c9662d2c16b87d58b452",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\systematic-debugging\\find-polluter.sh": {
+    "mtime": 1780753887.8490324,
+    "ast_hash": "38024e264d2a121f9bcace784e293af3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\writing-skills\\render-graphs.js": {
+    "mtime": 1780753888.0285518,
+    "ast_hash": "8146396a77faca5a8b3358d1a274b654",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\agent-browser.config.js": {
+    "mtime": 1780753888.236506,
+    "ast_hash": "f864f74d98ec404a7b79f667fd7a1f90",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\eslint.config.js": {
+    "mtime": 1780753888.239501,
+    "ast_hash": "fa91453358b56681481f75f81d1bfccd",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\package.json": {
+    "mtime": 1780753888.2564538,
+    "ast_hash": "f7c930d039aeed7e5a4829e73e161f13",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\postcss.config.js": {
+    "mtime": 1780753888.263435,
+    "ast_hash": "9e94f5afd46d0b71c0f40431ba0394c2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\tailwind.config.js": {
+    "mtime": 1780753888.6224835,
+    "ast_hash": "dcf6e2c94e70124ff78a9a43dad073b7",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\test-agent-browser.js": {
+    "mtime": 1780753888.6264749,
+    "ast_hash": "99fe528f209749c8c692fa073bfb8747",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\vercel.json": {
+    "mtime": 1780753888.6384401,
+    "ast_hash": "0db7ccb3aff36e97aa469126e9e17f99",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\vite.config.js": {
+    "mtime": 1780753888.6424317,
+    "ast_hash": "1647413fb458f96dc23d30fc5e0c5ee4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\vitest.config.js": {
+    "mtime": 1780753888.6474168,
+    "ast_hash": "6b8ace0d7dcb3cae249d530165aeab4e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\App.jsx": {
+    "mtime": 1780753888.2863743,
+    "ast_hash": "359e8218e7857f3be9309d154e7285d4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\main.jsx": {
+    "mtime": 1780753888.5297678,
+    "ast_hash": "51fd21c378330142b61bf8d1ef3795ef",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\setup.js": {
+    "mtime": 1780753888.6174965,
+    "ast_hash": "57adc8a06c55c18dc4cac3b20fbd88e5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\CoachingInsightCard.jsx": {
+    "mtime": 1780753888.3591802,
+    "ast_hash": "512286289aad4487c6f47aa7575207fe",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\DelayReasonModal.jsx": {
+    "mtime": 1780753888.3681545,
+    "ast_hash": "5499ff3838de97ad329c2cdbbd5fd34f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\EditTaskModal.jsx": {
+    "mtime": 1780753888.3811214,
+    "ast_hash": "196c37197127a41bed4a6527c8d5e69a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\Header.jsx": {
+    "mtime": 1780753888.3911035,
+    "ast_hash": "d0f9fcc9baecf9e413b4f776c3e1f44a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\Layout.jsx": {
+    "mtime": 1780753888.3950915,
+    "ast_hash": "aa5ec702ae865ba858274740d9dcab08",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\NotificationBell.jsx": {
+    "mtime": 1780753888.399083,
+    "ast_hash": "425c475ee8baa4529971ff712edbcfac",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\ProtectedRoute.jsx": {
+    "mtime": 1780753888.410054,
+    "ast_hash": "4ab069f50fe267f2dc235f21077a6ba9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\ProtectedRoute.test.jsx": {
+    "mtime": 1780753888.4180295,
+    "ast_hash": "e5ab86fe56c3a6efb3c7915e2533bfe4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\Sidebar.jsx": {
+    "mtime": 1780753888.4280043,
+    "ast_hash": "eab4a7ef21135f1664406abc26d39eed",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\TaskCard.jsx": {
+    "mtime": 1780753888.4339867,
+    "ast_hash": "27ed7ad9f8a38634fabee2a9eaec7b39",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\TaskDetailSlideOver.jsx": {
+    "mtime": 1780753888.442964,
+    "ast_hash": "2aa8a0bbfb53513eadf7a22117d04493",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\ui\\Badge.jsx": {
+    "mtime": 1780753888.4519398,
+    "ast_hash": "6376f86b3fa7344c2fc0698b7ae37117",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\ui\\Button.jsx": {
+    "mtime": 1780753888.463907,
+    "ast_hash": "f758c5abfcdf61bfb17c674f4dacaccc",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\ui\\Card.jsx": {
+    "mtime": 1780753888.4758866,
+    "ast_hash": "641ba6a652a2ca9c6dd558cbee7f2a02",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\ui\\EmptyState.jsx": {
+    "mtime": 1780753888.4818585,
+    "ast_hash": "b6c3c9943fa3bd2434d801025ec26f71",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\ui\\KPICard.jsx": {
+    "mtime": 1780753888.4908347,
+    "ast_hash": "cd98e7a0f954dcddc7419944aaeb94d1",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\ui\\Modal.jsx": {
+    "mtime": 1780753888.4958208,
+    "ast_hash": "def8c81017c8338000e469ed4141c230",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\ui\\ProgressBar.jsx": {
+    "mtime": 1780753888.4998102,
+    "ast_hash": "89972070a4ef5cbbfbc0fc043a39e0ff",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\components\\ui\\Skeleton.jsx": {
+    "mtime": 1780753888.5048006,
+    "ast_hash": "850e858d129076575153d17ef992e9a6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\context\\AuthContext.jsx": {
+    "mtime": 1780753888.509785,
+    "ast_hash": "3caf1e7f462b5b14c6e3d7e79b7991a2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\context\\AuthContext.test.jsx": {
+    "mtime": 1780753888.5167658,
+    "ast_hash": "301b477584dccc032f5764c4a1d06fe5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\pages\\LoginPage.jsx": {
+    "mtime": 1780753888.5357146,
+    "ast_hash": "38e7fc2ac5e3326b4ae1019359ae5b6e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\pages\\LoginPage.test.jsx": {
+    "mtime": 1780753888.542697,
+    "ast_hash": "b9d8551394d8deb64467e56b890f2ad9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\pages\\admin\\AssignTask.jsx": {
+    "mtime": 1780753888.5536668,
+    "ast_hash": "4958a0fd7918fae99e973e07a87075f9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\pages\\admin\\CoachesPage.jsx": {
+    "mtime": 1780753888.5676353,
+    "ast_hash": "ea0dd08fd2f4393ffd7b7b64f282302d",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\pages\\admin\\Dashboard.jsx": {
+    "mtime": 1780753888.5845864,
+    "ast_hash": "d295285a6dd3c942e59a58f9fed85c65",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\pages\\admin\\TaskBoard.jsx": {
+    "mtime": 1780753888.5935614,
+    "ast_hash": "d1c7fa293b57267de1bb9dff6ce1ad1c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\pages\\coach\\Dashboard.jsx": {
+    "mtime": 1780753888.601539,
+    "ast_hash": "9d65595bd0d5742cf502ef5359059966",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\pages\\coach\\MyTasks.jsx": {
+    "mtime": 1780753888.6075234,
+    "ast_hash": "587299e9534ea5a9d06248aa62ae8538",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\__tests__\\e2e\\admin.workflow.test.js": {
+    "mtime": 1780753888.2923577,
+    "ast_hash": "a153e144c22988f44934c28222061eb7",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\__tests__\\e2e\\agent-browser.helper.js": {
+    "mtime": 1780753888.303329,
+    "ast_hash": "e2d090714d5fd6d537f741fe92df1679",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\__tests__\\e2e\\coach.workflow.test.js": {
+    "mtime": 1780753888.3093116,
+    "ast_hash": "336d44c4e8045845c389fddfc68475e6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\__tests__\\e2e\\coaching-insights.e2e.test.js": {
+    "mtime": 1780753888.3152957,
+    "ast_hash": "61c68b450c4cd1b3194514cef94c3842",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\__tests__\\e2e\\phase7-coaching-insights.test.js": {
+    "mtime": 1780753888.3272655,
+    "ast_hash": "5d9af7e5268595c31c8717e508fd12c2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\__tests__\\e2e\\simple.test.js": {
+    "mtime": 1780753888.3402305,
+    "ast_hash": "7a24d32867c1b01bb8e44dc9072137f2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\scripts\\cleanup.sh": {
+    "mtime": 1780753892.2970805,
+    "ast_hash": "abc475ea622aaba40d901da277089f69",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\auth.js": {
+    "mtime": 1780753892.3838482,
+    "ast_hash": "6fdfa7d4d544a018c755755438fe7198",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\auth.test.js": {
+    "mtime": 1780753892.392823,
+    "ast_hash": "c61fa9e7566a9245580a06d2d0ddbda9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\cron.js": {
+    "mtime": 1780753892.410779,
+    "ast_hash": "a8ae15a69c93ccdf665f6e3eeab6b00e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\db-integration.test.js": {
+    "mtime": 1780753892.417757,
+    "ast_hash": "b5fef83dc403a3d04554ae568b912b29",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\db.js": {
+    "mtime": 1780753892.4297266,
+    "ast_hash": "436bd2f75d60051a991c637a43cae758",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\db.test.js": {
+    "mtime": 1780753892.440696,
+    "ast_hash": "1fa5629c0801bb9078a080d4f7606f50",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\index.js": {
+    "mtime": 1780753892.4546583,
+    "ast_hash": "8cbeca34112c93dec492590b8cc79122",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\index.test.js": {
+    "mtime": 1780753892.4696336,
+    "ast_hash": "344524bc91839beadec7eb810b7e746a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\jest.config.js": {
+    "mtime": 1780753892.4815872,
+    "ast_hash": "448ea89cbe8468d62b49741628d510bd",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\package.json": {
+    "mtime": 1780753892.4915605,
+    "ast_hash": "281ce4dfbe81655c73162293e669480d",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\test-api.js": {
+    "mtime": 1780753892.5793266,
+    "ast_hash": "b9fc3784916972f2b97cd52ae5ee72a0",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\test-db.js": {
+    "mtime": 1780753892.585317,
+    "ast_hash": "7da86f1555ea9291d644ecab1a8404ed",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\test-minimal.js": {
+    "mtime": 1780753892.5922976,
+    "ast_hash": "39fab00063f055242e409667ed68ef86",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\test-no-routes.js": {
+    "mtime": 1780753892.5982747,
+    "ast_hash": "5edfb918a4840fa7623e8acd88d730c3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\test-setup.js": {
+    "mtime": 1780753892.6042607,
+    "ast_hash": "f568038f139c1202aad755d0d1da03f6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\test-simple.js": {
+    "mtime": 1780753892.6112406,
+    "ast_hash": "abda90f81704d48f98112036faf8bd3b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\test-with-auth-route.js": {
+    "mtime": 1780753892.6162271,
+    "ast_hash": "dd3be91aff3eabbbae0ee436c8104954",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\test-with-coaches-route.js": {
+    "mtime": 1780753892.622212,
+    "ast_hash": "497a1eedfeea641d84e374c5ea7a78be",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\test-with-db.js": {
+    "mtime": 1780753892.6281946,
+    "ast_hash": "89de573f6a4629492253bea1cfbb396a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\test-with-notifications-route.js": {
+    "mtime": 1780753892.6411617,
+    "ast_hash": "df6bf006851eced56c0334b811780229",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\test-with-tasks-route.js": {
+    "mtime": 1780753892.6481404,
+    "ast_hash": "a1c0000bdbe12eda75209ab879b5d1af",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\routes\\auth.js": {
+    "mtime": 1780753892.4965467,
+    "ast_hash": "551439104762585efe7c525256c03339",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\routes\\auth.test.js": {
+    "mtime": 1780753892.5045252,
+    "ast_hash": "725298ac63da978759e3bdf391b2ca76",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\routes\\coaches.js": {
+    "mtime": 1780753892.5144987,
+    "ast_hash": "3762e425d41c13627032c8b3359352a0",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\routes\\coaching-insights.js": {
+    "mtime": 1780753892.5234747,
+    "ast_hash": "5966b8552c63b135bc93191db490e4c3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\routes\\notifications.js": {
+    "mtime": 1780753892.5464125,
+    "ast_hash": "c28ae39c0f3612bc1fff4777523e3c96",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\routes\\tasks.js": {
+    "mtime": 1780753892.561373,
+    "ast_hash": "e719a52be31d400bafa1a91a416e3f21",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\__tests__\\coaching-insights.test.js": {
+    "mtime": 1780753892.326002,
+    "ast_hash": "01705ad68f1489b2fbf3d28effe080f8",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\__tests__\\routes\\notifications.test.js": {
+    "mtime": 1780753892.3319855,
+    "ast_hash": "9e50b63ef5c9014befcff4e04a03ef52",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\__tests__\\routes\\tasks.test.js": {
+    "mtime": 1780753892.344952,
+    "ast_hash": "814506d8ffdbc2373fbe0331c2fd7429",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\server\\__tests__\\security\\phase6-validation.test.js": {
+    "mtime": 1780753892.3658974,
+    "ast_hash": "c1cc4775b88764eb32517d1f358e929c",
+    "semantic_hash": ""
+  },
   "D:\\Cursor_new\\client\\agent-browser.config.js": {
     "mtime": 1780580817.252132,
     "ast_hash": "7ee29dc32818b8580d9fd607163b8b3b",
@@ -355,8 +1855,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\cron.js": {
-    "mtime": 1780649579.6645079,
-    "ast_hash": "7f3b4091355f030db338694cbd5ba1ec",
+    "mtime": 1780756440.6528075,
+    "ast_hash": "a8ae15a69c93ccdf665f6e3eeab6b00e",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\db-integration.test.js": {
@@ -365,8 +1865,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\db.js": {
-    "mtime": 1780739468.4842224,
-    "ast_hash": "edd93de946d1ee5e2fe33b14c095da6b",
+    "mtime": 1780756440.6597886,
+    "ast_hash": "436bd2f75d60051a991c637a43cae758",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\db.test.js": {
@@ -450,8 +1950,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\auth.js": {
-    "mtime": 1780752689.132555,
-    "ast_hash": "a730435b89f18c53af4e0823442da600",
+    "mtime": 1780756440.6717565,
+    "ast_hash": "551439104762585efe7c525256c03339",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\auth.test.js": {
@@ -460,22 +1960,22 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\coaches.js": {
-    "mtime": 1780752768.6549945,
-    "ast_hash": "81fb90fd211c05708b901eddb917af22",
+    "mtime": 1780756440.682726,
+    "ast_hash": "3762e425d41c13627032c8b3359352a0",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\coaching-insights.js": {
-    "mtime": 1780752895.372249,
-    "ast_hash": "9e237d8ed6304d9cf9c3bf371edd557b",
+    "mtime": 1780756440.6917012,
+    "ast_hash": "5966b8552c63b135bc93191db490e4c3",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\notifications.js": {
-    "mtime": 1780752871.5353553,
-    "ast_hash": "e95c67288f2638b5bdf12d4edaec0493",
+    "mtime": 1780756440.7116497,
+    "ast_hash": "c28ae39c0f3612bc1fff4777523e3c96",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\tasks.js": {
-    "mtime": 1780752852.248492,
+    "mtime": 1780756440.7455852,
     "ast_hash": "e719a52be31d400bafa1a91a416e3f21",
     "semantic_hash": ""
   },
@@ -869,6 +2369,1551 @@
     "ast_hash": "2980791d97afe0f32c2eb4a6264fb8e6",
     "semantic_hash": ""
   },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\CHROME-DEVTOOLS-TEST-REPORT.md": {
+    "mtime": 1780753831.2431202,
+    "ast_hash": "c81aee258759a40c6e4977318776e004",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\CLAUDE.md": {
+    "mtime": 1780753831.249105,
+    "ast_hash": "b6f5313203062263e6e4b04ade6cfab1",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\COMPLETION_REPORT.md": {
+    "mtime": 1780753831.255089,
+    "ast_hash": "905332bef169fbe3e59b5482644d6dbb",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\DECISION.md": {
+    "mtime": 1780753831.260075,
+    "ast_hash": "380870af3cffd983530e0dc12345e0e4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\MEMORY.md": {
+    "mtime": 1780753831.269051,
+    "ast_hash": "08e36913eba5599b672a6680f4eb95e2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\PHASE7-TEST-EXECUTION-SUMMARY.md": {
+    "mtime": 1780753831.272043,
+    "ast_hash": "b2ce5f93c195e42bb0d83628d398b1a6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\PLANNING.md": {
+    "mtime": 1780753831.2780602,
+    "ast_hash": "7ac8094feb056d438e557393cbbcd87a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\QUICK-FIX.md": {
+    "mtime": 1780753831.286006,
+    "ast_hash": "a08d7210793278b20b57ef75ac9a78b4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\README.md": {
+    "mtime": 1780753831.2910254,
+    "ast_hash": "9ee963244971dd4b1b0230f0b9ee8454",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\REORGANIZATION_SUMMARY.md": {
+    "mtime": 1780753831.301964,
+    "ast_hash": "c0b1ac37293ab0bd49d17171e6d00f8c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\RUFLO_SETUP.md": {
+    "mtime": 1780753831.3069496,
+    "ast_hash": "32afe815ca4f57fbde6e55c685c540f2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\SESSION_LOG.md": {
+    "mtime": 1780753831.3119366,
+    "ast_hash": "ba2c78b37616265ba3649f65099efc9b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\SESSION_SUMMARY.md": {
+    "mtime": 1780753831.3169568,
+    "ast_hash": "dbfe6a7691232948e50ec3c653c0f908",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\STRUCTURE_GUIDE.md": {
+    "mtime": 1780753831.3209171,
+    "ast_hash": "ff5092c91b1e9f3ddc2702451dda6d11",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\SUPERPOWERS-CLAUDE.md": {
+    "mtime": 1780753831.3269312,
+    "ast_hash": "5f49071f66d06f5ea865259c5e9283fd",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\SUPERPOWERS-INSTALLED.md": {
+    "mtime": 1780753831.3368697,
+    "ast_hash": "8979765555596ea80e46fbb29c6da79c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\TESTING-COMPLETE-SUMMARY.md": {
+    "mtime": 1780753831.3418562,
+    "ast_hash": "759ef6e35d207d5c982991c50e63c123",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\TESTING-SESSION-SUMMARY.md": {
+    "mtime": 1780753831.3478413,
+    "ast_hash": "23d0e83a98545b8e61553a1315d44363",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.beads\\README.md": {
+    "mtime": 1780753830.659808,
+    "ast_hash": "0c473df9b28d2d097933606614188d72",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\ARCHITECTURE.md": {
+    "mtime": 1780753830.6784022,
+    "ast_hash": "f3dfcfd97ab85cbd5290b9c05164e837",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\MASTER_CAPABILITIES.md": {
+    "mtime": 1780753830.6863818,
+    "ast_hash": "a28e1dcac2081128ed57a3641dbf2995",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\SUPERPOWERS-INTEGRATION.md": {
+    "mtime": 1780753830.6983497,
+    "ast_hash": "615837ca4bebfb7d554ab8c1dd185ba7",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\agents\\phase-builder.md": {
+    "mtime": 1780753830.7272727,
+    "ast_hash": "a3a7f2c6d2667f8b2dc4db40a7fe0c82",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\agents\\security-reviewer.md": {
+    "mtime": 1780753830.7342532,
+    "ast_hash": "9579e0d68167d34d73ee14c34f9673f8",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\agents\\coach-task-tracker\\auth-agent.md": {
+    "mtime": 1780753830.705332,
+    "ast_hash": "6853662ca1dcb894045f48aea807d007",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\agents\\coach-task-tracker\\frontend-agent.md": {
+    "mtime": 1780753830.7123127,
+    "ast_hash": "92a1785aea4340e6f46138c730332b10",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\agents\\coach-task-tracker\\notification-agent.md": {
+    "mtime": 1780753830.7163024,
+    "ast_hash": "f6901f18ab33b2dfca5bf9d07c64eab0",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\agents\\coach-task-tracker\\task-manager-agent.md": {
+    "mtime": 1780753830.7212882,
+    "ast_hash": "155616ad9e18f61397f679df4e9d1640",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\brainstorming\\SKILL.md": {
+    "mtime": 1780753830.848666,
+    "ast_hash": "2418cf443ddf04124cb307c5ab10a012",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\brainstorming\\spec-document-reviewer-prompt.md": {
+    "mtime": 1780753830.900037,
+    "ast_hash": "633269b523d9de2bec6477750962b33b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\brainstorming\\visual-companion.md": {
+    "mtime": 1780753830.9060235,
+    "ast_hash": "329e9f2f3b8275625cf7f7ce38a3837c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\brainstorming\\scripts\\frame-template.html": {
+    "mtime": 1780753830.8556461,
+    "ast_hash": "bae2f359c254d1563ecdd2b7396d545f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\dispatching-parallel-agents\\SKILL.md": {
+    "mtime": 1780753830.9219787,
+    "ast_hash": "8e9792b04e6aa3bc23bdc958edaeae54",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\executing-plans\\SKILL.md": {
+    "mtime": 1780753830.9279625,
+    "ast_hash": "5be7960bc2d8ec3ab5a1bbc1c254d5d9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\finishing-a-development-branch\\SKILL.md": {
+    "mtime": 1780753830.9359407,
+    "ast_hash": "faa27c4886f5317947b23186f0955792",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\receiving-code-review\\SKILL.md": {
+    "mtime": 1780753830.9419265,
+    "ast_hash": "f36dc387659a68814573fc8cb7eca4ee",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\requesting-code-review\\code-reviewer.md": {
+    "mtime": 1780753830.9558897,
+    "ast_hash": "438365208f91e90c6b78592bf683c33e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\requesting-code-review\\SKILL.md": {
+    "mtime": 1780753830.9499054,
+    "ast_hash": "8735faf14165d949c5f7a0bd690e6a09",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\skill-api\\SKILL.md": {
+    "mtime": 1780753830.9628706,
+    "ast_hash": "d175eb0aea7b5934729ebf17867f29c5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\skill-auth\\SKILL.md": {
+    "mtime": 1780753830.9698515,
+    "ast_hash": "fa8b6e594a4d74002cbf6e3905d47da3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\skill-cron\\SKILL.md": {
+    "mtime": 1780753830.9758363,
+    "ast_hash": "33daa6bc5824b2202bd169e4921025ad",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\skill-db\\SKILL.md": {
+    "mtime": 1780753830.9868062,
+    "ast_hash": "cd026b6303eda6be59c2a12d85ceef98",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\skill-frontend\\SKILL.md": {
+    "mtime": 1780753830.9947846,
+    "ast_hash": "2e846b2bd75c80dfc659862d7ae14d1e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\skill-notifications\\SKILL.md": {
+    "mtime": 1780753831.0037608,
+    "ast_hash": "1ec87eb71b42d5f135224a8bb446be93",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\skill-orchestrator\\SKILL.md": {
+    "mtime": 1780753831.0097456,
+    "ast_hash": "a782c6cbad5cc376eeab996e942a1340",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\skill-testing\\SKILL.md": {
+    "mtime": 1780753831.0147307,
+    "ast_hash": "e60c7b28971aceb0ec270d488bb802cc",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\subagent-driven-development\\code-quality-reviewer-prompt.md": {
+    "mtime": 1780753831.031685,
+    "ast_hash": "f3f4360061607a230d0f73398b727400",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\subagent-driven-development\\implementer-prompt.md": {
+    "mtime": 1780753831.0366724,
+    "ast_hash": "e3aa8f83544c3d8f71f509943d6817d5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\subagent-driven-development\\SKILL.md": {
+    "mtime": 1780753831.0266984,
+    "ast_hash": "9dd7628c9a730e7aa9137b80e8367086",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\subagent-driven-development\\spec-reviewer-prompt.md": {
+    "mtime": 1780753831.0436547,
+    "ast_hash": "2a26a114e5ea1e199a9baaa41364ef99",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\systematic-debugging\\condition-based-waiting.md": {
+    "mtime": 1780753831.06759,
+    "ast_hash": "bb6e3fad746062e8a66703016a6ec38a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\systematic-debugging\\CREATION-LOG.md": {
+    "mtime": 1780753831.0476422,
+    "ast_hash": "8bf3d9a669650f0dede8140ff8f2b3ef",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\systematic-debugging\\defense-in-depth.md": {
+    "mtime": 1780753831.0725753,
+    "ast_hash": "c9c65f1cbe6186d828e300c57a90687a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\systematic-debugging\\root-cause-tracing.md": {
+    "mtime": 1780753831.089533,
+    "ast_hash": "97cae7d2b4674c081474354ad4eb6f26",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\systematic-debugging\\SKILL.md": {
+    "mtime": 1780753831.0526297,
+    "ast_hash": "4eecd2bd5ce68894746de336ec5acbf2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\systematic-debugging\\test-academic.md": {
+    "mtime": 1780753831.0945184,
+    "ast_hash": "518b29316fa889342f27a948ecd6a274",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\systematic-debugging\\test-pressure-1.md": {
+    "mtime": 1780753831.1005042,
+    "ast_hash": "9f7b82ffdfb5193e2453fa823a121d20",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\systematic-debugging\\test-pressure-2.md": {
+    "mtime": 1780753831.1054895,
+    "ast_hash": "4fe0449a71be1c28e7df333fc384e9cc",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\systematic-debugging\\test-pressure-3.md": {
+    "mtime": 1780753831.1104755,
+    "ast_hash": "1c8e4e18dc1c5aebd185b39212f9d9a9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\test-driven-development\\SKILL.md": {
+    "mtime": 1780753831.115461,
+    "ast_hash": "e2c23834a2b675646bb2d5131eee59f2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\test-driven-development\\testing-anti-patterns.md": {
+    "mtime": 1780753831.1244366,
+    "ast_hash": "edfef3a24f0d0653443afc8f6e596d69",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\using-git-worktrees\\SKILL.md": {
+    "mtime": 1780753831.1304219,
+    "ast_hash": "c222522ec52ef4a45049c0a349d522b3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\using-superpowers\\SKILL.md": {
+    "mtime": 1780753831.1364055,
+    "ast_hash": "303e25c9573ae081d90b41f7144a597a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\using-superpowers\\references\\codex-tools.md": {
+    "mtime": 1780753831.1493714,
+    "ast_hash": "5a840623ebf05edb2f2f8f93f9873266",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\using-superpowers\\references\\copilot-tools.md": {
+    "mtime": 1780753831.1533597,
+    "ast_hash": "c80467bc687dd1fa1162fea96a401233",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\using-superpowers\\references\\gemini-tools.md": {
+    "mtime": 1780753831.1583488,
+    "ast_hash": "d2397183eb559049f68ffd32b77a3d93",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\verification-before-completion\\SKILL.md": {
+    "mtime": 1780753831.1643314,
+    "ast_hash": "a5683940c5c34fdd12a12359cc604a65",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\writing-plans\\plan-document-reviewer-prompt.md": {
+    "mtime": 1780753831.1812854,
+    "ast_hash": "f6d7a36b5df60375c5a2e500bf55cac5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\writing-plans\\SKILL.md": {
+    "mtime": 1780753831.1703143,
+    "ast_hash": "b5f1a3cd661355440c98c5d17d91f69f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\writing-skills\\anthropic-best-practices.md": {
+    "mtime": 1780753831.1962452,
+    "ast_hash": "715e96cb6568b6839440ccf0aaf957cb",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\writing-skills\\persuasion-principles.md": {
+    "mtime": 1780753831.216192,
+    "ast_hash": "4d5ec4a25f77be81b486b0a563235a69",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\writing-skills\\SKILL.md": {
+    "mtime": 1780753831.186273,
+    "ast_hash": "de569b05480693ff08b9beaf2a2c53e5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\writing-skills\\testing-skills-with-subagents.md": {
+    "mtime": 1780753831.2331462,
+    "ast_hash": "15bcbb42a293d8330f82a349b4281d6f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\.claude\\skills\\writing-skills\\examples\\CLAUDE_MD_TESTING.md": {
+    "mtime": 1780753831.2062192,
+    "ast_hash": "d61368c6ad05eedaed01370b63d7b451",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\AGENT-BROWSER-QUICKSTART.md": {
+    "mtime": 1780753831.3767655,
+    "ast_hash": "c26eeaa9b24ddd504d8ea43ca07ec48d",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\COACHING-INSIGHTS-MANUAL-TEST.md": {
+    "mtime": 1780753831.3827896,
+    "ast_hash": "db12743ca4eab2720b15a69f2bdbea9e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\index.html": {
+    "mtime": 1780753831.410673,
+    "ast_hash": "c3235912285c5785d3afa4e66795dba1",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\PHASE7-FRONTEND-EXAMPLES.md": {
+    "mtime": 1780753831.390726,
+    "ast_hash": "1d842a0cb3edeb0d9444d77fa19ccc5c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\README.md": {
+    "mtime": 1780753831.3987062,
+    "ast_hash": "abfa161e3e5434e3e85394bf03d387a4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\API.md": {
+    "mtime": 1780753831.772706,
+    "ast_hash": "0f4e2cf0a0db1f13edcd25ec8ffd28d8",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\ARCHITECTURE.md": {
+    "mtime": 1780753831.777693,
+    "ast_hash": "1ca13eca96be666d896507709f5cb285",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\COMPLETION-SUMMARY.md": {
+    "mtime": 1780753831.7826803,
+    "ast_hash": "00dada57008bdfb16daa5c5518f4990e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\CONTRIBUTING.md": {
+    "mtime": 1780753831.788661,
+    "ast_hash": "130fc936022fd5cbd75a1e61c091d470",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\E2E-AGENT-BROWSER.md": {
+    "mtime": 1780753831.7996325,
+    "ast_hash": "130101cd8a09162a1cb5494526879846",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\E2E-TEST-COVERAGE.md": {
+    "mtime": 1780753831.8056178,
+    "ast_hash": "ccc7c95c56ef247cf3d0fc8d521d9f52",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\HANDOFF-AGENT-BROWSER.md": {
+    "mtime": 1780753831.8106031,
+    "ast_hash": "4e3207529de68159f5e6ed55b650aae5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\HANDOFF-MULTI-COACH.md": {
+    "mtime": 1780753831.8215747,
+    "ast_hash": "f01a8fcc25c477adfd4e0e105e7e3228",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\HANDOFF-PHASE7.md": {
+    "mtime": 1780753831.8265615,
+    "ast_hash": "68fcc93389b7346bf0356c78824d67f9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\HANDOFF.md": {
+    "mtime": 1780753831.83454,
+    "ast_hash": "a4cacf37a2e191c89b479ff033f85b10",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\INCIDENT-2026-06-04.md": {
+    "mtime": 1780753831.840524,
+    "ast_hash": "0bd1be03d61babb0c5e16acdcc0794af",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\METADATA-CONTRACT.md": {
+    "mtime": 1780753831.8465087,
+    "ast_hash": "a88db6473cd44c904bd1f8056c252bef",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\PHASE6-HANDOFF.md": {
+    "mtime": 1780753831.856479,
+    "ast_hash": "7db9be230241dd694a6ddf8feba54411",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\POSTGRESQL-MIGRATION.md": {
+    "mtime": 1780753831.862463,
+    "ast_hash": "63d0821714663fa701d9f0d6ef28ed9b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\ROADMAP.md": {
+    "mtime": 1780753831.8674507,
+    "ast_hash": "a3addbceec47f17b34c902615f48e908",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\RUFLO.md": {
+    "mtime": 1780753831.8754294,
+    "ast_hash": "ba7df03e3a7fadee71df5ebe17d0bbc6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\SESSION-SUMMARY-AGENT-BROWSER.md": {
+    "mtime": 1780753831.8814137,
+    "ast_hash": "8d4730b52bec20ab3e88b1d7fbca70a4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\SUPERPOWERS-QUICK-START.md": {
+    "mtime": 1780753831.8863995,
+    "ast_hash": "d938b84360f76101899f882a86c78fb7",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\SUPERPOWERS.md": {
+    "mtime": 1780753831.8923843,
+    "ast_hash": "6c751d89e742866362dde3e2936c1f5f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\TASKBOARD-GROUPED-TASKS.md": {
+    "mtime": 1780753831.89737,
+    "ast_hash": "badaf8c6e4afa648e7cc8df7f043b1f7",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\TROUBLESHOOTING.md": {
+    "mtime": 1780753831.9023602,
+    "ast_hash": "ae34487212049eb6f1dc4fd0c6b5a140",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\superpowers\\plans\\2026-05-17-phase1-auth-system.md": {
+    "mtime": 1780753831.9103389,
+    "ast_hash": "0af674110a6e5e71532b31b9c82a70a6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\docs\\superpowers\\specs\\2026-06-04-multi-agent-coaching-insights-design.md": {
+    "mtime": 1780753831.9193134,
+    "ast_hash": "34d92561be7a56fbd7e1a5a6d2a9cc89",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\scripts\\README.md": {
+    "mtime": 1780753834.9622924,
+    "ast_hash": "710894d57f68dfaaeec6e1bcc192e1f8",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\CHROME-DEVTOOLS-TEST-REPORT.md": {
+    "mtime": 1780753920.2232237,
+    "ast_hash": "c81aee258759a40c6e4977318776e004",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\CLAUDE.md": {
+    "mtime": 1780753920.2332022,
+    "ast_hash": "b6f5313203062263e6e4b04ade6cfab1",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\COMPLETION_REPORT.md": {
+    "mtime": 1780753920.2401798,
+    "ast_hash": "905332bef169fbe3e59b5482644d6dbb",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\DECISION.md": {
+    "mtime": 1780753920.2461643,
+    "ast_hash": "380870af3cffd983530e0dc12345e0e4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\MEMORY.md": {
+    "mtime": 1780753920.260126,
+    "ast_hash": "08e36913eba5599b672a6680f4eb95e2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\PHASE7-TEST-EXECUTION-SUMMARY.md": {
+    "mtime": 1780753920.265113,
+    "ast_hash": "b2ce5f93c195e42bb0d83628d398b1a6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\PLANNING.md": {
+    "mtime": 1780753920.2710974,
+    "ast_hash": "7ac8094feb056d438e557393cbbcd87a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\QUICK-FIX.md": {
+    "mtime": 1780753920.2810707,
+    "ast_hash": "a08d7210793278b20b57ef75ac9a78b4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\README.md": {
+    "mtime": 1780753920.2870538,
+    "ast_hash": "9ee963244971dd4b1b0230f0b9ee8454",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\REORGANIZATION_SUMMARY.md": {
+    "mtime": 1780753920.3020153,
+    "ast_hash": "c0b1ac37293ab0bd49d17171e6d00f8c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\RUFLO_SETUP.md": {
+    "mtime": 1780753920.3099928,
+    "ast_hash": "32afe815ca4f57fbde6e55c685c540f2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\SESSION_LOG.md": {
+    "mtime": 1780753920.3249526,
+    "ast_hash": "ba2c78b37616265ba3649f65099efc9b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\SESSION_SUMMARY.md": {
+    "mtime": 1780753920.3329315,
+    "ast_hash": "dbfe6a7691232948e50ec3c653c0f908",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\STRUCTURE_GUIDE.md": {
+    "mtime": 1780753920.3419085,
+    "ast_hash": "ff5092c91b1e9f3ddc2702451dda6d11",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\SUPERPOWERS-CLAUDE.md": {
+    "mtime": 1780753920.3498867,
+    "ast_hash": "5f49071f66d06f5ea865259c5e9283fd",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\SUPERPOWERS-INSTALLED.md": {
+    "mtime": 1780753920.3678522,
+    "ast_hash": "8979765555596ea80e46fbb29c6da79c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\TESTING-COMPLETE-SUMMARY.md": {
+    "mtime": 1780753920.374819,
+    "ast_hash": "759ef6e35d207d5c982991c50e63c123",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\TESTING-SESSION-SUMMARY.md": {
+    "mtime": 1780753920.3847928,
+    "ast_hash": "23d0e83a98545b8e61553a1315d44363",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.beads\\README.md": {
+    "mtime": 1780753919.263844,
+    "ast_hash": "0c473df9b28d2d097933606614188d72",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\ARCHITECTURE.md": {
+    "mtime": 1780753919.318645,
+    "ast_hash": "f3dfcfd97ab85cbd5290b9c05164e837",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\MASTER_CAPABILITIES.md": {
+    "mtime": 1780753919.3296168,
+    "ast_hash": "a28e1dcac2081128ed57a3641dbf2995",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\SUPERPOWERS-INTEGRATION.md": {
+    "mtime": 1780753919.3485644,
+    "ast_hash": "615837ca4bebfb7d554ab8c1dd185ba7",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\agents\\phase-builder.md": {
+    "mtime": 1780753919.3894546,
+    "ast_hash": "a3a7f2c6d2667f8b2dc4db40a7fe0c82",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\agents\\security-reviewer.md": {
+    "mtime": 1780753919.3954396,
+    "ast_hash": "9579e0d68167d34d73ee14c34f9673f8",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\agents\\coach-task-tracker\\auth-agent.md": {
+    "mtime": 1780753919.3585396,
+    "ast_hash": "6853662ca1dcb894045f48aea807d007",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\agents\\coach-task-tracker\\frontend-agent.md": {
+    "mtime": 1780753919.3655188,
+    "ast_hash": "92a1785aea4340e6f46138c730332b10",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\agents\\coach-task-tracker\\notification-agent.md": {
+    "mtime": 1780753919.373497,
+    "ast_hash": "f6901f18ab33b2dfca5bf9d07c64eab0",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\agents\\coach-task-tracker\\task-manager-agent.md": {
+    "mtime": 1780753919.3824737,
+    "ast_hash": "155616ad9e18f61397f679df4e9d1640",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\brainstorming\\SKILL.md": {
+    "mtime": 1780753919.6038823,
+    "ast_hash": "2418cf443ddf04124cb307c5ab10a012",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\brainstorming\\spec-document-reviewer-prompt.md": {
+    "mtime": 1780753919.6806765,
+    "ast_hash": "633269b523d9de2bec6477750962b33b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\brainstorming\\visual-companion.md": {
+    "mtime": 1780753919.6976302,
+    "ast_hash": "329e9f2f3b8275625cf7f7ce38a3837c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\brainstorming\\scripts\\frame-template.html": {
+    "mtime": 1780753919.6168463,
+    "ast_hash": "bae2f359c254d1563ecdd2b7396d545f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\dispatching-parallel-agents\\SKILL.md": {
+    "mtime": 1780753919.7455032,
+    "ast_hash": "8e9792b04e6aa3bc23bdc958edaeae54",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\executing-plans\\SKILL.md": {
+    "mtime": 1780753919.7564726,
+    "ast_hash": "5be7960bc2d8ec3ab5a1bbc1c254d5d9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\finishing-a-development-branch\\SKILL.md": {
+    "mtime": 1780753919.7644517,
+    "ast_hash": "faa27c4886f5317947b23186f0955792",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\receiving-code-review\\SKILL.md": {
+    "mtime": 1780753919.7744281,
+    "ast_hash": "f36dc387659a68814573fc8cb7eca4ee",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\requesting-code-review\\code-reviewer.md": {
+    "mtime": 1780753919.7963674,
+    "ast_hash": "438365208f91e90c6b78592bf683c33e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\requesting-code-review\\SKILL.md": {
+    "mtime": 1780753919.7893846,
+    "ast_hash": "8735faf14165d949c5f7a0bd690e6a09",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\skill-api\\SKILL.md": {
+    "mtime": 1780753919.8053434,
+    "ast_hash": "d175eb0aea7b5934729ebf17867f29c5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\skill-auth\\SKILL.md": {
+    "mtime": 1780753919.812325,
+    "ast_hash": "fa8b6e594a4d74002cbf6e3905d47da3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\skill-cron\\SKILL.md": {
+    "mtime": 1780753919.8213012,
+    "ast_hash": "33daa6bc5824b2202bd169e4921025ad",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\skill-db\\SKILL.md": {
+    "mtime": 1780753919.8282807,
+    "ast_hash": "cd026b6303eda6be59c2a12d85ceef98",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\skill-frontend\\SKILL.md": {
+    "mtime": 1780753919.835263,
+    "ast_hash": "2e846b2bd75c80dfc659862d7ae14d1e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\skill-notifications\\SKILL.md": {
+    "mtime": 1780753919.846234,
+    "ast_hash": "1ec87eb71b42d5f135224a8bb446be93",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\skill-orchestrator\\SKILL.md": {
+    "mtime": 1780753919.853215,
+    "ast_hash": "a782c6cbad5cc376eeab996e942a1340",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\skill-testing\\SKILL.md": {
+    "mtime": 1780753919.8621917,
+    "ast_hash": "e60c7b28971aceb0ec270d488bb802cc",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\subagent-driven-development\\code-quality-reviewer-prompt.md": {
+    "mtime": 1780753919.8901155,
+    "ast_hash": "f3f4360061607a230d0f73398b727400",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\subagent-driven-development\\implementer-prompt.md": {
+    "mtime": 1780753919.8961048,
+    "ast_hash": "e3aa8f83544c3d8f71f509943d6817d5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\subagent-driven-development\\SKILL.md": {
+    "mtime": 1780753919.8821375,
+    "ast_hash": "9dd7628c9a730e7aa9137b80e8367086",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\subagent-driven-development\\spec-reviewer-prompt.md": {
+    "mtime": 1780753919.9070714,
+    "ast_hash": "2a26a114e5ea1e199a9baaa41364ef99",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\systematic-debugging\\condition-based-waiting.md": {
+    "mtime": 1780753919.9469795,
+    "ast_hash": "bb6e3fad746062e8a66703016a6ec38a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\systematic-debugging\\CREATION-LOG.md": {
+    "mtime": 1780753919.9120567,
+    "ast_hash": "8bf3d9a669650f0dede8140ff8f2b3ef",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\systematic-debugging\\defense-in-depth.md": {
+    "mtime": 1780753919.9539442,
+    "ast_hash": "c9c65f1cbe6186d828e300c57a90687a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\systematic-debugging\\root-cause-tracing.md": {
+    "mtime": 1780753919.9778807,
+    "ast_hash": "97cae7d2b4674c081474354ad4eb6f26",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\systematic-debugging\\SKILL.md": {
+    "mtime": 1780753919.919039,
+    "ast_hash": "4eecd2bd5ce68894746de336ec5acbf2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\systematic-debugging\\test-academic.md": {
+    "mtime": 1780753919.9858606,
+    "ast_hash": "518b29316fa889342f27a948ecd6a274",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\systematic-debugging\\test-pressure-1.md": {
+    "mtime": 1780753919.9908557,
+    "ast_hash": "9f7b82ffdfb5193e2453fa823a121d20",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\systematic-debugging\\test-pressure-2.md": {
+    "mtime": 1780753919.995834,
+    "ast_hash": "4fe0449a71be1c28e7df333fc384e9cc",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\systematic-debugging\\test-pressure-3.md": {
+    "mtime": 1780753919.9998229,
+    "ast_hash": "1c8e4e18dc1c5aebd185b39212f9d9a9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\test-driven-development\\SKILL.md": {
+    "mtime": 1780753920.0088005,
+    "ast_hash": "e2c23834a2b675646bb2d5131eee59f2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\test-driven-development\\testing-anti-patterns.md": {
+    "mtime": 1780753920.0177746,
+    "ast_hash": "edfef3a24f0d0653443afc8f6e596d69",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\using-git-worktrees\\SKILL.md": {
+    "mtime": 1780753920.03074,
+    "ast_hash": "c222522ec52ef4a45049c0a349d522b3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\using-superpowers\\SKILL.md": {
+    "mtime": 1780753920.0367231,
+    "ast_hash": "303e25c9573ae081d90b41f7144a597a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\using-superpowers\\references\\codex-tools.md": {
+    "mtime": 1780753920.0546756,
+    "ast_hash": "5a840623ebf05edb2f2f8f93f9873266",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\using-superpowers\\references\\copilot-tools.md": {
+    "mtime": 1780753920.059662,
+    "ast_hash": "c80467bc687dd1fa1162fea96a401233",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\using-superpowers\\references\\gemini-tools.md": {
+    "mtime": 1780753920.0676422,
+    "ast_hash": "d2397183eb559049f68ffd32b77a3d93",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\verification-before-completion\\SKILL.md": {
+    "mtime": 1780753920.0766175,
+    "ast_hash": "a5683940c5c34fdd12a12359cc604a65",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\writing-plans\\plan-document-reviewer-prompt.md": {
+    "mtime": 1780753920.104543,
+    "ast_hash": "f6d7a36b5df60375c5a2e500bf55cac5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\writing-plans\\SKILL.md": {
+    "mtime": 1780753920.0835981,
+    "ast_hash": "b5f1a3cd661355440c98c5d17d91f69f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\writing-skills\\anthropic-best-practices.md": {
+    "mtime": 1780753920.127483,
+    "ast_hash": "715e96cb6568b6839440ccf0aaf957cb",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\writing-skills\\persuasion-principles.md": {
+    "mtime": 1780753920.1663773,
+    "ast_hash": "4d5ec4a25f77be81b486b0a563235a69",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\writing-skills\\SKILL.md": {
+    "mtime": 1780753920.1145158,
+    "ast_hash": "de569b05480693ff08b9beaf2a2c53e5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\writing-skills\\testing-skills-with-subagents.md": {
+    "mtime": 1780753920.2072663,
+    "ast_hash": "15bcbb42a293d8330f82a349b4281d6f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\.claude\\skills\\writing-skills\\examples\\CLAUDE_MD_TESTING.md": {
+    "mtime": 1780753920.1474278,
+    "ast_hash": "d61368c6ad05eedaed01370b63d7b451",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\AGENT-BROWSER-QUICKSTART.md": {
+    "mtime": 1780753920.4346595,
+    "ast_hash": "c26eeaa9b24ddd504d8ea43ca07ec48d",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\COACHING-INSIGHTS-MANUAL-TEST.md": {
+    "mtime": 1780753920.4416418,
+    "ast_hash": "db12743ca4eab2720b15a69f2bdbea9e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\index.html": {
+    "mtime": 1780753920.48353,
+    "ast_hash": "c3235912285c5785d3afa4e66795dba1",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\PHASE7-FRONTEND-EXAMPLES.md": {
+    "mtime": 1780753920.4516144,
+    "ast_hash": "1d842a0cb3edeb0d9444d77fa19ccc5c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\README.md": {
+    "mtime": 1780753920.4625852,
+    "ast_hash": "abfa161e3e5434e3e85394bf03d387a4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\API.md": {
+    "mtime": 1780753920.9243507,
+    "ast_hash": "0f4e2cf0a0db1f13edcd25ec8ffd28d8",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\ARCHITECTURE.md": {
+    "mtime": 1780753920.9303353,
+    "ast_hash": "1ca13eca96be666d896507709f5cb285",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\COMPLETION-SUMMARY.md": {
+    "mtime": 1780753920.9343235,
+    "ast_hash": "00dada57008bdfb16daa5c5518f4990e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\CONTRIBUTING.md": {
+    "mtime": 1780753920.941306,
+    "ast_hash": "130fc936022fd5cbd75a1e61c091d470",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\E2E-AGENT-BROWSER.md": {
+    "mtime": 1780753920.952276,
+    "ast_hash": "130101cd8a09162a1cb5494526879846",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\E2E-TEST-COVERAGE.md": {
+    "mtime": 1780753920.9592562,
+    "ast_hash": "ccc7c95c56ef247cf3d0fc8d521d9f52",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\HANDOFF-AGENT-BROWSER.md": {
+    "mtime": 1780753920.9662387,
+    "ast_hash": "4e3207529de68159f5e6ed55b650aae5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\HANDOFF-MULTI-COACH.md": {
+    "mtime": 1780753920.9822054,
+    "ast_hash": "f01a8fcc25c477adfd4e0e105e7e3228",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\HANDOFF-PHASE7.md": {
+    "mtime": 1780753920.991171,
+    "ast_hash": "68fcc93389b7346bf0356c78824d67f9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\HANDOFF.md": {
+    "mtime": 1780753920.9971552,
+    "ast_hash": "a4cacf37a2e191c89b479ff033f85b10",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\INCIDENT-2026-06-04.md": {
+    "mtime": 1780753921.0031476,
+    "ast_hash": "0bd1be03d61babb0c5e16acdcc0794af",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\METADATA-CONTRACT.md": {
+    "mtime": 1780753921.0091252,
+    "ast_hash": "a88db6473cd44c904bd1f8056c252bef",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\PHASE6-HANDOFF.md": {
+    "mtime": 1780753921.0200946,
+    "ast_hash": "7db9be230241dd694a6ddf8feba54411",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\POSTGRESQL-MIGRATION.md": {
+    "mtime": 1780753921.0280724,
+    "ast_hash": "63d0821714663fa701d9f0d6ef28ed9b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\ROADMAP.md": {
+    "mtime": 1780753921.0330608,
+    "ast_hash": "a3addbceec47f17b34c902615f48e908",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\RUFLO.md": {
+    "mtime": 1780753921.0400412,
+    "ast_hash": "ba7df03e3a7fadee71df5ebe17d0bbc6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\SESSION-SUMMARY-AGENT-BROWSER.md": {
+    "mtime": 1780753921.0460262,
+    "ast_hash": "8d4730b52bec20ab3e88b1d7fbca70a4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\SUPERPOWERS-QUICK-START.md": {
+    "mtime": 1780753921.0540035,
+    "ast_hash": "d938b84360f76101899f882a86c78fb7",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\SUPERPOWERS.md": {
+    "mtime": 1780753921.05899,
+    "ast_hash": "6c751d89e742866362dde3e2936c1f5f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\TASKBOARD-GROUPED-TASKS.md": {
+    "mtime": 1780753921.0659826,
+    "ast_hash": "badaf8c6e4afa648e7cc8df7f043b1f7",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\TROUBLESHOOTING.md": {
+    "mtime": 1780753921.071955,
+    "ast_hash": "ae34487212049eb6f1dc4fd0c6b5a140",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\superpowers\\plans\\2026-05-17-phase1-auth-system.md": {
+    "mtime": 1780753921.0809312,
+    "ast_hash": "0af674110a6e5e71532b31b9c82a70a6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\docs\\superpowers\\specs\\2026-06-04-multi-agent-coaching-insights-design.md": {
+    "mtime": 1780753921.0919013,
+    "ast_hash": "34d92561be7a56fbd7e1a5a6d2a9cc89",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\scripts\\README.md": {
+    "mtime": 1780753924.2905464,
+    "ast_hash": "710894d57f68dfaaeec6e1bcc192e1f8",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\CHROME-DEVTOOLS-TEST-REPORT.md": {
+    "mtime": 1780753888.0475001,
+    "ast_hash": "c81aee258759a40c6e4977318776e004",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\CLAUDE.md": {
+    "mtime": 1780753888.056474,
+    "ast_hash": "b6f5313203062263e6e4b04ade6cfab1",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\COMPLETION_REPORT.md": {
+    "mtime": 1780753888.062461,
+    "ast_hash": "905332bef169fbe3e59b5482644d6dbb",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\DECISION.md": {
+    "mtime": 1780753888.0694401,
+    "ast_hash": "380870af3cffd983530e0dc12345e0e4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\MEMORY.md": {
+    "mtime": 1780753888.079413,
+    "ast_hash": "08e36913eba5599b672a6680f4eb95e2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\PHASE7-TEST-EXECUTION-SUMMARY.md": {
+    "mtime": 1780753888.0834022,
+    "ast_hash": "b2ce5f93c195e42bb0d83628d398b1a6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\PLANNING.md": {
+    "mtime": 1780753888.0913877,
+    "ast_hash": "7ac8094feb056d438e557393cbbcd87a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\QUICK-FIX.md": {
+    "mtime": 1780753888.1003563,
+    "ast_hash": "a08d7210793278b20b57ef75ac9a78b4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\README.md": {
+    "mtime": 1780753888.1043463,
+    "ast_hash": "9ee963244971dd4b1b0230f0b9ee8454",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\REORGANIZATION_SUMMARY.md": {
+    "mtime": 1780753888.121301,
+    "ast_hash": "c0b1ac37293ab0bd49d17171e6d00f8c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\RUFLO_SETUP.md": {
+    "mtime": 1780753888.1262882,
+    "ast_hash": "32afe815ca4f57fbde6e55c685c540f2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\SESSION_LOG.md": {
+    "mtime": 1780753888.136262,
+    "ast_hash": "ba2c78b37616265ba3649f65099efc9b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\SESSION_SUMMARY.md": {
+    "mtime": 1780753888.1412475,
+    "ast_hash": "dbfe6a7691232948e50ec3c653c0f908",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\STRUCTURE_GUIDE.md": {
+    "mtime": 1780753888.1462338,
+    "ast_hash": "ff5092c91b1e9f3ddc2702451dda6d11",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\SUPERPOWERS-CLAUDE.md": {
+    "mtime": 1780753888.1522193,
+    "ast_hash": "5f49071f66d06f5ea865259c5e9283fd",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\SUPERPOWERS-INSTALLED.md": {
+    "mtime": 1780753888.1661806,
+    "ast_hash": "8979765555596ea80e46fbb29c6da79c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\TESTING-COMPLETE-SUMMARY.md": {
+    "mtime": 1780753888.1711674,
+    "ast_hash": "759ef6e35d207d5c982991c50e63c123",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\TESTING-SESSION-SUMMARY.md": {
+    "mtime": 1780753888.179146,
+    "ast_hash": "23d0e83a98545b8e61553a1315d44363",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.beads\\README.md": {
+    "mtime": 1780753887.4490979,
+    "ast_hash": "0c473df9b28d2d097933606614188d72",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\ARCHITECTURE.md": {
+    "mtime": 1780753887.469055,
+    "ast_hash": "f3dfcfd97ab85cbd5290b9c05164e837",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\MASTER_CAPABILITIES.md": {
+    "mtime": 1780753887.4760258,
+    "ast_hash": "a28e1dcac2081128ed57a3641dbf2995",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\SUPERPOWERS-INTEGRATION.md": {
+    "mtime": 1780753887.4909859,
+    "ast_hash": "615837ca4bebfb7d554ab8c1dd185ba7",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\agents\\phase-builder.md": {
+    "mtime": 1780753887.5139244,
+    "ast_hash": "a3a7f2c6d2667f8b2dc4db40a7fe0c82",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\agents\\security-reviewer.md": {
+    "mtime": 1780753887.518912,
+    "ast_hash": "9579e0d68167d34d73ee14c34f9673f8",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\agents\\coach-task-tracker\\auth-agent.md": {
+    "mtime": 1780753887.495973,
+    "ast_hash": "6853662ca1dcb894045f48aea807d007",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\agents\\coach-task-tracker\\frontend-agent.md": {
+    "mtime": 1780753887.5009604,
+    "ast_hash": "92a1785aea4340e6f46138c730332b10",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\agents\\coach-task-tracker\\notification-agent.md": {
+    "mtime": 1780753887.5049496,
+    "ast_hash": "f6901f18ab33b2dfca5bf9d07c64eab0",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\agents\\coach-task-tracker\\task-manager-agent.md": {
+    "mtime": 1780753887.5089393,
+    "ast_hash": "155616ad9e18f61397f679df4e9d1640",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\brainstorming\\SKILL.md": {
+    "mtime": 1780753887.6256278,
+    "ast_hash": "2418cf443ddf04124cb307c5ab10a012",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\brainstorming\\spec-document-reviewer-prompt.md": {
+    "mtime": 1780753887.6744964,
+    "ast_hash": "633269b523d9de2bec6477750962b33b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\brainstorming\\visual-companion.md": {
+    "mtime": 1780753887.6804802,
+    "ast_hash": "329e9f2f3b8275625cf7f7ce38a3837c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\brainstorming\\scripts\\frame-template.html": {
+    "mtime": 1780753887.635607,
+    "ast_hash": "bae2f359c254d1563ecdd2b7396d545f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\dispatching-parallel-agents\\SKILL.md": {
+    "mtime": 1780753887.698449,
+    "ast_hash": "8e9792b04e6aa3bc23bdc958edaeae54",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\executing-plans\\SKILL.md": {
+    "mtime": 1780753887.704416,
+    "ast_hash": "5be7960bc2d8ec3ab5a1bbc1c254d5d9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\finishing-a-development-branch\\SKILL.md": {
+    "mtime": 1780753887.7094035,
+    "ast_hash": "faa27c4886f5317947b23186f0955792",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\receiving-code-review\\SKILL.md": {
+    "mtime": 1780753887.7163944,
+    "ast_hash": "f36dc387659a68814573fc8cb7eca4ee",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\requesting-code-review\\code-reviewer.md": {
+    "mtime": 1780753887.7263575,
+    "ast_hash": "438365208f91e90c6b78592bf683c33e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\requesting-code-review\\SKILL.md": {
+    "mtime": 1780753887.7223682,
+    "ast_hash": "8735faf14165d949c5f7a0bd690e6a09",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\skill-api\\SKILL.md": {
+    "mtime": 1780753887.7313442,
+    "ast_hash": "d175eb0aea7b5934729ebf17867f29c5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\skill-auth\\SKILL.md": {
+    "mtime": 1780753887.7413168,
+    "ast_hash": "fa8b6e594a4d74002cbf6e3905d47da3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\skill-cron\\SKILL.md": {
+    "mtime": 1780753887.7463162,
+    "ast_hash": "33daa6bc5824b2202bd169e4921025ad",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\skill-db\\SKILL.md": {
+    "mtime": 1780753887.751292,
+    "ast_hash": "cd026b6303eda6be59c2a12d85ceef98",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\skill-frontend\\SKILL.md": {
+    "mtime": 1780753887.7602794,
+    "ast_hash": "2e846b2bd75c80dfc659862d7ae14d1e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\skill-notifications\\SKILL.md": {
+    "mtime": 1780753887.7682464,
+    "ast_hash": "1ec87eb71b42d5f135224a8bb446be93",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\skill-orchestrator\\SKILL.md": {
+    "mtime": 1780753887.7742326,
+    "ast_hash": "a782c6cbad5cc376eeab996e942a1340",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\skill-testing\\SKILL.md": {
+    "mtime": 1780753887.7792165,
+    "ast_hash": "e60c7b28971aceb0ec270d488bb802cc",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\subagent-driven-development\\code-quality-reviewer-prompt.md": {
+    "mtime": 1780753887.7971683,
+    "ast_hash": "f3f4360061607a230d0f73398b727400",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\subagent-driven-development\\implementer-prompt.md": {
+    "mtime": 1780753887.8041508,
+    "ast_hash": "e3aa8f83544c3d8f71f509943d6817d5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\subagent-driven-development\\SKILL.md": {
+    "mtime": 1780753887.791186,
+    "ast_hash": "9dd7628c9a730e7aa9137b80e8367086",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\subagent-driven-development\\spec-reviewer-prompt.md": {
+    "mtime": 1780753887.8091362,
+    "ast_hash": "2a26a114e5ea1e199a9baaa41364ef99",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\systematic-debugging\\condition-based-waiting.md": {
+    "mtime": 1780753887.8380575,
+    "ast_hash": "bb6e3fad746062e8a66703016a6ec38a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\systematic-debugging\\CREATION-LOG.md": {
+    "mtime": 1780753887.8131268,
+    "ast_hash": "8bf3d9a669650f0dede8140ff8f2b3ef",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\systematic-debugging\\defense-in-depth.md": {
+    "mtime": 1780753887.844044,
+    "ast_hash": "c9c65f1cbe6186d828e300c57a90687a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\systematic-debugging\\root-cause-tracing.md": {
+    "mtime": 1780753887.8580053,
+    "ast_hash": "97cae7d2b4674c081474354ad4eb6f26",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\systematic-debugging\\SKILL.md": {
+    "mtime": 1780753887.81911,
+    "ast_hash": "4eecd2bd5ce68894746de336ec5acbf2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\systematic-debugging\\test-academic.md": {
+    "mtime": 1780753887.8669841,
+    "ast_hash": "518b29316fa889342f27a948ecd6a274",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\systematic-debugging\\test-pressure-1.md": {
+    "mtime": 1780753887.8699734,
+    "ast_hash": "9f7b82ffdfb5193e2453fa823a121d20",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\systematic-debugging\\test-pressure-2.md": {
+    "mtime": 1780753887.8739643,
+    "ast_hash": "4fe0449a71be1c28e7df333fc384e9cc",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\systematic-debugging\\test-pressure-3.md": {
+    "mtime": 1780753887.8789496,
+    "ast_hash": "1c8e4e18dc1c5aebd185b39212f9d9a9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\test-driven-development\\SKILL.md": {
+    "mtime": 1780753887.886928,
+    "ast_hash": "e2c23834a2b675646bb2d5131eee59f2",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\test-driven-development\\testing-anti-patterns.md": {
+    "mtime": 1780753887.892915,
+    "ast_hash": "edfef3a24f0d0653443afc8f6e596d69",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\using-git-worktrees\\SKILL.md": {
+    "mtime": 1780753887.898895,
+    "ast_hash": "c222522ec52ef4a45049c0a349d522b3",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\using-superpowers\\SKILL.md": {
+    "mtime": 1780753887.9089012,
+    "ast_hash": "303e25c9573ae081d90b41f7144a597a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\using-superpowers\\references\\codex-tools.md": {
+    "mtime": 1780753887.918842,
+    "ast_hash": "5a840623ebf05edb2f2f8f93f9873266",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\using-superpowers\\references\\copilot-tools.md": {
+    "mtime": 1780753887.9278347,
+    "ast_hash": "c80467bc687dd1fa1162fea96a401233",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\using-superpowers\\references\\gemini-tools.md": {
+    "mtime": 1780753887.932806,
+    "ast_hash": "d2397183eb559049f68ffd32b77a3d93",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\verification-before-completion\\SKILL.md": {
+    "mtime": 1780753887.9377918,
+    "ast_hash": "a5683940c5c34fdd12a12359cc604a65",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\writing-plans\\plan-document-reviewer-prompt.md": {
+    "mtime": 1780753887.9756906,
+    "ast_hash": "f6d7a36b5df60375c5a2e500bf55cac5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\writing-plans\\SKILL.md": {
+    "mtime": 1780753887.9537485,
+    "ast_hash": "b5f1a3cd661355440c98c5d17d91f69f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\writing-skills\\anthropic-best-practices.md": {
+    "mtime": 1780753887.9936419,
+    "ast_hash": "715e96cb6568b6839440ccf0aaf957cb",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\writing-skills\\persuasion-principles.md": {
+    "mtime": 1780753888.014586,
+    "ast_hash": "4d5ec4a25f77be81b486b0a563235a69",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\writing-skills\\SKILL.md": {
+    "mtime": 1780753887.9806778,
+    "ast_hash": "de569b05480693ff08b9beaf2a2c53e5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\writing-skills\\testing-skills-with-subagents.md": {
+    "mtime": 1780753888.0365288,
+    "ast_hash": "15bcbb42a293d8330f82a349b4281d6f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\.claude\\skills\\writing-skills\\examples\\CLAUDE_MD_TESTING.md": {
+    "mtime": 1780753888.0036154,
+    "ast_hash": "d61368c6ad05eedaed01370b63d7b451",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\AGENT-BROWSER-QUICKSTART.md": {
+    "mtime": 1780753888.211573,
+    "ast_hash": "c26eeaa9b24ddd504d8ea43ca07ec48d",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\COACHING-INSIGHTS-MANUAL-TEST.md": {
+    "mtime": 1780753888.2175586,
+    "ast_hash": "db12743ca4eab2720b15a69f2bdbea9e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\index.html": {
+    "mtime": 1780753888.2434883,
+    "ast_hash": "c3235912285c5785d3afa4e66795dba1",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\PHASE7-FRONTEND-EXAMPLES.md": {
+    "mtime": 1780753888.2245398,
+    "ast_hash": "1d842a0cb3edeb0d9444d77fa19ccc5c",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\README.md": {
+    "mtime": 1780753888.2315218,
+    "ast_hash": "abfa161e3e5434e3e85394bf03d387a4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\API.md": {
+    "mtime": 1780753888.7017837,
+    "ast_hash": "0f4e2cf0a0db1f13edcd25ec8ffd28d8",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\ARCHITECTURE.md": {
+    "mtime": 1780753888.7097633,
+    "ast_hash": "1ca13eca96be666d896507709f5cb285",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\COMPLETION-SUMMARY.md": {
+    "mtime": 1780753888.716744,
+    "ast_hash": "00dada57008bdfb16daa5c5518f4990e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\CONTRIBUTING.md": {
+    "mtime": 1780753888.722728,
+    "ast_hash": "130fc936022fd5cbd75a1e61c091d470",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\E2E-AGENT-BROWSER.md": {
+    "mtime": 1780753888.7346964,
+    "ast_hash": "130101cd8a09162a1cb5494526879846",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\E2E-TEST-COVERAGE.md": {
+    "mtime": 1780753888.746665,
+    "ast_hash": "ccc7c95c56ef247cf3d0fc8d521d9f52",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\HANDOFF-AGENT-BROWSER.md": {
+    "mtime": 1780753888.752647,
+    "ast_hash": "4e3207529de68159f5e6ed55b650aae5",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\HANDOFF-MULTI-COACH.md": {
+    "mtime": 1780753888.7696033,
+    "ast_hash": "f01a8fcc25c477adfd4e0e105e7e3228",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\HANDOFF-PHASE7.md": {
+    "mtime": 1780753888.7755876,
+    "ast_hash": "68fcc93389b7346bf0356c78824d67f9",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\HANDOFF.md": {
+    "mtime": 1780753888.7855608,
+    "ast_hash": "a4cacf37a2e191c89b479ff033f85b10",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\INCIDENT-2026-06-04.md": {
+    "mtime": 1780753888.7927253,
+    "ast_hash": "0bd1be03d61babb0c5e16acdcc0794af",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\METADATA-CONTRACT.md": {
+    "mtime": 1780753888.8027139,
+    "ast_hash": "a88db6473cd44c904bd1f8056c252bef",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\PHASE6-HANDOFF.md": {
+    "mtime": 1780753888.8186567,
+    "ast_hash": "7db9be230241dd694a6ddf8feba54411",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\POSTGRESQL-MIGRATION.md": {
+    "mtime": 1780753888.832618,
+    "ast_hash": "63d0821714663fa701d9f0d6ef28ed9b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\ROADMAP.md": {
+    "mtime": 1780753888.841596,
+    "ast_hash": "a3addbceec47f17b34c902615f48e908",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\RUFLO.md": {
+    "mtime": 1780753888.8525672,
+    "ast_hash": "ba7df03e3a7fadee71df5ebe17d0bbc6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\SESSION-SUMMARY-AGENT-BROWSER.md": {
+    "mtime": 1780753888.8655334,
+    "ast_hash": "8d4730b52bec20ab3e88b1d7fbca70a4",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\SUPERPOWERS-QUICK-START.md": {
+    "mtime": 1780753888.8755052,
+    "ast_hash": "d938b84360f76101899f882a86c78fb7",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\SUPERPOWERS.md": {
+    "mtime": 1780753888.8904648,
+    "ast_hash": "6c751d89e742866362dde3e2936c1f5f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\TASKBOARD-GROUPED-TASKS.md": {
+    "mtime": 1780753888.8974452,
+    "ast_hash": "badaf8c6e4afa648e7cc8df7f043b1f7",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\TROUBLESHOOTING.md": {
+    "mtime": 1780753888.906438,
+    "ast_hash": "ae34487212049eb6f1dc4fd0c6b5a140",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\superpowers\\plans\\2026-05-17-phase1-auth-system.md": {
+    "mtime": 1780753888.9153974,
+    "ast_hash": "0af674110a6e5e71532b31b9c82a70a6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\docs\\superpowers\\specs\\2026-06-04-multi-agent-coaching-insights-design.md": {
+    "mtime": 1780753888.931355,
+    "ast_hash": "34d92561be7a56fbd7e1a5a6d2a9cc89",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\scripts\\README.md": {
+    "mtime": 1780753892.2452192,
+    "ast_hash": "710894d57f68dfaaeec6e1bcc192e1f8",
+    "semantic_hash": ""
+  },
   "D:\\Cursor_new\\client\\AGENT-BROWSER-QUICKSTART.md": {
     "mtime": 1780580885.6663055,
     "ast_hash": "6eb6b9fa09c34976583bc71a85244b53",
@@ -912,6 +3957,11 @@
   "D:\\Cursor_new\\docs\\CONTRIBUTING.md": {
     "mtime": 1780581731.280758,
     "ast_hash": "1eb0161d4f88a827a1c3c0c823c1359a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\docs\\DEPLOYMENT-SESSION-2026-06-06.md": {
+    "mtime": 1780756441.4546902,
+    "ast_hash": "7a13c8a35c6df31ca5b7f00afdc16edd",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\docs\\E2E-AGENT-BROWSER.md": {
@@ -1047,6 +4097,201 @@
   "D:\\Cursor_new\\graph-visualization.png": {
     "mtime": 1779001107.5729108,
     "ast_hash": "6ace1d9ca58a9be663d68a5d21a69487",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\coaching-insights-test-01-login.png": {
+    "mtime": 1780753831.7407901,
+    "ast_hash": "7ab2dfacf8cfdb5fc58dcd6119dd4bd6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\coaching-insights-test-02-admin-dashboard.png": {
+    "mtime": 1780753831.745777,
+    "ast_hash": "7ab2dfacf8cfdb5fc58dcd6119dd4bd6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\coaching-insights-test-03-admin-logged-in.png": {
+    "mtime": 1780753831.7507637,
+    "ast_hash": "7ab2dfacf8cfdb5fc58dcd6119dd4bd6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\coaching-insights-test-04-assign-task-page.png": {
+    "mtime": 1780753831.7577457,
+    "ast_hash": "7ab2dfacf8cfdb5fc58dcd6119dd4bd6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\coaching-insights-test-05-admin-final.png": {
+    "mtime": 1780753831.7647274,
+    "ast_hash": "635248eecdbdc9ef9bdbaafd3fac74c6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\graph-expanded.png": {
+    "mtime": 1780753831.9312816,
+    "ast_hash": "90a493629a5b8b26d7bcc58413905293",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\graph-visualization.png": {
+    "mtime": 1780753831.9342737,
+    "ast_hash": "6ace1d9ca58a9be663d68a5d21a69487",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\login-form.png": {
+    "mtime": 1780753831.4196484,
+    "ast_hash": "c9710dbed6439452f1407c378bf66f2e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\public\\favicon.svg": {
+    "mtime": 1780753831.4286234,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\public\\icons.svg": {
+    "mtime": 1780753831.4336107,
+    "ast_hash": "21c7473c592c67dc87223d49892c8f0a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\assets\\hero.png": {
+    "mtime": 1780753831.492487,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\assets\\react.svg": {
+    "mtime": 1780753831.4934542,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a52378a3f1ce20095\\client\\src\\assets\\vite.svg": {
+    "mtime": 1780753831.497442,
+    "ast_hash": "6d5180a782d64c8cf51ba01c2a2184d8",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\coaching-insights-test-01-login.png": {
+    "mtime": 1780753920.892435,
+    "ast_hash": "7ab2dfacf8cfdb5fc58dcd6119dd4bd6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\coaching-insights-test-02-admin-dashboard.png": {
+    "mtime": 1780753920.898421,
+    "ast_hash": "7ab2dfacf8cfdb5fc58dcd6119dd4bd6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\coaching-insights-test-03-admin-logged-in.png": {
+    "mtime": 1780753920.9044049,
+    "ast_hash": "7ab2dfacf8cfdb5fc58dcd6119dd4bd6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\coaching-insights-test-04-assign-task-page.png": {
+    "mtime": 1780753920.9103868,
+    "ast_hash": "7ab2dfacf8cfdb5fc58dcd6119dd4bd6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\coaching-insights-test-05-admin-final.png": {
+    "mtime": 1780753920.9163709,
+    "ast_hash": "635248eecdbdc9ef9bdbaafd3fac74c6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\graph-expanded.png": {
+    "mtime": 1780753921.1058652,
+    "ast_hash": "90a493629a5b8b26d7bcc58413905293",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\graph-visualization.png": {
+    "mtime": 1780753921.1088572,
+    "ast_hash": "6ace1d9ca58a9be663d68a5d21a69487",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\login-form.png": {
+    "mtime": 1780753920.497493,
+    "ast_hash": "c9710dbed6439452f1407c378bf66f2e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\public\\favicon.svg": {
+    "mtime": 1780753920.5134492,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\public\\icons.svg": {
+    "mtime": 1780753920.5234232,
+    "ast_hash": "21c7473c592c67dc87223d49892c8f0a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\assets\\hero.png": {
+    "mtime": 1780753920.61019,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\assets\\react.svg": {
+    "mtime": 1780753920.6121848,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a57bc4ece09de781b\\client\\src\\assets\\vite.svg": {
+    "mtime": 1780753920.6181712,
+    "ast_hash": "6d5180a782d64c8cf51ba01c2a2184d8",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\coaching-insights-test-01-login.png": {
+    "mtime": 1780753888.6613789,
+    "ast_hash": "7ab2dfacf8cfdb5fc58dcd6119dd4bd6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\coaching-insights-test-02-admin-dashboard.png": {
+    "mtime": 1780753888.6673632,
+    "ast_hash": "7ab2dfacf8cfdb5fc58dcd6119dd4bd6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\coaching-insights-test-03-admin-logged-in.png": {
+    "mtime": 1780753888.6733468,
+    "ast_hash": "7ab2dfacf8cfdb5fc58dcd6119dd4bd6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\coaching-insights-test-04-assign-task-page.png": {
+    "mtime": 1780753888.6823237,
+    "ast_hash": "7ab2dfacf8cfdb5fc58dcd6119dd4bd6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\coaching-insights-test-05-admin-final.png": {
+    "mtime": 1780753888.689816,
+    "ast_hash": "635248eecdbdc9ef9bdbaafd3fac74c6",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\graph-expanded.png": {
+    "mtime": 1780753888.9562879,
+    "ast_hash": "90a493629a5b8b26d7bcc58413905293",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\graph-visualization.png": {
+    "mtime": 1780753888.9602804,
+    "ast_hash": "6ace1d9ca58a9be663d68a5d21a69487",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\login-form.png": {
+    "mtime": 1780753888.2534606,
+    "ast_hash": "c9710dbed6439452f1407c378bf66f2e",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\public\\favicon.svg": {
+    "mtime": 1780753888.2674265,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\public\\icons.svg": {
+    "mtime": 1780753888.2734082,
+    "ast_hash": "21c7473c592c67dc87223d49892c8f0a",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\assets\\hero.png": {
+    "mtime": 1780753888.3472126,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\assets\\react.svg": {
+    "mtime": 1780753888.3492072,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\.claude\\worktrees\\agent-a5c6c025e8a524702\\client\\src\\assets\\vite.svg": {
+    "mtime": 1780753888.3531957,
+    "ast_hash": "6d5180a782d64c8cf51ba01c2a2184d8",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\login-form.png": {

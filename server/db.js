@@ -94,9 +94,33 @@ const query = async (text, params) => {
   }
 })();
 
+// Export async helpers for PostgreSQL
+const queryOne = async (text, params = []) => {
+  const result = await query(text, params);
+  return result.rows[0] || null;
+};
+
+const queryAll = async (text, params = []) => {
+  const result = await query(text, params);
+  return result.rows;
+};
+
+const run = async (text, params = []) => {
+  const result = await query(text, params);
+  return { lastID: result.rows[0]?.id, changes: result.rowCount, rows: result.rows };
+};
+
 // Export a synchronous-like interface for compatibility
 const db = {
   prepare: (sql) => ({
+    get: async (...params) => {
+      const result = await query(sql, params);
+      return result.rows[0] || null;
+    },
+    all: async (...params) => {
+      const result = await query(sql, params);
+      return result.rows;
+    },
     run: (...params) => query(sql, params),
     get: (...params) => query(sql, params).then(res => res.rows[0]),
     all: (...params) => query(sql, params).then(res => res.rows)
