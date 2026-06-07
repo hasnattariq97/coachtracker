@@ -1,16 +1,16 @@
 # Graph Report - Cursor_new  (2026-06-07)
 
 ## Corpus Check
-- 212 files · ~230,115 words
+- 220 files · ~237,178 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2639 nodes · 2946 edges · 202 communities (194 shown, 8 thin omitted)
+- 2781 nodes · 3080 edges · 213 communities (202 shown, 11 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `90b1fbd6`
+- Built from commit: `c65e81ef`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -201,6 +201,15 @@
 - [[_COMMUNITY_Community 199|Community 199]]
 - [[_COMMUNITY_Community 200|Community 200]]
 - [[_COMMUNITY_Community 201|Community 201]]
+- [[_COMMUNITY_Community 202|Community 202]]
+- [[_COMMUNITY_Community 203|Community 203]]
+- [[_COMMUNITY_Community 204|Community 204]]
+- [[_COMMUNITY_Community 205|Community 205]]
+- [[_COMMUNITY_Community 206|Community 206]]
+- [[_COMMUNITY_Community 207|Community 207]]
+- [[_COMMUNITY_Community 208|Community 208]]
+- [[_COMMUNITY_Community 209|Community 209]]
+- [[_COMMUNITY_Community 212|Community 212]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Build Roadmap — Coach Task Tracker` - 23 edges
@@ -226,7 +235,7 @@
 - `TestComponent()` --calls--> `useAuth()`  [EXTRACTED]
   src/context/AuthContext.test.jsx → AuthContext.jsx
 
-## Communities (202 total, 8 thin omitted)
+## Communities (213 total, 11 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.14
@@ -313,8 +322,8 @@ Cohesion: 0.17
 Nodes (12): 1. Local Memory (.claude/projects/*/memory/), 2. AgentDB (Ruflo Vector Database), 3. SONA Learning (Neural Trajectories), code:block35 (.claude/projects/{project_name}/memory/), code:markdown (---), code:markdown (---), code:markdown (---), code:markdown (---) (+4 more)
 
 ### Community 24 - "Community 24"
-Cohesion: 0.15
-Nodes (16): Beads Work-Tracking System, code:bash (# Create .beads/ directory structure), code:bash (# Create helper script at .claude/hooks/bootstrap-beads.sh), code:json ({), code:bash (#!/bin/bash), code:yaml (---), code:bash (# Show all open work items), code:bash (# Session 1: Start work) (+8 more)
+Cohesion: 0.16
+Nodes (16): Beads Work-Tracking System, Claude Code CLI, code:bash (# Create .beads/ directory structure), code:bash (# Create helper script at .claude/hooks/bootstrap-beads.sh), code:json ({), code:bash (#!/bin/bash), code:bash (#!/bin/bash), code:bash (#!/bin/bash) (+8 more)
 
 ### Community 27 - "Community 27"
 Cohesion: 0.11
@@ -409,8 +418,8 @@ Cohesion: 0.11
 Nodes (18): adminResult, adminTaskResult, adminUnread, app, coachResult, coachUnread, db, express (+10 more)
 
 ### Community 51 - "Community 51"
-Cohesion: 0.16
-Nodes (30): admin, coach, createdTasks, createNotification(), db, dueDateFormatted, dueDateValidation, express (+22 more)
+Cohesion: 0.17
+Nodes (29): admin, coach, createdTasks, createNotification(), db, dueDateFormatted, dueDateValidation, express (+21 more)
 
 ### Community 58 - "Community 58"
 Cohesion: 0.08
@@ -429,12 +438,12 @@ Cohesion: 0.29
 Nodes (7): Building a Feature (Superpowers Cycle), code:block45 (1. BRAINSTORM), code:block46 (1. REPRODUCE), code:block47 (Task: Build multi-user system), Debugging a Bug (Systematic Approach), Parallel Agent Development, Patterns & Workflows
 
 ### Community 62 - "Community 62"
-Cohesion: 0.18
-Nodes (10): Agent Best Practices, Best Practices, Claude Core Capabilities, Code Conventions (Language-Neutral), Documentation Best Practices, Guarantees & Constraints, Master Capabilities Reference, Reasoning Powers (+2 more)
+Cohesion: 0.19
+Nodes (12): Claude Core Capabilities, code:bash (# Step 1: Initialize Claude Code), Distribution & Usage, For Agents, For Projects, For Teams, Guarantees & Constraints, Master Capabilities Reference (+4 more)
 
 ### Community 63 - "Community 63"
 Cohesion: 0.11
-Nodes (18): authenticateToken(), jwt, verifyToken(), app, { authenticateToken, requireAdmin }, cors, corsOptions, express (+10 more)
+Nodes (19): authenticateToken(), jwt, requireAdmin(), verifyToken(), app, { authenticateToken, requireAdmin }, cors, corsOptions (+11 more)
 
 ### Community 64 - "Community 64"
 Cohesion: 0.29
@@ -465,16 +474,16 @@ Cohesion: 0.07
 Nodes (26): Admin perspective:, API Testing, Backend (`server/routes/tasks.js`), Coach perspective:, code:javascript (// Support both formats), code:javascript (const [form, setForm] = useState({), code:javascript (const toggleCoach = (coachId) => {), code:javascript (await axios.post('/api/tasks', {) (+18 more)
 
 ### Community 73 - "Community 73"
-Cohesion: 0.29
-Nodes (8): Claude Code CLI, code:bash (#!/bin/bash), code:bash (#!/bin/bash), code:bash (# macOS), code:bash (claude-code --version), code:markdown (---), code:json ({), Custom Skills & Agents
+Cohesion: 0.05
+Nodes (36): Code Evidence, code:bash (curl https://spectacular-connection-production-d07b.up.railw), code:bash (# Create task), code:javascript (if (process.env.NODE_ENV !== 'test' && process.env.GROQ_API_), code:javascript (if (process.env.COACHING_INSIGHTS_ENABLED !== 'true' || proc), code:javascript (// Line 5-9: Groq client initialization), code:javascript (queueCoachingInsights(req.user.id, id, 'completion');  // ← ), code:bash (cd server && node index.js &) (+28 more)
 
 ### Community 74 - "Community 74"
 Cohesion: 0.1
 Nodes (19): code:cmd (scripts\cleanup.cmd), code:bash (./scripts/cleanup.sh), code:bash (cd d:\Cursor_new\server), code:bash (cd d:\Cursor_new\client), code:cmd (scripts\cleanup.cmd), code:cmd (scripts\cleanup.cmd), code:bash (ps aux | grep node | grep -v grep | wc -l), code:bash (killall -9 node && sleep 2 && cd server && node index.js) (+11 more)
 
 ### Community 75 - "Community 75"
-Cohesion: 0.29
-Nodes (12): 400 Bad Request, 401 Unauthorized, 403 Forbidden, 409 Conflict, 500 Internal Server Error, code:json ({), code:json ({), code:json ({) (+4 more)
+Cohesion: 0.26
+Nodes (13): 400 Bad Request, 401 Unauthorized, 403 Forbidden, 409 Conflict, 500 Internal Server Error, code:json ({), code:json ({), code:json ({) (+5 more)
 
 ### Community 76 - "Community 76"
 Cohesion: 0.17
@@ -482,7 +491,7 @@ Nodes (12): dependencies, @anthropic-ai/sdk, bcrypt, better-sqlite3, cors, doten
 
 ### Community 77 - "Community 77"
 Cohesion: 0.18
-Nodes (15): app, db, longPassword, payload, request, decoded, expiredToken, { generateToken, verifyToken, authenticateToken, requireAdmin, requireCoach } (+7 more)
+Nodes (16): app, db, longPassword, payload, request, requireCoach(), decoded, expiredToken (+8 more)
 
 ### Community 78 - "Community 78"
 Cohesion: 0.29
@@ -545,8 +554,8 @@ Cohesion: 0.08
 Nodes (25): code:powershell (cd d:\Cursor_new), code:block10 (CLIENT_ORIGIN = https://coachtracker-theta.vercel.app), code:powershell (npm install -g @railway/cli), code:block3 (✅ added X packages), code:powershell (npx railway login), code:powershell (npx railway link), code:powershell (cd server), code:powershell (npx railway service add) (+17 more)
 
 ### Community 94 - "Community 94"
-Cohesion: 0.48
-Nodes (7): code:json ([), code:json ({), code:json ({), GET /api/notifications, Notifications, PUT /api/notifications/:id/read, PUT /api/notifications/read-all
+Cohesion: 0.53
+Nodes (6): code:json ([), code:json ({), GET /api/notifications, Notifications, PUT /api/notifications/:id/read, PUT /api/notifications/read-all
 
 ### Community 95 - "Community 95"
 Cohesion: 0.29
@@ -629,8 +638,8 @@ Cohesion: 0.17
 Nodes (11): Agent Commands, AgentDB Namespaces, code:bash (/phase-builder), code:bash (# Trigger phase builder for parallel development), Learning Loop, Option A: Development Acceleration (Parallel Agents), Option B: Product Feature (Multi-Agent Coaching), Option C: Enterprise Platform (+3 more)
 
 ### Community 120 - "Community 120"
-Cohesion: 0.13
-Nodes (18): requireAdmin(), scheduleJobs(), app, { authenticateToken, requireAdmin }, cors, corsOptions, db, express (+10 more)
+Cohesion: 0.23
+Nodes (11): scheduleJobs(), app, { authenticateToken, requireAdmin }, cors, corsOptions, db, express, { scheduleJobs } (+3 more)
 
 ### Community 121 - "Community 121"
 Cohesion: 0.18
@@ -721,8 +730,8 @@ Cohesion: 0.17
 Nodes (11): Comparison: Test vs Production, Conclusion, Error Handling Verification, Executive Summary, Graceful Degradation, Key Achievements, Next Steps, No Blocking (+3 more)
 
 ### Community 145 - "Community 145"
-Cohesion: 0.4
-Nodes (5): code:json ({), code:bash (# Structure), code:bash (# JavaScript), code:bash (# .eslintrc.json), Security & Linting
+Cohesion: 0.15
+Nodes (13): code:bash (# Show all open work items), code:bash (# Session 1: Start work), code:bash (# Install from JetBrains Marketplace), code:bash (# Create MCP config file), code:json ({), code:bash (# Structure), code:bash (# JavaScript/Node.js), code:bash (# Jest config (package.json or jest.config.js)) (+5 more)
 
 ### Community 146 - "Community 146"
 Cohesion: 0.2
@@ -741,8 +750,8 @@ Cohesion: 0.05
 Nodes (36): 1. Fix Password Mismatch (BLOCKING), 2. Test Login, 3. Verify Full Flow, 4. Known Non-Critical Issues, All Route Files (coaches.js, tasks.js, notifications.js, coaching-insights.js), code:javascript (// WRONG - .get() returns Promise, not data), code:block2 (Failed to initialize database: Connection terminated due to ), code:block3 (Database Admin User:) (+28 more)
 
 ### Community 150 - "Community 150"
-Cohesion: 0.11
-Nodes (21): code:json ([), code:json ({), code:json ({), code:json ({), code:json ({), code:json ({), code:json ({), code:json ({) (+13 more)
+Cohesion: 0.18
+Nodes (13): code:json ([), code:json ({), code:json ({), code:json ({), code:json ({), code:json ({), DELETE /api/tasks/:id, GET /api/tasks (+5 more)
 
 ### Community 151 - "Community 151"
 Cohesion: 0.22
@@ -925,8 +934,8 @@ Cohesion: 0.33
 Nodes (6): code:bash (# Using npm (recommended)), code:bash (railway --version), Install Railway CLI, Installation, Prerequisites, Verify Installation
 
 ### Community 198 - "Community 198"
-Cohesion: 0.47
-Nodes (6): code:bash (# Step 1: Initialize Claude Code), Distribution & Usage, For Agents, For Projects, For Teams, Plugin Checklist for New Projects
+Cohesion: 0.06
+Nodes (30): ✅ Coaching Insights (After adding env vars), code:block1 (1. Go to https://console.groq.com), code:bash (# Backend (.env or Railway Variables)), code:block2 (1. Go to https://railway.app), code:bash (# Should see coaching insights after task completion), code:bash (cd server && node index.js &), code:bash (node d:\Cursor_new\test-notifications-local.js), code:block6 (✅ Login successful) (+22 more)
 
 ### Community 199 - "Community 199"
 Cohesion: 0.5
@@ -940,22 +949,46 @@ Nodes (7): app, { authenticateToken, requireAdmin }, cors, corsOptions, db, expr
 Cohesion: 0.67
 Nodes (3): code:javascript (import request from 'supertest';), code:bash (cd d:\Cursor_new\server), Task 6: Implement Login Endpoint (RED)
 
+### Community 202 - "Community 202"
+Cohesion: 0.07
+Nodes (29): 1. Coaching Insights Not Appearing (Phase 7), 2. Regular Notifications Possibly Not Working, Check 1: Railway Deployment Completed, Check 2: Environment Variables Were Saved, Check 3: Check Browser Console Errors, Check 4: Check Backend Logs (Railway), code:block1 (GROQ_API_KEY=gsk_PASTE_YOUR_KEY_HERE), code:block2 ("3 of your last 5 tasks were completed on-time — keep that m) (+21 more)
+
+### Community 203 - "Community 203"
+Cohesion: 0.08
+Nodes (25): 1. Admin Login & Create Task, 2. Coach Login & Complete Task, 3. Verify Coaching Insights Content, Code Evidence, code:javascript (if (process.env.NODE_ENV !== 'test' && process.env.GROQ_API_), code:javascript (if (process.env.COACHING_INSIGHTS_ENABLED !== 'true' || proc), code:block3 (GROQ_API_KEY=gsk_YOUR_KEY_HERE), code:bash (# Test login) (+17 more)
+
+### Community 204 - "Community 204"
+Cohesion: 0.25
+Nodes (8): code:json ({), code:json ({), code:json ({), code:json ({), code:json ({), code:json ({), POST /api/tasks, PUT /api/tasks/:id
+
+### Community 205 - "Community 205"
+Cohesion: 0.29
+Nodes (6): app, { authenticateToken, requireAdmin }, cors, corsOptions, express, { scheduleJobs }
+
+### Community 206 - "Community 206"
+Cohesion: 0.5
+Nodes (4): http, makeRequest(), querystring, test()
+
+### Community 207 - "Community 207"
+Cohesion: 0.5
+Nodes (4): Agent Best Practices, Best Practices, Code Conventions (Language-Neutral), Documentation Best Practices
+
 ## Knowledge Gaps
-- **1434 isolated node(s):** `Prerequisites`, `code:bash (cd server)`, `code:bash (cd client)`, `Production Deployment`, `Default Login` (+1429 more)
+- **1515 isolated node(s):** `❌ Problem: Coaching Insights Not Triggering`, `code:javascript (if (process.env.NODE_ENV !== 'test' && process.env.GROQ_API_)`, `code:javascript (if (process.env.COACHING_INSIGHTS_ENABLED !== 'true' || proc)`, `What's Missing on Railway`, `Impact on Features` (+1510 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Master Capabilities Reference` connect `Community 62` to `Community 64`, `Community 198`, `Community 7`, `Community 13`, `Community 19`, `Community 148`, `Community 22`, `Community 23`, `Community 61`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
-- **Why does `Integrated Frameworks` connect `Community 13` to `Community 62`?**
+- **Why does `Master Capabilities Reference` connect `Community 62` to `Community 64`, `Community 7`, `Community 13`, `Community 207`, `Community 19`, `Community 148`, `Community 22`, `Community 23`, `Community 61`?**
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Why does `Installation & Setup` connect `Community 148` to `Community 24`, `Community 145`, `Community 62`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `Railway CLI Deployment Guide` connect `Community 178` to `Community 196`, `Community 197`, `Community 199`, `Community 177`, `Community 182`, `Community 183`, `Community 189`, `Community 190`, `Community 191`?**
+- **Why does `Integrated Frameworks` connect `Community 13` to `Community 62`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **What connects `Prerequisites`, `code:bash (cd server)`, `code:bash (cd client)` to the rest of the system?**
-  _1434 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `❌ Problem: Coaching Insights Not Triggering`, `code:javascript (if (process.env.NODE_ENV !== 'test' && process.env.GROQ_API_)`, `code:javascript (if (process.env.COACHING_INSIGHTS_ENABLED !== 'true' || proc)` to the rest of the system?**
+  _1515 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.14 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

@@ -29,6 +29,11 @@
     "ast_hash": "e8bd2f06ea4bfc0ba36064034553ee25",
     "semantic_hash": ""
   },
+  "D:\\Cursor_new\\test-live-app.js": {
+    "mtime": 1780812902.7403467,
+    "ast_hash": "702fa3b112107be1fc1a8ddaf51fb264",
+    "semantic_hash": ""
+  },
   "D:\\Cursor_new\\verify-ruflo-plugins.sh": {
     "mtime": 1779004298.2795365,
     "ast_hash": "ef0b1f2e4e5276ace3b462ec6cf32a9d",
@@ -114,6 +119,11 @@
     "ast_hash": "7ee29dc32818b8580d9fd607163b8b3b",
     "semantic_hash": ""
   },
+  "D:\\Cursor_new\\client\\debug-deployed.js": {
+    "mtime": 1780812836.2851002,
+    "ast_hash": "df1ee04025ea57617d7501cf4f29ffcd",
+    "semantic_hash": ""
+  },
   "D:\\Cursor_new\\client\\eslint.config.js": {
     "mtime": 1779040083.585766,
     "ast_hash": "3aa4b57d7f08181d86bde52a4dcb7f22",
@@ -137,6 +147,11 @@
   "D:\\Cursor_new\\client\\test-agent-browser.js": {
     "mtime": 1780581512.3048663,
     "ast_hash": "93e2c3e3e7f6ff9861fef842049c57cd",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\client\\test-live-coaching-insights.js": {
+    "mtime": 1780813389.708135,
+    "ast_hash": "52400e33b57f2b7dec070f5ad52712f0",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\vercel.json": {
@@ -429,6 +444,11 @@
     "ast_hash": "af78e60e566b9939a393429d6af6469d",
     "semantic_hash": ""
   },
+  "D:\\Cursor_new\\server\\test-notifications-flow.js": {
+    "mtime": 1780813058.4764855,
+    "ast_hash": "63586d5c8a0e0acdacf53f14dbfe34be",
+    "semantic_hash": ""
+  },
   "D:\\Cursor_new\\server\\test-setup.js": {
     "mtime": 1780650537.775236,
     "ast_hash": "9ce14f108a52d0190f64c2827c1f1faa",
@@ -490,8 +510,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\tasks.js": {
-    "mtime": 1780756440.7455852,
-    "ast_hash": "e719a52be31d400bafa1a91a416e3f21",
+    "mtime": 1780813641.574198,
+    "ast_hash": "125b9ee3599050348fda5b3b11d4ee1b",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\__tests__\\coaching-insights.test.js": {
@@ -549,6 +569,21 @@
     "ast_hash": "4d780e8fc1b004a709fe1eb20c379521",
     "semantic_hash": ""
   },
+  "D:\\Cursor_new\\DIAGNOSTIC-NOTIFICATIONS.md": {
+    "mtime": 1780812961.5833073,
+    "ast_hash": "e7ca7846e5a74aa072329521045fad66",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\DIAGNOSTIC-SUMMARY.md": {
+    "mtime": 1780813103.3284693,
+    "ast_hash": "df48e1a1bf0e118665ccd814a00d2d57",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\FIX-NOTIFICATIONS-PLAN.md": {
+    "mtime": 1780813040.2717886,
+    "ast_hash": "c0f8d13bde451cc6f289803965f3f2f0",
+    "semantic_hash": ""
+  },
   "D:\\Cursor_new\\FIX-VERIFICATION-PLAN.md": {
     "mtime": 1780772973.6178374,
     "ast_hash": "715249a066fb4750f81569a4b8dd7b3a",
@@ -564,6 +599,11 @@
     "ast_hash": "1dcf69df601e69232ce87d5b6168ea38",
     "semantic_hash": ""
   },
+  "D:\\Cursor_new\\NOTIFICATIONS-COACHING-INSIGHTS-FIX.md": {
+    "mtime": 1780813080.252983,
+    "ast_hash": "50e2c2d158ac1eee9eefae95fbc333ba",
+    "semantic_hash": ""
+  },
   "D:\\Cursor_new\\PHASE7-TEST-EXECUTION-SUMMARY.md": {
     "mtime": 1780648566.8232174,
     "ast_hash": "1b9b3d09d616abb7ee298f9748353ba3",
@@ -572,6 +612,11 @@
   "D:\\Cursor_new\\PLANNING.md": {
     "mtime": 1778235338.9321966,
     "ast_hash": "614dd194a0683bc28a56413904fc02db",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\QUICK-FIX-GUIDE.txt": {
+    "mtime": 1780813122.0316665,
+    "ast_hash": "2fededddb556b5edaf51c97a3f10e3f9",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\QUICK-FIX.md": {

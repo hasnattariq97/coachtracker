@@ -1,7 +1,11 @@
 # API Reference — Coach Task Tracker
 
+**Status:** ✅ All endpoints operational (verified 2026-06-07)  
+**Notifications:** ✅ Both regular notifications and coaching insights working
+
 ## Base URL
 - **Development:** http://localhost:3001
+- **Production:** https://spectacular-connection-production-d07b.up.railway.app
 - **All requests:** include `Authorization: Bearer <token>` header (except `/api/auth/login`)
 
 ---

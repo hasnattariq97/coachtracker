@@ -235,6 +235,29 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 
 ---
 
+## Phase 7+ — Notifications & Coaching Insights Fix ✅
+**Status:** Fixed & Deployed (2026-06-07)
+
+### Issues Fixed ✅
+- [x] **Regular "assigned" notifications** — Fixed missing `created_at` column in PostgreSQL INSERT
+- [x] **Coaching insights** — Verified 3-agent swarm working with Groq API
+- [x] **Database compatibility** — Removed problematic `ON CONFLICT` clause, improved idempotency
+
+### Implementation ✅
+- [x] Updated `createNotification()` in server/routes/tasks.js
+- [x] Added explicit `created_at` column with `CURRENT_TIMESTAMP`
+- [x] Verified environment variables set on Railway (GROQ_API_KEY, COACHING_INSIGHTS_ENABLED)
+- [x] Tested end-to-end: task creation → assigned notification ✅, task completion → coaching insights ✅
+- [x] Deployed via Railway CLI, verified in production
+
+### Verification ✅
+- [x] Assigned notifications appear immediately when admin creates task
+- [x] Coaching insights appear 2-3 seconds after coach completes task
+- [x] 3-agent swarm analyzing patterns, growth, and risks
+- [x] All features working in production
+
+---
+
 ## Phase 7+ — Task Resource Links ✅
 **Feature:** Attach resource links (Google Sheets, Drive folders, Docs, etc.) to task assignments so coaches can access all context in one place.
 
@@ -272,14 +295,16 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 | 6 | Security Audit | ✅ Complete | 33/33 |
 | 6+ | Agent-Browser E2E Testing | ✅ Complete | 11/11 |
 | 7 | Multi-Agent Insights | ✅ Complete | 15+ tests |
+| 7+ | Notifications & Insights Fix | ✅ Complete | ✅ Verified (2026-06-07) |
 | 7+ | Task Resource Links | ✅ Complete | ✅ E2E verified |
 | 7+ | PostgreSQL (Railway) | ✅ Complete | ✅ Verified (2026-06-06) |
 
 **Total Tests Passing:** 119+ (108 backend unit/integration + 11 E2E via agent-browser)  
 **E2E Testing:** Agent-browser integration complete and verified  
 **Security Findings:** 11/11 resolved (0 critical, 0 active bypasses)  
-**Features Complete:** 12/12 (Phases 0-7 plus multi-coach, resource links, persistent database)  
-**Database:** PostgreSQL (Railway) — data persists across Render redeploys ✅
+**Features Complete:** 13/13 (Phases 0-7 plus multi-coach, notifications fix, resource links, persistent database)  
+**Database:** PostgreSQL (Railway) — data persists across Render redeploys ✅  
+**Notifications:** ✅ Both assigned notifications and coaching insights working (verified 2026-06-07)
 
 ---
 
