@@ -47,7 +47,20 @@ Every task follows this cycle:
 4. **Execute** — RED-GREEN-REFACTOR: test first, then code
 5. **Review** — Use `/security-reviewer` before merge
 
-**For implementation:** Read [@docs/SUPERPOWERS.md](docs/SUPERPOWERS.md) and use skills: `/skill-auth`, `/skill-api`, `/skill-db`, `/skill-frontend`, `/skill-notifications`, `/skill-cron`, `/skill-testing`.
+**For implementation:** Read [@docs/SUPERPOWERS.md](docs/SUPERPOWERS.md) and use skills:
+
+**Domain skills** (code patterns):
+- `/skill-auth` — JWT + bcrypt
+- `/skill-api` — Express routes
+- `/skill-db` — SQLite/PostgreSQL patterns
+- `/skill-frontend` — React + Vite
+- `/skill-notifications` — Coaching tone messaging
+- `/skill-cron` — Idempotent jobs
+- `/skill-testing` — RED-GREEN-REFACTOR
+
+**Operations skills** (deployments & commits):
+- `/skill-railway-deploy` — Deploy to Railway CLI (zero context)
+- `/skill-github-push` — Commit + push (Anthropic best practices)
 
 ## Nudge Logic (Auto-Notifications)
 
