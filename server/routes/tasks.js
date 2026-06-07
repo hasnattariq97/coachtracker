@@ -15,10 +15,13 @@ const { queueCoachingInsights } = require('./coaching-insights');
 const createNotification = async (userId, taskId, type, message) => {
   try {
     await db.prepare(
-      'INSERT INTO notifications (user_id, task_id, type, message) VALUES (?, ?, ?, ?) ON CONFLICT (user_id, task_id, type) DO NOTHING'
+      'INSERT INTO notifications (user_id, task_id, type, message, created_at) VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP)'
     ).run(userId, taskId, type, message);
   } catch (err) {
-    console.error('[createNotification] Error:', err.message);
+    // Silently ignore duplicate key errors (idempotency)
+    if (!err.message?.toLowerCase().includes('duplicate') && !err.message?.toLowerCase().includes('unique')) {
+      console.error('[createNotification] Error:', err.message);
+    }
   }
 };
 

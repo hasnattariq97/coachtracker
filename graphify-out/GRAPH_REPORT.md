@@ -1,16 +1,16 @@
-# Graph Report - Cursor_new  (2026-06-06)
+# Graph Report - Cursor_new  (2026-06-07)
 
 ## Corpus Check
-- 807 files · ~871,549 words
+- 212 files · ~230,115 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2263 nodes · 2573 edges · 177 communities (169 shown, 8 thin omitted)
+- 2639 nodes · 2946 edges · 202 communities (194 shown, 8 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `59cfef68`
+- Built from commit: `90b1fbd6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -176,18 +176,43 @@
 - [[_COMMUNITY_Community 173|Community 173]]
 - [[_COMMUNITY_Community 174|Community 174]]
 - [[_COMMUNITY_Community 175|Community 175]]
+- [[_COMMUNITY_Community 177|Community 177]]
+- [[_COMMUNITY_Community 178|Community 178]]
+- [[_COMMUNITY_Community 179|Community 179]]
+- [[_COMMUNITY_Community 180|Community 180]]
+- [[_COMMUNITY_Community 181|Community 181]]
+- [[_COMMUNITY_Community 182|Community 182]]
+- [[_COMMUNITY_Community 183|Community 183]]
+- [[_COMMUNITY_Community 184|Community 184]]
+- [[_COMMUNITY_Community 185|Community 185]]
+- [[_COMMUNITY_Community 186|Community 186]]
+- [[_COMMUNITY_Community 187|Community 187]]
+- [[_COMMUNITY_Community 188|Community 188]]
+- [[_COMMUNITY_Community 189|Community 189]]
+- [[_COMMUNITY_Community 190|Community 190]]
+- [[_COMMUNITY_Community 191|Community 191]]
+- [[_COMMUNITY_Community 192|Community 192]]
+- [[_COMMUNITY_Community 193|Community 193]]
+- [[_COMMUNITY_Community 194|Community 194]]
+- [[_COMMUNITY_Community 195|Community 195]]
+- [[_COMMUNITY_Community 196|Community 196]]
+- [[_COMMUNITY_Community 197|Community 197]]
+- [[_COMMUNITY_Community 198|Community 198]]
+- [[_COMMUNITY_Community 199|Community 199]]
+- [[_COMMUNITY_Community 200|Community 200]]
+- [[_COMMUNITY_Community 201|Community 201]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Build Roadmap — Coach Task Tracker` - 23 edges
 2. `devDependencies` - 20 edges
 3. `Phase 1: Auth System Implementation Plan` - 20 edges
-4. `Phase 7 Coaching Insights — Chrome DevTools Manual Test Report` - 16 edges
-5. `Agent-Browser E2E Testing — Handoff & Implementation Guide` - 16 edges
-6. `Railway Deployment — Coach Tracker` - 15 edges
-7. `E2E Testing with Agent-Browser — Coach Task Tracker` - 15 edges
-8. `authenticateToken()` - 15 edges
-9. `requireAdmin()` - 15 edges
-10. `Phase 6 Handoff — Security Audit & Polish Complete` - 15 edges
+4. `Railway CLI Deployment Guide` - 16 edges
+5. `Handoff: Railway Deployment & Admin User Seeding` - 16 edges
+6. `Phase 7 Coaching Insights — Chrome DevTools Manual Test Report` - 16 edges
+7. `Agent-Browser E2E Testing — Handoff & Implementation Guide` - 16 edges
+8. `Master Capabilities Reference` - 15 edges
+9. `Railway Deployment — Coach Tracker` - 15 edges
+10. `E2E Testing with Agent-Browser — Coach Task Tracker` - 15 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `ProtectedRoute()` --calls--> `useAuth()`  [EXTRACTED]
@@ -201,7 +226,7 @@
 - `TestComponent()` --calls--> `useAuth()`  [EXTRACTED]
   src/context/AuthContext.test.jsx → AuthContext.jsx
 
-## Communities (177 total, 8 thin omitted)
+## Communities (202 total, 8 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.14
@@ -288,8 +313,8 @@ Cohesion: 0.17
 Nodes (12): 1. Local Memory (.claude/projects/*/memory/), 2. AgentDB (Ruflo Vector Database), 3. SONA Learning (Neural Trajectories), code:block35 (.claude/projects/{project_name}/memory/), code:markdown (---), code:markdown (---), code:markdown (---), code:markdown (---) (+4 more)
 
 ### Community 24 - "Community 24"
-Cohesion: 0.16
-Nodes (16): Beads Work-Tracking System, Claude Code CLI, code:bash (# Create .beads/ directory structure), code:bash (# Create helper script at .claude/hooks/bootstrap-beads.sh), code:json ({), code:bash (#!/bin/bash), code:bash (#!/bin/bash), code:bash (#!/bin/bash) (+8 more)
+Cohesion: 0.15
+Nodes (16): Beads Work-Tracking System, code:bash (# Create .beads/ directory structure), code:bash (# Create helper script at .claude/hooks/bootstrap-beads.sh), code:json ({), code:bash (#!/bin/bash), code:yaml (---), code:bash (# Show all open work items), code:bash (# Session 1: Start work) (+8 more)
 
 ### Community 27 - "Community 27"
 Cohesion: 0.11
@@ -384,8 +409,8 @@ Cohesion: 0.11
 Nodes (18): adminResult, adminTaskResult, adminUnread, app, coachResult, coachUnread, db, express (+10 more)
 
 ### Community 51 - "Community 51"
-Cohesion: 0.17
-Nodes (29): admin, coach, createdTasks, createNotification(), db, dueDateFormatted, dueDateValidation, express (+21 more)
+Cohesion: 0.16
+Nodes (30): admin, coach, createdTasks, createNotification(), db, dueDateFormatted, dueDateValidation, express (+22 more)
 
 ### Community 58 - "Community 58"
 Cohesion: 0.08
@@ -404,12 +429,12 @@ Cohesion: 0.29
 Nodes (7): Building a Feature (Superpowers Cycle), code:block45 (1. BRAINSTORM), code:block46 (1. REPRODUCE), code:block47 (Task: Build multi-user system), Debugging a Bug (Systematic Approach), Parallel Agent Development, Patterns & Workflows
 
 ### Community 62 - "Community 62"
-Cohesion: 0.19
-Nodes (12): Claude Core Capabilities, code:bash (# Step 1: Initialize Claude Code), Distribution & Usage, For Agents, For Projects, For Teams, Guarantees & Constraints, Master Capabilities Reference (+4 more)
+Cohesion: 0.18
+Nodes (10): Agent Best Practices, Best Practices, Claude Core Capabilities, Code Conventions (Language-Neutral), Documentation Best Practices, Guarantees & Constraints, Master Capabilities Reference, Reasoning Powers (+2 more)
 
 ### Community 63 - "Community 63"
-Cohesion: 0.07
-Nodes (32): authenticateToken(), jwt, requireAdmin(), verifyToken(), app, { authenticateToken, requireAdmin }, cors, corsOptions (+24 more)
+Cohesion: 0.11
+Nodes (18): authenticateToken(), jwt, verifyToken(), app, { authenticateToken, requireAdmin }, cors, corsOptions, express (+10 more)
 
 ### Community 64 - "Community 64"
 Cohesion: 0.29
@@ -429,7 +454,7 @@ Nodes (37): Automated Test Output, ✅ Automated Testing (Vitest), Coaching Insi
 
 ### Community 68 - "Community 68"
 Cohesion: 0.05
-Nodes (36): Admin, API, Architecture, Authentication, Automated, Coach, Coach Task Tracker, Coaches (admin only) (+28 more)
+Nodes (37): Admin, API, Architecture, Authentication, Automated, Coach, Coach Task Tracker, Coaches (admin only) (+29 more)
 
 ### Community 71 - "Community 71"
 Cohesion: 0.04
@@ -440,8 +465,8 @@ Cohesion: 0.07
 Nodes (26): Admin perspective:, API Testing, Backend (`server/routes/tasks.js`), Coach perspective:, code:javascript (// Support both formats), code:javascript (const [form, setForm] = useState({), code:javascript (const toggleCoach = (coachId) => {), code:javascript (await axios.post('/api/tasks', {) (+18 more)
 
 ### Community 73 - "Community 73"
-Cohesion: 0.15
-Nodes (15): code:json ([), code:json ({), code:json ({), code:json ({), code:json ({), code:json ({), code:json ({), code:json ({) (+7 more)
+Cohesion: 0.29
+Nodes (8): Claude Code CLI, code:bash (#!/bin/bash), code:bash (#!/bin/bash), code:bash (# macOS), code:bash (claude-code --version), code:markdown (---), code:json ({), Custom Skills & Agents
 
 ### Community 74 - "Community 74"
 Cohesion: 0.1
@@ -457,7 +482,7 @@ Nodes (12): dependencies, @anthropic-ai/sdk, bcrypt, better-sqlite3, cors, doten
 
 ### Community 77 - "Community 77"
 Cohesion: 0.18
-Nodes (16): app, db, longPassword, payload, request, requireCoach(), decoded, expiredToken (+8 more)
+Nodes (15): app, db, longPassword, payload, request, decoded, expiredToken, { generateToken, verifyToken, authenticateToken, requireAdmin, requireCoach } (+7 more)
 
 ### Community 78 - "Community 78"
 Cohesion: 0.29
@@ -472,8 +497,8 @@ Cohesion: 0.33
 Nodes (6): code:bash (cd server && node index.js &          # Backend on :3001), code:bash (cd server && NODE_ENV=test npm test   # 108+ unit/integratio), Login Credentials, Quick Start, Run App, Run Tests
 
 ### Community 81 - "Community 81"
-Cohesion: 0.33
-Nodes (6): Frontend ✅, HIGH Priority Fixes ✅, LOW Priority Fixes ✅, MEDIUM Priority Fixes ✅, Phase 6 — Polish & Security Audit ✅ COMPLETE, Testing ✅
+Cohesion: 0.22
+Nodes (10): Backend ✅, Frontend ✅, Frontend ✅, HIGH Priority Fixes ✅, LOW Priority Fixes ✅, MEDIUM Priority Fixes ✅, Phase 1 — Auth System ✅, Phase 3+ — Multi-Coach Task Assignment ✅ (+2 more)
 
 ### Community 82 - "Community 82"
 Cohesion: 0.17
@@ -488,8 +513,8 @@ Cohesion: 0.4
 Nodes (5): Backend, Backend ✅ (complete), Frontend, Frontend ✅ (already built and working), Phase 3 — Task Assignment & Management ✅
 
 ### Community 86 - "Community 86"
-Cohesion: 0.67
-Nodes (4): Backend ✅, Frontend ✅, Phase 1 — Auth System ✅, Phase 3+ — Multi-Coach Task Assignment ✅
+Cohesion: 0.29
+Nodes (6): app, { authenticateToken, requireAdmin }, coaches, db, express, result
 
 ### Community 87 - "Community 87"
 Cohesion: 0.5
@@ -532,12 +557,12 @@ Cohesion: 0.04
 Nodes (46): Architecture, Backend Flow, Code Ready, code:block1 (Coach completes task), code:bash (# Check if coaching insights are enabled), code:bash (# 1. Start servers), code:bash (export ANTHROPIC_API_KEY="sk-ant-..."), code:bash (export COACHING_INSIGHTS_ENABLED=true) (+38 more)
 
 ### Community 97 - "Community 97"
-Cohesion: 0.35
-Nodes (8): createNotification(), cron, db, midpointNudgeJob(), overdueJob(), scheduledTasks, stopJobs(), { stopJobs }
+Cohesion: 0.07
+Nodes (27): 1. ✅ Admin User Creation (PRIMARY ISSUE), 1. Test Frontend Login, 2. ✅ /setup Endpoint, 2. Test Full Features, 3. ✅ Cron Jobs - PostgreSQL Migration, 3. Monitor Logs, Backend (Node.js/Express), code:bash (POST /api/auth/setup) (+19 more)
 
 ### Community 98 - "Community 98"
-Cohesion: 0.2
-Nodes (13): bcrypt, coach, coaches, conflict, db, existing, express, id (+5 more)
+Cohesion: 0.24
+Nodes (15): adminExists, bcrypt, cols, constraintExists, Database, db, dbPath, dns (+7 more)
 
 ### Community 99 - "Community 99"
 Cohesion: 0.05
@@ -604,8 +629,8 @@ Cohesion: 0.17
 Nodes (11): Agent Commands, AgentDB Namespaces, code:bash (/phase-builder), code:bash (# Trigger phase builder for parallel development), Learning Loop, Option A: Development Acceleration (Parallel Agents), Option B: Product Feature (Multi-Agent Coaching), Option C: Enterprise Platform (+3 more)
 
 ### Community 120 - "Community 120"
-Cohesion: 0.23
-Nodes (11): scheduleJobs(), app, { authenticateToken, requireAdmin }, cors, corsOptions, db, express, { scheduleJobs } (+3 more)
+Cohesion: 0.13
+Nodes (18): requireAdmin(), scheduleJobs(), app, { authenticateToken, requireAdmin }, cors, corsOptions, db, express (+10 more)
 
 ### Community 121 - "Community 121"
 Cohesion: 0.18
@@ -696,12 +721,12 @@ Cohesion: 0.17
 Nodes (11): Comparison: Test vs Production, Conclusion, Error Handling Verification, Executive Summary, Graceful Degradation, Key Achievements, Next Steps, No Blocking (+3 more)
 
 ### Community 145 - "Community 145"
-Cohesion: 0.15
-Nodes (13): code:bash (# Show all open work items), code:bash (# Session 1: Start work), code:bash (# Install from JetBrains Marketplace), code:bash (# Create MCP config file), code:json ({), code:bash (# Structure), code:bash (# JavaScript/Node.js), code:bash (# Jest config (package.json or jest.config.js)) (+5 more)
+Cohesion: 0.4
+Nodes (5): code:json ({), code:bash (# Structure), code:bash (# JavaScript), code:bash (# .eslintrc.json), Security & Linting
 
 ### Community 146 - "Community 146"
-Cohesion: 0.24
-Nodes (15): adminExists, bcrypt, cols, constraintExists, Database, db, dbPath, dns (+7 more)
+Cohesion: 0.2
+Nodes (13): bcrypt, coach, coaches, conflict, db, existing, express, id (+5 more)
 
 ### Community 147 - "Community 147"
 Cohesion: 0.22
@@ -716,8 +741,8 @@ Cohesion: 0.05
 Nodes (36): 1. Fix Password Mismatch (BLOCKING), 2. Test Login, 3. Verify Full Flow, 4. Known Non-Critical Issues, All Route Files (coaches.js, tasks.js, notifications.js, coaching-insights.js), code:javascript (// WRONG - .get() returns Promise, not data), code:block2 (Failed to initialize database: Connection terminated due to ), code:block3 (Database Admin User:) (+28 more)
 
 ### Community 150 - "Community 150"
-Cohesion: 0.33
-Nodes (6): code:json ({), code:json ({), code:json ({), code:json ({), PUT /api/tasks/:id/complete, PUT /api/tasks/:id/delay-reason
+Cohesion: 0.11
+Nodes (21): code:json ([), code:json ({), code:json ({), code:json ({), code:json ({), code:json ({), code:json ({), code:json ({) (+13 more)
 
 ### Community 151 - "Community 151"
 Cohesion: 0.22
@@ -740,8 +765,8 @@ Cohesion: 0.29
 Nodes (7): 3. Expandable Details Section - Confidence Scores, code:block6 (┌─────────────────────────────────────────┐), code:block7 (┌─────────────────────────────────────────┐), code:javascript (// Example 1: High confidence scores), Collapsed State (Default):, Expanded State (After clicking "Show Details"):, Test Data with Varying Confidence:
 
 ### Community 156 - "Community 156"
-Cohesion: 0.5
-Nodes (4): Agent Best Practices, Best Practices, Code Conventions (Language-Neutral), Documentation Best Practices
+Cohesion: 0.05
+Nodes (47): 1. Cron Jobs Failing, 1. Frontend API URL Update, 2. Admin User Seeding in db.js, 2. Placeholder Conversion Handling, 3. Temporary /setup Endpoint (Added then kept), Attempt 1: Automatic Seeding in db.js, Attempt 2: /setup Endpoint, Attempt 3: Frontend API URL Configuration (+39 more)
 
 ### Community 157 - "Community 157"
 Cohesion: 0.4
@@ -788,8 +813,8 @@ Cohesion: 0.5
 Nodes (4): code:block10 (┌─────────────────────────────────┐), code:block11 (┌─────────────────────────────────┐), code:block12 (┌─────────────────────────────────┐), Visual Examples:
 
 ### Community 168 - "Community 168"
-Cohesion: 0.4
-Nodes (5): Backend ✅, Backend ✅, Frontend ✅, Frontend ✅, Phase 7+ — Task Resource Links ✅
+Cohesion: 0.29
+Nodes (7): Backend ✅, Backend ✅, Backend ✅, Frontend ✅, Frontend ✅, Frontend ✅, Phase 7+ — Task Resource Links ✅
 
 ### Community 169 - "Community 169"
 Cohesion: 0.4
@@ -800,37 +825,137 @@ Cohesion: 0.5
 Nodes (3): coach, db, result
 
 ### Community 171 - "Community 171"
-Cohesion: 0.36
-Nodes (6): db, express, id, notif, notifs, router
+Cohesion: 0.07
+Nodes (27): code:sql (INSERT INTO users (name, email, password_hash, role)), code:bash (node server/seed-admin.js), code:block3 (error: function julianday(...) does not exist), code:bash (curl -s -X POST https://spectacular-connection-production-d0), code:block5 (3650664 docs: Add Railway admin user fix instructions (2026-), Credentials Reference, Current State, Documents Created for Next Agent (+19 more)
 
 ### Community 172 - "Community 172"
 Cohesion: 0.5
 Nodes (4): scripts, dev, start, test
 
 ### Community 174 - "Community 174"
+Cohesion: 0.05
+Nodes (40): 1. ✅ Admin User Seeding (Primary Issue), 2. ✅ /setup Endpoint Improvement, 3. ✅ Cron Jobs PostgreSQL Migration, code:javascript (await query(`...ON CONFLICT (email) DO NOTHING`);), code:json ({), code:bash (curl -s -X POST https://spectacular-connection-production-d0), code:json ({), code:json ({) (+32 more)
+
+### Community 175 - "Community 175"
+Cohesion: 0.08
+Nodes (24): code:sql (INSERT INTO users (name, email, password_hash, role)), code:sql (SELECT * FROM users WHERE email = 'admin@tracker.com';), code:bash (curl -s -X POST https://spectacular-connection-production-d0), code:bash (curl -s -X POST https://spectacular-connection-production-d0), code:json ({), code:bash (# Set your Railway DATABASE_URL), code:bash (# 1. Login and get JWT token), Credentials Reference (+16 more)
+
+### Community 177 - "Community 177"
+Cohesion: 0.15
+Nodes (13): Check Service Health, Checking Status & Logs, code:bash (# Show latest deployments), code:bash (railway logs -s spectacular-connection --tail 50), code:bash (railway logs -s spectacular-connection --tail 100), code:bash (railway logs -s spectacular-connection --tail 10), code:bash (railway logs -s spectacular-connection --service-logs), code:bash (# Show error logs) (+5 more)
+
+### Community 178 - "Community 178"
+Cohesion: 0.17
+Nodes (11): Additional Resources, code:bash (# 1. Verify syntax), code:bash (# Step 1: Make code changes), code:bash (# Deploy), Deployment Workflow, Pre-Deployment Checklist, Quick Command Summary, Railway CLI Deployment Guide (+3 more)
+
+### Community 179 - "Community 179"
+Cohesion: 0.06
+Nodes (32): All Deployment Documents, code:bash (cd server), code:bash (# DEPLOY), code:block3 (docs/), code:block4 (JWT_SECRET=...              # Auth token secret (min 32 char), code:bash (railway env set JWT_SECRET=your-secret-key), Common Scenarios, Deployment (+24 more)
+
+### Community 180 - "Community 180"
+Cohesion: 0.35
+Nodes (8): createNotification(), cron, db, midpointNudgeJob(), overdueJob(), scheduledTasks, stopJobs(), { stopJobs }
+
+### Community 181 - "Community 181"
+Cohesion: 0.18
+Nodes (11): ❌ Attempt 1: Automatic Seeding via db.js, ❌ Attempt 2: /setup Endpoint (First Deploy), code:javascript (// OLD CODE - LOGS SUCCESS UNCONDITIONALLY), code:javascript (router.post('/setup', async (req, res) => {), code:javascript (// NEW CODE - VERIFIES ACTUAL CREATION), code:bash (railway deployment up --service spectacular-connection -y --), Initial Attempts That Didn't Work, Issue 1: Missing Admin User in Database (+3 more)
+
+### Community 182 - "Community 182"
+Cohesion: 0.18
+Nodes (11): code:bash (railway login), code:bash (railway link), code:block5 (> Select a workspace), code:bash (railway link -p surprising-expression -e production -s spect), code:bash (railway link -p <PROJECT_ID>), code:bash (# Check which project is linked), code:block9 (Project: surprising-expression (68da207e-8229...)), Initial Setup (+3 more)
+
+### Community 183 - "Community 183"
+Cohesion: 0.2
+Nodes (10): code:bash (# From server directory), code:block11 (Indexing...), code:bash (railway deployment redeploy -s spectacular-connection -y), code:bash (railway deployment redeploy \), code:bash (railway deployment up ./apps/api --path-as-root -y), Deployment Methods, Method 1: Fresh Deploy from Local Code (MOST RELIABLE), Method 2: Redeploy Latest Deployment (+2 more)
+
+### Community 184 - "Community 184"
+Cohesion: 0.22
+Nodes (8): code:bash (# Option 1: Fresh upload from local directory), Deployment Issues & Fixes - Lessons Learned, Going Forward, Issue 5: /setup Endpoint Returns 404 (First Deploy), Problem Description, ✅ Solution, Summary Table: Issues & Fixes, ❌ What Happened
+
+### Community 185 - "Community 185"
+Cohesion: 0.22
+Nodes (9): code:javascript (// ❌ SQLite functions don't exist in PostgreSQL), code:javascript (// ✅ PostgreSQL-compatible syntax), code:block9 (error: function julianday(timestamp without time zone) does ), Issue 2: Cron Jobs Using SQLite Syntax in PostgreSQL, Problem Description, ✅ Solution That Worked, SQL Migration Reference, ❌ What Was Wrong (+1 more)
+
+### Community 186 - "Community 186"
+Cohesion: 0.22
+Nodes (9): code:bash (# Find all files that might have database-specific syntax), code:javascript (// test-db-migration.js), code:javascript (// ✅ PostgreSQL-specific syntax), code:markdown (# Database Migration: SQLite → PostgreSQL), Prevention for Future, ✅ Rule 1: Always Migrate All Usage When Changing Database, ✅ Rule 2: Test Database Operations After Migration, ✅ Rule 3: Use Type Hints / Comments (+1 more)
+
+### Community 187 - "Community 187"
+Cohesion: 0.22
+Nodes (9): code:bash (# Step 1: Make code changes), code:markdown (# Pre-Deployment Checklist), code:bash (#!/bin/bash), code:bash (chmod +x scripts/deploy.sh), Prevention for Future, ✅ Rule 1: Know Your Deployment Platform, ✅ Rule 2: Always Use CLI for Railway Deployments, ✅ Rule 3: Create a Deployment Checklist (+1 more)
+
+### Community 188 - "Community 188"
+Cohesion: 0.22
+Nodes (9): code:javascript (// ❌ BAD), code:sql (-- ❌ BAD), code:javascript (// ❌ BAD), code:javascript (router.post('/api/auth/setup', async (req, res) => {), Prevention for Future, ✅ Rule 1: Always Verify Database Operations, ✅ Rule 2: Use RETURNING Clause in PostgreSQL, ✅ Rule 3: Log Actual Data, Not Just Success Message (+1 more)
+
+### Community 189 - "Community 189"
+Cohesion: 0.22
+Nodes (9): Automation & Scripts, Bash Script: Auto-Deploy with Monitoring, Bash Script: Rollback to Previous, code:bash (#!/bin/bash), code:bash (chmod +x scripts/deploy.sh), code:bash (#!/bin/bash), code:bash (chmod +x scripts/rollback.sh), code:yaml (name: Deploy to Railway) (+1 more)
+
+### Community 190 - "Community 190"
+Cohesion: 0.22
+Nodes (9): code:bash (# View previous deployments), code:bash (railway logs -s spectacular-connection --service-logs | tail), code:block27 (❌ "No such file or directory: package.json"), code:bash (# Redeploy last successful version), code:bash (# Connect to service shell (if available)), If Deployment Fails, Manual Debugging in Railway, Quick Rollback to Previous Deployment (+1 more)
+
+### Community 191 - "Community 191"
+Cohesion: 0.22
+Nodes (9): code:bash (railway login                              # Authenticate), code:bash (railway deployment up [options]            # Deploy from cur), code:bash (railway logs [options]                     # View logs), code:bash (railway docs                               # Open Railway do), Debugging, Deployment, Miscellaneous, Navigation & Project Management (+1 more)
+
+### Community 192 - "Community 192"
+Cohesion: 0.25
+Nodes (8): 1. Always Verify Database Operations, 2. Test After Database Migrations, 3. Know Your Deployment Platform, 4. Use CLI Tools for Manual Tasks, 5. Create Checklists, 6. Check Logs First, 7. Verify in Staging, Lessons Learned
+
+### Community 193 - "Community 193"
+Cohesion: 0.25
+Nodes (8): code:bash (# ❌ WRONG - I thought this would auto-deploy), code:bash (# ✅ CORRECT - Manual deployment via CLI), Issue 3: GitHub NOT Auto-Deployed to Railway, Problem Description, ✅ Solution That Worked, ❌ What I Did Wrong, Why It Happened, Why Railway CLI Deployment Works
+
+### Community 194 - "Community 194"
+Cohesion: 0.36
+Nodes (6): db, express, id, notif, notifs, router
+
+### Community 195 - "Community 195"
+Cohesion: 0.29
+Nodes (7): code:bash (railway deployment redeploy -s spectacular-connection --from), code:bash (# Step 1: Link project (interactive - you select options)), code:bash (# Add this to deployment checklist), Issue 4: Initial Redeploy Command Didn't Work, Prevention, Problem Description, ✅ Solution
+
+### Community 196 - "Community 196"
+Cohesion: 0.29
+Nodes (7): code:bash (# Use --detach to not wait for logs), code:bash (rm -rf node_modules .next dist build), code:bash (# Check CPU/memory), Faster Deployments, Monitor Resource Usage, Performance Tips, Reduce Upload Size
+
+### Community 197 - "Community 197"
+Cohesion: 0.33
+Nodes (6): code:bash (# Using npm (recommended)), code:bash (railway --version), Install Railway CLI, Installation, Prerequisites, Verify Installation
+
+### Community 198 - "Community 198"
+Cohesion: 0.47
+Nodes (6): code:bash (# Step 1: Initialize Claude Code), Distribution & Usage, For Agents, For Projects, For Teams, Plugin Checklist for New Projects
+
+### Community 199 - "Community 199"
+Cohesion: 0.5
+Nodes (4): Best Practices, code:bash (# Set one variable), Environment Variables, Setting Variables (for secrets)
+
+### Community 200 - "Community 200"
+Cohesion: 0.25
+Nodes (7): app, { authenticateToken, requireAdmin }, cors, corsOptions, db, express, { scheduleJobs }
+
+### Community 201 - "Community 201"
 Cohesion: 0.67
 Nodes (3): code:javascript (import request from 'supertest';), code:bash (cd d:\Cursor_new\server), Task 6: Implement Login Endpoint (RED)
 
-### Community 175 - "Community 175"
-Cohesion: 0.29
-Nodes (6): app, { authenticateToken, requireAdmin }, coaches, db, express, result
-
 ## Knowledge Gaps
-- **1217 isolated node(s):** `code:powershell (cd d:\Cursor_new)`, `code:powershell (npm install -g @railway/cli)`, `code:block3 (✅ added X packages)`, `code:powershell (npx railway login)`, `code:powershell (npx railway link)` (+1212 more)
+- **1434 isolated node(s):** `Prerequisites`, `code:bash (cd server)`, `code:bash (cd client)`, `Production Deployment`, `Default Login` (+1429 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Master Capabilities Reference` connect `Community 62` to `Community 64`, `Community 7`, `Community 13`, `Community 19`, `Community 148`, `Community 22`, `Community 23`, `Community 156`, `Community 61`?**
+- **Why does `Master Capabilities Reference` connect `Community 62` to `Community 64`, `Community 198`, `Community 7`, `Community 13`, `Community 19`, `Community 148`, `Community 22`, `Community 23`, `Community 61`?**
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+- **Why does `Integrated Frameworks` connect `Community 13` to `Community 62`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `requireAdmin()` connect `Community 63` to `Community 77`, `Community 175`, `Community 79`, `Community 51`, `Community 120`?**
+- **Why does `Railway CLI Deployment Guide` connect `Community 178` to `Community 196`, `Community 197`, `Community 199`, `Community 177`, `Community 182`, `Community 183`, `Community 189`, `Community 190`, `Community 191`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `Available Tools` connect `Community 22` to `Community 62`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **What connects `code:powershell (cd d:\Cursor_new)`, `code:powershell (npm install -g @railway/cli)`, `code:block3 (✅ added X packages)` to the rest of the system?**
-  _1217 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `Prerequisites`, `code:bash (cd server)`, `code:bash (cd client)` to the rest of the system?**
+  _1434 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.14 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
