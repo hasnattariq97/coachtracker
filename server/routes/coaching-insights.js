@@ -308,52 +308,55 @@ function extractConfidence(response) {
 }
 
 /**
- * Build SINGLE coaching message from agent insights (not concatenation)
- * Synthesizes insights into ONE coherent, varied paragraph
+ * Build SHORT, PUNCHY, VARIED coaching message
+ * Max 1-2 sentences. Completely different messages each time.
  */
 function buildConsensus(patternResponse, growthResponse, riskResponse) {
   if (!patternResponse || !growthResponse || !riskResponse) {
-    return 'Great work. Keep pushing forward!';
+    return 'Good work!';
   }
 
-  // Detect scenario from agent responses
   const isOnTime = !patternResponse.toLowerCase().includes('delay') &&
-                   !patternResponse.toLowerCase().includes('slip');
-  const hasGrowthOpportunity = growthResponse.length > 0;
+                   !patternResponse.toLowerCase().includes('slip') &&
+                   !patternResponse.toLowerCase().includes('missed');
   const hasRisk = !riskResponse.toLowerCase().includes('no');
 
-  // Extract key info from responses
-  const patternSummary = patternResponse.split('\n')[0].trim();
-  const growthSummary = growthResponse.split('\n')[0].trim();
-  const riskSummary = hasRisk ? riskResponse.split('\n')[0].trim() : null;
+  // Multiple DIFFERENT templates (not variations of same template)
+  const onTimeMessages = [
+    'You crushed this deadline. That execution matters.',
+    'On time again. You\'ve got the discipline down.',
+    'Another on-time delivery. Keep this momentum.',
+    'You hit this one. Your reliability is building trust.',
+    'Right on schedule. This is how you build a reputation.',
+    'You delivered when promised. That\'s professional.',
+    'Nailed the deadline. Do this 10 more times.',
+    'On time. You know what this means? You can trust yourself.',
+  ];
 
-  // Build varied, contextual message (not template-based)
+  const lateMessages = [
+    'This one slipped. What got in the way?',
+    'You missed this deadline. Let\'s figure out why together.',
+    'This took longer. No judgment—what happened?',
+    'Deadline passed. Let\'s talk about it.',
+  ];
+
+  const patternDelayMessages = [
+    'You\'ve missed 2 of 3 high-priority tasks. Pattern alert. What\'s the real blocker?',
+    'Recurring delays. This isn\'t random. What\'s slowing you down?',
+    'You\'re slipping on deadline pressure. Let\'s address the root cause.',
+  ];
+
   let message;
 
   if (isOnTime) {
-    // ON-TIME SCENARIOS - vary based on pattern type
-    if (patternSummary.includes('last') || patternSummary.includes('consecutive')) {
-      // Momentum/streak scenario
-      message = `${growthSummary} You're building a strong track record—${patternSummary.toLowerCase()} This consistency matters.`;
-    } else if (patternSummary.includes('recovered') || patternSummary.includes('improvement')) {
-      // Recovery/improvement scenario
-      message = `${growthSummary} And look—${patternSummary.toLowerCase()} That's real progress. What changed? Do more of that.`;
-    } else {
-      // Standard on-time scenario
-      message = `${growthSummary} ${patternSummary} Keep this energy going.`;
-    }
+    // Pick random on-time message
+    message = onTimeMessages[Math.floor(Math.random() * onTimeMessages.length)];
+  } else if (hasRisk && riskResponse.toLowerCase().includes('pattern')) {
+    // Recurring delay pattern
+    message = patternDelayMessages[Math.floor(Math.random() * patternDelayMessages.length)];
   } else {
-    // LATE/STRUGGLING SCENARIOS
-    if (riskSummary && riskSummary.includes('pattern')) {
-      // Recurring pattern of delays
-      message = `You missed this deadline. ${riskSummary.toLowerCase()} Let's tackle this—what's blocking you? We can help.`;
-    } else if (hasRisk) {
-      // Single late but with identifiable cause
-      message = `This one took longer. ${riskSummary.toLowerCase()} No judgment—let's identify what we can fix next time.`;
-    } else {
-      // Late without specific cause detected
-      message = `You didn't hit this deadline. What got in the way? Your honesty helps us support you better.`;
-    }
+    // Single late
+    message = lateMessages[Math.floor(Math.random() * lateMessages.length)];
   }
 
   return message;
@@ -368,10 +371,8 @@ async function createCoachingInsightNotification(coachId, taskId, results, statu
 
   let message;
   if (status === 'success' && results) {
-    // Create a more varied message by combining task context
-    const taskTitle = task.title.length > 30 ? task.title.substring(0, 27) + '...' : task.title;
-    const consensus = results.consensus || 'Great work! Keep this momentum going.';
-    message = `On "${taskTitle}": ${consensus}`;
+    // Just the consensus message, clean and simple
+    message = results.consensus || 'Good work!';
   } else {
     message = 'Insights pending. Check back soon!';
   }

@@ -185,8 +185,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\src\\components\\CoachingInsightCard.jsx": {
-    "mtime": 1780653802.4148724,
-    "ast_hash": "84d9183a15dde24b48d363a483292aa9",
+    "mtime": 1780817314.7161562,
+    "ast_hash": "f8d110671fe4b8885a76976023f290f1",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\client\\src\\components\\DelayReasonModal.jsx": {
@@ -500,8 +500,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\coaching-insights.js": {
-    "mtime": 1780756440.6917012,
-    "ast_hash": "5966b8552c63b135bc93191db490e4c3",
+    "mtime": 1780817294.7032006,
+    "ast_hash": "620ffed43360da1da6bac01ef019d28f",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\server\\routes\\notifications.js": {
@@ -545,8 +545,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\CLAUDE.md": {
-    "mtime": 1780645747.0719287,
-    "ast_hash": "b6f5313203062263e6e4b04ade6cfab1",
+    "mtime": 1780814626.7688558,
+    "ast_hash": "78d369f138efe83610ed26e49b2322f1",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\COMPLETION_REPORT.md": {
@@ -649,6 +649,11 @@
     "ast_hash": "f90c3bc347559b8755ad455d42cf4474",
     "semantic_hash": ""
   },
+  "D:\\Cursor_new\\SESSION-2026-06-07-NOTIFICATIONS-FIX.md": {
+    "mtime": 1780814164.2909229,
+    "ast_hash": "fc904ff0ed3c67d62eb2ac154a981b94",
+    "semantic_hash": ""
+  },
   "D:\\Cursor_new\\SESSION_LOG.md": {
     "mtime": 1778235166.548384,
     "ast_hash": "87ad212c725665da6ff120462fefe9ad",
@@ -677,6 +682,11 @@
   "D:\\Cursor_new\\TESTING-COMPLETE-SUMMARY.md": {
     "mtime": 1780648957.2641823,
     "ast_hash": "82a880be726d77619b318e67dae6fac8",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\TESTING-RESULTS-SUMMARY.md": {
+    "mtime": 1780813671.932886,
+    "ast_hash": "44d96b0e109452bb213feb09ea96eade",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\TESTING-SESSION-SUMMARY.md": {
@@ -990,8 +1000,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\docs\\API.md": {
-    "mtime": 1780659145.4087517,
-    "ast_hash": "568709119692b4f02e986d37a13581a7",
+    "mtime": 1780814128.1588614,
+    "ast_hash": "171ccf94a1a606b125bd138ac23b0092",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\docs\\ARCHITECTURE.md": {
@@ -1005,8 +1015,8 @@
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\docs\\CONTRIBUTING.md": {
-    "mtime": 1780581731.280758,
-    "ast_hash": "1eb0161d4f88a827a1c3c0c823c1359a",
+    "mtime": 1780814619.6720731,
+    "ast_hash": "11304ad6bcf172faa2fab7080153e7b1",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\docs\\DEPLOYMENT-ISSUES-AND-FIXES.md": {
@@ -1022,6 +1032,11 @@
   "D:\\Cursor_new\\docs\\E2E-TEST-COVERAGE.md": {
     "mtime": 1780583416.9539545,
     "ast_hash": "adce1d31db453e3e27b433d49839713f",
+    "semantic_hash": ""
+  },
+  "D:\\Cursor_new\\docs\\GRAPHIFY-FIRST.md": {
+    "mtime": 1780814604.6701543,
+    "ast_hash": "424d070cc3ca16567c487afc1c63f2a1",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\docs\\HANDOFF-AGENT-BROWSER.md": {
@@ -1064,14 +1079,19 @@
     "ast_hash": "b89c06e6308f66d631499779c5652141",
     "semantic_hash": ""
   },
+  "D:\\Cursor_new\\docs\\PHASE7-VARIED-INSIGHTS.md": {
+    "mtime": 1780814913.9445364,
+    "ast_hash": "1755152de5dcadf85ea375dc28256ea9",
+    "semantic_hash": ""
+  },
   "D:\\Cursor_new\\docs\\RAILWAY-CLI-DEPLOYMENT-GUIDE.md": {
     "mtime": 1780773677.490713,
     "ast_hash": "8bf1e322042d1fbf42018914fa2d38fb",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\docs\\ROADMAP.md": {
-    "mtime": 1780774421.1352558,
-    "ast_hash": "f6452113af9e34fa43f09d71f31ca965",
+    "mtime": 1780814113.107366,
+    "ast_hash": "0a669b34c2dae8452bd3680d2633e4e5",
     "semantic_hash": ""
   },
   "D:\\Cursor_new\\docs\\RUFLO.md": {
