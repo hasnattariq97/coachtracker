@@ -308,24 +308,55 @@ function extractConfidence(response) {
 }
 
 /**
- * Build consensus statement from all 3 agents
+ * Build SINGLE coaching message from agent insights (not concatenation)
+ * Synthesizes insights into ONE coherent, varied paragraph
  */
 function buildConsensus(patternResponse, growthResponse, riskResponse) {
   if (!patternResponse || !growthResponse || !riskResponse) {
-    return 'Insights partial. Continue strong work!';
+    return 'Great work. Keep pushing forward!';
   }
 
-  // Extract key phrases for consensus
-  const patterns = patternResponse.split('.')[0]; // First sentence
-  const growth = growthResponse.split('.')[0];
-  const risks = riskResponse.includes('no risks') ? null : riskResponse.split('.')[0];
+  // Detect scenario from agent responses
+  const isOnTime = !patternResponse.toLowerCase().includes('delay') &&
+                   !patternResponse.toLowerCase().includes('slip');
+  const hasGrowthOpportunity = growthResponse.length > 0;
+  const hasRisk = !riskResponse.toLowerCase().includes('no');
 
-  let consensus = `${growth} ${patterns}`;
-  if (risks) {
-    consensus += ` Note: ${risks}`;
+  // Extract key info from responses
+  const patternSummary = patternResponse.split('\n')[0].trim();
+  const growthSummary = growthResponse.split('\n')[0].trim();
+  const riskSummary = hasRisk ? riskResponse.split('\n')[0].trim() : null;
+
+  // Build varied, contextual message (not template-based)
+  let message;
+
+  if (isOnTime) {
+    // ON-TIME SCENARIOS - vary based on pattern type
+    if (patternSummary.includes('last') || patternSummary.includes('consecutive')) {
+      // Momentum/streak scenario
+      message = `${growthSummary} You're building a strong track record—${patternSummary.toLowerCase()} This consistency matters.`;
+    } else if (patternSummary.includes('recovered') || patternSummary.includes('improvement')) {
+      // Recovery/improvement scenario
+      message = `${growthSummary} And look—${patternSummary.toLowerCase()} That's real progress. What changed? Do more of that.`;
+    } else {
+      // Standard on-time scenario
+      message = `${growthSummary} ${patternSummary} Keep this energy going.`;
+    }
+  } else {
+    // LATE/STRUGGLING SCENARIOS
+    if (riskSummary && riskSummary.includes('pattern')) {
+      // Recurring pattern of delays
+      message = `You missed this deadline. ${riskSummary.toLowerCase()} Let's tackle this—what's blocking you? We can help.`;
+    } else if (hasRisk) {
+      // Single late but with identifiable cause
+      message = `This one took longer. ${riskSummary.toLowerCase()} No judgment—let's identify what we can fix next time.`;
+    } else {
+      // Late without specific cause detected
+      message = `You didn't hit this deadline. What got in the way? Your honesty helps us support you better.`;
+    }
   }
 
-  return consensus.slice(0, 200); // Truncate to 200 chars for notification message
+  return message;
 }
 
 /**

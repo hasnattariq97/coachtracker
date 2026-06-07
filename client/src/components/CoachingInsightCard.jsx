@@ -1,96 +1,94 @@
-export default function CoachingInsightCard({ notification, onDismiss }) {
-  const isOnTime = notification.type === 'coaching_insights' &&
-                   !notification.message.toLowerCase().includes('delay');
+import { useState } from 'react';
+import axios from 'axios';
+import toast from 'react-hot-toast';
 
-  // Parse metadata to get actual coaching insights from agents
-  let insights = null;
-  if (notification.metadata) {
-    try {
-      insights = JSON.parse(notification.metadata);
-    } catch (e) {
-      // If metadata isn't valid JSON, fall back to message
-      insights = null;
+export default function CoachingInsightCard({ notification, onDismiss }) {
+  const [submittingReason, setSubmittingReason] = useState(false);
+  const [delayReason, setDelayReason] = useState('');
+
+  const isOnTime = notification.type === 'coaching_insights' &&
+                   !notification.message.toLowerCase().includes('delay') &&
+                   !notification.message.toLowerCase().includes('didn\'t hit');
+
+  const handleSubmitReason = async () => {
+    if (!delayReason.trim()) {
+      toast.error('Please share what got in the way');
+      return;
     }
-  }
+
+    setSubmittingReason(true);
+    try {
+      await axios.put(`/api/tasks/${notification.task_id}/delay-reason`, {
+        delay_reason: delayReason,
+      });
+      toast.success('Thank you for sharing. We\'ll help you move forward.');
+      setDelayReason('');
+      onDismiss();
+    } catch (error) {
+      toast.error('Could not save delay reason');
+    } finally {
+      setSubmittingReason(false);
+    }
+  };
 
   return (
     <div className="bg-white border-l-4 border-teal-600 rounded shadow-sm overflow-hidden">
       <div className="p-4 space-y-3">
-        {/* On-Time Completion with AI Coaching Insights */}
+        {/* ON-TIME: Single motivational paragraph */}
         {isOnTime && (
-          <div className="space-y-3">
+          <div className="space-y-2">
             <div className="flex items-start gap-2">
-              <span className="text-xl">🎯</span>
+              <span className="text-2xl">🎯</span>
               <div className="flex-1">
-                <h4 className="font-semibold text-gray-900">Great execution! 💪</h4>
-                {/* Display consensus message from agents */}
-                <p className="text-gray-600 text-sm mt-2 leading-relaxed">
-                  {insights?.consensus || notification.message || 'Excellent work on this task!'}
+                <p className="text-gray-700 text-sm leading-relaxed font-medium">
+                  {notification.message || 'You did it! Great work on this task.'}
                 </p>
               </div>
             </div>
-
-            {/* Detailed agent insights if available */}
-            {insights && (
-              <div className="bg-teal-50 rounded p-3 space-y-2 text-xs">
-                {insights.growth_agent?.summary && (
-                  <div className="flex gap-2">
-                    <span>📈</span>
-                    <p className="text-gray-700">{insights.growth_agent.summary}</p>
-                  </div>
-                )}
-                {insights.pattern_agent?.summary && (
-                  <div className="flex gap-2">
-                    <span>📊</span>
-                    <p className="text-gray-700">{insights.pattern_agent.summary}</p>
-                  </div>
-                )}
-                {insights.risk_agent?.summary && !insights.risk_agent.summary.toLowerCase().includes('no risk') && (
-                  <div className="flex gap-2">
-                    <span>⚠️</span>
-                    <p className="text-gray-700">{insights.risk_agent.summary}</p>
-                  </div>
-                )}
-              </div>
-            )}
           </div>
         )}
 
-        {/* Delayed Task Message */}
+        {/* LATE/DELAY: Coaching message + dialogue box for reason */}
         {!isOnTime && (
           <div className="space-y-3">
             <div className="flex items-start gap-2">
-              <span className="text-xl">💭</span>
+              <span className="text-2xl">💬</span>
               <div className="flex-1">
-                <h4 className="font-semibold text-gray-900">Task took longer than planned</h4>
-                <p className="text-gray-600 text-sm mt-2">
-                  {insights?.consensus || 'No worries—it happens to everyone! Understanding what got in the way helps us all improve.'}
+                <p className="text-gray-700 text-sm leading-relaxed font-medium">
+                  {notification.message || 'This took longer than expected. Let\'s understand what happened.'}
                 </p>
               </div>
             </div>
 
-            {/* Risk insights if available */}
-            {insights?.risk_agent?.summary && (
-              <div className="bg-amber-50 rounded p-3 text-xs">
-                <p className="text-gray-700 flex gap-2">
-                  <span>⚠️</span>
-                  <span>{insights.risk_agent.summary}</span>
-                </p>
-              </div>
-            )}
-
-            {/* Reason Input Section */}
-            <div className="bg-teal-50 p-3 rounded border border-teal-200 space-y-2">
-              <label className="text-sm font-medium text-gray-700">
-                What got in the way?
+            {/* Dialogue Box: Why was it late? */}
+            <div className="bg-amber-50 border border-amber-200 rounded p-3 space-y-2">
+              <label className="text-sm font-semibold text-gray-800">
+                Help us understand: What got in the way?
               </label>
               <textarea
-                placeholder="Share what slowed you down (e.g., waiting for approval, unexpected complexity, other priorities)"
-                className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
+                value={delayReason}
+                onChange={(e) => setDelayReason(e.target.value)}
+                placeholder="Be honest. Was it scope creep? Dependencies? Other priorities? We're here to help remove blockers."
+                className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-500 resize-none"
                 rows="3"
               />
+              <div className="flex gap-2">
+                <button
+                  onClick={handleSubmitReason}
+                  disabled={submittingReason || !delayReason.trim()}
+                  className="flex-1 px-3 py-1.5 text-xs font-medium bg-amber-600 text-white rounded hover:bg-amber-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  {submittingReason ? 'Saving...' : 'Share'}
+                </button>
+                <button
+                  onClick={onDismiss}
+                  className="px-3 py-1.5 text-xs font-medium text-gray-600 hover:bg-gray-100 rounded transition-colors"
+                >
+                  Skip
+                </button>
+              </div>
               <p className="text-xs text-gray-600">
-                Your honest feedback helps us support you better next time. 🤝
+                Your honest feedback helps us support you better. 🤝
               </p>
             </div>
           </div>
@@ -98,14 +96,16 @@ export default function CoachingInsightCard({ notification, onDismiss }) {
       </div>
 
       {/* Footer */}
-      <div className="border-t border-gray-100 px-4 py-2 bg-gray-50 flex gap-2">
-        <button
-          onClick={onDismiss}
-          className="text-teal-600 text-xs hover:text-teal-700 font-medium"
-        >
-          Dismiss
-        </button>
-      </div>
+      {isOnTime && (
+        <div className="border-t border-gray-100 px-4 py-2 bg-gray-50">
+          <button
+            onClick={onDismiss}
+            className="text-teal-600 text-xs hover:text-teal-700 font-medium"
+          >
+            Got it
+          </button>
+        </div>
+      )}
     </div>
   );
 }
