@@ -75,14 +75,26 @@ Coaches get automatically notified when:
 - [@.beads/README.md](.beads/README.md) — cross-session work tracking
 - [@docs/METADATA-CONTRACT.md](docs/METADATA-CONTRACT.md) — file metadata standards
 
-## Graphify: Knowledge Graph
+## Graphify: Knowledge Graph — GRAPHIFY-FIRST ⭐
+
+**CORE RULE: Always use graphify for queries. Never grep first.**
 
 Query the codebase instead of grepping:
 
 ```bash
-graphify query "How do coaches get notified of overdue tasks?"
-graphify path "coach_id" "notification"
-graphify explain "midpoint_nudge"
+# ✅ First choice (30-50 tokens):
+python3 -m graphifyy query "How do coaches get notified of overdue tasks?"
+python3 -m graphifyy path "coach_id" "notification"
+python3 -m graphifyy explain "midpoint_nudge"
+
+# ❌ Last resort (5000+ tokens):
+grep -r "notifications" server/
 ```
 
-See [@docs/CONTRIBUTING.md](docs/CONTRIBUTING.md#knowledge-graph-graphify) for setup.
+**Benefits:**
+- Scoped subgraph (~50 tokens) vs. full files (5000+ tokens)
+- 100x more efficient token usage
+- Structured relationships instead of raw text
+- Respects the knowledge graph investment
+
+See [@docs/CONTRIBUTING.md](docs/CONTRIBUTING.md#knowledge-graph-graphify---graphify-first-rule-) and [@docs/GRAPHIFY-FIRST.md](docs/GRAPHIFY-FIRST.md) for detailed guide.

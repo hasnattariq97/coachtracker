@@ -2,22 +2,57 @@ export default function CoachingInsightCard({ notification, onDismiss }) {
   const isOnTime = notification.type === 'coaching_insights' &&
                    !notification.message.toLowerCase().includes('delay');
 
+  // Parse metadata to get actual coaching insights from agents
+  let insights = null;
+  if (notification.metadata) {
+    try {
+      insights = JSON.parse(notification.metadata);
+    } catch (e) {
+      // If metadata isn't valid JSON, fall back to message
+      insights = null;
+    }
+  }
+
   return (
     <div className="bg-white border-l-4 border-teal-600 rounded shadow-sm overflow-hidden">
       <div className="p-4 space-y-3">
-        {/* On-Time Completion Message */}
+        {/* On-Time Completion with AI Coaching Insights */}
         {isOnTime && (
-          <div className="space-y-2">
+          <div className="space-y-3">
             <div className="flex items-start gap-2">
               <span className="text-xl">🎯</span>
               <div className="flex-1">
-                <h4 className="font-semibold text-gray-900">Excellent! Task completed on time!</h4>
+                <h4 className="font-semibold text-gray-900">Great execution! 💪</h4>
+                {/* Display consensus message from agents */}
                 <p className="text-gray-600 text-sm mt-2 leading-relaxed">
-                  You delivered exactly when promised. This kind of reliability builds trust and shows real professionalism.
-                  Keep bringing this energy to your next tasks! 💪
+                  {insights?.consensus || notification.message || 'Excellent work on this task!'}
                 </p>
               </div>
             </div>
+
+            {/* Detailed agent insights if available */}
+            {insights && (
+              <div className="bg-teal-50 rounded p-3 space-y-2 text-xs">
+                {insights.growth_agent?.summary && (
+                  <div className="flex gap-2">
+                    <span>📈</span>
+                    <p className="text-gray-700">{insights.growth_agent.summary}</p>
+                  </div>
+                )}
+                {insights.pattern_agent?.summary && (
+                  <div className="flex gap-2">
+                    <span>📊</span>
+                    <p className="text-gray-700">{insights.pattern_agent.summary}</p>
+                  </div>
+                )}
+                {insights.risk_agent?.summary && !insights.risk_agent.summary.toLowerCase().includes('no risk') && (
+                  <div className="flex gap-2">
+                    <span>⚠️</span>
+                    <p className="text-gray-700">{insights.risk_agent.summary}</p>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         )}
 
@@ -29,10 +64,20 @@ export default function CoachingInsightCard({ notification, onDismiss }) {
               <div className="flex-1">
                 <h4 className="font-semibold text-gray-900">Task took longer than planned</h4>
                 <p className="text-gray-600 text-sm mt-2">
-                  No worries—it happens to everyone! Understanding what got in the way helps us all improve.
+                  {insights?.consensus || 'No worries—it happens to everyone! Understanding what got in the way helps us all improve.'}
                 </p>
               </div>
             </div>
+
+            {/* Risk insights if available */}
+            {insights?.risk_agent?.summary && (
+              <div className="bg-amber-50 rounded p-3 text-xs">
+                <p className="text-gray-700 flex gap-2">
+                  <span>⚠️</span>
+                  <span>{insights.risk_agent.summary}</span>
+                </p>
+              </div>
+            )}
 
             {/* Reason Input Section */}
             <div className="bg-teal-50 p-3 rounded border border-teal-200 space-y-2">

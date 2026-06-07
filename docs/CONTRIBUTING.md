@@ -21,9 +21,25 @@ Each session:
 8. **REVIEW:** Use `/security-reviewer` before marking complete
 9. Append summary to `.claude/session-log.md` when done
 
-## Knowledge Graph (Graphify)
+## Knowledge Graph (Graphify) — GRAPHIFY-FIRST RULE ⭐
 
 This project uses **Graphify** to maintain a queryable knowledge graph of the codebase.
+
+### ⭐ THE RULE: Graphify First for Every Query/Search
+
+**ALWAYS use graphify for queries before resorting to grep or file browsing.**
+
+```bash
+# ✅ DO THIS (Graphify first):
+python3 -m graphifyy query "Why is Phase Builder optional?"
+python3 -m graphifyy query "How does the 3-agent swarm work?"
+
+# ❌ DON'T DO THIS (Grep/file browsing first):
+grep -r "phase.builder" .
+cat docs/RUFLO.md | less
+```
+
+**Impact:** 30-50 tokens (graphify) vs. 5000+ tokens (full files) = **100x efficiency gain**
 
 ### Initial Setup (One-Time)
 ```bash
@@ -35,26 +51,26 @@ graphify extract . --out .graphify
 
 ### Using the Knowledge Graph
 
-In Claude Code sessions, query the graph before manually browsing code:
+In Claude Code sessions, **ALWAYS** query the graph first:
 
 ```bash
-# Question-based search
-graphify query "How do coaches get notified of overdue tasks?"
+# Question-based search (30-50 tokens, ~5 seconds)
+python3 -m graphifyy query "How do coaches get notified of overdue tasks?"
 
 # Find relationships between concepts
-graphify path "coach_id" "notification"
+python3 -m graphifyy path "coach_id" "notification"
 
 # Get focused explanation of a concept
-graphify explain "midpoint_nudge"
+python3 -m graphifyy explain "midpoint_nudge"
 ```
 
-These queries return scoped subgraphs (usually 30-50 tokens) instead of full files, reducing token waste.
+These queries return **scoped subgraphs** (usually 30-50 tokens) instead of full files, reducing token waste by 100x.
 
 ### Keeping the Graph Updated
 
 After making code changes, refresh the graph (AST-only, no API cost):
 ```bash
-graphify update .
+python3 -m graphifyy update .
 ```
 
 **Git hooks auto-run this** on commit/checkout, so usually you don't need to run it manually.
@@ -67,6 +83,15 @@ graphify update .
 - **graphify-out/wiki/index.md** — navigation-friendly summary
 
 For broad architecture review, read GRAPH_REPORT.md or graph.html instead of browsing raw files.
+
+### Query Workflow
+
+1. **Ask graphify first** (5 seconds) → Usually has the answer
+2. **Refine query if needed** (10 seconds) → Try more specific question
+3. **Use grep as fallback** (30+ seconds) → Only if graphify misses it
+4. **Read file directly** (60+ seconds) → Last resort only
+
+See [@docs/GRAPHIFY-FIRST.md](GRAPHIFY-FIRST.md) for detailed guide and examples.
 
 ## Git Workflow
 

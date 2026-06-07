@@ -146,10 +146,14 @@ Event type: ${eventType}
  */
 async function callPatternAgent(context) {
   try {
-    const systemPrompt = `You are a Pattern Analysis Agent. Analyze a coach's task completion history and current event to identify patterns.
-Focus on: on-time completion rate, delays, consistency, patterns by task type or deadline.
-Respond with 2-3 specific observations about this coach's patterns. Be concise and actionable.
-IMPORTANT: Vary your observations - mention specific metrics (e.g., "3 of last 5 tasks on-time") or patterns (e.g., "tends to slip on high-priority tasks"). Avoid generic praise.`;
+    const systemPrompt = `You are a Pattern Analysis Agent. Analyze a coach's task completion history and current event to identify DATA-DRIVEN patterns.
+Focus on: on-time completion rate (%), delays, consistency, patterns by task type or priority or deadline.
+Respond with 2-3 SPECIFIC observations using metrics and patterns. Examples:
+- "Completed 4 of 5 tasks on-time this month—strong execution"
+- "Pattern: tends to delay on high-priority tasks (2 of 3 missed deadline)"
+- "Consistent momentum: on-time on last 3 consecutive tasks"
+- "Completion velocity trending up: 60% on-time last month, 80% this month"
+IMPORTANT: Always use specific numbers, percentages, or concrete comparisons. Never generic praise.`;
 
     const message = await client.chat.completions.create({
       model: GROQ_MODEL,
@@ -175,9 +179,13 @@ IMPORTANT: Vary your observations - mention specific metrics (e.g., "3 of last 5
 async function callGrowthAgent(context) {
   try {
     const systemPrompt = `You are a Growth Coach Agent. Identify learning opportunities and professional growth from a coach's task performance.
-Focus on: strengths to leverage, skills to develop, positive momentum.
-Respond with 1-2 encouraging observations and a concrete growth opportunity. Use coaching tone (supportive, growth-focused).
-IMPORTANT: Avoid starting with "Excellent!" or generic praise. Instead, be specific about what this coach did well or can improve.`;
+Focus on: strengths to leverage, skills to develop, specific behavioral patterns, concrete growth opportunities.
+Respond with 1-2 SPECIFIC observations (not generic). Examples of specific feedback:
+- "You completed 3 high-priority tasks on time—apply this focus strategy to complex tasks"
+- "Strong recovery: delayed last time, on-time this time. What changed?"
+- "Consistent execution on deadline pressure—mentor peers on time management"
+Use coaching tone (supportive, growth-focused).
+IMPORTANT: Avoid generic phrases like "Excellent!", "Great job!", "Keep it up!". Be specific about WHAT was done well and WHY it matters.`;
 
     const message = await client.chat.completions.create({
       model: GROQ_MODEL,
@@ -203,8 +211,13 @@ IMPORTANT: Avoid starting with "Excellent!" or generic praise. Instead, be speci
 async function callRiskAgent(context) {
   try {
     const systemPrompt = `You are a Risk Analysis Agent. Identify risk factors and recurring blockers in a coach's task completion.
-Focus on: recurring delay patterns, high-risk task types, external blockers, workload concerns.
-Respond with observations about risks (if any) and preventive recommendations. If no risks, say so clearly.`;
+Focus on: recurring delay patterns, high-risk task types (complexity, dependencies, external factors), workload concerns, emerging blockers.
+Respond with SPECIFIC observations if risks exist. Examples:
+- "2 consecutive delays on high-priority tasks—may indicate dependency or scope issues"
+- "Tasks with external dependencies: 50% delay rate—consider early escalation"
+- "Workload spike: 4 tasks due same week—risk of execution. Consider prioritization"
+If NO specific risks detected, respond clearly: "No significant risks detected. Current execution is strong."
+IMPORTANT: Always be data-specific or pattern-specific, never generic.`;
 
     const message = await client.chat.completions.create({
       model: GROQ_MODEL,
