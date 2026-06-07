@@ -42,6 +42,7 @@ async function queueCoachingInsights(coachId, taskId, eventType) {
 
 /**
  * Analyze coach behavior via 3-agent consensus swarm
+ * Then generate meaningful coaching message using detailed prompt
  * Runs asynchronously, creates notification on completion
  */
 async function analyzeCoachBehavior(coachId, taskId, eventType, coachHistory, task) {
@@ -52,7 +53,7 @@ async function analyzeCoachBehavior(coachId, taskId, eventType, coachHistory, ta
   const startTime = Date.now();
 
   try {
-    // Call 3 agents in parallel with timeout
+    // Step 1: Call 3 agents in parallel with timeout
     const results = await Promise.race([
       callAgentSwarm(coachHistory, task, eventType),
       new Promise((_, reject) =>
@@ -60,12 +61,86 @@ async function analyzeCoachBehavior(coachId, taskId, eventType, coachHistory, ta
       ),
     ]);
 
+    // Step 2: Generate meaningful message from swarm analysis + detailed prompt
+    const meaningfulMessage = await generateMeaningfulMessage(coachHistory, task, results);
+
+    // Store meaningful message in consensus field
+    results.consensus = meaningfulMessage;
+
     // Create notification with results
     createCoachingInsightNotification(coachId, taskId, results, 'success');
     console.log(`[Coaching Insights] Analysis complete for coach ${coachId}, task ${taskId} (${Date.now() - startTime}ms)`);
   } catch (error) {
     console.error(`[Coaching Insights] Analysis failed:`, error.message);
     createCoachingInsightNotification(coachId, taskId, null, 'timeout');
+  }
+}
+
+/**
+ * Generate meaningful coaching message using detailed prompt rules
+ * Takes swarm analysis results and generates authentic, personalized message
+ */
+async function generateMeaningfulMessage(coachHistory, task, swarmResults) {
+  try {
+    // Detect pattern from history
+    const onTimeCount = coachHistory.filter(t => t.onTime).length;
+    const totalCount = coachHistory.length;
+    const onTimeRate = totalCount > 0 ? (onTimeCount / totalCount) : 1;
+    let pattern = 'ON_TIME';
+    if (onTimeRate === 1 && totalCount >= 5) pattern = 'ALWAYS_ON_TIME';
+    else if (onTimeRate >= 0.8) pattern = 'ON_TIME';
+    else if (onTimeRate >= 0.6) pattern = 'SLIGHT_DELAY';
+    else pattern = 'MISSED_MULTIPLE';
+
+    const recentTask = coachHistory[0]?.title || task.title;
+
+    const prompt = `You are the in-app voice of CoachTaskTracker — a sharp, warm peer-mentor who speaks to coaches like a respected colleague.
+
+RULES:
+1. ONE paragraph. 2–4 sentences. Max ~55 words.
+2. NO greeting line, sign-off, or emoji unless tone calls for exactly one.
+3. Address coach by first name at most once.
+4. Reference ONE concrete detail from their data (task title, number, streak, trend).
+5. NEVER reuse sentence skeletons. Vary your opening every time.
+6. BANNED PHRASES: "Keep up the good work", "Great job", "You've got this", "crush it", "stay on track", "amazing work", "way to go", "let's do this", "small steps"
+7. No generic praise — only reference data you can actually point to.
+8. Sound like a person typed it in 10 seconds, not a system.
+
+TONE BY PATTERN:
+- FAST: Recognize speed, celebrate momentum, invite them to protect energy so it's sustainable.
+- ON_TIME: Affirm reliability as a real skill. Make "on time, every time" feel like the quiet superpower it is.
+- ALWAYS_ON_TIME: Treat consistency as mastery. Name the streak. Slight elevation in respect — this is rare.
+- SLIGHT_DELAY: Light, non-judgmental nudge. Acknowledge they still delivered. Point at small gap, not character.
+- MISSED_MULTIPLE: Caring but honest. Don't sugarcoat. Lead with belief, then one reflective prompt. Lower pressure, raise support.
+
+COACH DATA:
+- Pattern: ${pattern}
+- On-time rate: ${Math.round(onTimeRate * 100)}%
+- Streak: ${onTimeCount} consecutive on-time
+- Recent task: "${recentTask}"
+- Current task: "${task.title}"
+
+SWARM ANALYSIS (use as context, NOT to copy):
+- Pattern Agent: ${swarmResults.pattern_agent?.summary || 'Data-driven observation'}
+- Growth Agent: ${swarmResults.growth_agent?.summary || 'Learning opportunity identified'}
+
+Generate ONE authentic, personalized coaching message. Return ONLY the message text, no labels or JSON.`;
+
+    const message = await client.chat.completions.create({
+      model: GROQ_MODEL,
+      max_tokens: 150,
+      messages: [
+        {
+          role: 'user',
+          content: prompt,
+        },
+      ],
+    });
+
+    return message.choices[0]?.message?.content || 'Good work. Keep going.';
+  } catch (error) {
+    console.error('[Meaningful Message] Error:', error.message);
+    return 'Good work. Keep going.';
   }
 }
 
