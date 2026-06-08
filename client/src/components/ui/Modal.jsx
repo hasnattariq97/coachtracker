@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { X } from 'lucide-react';
 
 const Modal = ({ open, onClose, title, children, size = 'md' }) => {
@@ -17,7 +18,7 @@ const Modal = ({ open, onClose, title, children, size = 'md' }) => {
 
   const widths = { sm: 'max-w-sm', md: 'max-w-lg', lg: 'max-w-2xl' };
 
-  return (
+  const modalContent = (
     <>
       {/* Backdrop */}
       <div
@@ -51,6 +52,8 @@ const Modal = ({ open, onClose, title, children, size = 'md' }) => {
       </div>
     </>
   );
+
+  return createPortal(modalContent, document.body);
 };
 
 export default Modal;
