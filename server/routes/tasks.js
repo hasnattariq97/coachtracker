@@ -226,6 +226,9 @@ router.post('/', requireAdmin, async (req, res) => {
       const taskId = result.rows[0]?.id;
       createdTasks.push({ id: taskId, coach_id: coachId });
       await createNotification(coachId, taskId, 'assigned', notificationMessage);
+
+      // Queue email notification for task assignment
+      await createEmailQueue('assignment', coachId, taskId);
     }
 
     // Backward compatible: single coach returns { id, ... }, multiple returns { tasks: [...] }
