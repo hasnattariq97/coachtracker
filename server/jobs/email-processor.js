@@ -27,8 +27,8 @@ async function processEmailQueue() {
   try {
     // Get pending emails, oldest first, limit 50
     const pending = db
-      .prepare('SELECT * FROM email_queue WHERE status = "pending" ORDER BY created_at LIMIT 50')
-      .all();
+      .prepare('SELECT * FROM email_queue WHERE status = ? ORDER BY created_at LIMIT 50')
+      .all('pending');
 
     console.log(`[EMAIL PROCESSOR] Processing ${pending.length} pending emails`);
 
@@ -39,8 +39,8 @@ async function processEmailQueue() {
         if (!task) {
           console.log(`[EMAIL PROCESSOR] Task ${item.task_id} not found, skipping`);
           db.prepare(
-            'UPDATE email_queue SET status = "skipped", error_message = "task_not_found" WHERE id = ?'
-          ).run(item.id);
+            'UPDATE email_queue SET status = ?, error_message = ? WHERE id = ?'
+          ).run('skipped', 'task_not_found', item.id);
           continue;
         }
 
@@ -51,8 +51,8 @@ async function processEmailQueue() {
           if (!coach) {
             console.log(`[EMAIL PROCESSOR] Coach ${item.coach_id} not found, skipping`);
             db.prepare(
-              'UPDATE email_queue SET status = "skipped", error_message = "coach_not_found" WHERE id = ?'
-            ).run(item.id);
+              'UPDATE email_queue SET status = ?, error_message = ? WHERE id = ?'
+            ).run('skipped', 'coach_not_found', item.id);
             continue;
           }
         }
@@ -64,8 +64,8 @@ async function processEmailQueue() {
           if (!admin) {
             console.log(`[EMAIL PROCESSOR] Admin ${item.admin_id} not found, skipping`);
             db.prepare(
-              'UPDATE email_queue SET status = "skipped", error_message = "admin_not_found" WHERE id = ?'
-            ).run(item.id);
+              'UPDATE email_queue SET status = ?, error_message = ? WHERE id = ?'
+            ).run('skipped', 'admin_not_found', item.id);
             continue;
           }
         }
@@ -79,8 +79,8 @@ async function processEmailQueue() {
             `[EMAIL PROCESSOR] Task ${item.task_id} already completed, skipping email`
           );
           db.prepare(
-            'UPDATE email_queue SET status = "skipped", error_message = "task_completed" WHERE id = ?'
-          ).run(item.id);
+            'UPDATE email_queue SET status = ?, error_message = ? WHERE id = ?'
+          ).run('skipped', 'task_completed', item.id);
           continue;
         }
 
@@ -117,11 +117,11 @@ async function processEmailQueue() {
         if (result.success || result.id) {
           // Log success
           db.prepare(
-            'INSERT INTO email_logs (coach_id, admin_id, type, task_id, recipient, status) VALUES (?, ?, ?, ?, ?, "success")'
-          ).run(item.coach_id, item.admin_id, item.type, item.task_id, to);
+            'INSERT INTO email_logs (coach_id, admin_id, type, task_id, recipient, status) VALUES (?, ?, ?, ?, ?, ?)'
+          ).run(item.coach_id, item.admin_id, item.type, item.task_id, to, 'success');
 
           // Update queue
-          db.prepare('UPDATE email_queue SET status = "sent" WHERE id = ?').run(item.id);
+          db.prepare('UPDATE email_queue SET status = ? WHERE id = ?').run('sent', item.id);
           console.log(`[EMAIL PROCESSOR] Email sent successfully: ${result.id}`);
         } else {
           throw new Error(`Resend returned unexpected response: ${JSON.stringify(result)}`);
@@ -135,12 +135,12 @@ async function processEmailQueue() {
         if (item.attempt >= 3) {
           // Max retries reached, mark as failed
           db.prepare(
-            'INSERT INTO email_logs (coach_id, admin_id, type, task_id, recipient, status, error_message) VALUES (?, ?, ?, ?, ?, "failed", ?)'
-          ).run(item.coach_id, item.admin_id, item.type, item.task_id, '(unknown)', error.message);
+            'INSERT INTO email_logs (coach_id, admin_id, type, task_id, recipient, status, error_message) VALUES (?, ?, ?, ?, ?, ?, ?)'
+          ).run(item.coach_id, item.admin_id, item.type, item.task_id, '(unknown)', 'failed', error.message);
 
           db.prepare(
-            'UPDATE email_queue SET status = "failed", error_message = ?, attempt = ? WHERE id = ?'
-          ).run(error.message, item.attempt, item.id);
+            'UPDATE email_queue SET status = ?, error_message = ?, attempt = ? WHERE id = ?'
+          ).run('failed', error.message, item.attempt, item.id);
 
           console.log(`[EMAIL PROCESSOR] Email ${item.id} failed after 3 attempts`);
         } else {
