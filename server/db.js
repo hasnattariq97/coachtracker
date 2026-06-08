@@ -40,98 +40,98 @@ const initializeDatabase = async () => {
   try {
     console.log('🔄 Initializing database...');
 
-    // Check if users table exists
-    const checkTable = await query(`
-      SELECT EXISTS (
-        SELECT 1 FROM information_schema.tables
-        WHERE table_name = 'users'
-      ) as exists;
+    // Create each table individually with IF NOT EXISTS
+    await query(`
+      CREATE TABLE IF NOT EXISTS users (
+        id SERIAL PRIMARY KEY,
+        name TEXT NOT NULL DEFAULT '',
+        email TEXT UNIQUE NOT NULL,
+        password_hash TEXT NOT NULL,
+        role TEXT NOT NULL CHECK (role IN ('admin', 'coach')),
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      );
     `);
 
-    if (!checkTable.rows[0].exists) {
-      console.log('📋 Creating database tables...');
-      // Only create tables if they don't exist
-      await query(`
-        CREATE TABLE users (
-          id SERIAL PRIMARY KEY,
-          name TEXT NOT NULL DEFAULT '',
-          email TEXT UNIQUE NOT NULL,
-          password_hash TEXT NOT NULL,
-          role TEXT NOT NULL CHECK (role IN ('admin', 'coach')),
-          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        );
+    await query(`
+      CREATE TABLE IF NOT EXISTS tasks (
+        id SERIAL PRIMARY KEY,
+        coach_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        title TEXT NOT NULL,
+        description TEXT,
+        status TEXT NOT NULL CHECK (status IN ('assigned', 'in_progress', 'completed', 'overdue')),
+        priority TEXT NOT NULL CHECK (priority IN ('low', 'medium', 'high')),
+        assigned_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        due_date TIMESTAMP NOT NULL,
+        completed_at TIMESTAMP,
+        delay_reason TEXT,
+        links TEXT
+      );
+    `);
 
-        CREATE TABLE tasks (
-          id SERIAL PRIMARY KEY,
-          coach_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-          title TEXT NOT NULL,
-          description TEXT,
-          status TEXT NOT NULL CHECK (status IN ('assigned', 'in_progress', 'completed', 'overdue')),
-          priority TEXT NOT NULL CHECK (priority IN ('low', 'medium', 'high')),
-          assigned_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-          due_date TIMESTAMP NOT NULL,
-          completed_at TIMESTAMP,
-          delay_reason TEXT,
-          links TEXT
-        );
+    await query(`
+      CREATE TABLE IF NOT EXISTS notifications (
+        id SERIAL PRIMARY KEY,
+        user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        task_id INTEGER REFERENCES tasks(id) ON DELETE CASCADE,
+        task_title TEXT,
+        type TEXT NOT NULL,
+        message TEXT NOT NULL,
+        metadata TEXT,
+        insights_status TEXT DEFAULT 'pending',
+        read INTEGER DEFAULT 0,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      );
+    `);
 
-        CREATE TABLE notifications (
-          id SERIAL PRIMARY KEY,
-          user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-          task_id INTEGER REFERENCES tasks(id) ON DELETE CASCADE,
-          task_title TEXT,
-          type TEXT NOT NULL,
-          message TEXT NOT NULL,
-          metadata TEXT,
-          insights_status TEXT DEFAULT 'pending',
-          read INTEGER DEFAULT 0,
-          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        );
+    await query(`
+      CREATE UNIQUE INDEX IF NOT EXISTS unique_notification_dedup
+      ON notifications(user_id, task_id, type)
+      WHERE task_id IS NOT NULL;
+    `);
 
-        CREATE UNIQUE INDEX unique_notification_dedup
-        ON notifications(user_id, task_id, type)
-        WHERE task_id IS NOT NULL;
+    await query(`
+      CREATE TABLE IF NOT EXISTS email_queue (
+        id SERIAL PRIMARY KEY,
+        coach_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+        admin_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+        type TEXT NOT NULL,
+        task_id INTEGER REFERENCES tasks(id) ON DELETE CASCADE,
+        status TEXT DEFAULT 'pending',
+        attempt INTEGER DEFAULT 0,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        scheduled_for TIMESTAMP,
+        error_message TEXT
+      );
+    `);
 
-        CREATE TABLE email_queue (
-          id SERIAL PRIMARY KEY,
-          coach_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-          admin_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-          type TEXT NOT NULL,
-          task_id INTEGER REFERENCES tasks(id) ON DELETE CASCADE,
-          status TEXT DEFAULT 'pending',
-          attempt INTEGER DEFAULT 0,
-          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-          scheduled_for TIMESTAMP,
-          error_message TEXT
-        );
+    await query(`
+      CREATE TABLE IF NOT EXISTS email_logs (
+        id SERIAL PRIMARY KEY,
+        coach_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+        admin_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+        type TEXT NOT NULL,
+        task_id INTEGER REFERENCES tasks(id) ON DELETE CASCADE,
+        recipient TEXT NOT NULL,
+        status TEXT NOT NULL,
+        sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        error_message TEXT
+      );
+    `);
 
-        CREATE TABLE email_logs (
-          id SERIAL PRIMARY KEY,
-          coach_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-          admin_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-          type TEXT NOT NULL,
-          task_id INTEGER REFERENCES tasks(id) ON DELETE CASCADE,
-          recipient TEXT NOT NULL,
-          status TEXT NOT NULL,
-          sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-          error_message TEXT
-        );
+    await query(`
+      CREATE TABLE IF NOT EXISTS email_batches (
+        id SERIAL PRIMARY KEY,
+        batch_hash TEXT UNIQUE NOT NULL,
+        coach_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        type TEXT NOT NULL,
+        email_count INTEGER DEFAULT 0,
+        status TEXT DEFAULT 'pending',
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        sent_at TIMESTAMP
+      );
+    `);
 
-        CREATE TABLE email_batches (
-          id SERIAL PRIMARY KEY,
-          batch_hash TEXT UNIQUE NOT NULL,
-          coach_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-          type TEXT NOT NULL,
-          email_count INTEGER DEFAULT 0,
-          status TEXT DEFAULT 'pending',
-          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-          sent_at TIMESTAMP
-        );
-      `);
-      console.log('✓ Created database tables');
-    } else {
-      console.log('✓ Database tables already exist');
-    }
+    console.log('✓ Database tables ready');
 
     // Seed admin user if it doesn't exist
     const adminResult = await query(
