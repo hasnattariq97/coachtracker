@@ -69,23 +69,32 @@ async function sendEmail(to, subject, html) {
  * if (result.skip) console.log('Email already queued, skipping duplicate');
  */
 async function createEmailQueue(type, coachId, taskId, adminId = null) {
-  // Idempotency: check if email already queued
-  const exists = await db.prepare(
-    'SELECT id FROM email_queue WHERE type = ? AND task_id = ? AND coach_id = ? AND status = ? LIMIT 1'
-  ).get(type, taskId, coachId, 'pending');
+  try {
+    console.log(`[EMAIL QUEUE] Attempting to queue: type=${type}, coach=${coachId}, task=${taskId}`);
 
-  if (exists) {
-    return { skip: true, reason: 'already_queued' };
+    // Idempotency: check if email already queued
+    const exists = await db.prepare(
+      'SELECT id FROM email_queue WHERE type = ? AND task_id = ? AND coach_id = ? AND status = ? LIMIT 1'
+    ).get(type, taskId, coachId, 'pending');
+
+    if (exists) {
+      console.log(`[EMAIL QUEUE] Already queued, skipping`);
+      return { skip: true, reason: 'already_queued' };
+    }
+
+    // Insert into queue with atomic RETURNING clause
+    const result = await db.prepare(
+      'INSERT INTO email_queue (type, coach_id, admin_id, task_id, status) VALUES (?, ?, ?, ?, ?) RETURNING id'
+    ).run(type, coachId, adminId, taskId, 'pending');
+
+    const insertedId = result.rows ? result.rows[0]?.id : result.lastID;
+    console.log(`[EMAIL QUEUE] ✓ Queued successfully with ID: ${insertedId}`);
+
+    return { created: true, id: insertedId };
+  } catch (error) {
+    console.error(`[EMAIL QUEUE] ✗ Error queuing email:`, error.message);
+    return { error: true, reason: error.message };
   }
-
-  // Insert into queue with atomic RETURNING clause
-  const result = await db.prepare(
-    'INSERT INTO email_queue (type, coach_id, admin_id, task_id, status) VALUES (?, ?, ?, ?, ?) RETURNING id'
-  ).run(type, coachId, adminId, taskId, 'pending');
-
-  const insertedId = result.rows ? result.rows[0]?.id : result.lastID;
-
-  return { created: true, id: insertedId };
 }
 
 module.exports = {
