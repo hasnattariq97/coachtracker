@@ -11,6 +11,7 @@ const router = express.Router();
 const db = require('../db');
 const { requireAdmin, requireCoach } = require('../auth');
 const { queueCoachingInsights } = require('./coaching-insights');
+const { createEmailQueue } = require('../services/email');
 
 const createNotification = async (userId, taskId, type, message) => {
   try {
