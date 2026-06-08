@@ -281,6 +281,45 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 
 ---
 
+## Phase 8 — Email Notifications ✅
+**Feature:** Send emails to coaches on task assignments, midpoint nudges, overdue alerts, and to admins on delay reason submissions.
+
+### Backend ✅
+- [x] server/services/email.js: `sendEmail()` function with test mode support
+- [x] server/services/email-templates.js: 4 email templates (assignment, midpoint, overdue, delay-submitted)
+- [x] server/db.js: `email_queue`, `email_logs`, `email_batches` tables
+- [x] server/jobs/email-processor.js: Background job with retry logic (max 3 attempts)
+- [x] server/cron.js: Email processor scheduled every 5 minutes
+- [x] server/routes/tasks.js: Queue emails on task assignment and delay reason submission
+- [x] server/.env.example: EMAIL_PROVIDER and RESEND_API_KEY configuration
+- [x] package.json: Added `resend` package (v6.12.4)
+
+### Features ✅
+- [x] Test mode (EMAIL_PROVIDER=test logs to console, no real emails)
+- [x] Production mode (EMAIL_PROVIDER=resend uses Resend API)
+- [x] Idempotency checks (never queues same email twice)
+- [x] Retry logic with exponential backoff (max 3 attempts)
+- [x] Audit logging (email_logs table tracks all attempts)
+- [x] Coaching tone (all templates use supportive language)
+- [x] Error handling and graceful degradation
+
+### Testing ✅
+- [x] server/__tests__/email.test.js: 19+ comprehensive tests
+- [x] Tests cover email queuing, idempotency, retry logic, mocking
+- [x] Mock Resend API for predictable testing
+- [x] All 50+ total backend tests passing
+
+### Integration Points ✅
+- [x] POST /api/tasks: Queues 'assignment' email when task assigned
+- [x] PUT /api/tasks/:id/delay-reason: Queues 'delay_submitted' email to admin
+- [x] Cron midpoint nudge job: Queues 'midpoint_nudge' emails
+- [x] Cron overdue job: Queues 'overdue' emails
+- [x] Email processor: Runs every 5 minutes to send pending emails
+
+**Verified:** Email service complete ✅ Database schema created ✅ Email processor integrated ✅ Tests comprehensive ✅
+
+---
+
 ## Project Status Summary
 
 | Phase | Feature | Status | Tests |
@@ -298,13 +337,15 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 | 7+ | Notifications & Insights Fix | ✅ Complete | ✅ Verified (2026-06-07) |
 | 7+ | Task Resource Links | ✅ Complete | ✅ E2E verified |
 | 7+ | PostgreSQL (Railway) | ✅ Complete | ✅ Verified (2026-06-06) |
+| 8 | Email Notifications | ✅ Complete | 19+ tests |
 
-**Total Tests Passing:** 119+ (108 backend unit/integration + 11 E2E via agent-browser)  
+**Total Tests Passing:** 138+ (127 backend unit/integration + 11 E2E via agent-browser)  
 **E2E Testing:** Agent-browser integration complete and verified  
 **Security Findings:** 11/11 resolved (0 critical, 0 active bypasses)  
-**Features Complete:** 14/14 (Phases 0-7 plus multi-coach, notifications fix, resource links, persistent database, meaningful coaching messages)  
+**Features Complete:** 15/15 (Phases 0-8 plus multi-coach, notifications fix, resource links, persistent database, meaningful coaching messages, email integration)  
 **Database:** PostgreSQL (Railway) — data persists across redeploys ✅  
-**Notifications:** ✅ Both assigned notifications and coaching insights working  
+**Email:** ✅ Resend API integration with Groq coaching insights  
+**Notifications:** ✅ In-app notifications + email notifications + coaching insights  
 **Coaching Messages:** ✅ **MEANINGFUL, NOT GENERIC** (verified 2026-06-07) — Examples: "You hit this one. Your reliability is building trust." vs "Good work."  
 **Skills:** ✅ NEW: `skill-railway-deploy` (no context) + `skill-github-push` (Anthropic best practices)
 
