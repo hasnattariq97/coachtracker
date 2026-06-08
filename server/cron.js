@@ -89,9 +89,9 @@ let scheduledTasks = [];
 const scheduleJobs = () => {
   const task1 = cron.schedule('0 * * * *', midpointNudgeJob);
   const task2 = cron.schedule('0 * * * *', overdueJob);
-  const task3 = cron.schedule('*/5 * * * *', () => {
+  const task3 = cron.schedule('*/5 * * * *', async () => {
     console.log('[CRON] Running email processor job');
-    processEmailQueue();
+    await processEmailQueue();
   });
 
   task1.unref?.();

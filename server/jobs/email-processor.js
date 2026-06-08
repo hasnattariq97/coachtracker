@@ -26,7 +26,7 @@ const {
 async function processEmailQueue() {
   try {
     // Get pending emails, oldest first, limit 50
-    const pending = db
+    const pending = await db
       .prepare('SELECT * FROM email_queue WHERE status = ? ORDER BY created_at LIMIT 50')
       .all('pending');
 
@@ -35,10 +35,10 @@ async function processEmailQueue() {
     for (const item of pending) {
       try {
         // Get task details
-        const task = db.prepare('SELECT * FROM tasks WHERE id = ?').get(item.task_id);
+        const task = await db.prepare('SELECT * FROM tasks WHERE id = ?').get(item.task_id);
         if (!task) {
           console.log(`[EMAIL PROCESSOR] Task ${item.task_id} not found, skipping`);
-          db.prepare(
+          await db.prepare(
             'UPDATE email_queue SET status = ?, error_message = ? WHERE id = ?'
           ).run('skipped', 'task_not_found', item.id);
           continue;
@@ -47,10 +47,10 @@ async function processEmailQueue() {
         // Get coach details (if applicable)
         let coach = null;
         if (item.coach_id) {
-          coach = db.prepare('SELECT * FROM users WHERE id = ?').get(item.coach_id);
+          coach = await db.prepare('SELECT * FROM users WHERE id = ?').get(item.coach_id);
           if (!coach) {
             console.log(`[EMAIL PROCESSOR] Coach ${item.coach_id} not found, skipping`);
-            db.prepare(
+            await db.prepare(
               'UPDATE email_queue SET status = ?, error_message = ? WHERE id = ?'
             ).run('skipped', 'coach_not_found', item.id);
             continue;
@@ -60,10 +60,10 @@ async function processEmailQueue() {
         // Get admin details (if applicable)
         let admin = null;
         if (item.admin_id) {
-          admin = db.prepare('SELECT * FROM users WHERE id = ?').get(item.admin_id);
+          admin = await db.prepare('SELECT * FROM users WHERE id = ?').get(item.admin_id);
           if (!admin) {
             console.log(`[EMAIL PROCESSOR] Admin ${item.admin_id} not found, skipping`);
-            db.prepare(
+            await db.prepare(
               'UPDATE email_queue SET status = ?, error_message = ? WHERE id = ?'
             ).run('skipped', 'admin_not_found', item.id);
             continue;
@@ -78,7 +78,7 @@ async function processEmailQueue() {
           console.log(
             `[EMAIL PROCESSOR] Task ${item.task_id} already completed, skipping email`
           );
-          db.prepare(
+          await db.prepare(
             'UPDATE email_queue SET status = ?, error_message = ? WHERE id = ?'
           ).run('skipped', 'task_completed', item.id);
           continue;
@@ -116,12 +116,12 @@ async function processEmailQueue() {
 
         if (result.success || result.id) {
           // Log success
-          db.prepare(
+          await db.prepare(
             'INSERT INTO email_logs (coach_id, admin_id, type, task_id, recipient, status) VALUES (?, ?, ?, ?, ?, ?)'
           ).run(item.coach_id, item.admin_id, item.type, item.task_id, to, 'success');
 
           // Update queue
-          db.prepare('UPDATE email_queue SET status = ? WHERE id = ?').run('sent', item.id);
+          await db.prepare('UPDATE email_queue SET status = ? WHERE id = ?').run('sent', item.id);
           console.log(`[EMAIL PROCESSOR] Email sent successfully: ${result.id}`);
         } else {
           throw new Error(`Resend returned unexpected response: ${JSON.stringify(result)}`);
@@ -134,18 +134,18 @@ async function processEmailQueue() {
 
         if (item.attempt >= 3) {
           // Max retries reached, mark as failed
-          db.prepare(
+          await db.prepare(
             'INSERT INTO email_logs (coach_id, admin_id, type, task_id, recipient, status, error_message) VALUES (?, ?, ?, ?, ?, ?, ?)'
           ).run(item.coach_id, item.admin_id, item.type, item.task_id, '(unknown)', 'failed', error.message);
 
-          db.prepare(
+          await db.prepare(
             'UPDATE email_queue SET status = ?, error_message = ?, attempt = ? WHERE id = ?'
           ).run('failed', error.message, item.attempt, item.id);
 
           console.log(`[EMAIL PROCESSOR] Email ${item.id} failed after 3 attempts`);
         } else {
           // Increment attempt, keep pending for next retry
-          db.prepare('UPDATE email_queue SET attempt = ? WHERE id = ?').run(
+          await db.prepare('UPDATE email_queue SET attempt = ? WHERE id = ?').run(
             item.attempt,
             item.id
           );
