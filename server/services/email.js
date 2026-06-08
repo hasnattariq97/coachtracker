@@ -1,22 +1,28 @@
-const { Resend } = require('resend');
+const nodemailer = require('nodemailer');
 const db = require('../db.js');
 
-// Lazy initialization - only create Resend instance when needed
-let resend = null;
+// Lazy initialization - only create transporter when needed
+let transporter = null;
 
-function getResendClient() {
-  if (!resend && process.env.RESEND_API_KEY) {
-    resend = new Resend(process.env.RESEND_API_KEY);
+function getTransporter() {
+  if (!transporter && process.env.GMAIL_EMAIL && process.env.GMAIL_APP_PASSWORD) {
+    transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.GMAIL_EMAIL,
+        pass: process.env.GMAIL_APP_PASSWORD,
+      },
+    });
   }
-  return resend;
+  return transporter;
 }
 
 /**
- * Send an email via Resend API or log to console in test mode
+ * Send an email via Gmail SMTP or log to console in test mode
  * @param {string} to - Email address to send to
  * @param {string} subject - Email subject line
  * @param {string} html - Email body in HTML format
- * @returns {Promise<Object>} Response from Resend or test result
+ * @returns {Promise<Object>} Response from Gmail or test result
  */
 async function sendEmail(to, subject, html) {
   if (process.env.EMAIL_PROVIDER === 'test') {
@@ -27,18 +33,18 @@ async function sendEmail(to, subject, html) {
   }
 
   try {
-    const client = getResendClient();
-    if (!client) {
-      throw new Error('Resend API key not configured. Set RESEND_API_KEY environment variable.');
+    const transport = getTransporter();
+    if (!transport) {
+      throw new Error('Gmail not configured. Set GMAIL_EMAIL and GMAIL_APP_PASSWORD environment variables.');
     }
 
-    const response = await client.emails.send({
-      from: 'Coach Tracker <onboarding@resend.dev>',
+    const response = await transport.sendMail({
+      from: process.env.GMAIL_EMAIL,
       to,
       subject,
       html,
     });
-    return response;
+    return { success: true, id: response.messageId };
   } catch (error) {
     throw new Error(`Failed to send email: ${error.message}`);
   }
