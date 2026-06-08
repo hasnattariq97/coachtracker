@@ -34,10 +34,12 @@ const query = async (text, params) => {
   }
 };
 
-// Initialize database in background (non-blocking)
-// Check if tables exist and create them if needed
-(async () => {
+// Initialize database synchronously (BLOCKING)
+// Ensures tables exist before server starts handling requests
+const initializeDatabase = async () => {
   try {
+    console.log('🔄 Initializing database...');
+
     // Check if users table exists
     const checkTable = await query(`
       SELECT EXISTS (
@@ -47,6 +49,7 @@ const query = async (text, params) => {
     `);
 
     if (!checkTable.rows[0].exists) {
+      console.log('📋 Creating database tables...');
       // Only create tables if they don't exist
       await query(`
         CREATE TABLE users (
@@ -126,6 +129,8 @@ const query = async (text, params) => {
         );
       `);
       console.log('✓ Created database tables');
+    } else {
+      console.log('✓ Database tables already exist');
     }
 
     // Seed admin user if it doesn't exist
@@ -137,17 +142,20 @@ const query = async (text, params) => {
       ['Admin', 'admin@tracker.com', '$2b$12$f/iWUwb/VZoNRiVj0tAIJO0xjwWwSXZyibakaHTT25JAbzQ6OB30q', 'admin']
     );
     if (adminResult.rows && adminResult.rows[0]) {
-      console.log('✓ Admin user seeded:', adminResult.rows[0]);
+      console.log('✓ Admin user seeded:', adminResult.rows[0].email);
     } else {
       console.log('✓ Admin user already exists');
     }
 
     console.log('✓ PostgreSQL database ready');
   } catch (err) {
-    // Non-blocking: log but don't crash server
-    console.warn('⚠️  Database initialization warning:', err.message);
+    console.error('❌ Database initialization failed:', err.message);
+    throw err;
   }
-})();
+};
+
+// Export function for synchronous initialization
+module.exports.initializeDatabase = initializeDatabase;
 
 // Export async helpers for PostgreSQL
 const queryOne = async (text, params = []) => {

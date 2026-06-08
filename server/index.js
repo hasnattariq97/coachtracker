@@ -49,25 +49,35 @@ app.use((err, req, res, next) => {
 });
 
 if (require.main === module) {
-  const server = app.listen(PORT, () => {
-    console.log(`✓ Server running on http://localhost:${PORT}`);
-    console.log(`✓ Database: PostgreSQL (Railway)`);
-    scheduleJobs();
-  });
+  (async () => {
+    try {
+      // Initialize database BEFORE starting server
+      await db.initializeDatabase();
 
-  // Handle port conflicts gracefully
-  server.on('error', (err) => {
-    if (err.code === 'EADDRINUSE') {
-      console.error(`\n✗ FATAL: Port ${PORT} is already in use`);
-      console.error(`✗ This usually means a previous Node process is still running.\n`);
-      console.error(`FIX: Run this command to kill all Node processes:`);
-      console.error(`  Windows: taskkill /IM node.exe /F`);
-      console.error(`  Linux/Mac: killall -9 node\n`);
-      console.error(`Then start a new server in a fresh terminal.\n`);
+      const server = app.listen(PORT, () => {
+        console.log(`✓ Server running on http://localhost:${PORT}`);
+        console.log(`✓ Database: PostgreSQL (Railway)`);
+        scheduleJobs();
+      });
+
+      // Handle port conflicts gracefully
+      server.on('error', (err) => {
+        if (err.code === 'EADDRINUSE') {
+          console.error(`\n✗ FATAL: Port ${PORT} is already in use`);
+          console.error(`✗ This usually means a previous Node process is still running.\n`);
+          console.error(`FIX: Run this command to kill all Node processes:`);
+          console.error(`  Windows: taskkill /IM node.exe /F`);
+          console.error(`  Linux/Mac: killall -9 node\n`);
+          console.error(`Then start a new server in a fresh terminal.\n`);
+          process.exit(1);
+        }
+        throw err;
+      });
+    } catch (err) {
+      console.error('❌ Failed to start server:', err.message);
       process.exit(1);
     }
-    throw err;
-  });
+  })();
 }
 
 module.exports = app;
