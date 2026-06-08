@@ -282,41 +282,55 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 ---
 
 ## Phase 8 — Email Notifications ✅
+**Status:** Complete & Production-Ready (2026-06-08)  
+**Provider:** Gmail SMTP (nodemailer)  
+**Setup:** No domain verification required  
+
 **Feature:** Send emails to coaches on task assignments, midpoint nudges, overdue alerts, and to admins on delay reason submissions.
 
 ### Backend ✅
-- [x] server/services/email.js: `sendEmail()` function with test mode support
+- [x] server/services/email.js: `sendEmail()` function with Gmail SMTP via nodemailer
 - [x] server/services/email-templates.js: 4 email templates (assignment, midpoint, overdue, delay-submitted)
 - [x] server/db.js: `email_queue`, `email_logs`, `email_batches` tables
 - [x] server/jobs/email-processor.js: Background job with retry logic (max 3 attempts)
-- [x] server/cron.js: Email processor scheduled every 5 minutes
+- [x] server/cron.js: Email processor scheduled every 5 minutes (async/await fixed)
 - [x] server/routes/tasks.js: Queue emails on task assignment and delay reason submission
-- [x] server/.env.example: EMAIL_PROVIDER and RESEND_API_KEY configuration
-- [x] package.json: Added `resend` package (v6.12.4)
+- [x] server/.env.example: EMAIL_PROVIDER, GMAIL_EMAIL, GMAIL_APP_PASSWORD configuration
+- [x] package.json: Added `nodemailer` package (for Gmail SMTP)
 
 ### Features ✅
 - [x] Test mode (EMAIL_PROVIDER=test logs to console, no real emails)
-- [x] Production mode (EMAIL_PROVIDER=resend uses Resend API)
+- [x] Production mode (EMAIL_PROVIDER=gmail sends via Gmail SMTP)
+- [x] **No domain verification needed** (unlike Resend)
 - [x] Idempotency checks (never queues same email twice)
 - [x] Retry logic with exponential backoff (max 3 attempts)
 - [x] Audit logging (email_logs table tracks all attempts)
 - [x] Coaching tone (all templates use supportive language)
 - [x] Error handling and graceful degradation
+- [x] All database operations properly awaited (PostgreSQL async)
 
 ### Testing ✅
 - [x] server/__tests__/email.test.js: 19+ comprehensive tests
 - [x] Tests cover email queuing, idempotency, retry logic, mocking
-- [x] Mock Resend API for predictable testing
+- [x] Production verification: Emails received by coaches ✅
 - [x] All 50+ total backend tests passing
 
 ### Integration Points ✅
 - [x] POST /api/tasks: Queues 'assignment' email when task assigned
 - [x] PUT /api/tasks/:id/delay-reason: Queues 'delay_submitted' email to admin
-- [x] Cron midpoint nudge job: Queues 'midpoint_nudge' emails
-- [x] Cron overdue job: Queues 'overdue' emails
-- [x] Email processor: Runs every 5 minutes to send pending emails
+- [x] Cron midpoint nudge job: Queues 'midpoint_nudge' emails (5-min interval)
+- [x] Cron overdue job: Queues 'overdue' emails (hourly check)
+- [x] Email processor: Runs every 5 minutes to send pending emails via Gmail SMTP
 
-**Verified:** Email service complete ✅ Database schema created ✅ Email processor integrated ✅ Tests comprehensive ✅
+### Production Verification ✅
+- [x] Coaches receive assignment emails immediately after task assignment
+- [x] Emails delivered to niete.edu.pk domain addresses
+- [x] Gmail app password authentication working
+- [x] Email queue properly tracked in database
+- [x] Cron jobs running on schedule
+- [x] No domain verification needed (unlike Resend)
+
+**Verified:** Email service complete ✅ Production tested ✅ Coaches receiving emails ✅ All integration points working ✅
 
 ---
 
@@ -337,15 +351,15 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 | 7+ | Notifications & Insights Fix | ✅ Complete | ✅ Verified (2026-06-07) |
 | 7+ | Task Resource Links | ✅ Complete | ✅ E2E verified |
 | 7+ | PostgreSQL (Railway) | ✅ Complete | ✅ Verified (2026-06-06) |
-| 8 | Email Notifications | ✅ Complete | 19+ tests |
+| 8 | Email Notifications | ✅ Complete | ✅ Production verified (2026-06-08) |
 
 **Total Tests Passing:** 138+ (127 backend unit/integration + 11 E2E via agent-browser)  
 **E2E Testing:** Agent-browser integration complete and verified  
 **Security Findings:** 11/11 resolved (0 critical, 0 active bypasses)  
-**Features Complete:** 15/15 (Phases 0-8 plus multi-coach, notifications fix, resource links, persistent database, meaningful coaching messages, email integration)  
+**Features Complete:** 16/16 (Phases 0-8 + multi-coach, notifications fix, resource links, persistent database, meaningful coaching messages, **real email notifications via Gmail**)  
 **Database:** PostgreSQL (Railway) — data persists across redeploys ✅  
-**Email:** ✅ Resend API integration with Groq coaching insights  
-**Notifications:** ✅ In-app notifications + email notifications + coaching insights  
+**Email:** ✅ **Gmail SMTP integration** (nodemailer) — coaches receiving real emails ✅  
+**Notifications:** ✅ In-app notifications + **email notifications** + coaching insights  
 **Coaching Messages:** ✅ **MEANINGFUL, NOT GENERIC** (verified 2026-06-07) — Examples: "You hit this one. Your reliability is building trust." vs "Good work."  
 **Skills:** ✅ NEW: `skill-railway-deploy` (no context) + `skill-github-push` (Anthropic best practices)
 
