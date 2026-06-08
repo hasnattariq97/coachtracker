@@ -86,3 +86,16 @@ CREATE TABLE email_batches (
 - `status` — 'pending' or 'sent'
 
 **Purpose:** Allow coaches to receive 1 digest instead of 5 overdue emails per day.
+
+## Indexes
+
+To optimize common queries, the following indexes are recommended:
+
+```sql
+CREATE INDEX idx_email_queue_status ON email_queue(status);
+CREATE INDEX idx_email_queue_coach_id ON email_queue(coach_id);
+CREATE INDEX idx_email_queue_scheduled_for ON email_queue(scheduled_for);
+CREATE INDEX idx_email_logs_coach_id ON email_logs(coach_id);
+CREATE INDEX idx_email_logs_sent_at ON email_logs(sent_at);
+CREATE INDEX idx_email_batches_coach_status ON email_batches(coach_id, status);
+```
