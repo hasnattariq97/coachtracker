@@ -448,6 +448,9 @@ router.put('/:id/delay-reason', requireCoach, async (req, res) => {
       const coach = await db.prepare('SELECT name FROM users WHERE id = ?').get(task.coach_id);
       const message = `${coach.name} submitted a reason for delay on '${task.title}'`;
       await createNotification(admin.id, id, 'delay_submitted', message);
+
+      // Queue email notification to admin about delay submission
+      await createEmailQueue('delay_submitted', task.coach_id, id, admin.id);
     }
 
     // Queue coaching insights (async, non-blocking)
