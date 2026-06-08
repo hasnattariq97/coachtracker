@@ -16,6 +16,21 @@ class AgentBrowserHelper {
   }
 
   /**
+   * Initialize browser session
+   */
+  async init() {
+    try {
+      execSync(`${this.cli} version`, { encoding: 'utf-8', stdio: ['pipe', 'pipe', 'pipe'] });
+      console.log('✓ Agent-browser CLI initialized');
+      return true;
+    } catch (error) {
+      console.warn('⚠️  Agent-browser CLI check:', error.message.split('\n')[0]);
+      // Don't fail - agent-browser might auto-initialize on first command
+      return true;
+    }
+  }
+
+  /**
    * Open URL (starts browser session)
    */
   async open(path = '/') {
