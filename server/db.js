@@ -88,6 +88,42 @@ const query = async (text, params) => {
         CREATE UNIQUE INDEX unique_notification_dedup
         ON notifications(user_id, task_id, type)
         WHERE task_id IS NOT NULL;
+
+        CREATE TABLE email_queue (
+          id SERIAL PRIMARY KEY,
+          coach_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+          admin_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+          type TEXT NOT NULL,
+          task_id INTEGER REFERENCES tasks(id) ON DELETE CASCADE,
+          status TEXT DEFAULT 'pending',
+          attempt INTEGER DEFAULT 0,
+          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+          scheduled_for TIMESTAMP,
+          error_message TEXT
+        );
+
+        CREATE TABLE email_logs (
+          id SERIAL PRIMARY KEY,
+          coach_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+          admin_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+          type TEXT NOT NULL,
+          task_id INTEGER REFERENCES tasks(id) ON DELETE CASCADE,
+          recipient TEXT NOT NULL,
+          status TEXT NOT NULL,
+          sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+          error_message TEXT
+        );
+
+        CREATE TABLE email_batches (
+          id SERIAL PRIMARY KEY,
+          batch_hash TEXT UNIQUE NOT NULL,
+          coach_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+          type TEXT NOT NULL,
+          email_count INTEGER DEFAULT 0,
+          status TEXT DEFAULT 'pending',
+          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+          sent_at TIMESTAMP
+        );
       `);
       console.log('✓ Created database tables');
     }
