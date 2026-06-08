@@ -196,3 +196,4 @@ const db = {
 module.exports = db;
 module.exports.query = query;
 module.exports.pool = pool;
+module.exports.initializeDatabase = initializeDatabase;
