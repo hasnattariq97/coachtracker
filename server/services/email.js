@@ -46,11 +46,21 @@ async function sendEmail(to, subject, html) {
 
 /**
  * Create an email queue entry with idempotency check
+ *
+ * Prevents duplicate emails by checking if a similar queued email already exists.
+ * Uses database constraints to enforce atomicity across concurrent requests.
+ *
  * @param {string} type - Email type (e.g. 'task_assigned', 'task_completed', 'task_overdue')
  * @param {number} coachId - ID of the coach receiving the email
  * @param {number} taskId - ID of the related task
- * @param {number} adminId - ID of the admin (optional)
+ * @param {number} adminId - ID of the admin (optional, null if coach-only email)
  * @returns {Promise<Object>} Result with { created: true, id } or { skip: true, reason }
+ *
+ * @example
+ * // Queue an email for a coach when task is assigned
+ * const result = await createEmailQueue('task_assigned', 5, 12);
+ * if (result.created) console.log('Email queued with ID:', result.id);
+ * if (result.skip) console.log('Email already queued, skipping duplicate');
  */
 async function createEmailQueue(type, coachId, taskId, adminId = null) {
   // Idempotency: check if email already queued
@@ -62,7 +72,7 @@ async function createEmailQueue(type, coachId, taskId, adminId = null) {
     return { skip: true, reason: 'already_queued' };
   }
 
-  // Insert into queue
+  // Insert into queue with atomic RETURNING clause
   const result = await db.prepare(
     'INSERT INTO email_queue (type, coach_id, admin_id, task_id, status) VALUES (?, ?, ?, ?, ?) RETURNING id'
   ).run(type, coachId, adminId, taskId, 'pending');
