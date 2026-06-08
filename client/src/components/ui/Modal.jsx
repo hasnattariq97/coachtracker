@@ -26,12 +26,12 @@ const Modal = ({ open, onClose, title, children, size = 'md' }) => {
     >
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+        className="absolute inset-0 z-0 bg-black/40 backdrop-blur-sm"
         onClick={onClose}
         aria-hidden="true"
       />
       {/* Panel */}
-      <div className={`relative z-10 bg-white rounded-2xl shadow-xl w-full ${widths[size]} fade-in overflow-hidden`}>
+      <div className={`relative z-50 bg-white rounded-2xl shadow-xl w-full ${widths[size]} fade-in overflow-hidden`}>
         <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100">
           <h2 id="modal-title" className="text-base font-heading font-semibold text-primary-900">
             {title}
