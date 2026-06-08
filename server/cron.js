@@ -1,13 +1,15 @@
 /**
- * @phase 5
+ * @phase 8
  * @status active
  * @owner phase-builder
- * @last_updated 2026-06-07T00:00:00Z
- * @beads ["cron-postgresql-migration"]
+ * @last_updated 2026-06-08T00:00:00Z
+ * @beads ["email-integration-phase8"]
  */
 
 const cron = require('node-cron');
 const db = require('./db');
+const { processEmailQueue } = require('./jobs/email-processor.js');
+const { createEmailQueue } = require('./services/email.js');
 
 const createNotification = async (userId, taskId, type, message) => {
   try {
@@ -40,6 +42,7 @@ const midpointNudgeJob = async () => {
       const dueDate = new Date(task.due_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
       const message = `Halfway there! ⚡ Don't let momentum slip — '${task.title}' is due ${dueDate}. How's it going?`;
       await createNotification(task.coach_id, task.id, 'midpoint_nudge', message);
+      await createEmailQueue('midpoint_nudge', task.coach_id, task.id);
     }
 
     console.log(`[Cron] ✓ Midpoint nudge: notified ${candidates.length} coach(es)`);
@@ -66,6 +69,7 @@ const overdueJob = async () => {
 
       const coachMessage = `This one slipped by — and that's okay. 💪 Please share what got in the way for '${task.title}' so we can move forward together.`;
       await createNotification(task.coach_id, task.id, 'overdue_nudge', coachMessage);
+      await createEmailQueue('overdue', task.coach_id, task.id);
 
       const adminUser = await db.prepare("SELECT id FROM users WHERE role = $1 LIMIT 1").get('admin');
       if (adminUser) {
@@ -85,12 +89,17 @@ let scheduledTasks = [];
 const scheduleJobs = () => {
   const task1 = cron.schedule('0 * * * *', midpointNudgeJob);
   const task2 = cron.schedule('0 * * * *', overdueJob);
+  const task3 = cron.schedule('*/5 * * * *', () => {
+    console.log('[CRON] Running email processor job');
+    processEmailQueue();
+  });
 
   task1.unref?.();
   task2.unref?.();
+  task3.unref?.();
 
-  scheduledTasks = [task1, task2];
-  console.log('✓ Cron jobs scheduled (hourly)');
+  scheduledTasks = [task1, task2, task3];
+  console.log('✓ Cron jobs scheduled (hourly nudges, every 5 minutes email processor)');
 };
 
 const stopJobs = () => {
