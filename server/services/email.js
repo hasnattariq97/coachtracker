@@ -53,10 +53,11 @@ async function sendEmail(to, subject, html) {
 /**
  * Create an email queue entry with idempotency check
  *
- * Prevents duplicate emails by checking if a similar queued email already exists.
- * Uses database constraints to enforce atomicity across concurrent requests.
+ * Prevents duplicate emails by checking if an email of this type for this task+coach
+ * has already been queued, sent, or attempted (failed). This prevents the cron job
+ * from queuing the same email multiple times across cron runs.
  *
- * @param {string} type - Email type (e.g. 'task_assigned', 'task_completed', 'task_overdue')
+ * @param {string} type - Email type (e.g. 'assignment', 'midpoint_nudge', 'overdue', 'delay_submitted')
  * @param {number} coachId - ID of the coach receiving the email
  * @param {number} taskId - ID of the related task
  * @param {number} adminId - ID of the admin (optional, null if coach-only email)
@@ -64,22 +65,22 @@ async function sendEmail(to, subject, html) {
  *
  * @example
  * // Queue an email for a coach when task is assigned
- * const result = await createEmailQueue('task_assigned', 5, 12);
+ * const result = await createEmailQueue('assignment', 5, 12);
  * if (result.created) console.log('Email queued with ID:', result.id);
- * if (result.skip) console.log('Email already queued, skipping duplicate');
+ * if (result.skip) console.log('Email already processed, skipping duplicate');
  */
 async function createEmailQueue(type, coachId, taskId, adminId = null) {
   try {
     console.log(`[EMAIL QUEUE] Attempting to queue: type=${type}, coach=${coachId}, task=${taskId}`);
 
-    // Idempotency: check if email already queued
+    // Idempotency: check if email already queued, sent, or failed (not skipped)
     const exists = await db.prepare(
-      'SELECT id FROM email_queue WHERE type = ? AND task_id = ? AND coach_id = ? AND status = ? LIMIT 1'
-    ).get(type, taskId, coachId, 'pending');
+      'SELECT id FROM email_queue WHERE type = ? AND task_id = ? AND coach_id = ? AND status IN (?, ?, ?) LIMIT 1'
+    ).get(type, taskId, coachId, 'pending', 'sent', 'failed');
 
     if (exists) {
-      console.log(`[EMAIL QUEUE] Already queued, skipping`);
-      return { skip: true, reason: 'already_queued' };
+      console.log(`[EMAIL QUEUE] Already processed, skipping`);
+      return { skip: true, reason: 'already_processed' };
     }
 
     // Insert into queue with atomic RETURNING clause
