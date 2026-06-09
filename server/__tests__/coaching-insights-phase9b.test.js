@@ -112,7 +112,9 @@ describe('Phase 9b - Enhanced Coaching Insights', () => {
 
       const result = await groqService.enhanceCoachingInsight(coachHistory, task, 'completion');
 
-      expect(result.metrics).toContain(expect.stringMatching(/on-time|completed|delay/i));
+      // Verify at least one metric matches the pattern
+      const hasRelevantMetric = result.metrics.some(m => /on-time|completed|delay/i.test(m));
+      expect(hasRelevantMetric).toBe(true);
     });
 
     test('should return fallback message if Groq unavailable', async () => {
