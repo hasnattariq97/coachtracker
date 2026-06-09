@@ -4,14 +4,474 @@
   "graph": {},
   "nodes": [
     {
+      "label": "monitoring-agent.js",
+      "file_type": "code",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "agents_monitoring_agent",
+      "community": 221,
+      "norm_label": "monitoring-agent.js"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "agents_monitoring_agent_db",
+      "community": 221,
+      "norm_label": "db"
+    },
+    {
+      "label": "GoogleSheetsClient",
+      "file_type": "code",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "agents_monitoring_agent_googlesheetsclient",
+      "community": 221,
+      "norm_label": "googlesheetsclient"
+    },
+    {
+      "label": "MonitoringAgent",
+      "file_type": "code",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "agents_monitoring_agent_monitoringagent",
+      "community": 221,
+      "norm_label": "monitoringagent"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "agents_monitoring_agent_monitoringagent_constructor",
+      "community": 221,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".run()",
+      "file_type": "code",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "agents_monitoring_agent_monitoringagent_run",
+      "community": 221,
+      "norm_label": ".run()"
+    },
+    {
+      "label": "._analyzeTask()",
+      "file_type": "code",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "agents_monitoring_agent_monitoringagent_analyzetask",
+      "community": 221,
+      "norm_label": "._analyzetask()"
+    },
+    {
+      "label": "._analyzeSheet()",
+      "file_type": "code",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L160",
+      "_origin": "ast",
+      "id": "agents_monitoring_agent_monitoringagent_analyzesheet",
+      "community": 221,
+      "norm_label": "._analyzesheet()"
+    },
+    {
+      "label": "._detectCoachPattern()",
+      "file_type": "code",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L221",
+      "_origin": "ast",
+      "id": "agents_monitoring_agent_monitoringagent_detectcoachpattern",
+      "community": 221,
+      "norm_label": "._detectcoachpattern()"
+    },
+    {
+      "label": "._calculateCompletion()",
+      "file_type": "code",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L274",
+      "_origin": "ast",
+      "id": "agents_monitoring_agent_monitoringagent_calculatecompletion",
+      "community": 221,
+      "norm_label": "._calculatecompletion()"
+    },
+    {
+      "label": "._findMissingSections()",
+      "file_type": "code",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L287",
+      "_origin": "ast",
+      "id": "agents_monitoring_agent_monitoringagent_findmissingsections",
+      "community": 221,
+      "norm_label": "._findmissingsections()"
+    },
+    {
+      "label": "._findBlockers()",
+      "file_type": "code",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L311",
+      "_origin": "ast",
+      "id": "agents_monitoring_agent_monitoringagent_findblockers",
+      "community": 221,
+      "norm_label": "._findblockers()"
+    },
+    {
+      "label": "._logAgentError()",
+      "file_type": "code",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L331",
+      "_origin": "ast",
+      "id": "agents_monitoring_agent_monitoringagent_logagenterror",
+      "community": 221,
+      "norm_label": "._logagenterror()"
+    },
+    {
+      "label": "monitoring-agent.test.js",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/monitoring-agent.test.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 221,
+      "norm_label": "monitoring-agent.test.js",
+      "id": "agents_monitoring_agent_test"
+    },
+    {
+      "label": "MonitoringAgent",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/monitoring-agent.test.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 221,
+      "norm_label": "monitoringagent",
+      "id": "agents_monitoring_agent_test_monitoringagent"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/monitoring-agent.test.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 221,
+      "norm_label": "db",
+      "id": "agents_monitoring_agent_test_db"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 28,
+      "norm_label": "package.json",
+      "id": "server_package"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 28,
+      "norm_label": "name",
+      "id": "server_package_name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 28,
+      "norm_label": "version",
+      "id": "server_package_version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 28,
+      "norm_label": "description",
+      "id": "server_package_description"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 28,
+      "norm_label": "main",
+      "id": "server_package_main"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 172,
+      "norm_label": "scripts",
+      "id": "server_package_scripts"
+    },
+    {
+      "label": "start",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 172,
+      "norm_label": "start",
+      "id": "server_package_scripts_start"
+    },
+    {
+      "label": "test",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 172,
+      "norm_label": "test",
+      "id": "server_package_scripts_test"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 172,
+      "norm_label": "dev",
+      "id": "server_package_scripts_dev"
+    },
+    {
+      "label": "keywords",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 28,
+      "norm_label": "keywords",
+      "id": "server_package_keywords"
+    },
+    {
+      "label": "author",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 28,
+      "norm_label": "author",
+      "id": "server_package_author"
+    },
+    {
+      "label": "license",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 28,
+      "norm_label": "license",
+      "id": "server_package_license"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "community": 28,
+      "norm_label": "type",
+      "id": "server_package_type"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 76,
+      "norm_label": "dependencies",
+      "id": "server_package_dependencies"
+    },
+    {
+      "label": "@anthropic-ai/sdk",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 76,
+      "norm_label": "@anthropic-ai/sdk",
+      "id": "server_package_dependencies_anthropic_ai_sdk"
+    },
+    {
+      "label": "@google/generative-ai",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "community": 76,
+      "norm_label": "@google/generative-ai",
+      "id": "server_package_dependencies_google_generative_ai"
+    },
+    {
+      "label": "bcrypt",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 76,
+      "norm_label": "bcrypt",
+      "id": "server_package_dependencies_bcrypt"
+    },
+    {
+      "label": "cors",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 76,
+      "norm_label": "cors",
+      "id": "server_package_dependencies_cors"
+    },
+    {
+      "label": "dotenv",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 76,
+      "norm_label": "dotenv",
+      "id": "server_package_dependencies_dotenv"
+    },
+    {
+      "label": "express",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 76,
+      "norm_label": "express",
+      "id": "server_package_dependencies_express"
+    },
+    {
+      "label": "googleapis",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "community": 76,
+      "norm_label": "googleapis",
+      "id": "server_package_dependencies_googleapis"
+    },
+    {
+      "label": "groq-sdk",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L23",
+      "_origin": "ast",
+      "community": 76,
+      "norm_label": "groq-sdk",
+      "id": "server_package_dependencies_groq_sdk"
+    },
+    {
+      "label": "jsonwebtoken",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L24",
+      "_origin": "ast",
+      "community": 76,
+      "norm_label": "jsonwebtoken",
+      "id": "server_package_dependencies_jsonwebtoken"
+    },
+    {
+      "label": "node-cron",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "community": 76,
+      "norm_label": "node-cron",
+      "id": "server_package_dependencies_node_cron"
+    },
+    {
+      "label": "nodemailer",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L26",
+      "_origin": "ast",
+      "community": 76,
+      "norm_label": "nodemailer",
+      "id": "server_package_dependencies_nodemailer"
+    },
+    {
+      "label": "pg",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L27",
+      "_origin": "ast",
+      "community": 76,
+      "norm_label": "pg",
+      "id": "server_package_dependencies_pg"
+    },
+    {
+      "label": "resend",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L28",
+      "_origin": "ast",
+      "community": 76,
+      "norm_label": "resend",
+      "id": "server_package_dependencies_resend"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 28,
+      "norm_label": "devdependencies",
+      "id": "server_package_devdependencies"
+    },
+    {
+      "label": "jest",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L31",
+      "_origin": "ast",
+      "community": 28,
+      "norm_label": "jest",
+      "id": "server_package_devdependencies_jest"
+    },
+    {
+      "label": "supertest",
+      "file_type": "code",
+      "source_file": "server/package.json",
+      "source_location": "L32",
+      "_origin": "ast",
+      "community": 28,
+      "norm_label": "supertest",
+      "id": "server_package_devdependencies_supertest"
+    },
+    {
       "label": "google-sheets-client.test.js",
       "file_type": "code",
       "source_file": "server/__tests__/services/google-sheets-client.test.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "services_google_sheets_client_test",
       "community": 220,
-      "norm_label": "google-sheets-client.test.js"
+      "norm_label": "google-sheets-client.test.js",
+      "id": "services_google_sheets_client_test"
     },
     {
       "label": "GoogleSheetsClient",
@@ -19,9 +479,9 @@
       "source_file": "server/__tests__/services/google-sheets-client.test.js",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "services_google_sheets_client_test_googlesheetsclient",
       "community": 220,
-      "norm_label": "googlesheetsclient"
+      "norm_label": "googlesheetsclient",
+      "id": "services_google_sheets_client_test_googlesheetsclient"
     },
     {
       "label": "path",
@@ -29,9 +489,9 @@
       "source_file": "server/__tests__/services/google-sheets-client.test.js",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "services_google_sheets_client_test_path",
       "community": 220,
-      "norm_label": "path"
+      "norm_label": "path",
+      "id": "services_google_sheets_client_test_path"
     },
     {
       "label": "fs",
@@ -39,9 +499,9 @@
       "source_file": "server/__tests__/services/google-sheets-client.test.js",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "services_google_sheets_client_test_fs",
       "community": 220,
-      "norm_label": "fs"
+      "norm_label": "fs",
+      "id": "services_google_sheets_client_test_fs"
     },
     {
       "label": "google-sheets-client.js",
@@ -49,9 +509,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "services_google_sheets_client",
       "community": 220,
-      "norm_label": "google-sheets-client.js"
+      "norm_label": "google-sheets-client.js",
+      "id": "services_google_sheets_client"
     },
     {
       "label": "{ google }",
@@ -59,9 +519,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "services_google_sheets_client_google",
       "community": 220,
-      "norm_label": "{ google }"
+      "norm_label": "{ google }",
+      "id": "services_google_sheets_client_google"
     },
     {
       "label": "fsSync",
@@ -69,9 +529,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "services_google_sheets_client_fssync",
       "community": 220,
-      "norm_label": "fssync"
+      "norm_label": "fssync",
+      "id": "services_google_sheets_client_fssync"
     },
     {
       "label": "path",
@@ -79,9 +539,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "services_google_sheets_client_path",
       "community": 220,
-      "norm_label": "path"
+      "norm_label": "path",
+      "id": "services_google_sheets_client_path"
     },
     {
       "label": "GoogleSheetsClient",
@@ -89,9 +549,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L17",
       "_origin": "ast",
-      "id": "services_google_sheets_client_googlesheetsclient",
       "community": 220,
-      "norm_label": "googlesheetsclient"
+      "norm_label": "googlesheetsclient",
+      "id": "services_google_sheets_client_googlesheetsclient"
     },
     {
       "label": ".constructor()",
@@ -99,9 +559,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L18",
       "_origin": "ast",
-      "id": "services_google_sheets_client_googlesheetsclient_constructor",
       "community": 220,
-      "norm_label": ".constructor()"
+      "norm_label": ".constructor()",
+      "id": "services_google_sheets_client_googlesheetsclient_constructor"
     },
     {
       "label": ".initServiceAccount()",
@@ -109,9 +569,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L30",
       "_origin": "ast",
-      "id": "services_google_sheets_client_googlesheetsclient_initserviceaccount",
       "community": 220,
-      "norm_label": ".initserviceaccount()"
+      "norm_label": ".initserviceaccount()",
+      "id": "services_google_sheets_client_googlesheetsclient_initserviceaccount"
     },
     {
       "label": ".initOAuth()",
@@ -119,9 +579,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L75",
       "_origin": "ast",
-      "id": "services_google_sheets_client_googlesheetsclient_initoauth",
       "community": 220,
-      "norm_label": ".initoauth()"
+      "norm_label": ".initoauth()",
+      "id": "services_google_sheets_client_googlesheetsclient_initoauth"
     },
     {
       "label": ".ensureInitialized()",
@@ -129,9 +589,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L107",
       "_origin": "ast",
-      "id": "services_google_sheets_client_googlesheetsclient_ensureinitialized",
       "community": 220,
-      "norm_label": ".ensureinitialized()"
+      "norm_label": ".ensureinitialized()",
+      "id": "services_google_sheets_client_googlesheetsclient_ensureinitialized"
     },
     {
       "label": ".readSheet()",
@@ -139,9 +599,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L121",
       "_origin": "ast",
-      "id": "services_google_sheets_client_googlesheetsclient_readsheet",
       "community": 220,
-      "norm_label": ".readsheet()"
+      "norm_label": ".readsheet()",
+      "id": "services_google_sheets_client_googlesheetsclient_readsheet"
     },
     {
       "label": ".getSheetMetadata()",
@@ -149,9 +609,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L145",
       "_origin": "ast",
-      "id": "services_google_sheets_client_googlesheetsclient_getsheetmetadata",
       "community": 220,
-      "norm_label": ".getsheetmetadata()"
+      "norm_label": ".getsheetmetadata()",
+      "id": "services_google_sheets_client_googlesheetsclient_getsheetmetadata"
     },
     {
       "label": ".addComment()",
@@ -159,9 +619,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L180",
       "_origin": "ast",
-      "id": "services_google_sheets_client_googlesheetsclient_addcomment",
       "community": 220,
-      "norm_label": ".addcomment()"
+      "norm_label": ".addcomment()",
+      "id": "services_google_sheets_client_googlesheetsclient_addcomment"
     },
     {
       "label": ".hasBeenModifiedSince()",
@@ -169,9 +629,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L214",
       "_origin": "ast",
-      "id": "services_google_sheets_client_googlesheetsclient_hasbeenmodifiedsince",
       "community": 220,
-      "norm_label": ".hasbeenmodifiedsince()"
+      "norm_label": ".hasbeenmodifiedsince()",
+      "id": "services_google_sheets_client_googlesheetsclient_hasbeenmodifiedsince"
     },
     {
       "label": ".parseCellRef()",
@@ -179,9 +639,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L238",
       "_origin": "ast",
-      "id": "services_google_sheets_client_googlesheetsclient_parsecellref",
       "community": 220,
-      "norm_label": ".parsecellref()"
+      "norm_label": ".parsecellref()",
+      "id": "services_google_sheets_client_googlesheetsclient_parsecellref"
     },
     {
       "label": "AGENT-HANDOFF-PHASE9.md",
@@ -2955,7 +3415,7 @@
       "file_type": "document",
       "source_file": "docs/API.md",
       "source_location": "L402",
-      "community": 94,
+      "community": 75,
       "norm_label": "code:json ({)",
       "id": "docs_api_codeblock_24"
     },
@@ -6609,7 +7069,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L870",
-      "community": 219,
+      "community": 62,
       "norm_label": "best practices",
       "id": "claude_master_capabilities_best_practices"
     },
@@ -6618,7 +7078,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L872",
-      "community": 219,
+      "community": 62,
       "norm_label": "code conventions (language-neutral)",
       "id": "claude_master_capabilities_code_conventions_language_neutral"
     },
@@ -6627,7 +7087,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L882",
-      "community": 219,
+      "community": 62,
       "norm_label": "agent best practices",
       "id": "claude_master_capabilities_agent_best_practices"
     },
@@ -6636,7 +7096,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L892",
-      "community": 219,
+      "community": 62,
       "norm_label": "documentation best practices",
       "id": "claude_master_capabilities_documentation_best_practices"
     },
@@ -6789,7 +7249,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1131",
-      "community": 24,
+      "community": 219,
       "norm_label": "code:bash (#!/bin/bash)",
       "id": "claude_master_capabilities_codeblock_63"
     },
@@ -6798,7 +7258,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1148",
-      "community": 24,
+      "community": 219,
       "norm_label": "code:bash (#!/bin/bash)",
       "id": "claude_master_capabilities_codeblock_64"
     },
@@ -6825,7 +7285,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1204",
-      "community": 145,
+      "community": 24,
       "norm_label": "code:bash (# show all open work items)",
       "id": "claude_master_capabilities_codeblock_67"
     },
@@ -6834,7 +7294,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1236",
-      "community": 145,
+      "community": 24,
       "norm_label": "code:bash (# session 1: start work)",
       "id": "claude_master_capabilities_codeblock_68"
     },
@@ -6843,7 +7303,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1263",
-      "community": 24,
+      "community": 219,
       "norm_label": "claude code cli",
       "id": "claude_master_capabilities_claude_code_cli"
     },
@@ -6852,7 +7312,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1267",
-      "community": 24,
+      "community": 219,
       "norm_label": "code:bash (# macos)",
       "id": "claude_master_capabilities_codeblock_69"
     },
@@ -6861,7 +7321,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1284",
-      "community": 24,
+      "community": 219,
       "norm_label": "code:bash (claude-code --version)",
       "id": "claude_master_capabilities_codeblock_70"
     },
@@ -6888,7 +7348,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1304",
-      "community": 145,
+      "community": 24,
       "norm_label": "code:bash (# install from jetbrains marketplace)",
       "id": "claude_master_capabilities_codeblock_72"
     },
@@ -6897,7 +7357,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1315",
-      "community": 145,
+      "community": 24,
       "norm_label": "mcp servers (model context protocol)",
       "id": "claude_master_capabilities_mcp_servers_model_context_protocol"
     },
@@ -6906,7 +7366,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1319",
-      "community": 145,
+      "community": 24,
       "norm_label": "code:bash (# create mcp config file)",
       "id": "claude_master_capabilities_codeblock_73"
     },
@@ -6924,7 +7384,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1349",
-      "community": 24,
+      "community": 219,
       "norm_label": "custom skills & agents",
       "id": "claude_master_capabilities_custom_skills_agents"
     },
@@ -6942,7 +7402,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1370",
-      "community": 24,
+      "community": 219,
       "norm_label": "code:markdown (---)",
       "id": "claude_master_capabilities_codeblock_76"
     },
@@ -6951,7 +7411,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1386",
-      "community": 24,
+      "community": 219,
       "norm_label": "code:json ({)",
       "id": "claude_master_capabilities_codeblock_77"
     },
@@ -6960,7 +7420,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1400",
-      "community": 145,
+      "community": 24,
       "norm_label": "testing frameworks",
       "id": "claude_master_capabilities_testing_frameworks"
     },
@@ -6969,7 +7429,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1404",
-      "community": 145,
+      "community": 24,
       "norm_label": "code:bash (# javascript/node.js)",
       "id": "claude_master_capabilities_codeblock_78"
     },
@@ -6978,7 +7438,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1420",
-      "community": 145,
+      "community": 24,
       "norm_label": "code:bash (# jest config (package.json or jest.config.js))",
       "id": "claude_master_capabilities_codeblock_79"
     },
@@ -11348,240 +11808,6 @@
       "id": "package_json"
     },
     {
-      "label": "name",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L2",
-      "community": 28,
-      "norm_label": "name",
-      "id": "server_package_name"
-    },
-    {
-      "label": "version",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L3",
-      "community": 28,
-      "norm_label": "version",
-      "id": "server_package_version"
-    },
-    {
-      "label": "description",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L4",
-      "community": 28,
-      "norm_label": "description",
-      "id": "server_package_description"
-    },
-    {
-      "label": "main",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L5",
-      "community": 28,
-      "norm_label": "main",
-      "id": "server_package_main"
-    },
-    {
-      "label": "scripts",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L6",
-      "community": 172,
-      "norm_label": "scripts",
-      "id": "server_package_scripts"
-    },
-    {
-      "label": "start",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L7",
-      "community": 172,
-      "norm_label": "start",
-      "id": "server_package_scripts_start"
-    },
-    {
-      "label": "test",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L8",
-      "community": 172,
-      "norm_label": "test",
-      "id": "server_package_scripts_test"
-    },
-    {
-      "label": "dev",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L9",
-      "community": 172,
-      "norm_label": "dev",
-      "id": "server_package_scripts_dev"
-    },
-    {
-      "label": "keywords",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L11",
-      "community": 28,
-      "norm_label": "keywords",
-      "id": "server_package_keywords"
-    },
-    {
-      "label": "author",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L12",
-      "community": 28,
-      "norm_label": "author",
-      "id": "server_package_author"
-    },
-    {
-      "label": "license",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L13",
-      "community": 28,
-      "norm_label": "license",
-      "id": "server_package_license"
-    },
-    {
-      "label": "type",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L14",
-      "community": 28,
-      "norm_label": "type",
-      "id": "server_package_type"
-    },
-    {
-      "label": "dependencies",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L15",
-      "community": 76,
-      "norm_label": "dependencies",
-      "id": "server_package_dependencies"
-    },
-    {
-      "label": "@anthropic-ai/sdk",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L16",
-      "community": 76,
-      "norm_label": "@anthropic-ai/sdk",
-      "id": "server_package_dependencies_anthropic_ai_sdk"
-    },
-    {
-      "label": "@google/generative-ai",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L17",
-      "community": 76,
-      "norm_label": "@google/generative-ai",
-      "id": "server_package_dependencies_google_generative_ai"
-    },
-    {
-      "label": "bcrypt",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L18",
-      "community": 76,
-      "norm_label": "bcrypt",
-      "id": "server_package_dependencies_bcrypt"
-    },
-    {
-      "label": "cors",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L19",
-      "community": 76,
-      "norm_label": "cors",
-      "id": "server_package_dependencies_cors"
-    },
-    {
-      "label": "dotenv",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L20",
-      "community": 76,
-      "norm_label": "dotenv",
-      "id": "server_package_dependencies_dotenv"
-    },
-    {
-      "label": "express",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L21",
-      "community": 76,
-      "norm_label": "express",
-      "id": "server_package_dependencies_express"
-    },
-    {
-      "label": "groq-sdk",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L22",
-      "community": 76,
-      "norm_label": "groq-sdk",
-      "id": "server_package_dependencies_groq_sdk"
-    },
-    {
-      "label": "jsonwebtoken",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L23",
-      "community": 76,
-      "norm_label": "jsonwebtoken",
-      "id": "server_package_dependencies_jsonwebtoken"
-    },
-    {
-      "label": "node-cron",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L24",
-      "community": 76,
-      "norm_label": "node-cron",
-      "id": "server_package_dependencies_node_cron"
-    },
-    {
-      "label": "pg",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L25",
-      "community": 76,
-      "norm_label": "pg",
-      "id": "server_package_dependencies_pg"
-    },
-    {
-      "label": "devDependencies",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L27",
-      "community": 28,
-      "norm_label": "devdependencies",
-      "id": "server_package_devdependencies"
-    },
-    {
-      "label": "jest",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L28",
-      "community": 28,
-      "norm_label": "jest",
-      "id": "server_package_devdependencies_jest"
-    },
-    {
-      "label": "supertest",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L29",
-      "community": 28,
-      "norm_label": "supertest",
-      "id": "server_package_devdependencies_supertest"
-    },
-    {
       "label": "bcrypt",
       "file_type": "code",
       "source_file": "db.js",
@@ -13983,15 +14209,6 @@
       "community": 56,
       "norm_label": "jest.config.js",
       "id": "server_jest_config_js"
-    },
-    {
-      "label": "package.json",
-      "file_type": "code",
-      "source_file": "server/package.json",
-      "source_location": "L1",
-      "community": 28,
-      "norm_label": "package.json",
-      "id": "server_package_json"
     },
     {
       "label": "test-setup.js",
@@ -26884,15 +27101,653 @@
   ],
   "links": [
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent",
+      "target": "agents_monitoring_agent_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent",
+      "target": "agents_monitoring_agent_googlesheetsclient"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent",
+      "target": "agents_monitoring_agent_monitoringagent"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/monitoring-agent.test.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_test",
+      "target": "agents_monitoring_agent"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L145",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_monitoringagent",
+      "target": "agents_monitoring_agent_monitoringagent_analyzesheet"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L75",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_monitoringagent",
+      "target": "agents_monitoring_agent_monitoringagent_analyzetask"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L245",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_monitoringagent",
+      "target": "agents_monitoring_agent_monitoringagent_calculatecompletion"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_monitoringagent",
+      "target": "agents_monitoring_agent_monitoringagent_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L196",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_monitoringagent",
+      "target": "agents_monitoring_agent_monitoringagent_detectcoachpattern"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L282",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_monitoringagent",
+      "target": "agents_monitoring_agent_monitoringagent_findblockers"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L258",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_monitoringagent",
+      "target": "agents_monitoring_agent_monitoringagent_findmissingsections"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L302",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_monitoringagent",
+      "target": "agents_monitoring_agent_monitoringagent_logagenterror"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_monitoringagent",
+      "target": "agents_monitoring_agent_monitoringagent_run"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_monitoringagent_run",
+      "target": "agents_monitoring_agent_monitoringagent_analyzetask"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_monitoringagent_run",
+      "target": "agents_monitoring_agent_monitoringagent_logagenterror"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L94",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_monitoringagent_analyzetask",
+      "target": "agents_monitoring_agent_monitoringagent_analyzesheet"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L97",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_monitoringagent_analyzetask",
+      "target": "agents_monitoring_agent_monitoringagent_detectcoachpattern"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L176",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_monitoringagent_analyzesheet",
+      "target": "agents_monitoring_agent_monitoringagent_calculatecompletion"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L178",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_monitoringagent_analyzesheet",
+      "target": "agents_monitoring_agent_monitoringagent_findblockers"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/monitoring-agent.js",
+      "source_location": "L177",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_monitoringagent_analyzesheet",
+      "target": "agents_monitoring_agent_monitoringagent_findmissingsections"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/monitoring-agent.test.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_test",
+      "target": "agents_monitoring_agent_test_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/monitoring-agent.test.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_monitoring_agent_test",
+      "target": "agents_monitoring_agent_test_monitoringagent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package",
+      "target": "server_package_author"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package",
+      "target": "server_package_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package",
+      "target": "server_package_description"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package",
+      "target": "server_package_devdependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package",
+      "target": "server_package_keywords"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package",
+      "target": "server_package_license"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package",
+      "target": "server_package_main"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package",
+      "target": "server_package_name"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package",
+      "target": "server_package_scripts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package",
+      "target": "server_package_type"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package",
+      "target": "server_package_version"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_json",
+      "target": "server_package_name"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_json",
+      "target": "server_package_version"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_json",
+      "target": "server_package_description"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_json",
+      "target": "server_package_main"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_json",
+      "target": "server_package_scripts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_scripts",
+      "target": "server_package_scripts_dev"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_scripts",
+      "target": "server_package_scripts_start"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_scripts",
+      "target": "server_package_scripts_test"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_json",
+      "target": "server_package_keywords"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_json",
+      "target": "server_package_author"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_json",
+      "target": "server_package_license"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_json",
+      "target": "server_package_type"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_json",
+      "target": "server_package_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_anthropic_ai_sdk"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_bcrypt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_better_sqlite3"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_cors"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_dotenv"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_express"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_google_generative_ai"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_googleapis"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_groq_sdk"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_jsonwebtoken"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_node_cron"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_nodemailer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_pg"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_dependencies",
+      "target": "server_package_dependencies_resend"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_json",
+      "target": "server_package_devdependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_devdependencies",
+      "target": "server_package_devdependencies_jest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_package_devdependencies",
+      "target": "server_package_devdependencies_supertest"
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "server/__tests__/services/google-sheets-client.test.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_test",
-      "target": "services_google_sheets_client",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client"
     },
     {
       "relation": "contains",
@@ -26900,9 +27755,9 @@
       "source_file": "server/__tests__/services/google-sheets-client.test.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_test",
-      "target": "services_google_sheets_client_test_fs",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_test_fs"
     },
     {
       "relation": "contains",
@@ -26910,9 +27765,9 @@
       "source_file": "server/__tests__/services/google-sheets-client.test.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_test",
-      "target": "services_google_sheets_client_test_googlesheetsclient",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_test_googlesheetsclient"
     },
     {
       "relation": "contains",
@@ -26920,9 +27775,9 @@
       "source_file": "server/__tests__/services/google-sheets-client.test.js",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_test",
-      "target": "services_google_sheets_client_test_path",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_test_path"
     },
     {
       "relation": "contains",
@@ -26930,9 +27785,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client",
-      "target": "services_google_sheets_client_fssync",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_fssync"
     },
     {
       "relation": "contains",
@@ -26940,9 +27795,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client",
-      "target": "services_google_sheets_client_google",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_google"
     },
     {
       "relation": "contains",
@@ -26950,9 +27805,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client",
-      "target": "services_google_sheets_client_googlesheetsclient",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_googlesheetsclient"
     },
     {
       "relation": "contains",
@@ -26960,9 +27815,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client",
-      "target": "services_google_sheets_client_path",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_path"
     },
     {
       "relation": "method",
@@ -26970,9 +27825,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L180",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_googlesheetsclient",
-      "target": "services_google_sheets_client_googlesheetsclient_addcomment",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_googlesheetsclient_addcomment"
     },
     {
       "relation": "method",
@@ -26980,9 +27835,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_googlesheetsclient",
-      "target": "services_google_sheets_client_googlesheetsclient_constructor",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_googlesheetsclient_constructor"
     },
     {
       "relation": "method",
@@ -26990,9 +27845,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L107",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_googlesheetsclient",
-      "target": "services_google_sheets_client_googlesheetsclient_ensureinitialized",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_googlesheetsclient_ensureinitialized"
     },
     {
       "relation": "method",
@@ -27000,9 +27855,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L145",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_googlesheetsclient",
-      "target": "services_google_sheets_client_googlesheetsclient_getsheetmetadata",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_googlesheetsclient_getsheetmetadata"
     },
     {
       "relation": "method",
@@ -27010,9 +27865,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L214",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_googlesheetsclient",
-      "target": "services_google_sheets_client_googlesheetsclient_hasbeenmodifiedsince",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_googlesheetsclient_hasbeenmodifiedsince"
     },
     {
       "relation": "method",
@@ -27020,9 +27875,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L75",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_googlesheetsclient",
-      "target": "services_google_sheets_client_googlesheetsclient_initoauth",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_googlesheetsclient_initoauth"
     },
     {
       "relation": "method",
@@ -27030,9 +27885,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_googlesheetsclient",
-      "target": "services_google_sheets_client_googlesheetsclient_initserviceaccount",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_googlesheetsclient_initserviceaccount"
     },
     {
       "relation": "method",
@@ -27040,9 +27895,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L238",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_googlesheetsclient",
-      "target": "services_google_sheets_client_googlesheetsclient_parsecellref",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_googlesheetsclient_parsecellref"
     },
     {
       "relation": "method",
@@ -27050,9 +27905,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L121",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_googlesheetsclient",
-      "target": "services_google_sheets_client_googlesheetsclient_readsheet",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_googlesheetsclient_readsheet"
     },
     {
       "relation": "calls",
@@ -27061,9 +27916,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L110",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_googlesheetsclient_ensureinitialized",
-      "target": "services_google_sheets_client_googlesheetsclient_initserviceaccount",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_googlesheetsclient_initserviceaccount"
     },
     {
       "relation": "calls",
@@ -27072,9 +27927,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L181",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_googlesheetsclient_addcomment",
-      "target": "services_google_sheets_client_googlesheetsclient_initoauth",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_googlesheetsclient_initoauth"
     },
     {
       "relation": "calls",
@@ -27083,9 +27938,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L113",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_googlesheetsclient_ensureinitialized",
-      "target": "services_google_sheets_client_googlesheetsclient_initoauth",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_googlesheetsclient_initoauth"
     },
     {
       "relation": "calls",
@@ -27094,9 +27949,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L146",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_googlesheetsclient_getsheetmetadata",
-      "target": "services_google_sheets_client_googlesheetsclient_ensureinitialized",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_googlesheetsclient_ensureinitialized"
     },
     {
       "relation": "calls",
@@ -27105,9 +27960,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L215",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_googlesheetsclient_hasbeenmodifiedsince",
-      "target": "services_google_sheets_client_googlesheetsclient_ensureinitialized",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_googlesheetsclient_ensureinitialized"
     },
     {
       "relation": "calls",
@@ -27116,9 +27971,9 @@
       "source_file": "server/services/google-sheets-client.js",
       "source_location": "L122",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_google_sheets_client_googlesheetsclient_readsheet",
-      "target": "services_google_sheets_client_googlesheetsclient_ensureinitialized",
-      "confidence_score": 1.0
+      "target": "services_google_sheets_client_googlesheetsclient_ensureinitialized"
     },
     {
       "relation": "contains",
@@ -42270,386 +43125,6 @@
       "confidence_score": 1.0,
       "source": "package_json",
       "target": "client_package_version"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_json",
-      "target": "server_package_author"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_json",
-      "target": "server_package_dependencies"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_json",
-      "target": "server_package_description"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_json",
-      "target": "server_package_devdependencies"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_json",
-      "target": "server_package_keywords"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_json",
-      "target": "server_package_license"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_json",
-      "target": "server_package_main"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_json",
-      "target": "server_package_name"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_json",
-      "target": "server_package_scripts"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_json",
-      "target": "server_package_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "package_json",
-      "target": "server_package_version"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_json",
-      "target": "server_package_name"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_json",
-      "target": "server_package_version"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_json",
-      "target": "server_package_description"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_json",
-      "target": "server_package_main"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_json",
-      "target": "server_package_scripts"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_scripts",
-      "target": "server_package_scripts_dev"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_scripts",
-      "target": "server_package_scripts_start"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_scripts",
-      "target": "server_package_scripts_test"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_json",
-      "target": "server_package_keywords"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_json",
-      "target": "server_package_author"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_json",
-      "target": "server_package_license"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_json",
-      "target": "server_package_type"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_dependencies",
-      "target": "server_package_dependencies_anthropic_ai_sdk"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_dependencies",
-      "target": "server_package_dependencies_bcrypt"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_dependencies",
-      "target": "server_package_dependencies_better_sqlite3"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_dependencies",
-      "target": "server_package_dependencies_cors"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_dependencies",
-      "target": "server_package_dependencies_dotenv"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_dependencies",
-      "target": "server_package_dependencies_express"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_dependencies",
-      "target": "server_package_dependencies_google_generative_ai"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L22",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_dependencies",
-      "target": "server_package_dependencies_groq_sdk"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_dependencies",
-      "target": "server_package_dependencies_jsonwebtoken"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_dependencies",
-      "target": "server_package_dependencies_node_cron"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_dependencies",
-      "target": "server_package_dependencies_pg"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_json",
-      "target": "server_package_dependencies"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_devdependencies",
-      "target": "server_package_devdependencies_jest"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_devdependencies",
-      "target": "server_package_devdependencies_supertest"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/package.json",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_package_json",
-      "target": "server_package_devdependencies"
     },
     {
       "relation": "contains",
@@ -59766,5 +60241,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d503556c45071a35718d251529028932795470ee"
+  "built_at_commit": "9408d28d3ad097965ff7d519666685cee7cce1ce"
 }

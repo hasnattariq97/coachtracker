@@ -1308,5 +1308,15 @@
     "mtime": 1780988888.3642035,
     "ast_hash": "9c4a18ffca87f63310797f8577ab3991",
     "semantic_hash": ""
+  },
+  "server/__tests__/agents/monitoring-agent.test.js": {
+    "mtime": 1780989313.5124168,
+    "ast_hash": "0085afa56290f385fef537aed5d195fe",
+    "semantic_hash": ""
+  },
+  "server/agents/monitoring-agent.js": {
+    "mtime": 1780989719.526183,
+    "ast_hash": "70eac4b6a85ec8770d747f768fdb15ae",
+    "semantic_hash": ""
   }
 }
