@@ -1,16 +1,16 @@
 # Graph Report - Cursor_new  (2026-06-09)
 
 ## Corpus Check
-- 246 files · ~273,793 words
+- 252 files · ~279,544 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2992 nodes · 3294 edges · 222 communities (210 shown, 12 thin omitted)
+- 3033 nodes · 3348 edges · 225 communities (213 shown, 12 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9408d28d`
+- Built from commit: `67782f8c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -219,6 +219,9 @@
 - [[_COMMUNITY_Community 219|Community 219]]
 - [[_COMMUNITY_Community 220|Community 220]]
 - [[_COMMUNITY_Community 221|Community 221]]
+- [[_COMMUNITY_Community 222|Community 222]]
+- [[_COMMUNITY_Community 223|Community 223]]
+- [[_COMMUNITY_Community 224|Community 224]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Build Roadmap — Coach Task Tracker` - 24 edges
@@ -247,7 +250,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (222 total, 12 thin omitted)
+## Communities (225 total, 12 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.14
@@ -359,7 +362,7 @@ Nodes (11): code:bash (cd d:\Cursor_new\server), code:bash (cd d:\Cursor_new\cli
 
 ### Community 32 - "Community 32"
 Cohesion: 0.15
-Nodes (12): code:javascript (import { render, screen, waitFor } from '@testing-library/re), code:bash (cd d:\Cursor_new\client), code:javascript (import { render, screen } from '@testing-library/react';), code:bash (cd d:\Cursor_new\client), code:javascript (import { render, screen, waitFor } from '@testing-library/re), code:bash (cd d:\Cursor_new\client), Phase 1: Auth System Implementation Plan, Security Checklist (Final Review) (+4 more)
+Nodes (12): code:javascript (import request from 'supertest';), code:bash (cd d:\Cursor_new\server), code:javascript (import { render, screen, waitFor } from '@testing-library/re), code:bash (cd d:\Cursor_new\client), code:javascript (import { render, screen, waitFor } from '@testing-library/re), code:bash (cd d:\Cursor_new\client), Phase 1: Auth System Implementation Plan, Security Checklist (Final Review) (+4 more)
 
 ### Community 33 - "Community 33"
 Cohesion: 0.25
@@ -450,12 +453,12 @@ Cohesion: 0.29
 Nodes (7): Building a Feature (Superpowers Cycle), code:block45 (1. BRAINSTORM), code:block46 (1. REPRODUCE), code:block47 (Task: Build multi-user system), Debugging a Bug (Systematic Approach), Parallel Agent Development, Patterns & Workflows
 
 ### Community 62 - "Community 62"
-Cohesion: 0.14
-Nodes (16): Agent Best Practices, Best Practices, Claude Core Capabilities, Code Conventions (Language-Neutral), code:bash (# Step 1: Initialize Claude Code), Distribution & Usage, Documentation Best Practices, For Agents (+8 more)
+Cohesion: 0.18
+Nodes (10): Agent Best Practices, Best Practices, Claude Core Capabilities, Code Conventions (Language-Neutral), Documentation Best Practices, Guarantees & Constraints, Master Capabilities Reference, Reasoning Powers (+2 more)
 
 ### Community 63 - "Community 63"
-Cohesion: 0.07
-Nodes (32): authenticateToken(), jwt, requireAdmin(), verifyToken(), app, { authenticateToken, requireAdmin }, cors, corsOptions (+24 more)
+Cohesion: 0.08
+Nodes (24): authenticateToken(), jwt, verifyToken(), app, { authenticateToken, requireAdmin }, coaches, db, express (+16 more)
 
 ### Community 64 - "Community 64"
 Cohesion: 0.29
@@ -650,8 +653,8 @@ Cohesion: 0.17
 Nodes (11): Agent Commands, AgentDB Namespaces, code:bash (/phase-builder), code:bash (# Trigger phase builder for parallel development), Learning Loop, Option A: Development Acceleration (Parallel Agents), Option B: Product Feature (Multi-Agent Coaching), Option C: Enterprise Platform (+3 more)
 
 ### Community 120 - "Community 120"
-Cohesion: 0.23
-Nodes (11): scheduleJobs(), app, { authenticateToken, requireAdmin }, cors, corsOptions, db, express, { scheduleJobs } (+3 more)
+Cohesion: 0.13
+Nodes (18): requireAdmin(), scheduleJobs(), app, { authenticateToken, requireAdmin }, cors, corsOptions, db, express (+10 more)
 
 ### Community 121 - "Community 121"
 Cohesion: 0.18
@@ -746,8 +749,8 @@ Cohesion: 0.40
 Nodes (5): code:json ({), code:bash (# Structure), code:bash (# JavaScript), code:bash (# .eslintrc.json), Security & Linting
 
 ### Community 146 - "Community 146"
-Cohesion: 0.67
-Nodes (3): code:javascript (import request from 'supertest';), code:bash (cd d:\Cursor_new\server), Task 6: Implement Login Endpoint (RED)
+Cohesion: 0.10
+Nodes (10): db, PatternAnalyzer, ReportingAgent, db, PatternAnalyzer, ReportingAgent, db, PatternAnalyzer (+2 more)
 
 ### Community 147 - "Community 147"
 Cohesion: 0.22
@@ -990,8 +993,8 @@ Cohesion: 0.50
 Nodes (4): Implementation ✅, Issues Fixed ✅, Phase 7+ — Notifications & Coaching Insights Fix ✅, Verification ✅
 
 ### Community 215 - "Community 215"
-Cohesion: 0.29
-Nodes (6): app, { authenticateToken, requireAdmin }, coaches, db, express, result
+Cohesion: 0.19
+Nodes (5): db, GoogleSheetsClient, SupportAgent, db, SupportAgent
 
 ### Community 216 - "Community 216"
 Cohesion: 0.15
@@ -1006,8 +1009,8 @@ Cohesion: 0.40
 Nodes (4): db, getTransporter(), nodemailer, sendEmail()
 
 ### Community 219 - "Community 219"
-Cohesion: 0.29
-Nodes (8): Claude Code CLI, code:bash (#!/bin/bash), code:bash (#!/bin/bash), code:bash (# macOS), code:bash (claude-code --version), code:markdown (---), code:json ({), Custom Skills & Agents
+Cohesion: 0.25
+Nodes (7): app, { authenticateToken, requireAdmin }, cors, corsOptions, db, express, { scheduleJobs }
 
 ### Community 220 - "Community 220"
 Cohesion: 0.15
@@ -1017,22 +1020,34 @@ Nodes (7): fsSync, { google }, GoogleSheetsClient, path, fs, GoogleSheetsClient,
 Cohesion: 0.18
 Nodes (5): db, GoogleSheetsClient, MonitoringAgent, db, MonitoringAgent
 
+### Community 222 - "Community 222"
+Cohesion: 0.29
+Nodes (8): Claude Code CLI, code:bash (#!/bin/bash), code:bash (#!/bin/bash), code:bash (# macOS), code:bash (claude-code --version), code:markdown (---), code:json ({), Custom Skills & Agents
+
+### Community 223 - "Community 223"
+Cohesion: 0.47
+Nodes (6): code:bash (# Step 1: Initialize Claude Code), Distribution & Usage, For Agents, For Projects, For Teams, Plugin Checklist for New Projects
+
+### Community 224 - "Community 224"
+Cohesion: 0.67
+Nodes (3): code:javascript (import { render, screen } from '@testing-library/react';), code:bash (cd d:\Cursor_new\client), Task 11: Create ProtectedRoute Component (RED)
+
 ## Knowledge Gaps
-- **1630 isolated node(s):** `db`, `GoogleSheetsClient`, `MonitoringAgent`, `db`, `start` (+1625 more)
+- **1642 isolated node(s):** `ReportingAgent`, `PatternAnalyzer`, `db`, `PatternAnalyzer`, `db` (+1637 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Master Capabilities Reference` connect `Community 62` to `Community 64`, `Community 7`, `Community 13`, `Community 19`, `Community 148`, `Community 22`, `Community 23`, `Community 61`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `authenticateToken()` connect `Community 63` to `Community 79`, `Community 50`, `Community 51`, `Community 117`, `Community 215`, `Community 120`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `Available Tools` connect `Community 22` to `Community 62`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **What connects `db`, `GoogleSheetsClient`, `MonitoringAgent` to the rest of the system?**
-  _1630 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `Master Capabilities Reference` connect `Community 62` to `Community 64`, `Community 7`, `Community 13`, `Community 19`, `Community 148`, `Community 22`, `Community 23`, `Community 61`, `Community 223`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `Deployment Issues & Fixes - Lessons Learned` connect `Community 184` to `Community 192`, `Community 193`, `Community 195`, `Community 181`, `Community 185`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `authenticateToken()` connect `Community 63` to `Community 79`, `Community 50`, `Community 51`, `Community 117`, `Community 120`, `Community 219`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **What connects `ReportingAgent`, `PatternAnalyzer`, `db` to the rest of the system?**
+  _1642 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

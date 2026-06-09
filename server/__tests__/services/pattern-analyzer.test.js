@@ -226,6 +226,28 @@ describe('PatternAnalyzer', () => {
       const blockers = PatternAnalyzer._parseCommonBlockers(actions);
       expect(Array.isArray(blockers)).toBe(true);
     });
+
+    test('handles malformed JSON in action details', () => {
+      const actions = [
+        {
+          id: 1,
+          action_type: 'tag',
+          details: 'invalid json {not closed',
+        },
+        {
+          id: 2,
+          action_type: 'tag',
+          details: JSON.stringify({ message: 'blocked' }),
+        },
+      ];
+
+      // Should not throw, should skip malformed and continue
+      const blockers = PatternAnalyzer._parseCommonBlockers(actions);
+      expect(Array.isArray(blockers)).toBe(true);
+      // Should still find the 'blocked' from the valid JSON
+      const blocked = blockers.find(b => b.blocker === 'blocked');
+      expect(blocked?.count).toBe(1);
+    });
   });
 
   describe('_analyzeCoachPerformance()', () => {
@@ -408,6 +430,39 @@ describe('PatternAnalyzer', () => {
       recs.forEach(rec => {
         expect(typeof rec).toBe('string');
       });
+    });
+
+    test('handles null/undefined patterns gracefully', async () => {
+      const patterns = {
+        completionRate: 75,
+        commonBlockers: null,
+        coachPerformance: undefined,
+      };
+
+      // Should not throw, should skip null/undefined checks
+      const recs = await PatternAnalyzer.generateRecommendations(patterns);
+
+      expect(Array.isArray(recs)).toBe(true);
+      recs.forEach(rec => {
+        expect(typeof rec).toBe('string');
+      });
+    });
+
+    test('handles missing coach properties in coachPerformance', async () => {
+      const patterns = {
+        completionRate: 85,
+        commonBlockers: [],
+        coachPerformance: [
+          { coachId: 1, completionRate: 90 },
+          { coachId: undefined, completionRate: undefined }, // Missing properties
+        ],
+      };
+
+      const recs = await PatternAnalyzer.generateRecommendations(patterns);
+
+      expect(Array.isArray(recs)).toBe(true);
+      // Should not crash and should include top performer
+      expect(recs.some(r => r.includes('Top performer'))).toBe(true);
     });
   });
 });

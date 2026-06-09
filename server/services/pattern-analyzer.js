@@ -76,7 +76,13 @@ class PatternAnalyzer {
 
     for (const action of actions) {
       if (action.action_type === 'tag' || action.action_type === 'escalate') {
-        const details = action.details ? JSON.parse(action.details) : {};
+        let details = {};
+        try {
+          details = action.details ? JSON.parse(action.details) : {};
+        } catch (err) {
+          console.error(`Failed to parse details JSON for action ${action.id}:`, err.message);
+          details = {};
+        }
         const message = (details.message || '').toLowerCase();
 
         // Extract blocked/stuck mentions
@@ -139,20 +145,20 @@ class PatternAnalyzer {
       recommendations.push('⚠️ Completion rate below 60%. Consider increasing support or reducing task load.');
     }
 
-    if (patterns.commonBlockers.length > 0) {
+    if (patterns?.commonBlockers?.length > 0) {
       const topBlocker = patterns.commonBlockers[0].blocker;
       recommendations.push(`🔒 Top blocker: ${topBlocker}. Consider proactive support for these items.`);
     }
 
-    if (patterns.coachPerformance.length > 0) {
+    if (patterns?.coachPerformance?.length > 0) {
       const topCoach = patterns.coachPerformance[0];
-      recommendations.push(`⭐ Top performer: Coach ${topCoach.coachId} with ${topCoach.completionRate}% completion.`);
+      recommendations.push(`⭐ Top performer: Coach ${topCoach?.coachId || 'N/A'} with ${topCoach?.completionRate || 0}% completion.`);
     }
 
-    if (patterns.coachPerformance.length > 1) {
+    if (patterns?.coachPerformance?.length > 1) {
       const lowPerformer = patterns.coachPerformance[patterns.coachPerformance.length - 1];
-      if (lowPerformer.completionRate < 50) {
-        recommendations.push(`💪 Coach ${lowPerformer.coachId} needs support: ${lowPerformer.completionRate}% completion rate.`);
+      if (lowPerformer?.completionRate < 50) {
+        recommendations.push(`💪 Coach ${lowPerformer?.coachId || 'N/A'} needs support: ${lowPerformer?.completionRate || 0}% completion rate.`);
       }
     }
 

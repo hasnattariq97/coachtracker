@@ -4,14 +4,424 @@
   "graph": {},
   "nodes": [
     {
+      "label": "reporting-agent.test.js",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "agents_reporting_agent_test",
+      "community": 146,
+      "norm_label": "reporting-agent.test.js"
+    },
+    {
+      "label": "ReportingAgent",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "agents_reporting_agent_test_reportingagent",
+      "community": 146,
+      "norm_label": "reportingagent"
+    },
+    {
+      "label": "PatternAnalyzer",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "agents_reporting_agent_test_patternanalyzer",
+      "community": 146,
+      "norm_label": "patternanalyzer"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "agents_reporting_agent_test_db",
+      "community": 146,
+      "norm_label": "db"
+    },
+    {
+      "label": "pattern-analyzer.test.js",
+      "file_type": "code",
+      "source_file": "server/__tests__/services/pattern-analyzer.test.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "services_pattern_analyzer_test",
+      "community": 146,
+      "norm_label": "pattern-analyzer.test.js"
+    },
+    {
+      "label": "PatternAnalyzer",
+      "file_type": "code",
+      "source_file": "server/__tests__/services/pattern-analyzer.test.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "services_pattern_analyzer_test_patternanalyzer",
+      "community": 146,
+      "norm_label": "patternanalyzer"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "server/__tests__/services/pattern-analyzer.test.js",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "services_pattern_analyzer_test_db",
+      "community": 146,
+      "norm_label": "db"
+    },
+    {
+      "label": "reporting-agent.js",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "agents_reporting_agent",
+      "community": 146,
+      "norm_label": "reporting-agent.js"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "agents_reporting_agent_db",
+      "community": 146,
+      "norm_label": "db"
+    },
+    {
+      "label": "PatternAnalyzer",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "agents_reporting_agent_patternanalyzer",
+      "community": 146,
+      "norm_label": "patternanalyzer"
+    },
+    {
+      "label": "ReportingAgent",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "agents_reporting_agent_reportingagent",
+      "community": 146,
+      "norm_label": "reportingagent"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "agents_reporting_agent_reportingagent_constructor",
+      "community": 146,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".run()",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "agents_reporting_agent_reportingagent_run",
+      "community": 146,
+      "norm_label": ".run()"
+    },
+    {
+      "label": "._generateEmailHTML()",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "agents_reporting_agent_reportingagent_generateemailhtml",
+      "community": 146,
+      "norm_label": "._generateemailhtml()"
+    },
+    {
+      "label": "._formatBlocker()",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L151",
+      "_origin": "ast",
+      "id": "agents_reporting_agent_reportingagent_formatblocker",
+      "community": 146,
+      "norm_label": "._formatblocker()"
+    },
+    {
+      "label": "._queueReportEmail()",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L165",
+      "_origin": "ast",
+      "id": "agents_reporting_agent_reportingagent_queuereportemail",
+      "community": 146,
+      "norm_label": "._queuereportemail()"
+    },
+    {
+      "label": "._archiveReport()",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L194",
+      "_origin": "ast",
+      "id": "agents_reporting_agent_reportingagent_archivereport",
+      "community": 146,
+      "norm_label": "._archivereport()"
+    },
+    {
+      "label": "._logAgentError()",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L235",
+      "_origin": "ast",
+      "id": "agents_reporting_agent_reportingagent_logagenterror",
+      "community": 146,
+      "norm_label": "._logagenterror()"
+    },
+    {
+      "label": "pattern-analyzer.js",
+      "file_type": "code",
+      "source_file": "server/services/pattern-analyzer.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "services_pattern_analyzer",
+      "community": 146,
+      "norm_label": "pattern-analyzer.js"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "server/services/pattern-analyzer.js",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "services_pattern_analyzer_db",
+      "community": 146,
+      "norm_label": "db"
+    },
+    {
+      "label": "PatternAnalyzer",
+      "file_type": "code",
+      "source_file": "server/services/pattern-analyzer.js",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "services_pattern_analyzer_patternanalyzer",
+      "community": 146,
+      "norm_label": "patternanalyzer"
+    },
+    {
+      "label": ".analyze24HourActions()",
+      "file_type": "code",
+      "source_file": "server/services/pattern-analyzer.js",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "services_pattern_analyzer_patternanalyzer_analyze24houractions",
+      "community": 146,
+      "norm_label": ".analyze24houractions()"
+    },
+    {
+      "label": "._parseCommonBlockers()",
+      "file_type": "code",
+      "source_file": "server/services/pattern-analyzer.js",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "services_pattern_analyzer_patternanalyzer_parsecommonblockers",
+      "community": 146,
+      "norm_label": "._parsecommonblockers()"
+    },
+    {
+      "label": "._analyzeCoachPerformance()",
+      "file_type": "code",
+      "source_file": "server/services/pattern-analyzer.js",
+      "source_location": "L101",
+      "_origin": "ast",
+      "id": "services_pattern_analyzer_patternanalyzer_analyzecoachperformance",
+      "community": 146,
+      "norm_label": "._analyzecoachperformance()"
+    },
+    {
+      "label": ".generateRecommendations()",
+      "file_type": "code",
+      "source_file": "server/services/pattern-analyzer.js",
+      "source_location": "L133",
+      "_origin": "ast",
+      "id": "services_pattern_analyzer_patternanalyzer_generaterecommendations",
+      "community": 146,
+      "norm_label": ".generaterecommendations()"
+    },
+    {
+      "label": "support-agent.test.js",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/support-agent.test.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "support-agent.test.js",
+      "id": "agents_support_agent_test"
+    },
+    {
+      "label": "SupportAgent",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/support-agent.test.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "supportagent",
+      "id": "agents_support_agent_test_supportagent"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/support-agent.test.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "db",
+      "id": "agents_support_agent_test_db"
+    },
+    {
+      "label": "support-agent.js",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "support-agent.js",
+      "id": "agents_support_agent"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "db",
+      "id": "agents_support_agent_db"
+    },
+    {
+      "label": "GoogleSheetsClient",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L22",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "googlesheetsclient",
+      "id": "agents_support_agent_googlesheetsclient"
+    },
+    {
+      "label": "SupportAgent",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L24",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "supportagent",
+      "id": "agents_support_agent_supportagent"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L25",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": ".constructor()",
+      "id": "agents_support_agent_supportagent_constructor"
+    },
+    {
+      "label": ".run()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L38",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": ".run()",
+      "id": "agents_support_agent_supportagent_run"
+    },
+    {
+      "label": "._decideIntervention()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L88",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "._decideintervention()",
+      "id": "agents_support_agent_supportagent_decideintervention"
+    },
+    {
+      "label": "._executeIntervention()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L174",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "._executeintervention()",
+      "id": "agents_support_agent_supportagent_executeintervention"
+    },
+    {
+      "label": "._tagInSheet()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L227",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "._taginsheet()",
+      "id": "agents_support_agent_supportagent_taginsheet"
+    },
+    {
+      "label": "._queueEmail()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L263",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "._queueemail()",
+      "id": "agents_support_agent_supportagent_queueemail"
+    },
+    {
+      "label": "._queueEmailToAdmin()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L280",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "._queueemailtoadmin()",
+      "id": "agents_support_agent_supportagent_queueemailtoadmin"
+    },
+    {
+      "label": "._checkRecentAction()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L311",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "._checkrecentaction()",
+      "id": "agents_support_agent_supportagent_checkrecentaction"
+    },
+    {
+      "label": "._logAgentError()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L360",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "._logagenterror()",
+      "id": "agents_support_agent_supportagent_logagenterror"
+    },
+    {
       "label": "monitoring-agent.js",
       "file_type": "code",
       "source_file": "server/agents/monitoring-agent.js",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "agents_monitoring_agent",
       "community": 221,
-      "norm_label": "monitoring-agent.js"
+      "norm_label": "monitoring-agent.js",
+      "id": "agents_monitoring_agent"
     },
     {
       "label": "db",
@@ -19,9 +429,9 @@
       "source_file": "server/agents/monitoring-agent.js",
       "source_location": "L21",
       "_origin": "ast",
-      "id": "agents_monitoring_agent_db",
       "community": 221,
-      "norm_label": "db"
+      "norm_label": "db",
+      "id": "agents_monitoring_agent_db"
     },
     {
       "label": "GoogleSheetsClient",
@@ -29,9 +439,9 @@
       "source_file": "server/agents/monitoring-agent.js",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "agents_monitoring_agent_googlesheetsclient",
       "community": 221,
-      "norm_label": "googlesheetsclient"
+      "norm_label": "googlesheetsclient",
+      "id": "agents_monitoring_agent_googlesheetsclient"
     },
     {
       "label": "MonitoringAgent",
@@ -39,9 +449,9 @@
       "source_file": "server/agents/monitoring-agent.js",
       "source_location": "L24",
       "_origin": "ast",
-      "id": "agents_monitoring_agent_monitoringagent",
       "community": 221,
-      "norm_label": "monitoringagent"
+      "norm_label": "monitoringagent",
+      "id": "agents_monitoring_agent_monitoringagent"
     },
     {
       "label": ".constructor()",
@@ -49,9 +459,9 @@
       "source_file": "server/agents/monitoring-agent.js",
       "source_location": "L40",
       "_origin": "ast",
-      "id": "agents_monitoring_agent_monitoringagent_constructor",
       "community": 221,
-      "norm_label": ".constructor()"
+      "norm_label": ".constructor()",
+      "id": "agents_monitoring_agent_monitoringagent_constructor"
     },
     {
       "label": ".run()",
@@ -59,9 +469,9 @@
       "source_file": "server/agents/monitoring-agent.js",
       "source_location": "L49",
       "_origin": "ast",
-      "id": "agents_monitoring_agent_monitoringagent_run",
       "community": 221,
-      "norm_label": ".run()"
+      "norm_label": ".run()",
+      "id": "agents_monitoring_agent_monitoringagent_run"
     },
     {
       "label": "._analyzeTask()",
@@ -69,9 +479,9 @@
       "source_file": "server/agents/monitoring-agent.js",
       "source_location": "L90",
       "_origin": "ast",
-      "id": "agents_monitoring_agent_monitoringagent_analyzetask",
       "community": 221,
-      "norm_label": "._analyzetask()"
+      "norm_label": "._analyzetask()",
+      "id": "agents_monitoring_agent_monitoringagent_analyzetask"
     },
     {
       "label": "._analyzeSheet()",
@@ -79,9 +489,9 @@
       "source_file": "server/agents/monitoring-agent.js",
       "source_location": "L160",
       "_origin": "ast",
-      "id": "agents_monitoring_agent_monitoringagent_analyzesheet",
       "community": 221,
-      "norm_label": "._analyzesheet()"
+      "norm_label": "._analyzesheet()",
+      "id": "agents_monitoring_agent_monitoringagent_analyzesheet"
     },
     {
       "label": "._detectCoachPattern()",
@@ -89,9 +499,9 @@
       "source_file": "server/agents/monitoring-agent.js",
       "source_location": "L221",
       "_origin": "ast",
-      "id": "agents_monitoring_agent_monitoringagent_detectcoachpattern",
       "community": 221,
-      "norm_label": "._detectcoachpattern()"
+      "norm_label": "._detectcoachpattern()",
+      "id": "agents_monitoring_agent_monitoringagent_detectcoachpattern"
     },
     {
       "label": "._calculateCompletion()",
@@ -99,9 +509,9 @@
       "source_file": "server/agents/monitoring-agent.js",
       "source_location": "L274",
       "_origin": "ast",
-      "id": "agents_monitoring_agent_monitoringagent_calculatecompletion",
       "community": 221,
-      "norm_label": "._calculatecompletion()"
+      "norm_label": "._calculatecompletion()",
+      "id": "agents_monitoring_agent_monitoringagent_calculatecompletion"
     },
     {
       "label": "._findMissingSections()",
@@ -109,9 +519,9 @@
       "source_file": "server/agents/monitoring-agent.js",
       "source_location": "L287",
       "_origin": "ast",
-      "id": "agents_monitoring_agent_monitoringagent_findmissingsections",
       "community": 221,
-      "norm_label": "._findmissingsections()"
+      "norm_label": "._findmissingsections()",
+      "id": "agents_monitoring_agent_monitoringagent_findmissingsections"
     },
     {
       "label": "._findBlockers()",
@@ -119,9 +529,9 @@
       "source_file": "server/agents/monitoring-agent.js",
       "source_location": "L311",
       "_origin": "ast",
-      "id": "agents_monitoring_agent_monitoringagent_findblockers",
       "community": 221,
-      "norm_label": "._findblockers()"
+      "norm_label": "._findblockers()",
+      "id": "agents_monitoring_agent_monitoringagent_findblockers"
     },
     {
       "label": "._logAgentError()",
@@ -129,9 +539,9 @@
       "source_file": "server/agents/monitoring-agent.js",
       "source_location": "L331",
       "_origin": "ast",
-      "id": "agents_monitoring_agent_monitoringagent_logagenterror",
       "community": 221,
-      "norm_label": "._logagenterror()"
+      "norm_label": "._logagenterror()",
+      "id": "agents_monitoring_agent_monitoringagent_logagenterror"
     },
     {
       "label": "monitoring-agent.test.js",
@@ -7249,7 +7659,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1131",
-      "community": 219,
+      "community": 222,
       "norm_label": "code:bash (#!/bin/bash)",
       "id": "claude_master_capabilities_codeblock_63"
     },
@@ -7258,7 +7668,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1148",
-      "community": 219,
+      "community": 222,
       "norm_label": "code:bash (#!/bin/bash)",
       "id": "claude_master_capabilities_codeblock_64"
     },
@@ -7303,7 +7713,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1263",
-      "community": 219,
+      "community": 222,
       "norm_label": "claude code cli",
       "id": "claude_master_capabilities_claude_code_cli"
     },
@@ -7312,7 +7722,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1267",
-      "community": 219,
+      "community": 222,
       "norm_label": "code:bash (# macos)",
       "id": "claude_master_capabilities_codeblock_69"
     },
@@ -7321,7 +7731,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1284",
-      "community": 219,
+      "community": 222,
       "norm_label": "code:bash (claude-code --version)",
       "id": "claude_master_capabilities_codeblock_70"
     },
@@ -7384,7 +7794,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1349",
-      "community": 219,
+      "community": 222,
       "norm_label": "custom skills & agents",
       "id": "claude_master_capabilities_custom_skills_agents"
     },
@@ -7402,7 +7812,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1370",
-      "community": 219,
+      "community": 222,
       "norm_label": "code:markdown (---)",
       "id": "claude_master_capabilities_codeblock_76"
     },
@@ -7411,7 +7821,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1386",
-      "community": 219,
+      "community": 222,
       "norm_label": "code:json ({)",
       "id": "claude_master_capabilities_codeblock_77"
     },
@@ -7474,7 +7884,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1478",
-      "community": 62,
+      "community": 223,
       "norm_label": "plugin checklist for new projects",
       "id": "claude_master_capabilities_plugin_checklist_for_new_projects"
     },
@@ -7483,7 +7893,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1480",
-      "community": 62,
+      "community": 223,
       "norm_label": "code:bash (# step 1: initialize claude code)",
       "id": "claude_master_capabilities_codeblock_82"
     },
@@ -7492,7 +7902,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1518",
-      "community": 62,
+      "community": 223,
       "norm_label": "for agents",
       "id": "claude_master_capabilities_for_agents"
     },
@@ -7501,7 +7911,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1525",
-      "community": 62,
+      "community": 223,
       "norm_label": "for projects",
       "id": "claude_master_capabilities_for_projects"
     },
@@ -7510,7 +7920,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1532",
-      "community": 62,
+      "community": 223,
       "norm_label": "for teams",
       "id": "claude_master_capabilities_for_teams"
     },
@@ -20443,7 +20853,7 @@
       "file_type": "code",
       "source_file": "server/auth.js",
       "source_location": "L57",
-      "community": 63,
+      "community": 120,
       "norm_label": "requireadmin()",
       "id": "server_auth_requireadmin"
     },
@@ -20461,7 +20871,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L1",
-      "community": 215,
+      "community": 63,
       "norm_label": "test-api.js",
       "id": "server_test_api_js"
     },
@@ -20470,7 +20880,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L2",
-      "community": 215,
+      "community": 63,
       "norm_label": "express",
       "id": "server_test_api_express"
     },
@@ -20479,7 +20889,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L3",
-      "community": 215,
+      "community": 63,
       "norm_label": "db",
       "id": "server_test_api_db"
     },
@@ -20488,7 +20898,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L4",
-      "community": 215,
+      "community": 63,
       "norm_label": "{ authenticatetoken, requireadmin }",
       "id": "server_test_api_authenticatetoken_requireadmin"
     },
@@ -20497,7 +20907,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L6",
-      "community": 215,
+      "community": 63,
       "norm_label": "app",
       "id": "server_test_api_app"
     },
@@ -20506,7 +20916,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L24",
-      "community": 215,
+      "community": 63,
       "norm_label": "result",
       "id": "server_test_api_result"
     },
@@ -20515,7 +20925,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L33",
-      "community": 215,
+      "community": 63,
       "norm_label": "coaches",
       "id": "server_test_api_coaches"
     },
@@ -20767,7 +21177,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L1",
-      "community": 63,
+      "community": 219,
       "norm_label": "test-with-db.js",
       "id": "server_test_with_db_js"
     },
@@ -20776,7 +21186,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L2",
-      "community": 63,
+      "community": 219,
       "norm_label": "express",
       "id": "server_test_with_db_express"
     },
@@ -20785,7 +21195,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L3",
-      "community": 63,
+      "community": 219,
       "norm_label": "cors",
       "id": "server_test_with_db_cors"
     },
@@ -20794,7 +21204,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L4",
-      "community": 63,
+      "community": 219,
       "norm_label": "db",
       "id": "server_test_with_db_db"
     },
@@ -20803,7 +21213,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L5",
-      "community": 63,
+      "community": 219,
       "norm_label": "{ authenticatetoken, requireadmin }",
       "id": "server_test_with_db_authenticatetoken_requireadmin"
     },
@@ -20812,7 +21222,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L6",
-      "community": 63,
+      "community": 219,
       "norm_label": "{ schedulejobs }",
       "id": "server_test_with_db_schedulejobs"
     },
@@ -20821,7 +21231,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L8",
-      "community": 63,
+      "community": 219,
       "norm_label": "app",
       "id": "server_test_with_db_app"
     },
@@ -20830,7 +21240,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L13",
-      "community": 63,
+      "community": 219,
       "norm_label": "corsoptions",
       "id": "server_test_with_db_corsoptions"
     },
@@ -20839,7 +21249,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L1",
-      "community": 63,
+      "community": 120,
       "norm_label": "test-with-notifications-route.js",
       "id": "server_test_with_notifications_route_js"
     },
@@ -20848,7 +21258,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L2",
-      "community": 63,
+      "community": 120,
       "norm_label": "express",
       "id": "server_test_with_notifications_route_express"
     },
@@ -20857,7 +21267,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L3",
-      "community": 63,
+      "community": 120,
       "norm_label": "cors",
       "id": "server_test_with_notifications_route_cors"
     },
@@ -20866,7 +21276,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L4",
-      "community": 63,
+      "community": 120,
       "norm_label": "{ authenticatetoken, requireadmin }",
       "id": "server_test_with_notifications_route_authenticatetoken_requireadmin"
     },
@@ -20875,7 +21285,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L5",
-      "community": 63,
+      "community": 120,
       "norm_label": "{ schedulejobs }",
       "id": "server_test_with_notifications_route_schedulejobs"
     },
@@ -20884,7 +21294,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L7",
-      "community": 63,
+      "community": 120,
       "norm_label": "app",
       "id": "server_test_with_notifications_route_app"
     },
@@ -20893,7 +21303,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L12",
-      "community": 63,
+      "community": 120,
       "norm_label": "corsoptions",
       "id": "server_test_with_notifications_route_corsoptions"
     },
@@ -24610,7 +25020,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L596",
-      "community": 146,
+      "community": 32,
       "norm_label": "task 6: implement login endpoint (red)",
       "id": "plans_2026_05_17_phase1_auth_system_task_6_implement_login_endpoint_red"
     },
@@ -24619,7 +25029,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L607",
-      "community": 146,
+      "community": 32,
       "norm_label": "code:javascript (import request from 'supertest';)",
       "id": "plans_2026_05_17_phase1_auth_system_codeblock_28"
     },
@@ -24628,7 +25038,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L709",
-      "community": 146,
+      "community": 32,
       "norm_label": "code:bash (cd d:\\cursor_new\\server)",
       "id": "plans_2026_05_17_phase1_auth_system_codeblock_29"
     },
@@ -24790,7 +25200,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L1130",
-      "community": 32,
+      "community": 224,
       "norm_label": "task 11: create protectedroute component (red)",
       "id": "plans_2026_05_17_phase1_auth_system_task_11_create_protectedroute_component_red"
     },
@@ -24799,7 +25209,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L1140",
-      "community": 32,
+      "community": 224,
       "norm_label": "code:javascript (import { render, screen } from '@testing-library/react';)",
       "id": "plans_2026_05_17_phase1_auth_system_codeblock_43"
     },
@@ -24808,7 +25218,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L1226",
-      "community": 32,
+      "community": 224,
       "norm_label": "code:bash (cd d:\\cursor_new\\client)",
       "id": "plans_2026_05_17_phase1_auth_system_codeblock_44"
     },
@@ -25150,7 +25560,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L922",
-      "community": 62,
+      "community": 223,
       "norm_label": "distribution & usage",
       "id": "claude_master_capabilities_distribution_usage"
     },
@@ -27100,6 +27510,565 @@
     }
   ],
   "links": [
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "agents_reporting_agent_test",
+      "target": "agents_reporting_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "agents_reporting_agent_test",
+      "target": "agents_reporting_agent_test_db",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "agents_reporting_agent_test",
+      "target": "agents_reporting_agent_test_patternanalyzer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "agents_reporting_agent_test",
+      "target": "agents_reporting_agent_test_reportingagent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "agents_reporting_agent_test",
+      "target": "services_pattern_analyzer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/services/pattern-analyzer.test.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "services_pattern_analyzer_test",
+      "target": "services_pattern_analyzer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/services/pattern-analyzer.test.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "services_pattern_analyzer_test",
+      "target": "services_pattern_analyzer_test_db",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/services/pattern-analyzer.test.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "services_pattern_analyzer_test",
+      "target": "services_pattern_analyzer_test_patternanalyzer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "agents_reporting_agent",
+      "target": "agents_reporting_agent_db",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "agents_reporting_agent",
+      "target": "agents_reporting_agent_patternanalyzer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "agents_reporting_agent",
+      "target": "agents_reporting_agent_reportingagent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "agents_reporting_agent",
+      "target": "services_pattern_analyzer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L194",
+      "weight": 1.0,
+      "source": "agents_reporting_agent_reportingagent",
+      "target": "agents_reporting_agent_reportingagent_archivereport",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "agents_reporting_agent_reportingagent",
+      "target": "agents_reporting_agent_reportingagent_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "agents_reporting_agent_reportingagent",
+      "target": "agents_reporting_agent_reportingagent_formatblocker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "agents_reporting_agent_reportingagent",
+      "target": "agents_reporting_agent_reportingagent_generateemailhtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L235",
+      "weight": 1.0,
+      "source": "agents_reporting_agent_reportingagent",
+      "target": "agents_reporting_agent_reportingagent_logagenterror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L165",
+      "weight": 1.0,
+      "source": "agents_reporting_agent_reportingagent",
+      "target": "agents_reporting_agent_reportingagent_queuereportemail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "agents_reporting_agent_reportingagent",
+      "target": "agents_reporting_agent_reportingagent_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "agents_reporting_agent_reportingagent_run",
+      "target": "agents_reporting_agent_reportingagent_archivereport",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "agents_reporting_agent_reportingagent_run",
+      "target": "agents_reporting_agent_reportingagent_generateemailhtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "agents_reporting_agent_reportingagent_run",
+      "target": "agents_reporting_agent_reportingagent_logagenterror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "agents_reporting_agent_reportingagent_run",
+      "target": "agents_reporting_agent_reportingagent_queuereportemail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/pattern-analyzer.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "services_pattern_analyzer",
+      "target": "services_pattern_analyzer_db",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/pattern-analyzer.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "services_pattern_analyzer",
+      "target": "services_pattern_analyzer_patternanalyzer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/pattern-analyzer.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "services_pattern_analyzer_patternanalyzer",
+      "target": "services_pattern_analyzer_patternanalyzer_analyze24houractions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/pattern-analyzer.js",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "services_pattern_analyzer_patternanalyzer",
+      "target": "services_pattern_analyzer_patternanalyzer_analyzecoachperformance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/pattern-analyzer.js",
+      "source_location": "L133",
+      "weight": 1.0,
+      "source": "services_pattern_analyzer_patternanalyzer",
+      "target": "services_pattern_analyzer_patternanalyzer_generaterecommendations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/pattern-analyzer.js",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "services_pattern_analyzer_patternanalyzer",
+      "target": "services_pattern_analyzer_patternanalyzer_parsecommonblockers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/pattern-analyzer.js",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "services_pattern_analyzer_patternanalyzer_analyze24houractions",
+      "target": "services_pattern_analyzer_patternanalyzer_analyzecoachperformance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/pattern-analyzer.js",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "services_pattern_analyzer_patternanalyzer_analyze24houractions",
+      "target": "services_pattern_analyzer_patternanalyzer_parsecommonblockers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/support-agent.test.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_test",
+      "target": "agents_support_agent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/support-agent.test.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_test",
+      "target": "agents_support_agent_test_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/support-agent.test.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_test",
+      "target": "agents_support_agent_test_supportagent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent",
+      "target": "agents_support_agent_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent",
+      "target": "agents_support_agent_googlesheetsclient"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent",
+      "target": "agents_support_agent_supportagent"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L311",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_checkrecentaction"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L88",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_decideintervention"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L174",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_executeintervention"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L360",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_logagenterror"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L263",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_queueemail"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L280",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_queueemailtoadmin"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_run"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L227",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_taginsheet"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L64",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_run",
+      "target": "agents_support_agent_supportagent_decideintervention"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_run",
+      "target": "agents_support_agent_supportagent_executeintervention"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_run",
+      "target": "agents_support_agent_supportagent_logagenterror"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L147",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_decideintervention",
+      "target": "agents_support_agent_supportagent_checkrecentaction"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L219",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_executeintervention",
+      "target": "agents_support_agent_supportagent_logagenterror"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L195",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_executeintervention",
+      "target": "agents_support_agent_supportagent_queueemail"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L206",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_executeintervention",
+      "target": "agents_support_agent_supportagent_queueemailtoadmin"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L184",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_executeintervention",
+      "target": "agents_support_agent_supportagent_taginsheet"
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -60241,5 +61210,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9408d28d3ad097965ff7d519666685cee7cce1ce"
+  "built_at_commit": "67782f8cd666c9f40fd51c3e248141e76ae10f97"
 }

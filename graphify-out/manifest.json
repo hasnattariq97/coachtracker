@@ -1318,5 +1318,35 @@
     "mtime": 1780989719.526183,
     "ast_hash": "70eac4b6a85ec8770d747f768fdb15ae",
     "semantic_hash": ""
+  },
+  "server/__tests__/agents/support-agent.test.js": {
+    "mtime": 1780989914.2300887,
+    "ast_hash": "79f8b72673ff9ebceaedf5fa3809667c",
+    "semantic_hash": ""
+  },
+  "server/agents/support-agent.js": {
+    "mtime": 1780989865.676539,
+    "ast_hash": "5cfc279eceffa7c5b10e44744562b880",
+    "semantic_hash": ""
+  },
+  "server/__tests__/agents/reporting-agent.test.js": {
+    "mtime": 1780990283.171359,
+    "ast_hash": "c1516a88b62d66cbc8d672698e2a6e5d",
+    "semantic_hash": ""
+  },
+  "server/__tests__/services/pattern-analyzer.test.js": {
+    "mtime": 1780990264.10109,
+    "ast_hash": "0b990f1a633d81f1ea0037206bfdadde",
+    "semantic_hash": ""
+  },
+  "server/agents/reporting-agent.js": {
+    "mtime": 1780990225.818916,
+    "ast_hash": "b5f8f16331c827ef9636ff0091437141",
+    "semantic_hash": ""
+  },
+  "server/services/pattern-analyzer.js": {
+    "mtime": 1780990207.0724964,
+    "ast_hash": "a96ecea8ba500039752c3daabb533fcd",
+    "semantic_hash": ""
   }
 }
