@@ -290,8 +290,8 @@
     "semantic_hash": ""
   },
   "client/src/pages/LoginPage.jsx": {
-    "mtime": 1780471485.3507812,
-    "ast_hash": "ba3ea7090fbd52c91db5451d1ef558f7",
+    "mtime": 1780985516.0344112,
+    "ast_hash": "946f1d9f93db9811b37e5e2ff782cbc8",
     "semantic_hash": ""
   },
   "client/src/pages/LoginPage.test.jsx": {
@@ -310,8 +310,8 @@
     "semantic_hash": ""
   },
   "client/src/pages/admin/Dashboard.jsx": {
-    "mtime": 1780381708.3200727,
-    "ast_hash": "502c248524d28d2811943f48e57bf916",
+    "mtime": 1780984901.7316866,
+    "ast_hash": "78dd4120c0903a51c138894851e437e6",
     "semantic_hash": ""
   },
   "client/src/pages/admin/TaskBoard.jsx": {
@@ -385,8 +385,8 @@
     "semantic_hash": ""
   },
   "server/db.js": {
-    "mtime": 1780945740.0770595,
-    "ast_hash": "d7a20571a36023a6d1a45a9f730a938e",
+    "mtime": 1780988323.6188424,
+    "ast_hash": "3d488c480560be57aa1d2699db7c59eb",
     "semantic_hash": ""
   },
   "server/db.test.js": {
@@ -410,8 +410,8 @@
     "semantic_hash": ""
   },
   "server/package.json": {
-    "mtime": 1780945740.0780647,
-    "ast_hash": "1fc3bb9a5f70efd47bf3d1b4acf442ca",
+    "mtime": 1780988358.7244394,
+    "ast_hash": "4a979ce8fa6a1be0fc0ce4cb774ac846",
     "semantic_hash": ""
   },
   "server/seed-admin.js": {
@@ -495,8 +495,8 @@
     "semantic_hash": ""
   },
   "server/routes/coaches.js": {
-    "mtime": 1780756440.682726,
-    "ast_hash": "3762e425d41c13627032c8b3359352a0",
+    "mtime": 1780984894.2789779,
+    "ast_hash": "63773c19cef395870d2ab5a90ce8aadb",
     "semantic_hash": ""
   },
   "server/routes/coaching-insights.js": {
@@ -1272,6 +1272,41 @@
   "docs/superpowers/specs/2026-06-08-email-notifications-design.md": {
     "mtime": 1780910596.367571,
     "ast_hash": "61392055b7a9cc2eb0f669481c7ae9e5",
+    "semantic_hash": ""
+  },
+  ".superpowers/brainstorm/394056-1780987196/content/phase9-architectures.html": {
+    "mtime": 1780987238.4928386,
+    "ast_hash": "4ccd841e0ada23edf6a1947721ddb91c",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-06-09-phase9-autonomous-coaching-design.md": {
+    "mtime": 1780987689.8967476,
+    "ast_hash": "b3275ac68651eea9e944e21390dde17c",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/AGENT-HANDOFF-PHASE9.md": {
+    "mtime": 1780988059.7388318,
+    "ast_hash": "9c8990b46881b08539b5b94d1401041d",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-06-09-phase9-autonomous-coaching-plan.md": {
+    "mtime": 1780988031.8378525,
+    "ast_hash": "7c57ee178cc027a9e78a1e29a32b60be",
+    "semantic_hash": ""
+  },
+  "server/__tests__/services/google-sheets-client.test.js": {
+    "mtime": 1780988946.916216,
+    "ast_hash": "dce945b6d89acaae9bfe768ff1d132f8",
+    "semantic_hash": ""
+  },
+  "server/db-migrations/phase9-schema.js": {
+    "mtime": 1780988311.8143396,
+    "ast_hash": "738b36e8b689fb5a60a1c9b336f221c7",
+    "semantic_hash": ""
+  },
+  "server/services/google-sheets-client.js": {
+    "mtime": 1780988888.3642035,
+    "ast_hash": "9c4a18ffca87f63310797f8577ab3991",
     "semantic_hash": ""
   }
 }

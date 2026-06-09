@@ -1,0 +1,439 @@
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f8f9fa;
+    padding: 40px 20px;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 32px;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+
+  .architectures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .arch-card {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .arch-card:hover {
+    border-color: #0d9488;
+    box-shadow: 0 4px 16px rgba(13, 148, 136, 0.1);
+  }
+
+  .arch-card.selected {
+    border-color: #0d9488;
+    background: #f0fffe;
+    box-shadow: 0 4px 16px rgba(13, 148, 136, 0.2);
+  }
+
+  .arch-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0d9488;
+    margin-bottom: 16px;
+  }
+
+  .diagram {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    font-family: monospace;
+    line-height: 1.6;
+    overflow-x: auto;
+  }
+
+  .pros, .cons {
+    margin-bottom: 12px;
+  }
+
+  .pros h4, .cons h4 {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .pros h4 {
+    color: #16a34a;
+  }
+
+  .cons h4 {
+    color: #dc2626;
+  }
+
+  .pros ul, .cons ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .pros li {
+    color: #16a34a;
+  }
+
+  .cons li {
+    color: #dc2626;
+  }
+
+  .selected-info {
+    background: white;
+    border: 2px solid #0d9488;
+    border-radius: 12px;
+    padding: 28px;
+    margin-top: 40px;
+  }
+
+  .selected-info h2 {
+    color: #0d9488;
+    margin-top: 0;
+  }
+
+  .description {
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .data-flow {
+    background: #f5f5f5;
+    border-left: 4px solid #0d9488;
+    padding: 16px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .tech-stack {
+    background: #f0fffe;
+    border: 1px solid #0d9488;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .tech-stack h4 {
+    margin: 0 0 12px 0;
+    color: #0d9488;
+    font-size: 14px;
+  }
+
+  .tech-stack ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 13px;
+  }
+
+  .best-for {
+    background: #fef3c7;
+    border-left: 4px solid #ea580c;
+    padding: 16px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  .best-for h4 {
+    margin: 0 0 8px 0;
+    color: #ea580c;
+    font-size: 14px;
+  }
+
+  .best-for p {
+    margin: 0;
+    color: #333;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-select {
+    background: #0d9488;
+    color: white;
+    flex: 1;
+  }
+
+  .btn-select:hover {
+    background: #0f7962;
+  }
+
+  .btn-select.active {
+    background: #0a5f54;
+  }
+</style>
+
+<div class="container">
+  <h1>Phase 9: Architecture Options</h1>
+  <p class="subtitle">Three approaches to autonomous multi-agent coaching system</p>
+
+  <div class="architectures" id="architectures"></div>
+
+  <div id="selectedSection" style="display: none;">
+    <div class="selected-info" id="selectedDetail"></div>
+  </div>
+</div>
+
+<script>
+const architectures = [
+  {
+    id: 'ruflo',
+    name: 'Ruflo Multi-Agent Orchestration',
+    diagram: `Agent Swarm (Parallel):
+┌─────────────────────────────────────┐
+│  Ruflo Orchestrator (AgentDB)        │
+│                                     │
+│  ┌────────────┐ ┌────────────────┐ │
+│  │ Monitoring │ │ Support Agent  │ │
+│  │   Agent    │ │ (Parallel)     │ │
+│  └─────┬──────┘ └────────┬───────┘ │
+│        │                 │          │
+│  ┌─────▼──────┐ ┌────────▼───────┐ │
+│  │ Reporting  │ │ Intervention   │ │
+│  │   Agent    │ │    Engine      │ │
+│  └────────────┘ └────────────────┘ │
+│                                     │
+│  AgentDB Shared State:              │
+│  - phase-9-monitoring               │
+│  - phase-9-support                  │
+│  - phase-9-reporting                │
+└─────────────────────────────────────┘`,
+    pros: [
+      'Agents work in parallel (fastest)',
+      'Shared state via AgentDB (agents see each others\' work)',
+      'Sophisticated coordination possible',
+      'Scales to 100+ agents (you built this for Phase 7)',
+      'Each agent can make smart decisions based on others'
+    ],
+    cons: [
+      'Most complex setup (requires Ruflo/MCP)',
+      'Hardest to debug (parallel execution)',
+      'Requires careful error handling',
+      'Higher token/API cost (agents call each other)',
+      'Learning curve (new system for your team)'
+    ],
+    bestFor: 'If you want maximum sophistication and can handle complexity. Future-proof if you scale to coaching at massive scale.',
+    dataFlow: `Monitoring → AgentDB → Support → AgentDB → Reporting
+(All agents can read/write shared state in real-time)`,
+    techStack: [
+      'Ruflo orchestration framework (existing)',
+      'AgentDB namespaces (phase-9-*)',
+      'Groq API for agent logic',
+      'PostgreSQL for event logging',
+      'Google Sheets API (shared across agents)'
+    ]
+  },
+  {
+    id: 'eventdriven',
+    name: 'Event-Driven Architecture',
+    diagram: `Event Pipeline (Decoupled):
+┌──────────────────────────────────────┐
+│  Monitoring Agent (Cron Job)         │
+│  - Reads all tasks                   │
+│  - Detects issues                    │
+│  - Publishes to: coach_alerts table  │
+└──────────────┬───────────────────────┘
+               │
+        ┌──────▼──────┐
+        │ coach_alerts│ (Event Store)
+        │   TABLE     │
+        └──────┬──────┘
+               │
+    ┌──────────┼──────────┐
+    │          │          │
+┌───▼──────┐ ┌▼────────┐ ┌▼────────────┐
+│ Support  │ │Reporting│ │Intervention │
+│ Agent    │ │ Agent   │ │  Engine     │
+│(Reads    │ │(Reads   │ │ (Monitors)  │
+│alerts)   │ │alerts)  │ │             │
+└──────────┘ └─────────┘ └─────────────┘`,
+    pros: [
+      'Fully decoupled (agents don\'t depend on each other)',
+      'Easy to understand (sequential events)',
+      'Fits your existing architecture (already use PostgreSQL)',
+      'Simple to test (mock event table)',
+      'Easy to debug (see what events were published)',
+      'Can add new agents later (just subscribe to events)'
+    ],
+    cons: [
+      'Slightly slower (sequential, not parallel)',
+      'Agents don\'t collaborate (no real-time feedback)',
+      'Event table could get large (need pruning)',
+      'Harder to handle complex decision-making across agents'
+    ],
+    bestFor: 'If you want a clean, maintainable system you can understand and extend. Good balance of power and simplicity.',
+    dataFlow: `Monitoring → coach_alerts → Support → Reporting
+(Each agent reads previous stage\'s output from database)`,
+    techStack: [
+      'Node-cron (existing)',
+      'coach_alerts table (new)',
+      'PostgreSQL (existing)',
+      'Groq API for agent logic',
+      'Google Sheets API'
+    ]
+  },
+  {
+    id: 'batch',
+    name: 'Batch Processing Pipeline',
+    diagram: `Sequential Batch Jobs (Simple):
+┌──────────────────────────────────┐
+│ Cron: Every 30 minutes            │
+│                                  │
+│ 1. Monitoring Agent              │
+│    ↓ Reads tasks, fills          │
+│      monitoring_results table     │
+│                                  │
+│ 2. Support Agent                 │
+│    ↓ Reads monitoring_results,   │
+│      takes actions, fills        │
+│      support_actions table       │
+│                                  │
+│ 3. Reporting Agent               │
+│    ↓ Reads both tables,          │
+│      generates daily report      │
+│                                  │
+│ 4. Cleanup                       │
+│    ↓ Archives old results        │
+└──────────────────────────────────┘`,
+    pros: [
+      'Simplest architecture (no frameworks needed)',
+      'Easy to understand (3 sequential functions)',
+      'Fits Node.js + cron pattern (already doing this)',
+      'Easiest to debug (see input/output at each stage)',
+      'Least complexity (fewest moving parts)',
+      'Natural error recovery (failed job runs next cycle)'
+    ],
+    cons: [
+      'Agents don\'t share insights in real-time',
+      'Results only update every 30min (latency)',
+      'All three jobs must complete or all fail',
+      'No intelligence crossing agent boundaries',
+      'Harder to make agents "smart together"'
+    ],
+    bestFor: 'If you want to ship fast and keep it simple. Start here, upgrade to Event-Driven or Ruflo later if needed.',
+    dataFlow: `Task Data → Monitoring Results → Support Actions → Report
+(Sequential tables, each agent reads previous stage)`,
+    techStack: [
+      'Node-cron (existing)',
+      'monitoring_results table (new)',
+      'support_actions table (new)',
+      'PostgreSQL (existing)',
+      'Groq API for agent logic',
+      'Google Sheets API'
+    ]
+  }
+];
+
+function renderArchitectures() {
+  const container = document.getElementById('architectures');
+  const html = architectures.map(arch => `
+    <div class="arch-card" data-id="${arch.id}">
+      <div class="arch-title">${arch.name}</div>
+      <div class="diagram">${arch.diagram}</div>
+      <div class="pros">
+        <h4>✓ Pros</h4>
+        <ul>${arch.pros.map(p => `<li>${p}</li>`).join('')}</ul>
+      </div>
+      <div class="cons">
+        <h4>✗ Cons</h4>
+        <ul>${arch.cons.map(c => `<li>${c}</li>`).join('')}</ul>
+      </div>
+      <button class="btn-select" onclick="selectArchitecture('${arch.id}')">
+        Choose This Approach
+      </button>
+    </div>
+  `).join('');
+  container.innerHTML = html;
+}
+
+function selectArchitecture(id) {
+  const arch = architectures.find(a => a.id === id);
+
+  document.querySelectorAll('.arch-card').forEach(card => {
+    card.classList.remove('selected');
+  });
+  document.querySelector(`[data-id="${id}"]`).classList.add('selected');
+
+  const detailHtml = `
+    <h2>${arch.name}</h2>
+    <p class="description">${arch.name} means your agents work ${id === 'ruflo' ? 'in parallel with shared state' : id === 'eventdriven' ? 'in a decoupled event pipeline' : 'sequentially in a batch job'}. This approach ${arch.bestFor.toLowerCase()}</p>
+
+    <div class="data-flow">
+      <strong>Data Flow:</strong><br>
+      ${arch.dataFlow}
+    </div>
+
+    <div class="tech-stack">
+      <h4>Technology Stack</h4>
+      <ul>${arch.techStack.map(t => `<li>${t}</li>`).join('')}</ul>
+    </div>
+
+    <div class="best-for">
+      <h4>💡 Best For Your Project</h4>
+      <p>${arch.bestFor}</p>
+    </div>
+
+    <div class="button-group">
+      <button class="btn-select active" onclick="confirmArchitecture('${id}')">
+        ✓ This is my choice
+      </button>
+    </div>
+  `;
+
+  const selectedSection = document.getElementById('selectedSection');
+  const selectedDetail = document.getElementById('selectedDetail');
+  selectedDetail.innerHTML = detailHtml;
+  selectedSection.style.display = 'block';
+
+  selectedSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function confirmArchitecture(id) {
+  const arch = architectures.find(a => a.id === id);
+  alert(`You selected: ${arch.name}\n\nReady to proceed with detailed design?`);
+}
+
+renderArchitectures();
+</script>
