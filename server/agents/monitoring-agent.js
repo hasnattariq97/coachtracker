@@ -22,6 +22,21 @@ const db = require('../db');
 const GoogleSheetsClient = require('../services/google-sheets-client');
 
 class MonitoringAgent {
+  // Risk detection thresholds
+  static RISK_THRESHOLD_PCT = 0.75;  // Mark task as at_risk after 75% of time elapsed
+
+  // Coach pattern detection thresholds
+  static PROCRASTINATOR_OVERTIME_RATE_PCT = 50;     // > 50% of tasks completed late
+  static PROCRASTINATOR_AVG_LATE_HOURS = 48;        // > 48 hours average lateness
+  static FAST_TRACK_COMPLETION_RATE_PCT = 90;       // > 90% on-time completion
+  static FAST_TRACK_OVERTIME_RATE_PCT = 10;         // < 10% late tasks
+  static FAST_TRACK_AVG_LATE_HOURS = 6;             // < 6 hours average lateness
+  static INCONSISTENT_OVERTIME_RATE_PCT = 30;       // > 30% late tasks
+  static INCONSISTENT_AVG_LATE_HOURS = 24;          // > 24 hours average variance
+
+  // Google Sheets API timeout (milliseconds)
+  static SHEETS_API_TIMEOUT_MS = 15000;             // 15-second timeout
+
   constructor() {
     this.name = 'MonitoringAgent';
     this.sheetsClient = null;
@@ -86,8 +101,8 @@ class MonitoringAgent {
     let status = 'on_time';
     if (daysRemaining < 0) {
       status = 'overdue';
-    } else if (elapsedTime > totalTime * 0.75) {
-      status = 'at_risk'; // 75% of time elapsed, only 25% left
+    } else if (elapsedTime > totalTime * MonitoringAgent.RISK_THRESHOLD_PCT) {
+      status = 'at_risk';
     }
 
     // 2. Get task's Google Sheet (if linked)
@@ -169,8 +184,12 @@ class MonitoringAgent {
 
       const sheetId = sheetIdMatch[1];
 
-      // Read sheet values
-      const { values } = await this.sheetsClient.readSheet(sheetId, 'A:Z');
+      // Read sheet values with timeout
+      const sheetPromise = this.sheetsClient.readSheet(sheetId, 'A:Z');
+      const timeoutPromise = new Promise((_, reject) =>
+        setTimeout(() => reject(new Error('Google Sheets API timeout (15s)')), MonitoringAgent.SHEETS_API_TIMEOUT_MS)
+      );
+      const { values } = await Promise.race([sheetPromise, timeoutPromise]);
 
       // Analyze content
       const completionPercent = this._calculateCompletion(values);
@@ -191,7 +210,13 @@ class MonitoringAgent {
 
   /**
    * Detect coach behavior pattern from historical task data
-   * Returns: 'procrastinator' | 'fast-track' | 'inconsistent' | 'steady' | 'new_coach'
+   * Returns: 'procrastinator' | 'fast-track' | 'inconsistent' | 'steady' | 'new_coach' | 'unknown'
+   * - procrastinator: >50% late tasks, >48h average lateness
+   * - fast-track: >90% completion rate, <10% late, <6h average lateness
+   * - inconsistent: >30% late tasks OR >24h variance
+   * - steady: Reliable, on-time performer
+   * - new_coach: Coach has completed <5 tasks (insufficient data)
+   * - unknown: Error occurred during pattern detection
    */
   async _detectCoachPattern(coachId) {
     try {
@@ -224,14 +249,18 @@ class MonitoringAgent {
       const overtimeRate = (overdue / total) * 100;
 
       // Heuristics
-      if (overtimeRate > 50 && avgLate > 48) {
-        return 'procrastinator'; // Usually late
-      } else if (completionRate > 90 && overtimeRate < 10 && avgLate < 6) {
-        return 'fast-track'; // Completes early
-      } else if (overtimeRate > 30 || Math.abs(avgLate) > 24) {
-        return 'inconsistent'; // Variable performance
+      if (overtimeRate > MonitoringAgent.PROCRASTINATOR_OVERTIME_RATE_PCT &&
+          avgLate > MonitoringAgent.PROCRASTINATOR_AVG_LATE_HOURS) {
+        return 'procrastinator';
+      } else if (completionRate > MonitoringAgent.FAST_TRACK_COMPLETION_RATE_PCT &&
+                 overtimeRate < MonitoringAgent.FAST_TRACK_OVERTIME_RATE_PCT &&
+                 avgLate < MonitoringAgent.FAST_TRACK_AVG_LATE_HOURS) {
+        return 'fast-track';
+      } else if (overtimeRate > MonitoringAgent.INCONSISTENT_OVERTIME_RATE_PCT ||
+                 Math.abs(avgLate) > MonitoringAgent.INCONSISTENT_AVG_LATE_HOURS) {
+        return 'inconsistent';
       } else {
-        return 'steady'; // Reliable, on-time
+        return 'steady';
       }
     } catch (err) {
       console.error(`Pattern detection failed for coach ${coachId}:`, err.message);
