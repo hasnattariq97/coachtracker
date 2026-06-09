@@ -1,4 +1,6 @@
 const db = require('../db');
+const GroqService = require('../services/groq-service');
+
 let client = null;
 
 // Only initialize Groq client in production or when explicitly testing
@@ -42,7 +44,7 @@ async function queueCoachingInsights(coachId, taskId, eventType) {
 
 /**
  * Analyze coach behavior via 3-agent consensus swarm
- * Then generate meaningful coaching message using detailed prompt
+ * Then enhance with Groq-powered coaching insights (Phase 9b)
  * Runs asynchronously, creates notification on completion
  */
 async function analyzeCoachBehavior(coachId, taskId, eventType, coachHistory, task) {
@@ -61,14 +63,53 @@ async function analyzeCoachBehavior(coachId, taskId, eventType, coachHistory, ta
       ),
     ]);
 
-    // Step 2: Generate meaningful message from swarm analysis + detailed prompt
+    // Step 2: Generate meaningful message from swarm analysis + detailed prompt (Phase 7)
     const meaningfulMessage = await generateMeaningfulMessage(coachHistory, task, results);
-
-    // Store meaningful message in consensus field
     results.consensus = meaningfulMessage;
 
-    // Create notification with results
-    createCoachingInsightNotification(coachId, taskId, results, 'success');
+    // Step 3: NEW - Enhance with GroqService (Phase 9b)
+    const groqService = new GroqService();
+    const enhancedInsight = await groqService.enhanceCoachingInsight(
+      coachHistory,
+      task,
+      eventType
+    );
+
+    // Step 4: Build metadata with both swarm + enhancement
+    const metadata = {
+      swarmAnalysis: results,
+      enhancedInsight: {
+        tone: enhancedInsight.tone,
+        metrics: enhancedInsight.metrics,
+        prediction: enhancedInsight.prediction,
+        confidence: enhancedInsight.confidence
+      },
+      generatedAt: new Date().toISOString()
+    };
+
+    // Step 5: Create notification with enhanced message (Phase 9b enhancement)
+    createCoachingInsightNotification(coachId, taskId, enhancedInsight.message, metadata);
+
+    // Step 6: Log decision for learning/auditing
+    try {
+      await db.query(
+        `INSERT INTO agent_decisions
+         (agent_type, coach_id, task_id, groq_recommendation, groq_confidence, final_action, metadata)
+         VALUES ($1, $2, $3, $4, $5, $6, $7)`,
+        [
+          'coaching_insights',
+          coachId,
+          taskId,
+          'message_enhancement',
+          enhancedInsight.confidence,
+          'notification_created',
+          JSON.stringify(metadata)
+        ]
+      );
+    } catch (err) {
+      console.error('[Coaching Insights] Decision logging error:', err.message);
+    }
+
     console.log(`[Coaching Insights] Analysis complete for coach ${coachId}, task ${taskId} (${Date.now() - startTime}ms)`);
   } catch (error) {
     console.error(`[Coaching Insights] Analysis failed:`, error.message);
@@ -439,20 +480,41 @@ function buildConsensus(patternResponse, growthResponse, riskResponse) {
 
 /**
  * Create notification with coaching insights results
+ * Now accepts either Phase 7 results object or Phase 9b enhanced message + metadata
  */
-async function createCoachingInsightNotification(coachId, taskId, results, status) {
+async function createCoachingInsightNotification(coachId, taskId, messageOrResults, metadataOrStatus) {
   const task = await db.prepare('SELECT title FROM tasks WHERE id = ?').get(taskId);
   if (!task) return;
 
   let message;
-  if (status === 'success' && results) {
-    // Just the consensus message, clean and simple
-    message = results.consensus || 'Good work!';
-  } else {
-    message = 'Insights pending. Check back soon!';
-  }
+  let metadata;
+  let status;
 
-  const metadata = results ? JSON.stringify(results) : null;
+  // Handle both Phase 7 (results object) and Phase 9b (message + metadata) signatures
+  if (typeof messageOrResults === 'string') {
+    // Phase 9b: messageOrResults is the enhanced message, metadataOrStatus is full metadata
+    message = messageOrResults || 'Good work!';
+    metadata = metadataOrStatus && typeof metadataOrStatus === 'object'
+      ? JSON.stringify(metadataOrStatus)
+      : null;
+    status = 'success';
+  } else if (metadataOrStatus && typeof metadataOrStatus === 'string') {
+    // Phase 7 fallback: messageOrResults is results object, metadataOrStatus is status string
+    const results = messageOrResults;
+    if (metadataOrStatus === 'success' && results) {
+      message = results.consensus || 'Good work!';
+      metadata = JSON.stringify(results);
+    } else {
+      message = 'Insights pending. Check back soon!';
+      metadata = null;
+    }
+    status = metadataOrStatus;
+  } else {
+    // Fallback
+    message = 'Good work!';
+    metadata = null;
+    status = 'timeout';
+  }
 
   try {
     await db.prepare(`
