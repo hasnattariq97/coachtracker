@@ -140,10 +140,6 @@ const LoginPage = () => {
                 }
               </button>
             </form>
-
-            <p className="mt-6 text-center text-xs text-slate-400">
-              Demo: <code className="bg-slate-100 px-1 py-0.5 rounded text-xs">admin@tracker.com</code> / <code className="bg-slate-100 px-1 py-0.5 rounded text-xs">admin123</code>
-            </p>
           </div>
         </div>
       </div>
