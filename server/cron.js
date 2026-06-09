@@ -10,6 +10,7 @@ const cron = require('node-cron');
 const db = require('./db');
 const { processEmailQueue } = require('./jobs/email-processor.js');
 const { createEmailQueue } = require('./services/email.js');
+const AgentOrchestrator = require('./agents/orchestrator');
 
 const createNotification = async (userId, taskId, type, message) => {
   try {
@@ -87,6 +88,8 @@ const overdueJob = async () => {
 let scheduledTasks = [];
 
 const scheduleJobs = () => {
+  const orchestrator = new AgentOrchestrator();
+
   const task1 = cron.schedule('0 * * * *', midpointNudgeJob);
   const task2 = cron.schedule('0 * * * *', overdueJob);
   const task3 = cron.schedule('*/5 * * * *', async () => {
@@ -94,12 +97,36 @@ const scheduleJobs = () => {
     await processEmailQueue();
   });
 
+  // Phase 9: 30-minute agent cycle (Monitoring → Support)
+  // Schedule: Every 30 minutes (*/30 in cron = 00:00, 00:30, 01:00, 01:30, etc.)
+  const task4 = cron.schedule('*/30 * * * *', async () => {
+    console.log('\n🔔 [CRON] 30-minute agent cycle triggered');
+    try {
+      await orchestrator.run30MinuteCycle();
+    } catch (err) {
+      console.error('[CRON] 30-minute cycle failed:', err.message);
+    }
+  });
+
+  // Phase 9: Daily cycle (Reporting Agent)
+  // Schedule: Daily at 9am UTC (0 9 = 09:00)
+  const task5 = cron.schedule('0 9 * * *', async () => {
+    console.log('\n🔔 [CRON] Daily reporting cycle triggered (9am UTC)');
+    try {
+      await orchestrator.runDailyCycle();
+    } catch (err) {
+      console.error('[CRON] Daily cycle failed:', err.message);
+    }
+  });
+
   task1.unref?.();
   task2.unref?.();
   task3.unref?.();
+  task4.unref?.();
+  task5.unref?.();
 
-  scheduledTasks = [task1, task2, task3];
-  console.log('✓ Cron jobs scheduled (hourly nudges, every 5 minutes email processor)');
+  scheduledTasks = [task1, task2, task3, task4, task5];
+  console.log('✓ Cron jobs scheduled (hourly nudges, email processor, Phase 9 agent cycles)');
 };
 
 const stopJobs = () => {

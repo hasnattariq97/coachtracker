@@ -4,44 +4,654 @@
   "graph": {},
   "nodes": [
     {
-      "label": "reporting-agent.test.js",
-      "file_type": "code",
-      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "label": "PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "agents_reporting_agent_test",
-      "community": 146,
-      "norm_label": "reporting-agent.test.js"
+      "id": "docs_phase9_task5_compliance_review",
+      "community": 219,
+      "norm_label": "phase9-task5-compliance-review.md"
     },
     {
-      "label": "ReportingAgent",
-      "file_type": "code",
-      "source_file": "server/__tests__/agents/reporting-agent.test.js",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "agents_reporting_agent_test_reportingagent",
-      "community": 146,
-      "norm_label": "reportingagent"
-    },
-    {
-      "label": "PatternAnalyzer",
-      "file_type": "code",
-      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "label": "Phase 9 Task 5: Reporting Agent Compliance Review",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "agents_reporting_agent_test_patternanalyzer",
-      "community": 146,
-      "norm_label": "patternanalyzer"
+      "id": "docs_phase9_task5_compliance_review_phase_9_task_5_reporting_agent_compliance_review",
+      "community": 219,
+      "norm_label": "phase 9 task 5: reporting agent compliance review"
     },
     {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "server/__tests__/agents/reporting-agent.test.js",
-      "source_location": "L16",
+      "label": "Executive Summary",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L21",
       "_origin": "ast",
-      "id": "agents_reporting_agent_test_db",
-      "community": 146,
-      "norm_label": "db"
+      "id": "docs_phase9_task5_compliance_review_executive_summary",
+      "community": 219,
+      "norm_label": "executive summary"
+    },
+    {
+      "label": "Detailed Compliance Checklist",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_detailed_compliance_checklist",
+      "community": 230,
+      "norm_label": "detailed compliance checklist"
+    },
+    {
+      "label": "1. \u2705 24-Hour Analysis Pipeline",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_1_24_hour_analysis_pipeline",
+      "community": 235,
+      "norm_label": "1. \u2705 24-hour analysis pipeline"
+    },
+    {
+      "label": "Support Actions Query \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_support_actions_query",
+      "community": 235,
+      "norm_label": "support actions query \u2705"
+    },
+    {
+      "label": "Completion Rate Calculation \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_completion_rate_calculation",
+      "community": 235,
+      "norm_label": "completion rate calculation \u2705"
+    },
+    {
+      "label": "Return Structure \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_return_structure",
+      "community": 235,
+      "norm_label": "return structure \u2705"
+    },
+    {
+      "label": "2. \u2705 Blocker Parsing & Detection",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L93",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_2_blocker_parsing_detection",
+      "community": 230,
+      "norm_label": "2. \u2705 blocker parsing & detection"
+    },
+    {
+      "label": "Blocker Keywords \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L100",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_blocker_keywords",
+      "community": 230,
+      "norm_label": "blocker keywords \u2705"
+    },
+    {
+      "label": "Frequency Counting \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L122",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_frequency_counting",
+      "community": 230,
+      "norm_label": "frequency counting \u2705"
+    },
+    {
+      "label": "3. \u2705 Coach Performance Analysis",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L134",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_3_coach_performance_analysis",
+      "community": 236,
+      "norm_label": "3. \u2705 coach performance analysis"
+    },
+    {
+      "label": "Query Structure \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L141",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_query_structure",
+      "community": 236,
+      "norm_label": "query structure \u2705"
+    },
+    {
+      "label": "Data Transformation \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L156",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_data_transformation",
+      "community": 236,
+      "norm_label": "data transformation \u2705"
+    },
+    {
+      "label": "Performance Leaderboard \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L171",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_performance_leaderboard",
+      "community": 236,
+      "norm_label": "performance leaderboard \u2705"
+    },
+    {
+      "label": "4. \u2705 Recommendation Generation",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L180",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_4_recommendation_generation",
+      "community": 232,
+      "norm_label": "4. \u2705 recommendation generation"
+    },
+    {
+      "label": "High Completion Rate \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L187",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_high_completion_rate",
+      "community": 232,
+      "norm_label": "high completion rate \u2705"
+    },
+    {
+      "label": "Low Completion Rate \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L196",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_low_completion_rate",
+      "community": 232,
+      "norm_label": "low completion rate \u2705"
+    },
+    {
+      "label": "Blocker-Based Recommendation \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L205",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_blocker_based_recommendation",
+      "community": 232,
+      "norm_label": "blocker-based recommendation \u2705"
+    },
+    {
+      "label": "Top Performer Highlight \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L215",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_top_performer_highlight",
+      "community": 232,
+      "norm_label": "top performer highlight \u2705"
+    },
+    {
+      "label": "Low Performer Support \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L225",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_low_performer_support",
+      "community": 232,
+      "norm_label": "low performer support \u2705"
+    },
+    {
+      "label": "5. \u2705 HTML Email Generation",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L241",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_5_html_email_generation",
+      "community": 228,
+      "norm_label": "5. \u2705 html email generation"
+    },
+    {
+      "label": "DOCTYPE & Structure \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L248",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_doctype_structure",
+      "community": 228,
+      "norm_label": "doctype & structure \u2705"
+    },
+    {
+      "label": "Header Section \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L268",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_header_section",
+      "community": 228,
+      "norm_label": "header section \u2705"
+    },
+    {
+      "label": "Key Metrics Section \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L278",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_key_metrics_section",
+      "community": 228,
+      "norm_label": "key metrics section \u2705"
+    },
+    {
+      "label": "Top Blockers Section \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L291",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_top_blockers_section",
+      "community": 228,
+      "norm_label": "top blockers section \u2705"
+    },
+    {
+      "label": "Coach Performance Section \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L320",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_coach_performance_section",
+      "community": 228,
+      "norm_label": "coach performance section \u2705"
+    },
+    {
+      "label": "Recommendations Section \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L338",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_recommendations_section",
+      "community": 228,
+      "norm_label": "recommendations section \u2705"
+    },
+    {
+      "label": "Professional Styling \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L353",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_professional_styling",
+      "community": 228,
+      "norm_label": "professional styling \u2705"
+    },
+    {
+      "label": "Timestamp Footer \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L364",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_timestamp_footer",
+      "community": 228,
+      "norm_label": "timestamp footer \u2705"
+    },
+    {
+      "label": "6. \u2705 Admin Email Queueing",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L378",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_6_admin_email_queueing",
+      "community": 233,
+      "norm_label": "6. \u2705 admin email queueing"
+    },
+    {
+      "label": "Admin User Lookup \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L385",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_admin_user_lookup",
+      "community": 233,
+      "norm_label": "admin user lookup \u2705"
+    },
+    {
+      "label": "Email Queue Insertion \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L400",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_email_queue_insertion",
+      "community": 233,
+      "norm_label": "email queue insertion \u2705"
+    },
+    {
+      "label": "Parameterized Query \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L414",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_parameterized_query",
+      "community": 233,
+      "norm_label": "parameterized query \u2705"
+    },
+    {
+      "label": "Success Logging \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L422",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_success_logging",
+      "community": 233,
+      "norm_label": "success logging \u2705"
+    },
+    {
+      "label": "Error Handling \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L429",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_error_handling",
+      "community": 233,
+      "norm_label": "error handling \u2705"
+    },
+    {
+      "label": "7. \u2705 Report Archival to Database",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L440",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_7_report_archival_to_database",
+      "community": 227,
+      "norm_label": "7. \u2705 report archival to database"
+    },
+    {
+      "label": "Table Schema Verification \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L447",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_table_schema_verification",
+      "community": 227,
+      "norm_label": "table schema verification \u2705"
+    },
+    {
+      "label": "Date Calculation \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L464",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_date_calculation",
+      "community": 227,
+      "norm_label": "date calculation \u2705"
+    },
+    {
+      "label": "Summary JSON \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L471",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_summary_json",
+      "community": 227,
+      "norm_label": "summary json \u2705"
+    },
+    {
+      "label": "Patterns JSON \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L482",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_patterns_json",
+      "community": 227,
+      "norm_label": "patterns json \u2705"
+    },
+    {
+      "label": "Recommendations JSON \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L492",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_recommendations_json",
+      "community": 227,
+      "norm_label": "recommendations json \u2705"
+    },
+    {
+      "label": "Agent Activity JSON \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L499",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_agent_activity_json",
+      "community": 227,
+      "norm_label": "agent activity json \u2705"
+    },
+    {
+      "label": "ON CONFLICT Handling \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L509",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_on_conflict_handling",
+      "community": 227,
+      "norm_label": "on conflict handling \u2705"
+    },
+    {
+      "label": "Parameterized Query \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L522",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_parameterized_query_522",
+      "community": 227,
+      "norm_label": "parameterized query \u2705"
+    },
+    {
+      "label": "Success Logging \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L530",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_success_logging_530",
+      "community": 227,
+      "norm_label": "success logging \u2705"
+    },
+    {
+      "label": "8. \u2705 Error Handling & Logging",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L539",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_8_error_handling_logging",
+      "community": 234,
+      "norm_label": "8. \u2705 error handling & logging"
+    },
+    {
+      "label": "Agent Errors Table Verification \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L546",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_agent_errors_table_verification",
+      "community": 234,
+      "norm_label": "agent errors table verification \u2705"
+    },
+    {
+      "label": "Main Run Method Try/Catch \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L563",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_main_run_method_try_catch",
+      "community": 234,
+      "norm_label": "main run method try/catch \u2705"
+    },
+    {
+      "label": "Error Logging Method \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L579",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_error_logging_method",
+      "community": 234,
+      "norm_label": "error logging method \u2705"
+    },
+    {
+      "label": "Nested Error Handling \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L596",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_nested_error_handling",
+      "community": 234,
+      "norm_label": "nested error handling \u2705"
+    },
+    {
+      "label": "Severity Levels \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L616",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_severity_levels",
+      "community": 234,
+      "norm_label": "severity levels \u2705"
+    },
+    {
+      "label": "9. \u2705 Database Schema Usage",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L630",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_9_database_schema_usage",
+      "community": 230,
+      "norm_label": "9. \u2705 database schema usage"
+    },
+    {
+      "label": "Read Operations \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L637",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_read_operations",
+      "community": 230,
+      "norm_label": "read operations \u2705"
+    },
+    {
+      "label": "Write Operations \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L670",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_write_operations",
+      "community": 230,
+      "norm_label": "write operations \u2705"
+    },
+    {
+      "label": "PostgreSQL Async Operations \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L697",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_postgresql_async_operations",
+      "community": 230,
+      "norm_label": "postgresql async operations \u2705"
+    },
+    {
+      "label": "Missing Features Analysis",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L707",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_missing_features_analysis",
+      "community": 219,
+      "norm_label": "missing features analysis"
+    },
+    {
+      "label": "Code Quality Observations",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L725",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_code_quality_observations",
+      "community": 219,
+      "norm_label": "code quality observations"
+    },
+    {
+      "label": "Strengths \u2705",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L727",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_strengths",
+      "community": 219,
+      "norm_label": "strengths \u2705"
+    },
+    {
+      "label": "Areas for Future Enhancement \ud83d\udd2e",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L736",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_areas_for_future_enhancement",
+      "community": 219,
+      "norm_label": "areas for future enhancement \ud83d\udd2e"
+    },
+    {
+      "label": "Specification Compliance Matrix",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L745",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_specification_compliance_matrix",
+      "community": 219,
+      "norm_label": "specification compliance matrix"
+    },
+    {
+      "label": "Ready-for-Production Checklist",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L768",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_ready_for_production_checklist",
+      "community": 219,
+      "norm_label": "ready-for-production checklist"
+    },
+    {
+      "label": "Approval & Next Steps",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L783",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_approval_next_steps",
+      "community": 219,
+      "norm_label": "approval & next steps"
+    },
+    {
+      "label": "\u2705 APPROVED FOR PRODUCTION",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L785",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_approved_for_production",
+      "community": 219,
+      "norm_label": "\u2705 approved for production"
+    },
+    {
+      "label": "Conclusion",
+      "file_type": "document",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L801",
+      "_origin": "ast",
+      "id": "docs_phase9_task5_compliance_review_conclusion",
+      "community": 219,
+      "norm_label": "conclusion"
     },
     {
       "label": "pattern-analyzer.test.js",
@@ -72,116 +682,6 @@
       "id": "services_pattern_analyzer_test_db",
       "community": 146,
       "norm_label": "db"
-    },
-    {
-      "label": "reporting-agent.js",
-      "file_type": "code",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "agents_reporting_agent",
-      "community": 146,
-      "norm_label": "reporting-agent.js"
-    },
-    {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "agents_reporting_agent_db",
-      "community": 146,
-      "norm_label": "db"
-    },
-    {
-      "label": "PatternAnalyzer",
-      "file_type": "code",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L21",
-      "_origin": "ast",
-      "id": "agents_reporting_agent_patternanalyzer",
-      "community": 146,
-      "norm_label": "patternanalyzer"
-    },
-    {
-      "label": "ReportingAgent",
-      "file_type": "code",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L23",
-      "_origin": "ast",
-      "id": "agents_reporting_agent_reportingagent",
-      "community": 146,
-      "norm_label": "reportingagent"
-    },
-    {
-      "label": ".constructor()",
-      "file_type": "code",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L24",
-      "_origin": "ast",
-      "id": "agents_reporting_agent_reportingagent_constructor",
-      "community": 146,
-      "norm_label": ".constructor()"
-    },
-    {
-      "label": ".run()",
-      "file_type": "code",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L32",
-      "_origin": "ast",
-      "id": "agents_reporting_agent_reportingagent_run",
-      "community": 146,
-      "norm_label": ".run()"
-    },
-    {
-      "label": "._generateEmailHTML()",
-      "file_type": "code",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L69",
-      "_origin": "ast",
-      "id": "agents_reporting_agent_reportingagent_generateemailhtml",
-      "community": 146,
-      "norm_label": "._generateemailhtml()"
-    },
-    {
-      "label": "._formatBlocker()",
-      "file_type": "code",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L151",
-      "_origin": "ast",
-      "id": "agents_reporting_agent_reportingagent_formatblocker",
-      "community": 146,
-      "norm_label": "._formatblocker()"
-    },
-    {
-      "label": "._queueReportEmail()",
-      "file_type": "code",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L165",
-      "_origin": "ast",
-      "id": "agents_reporting_agent_reportingagent_queuereportemail",
-      "community": 146,
-      "norm_label": "._queuereportemail()"
-    },
-    {
-      "label": "._archiveReport()",
-      "file_type": "code",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L194",
-      "_origin": "ast",
-      "id": "agents_reporting_agent_reportingagent_archivereport",
-      "community": 146,
-      "norm_label": "._archivereport()"
-    },
-    {
-      "label": "._logAgentError()",
-      "file_type": "code",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L235",
-      "_origin": "ast",
-      "id": "agents_reporting_agent_reportingagent_logagenterror",
-      "community": 146,
-      "norm_label": "._logagenterror()"
     },
     {
       "label": "pattern-analyzer.js",
@@ -237,7 +737,7 @@
       "label": "._analyzeCoachPerformance()",
       "file_type": "code",
       "source_file": "server/services/pattern-analyzer.js",
-      "source_location": "L101",
+      "source_location": "L107",
       "_origin": "ast",
       "id": "services_pattern_analyzer_patternanalyzer_analyzecoachperformance",
       "community": 146,
@@ -247,11 +747,161 @@
       "label": ".generateRecommendations()",
       "file_type": "code",
       "source_file": "server/services/pattern-analyzer.js",
-      "source_location": "L133",
+      "source_location": "L139",
       "_origin": "ast",
       "id": "services_pattern_analyzer_patternanalyzer_generaterecommendations",
       "community": 146,
       "norm_label": ".generaterecommendations()"
+    },
+    {
+      "label": "reporting-agent.test.js",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 146,
+      "norm_label": "reporting-agent.test.js",
+      "id": "agents_reporting_agent_test"
+    },
+    {
+      "label": "ReportingAgent",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 146,
+      "norm_label": "reportingagent",
+      "id": "agents_reporting_agent_test_reportingagent"
+    },
+    {
+      "label": "PatternAnalyzer",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 146,
+      "norm_label": "patternanalyzer",
+      "id": "agents_reporting_agent_test_patternanalyzer"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 146,
+      "norm_label": "db",
+      "id": "agents_reporting_agent_test_db"
+    },
+    {
+      "label": "reporting-agent.js",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 146,
+      "norm_label": "reporting-agent.js",
+      "id": "agents_reporting_agent"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 146,
+      "norm_label": "db",
+      "id": "agents_reporting_agent_db"
+    },
+    {
+      "label": "PatternAnalyzer",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 146,
+      "norm_label": "patternanalyzer",
+      "id": "agents_reporting_agent_patternanalyzer"
+    },
+    {
+      "label": "ReportingAgent",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L23",
+      "_origin": "ast",
+      "community": 146,
+      "norm_label": "reportingagent",
+      "id": "agents_reporting_agent_reportingagent"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L24",
+      "_origin": "ast",
+      "community": 146,
+      "norm_label": ".constructor()",
+      "id": "agents_reporting_agent_reportingagent_constructor"
+    },
+    {
+      "label": ".run()",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L32",
+      "_origin": "ast",
+      "community": 146,
+      "norm_label": ".run()",
+      "id": "agents_reporting_agent_reportingagent_run"
+    },
+    {
+      "label": "._generateEmailHTML()",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L69",
+      "_origin": "ast",
+      "community": 146,
+      "norm_label": "._generateemailhtml()",
+      "id": "agents_reporting_agent_reportingagent_generateemailhtml"
+    },
+    {
+      "label": "._formatBlocker()",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L151",
+      "_origin": "ast",
+      "community": 146,
+      "norm_label": "._formatblocker()",
+      "id": "agents_reporting_agent_reportingagent_formatblocker"
+    },
+    {
+      "label": "._queueReportEmail()",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L165",
+      "_origin": "ast",
+      "community": 146,
+      "norm_label": "._queuereportemail()",
+      "id": "agents_reporting_agent_reportingagent_queuereportemail"
+    },
+    {
+      "label": "._archiveReport()",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L194",
+      "_origin": "ast",
+      "community": 146,
+      "norm_label": "._archivereport()",
+      "id": "agents_reporting_agent_reportingagent_archivereport"
+    },
+    {
+      "label": "._logAgentError()",
+      "file_type": "code",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L235",
+      "_origin": "ast",
+      "community": 146,
+      "norm_label": "._logagenterror()",
+      "id": "agents_reporting_agent_reportingagent_logagenterror"
     },
     {
       "label": "support-agent.test.js",
@@ -3825,7 +4475,7 @@
       "file_type": "document",
       "source_file": "docs/API.md",
       "source_location": "L402",
-      "community": 75,
+      "community": 94,
       "norm_label": "code:json ({)",
       "id": "docs_api_codeblock_24"
     },
@@ -6435,7 +7085,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L53",
-      "community": 22,
+      "community": 224,
       "norm_label": "available tools",
       "id": "claude_master_capabilities_available_tools"
     },
@@ -6543,7 +7193,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L108",
-      "community": 22,
+      "community": 224,
       "norm_label": "2. shell operations",
       "id": "claude_master_capabilities_2_shell_operations"
     },
@@ -6552,7 +7202,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L110",
-      "community": 22,
+      "community": 224,
       "norm_label": "bash",
       "id": "claude_master_capabilities_bash"
     },
@@ -6561,7 +7211,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L112",
-      "community": 22,
+      "community": 224,
       "norm_label": "code:bash (bash(command))",
       "id": "claude_master_capabilities_codeblock_6"
     },
@@ -6570,7 +7220,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L124",
-      "community": 22,
+      "community": 224,
       "norm_label": "code:bash (# check if tool is installed)",
       "id": "claude_master_capabilities_codeblock_7"
     },
@@ -6579,7 +7229,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L143",
-      "community": 22,
+      "community": 224,
       "norm_label": "3. code understanding",
       "id": "claude_master_capabilities_3_code_understanding"
     },
@@ -6588,7 +7238,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L145",
-      "community": 22,
+      "community": 224,
       "norm_label": "grep (for code search)",
       "id": "claude_master_capabilities_grep_for_code_search"
     },
@@ -6597,7 +7247,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L147",
-      "community": 22,
+      "community": 224,
       "norm_label": "code:bash (grep(\"^const authenticate = \")     # function definitions)",
       "id": "claude_master_capabilities_codeblock_8"
     },
@@ -6606,7 +7256,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L155",
-      "community": 22,
+      "community": 224,
       "norm_label": "glob (for codebase mapping)",
       "id": "claude_master_capabilities_glob_for_codebase_mapping"
     },
@@ -6615,7 +7265,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L157",
-      "community": 22,
+      "community": 224,
       "norm_label": "code:bash (glob(\"src/components/**/*.jsx\")     # react components)",
       "id": "claude_master_capabilities_codeblock_9"
     },
@@ -6957,7 +7607,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L412",
-      "community": 19,
+      "community": 225,
       "norm_label": "agent capabilities",
       "id": "claude_master_capabilities_agent_capabilities"
     },
@@ -6966,7 +7616,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L414",
-      "community": 19,
+      "community": 225,
       "norm_label": "how to spawn an agent",
       "id": "claude_master_capabilities_how_to_spawn_an_agent"
     },
@@ -6975,7 +7625,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L416",
-      "community": 19,
+      "community": 225,
       "norm_label": "code:bash (agent()",
       "id": "claude_master_capabilities_codeblock_26"
     },
@@ -7083,7 +7733,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L486",
-      "community": 19,
+      "community": 225,
       "norm_label": "agent patterns",
       "id": "claude_master_capabilities_agent_patterns"
     },
@@ -7092,7 +7742,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L488",
-      "community": 19,
+      "community": 225,
       "norm_label": "pattern 1: parallel independent agents",
       "id": "claude_master_capabilities_pattern_1_parallel_independent_agents"
     },
@@ -7101,7 +7751,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L490",
-      "community": 19,
+      "community": 225,
       "norm_label": "code:block32 (agent 1: search for all database queries)",
       "id": "claude_master_capabilities_codeblock_32"
     },
@@ -7110,7 +7760,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L498",
-      "community": 19,
+      "community": 225,
       "norm_label": "pattern 2: sequential dependent agents",
       "id": "claude_master_capabilities_pattern_2_sequential_dependent_agents"
     },
@@ -7119,7 +7769,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L500",
-      "community": 19,
+      "community": 225,
       "norm_label": "code:block33 (step 1: explore agent finds all references to concept x)",
       "id": "claude_master_capabilities_codeblock_33"
     },
@@ -7128,7 +7778,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L507",
-      "community": 19,
+      "community": 225,
       "norm_label": "pattern 3: subagent-driven development",
       "id": "claude_master_capabilities_pattern_3_subagent_driven_development"
     },
@@ -7137,7 +7787,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L509",
-      "community": 19,
+      "community": 225,
       "norm_label": "code:block34 (1. explore: understand current state)",
       "id": "claude_master_capabilities_codeblock_34"
     },
@@ -7524,7 +8174,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L922",
-      "community": 148,
+      "community": 24,
       "norm_label": "installation & setup",
       "id": "claude_master_capabilities_installation_setup"
     },
@@ -7533,7 +8183,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L924",
-      "community": 148,
+      "community": 24,
       "norm_label": "superpowers framework",
       "id": "claude_master_capabilities_superpowers_framework"
     },
@@ -7542,7 +8192,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L928",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:bash (# install the superpowers framework)",
       "id": "claude_master_capabilities_codeblock_53"
     },
@@ -7551,7 +8201,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L943",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:bash (/using-superpowers)",
       "id": "claude_master_capabilities_codeblock_54"
     },
@@ -7560,7 +8210,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L949",
-      "community": 148,
+      "community": 24,
       "norm_label": "graphify knowledge graph",
       "id": "claude_master_capabilities_graphify_knowledge_graph"
     },
@@ -7569,7 +8219,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L953",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:bash (# via pip)",
       "id": "claude_master_capabilities_codeblock_55"
     },
@@ -7578,7 +8228,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L970",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:bash (export anthropic_api_key=\"sk-ant-...\")",
       "id": "claude_master_capabilities_codeblock_56"
     },
@@ -7587,7 +8237,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L982",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:bash (# already set up if .git/hooks/post-commit exists)",
       "id": "claude_master_capabilities_codeblock_57"
     },
@@ -7596,7 +8246,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L990",
-      "community": 148,
+      "community": 24,
       "norm_label": "ruflo multi-agent orchestration",
       "id": "claude_master_capabilities_ruflo_multi_agent_orchestration"
     },
@@ -7605,7 +8255,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L994",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:bash (# core orchestration)",
       "id": "claude_master_capabilities_codeblock_58"
     },
@@ -7614,7 +8264,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1015",
-      "community": 148,
+      "community": 24,
       "norm_label": "code:bash (/phase-builder)",
       "id": "claude_master_capabilities_codeblock_59"
     },
@@ -7659,7 +8309,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1131",
-      "community": 222,
+      "community": 24,
       "norm_label": "code:bash (#!/bin/bash)",
       "id": "claude_master_capabilities_codeblock_63"
     },
@@ -7668,7 +8318,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1148",
-      "community": 222,
+      "community": 24,
       "norm_label": "code:bash (#!/bin/bash)",
       "id": "claude_master_capabilities_codeblock_64"
     },
@@ -7713,7 +8363,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1263",
-      "community": 222,
+      "community": 24,
       "norm_label": "claude code cli",
       "id": "claude_master_capabilities_claude_code_cli"
     },
@@ -7722,7 +8372,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1267",
-      "community": 222,
+      "community": 24,
       "norm_label": "code:bash (# macos)",
       "id": "claude_master_capabilities_codeblock_69"
     },
@@ -7731,7 +8381,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1284",
-      "community": 222,
+      "community": 24,
       "norm_label": "code:bash (claude-code --version)",
       "id": "claude_master_capabilities_codeblock_70"
     },
@@ -7785,7 +8435,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1341",
-      "community": 145,
+      "community": 24,
       "norm_label": "code:json ({)",
       "id": "claude_master_capabilities_codeblock_74"
     },
@@ -7794,7 +8444,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1349",
-      "community": 222,
+      "community": 24,
       "norm_label": "custom skills & agents",
       "id": "claude_master_capabilities_custom_skills_agents"
     },
@@ -7803,7 +8453,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1353",
-      "community": 145,
+      "community": 24,
       "norm_label": "code:bash (# structure)",
       "id": "claude_master_capabilities_codeblock_75"
     },
@@ -7812,7 +8462,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1370",
-      "community": 222,
+      "community": 24,
       "norm_label": "code:markdown (---)",
       "id": "claude_master_capabilities_codeblock_76"
     },
@@ -7821,7 +8471,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1386",
-      "community": 222,
+      "community": 24,
       "norm_label": "code:json ({)",
       "id": "claude_master_capabilities_codeblock_77"
     },
@@ -7857,7 +8507,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1438",
-      "community": 145,
+      "community": 24,
       "norm_label": "security & linting",
       "id": "claude_master_capabilities_security_linting"
     },
@@ -7866,7 +8516,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1442",
-      "community": 145,
+      "community": 24,
       "norm_label": "code:bash (# javascript)",
       "id": "claude_master_capabilities_codeblock_80"
     },
@@ -7875,7 +8525,7 @@
       "file_type": "document",
       "source_file": "MASTER_CAPABILITIES.md",
       "source_location": "L1458",
-      "community": 145,
+      "community": 24,
       "norm_label": "code:bash (# .eslintrc.json)",
       "id": "claude_master_capabilities_codeblock_81"
     },
@@ -13383,7 +14033,7 @@
       "file_type": "code",
       "source_file": "TaskCard.jsx",
       "source_location": "L1",
-      "community": 44,
+      "community": 222,
       "norm_label": "taskcard.jsx",
       "id": "taskcard_jsx"
     },
@@ -13392,7 +14042,7 @@
       "file_type": "code",
       "source_file": "TaskCard.jsx",
       "source_location": "L9",
-      "community": 44,
+      "community": 222,
       "norm_label": "priorityborder",
       "id": "components_taskcard_priorityborder"
     },
@@ -13401,7 +14051,7 @@
       "file_type": "code",
       "source_file": "TaskCard.jsx",
       "source_location": "L11",
-      "community": 44,
+      "community": 222,
       "norm_label": "daysleft()",
       "id": "components_taskcard_daysleft"
     },
@@ -13410,7 +14060,7 @@
       "file_type": "code",
       "source_file": "TaskCard.jsx",
       "source_location": "L19",
-      "community": 44,
+      "community": 222,
       "norm_label": "taskcard()",
       "id": "components_taskcard_taskcard"
     },
@@ -13446,7 +14096,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/admin/AssignTask.jsx",
       "source_location": "L1",
-      "community": 44,
+      "community": 229,
       "norm_label": "assigntask.jsx",
       "id": "client_src_pages_admin_assigntask_jsx"
     },
@@ -13455,7 +14105,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/admin/AssignTask.jsx",
       "source_location": "L9",
-      "community": 44,
+      "community": 229,
       "norm_label": "assigntask()",
       "id": "admin_assigntask_assigntask"
     },
@@ -13518,7 +14168,7 @@
       "file_type": "code",
       "source_file": "CoachesPage.jsx",
       "source_location": "L1",
-      "community": 44,
+      "community": 145,
       "norm_label": "coachespage.jsx",
       "id": "coachespage_jsx"
     },
@@ -13527,7 +14177,7 @@
       "file_type": "code",
       "source_file": "CoachesPage.jsx",
       "source_location": "L11",
-      "community": 44,
+      "community": 145,
       "norm_label": "coachform()",
       "id": "admin_coachespage_coachform"
     },
@@ -13536,7 +14186,7 @@
       "file_type": "code",
       "source_file": "CoachesPage.jsx",
       "source_location": "L44",
-      "community": 44,
+      "community": 145,
       "norm_label": "coachcard()",
       "id": "admin_coachespage_coachcard"
     },
@@ -13545,7 +14195,7 @@
       "file_type": "code",
       "source_file": "CoachesPage.jsx",
       "source_location": "L115",
-      "community": 44,
+      "community": 145,
       "norm_label": "coachespage()",
       "id": "admin_coachespage_coachespage"
     },
@@ -19566,7 +20216,7 @@
       "file_type": "code",
       "source_file": "NotificationBell.jsx",
       "source_location": "L1",
-      "community": 6,
+      "community": 226,
       "norm_label": "notificationbell.jsx",
       "id": "notificationbell_jsx"
     },
@@ -19575,7 +20225,7 @@
       "file_type": "code",
       "source_file": "NotificationBell.jsx",
       "source_location": "L7",
-      "community": 6,
+      "community": 226,
       "norm_label": "typestyles",
       "id": "components_notificationbell_typestyles"
     },
@@ -19584,7 +20234,7 @@
       "file_type": "code",
       "source_file": "NotificationBell.jsx",
       "source_location": "L15",
-      "community": 6,
+      "community": 226,
       "norm_label": "typeicons",
       "id": "components_notificationbell_typeicons"
     },
@@ -19593,7 +20243,7 @@
       "file_type": "code",
       "source_file": "NotificationBell.jsx",
       "source_location": "L23",
-      "community": 6,
+      "community": 226,
       "norm_label": "notificationbell()",
       "id": "components_notificationbell_notificationbell"
     },
@@ -20853,7 +21503,7 @@
       "file_type": "code",
       "source_file": "server/auth.js",
       "source_location": "L57",
-      "community": 120,
+      "community": 63,
       "norm_label": "requireadmin()",
       "id": "server_auth_requireadmin"
     },
@@ -20871,7 +21521,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L1",
-      "community": 63,
+      "community": 231,
       "norm_label": "test-api.js",
       "id": "server_test_api_js"
     },
@@ -20880,7 +21530,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L2",
-      "community": 63,
+      "community": 231,
       "norm_label": "express",
       "id": "server_test_api_express"
     },
@@ -20889,7 +21539,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L3",
-      "community": 63,
+      "community": 231,
       "norm_label": "db",
       "id": "server_test_api_db"
     },
@@ -20898,7 +21548,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L4",
-      "community": 63,
+      "community": 231,
       "norm_label": "{ authenticatetoken, requireadmin }",
       "id": "server_test_api_authenticatetoken_requireadmin"
     },
@@ -20907,7 +21557,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L6",
-      "community": 63,
+      "community": 231,
       "norm_label": "app",
       "id": "server_test_api_app"
     },
@@ -20916,7 +21566,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L24",
-      "community": 63,
+      "community": 231,
       "norm_label": "result",
       "id": "server_test_api_result"
     },
@@ -20925,7 +21575,7 @@
       "file_type": "code",
       "source_file": "server/test-api.js",
       "source_location": "L33",
-      "community": 63,
+      "community": 231,
       "norm_label": "coaches",
       "id": "server_test_api_coaches"
     },
@@ -21177,7 +21827,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L1",
-      "community": 219,
+      "community": 63,
       "norm_label": "test-with-db.js",
       "id": "server_test_with_db_js"
     },
@@ -21186,7 +21836,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L2",
-      "community": 219,
+      "community": 63,
       "norm_label": "express",
       "id": "server_test_with_db_express"
     },
@@ -21195,7 +21845,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L3",
-      "community": 219,
+      "community": 63,
       "norm_label": "cors",
       "id": "server_test_with_db_cors"
     },
@@ -21204,7 +21854,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L4",
-      "community": 219,
+      "community": 63,
       "norm_label": "db",
       "id": "server_test_with_db_db"
     },
@@ -21213,7 +21863,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L5",
-      "community": 219,
+      "community": 63,
       "norm_label": "{ authenticatetoken, requireadmin }",
       "id": "server_test_with_db_authenticatetoken_requireadmin"
     },
@@ -21222,7 +21872,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L6",
-      "community": 219,
+      "community": 63,
       "norm_label": "{ schedulejobs }",
       "id": "server_test_with_db_schedulejobs"
     },
@@ -21231,7 +21881,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L8",
-      "community": 219,
+      "community": 63,
       "norm_label": "app",
       "id": "server_test_with_db_app"
     },
@@ -21240,7 +21890,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L13",
-      "community": 219,
+      "community": 63,
       "norm_label": "corsoptions",
       "id": "server_test_with_db_corsoptions"
     },
@@ -21249,7 +21899,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L1",
-      "community": 120,
+      "community": 63,
       "norm_label": "test-with-notifications-route.js",
       "id": "server_test_with_notifications_route_js"
     },
@@ -21258,7 +21908,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L2",
-      "community": 120,
+      "community": 63,
       "norm_label": "express",
       "id": "server_test_with_notifications_route_express"
     },
@@ -21267,7 +21917,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L3",
-      "community": 120,
+      "community": 63,
       "norm_label": "cors",
       "id": "server_test_with_notifications_route_cors"
     },
@@ -21276,7 +21926,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L4",
-      "community": 120,
+      "community": 63,
       "norm_label": "{ authenticatetoken, requireadmin }",
       "id": "server_test_with_notifications_route_authenticatetoken_requireadmin"
     },
@@ -21285,7 +21935,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L5",
-      "community": 120,
+      "community": 63,
       "norm_label": "{ schedulejobs }",
       "id": "server_test_with_notifications_route_schedulejobs"
     },
@@ -21294,7 +21944,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L7",
-      "community": 120,
+      "community": 63,
       "norm_label": "app",
       "id": "server_test_with_notifications_route_app"
     },
@@ -21303,7 +21953,7 @@
       "file_type": "code",
       "source_file": "server/test-with-notifications-route.js",
       "source_location": "L12",
-      "community": 120,
+      "community": 63,
       "norm_label": "corsoptions",
       "id": "server_test_with_notifications_route_corsoptions"
     },
@@ -22797,7 +23447,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L1",
-      "community": 6,
+      "community": 148,
       "norm_label": "app.jsx",
       "id": "client_src_app_jsx"
     },
@@ -22806,7 +23456,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L8",
-      "community": 6,
+      "community": 148,
       "norm_label": "loginpage",
       "id": "src_app_loginpage"
     },
@@ -22815,7 +23465,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L9",
-      "community": 6,
+      "community": 148,
       "norm_label": "admindashboard",
       "id": "src_app_admindashboard"
     },
@@ -22824,7 +23474,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L10",
-      "community": 6,
+      "community": 148,
       "norm_label": "coachespage",
       "id": "src_app_coachespage"
     },
@@ -22833,7 +23483,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L11",
-      "community": 6,
+      "community": 148,
       "norm_label": "taskboard",
       "id": "src_app_taskboard"
     },
@@ -22842,7 +23492,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L12",
-      "community": 6,
+      "community": 148,
       "norm_label": "assigntask",
       "id": "src_app_assigntask"
     },
@@ -22851,7 +23501,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L13",
-      "community": 6,
+      "community": 148,
       "norm_label": "coachdashboard",
       "id": "src_app_coachdashboard"
     },
@@ -22860,7 +23510,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L14",
-      "community": 6,
+      "community": 148,
       "norm_label": "mytasks",
       "id": "src_app_mytasks"
     },
@@ -22869,7 +23519,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L16",
-      "community": 6,
+      "community": 148,
       "norm_label": "pageloader()",
       "id": "src_app_pageloader"
     },
@@ -22878,7 +23528,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L25",
-      "community": 6,
+      "community": 148,
       "norm_label": "adminlayout()",
       "id": "src_app_adminlayout"
     },
@@ -22887,7 +23537,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L29",
-      "community": 6,
+      "community": 148,
       "norm_label": "coachlayout()",
       "id": "src_app_coachlayout"
     },
@@ -22896,7 +23546,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L33",
-      "community": 6,
+      "community": 148,
       "norm_label": "roleredirect()",
       "id": "src_app_roleredirect"
     },
@@ -22905,7 +23555,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L44",
-      "community": 6,
+      "community": 148,
       "norm_label": "app()",
       "id": "src_app_app"
     },
@@ -22914,7 +23564,7 @@
       "file_type": "code",
       "source_file": "client/src/components/DelayReasonModal.jsx",
       "source_location": "L1",
-      "community": 44,
+      "community": 222,
       "norm_label": "delayreasonmodal.jsx",
       "id": "client_src_components_delayreasonmodal_jsx"
     },
@@ -22923,7 +23573,7 @@
       "file_type": "code",
       "source_file": "client/src/components/DelayReasonModal.jsx",
       "source_location": "L7",
-      "community": 44,
+      "community": 222,
       "norm_label": "delayreasonmodal()",
       "id": "components_delayreasonmodal_delayreasonmodal"
     },
@@ -22950,7 +23600,7 @@
       "file_type": "code",
       "source_file": "client/src/components/Header.jsx",
       "source_location": "L1",
-      "community": 6,
+      "community": 226,
       "norm_label": "header.jsx",
       "id": "client_src_components_header_jsx"
     },
@@ -22959,7 +23609,7 @@
       "file_type": "code",
       "source_file": "client/src/components/Header.jsx",
       "source_location": "L5",
-      "community": 6,
+      "community": 226,
       "norm_label": "pagetitles",
       "id": "components_header_pagetitles"
     },
@@ -22968,7 +23618,7 @@
       "file_type": "code",
       "source_file": "client/src/components/Header.jsx",
       "source_location": "L14",
-      "community": 6,
+      "community": 226,
       "norm_label": "header()",
       "id": "components_header_header"
     },
@@ -22977,7 +23627,7 @@
       "file_type": "code",
       "source_file": "client/src/components/Layout.jsx",
       "source_location": "L1",
-      "community": 6,
+      "community": 226,
       "norm_label": "layout.jsx",
       "id": "client_src_components_layout_jsx"
     },
@@ -22986,7 +23636,7 @@
       "file_type": "code",
       "source_file": "client/src/components/Layout.jsx",
       "source_location": "L6",
-      "community": 6,
+      "community": 226,
       "norm_label": "layout()",
       "id": "components_layout_layout"
     },
@@ -22995,7 +23645,7 @@
       "file_type": "code",
       "source_file": "client/src/components/NotificationBell.jsx",
       "source_location": "L1",
-      "community": 6,
+      "community": 226,
       "norm_label": "notificationbell.jsx",
       "id": "client_src_components_notificationbell_jsx"
     },
@@ -23094,7 +23744,7 @@
       "file_type": "code",
       "source_file": "client/src/components/TaskCard.jsx",
       "source_location": "L1",
-      "community": 44,
+      "community": 222,
       "norm_label": "taskcard.jsx",
       "id": "client_src_components_taskcard_jsx"
     },
@@ -23139,7 +23789,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Button.jsx",
       "source_location": "L1",
-      "community": 44,
+      "community": 222,
       "norm_label": "button.jsx",
       "id": "client_src_components_ui_button_jsx"
     },
@@ -23148,7 +23798,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Button.jsx",
       "source_location": "L4",
-      "community": 44,
+      "community": 222,
       "norm_label": "variants",
       "id": "ui_button_variants"
     },
@@ -23157,7 +23807,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Button.jsx",
       "source_location": "L12",
-      "community": 44,
+      "community": 222,
       "norm_label": "sizes",
       "id": "ui_button_sizes"
     },
@@ -23166,7 +23816,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Button.jsx",
       "source_location": "L18",
-      "community": 44,
+      "community": 222,
       "norm_label": "button()",
       "id": "ui_button_button"
     },
@@ -23175,7 +23825,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Card.jsx",
       "source_location": "L1",
-      "community": 44,
+      "community": 229,
       "norm_label": "card.jsx",
       "id": "client_src_components_ui_card_jsx"
     },
@@ -23184,7 +23834,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Card.jsx",
       "source_location": "L3",
-      "community": 44,
+      "community": 229,
       "norm_label": "card()",
       "id": "ui_card_card"
     },
@@ -23193,7 +23843,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/EmptyState.jsx",
       "source_location": "L1",
-      "community": 44,
+      "community": 145,
       "norm_label": "emptystate.jsx",
       "id": "client_src_components_ui_emptystate_jsx"
     },
@@ -23202,7 +23852,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/EmptyState.jsx",
       "source_location": "L3",
-      "community": 44,
+      "community": 145,
       "norm_label": "emptystate()",
       "id": "ui_emptystate_emptystate"
     },
@@ -23211,7 +23861,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/KPICard.jsx",
       "source_location": "L1",
-      "community": 44,
+      "community": 145,
       "norm_label": "kpicard.jsx",
       "id": "client_src_components_ui_kpicard_jsx"
     },
@@ -23220,7 +23870,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/KPICard.jsx",
       "source_location": "L3",
-      "community": 44,
+      "community": 145,
       "norm_label": "colormap",
       "id": "ui_kpicard_colormap"
     },
@@ -23229,7 +23879,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/KPICard.jsx",
       "source_location": "L11",
-      "community": 44,
+      "community": 145,
       "norm_label": "kpicard()",
       "id": "ui_kpicard_kpicard"
     },
@@ -23274,7 +23924,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Skeleton.jsx",
       "source_location": "L1",
-      "community": 44,
+      "community": 145,
       "norm_label": "skeleton.jsx",
       "id": "client_src_components_ui_skeleton_jsx"
     },
@@ -23283,7 +23933,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Skeleton.jsx",
       "source_location": "L3",
-      "community": 44,
+      "community": 145,
       "norm_label": "skeleton()",
       "id": "ui_skeleton_skeleton"
     },
@@ -23292,7 +23942,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Skeleton.jsx",
       "source_location": "L16",
-      "community": 44,
+      "community": 145,
       "norm_label": "cardskeleton()",
       "id": "ui_skeleton_cardskeleton"
     },
@@ -23319,7 +23969,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/LoginPage.test.jsx",
       "source_location": "L1",
-      "community": 6,
+      "community": 237,
       "norm_label": "loginpage.test.jsx",
       "id": "client_src_pages_loginpage_test_jsx"
     },
@@ -23328,7 +23978,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/LoginPage.test.jsx",
       "source_location": "L56",
-      "community": 6,
+      "community": 237,
       "norm_label": "mocklogin",
       "id": "pages_loginpage_test_mocklogin"
     },
@@ -23337,7 +23987,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/LoginPage.test.jsx",
       "source_location": "L66",
-      "community": 6,
+      "community": 237,
       "norm_label": "user",
       "id": "pages_loginpage_test_user"
     },
@@ -23346,7 +23996,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/admin/CoachesPage.jsx",
       "source_location": "L1",
-      "community": 44,
+      "community": 145,
       "norm_label": "coachespage.jsx",
       "id": "client_src_pages_admin_coachespage_jsx"
     },
@@ -23355,7 +24005,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/coach/Dashboard.jsx",
       "source_location": "L1",
-      "community": 44,
+      "community": 145,
       "norm_label": "dashboard.jsx",
       "id": "client_src_pages_coach_dashboard_jsx"
     },
@@ -23364,7 +24014,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/coach/Dashboard.jsx",
       "source_location": "L13",
-      "community": 44,
+      "community": 145,
       "norm_label": "greeting()",
       "id": "coach_dashboard_greeting"
     },
@@ -23373,7 +24023,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/coach/Dashboard.jsx",
       "source_location": "L19",
-      "community": 44,
+      "community": 145,
       "norm_label": "coachdashboard()",
       "id": "coach_dashboard_coachdashboard"
     },
@@ -23382,7 +24032,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/coach/MyTasks.jsx",
       "source_location": "L1",
-      "community": 44,
+      "community": 229,
       "norm_label": "mytasks.jsx",
       "id": "client_src_pages_coach_mytasks_jsx"
     },
@@ -23391,7 +24041,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/coach/MyTasks.jsx",
       "source_location": "L8",
-      "community": 44,
+      "community": 229,
       "norm_label": "tabs",
       "id": "coach_mytasks_tabs"
     },
@@ -23400,7 +24050,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/coach/MyTasks.jsx",
       "source_location": "L15",
-      "community": 44,
+      "community": 229,
       "norm_label": "emptymessages",
       "id": "coach_mytasks_emptymessages"
     },
@@ -23409,7 +24059,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/coach/MyTasks.jsx",
       "source_location": "L22",
-      "community": 44,
+      "community": 229,
       "norm_label": "mytasks()",
       "id": "coach_mytasks_mytasks"
     },
@@ -24660,7 +25310,7 @@
       "file_type": "code",
       "source_file": "client/src/main.jsx",
       "source_location": "L1",
-      "community": 6,
+      "community": 148,
       "norm_label": "main.jsx",
       "id": "client_src_main_jsx"
     },
@@ -25020,7 +25670,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L596",
-      "community": 32,
+      "community": 238,
       "norm_label": "task 6: implement login endpoint (red)",
       "id": "plans_2026_05_17_phase1_auth_system_task_6_implement_login_endpoint_red"
     },
@@ -25029,7 +25679,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L607",
-      "community": 32,
+      "community": 238,
       "norm_label": "code:javascript (import request from 'supertest';)",
       "id": "plans_2026_05_17_phase1_auth_system_codeblock_28"
     },
@@ -25038,7 +25688,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L709",
-      "community": 32,
+      "community": 238,
       "norm_label": "code:bash (cd d:\\cursor_new\\server)",
       "id": "plans_2026_05_17_phase1_auth_system_codeblock_29"
     },
@@ -25200,7 +25850,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L1130",
-      "community": 224,
+      "community": 32,
       "norm_label": "task 11: create protectedroute component (red)",
       "id": "plans_2026_05_17_phase1_auth_system_task_11_create_protectedroute_component_red"
     },
@@ -25209,7 +25859,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L1140",
-      "community": 224,
+      "community": 32,
       "norm_label": "code:javascript (import { render, screen } from '@testing-library/react';)",
       "id": "plans_2026_05_17_phase1_auth_system_codeblock_43"
     },
@@ -25218,7 +25868,7 @@
       "file_type": "document",
       "source_file": "docs/superpowers/plans/2026-05-17-phase1-auth-system.md",
       "source_location": "L1226",
-      "community": 224,
+      "community": 32,
       "norm_label": "code:bash (cd d:\\cursor_new\\client)",
       "id": "plans_2026_05_17_phase1_auth_system_codeblock_44"
     },
@@ -27511,55 +28161,643 @@
   ],
   "links": [
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/__tests__/agents/reporting-agent.test.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "agents_reporting_agent_test",
-      "target": "agents_reporting_agent",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "server/__tests__/agents/reporting-agent.test.js",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "agents_reporting_agent_test",
-      "target": "agents_reporting_agent_test_db",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
       "source_location": "L9",
       "weight": 1.0,
-      "source": "agents_reporting_agent_test",
-      "target": "agents_reporting_agent_test_patternanalyzer",
+      "source": "docs_phase9_task5_compliance_review",
+      "target": "docs_phase9_task5_compliance_review_phase_9_task_5_reporting_agent_compliance_review",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "server/__tests__/agents/reporting-agent.test.js",
-      "source_location": "L8",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L783",
       "weight": 1.0,
-      "source": "agents_reporting_agent_test",
-      "target": "agents_reporting_agent_test_reportingagent",
+      "source": "docs_phase9_task5_compliance_review_phase_9_task_5_reporting_agent_compliance_review",
+      "target": "docs_phase9_task5_compliance_review_approval_next_steps",
       "confidence_score": 1.0
     },
     {
-      "relation": "imports_from",
-      "context": "import",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "server/__tests__/agents/reporting-agent.test.js",
-      "source_location": "L9",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L725",
       "weight": 1.0,
-      "source": "agents_reporting_agent_test",
-      "target": "services_pattern_analyzer",
+      "source": "docs_phase9_task5_compliance_review_phase_9_task_5_reporting_agent_compliance_review",
+      "target": "docs_phase9_task5_compliance_review_code_quality_observations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L801",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_phase_9_task_5_reporting_agent_compliance_review",
+      "target": "docs_phase9_task5_compliance_review_conclusion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_phase_9_task_5_reporting_agent_compliance_review",
+      "target": "docs_phase9_task5_compliance_review_detailed_compliance_checklist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_phase_9_task_5_reporting_agent_compliance_review",
+      "target": "docs_phase9_task5_compliance_review_executive_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L707",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_phase_9_task_5_reporting_agent_compliance_review",
+      "target": "docs_phase9_task5_compliance_review_missing_features_analysis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L768",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_phase_9_task_5_reporting_agent_compliance_review",
+      "target": "docs_phase9_task5_compliance_review_ready_for_production_checklist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L745",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_phase_9_task_5_reporting_agent_compliance_review",
+      "target": "docs_phase9_task5_compliance_review_specification_compliance_matrix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_detailed_compliance_checklist",
+      "target": "docs_phase9_task5_compliance_review_1_24_hour_analysis_pipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_detailed_compliance_checklist",
+      "target": "docs_phase9_task5_compliance_review_2_blocker_parsing_detection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_detailed_compliance_checklist",
+      "target": "docs_phase9_task5_compliance_review_3_coach_performance_analysis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L180",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_detailed_compliance_checklist",
+      "target": "docs_phase9_task5_compliance_review_4_recommendation_generation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L241",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_detailed_compliance_checklist",
+      "target": "docs_phase9_task5_compliance_review_5_html_email_generation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L378",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_detailed_compliance_checklist",
+      "target": "docs_phase9_task5_compliance_review_6_admin_email_queueing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L440",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_detailed_compliance_checklist",
+      "target": "docs_phase9_task5_compliance_review_7_report_archival_to_database",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L539",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_detailed_compliance_checklist",
+      "target": "docs_phase9_task5_compliance_review_8_error_handling_logging",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L630",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_detailed_compliance_checklist",
+      "target": "docs_phase9_task5_compliance_review_9_database_schema_usage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_1_24_hour_analysis_pipeline",
+      "target": "docs_phase9_task5_compliance_review_completion_rate_calculation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_1_24_hour_analysis_pipeline",
+      "target": "docs_phase9_task5_compliance_review_return_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_1_24_hour_analysis_pipeline",
+      "target": "docs_phase9_task5_compliance_review_support_actions_query",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_2_blocker_parsing_detection",
+      "target": "docs_phase9_task5_compliance_review_blocker_keywords",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_2_blocker_parsing_detection",
+      "target": "docs_phase9_task5_compliance_review_frequency_counting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_3_coach_performance_analysis",
+      "target": "docs_phase9_task5_compliance_review_data_transformation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_3_coach_performance_analysis",
+      "target": "docs_phase9_task5_compliance_review_performance_leaderboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_3_coach_performance_analysis",
+      "target": "docs_phase9_task5_compliance_review_query_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L205",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_4_recommendation_generation",
+      "target": "docs_phase9_task5_compliance_review_blocker_based_recommendation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L187",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_4_recommendation_generation",
+      "target": "docs_phase9_task5_compliance_review_high_completion_rate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_4_recommendation_generation",
+      "target": "docs_phase9_task5_compliance_review_low_completion_rate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L225",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_4_recommendation_generation",
+      "target": "docs_phase9_task5_compliance_review_low_performer_support",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L215",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_4_recommendation_generation",
+      "target": "docs_phase9_task5_compliance_review_top_performer_highlight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L320",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_5_html_email_generation",
+      "target": "docs_phase9_task5_compliance_review_coach_performance_section",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L248",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_5_html_email_generation",
+      "target": "docs_phase9_task5_compliance_review_doctype_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L268",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_5_html_email_generation",
+      "target": "docs_phase9_task5_compliance_review_header_section",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L278",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_5_html_email_generation",
+      "target": "docs_phase9_task5_compliance_review_key_metrics_section",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L353",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_5_html_email_generation",
+      "target": "docs_phase9_task5_compliance_review_professional_styling",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L338",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_5_html_email_generation",
+      "target": "docs_phase9_task5_compliance_review_recommendations_section",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L364",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_5_html_email_generation",
+      "target": "docs_phase9_task5_compliance_review_timestamp_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L291",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_5_html_email_generation",
+      "target": "docs_phase9_task5_compliance_review_top_blockers_section",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L385",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_6_admin_email_queueing",
+      "target": "docs_phase9_task5_compliance_review_admin_user_lookup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L400",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_6_admin_email_queueing",
+      "target": "docs_phase9_task5_compliance_review_email_queue_insertion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L429",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_6_admin_email_queueing",
+      "target": "docs_phase9_task5_compliance_review_error_handling",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L414",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_6_admin_email_queueing",
+      "target": "docs_phase9_task5_compliance_review_parameterized_query",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L422",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_6_admin_email_queueing",
+      "target": "docs_phase9_task5_compliance_review_success_logging",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L499",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_7_report_archival_to_database",
+      "target": "docs_phase9_task5_compliance_review_agent_activity_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L464",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_7_report_archival_to_database",
+      "target": "docs_phase9_task5_compliance_review_date_calculation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L509",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_7_report_archival_to_database",
+      "target": "docs_phase9_task5_compliance_review_on_conflict_handling",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L522",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_7_report_archival_to_database",
+      "target": "docs_phase9_task5_compliance_review_parameterized_query_522",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L482",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_7_report_archival_to_database",
+      "target": "docs_phase9_task5_compliance_review_patterns_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L492",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_7_report_archival_to_database",
+      "target": "docs_phase9_task5_compliance_review_recommendations_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L530",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_7_report_archival_to_database",
+      "target": "docs_phase9_task5_compliance_review_success_logging_530",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L471",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_7_report_archival_to_database",
+      "target": "docs_phase9_task5_compliance_review_summary_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L447",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_7_report_archival_to_database",
+      "target": "docs_phase9_task5_compliance_review_table_schema_verification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L546",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_8_error_handling_logging",
+      "target": "docs_phase9_task5_compliance_review_agent_errors_table_verification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L579",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_8_error_handling_logging",
+      "target": "docs_phase9_task5_compliance_review_error_logging_method",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L563",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_8_error_handling_logging",
+      "target": "docs_phase9_task5_compliance_review_main_run_method_try_catch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L596",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_8_error_handling_logging",
+      "target": "docs_phase9_task5_compliance_review_nested_error_handling",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L616",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_8_error_handling_logging",
+      "target": "docs_phase9_task5_compliance_review_severity_levels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L697",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_9_database_schema_usage",
+      "target": "docs_phase9_task5_compliance_review_postgresql_async_operations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L637",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_9_database_schema_usage",
+      "target": "docs_phase9_task5_compliance_review_read_operations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L670",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_9_database_schema_usage",
+      "target": "docs_phase9_task5_compliance_review_write_operations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L736",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_code_quality_observations",
+      "target": "docs_phase9_task5_compliance_review_areas_for_future_enhancement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L727",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_code_quality_observations",
+      "target": "docs_phase9_task5_compliance_review_strengths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md",
+      "source_location": "L785",
+      "weight": 1.0,
+      "source": "docs_phase9_task5_compliance_review_approval_next_steps",
+      "target": "docs_phase9_task5_compliance_review_approved_for_production",
       "confidence_score": 1.0
     },
     {
@@ -27569,9 +28807,9 @@
       "source_file": "server/__tests__/services/pattern-analyzer.test.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pattern_analyzer_test",
-      "target": "services_pattern_analyzer",
-      "confidence_score": 1.0
+      "target": "services_pattern_analyzer"
     },
     {
       "relation": "contains",
@@ -27579,9 +28817,9 @@
       "source_file": "server/__tests__/services/pattern-analyzer.test.js",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pattern_analyzer_test",
-      "target": "services_pattern_analyzer_test_db",
-      "confidence_score": 1.0
+      "target": "services_pattern_analyzer_test_db"
     },
     {
       "relation": "contains",
@@ -27589,39 +28827,9 @@
       "source_file": "server/__tests__/services/pattern-analyzer.test.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pattern_analyzer_test",
-      "target": "services_pattern_analyzer_test_patternanalyzer",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "agents_reporting_agent",
-      "target": "agents_reporting_agent_db",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L21",
-      "weight": 1.0,
-      "source": "agents_reporting_agent",
-      "target": "agents_reporting_agent_patternanalyzer",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L23",
-      "weight": 1.0,
-      "source": "agents_reporting_agent",
-      "target": "agents_reporting_agent_reportingagent",
-      "confidence_score": 1.0
+      "target": "services_pattern_analyzer_test_patternanalyzer"
     },
     {
       "relation": "imports_from",
@@ -27630,123 +28838,20 @@
       "source_file": "server/agents/reporting-agent.js",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_reporting_agent",
-      "target": "services_pattern_analyzer",
-      "confidence_score": 1.0
+      "target": "services_pattern_analyzer"
     },
     {
-      "relation": "method",
+      "relation": "imports_from",
+      "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L194",
+      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_location": "L9",
       "weight": 1.0,
-      "source": "agents_reporting_agent_reportingagent",
-      "target": "agents_reporting_agent_reportingagent_archivereport",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L24",
-      "weight": 1.0,
-      "source": "agents_reporting_agent_reportingagent",
-      "target": "agents_reporting_agent_reportingagent_constructor",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L151",
-      "weight": 1.0,
-      "source": "agents_reporting_agent_reportingagent",
-      "target": "agents_reporting_agent_reportingagent_formatblocker",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L69",
-      "weight": 1.0,
-      "source": "agents_reporting_agent_reportingagent",
-      "target": "agents_reporting_agent_reportingagent_generateemailhtml",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L235",
-      "weight": 1.0,
-      "source": "agents_reporting_agent_reportingagent",
-      "target": "agents_reporting_agent_reportingagent_logagenterror",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L165",
-      "weight": 1.0,
-      "source": "agents_reporting_agent_reportingagent",
-      "target": "agents_reporting_agent_reportingagent_queuereportemail",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L32",
-      "weight": 1.0,
-      "source": "agents_reporting_agent_reportingagent",
-      "target": "agents_reporting_agent_reportingagent_run",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L49",
-      "weight": 1.0,
-      "source": "agents_reporting_agent_reportingagent_run",
-      "target": "agents_reporting_agent_reportingagent_archivereport",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L43",
-      "weight": 1.0,
-      "source": "agents_reporting_agent_reportingagent_run",
-      "target": "agents_reporting_agent_reportingagent_generateemailhtml",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L61",
-      "weight": 1.0,
-      "source": "agents_reporting_agent_reportingagent_run",
-      "target": "agents_reporting_agent_reportingagent_logagenterror",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/reporting-agent.js",
-      "source_location": "L46",
-      "weight": 1.0,
-      "source": "agents_reporting_agent_reportingagent_run",
-      "target": "agents_reporting_agent_reportingagent_queuereportemail",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent_test",
+      "target": "services_pattern_analyzer"
     },
     {
       "relation": "contains",
@@ -27754,9 +28859,9 @@
       "source_file": "server/services/pattern-analyzer.js",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pattern_analyzer",
-      "target": "services_pattern_analyzer_db",
-      "confidence_score": 1.0
+      "target": "services_pattern_analyzer_db"
     },
     {
       "relation": "contains",
@@ -27764,9 +28869,9 @@
       "source_file": "server/services/pattern-analyzer.js",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pattern_analyzer",
-      "target": "services_pattern_analyzer_patternanalyzer",
-      "confidence_score": 1.0
+      "target": "services_pattern_analyzer_patternanalyzer"
     },
     {
       "relation": "method",
@@ -27774,9 +28879,9 @@
       "source_file": "server/services/pattern-analyzer.js",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pattern_analyzer_patternanalyzer",
-      "target": "services_pattern_analyzer_patternanalyzer_analyze24houractions",
-      "confidence_score": 1.0
+      "target": "services_pattern_analyzer_patternanalyzer_analyze24houractions"
     },
     {
       "relation": "method",
@@ -27784,9 +28889,9 @@
       "source_file": "server/services/pattern-analyzer.js",
       "source_location": "L101",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pattern_analyzer_patternanalyzer",
-      "target": "services_pattern_analyzer_patternanalyzer_analyzecoachperformance",
-      "confidence_score": 1.0
+      "target": "services_pattern_analyzer_patternanalyzer_analyzecoachperformance"
     },
     {
       "relation": "method",
@@ -27794,9 +28899,9 @@
       "source_file": "server/services/pattern-analyzer.js",
       "source_location": "L133",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pattern_analyzer_patternanalyzer",
-      "target": "services_pattern_analyzer_patternanalyzer_generaterecommendations",
-      "confidence_score": 1.0
+      "target": "services_pattern_analyzer_patternanalyzer_generaterecommendations"
     },
     {
       "relation": "method",
@@ -27804,9 +28909,9 @@
       "source_file": "server/services/pattern-analyzer.js",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pattern_analyzer_patternanalyzer",
-      "target": "services_pattern_analyzer_patternanalyzer_parsecommonblockers",
-      "confidence_score": 1.0
+      "target": "services_pattern_analyzer_patternanalyzer_parsecommonblockers"
     },
     {
       "relation": "calls",
@@ -27815,9 +28920,9 @@
       "source_file": "server/services/pattern-analyzer.js",
       "source_location": "L58",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pattern_analyzer_patternanalyzer_analyze24houractions",
-      "target": "services_pattern_analyzer_patternanalyzer_analyzecoachperformance",
-      "confidence_score": 1.0
+      "target": "services_pattern_analyzer_patternanalyzer_analyzecoachperformance"
     },
     {
       "relation": "calls",
@@ -27826,9 +28931,194 @@
       "source_file": "server/services/pattern-analyzer.js",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_pattern_analyzer_patternanalyzer_analyze24houractions",
-      "target": "services_pattern_analyzer_patternanalyzer_parsecommonblockers",
-      "confidence_score": 1.0
+      "target": "services_pattern_analyzer_patternanalyzer_parsecommonblockers"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent_test",
+      "target": "agents_reporting_agent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent_test",
+      "target": "agents_reporting_agent_test_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent_test",
+      "target": "agents_reporting_agent_test_patternanalyzer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/reporting-agent.test.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent_test",
+      "target": "agents_reporting_agent_test_reportingagent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent",
+      "target": "agents_reporting_agent_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent",
+      "target": "agents_reporting_agent_patternanalyzer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent",
+      "target": "agents_reporting_agent_reportingagent"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L194",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent_reportingagent",
+      "target": "agents_reporting_agent_reportingagent_archivereport"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent_reportingagent",
+      "target": "agents_reporting_agent_reportingagent_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L151",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent_reportingagent",
+      "target": "agents_reporting_agent_reportingagent_formatblocker"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L69",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent_reportingagent",
+      "target": "agents_reporting_agent_reportingagent_generateemailhtml"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L235",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent_reportingagent",
+      "target": "agents_reporting_agent_reportingagent_logagenterror"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L165",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent_reportingagent",
+      "target": "agents_reporting_agent_reportingagent_queuereportemail"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent_reportingagent",
+      "target": "agents_reporting_agent_reportingagent_run"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent_reportingagent_run",
+      "target": "agents_reporting_agent_reportingagent_archivereport"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent_reportingagent_run",
+      "target": "agents_reporting_agent_reportingagent_generateemailhtml"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L61",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent_reportingagent_run",
+      "target": "agents_reporting_agent_reportingagent_logagenterror"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/reporting-agent.js",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_reporting_agent_reportingagent_run",
+      "target": "agents_reporting_agent_reportingagent_queuereportemail"
     },
     {
       "relation": "imports_from",
@@ -61210,5 +62500,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "67782f8cd666c9f40fd51c3e248141e76ae10f97"
+  "built_at_commit": "30681b22e3d9739f9624baeffd0fd884eb2ee498"
 }

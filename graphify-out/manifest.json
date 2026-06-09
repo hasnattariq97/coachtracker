@@ -1335,8 +1335,8 @@
     "semantic_hash": ""
   },
   "server/__tests__/services/pattern-analyzer.test.js": {
-    "mtime": 1780990264.10109,
-    "ast_hash": "0b990f1a633d81f1ea0037206bfdadde",
+    "mtime": 1780990572.0255175,
+    "ast_hash": "f5a2d01a7754f32e222fdc2df3ea8274",
     "semantic_hash": ""
   },
   "server/agents/reporting-agent.js": {
@@ -1345,8 +1345,13 @@
     "semantic_hash": ""
   },
   "server/services/pattern-analyzer.js": {
-    "mtime": 1780990207.0724964,
-    "ast_hash": "a96ecea8ba500039752c3daabb533fcd",
+    "mtime": 1780990536.3579216,
+    "ast_hash": "b9cf255af14b850d66f92ca04db314f0",
+    "semantic_hash": ""
+  },
+  "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md": {
+    "mtime": 1780990426.860382,
+    "ast_hash": "4c38fc7be64410af6880e1419bdef4d4",
     "semantic_hash": ""
   }
 }
