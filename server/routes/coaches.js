@@ -15,7 +15,8 @@ router.get('/', async (req, res) => {
         u.id, u.name, u.email, u.role,
         COUNT(CASE WHEN t.status IN ('assigned','in_progress') THEN 1 END) AS assigned,
         COUNT(CASE WHEN t.status = 'completed' THEN 1 END)                 AS completed,
-        COUNT(CASE WHEN t.status = 'overdue'   THEN 1 END)                 AS overdue
+        COUNT(CASE WHEN t.status = 'overdue'   THEN 1 END)                 AS overdue,
+        COUNT(t.id)                                                         AS total
       FROM users u
       LEFT JOIN tasks t ON t.coach_id = u.id
       WHERE u.role = 'coach'

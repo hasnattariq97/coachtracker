@@ -69,7 +69,7 @@ const AdminDashboard = () => {
           ) : (
             <div className="space-y-5">
               {coaches.map(c => {
-                const total = (c.assigned || 0) + (c.completed || 0) + (c.overdue || 0);
+                const total = c.total || 0;
                 return (
                   <div key={c.id}>
                     <div className="flex items-center justify-between mb-1.5">

@@ -1,1207 +1,1277 @@
 {
-  "D:\\Cursor_new\\assign-test-task.js": {
+  "assign-test-task.js": {
     "mtime": 1780656008.3031838,
     "ast_hash": "95c8c2e045a97148573f233429e8ba47",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\check-task.js": {
+  "check-task.js": {
     "mtime": 1780655516.1161325,
     "ast_hash": "7ae9909a4857e62a47e5bde91fd08704",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\create-coach.js": {
+  "create-coach.js": {
     "mtime": 1780655930.9476192,
     "ast_hash": "fe2c751bd20bb848f876e8f0d6d5e751",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\install-ruflo-plugins.ps1": {
+  "install-ruflo-plugins.ps1": {
     "mtime": 1779003653.0463064,
     "ast_hash": "2835ed9e117c0f48572fee41eeb8eb5b",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\install-ruflo-plugins.sh": {
+  "install-ruflo-plugins.sh": {
     "mtime": 1779003566.6511369,
     "ast_hash": "744d2c195b338a5e6b5e00bb66148f21",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\RAILWAY_DEPLOY.sh": {
+  "RAILWAY_DEPLOY.sh": {
     "mtime": 1780757420.245615,
     "ast_hash": "e8bd2f06ea4bfc0ba36064034553ee25",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\test-live-app.js": {
+  "test-live-app.js": {
     "mtime": 1780812902.7403467,
     "ast_hash": "702fa3b112107be1fc1a8ddaf51fb264",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\verify-ruflo-plugins.sh": {
+  "verify-ruflo-plugins.sh": {
     "mtime": 1779004298.2795365,
     "ast_hash": "ef0b1f2e4e5276ace3b462ec6cf32a9d",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.beads\\_manifest.json": {
+  ".beads/_manifest.json": {
     "mtime": 1780387033.280883,
     "ast_hash": "36d2d7f6308deab7829e52422a940d80",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\settings.json": {
-    "mtime": 1779038335.9917986,
+  ".claude/settings.json": {
+    "mtime": 1780945740.2568712,
     "ast_hash": "722dd2658cc963040292d5961d3d4bcb",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\hooks\\hooks-cursor.json": {
+  ".claude/hooks/hooks-cursor.json": {
     "mtime": 1778999838.0789075,
     "ast_hash": "ad3db7a506ea39ec2ba4796d8587e01b",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\hooks\\hooks.json": {
+  ".claude/hooks/hooks.json": {
     "mtime": 1778999838.0868857,
     "ast_hash": "e3360afd26af98c2424b59736f43978a",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\hooks\\on-stop.sh": {
+  ".claude/hooks/on-stop.sh": {
     "mtime": 1779038231.43804,
     "ast_hash": "6a9c32b714c00bb42a87c010c26b4e35",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\hooks\\post-tool-use.sh": {
+  ".claude/hooks/post-tool-use.sh": {
     "mtime": 1778235318.0608585,
     "ast_hash": "e0b5f7514df23965e313069e3555e029",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\hooks\\pre-tool-use-write-guard.sh": {
+  ".claude/hooks/pre-tool-use-write-guard.sh": {
     "mtime": 1779038183.700302,
     "ast_hash": "bf48769794e6747621d23dd35353519d",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\hooks\\pre-tool-use.sh": {
+  ".claude/hooks/pre-tool-use.sh": {
     "mtime": 1778235313.0862057,
     "ast_hash": "aa0928b857c07eae216780f9e31dcfb8",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\hooks\\session-start": {
+  ".claude/hooks/session-start": {
     "mtime": 1779038170.883703,
     "ast_hash": "f62731db59e76a78b3e70218b62d9aa1",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\brainstorming\\scripts\\helper.js": {
+  ".claude/skills/brainstorming/scripts/helper.js": {
     "mtime": 1778999818.5728621,
     "ast_hash": "cef288b6b4543910ffc7826c3a036a55",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\brainstorming\\scripts\\start-server.sh": {
+  ".claude/skills/brainstorming/scripts/start-server.sh": {
     "mtime": 1778999818.6127572,
     "ast_hash": "386ba065fd00d2f3d8d5303c26d413f5",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\brainstorming\\scripts\\stop-server.sh": {
+  ".claude/skills/brainstorming/scripts/stop-server.sh": {
     "mtime": 1778999818.6257246,
     "ast_hash": "3d59796ec5ca347c5eb95adbc4914bb8",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\condition-based-waiting-example.ts": {
+  ".claude/skills/systematic-debugging/condition-based-waiting-example.ts": {
     "mtime": 1778999818.9608252,
     "ast_hash": "8e502a8c1e9c7de15967202615d241d5",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\find-polluter.sh": {
+  ".claude/skills/systematic-debugging/find-polluter.sh": {
     "mtime": 1778999819.033631,
     "ast_hash": "2ae1144fa5a66aa26c13d644a12ad0bf",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\writing-skills\\render-graphs.js": {
+  ".claude/skills/writing-skills/render-graphs.js": {
     "mtime": 1778999819.4774444,
     "ast_hash": "e9d8be9caa34d327cac6f746f947cee0",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\agent-browser.config.js": {
+  "client/agent-browser.config.js": {
     "mtime": 1780580817.252132,
     "ast_hash": "7ee29dc32818b8580d9fd607163b8b3b",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\debug-deployed.js": {
+  "client/debug-deployed.js": {
     "mtime": 1780812836.2851002,
     "ast_hash": "df1ee04025ea57617d7501cf4f29ffcd",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\eslint.config.js": {
+  "client/eslint.config.js": {
     "mtime": 1779040083.585766,
     "ast_hash": "3aa4b57d7f08181d86bde52a4dcb7f22",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\package.json": {
+  "client/package.json": {
     "mtime": 1780666078.8311107,
     "ast_hash": "f7c930d039aeed7e5a4829e73e161f13",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\postcss.config.js": {
+  "client/postcss.config.js": {
     "mtime": 1779040412.9070215,
     "ast_hash": "173dbafc52131969448e06ce9fa3eb68",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\tailwind.config.js": {
+  "client/tailwind.config.js": {
     "mtime": 1780381458.9144914,
     "ast_hash": "16eb3b51e468fb93f73dcf209d8b47cd",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\test-agent-browser.js": {
+  "client/test-agent-browser.js": {
     "mtime": 1780581512.3048663,
     "ast_hash": "93e2c3e3e7f6ff9861fef842049c57cd",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\test-live-coaching-insights.js": {
+  "client/test-live-coaching-insights.js": {
     "mtime": 1780813389.708135,
     "ast_hash": "52400e33b57f2b7dec070f5ad52712f0",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\vercel.json": {
+  "client/vercel.json": {
     "mtime": 1780683139.6024337,
     "ast_hash": "61bd31a2b0ac08f10f13c932b32d6ca1",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\vite.config.js": {
+  "client/vite.config.js": {
     "mtime": 1779040339.2850485,
     "ast_hash": "685d2a5814804d2a3ab8a80a6c57c4a4",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\vitest.config.js": {
+  "client/vitest.config.js": {
     "mtime": 1779044127.852481,
     "ast_hash": "ca19447c2529e443144a07496a301c74",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\App.jsx": {
+  "client/src/App.jsx": {
     "mtime": 1780381481.9851265,
     "ast_hash": "58859c11c29a71954ae641252f6bcbfb",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\main.jsx": {
+  "client/src/main.jsx": {
     "mtime": 1779040086.2490332,
     "ast_hash": "e13723e2574429d9a6d849727e3ff695",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\setup.js": {
+  "client/src/setup.js": {
     "mtime": 1779043112.780841,
     "ast_hash": "70d4c9e5a4475324972744204d583c09",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\CoachingInsightCard.jsx": {
+  "client/src/components/CoachingInsightCard.jsx": {
     "mtime": 1780817314.7161562,
     "ast_hash": "f8d110671fe4b8885a76976023f290f1",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\DelayReasonModal.jsx": {
+  "client/src/components/DelayReasonModal.jsx": {
     "mtime": 1780381879.8913338,
     "ast_hash": "31d4d8b9c4dd67825055032367bacc89",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\EditTaskModal.jsx": {
+  "client/src/components/EditTaskModal.jsx": {
     "mtime": 1780559775.5939963,
     "ast_hash": "196c37197127a41bed4a6527c8d5e69a",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\Header.jsx": {
+  "client/src/components/Header.jsx": {
     "mtime": 1780381538.4504366,
     "ast_hash": "5f005f9e4cfb0818098862b5f4069461",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\Layout.jsx": {
+  "client/src/components/Layout.jsx": {
     "mtime": 1780381509.622122,
     "ast_hash": "c45d13fb18915d2faa9be77ea80f8671",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\NotificationBell.jsx": {
+  "client/src/components/NotificationBell.jsx": {
     "mtime": 1780637144.567597,
     "ast_hash": "b8bd7db00a8ccc76299b75c6adb1bcdb",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\ProtectedRoute.jsx": {
+  "client/src/components/ProtectedRoute.jsx": {
     "mtime": 1780381922.5503638,
     "ast_hash": "3a84119b46eccd0ced96fb5948f6be92",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\ProtectedRoute.test.jsx": {
+  "client/src/components/ProtectedRoute.test.jsx": {
     "mtime": 1779043734.7992969,
     "ast_hash": "8e38a29bb6a9384a6854594c2441f6ee",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\Sidebar.jsx": {
+  "client/src/components/Sidebar.jsx": {
     "mtime": 1780381529.9746294,
     "ast_hash": "2fcf4fe8adc14cfa7738c054071b3729",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\TaskCard.jsx": {
+  "client/src/components/TaskCard.jsx": {
     "mtime": 1780654573.170938,
     "ast_hash": "0eb1830dd63d54070a0289631f77a4d9",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\TaskDetailSlideOver.jsx": {
+  "client/src/components/TaskDetailSlideOver.jsx": {
     "mtime": 1780654327.8983634,
     "ast_hash": "2aa8a0bbfb53513eadf7a22117d04493",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\ui\\Badge.jsx": {
+  "client/src/components/ui/Badge.jsx": {
     "mtime": 1780381569.1245377,
     "ast_hash": "afc36e11f479ca76ece6b4df453bcb93",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\ui\\Button.jsx": {
+  "client/src/components/ui/Button.jsx": {
     "mtime": 1780381559.6689353,
     "ast_hash": "c784bc1f7c4f1293de1907502cbff907",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\ui\\Card.jsx": {
+  "client/src/components/ui/Card.jsx": {
     "mtime": 1780381576.0428252,
     "ast_hash": "3e4bac0ba166fc0e787c9b44cf571498",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\ui\\EmptyState.jsx": {
+  "client/src/components/ui/EmptyState.jsx": {
     "mtime": 1780381608.0947404,
     "ast_hash": "454fa9a361356f1fb0812626fdd6ce8f",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\ui\\KPICard.jsx": {
+  "client/src/components/ui/KPICard.jsx": {
     "mtime": 1780381586.6535678,
     "ast_hash": "72839e24491347637565ccb60f51e188",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\ui\\Modal.jsx": {
-    "mtime": 1780381618.088331,
-    "ast_hash": "7aacad74b94585863d0e1580f7c187f9",
+  "client/src/components/ui/Modal.jsx": {
+    "mtime": 1780943939.91348,
+    "ast_hash": "b38cf4e6107e9ed2f6c8f0208669b0da",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\ui\\ProgressBar.jsx": {
+  "client/src/components/ui/ProgressBar.jsx": {
     "mtime": 1780381594.2063687,
     "ast_hash": "33a1035473d20d4e1e39da0994f58a13",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\components\\ui\\Skeleton.jsx": {
+  "client/src/components/ui/Skeleton.jsx": {
     "mtime": 1780471387.5699747,
     "ast_hash": "a2e076dd717778612b09b6c7ba417abd",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\context\\AuthContext.jsx": {
+  "client/src/context/AuthContext.jsx": {
     "mtime": 1780763114.865449,
     "ast_hash": "82fe57e95a87e6e3e992aa680dce0b90",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\context\\AuthContext.test.jsx": {
+  "client/src/context/AuthContext.test.jsx": {
     "mtime": 1779043434.2591014,
     "ast_hash": "e03f211cd98e71cd67cb2353f4ca01ef",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\pages\\LoginPage.jsx": {
+  "client/src/pages/LoginPage.jsx": {
     "mtime": 1780471485.3507812,
     "ast_hash": "ba3ea7090fbd52c91db5451d1ef558f7",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\pages\\LoginPage.test.jsx": {
+  "client/src/pages/LoginPage.test.jsx": {
     "mtime": 1779044026.8808112,
     "ast_hash": "afa621ba0785389be2c4ad3a2eba2663",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\pages\\admin\\AssignTask.jsx": {
+  "client/src/pages/admin/AssignTask.jsx": {
     "mtime": 1780654249.256885,
     "ast_hash": "4958a0fd7918fae99e973e07a87075f9",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\pages\\admin\\CoachesPage.jsx": {
-    "mtime": 1780654052.3581822,
-    "ast_hash": "53cc8ff4401a295bf4cb56b9fdb5cb37",
+  "client/src/pages/admin/CoachesPage.jsx": {
+    "mtime": 1780945740.0750651,
+    "ast_hash": "ea0dd08fd2f4393ffd7b7b64f282302d",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\pages\\admin\\Dashboard.jsx": {
+  "client/src/pages/admin/Dashboard.jsx": {
     "mtime": 1780381708.3200727,
     "ast_hash": "502c248524d28d2811943f48e57bf916",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\pages\\admin\\TaskBoard.jsx": {
+  "client/src/pages/admin/TaskBoard.jsx": {
     "mtime": 1780578405.5280697,
     "ast_hash": "d1c7fa293b57267de1bb9dff6ce1ad1c",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\pages\\coach\\Dashboard.jsx": {
+  "client/src/pages/coach/Dashboard.jsx": {
     "mtime": 1780471410.4136953,
     "ast_hash": "bd1826ebd79c3fe55f5fdf2169b22c15",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\pages\\coach\\MyTasks.jsx": {
+  "client/src/pages/coach/MyTasks.jsx": {
     "mtime": 1780471398.48267,
     "ast_hash": "ae94e9d9cdd968e23c7ac75e5d411175",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\__tests__\\e2e\\admin.workflow.test.js": {
+  "client/src/__tests__/e2e/admin.workflow.test.js": {
     "mtime": 1780583369.6397316,
     "ast_hash": "0aa62601271bc2d4af813d2131221b10",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\__tests__\\e2e\\agent-browser.helper.js": {
-    "mtime": 1780582372.7185266,
-    "ast_hash": "16573a1ea73f96657542d635d9332eb6",
+  "client/src/__tests__/e2e/agent-browser.helper.js": {
+    "mtime": 1780912815.2347379,
+    "ast_hash": "5e6f67a6abc7cb14e492aa129edee323",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\__tests__\\e2e\\coach.workflow.test.js": {
+  "client/src/__tests__/e2e/coach.workflow.test.js": {
     "mtime": 1780583377.0690734,
     "ast_hash": "ca40a01124702c2179b938142d0b6e59",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\__tests__\\e2e\\coaching-insights.e2e.test.js": {
+  "client/src/__tests__/e2e/coaching-insights.e2e.test.js": {
     "mtime": 1780637194.7152193,
     "ast_hash": "c882fcbfdf26f5885033928115f455d2",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\__tests__\\e2e\\phase7-coaching-insights.test.js": {
+  "client/src/__tests__/e2e/phase7-coaching-insights.test.js": {
     "mtime": 1780648466.3674326,
     "ast_hash": "de03d8252b2dd27ffd2c0346c6588506",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\__tests__\\e2e\\simple.test.js": {
+  "client/src/__tests__/e2e/simple.test.js": {
     "mtime": 1780583361.299966,
     "ast_hash": "08b7120ecaefe58cfa195bfc133699a1",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\scripts\\cleanup.sh": {
+  "scripts/cleanup.sh": {
     "mtime": 1780572804.754437,
     "ast_hash": "4ff10ceb00dbc56cdcde79ef1d13ca52",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\auth.js": {
+  "server/auth.js": {
     "mtime": 1780571859.846947,
     "ast_hash": "10da4271a1e7e5c43c9341a3dafd8c8f",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\auth.test.js": {
+  "server/auth.test.js": {
     "mtime": 1779042651.634345,
     "ast_hash": "b611d23e634a9199d97eb32c944cfb56",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\cron.js": {
-    "mtime": 1780772901.508881,
-    "ast_hash": "34725e4ae15ab55e652813aaa861ff4b",
+  "server/cron.js": {
+    "mtime": 1780917888.6469615,
+    "ast_hash": "fd920c5f36fdf97b2e057f28192aad12",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\db-integration.test.js": {
+  "server/db-integration.test.js": {
     "mtime": 1780650755.4520037,
     "ast_hash": "3aa982b144d2094ae6c80d2850d86eac",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\db.js": {
-    "mtime": 1780774427.4342046,
-    "ast_hash": "ab03fee5b1478a2bd2cefcb8cba39025",
+  "server/db.js": {
+    "mtime": 1780945740.0770595,
+    "ast_hash": "d7a20571a36023a6d1a45a9f730a938e",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\db.test.js": {
+  "server/db.test.js": {
     "mtime": 1779042517.8550618,
     "ast_hash": "8302b66deb5c48b1d8e19069fef0dd36",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\index.js": {
-    "mtime": 1780774370.4534166,
-    "ast_hash": "0ff2d54666ad17ac9ac90ddce6827089",
+  "server/index.js": {
+    "mtime": 1780915416.5470176,
+    "ast_hash": "3f2e6265d4d65525ea4c0d3f67a8902e",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\index.test.js": {
+  "server/index.test.js": {
     "mtime": 1779041428.4189017,
     "ast_hash": "6a7bd853bb01985e15f2d9c4087d143f",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\jest.config.js": {
+  "server/jest.config.js": {
     "mtime": 1780649600.5697389,
     "ast_hash": "508953d319dda126efff786b2bd101ea",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\package.json": {
-    "mtime": 1780752909.3577268,
-    "ast_hash": "281ce4dfbe81655c73162293e669480d",
+  "server/package.json": {
+    "mtime": 1780945740.0780647,
+    "ast_hash": "1fc3bb9a5f70efd47bf3d1b4acf442ca",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\seed-admin.js": {
+  "server/seed-admin.js": {
     "mtime": 1780772701.0026586,
     "ast_hash": "15fe650fd1c46ff96c28b8c7732d2f06",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\seed-user.js": {
+  "server/seed-user.js": {
     "mtime": 1780763317.223761,
     "ast_hash": "81162ce76d10cf7323b10f3e7674dbbd",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\test-api.js": {
+  "server/test-api.js": {
     "mtime": 1780571964.6028657,
     "ast_hash": "0d6128b3d99efbb35500b423ace62ea9",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\test-db.js": {
+  "server/test-db.js": {
     "mtime": 1780571936.022783,
     "ast_hash": "134662299414b8c0c54e866020ac5ff3",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\test-minimal.js": {
+  "server/test-minimal.js": {
     "mtime": 1780560670.7893004,
     "ast_hash": "6c44f56a0a5331bac4cb256ed315af86",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\test-no-routes.js": {
+  "server/test-no-routes.js": {
     "mtime": 1780560680.7431433,
     "ast_hash": "af78e60e566b9939a393429d6af6469d",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\test-notifications-flow.js": {
+  "server/test-notifications-flow.js": {
     "mtime": 1780813058.4764855,
     "ast_hash": "63586d5c8a0e0acdacf53f14dbfe34be",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\test-setup.js": {
+  "server/test-setup.js": {
     "mtime": 1780650537.775236,
     "ast_hash": "9ce14f108a52d0190f64c2827c1f1faa",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\test-simple.js": {
+  "server/test-simple.js": {
     "mtime": 1780572015.47962,
     "ast_hash": "9a99457ad1dd3abde281728923fddf90",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\test-with-auth-route.js": {
+  "server/test-with-auth-route.js": {
     "mtime": 1780560693.630375,
     "ast_hash": "2aa0aa914c39eba1f544e78058fd0907",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\test-with-coaches-route.js": {
+  "server/test-with-coaches-route.js": {
     "mtime": 1780560705.3572521,
     "ast_hash": "4b0adb5c27bfaa88c77ff6fce09fbd47",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\test-with-db.js": {
+  "server/test-with-db.js": {
     "mtime": 1780560743.2654855,
     "ast_hash": "42c8d7d504c1a87fc309d0ee092ef4c1",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\test-with-notifications-route.js": {
+  "server/test-with-notifications-route.js": {
     "mtime": 1780560728.60667,
     "ast_hash": "f7b1593c8be14615c606f8da15d9a210",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\test-with-tasks-route.js": {
+  "server/test-with-tasks-route.js": {
     "mtime": 1780560716.64896,
     "ast_hash": "8430e7881a75be13a5493c7f2de84ae2",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\routes\\auth.js": {
-    "mtime": 1780772885.643571,
+  "server/routes/auth.js": {
+    "mtime": 1780945740.0800524,
     "ast_hash": "bb08d9eb547f736704faf2bfa71f8caa",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\routes\\auth.test.js": {
+  "server/routes/auth.test.js": {
     "mtime": 1779041997.9421816,
     "ast_hash": "b352bf2c478e58003a8b8aacf145e00a",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\routes\\coaches.js": {
+  "server/routes/coaches.js": {
     "mtime": 1780756440.682726,
     "ast_hash": "3762e425d41c13627032c8b3359352a0",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\routes\\coaching-insights.js": {
-    "mtime": 1780817294.7032006,
-    "ast_hash": "620ffed43360da1da6bac01ef019d28f",
+  "server/routes/coaching-insights.js": {
+    "mtime": 1780848719.7488427,
+    "ast_hash": "2700b978b54c3df93ba86a99ffffab6b",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\routes\\notifications.js": {
+  "server/routes/notifications.js": {
     "mtime": 1780756440.7116497,
     "ast_hash": "c28ae39c0f3612bc1fff4777523e3c96",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\routes\\tasks.js": {
-    "mtime": 1780813641.574198,
-    "ast_hash": "125b9ee3599050348fda5b3b11d4ee1b",
+  "server/routes/tasks.js": {
+    "mtime": 1780911741.7967901,
+    "ast_hash": "06e615a3744207fb2047560da2b0805b",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\__tests__\\coaching-insights.test.js": {
+  "server/__tests__/coaching-insights.test.js": {
     "mtime": 1780637325.320229,
     "ast_hash": "886b49e86d6ce84f9480e531ce12520a",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\__tests__\\routes\\notifications.test.js": {
+  "server/__tests__/routes/notifications.test.js": {
     "mtime": 1780468496.1904182,
     "ast_hash": "779d778592d17e9b3c670efd4418f469",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\__tests__\\routes\\tasks.test.js": {
+  "server/__tests__/routes/tasks.test.js": {
     "mtime": 1780467943.059988,
     "ast_hash": "e710ad9d8811d0b23515a3e7f1fd782f",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\server\\__tests__\\security\\phase6-validation.test.js": {
+  "server/__tests__/security/phase6-validation.test.js": {
     "mtime": 1780469567.3436904,
     "ast_hash": "f282b36dacfdc748ba92b843ad9bdbc2",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\ADMIN-USER-FIX-INSTRUCTIONS.md": {
+  "ADMIN-USER-FIX-INSTRUCTIONS.md": {
     "mtime": 1780772724.2698905,
     "ast_hash": "231a0686a10b764dd6a906fecdc32d2e",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\CHROME-DEVTOOLS-TEST-REPORT.md": {
+  "CHROME-DEVTOOLS-TEST-REPORT.md": {
     "mtime": 1780648873.707389,
     "ast_hash": "9955c1edbeded4f18eb313eed47a2abb",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\CLAUDE.md": {
-    "mtime": 1780814626.7688558,
-    "ast_hash": "78d369f138efe83610ed26e49b2322f1",
+  "CLAUDE.md": {
+    "mtime": 1780849700.5196276,
+    "ast_hash": "3755d1ff09f1e9ab2ea4da61a8432a82",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\COMPLETION_REPORT.md": {
+  "COMPLETION_REPORT.md": {
     "mtime": 1778235996.473992,
     "ast_hash": "d77c9a0ee364807ca19cde7f12085df1",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\DECISION.md": {
+  "DECISION.md": {
     "mtime": 1780578987.1543605,
     "ast_hash": "bd6f468b003368783686309e00831ec9",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\DEPLOYMENT-DOCS-INDEX.md": {
+  "DEPLOYMENT-DOCS-INDEX.md": {
     "mtime": 1780773708.893786,
     "ast_hash": "9242d70f978e9693c5cf440662cf46ba",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\DEPLOYMENT-DOCUMENTATION-COMPLETE.txt": {
+  "DEPLOYMENT-DOCUMENTATION-COMPLETE.txt": {
     "mtime": 1780773770.0533032,
     "ast_hash": "4d780e8fc1b004a709fe1eb20c379521",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\DIAGNOSTIC-NOTIFICATIONS.md": {
+  "DIAGNOSTIC-NOTIFICATIONS.md": {
     "mtime": 1780812961.5833073,
     "ast_hash": "e7ca7846e5a74aa072329521045fad66",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\DIAGNOSTIC-SUMMARY.md": {
+  "DIAGNOSTIC-SUMMARY.md": {
     "mtime": 1780813103.3284693,
     "ast_hash": "df48e1a1bf0e118665ccd814a00d2d57",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\FIX-NOTIFICATIONS-PLAN.md": {
+  "FIX-NOTIFICATIONS-PLAN.md": {
     "mtime": 1780813040.2717886,
     "ast_hash": "c0f8d13bde451cc6f289803965f3f2f0",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\FIX-VERIFICATION-PLAN.md": {
+  "FIX-VERIFICATION-PLAN.md": {
     "mtime": 1780772973.6178374,
     "ast_hash": "715249a066fb4750f81569a4b8dd7b3a",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\FIXES-COMPLETE-SUMMARY.md": {
+  "FIXES-COMPLETE-SUMMARY.md": {
     "mtime": 1780773465.6094348,
     "ast_hash": "0d21ba2bc22bdc793bdc3ccbc0589149",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\MEMORY.md": {
+  "MEMORY.md": {
     "mtime": 1780578983.8474493,
     "ast_hash": "1dcf69df601e69232ce87d5b6168ea38",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\NOTIFICATIONS-COACHING-INSIGHTS-FIX.md": {
+  "NOTIFICATIONS-COACHING-INSIGHTS-FIX.md": {
     "mtime": 1780813080.252983,
     "ast_hash": "50e2c2d158ac1eee9eefae95fbc333ba",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\PHASE7-TEST-EXECUTION-SUMMARY.md": {
+  "PHASE7-TEST-EXECUTION-SUMMARY.md": {
     "mtime": 1780648566.8232174,
     "ast_hash": "1b9b3d09d616abb7ee298f9748353ba3",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\PLANNING.md": {
+  "PLANNING.md": {
     "mtime": 1778235338.9321966,
     "ast_hash": "614dd194a0683bc28a56413904fc02db",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\QUICK-FIX-GUIDE.txt": {
+  "QUICK-FIX-GUIDE.txt": {
     "mtime": 1780813122.0316665,
     "ast_hash": "2fededddb556b5edaf51c97a3f10e3f9",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\QUICK-FIX.md": {
+  "QUICK-FIX.md": {
     "mtime": 1780572894.1551213,
     "ast_hash": "c1ee0ad758838bd127c0cfb8a5906473",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\RAILWAY-DEPLOYMENT-SUMMARY-2026-06-07.md": {
+  "RAILWAY-DEPLOYMENT-SUMMARY-2026-06-07.md": {
     "mtime": 1780772788.7264812,
     "ast_hash": "2fb217963e88b355aef7ce80d4950ad9",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\RAILWAY_DEPLOY.md": {
+  "RAILWAY_DEPLOY.md": {
     "mtime": 1780757416.7484713,
     "ast_hash": "58ba9925c2ccabfffc4b7f2a1dffbd76",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\README.md": {
+  "README.md": {
     "mtime": 1780774775.1039615,
     "ast_hash": "396386bc1383d5ff449c450f84c42649",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\REORGANIZATION_SUMMARY.md": {
+  "REORGANIZATION_SUMMARY.md": {
     "mtime": 1778235874.8109984,
     "ast_hash": "be3439af73b0acd66ca94b657ab63855",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\RUFLO_SETUP.md": {
+  "RUFLO_SETUP.md": {
     "mtime": 1779003703.284878,
     "ast_hash": "f90c3bc347559b8755ad455d42cf4474",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\SESSION-2026-06-07-NOTIFICATIONS-FIX.md": {
+  "SESSION-2026-06-07-NOTIFICATIONS-FIX.md": {
     "mtime": 1780814164.2909229,
     "ast_hash": "fc904ff0ed3c67d62eb2ac154a981b94",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\SESSION_LOG.md": {
+  "SESSION_LOG.md": {
     "mtime": 1778235166.548384,
     "ast_hash": "87ad212c725665da6ff120462fefe9ad",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\SESSION_SUMMARY.md": {
+  "SESSION_SUMMARY.md": {
     "mtime": 1780468813.2086897,
     "ast_hash": "b9a85899695c6897f78b42f10ae717c2",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\STRUCTURE_GUIDE.md": {
+  "STRUCTURE_GUIDE.md": {
     "mtime": 1778235958.1429088,
     "ast_hash": "1cea637ac3f76a15a5722dd55f623689",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\SUPERPOWERS-CLAUDE.md": {
+  "SUPERPOWERS-CLAUDE.md": {
     "mtime": 1778999853.1905842,
     "ast_hash": "b4bc2abbb3c24de1ea51af6b447d678b",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\SUPERPOWERS-INSTALLED.md": {
+  "SUPERPOWERS-INSTALLED.md": {
     "mtime": 1778999889.761698,
     "ast_hash": "d0ca63f7b94bd1a0d12ac29947777c02",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\TESTING-COMPLETE-SUMMARY.md": {
+  "TESTING-COMPLETE-SUMMARY.md": {
     "mtime": 1780648957.2641823,
     "ast_hash": "82a880be726d77619b318e67dae6fac8",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\TESTING-RESULTS-SUMMARY.md": {
+  "TESTING-RESULTS-SUMMARY.md": {
     "mtime": 1780813671.932886,
     "ast_hash": "44d96b0e109452bb213feb09ea96eade",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\TESTING-SESSION-SUMMARY.md": {
+  "TESTING-SESSION-SUMMARY.md": {
     "mtime": 1780583462.9494123,
     "ast_hash": "9118a651fd898abc4f799d080b2b8327",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.beads\\README.md": {
+  ".beads/README.md": {
     "mtime": 1779038124.961299,
     "ast_hash": "308c3b915e7691a1a18511db12a7e047",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\ARCHITECTURE.md": {
+  ".claude/ARCHITECTURE.md": {
     "mtime": 1778235896.2630231,
     "ast_hash": "d6c64b4b541ecfbb071232075b77635b",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\MASTER_CAPABILITIES.md": {
+  ".claude/MASTER_CAPABILITIES.md": {
     "mtime": 1780774335.4163556,
     "ast_hash": "9d10ee24b10d4314a1d85ecc6343f824",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\SUPERPOWERS-INTEGRATION.md": {
+  ".claude/SUPERPOWERS-INTEGRATION.md": {
     "mtime": 1778999450.4996295,
     "ast_hash": "5ee2f314cc05fc02bad6cc44510ea548",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\agents\\phase-builder.md": {
+  ".claude/agents/phase-builder.md": {
     "mtime": 1779038263.023834,
     "ast_hash": "a52cba8191effd75055ea912ee0c0d9d",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\agents\\security-reviewer.md": {
+  ".claude/agents/security-reviewer.md": {
     "mtime": 1778235825.8427808,
     "ast_hash": "baa72426aa5431c26e59c9780674efd2",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\agents\\coach-task-tracker\\auth-agent.md": {
+  ".claude/agents/coach-task-tracker/auth-agent.md": {
     "mtime": 1779002247.7464309,
     "ast_hash": "b86a96e40d4137c8fc1c0e4273a61409",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\agents\\coach-task-tracker\\frontend-agent.md": {
+  ".claude/agents/coach-task-tracker/frontend-agent.md": {
     "mtime": 1779002265.5496633,
     "ast_hash": "0b12d3703a2ad3f14da0564b88aad635",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\agents\\coach-task-tracker\\notification-agent.md": {
+  ".claude/agents/coach-task-tracker/notification-agent.md": {
     "mtime": 1779002275.0424027,
     "ast_hash": "a58af2180b3145f81643120602bed737",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\agents\\coach-task-tracker\\task-manager-agent.md": {
+  ".claude/agents/coach-task-tracker/task-manager-agent.md": {
     "mtime": 1779002256.4471064,
     "ast_hash": "a52dadef381f86fd976ae7c3906cd449",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\brainstorming\\SKILL.md": {
+  ".claude/skills/brainstorming/SKILL.md": {
     "mtime": 1778999818.4850984,
     "ast_hash": "02d86f11c496ece51327cca35491c45c",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\brainstorming\\spec-document-reviewer-prompt.md": {
+  ".claude/skills/brainstorming/spec-document-reviewer-prompt.md": {
     "mtime": 1778999818.683568,
     "ast_hash": "ea74c0f2369ae553c62f36af4ed3d424",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\brainstorming\\visual-companion.md": {
+  ".claude/skills/brainstorming/visual-companion.md": {
     "mtime": 1778999818.6925435,
     "ast_hash": "98407f42a43e3c3e3aae399376821e7e",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\brainstorming\\scripts\\frame-template.html": {
+  ".claude/skills/brainstorming/scripts/frame-template.html": {
     "mtime": 1778999818.539951,
     "ast_hash": "bae2f359c254d1563ecdd2b7396d545f",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\dispatching-parallel-agents\\SKILL.md": {
+  ".claude/skills/dispatching-parallel-agents/SKILL.md": {
     "mtime": 1778999818.7274485,
     "ast_hash": "af319c60c986d9024c49de78dff43593",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\executing-plans\\SKILL.md": {
+  ".claude/skills/executing-plans/SKILL.md": {
     "mtime": 1778999818.7404163,
     "ast_hash": "63061f08162428574aeccec5d0ef1f26",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\finishing-a-development-branch\\SKILL.md": {
+  ".claude/skills/finishing-a-development-branch/SKILL.md": {
     "mtime": 1778999818.7553754,
     "ast_hash": "e9b367120e56b5d4f438225cd4861caf",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\receiving-code-review\\SKILL.md": {
+  ".claude/skills/receiving-code-review/SKILL.md": {
     "mtime": 1778999818.7713447,
     "ast_hash": "dd0aadbca70fe3bedbd059b730a6edbb",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\requesting-code-review\\code-reviewer.md": {
+  ".claude/skills/requesting-code-review/code-reviewer.md": {
     "mtime": 1778999818.8062418,
     "ast_hash": "11211d21337d0c498660f51edff7323b",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\requesting-code-review\\SKILL.md": {
+  ".claude/skills/requesting-code-review/SKILL.md": {
     "mtime": 1778999818.789287,
     "ast_hash": "f7d20aeaa4eca81b2617b6c68f3b91b9",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\skill-api\\SKILL.md": {
+  ".claude/skills/skill-api/SKILL.md": {
     "mtime": 1778235752.5294697,
     "ast_hash": "62e6f35d53760d58d723833fea5f02d0",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\skill-auth\\SKILL.md": {
+  ".claude/skills/skill-auth/SKILL.md": {
     "mtime": 1778235712.35114,
     "ast_hash": "6362c2e2ca236e892f00c6ead30eca15",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\skill-cron\\SKILL.md": {
+  ".claude/skills/skill-cron/SKILL.md": {
     "mtime": 1778235812.7162762,
     "ast_hash": "bf700a569ecb22c909ca2f8fd58e3622",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\skill-db\\SKILL.md": {
+  ".claude/skills/skill-db/SKILL.md": {
     "mtime": 1778235737.836699,
     "ast_hash": "01d33dcd73c4c825af538aad48757e17",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\skill-frontend\\SKILL.md": {
+  ".claude/skills/skill-frontend/SKILL.md": {
     "mtime": 1780468542.7114754,
     "ast_hash": "1500ab351dfa081be3224bda932e826f",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\skill-notifications\\SKILL.md": {
+  ".claude/skills/skill-notifications/SKILL.md": {
     "mtime": 1778235793.1034932,
     "ast_hash": "e75b101f86ba5e1f3d1dc9674b4f2c55",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\skill-orchestrator\\SKILL.md": {
+  ".claude/skills/skill-orchestrator/SKILL.md": {
     "mtime": 1780578735.5537615,
     "ast_hash": "8fb6bf600e53278ca7f684c47c74bb45",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\skill-testing\\SKILL.md": {
+  ".claude/skills/skill-testing/SKILL.md": {
     "mtime": 1778999334.6134858,
     "ast_hash": "87abbb499a7dd06e3410a9d5231f2b8b",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\subagent-driven-development\\code-quality-reviewer-prompt.md": {
+  ".claude/skills/subagent-driven-development/code-quality-reviewer-prompt.md": {
     "mtime": 1778999818.8700676,
     "ast_hash": "fc5e2ea930681d4228debaa3714f6ea0",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\subagent-driven-development\\implementer-prompt.md": {
+  ".claude/skills/subagent-driven-development/implementer-prompt.md": {
     "mtime": 1778999818.882037,
     "ast_hash": "b856c2076801a91854adf094a907de9c",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\subagent-driven-development\\SKILL.md": {
+  ".claude/skills/subagent-driven-development/SKILL.md": {
     "mtime": 1778999818.8541093,
     "ast_hash": "da1219128741a51fccc499a613072fc3",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\subagent-driven-development\\spec-reviewer-prompt.md": {
+  ".claude/skills/subagent-driven-development/spec-reviewer-prompt.md": {
     "mtime": 1778999818.8949997,
     "ast_hash": "ecc20717d0b31a9013ba732f366eba8f",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\condition-based-waiting.md": {
+  ".claude/skills/systematic-debugging/condition-based-waiting.md": {
     "mtime": 1778999818.9897482,
     "ast_hash": "c64d669f2490aa489c514304c9ad46d3",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\CREATION-LOG.md": {
+  ".claude/skills/systematic-debugging/CREATION-LOG.md": {
     "mtime": 1778999818.914949,
     "ast_hash": "b7ba553678c10cc2234dc9ae193d5347",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\defense-in-depth.md": {
+  ".claude/skills/systematic-debugging/defense-in-depth.md": {
     "mtime": 1778999819.0067031,
     "ast_hash": "002a0c9e8bee8fc29f85d7a434916977",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\root-cause-tracing.md": {
+  ".claude/skills/systematic-debugging/root-cause-tracing.md": {
     "mtime": 1778999819.0725257,
     "ast_hash": "7e96b2fe346c89d4f2300341529178cc",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\SKILL.md": {
+  ".claude/skills/systematic-debugging/SKILL.md": {
     "mtime": 1778999818.9269164,
     "ast_hash": "3a08f3330fce34e3b2104e7d97f64af0",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\test-academic.md": {
+  ".claude/skills/systematic-debugging/test-academic.md": {
     "mtime": 1778999819.086489,
     "ast_hash": "272ab1d95e755a7ff9479d547168eef9",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\test-pressure-1.md": {
+  ".claude/skills/systematic-debugging/test-pressure-1.md": {
     "mtime": 1778999819.0954638,
     "ast_hash": "3d8805e8946e3889d4de0e906af66c47",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\test-pressure-2.md": {
+  ".claude/skills/systematic-debugging/test-pressure-2.md": {
     "mtime": 1778999819.1343613,
     "ast_hash": "237f40dfd0b48af48d239ab3af499f7b",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\systematic-debugging\\test-pressure-3.md": {
+  ".claude/skills/systematic-debugging/test-pressure-3.md": {
     "mtime": 1778999819.1572995,
     "ast_hash": "42ea1bd281ca8d837f5dd45143762b95",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\test-driven-development\\SKILL.md": {
+  ".claude/skills/test-driven-development/SKILL.md": {
     "mtime": 1778999819.1712692,
     "ast_hash": "b349bbcc136f3f50c45f04d0917bdfc9",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\test-driven-development\\testing-anti-patterns.md": {
+  ".claude/skills/test-driven-development/testing-anti-patterns.md": {
     "mtime": 1778999819.1842299,
     "ast_hash": "f4373033bf29f06897cd63c994deb2a7",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\using-git-worktrees\\SKILL.md": {
+  ".claude/skills/using-git-worktrees/SKILL.md": {
     "mtime": 1778999819.2111635,
     "ast_hash": "19c5db98107c897bed0f70415e294015",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\using-superpowers\\SKILL.md": {
+  ".claude/skills/using-superpowers/SKILL.md": {
     "mtime": 1778999819.2281108,
     "ast_hash": "7e7a8bba2c866b16f5f05351faf2e2c5",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\using-superpowers\\references\\codex-tools.md": {
+  ".claude/skills/using-superpowers/references/codex-tools.md": {
     "mtime": 1778999819.2640128,
     "ast_hash": "980b647b2c982b5b31cf08b83823a284",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\using-superpowers\\references\\copilot-tools.md": {
+  ".claude/skills/using-superpowers/references/copilot-tools.md": {
     "mtime": 1778999819.2809677,
     "ast_hash": "d4424fd67d662e17b470d9560e1cd930",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\using-superpowers\\references\\gemini-tools.md": {
+  ".claude/skills/using-superpowers/references/gemini-tools.md": {
     "mtime": 1778999819.2979243,
     "ast_hash": "4f93c6d265d412b76c4ecc15c0c2e4b4",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\verification-before-completion\\SKILL.md": {
+  ".claude/skills/verification-before-completion/SKILL.md": {
     "mtime": 1778999819.3128831,
     "ast_hash": "ccf0e58c597adc512d920263562b5391",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\writing-plans\\plan-document-reviewer-prompt.md": {
+  ".claude/skills/writing-plans/plan-document-reviewer-prompt.md": {
     "mtime": 1778999819.371726,
     "ast_hash": "dcad0192c2c468107951d7dcb47246a9",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\writing-plans\\SKILL.md": {
+  ".claude/skills/writing-plans/SKILL.md": {
     "mtime": 1778999819.3298395,
     "ast_hash": "e9325200b86a2c27c64c4458e7943e34",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\writing-skills\\anthropic-best-practices.md": {
+  ".claude/skills/writing-skills/anthropic-best-practices.md": {
     "mtime": 1778999819.400648,
     "ast_hash": "05c7c66a824d55afc81f3be10dd04750",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\writing-skills\\persuasion-principles.md": {
+  ".claude/skills/writing-skills/persuasion-principles.md": {
     "mtime": 1778999819.4485197,
     "ast_hash": "5f0c22c7c8c3c5e12f255719833c2545",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\writing-skills\\SKILL.md": {
+  ".claude/skills/writing-skills/SKILL.md": {
     "mtime": 1778999819.3826954,
     "ast_hash": "87cef13875b60fa4cd3bc5b3e64ec3d3",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\writing-skills\\testing-skills-with-subagents.md": {
+  ".claude/skills/writing-skills/testing-skills-with-subagents.md": {
     "mtime": 1778999819.4973896,
     "ast_hash": "3b7b7942a42cb0450896d4b48cd49ed0",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\.claude\\skills\\writing-skills\\examples\\CLAUDE_MD_TESTING.md": {
+  ".claude/skills/writing-skills/examples/CLAUDE_MD_TESTING.md": {
     "mtime": 1778999819.4235866,
     "ast_hash": "2980791d97afe0f32c2eb4a6264fb8e6",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\AGENT-BROWSER-QUICKSTART.md": {
+  "client/AGENT-BROWSER-QUICKSTART.md": {
     "mtime": 1780580885.6663055,
     "ast_hash": "6eb6b9fa09c34976583bc71a85244b53",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\COACHING-INSIGHTS-MANUAL-TEST.md": {
+  "client/COACHING-INSIGHTS-MANUAL-TEST.md": {
     "mtime": 1780648535.1454039,
     "ast_hash": "0c9ab14dc666f0326551a0309da5daac",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\index.html": {
+  "client/index.html": {
     "mtime": 1779040092.9519544,
     "ast_hash": "a4d3fdfa54e86086f6a6429551543090",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\PHASE7-FRONTEND-EXAMPLES.md": {
+  "client/PHASE7-FRONTEND-EXAMPLES.md": {
     "mtime": 1780638950.5872574,
     "ast_hash": "90416190565eaf03d62721b79a1e968b",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\README.md": {
+  "client/README.md": {
     "mtime": 1779040086.6420057,
     "ast_hash": "a28dc4cb878325f3e9e5649f3e1469ac",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\API.md": {
+  "docs/API.md": {
     "mtime": 1780814128.1588614,
     "ast_hash": "171ccf94a1a606b125bd138ac23b0092",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\ARCHITECTURE.md": {
+  "docs/ARCHITECTURE.md": {
     "mtime": 1779003173.5246294,
     "ast_hash": "d7809b8b7d558d4de60a8d93307d7761",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\COMPLETION-SUMMARY.md": {
+  "docs/COMPLETION-SUMMARY.md": {
     "mtime": 1780659195.3941276,
     "ast_hash": "a55f75c993057631afe2c2fce54a385b",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\CONTRIBUTING.md": {
+  "docs/CONTRIBUTING.md": {
     "mtime": 1780814619.6720731,
     "ast_hash": "11304ad6bcf172faa2fab7080153e7b1",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\DEPLOYMENT-ISSUES-AND-FIXES.md": {
+  "docs/DEPLOYMENT-ISSUES-AND-FIXES.md": {
     "mtime": 1780773635.8612304,
     "ast_hash": "6d99ce88cfc84ce70cbd97280003268f",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\E2E-AGENT-BROWSER.md": {
+  "docs/E2E-AGENT-BROWSER.md": {
     "mtime": 1780583423.2710123,
     "ast_hash": "4d1ad864ba47b569ea52deb2c0f0c85c",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\E2E-TEST-COVERAGE.md": {
+  "docs/E2E-TEST-COVERAGE.md": {
     "mtime": 1780583416.9539545,
     "ast_hash": "adce1d31db453e3e27b433d49839713f",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\GRAPHIFY-FIRST.md": {
+  "docs/GRAPHIFY-FIRST.md": {
     "mtime": 1780814604.6701543,
     "ast_hash": "424d070cc3ca16567c487afc1c63f2a1",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\HANDOFF-AGENT-BROWSER.md": {
+  "docs/HANDOFF-AGENT-BROWSER.md": {
     "mtime": 1780583353.4135392,
     "ast_hash": "a66b0acadd12fca9527fd635a47cf189",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\HANDOFF-MULTI-COACH.md": {
+  "docs/HANDOFF-MULTI-COACH.md": {
     "mtime": 1780575411.268879,
     "ast_hash": "4e95a1167d6cf1ee1f24b63060f624ef",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\HANDOFF-PHASE7.md": {
+  "docs/HANDOFF-PHASE7.md": {
     "mtime": 1780639384.3242726,
     "ast_hash": "8dab76c06099b84ba3c99d54723deb48",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\HANDOFF-RAILWAY-DEPLOYMENT-2026-06-07.md": {
+  "docs/HANDOFF-RAILWAY-DEPLOYMENT-2026-06-07.md": {
     "mtime": 1780772564.005977,
     "ast_hash": "5e29c4e9d1f472bde3427497113c13a3",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\HANDOFF.md": {
+  "docs/HANDOFF.md": {
     "mtime": 1780468672.6869638,
     "ast_hash": "f08b4ed4339bb544b7a74509b4102f48",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\INCIDENT-2026-06-04.md": {
+  "docs/INCIDENT-2026-06-04.md": {
     "mtime": 1780572881.6918323,
     "ast_hash": "3ecab5d5cb5f6f7b552bac411673f4c1",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\METADATA-CONTRACT.md": {
+  "docs/METADATA-CONTRACT.md": {
     "mtime": 1779038292.1967218,
     "ast_hash": "7006a88b4581d1d359f7fcc7632d547a",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\PHASE6-HANDOFF.md": {
+  "docs/PHASE6-HANDOFF.md": {
     "mtime": 1780470533.0276747,
     "ast_hash": "b89c06e6308f66d631499779c5652141",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\PHASE7-VARIED-INSIGHTS.md": {
+  "docs/PHASE7-VARIED-INSIGHTS.md": {
     "mtime": 1780814913.9445364,
     "ast_hash": "1755152de5dcadf85ea375dc28256ea9",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\RAILWAY-CLI-DEPLOYMENT-GUIDE.md": {
+  "docs/RAILWAY-CLI-DEPLOYMENT-GUIDE.md": {
     "mtime": 1780773677.490713,
     "ast_hash": "8bf1e322042d1fbf42018914fa2d38fb",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\ROADMAP.md": {
-    "mtime": 1780814113.107366,
-    "ast_hash": "0a669b34c2dae8452bd3680d2633e4e5",
+  "docs/ROADMAP.md": {
+    "mtime": 1780925713.8982792,
+    "ast_hash": "a96c8e6bd3b97cd6a991bf6716cdacee",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\RUFLO.md": {
+  "docs/RUFLO.md": {
     "mtime": 1780579155.666797,
     "ast_hash": "938fedea2d7c92b107774f75cc9561fe",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\SESSION-SUMMARY-AGENT-BROWSER.md": {
+  "docs/SESSION-SUMMARY-AGENT-BROWSER.md": {
     "mtime": 1780583347.393627,
     "ast_hash": "d21d7446e52e5182db82d1197a3d8b2e",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\SUPERPOWERS-QUICK-START.md": {
+  "docs/SUPERPOWERS-QUICK-START.md": {
     "mtime": 1778999396.4058993,
     "ast_hash": "e1ab98c00d3cebfc6ca2a9b5ebb5bd72",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\SUPERPOWERS.md": {
+  "docs/SUPERPOWERS.md": {
     "mtime": 1778999307.339105,
     "ast_hash": "dd6c08fd2f46f4623a6350d8b1aaa798",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\TASKBOARD-GROUPED-TASKS.md": {
+  "docs/TASKBOARD-GROUPED-TASKS.md": {
     "mtime": 1780576565.3102362,
     "ast_hash": "0fc455fa768ee43adbf82ec3b9a9c204",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\TROUBLESHOOTING.md": {
+  "docs/TROUBLESHOOTING.md": {
     "mtime": 1780572788.074574,
     "ast_hash": "3af45a9c19f727081bc62b830af7ef57",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\superpowers\\plans\\2026-05-17-phase1-auth-system.md": {
+  "docs/superpowers/plans/2026-05-17-phase1-auth-system.md": {
     "mtime": 1779039792.3665783,
     "ast_hash": "195a5e2c18e8d78043483ac1073bd1f2",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\docs\\superpowers\\specs\\2026-06-04-multi-agent-coaching-insights-design.md": {
+  "docs/superpowers/specs/2026-06-04-multi-agent-coaching-insights-design.md": {
     "mtime": 1780583764.7661476,
     "ast_hash": "cb3ff74ab57255bf971e539054e9a862",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\scripts\\README.md": {
+  "scripts/README.md": {
     "mtime": 1780572824.9126632,
     "ast_hash": "70fc96df15cdb39782cf43744e5974c9",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\coaching-insights-test-01-login.png": {
+  "coaching-insights-test-01-login.png": {
     "mtime": 1780648661.338121,
     "ast_hash": "7ab2dfacf8cfdb5fc58dcd6119dd4bd6",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\coaching-insights-test-02-admin-dashboard.png": {
+  "coaching-insights-test-02-admin-dashboard.png": {
     "mtime": 1780648680.1097355,
     "ast_hash": "7ab2dfacf8cfdb5fc58dcd6119dd4bd6",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\coaching-insights-test-03-admin-logged-in.png": {
+  "coaching-insights-test-03-admin-logged-in.png": {
     "mtime": 1780648714.380578,
     "ast_hash": "7ab2dfacf8cfdb5fc58dcd6119dd4bd6",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\coaching-insights-test-04-assign-task-page.png": {
+  "coaching-insights-test-04-assign-task-page.png": {
     "mtime": 1780648731.2101676,
     "ast_hash": "7ab2dfacf8cfdb5fc58dcd6119dd4bd6",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\coaching-insights-test-05-admin-final.png": {
+  "coaching-insights-test-05-admin-final.png": {
     "mtime": 1780648838.7922268,
     "ast_hash": "635248eecdbdc9ef9bdbaafd3fac74c6",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\graph-expanded.png": {
+  "graph-expanded.png": {
     "mtime": 1779001134.2709396,
     "ast_hash": "90a493629a5b8b26d7bcc58413905293",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\graph-visualization.png": {
+  "graph-visualization.png": {
     "mtime": 1779001107.5729108,
     "ast_hash": "6ace1d9ca58a9be663d68a5d21a69487",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\login-form.png": {
-    "mtime": 1780648503.11816,
+  "client/login-form.png": {
+    "mtime": 1780945740.261858,
     "ast_hash": "c9710dbed6439452f1407c378bf66f2e",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\public\\favicon.svg": {
+  "client/public/favicon.svg": {
     "mtime": 1779040088.2868183,
     "ast_hash": "7e840862161341271697daa99a40d76b",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\public\\icons.svg": {
+  "client/public/icons.svg": {
     "mtime": 1779040088.8514478,
     "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\assets\\hero.png": {
+  "client/src/assets/hero.png": {
     "mtime": 1779040087.3333688,
     "ast_hash": "aead493361b27e7510691c5d7072dfc1",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\assets\\react.svg": {
+  "client/src/assets/react.svg": {
     "mtime": 1779040089.3780372,
     "ast_hash": "f0402b67b6ce880f65666bb49e841696",
     "semantic_hash": ""
   },
-  "D:\\Cursor_new\\client\\src\\assets\\vite.svg": {
+  "client/src/assets/vite.svg": {
     "mtime": 1779040090.0673723,
     "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": ""
+  },
+  "client/src/__tests__/e2e/phase8-email.test.js": {
+    "mtime": 1780912674.2988825,
+    "ast_hash": "f49072a5bef2991285ac1ed3040c37fd",
+    "semantic_hash": ""
+  },
+  "server/__tests__/email.test.js": {
+    "mtime": 1780912081.3018377,
+    "ast_hash": "0b846546975eed49d04768036acb168a",
+    "semantic_hash": ""
+  },
+  "server/jobs/email-processor.js": {
+    "mtime": 1780917915.6800606,
+    "ast_hash": "ca1bf0b00330293ffb8fff9b2f8643c7",
+    "semantic_hash": ""
+  },
+  "server/services/email-templates.js": {
+    "mtime": 1780911480.9290626,
+    "ast_hash": "cfa12d0cf4fdb89f49aafaeb44feacf8",
+    "semantic_hash": ""
+  },
+  "server/services/email.js": {
+    "mtime": 1780981452.5300636,
+    "ast_hash": "637e1304ffc2992a5b5cf5307a55d456",
+    "semantic_hash": ""
+  },
+  ".claude/skills/skill-github-push/SKILL.md": {
+    "mtime": 1780849608.024686,
+    "ast_hash": "05642d53ef3058a62f5a3e5331e5061a",
+    "semantic_hash": ""
+  },
+  ".claude/skills/skill-railway-deploy/SKILL.md": {
+    "mtime": 1780849585.744282,
+    "ast_hash": "8711d10d1123843fc3313c5e6e5ffc44",
+    "semantic_hash": ""
+  },
+  "FINAL-PHASE8-REPORT.md": {
+    "mtime": 1780913075.060489,
+    "ast_hash": "4f86e844ba7f15d0cc661c2901ffb306",
+    "semantic_hash": ""
+  },
+  "PHASE8-COMPLETION-CHECKLIST.md": {
+    "mtime": 1780912997.0845597,
+    "ast_hash": "7b4e8a35cc6baff40795f193430848cd",
+    "semantic_hash": ""
+  },
+  "PHASE8-EMAIL-TEST-SUMMARY.md": {
+    "mtime": 1780912926.4046857,
+    "ast_hash": "17473da29a3f82bf5522ff2569b5015a",
+    "semantic_hash": ""
+  },
+  "docs/PHASE8-EMAIL-E2E-TESTING.md": {
+    "mtime": 1780912864.7912426,
+    "ast_hash": "191db9196347ac88344aa7b8c5daba96",
+    "semantic_hash": ""
+  },
+  "docs/PHASE8-EMAIL-SCHEMA.md": {
+    "mtime": 1780911087.643551,
+    "ast_hash": "b70f6811c8003a97f3662381b4991183",
+    "semantic_hash": ""
+  },
+  "docs/PHASE8-SUMMARY.md": {
+    "mtime": 1780912320.5877144,
+    "ast_hash": "e5d89075c5d3cb40ce160d9f07fefbbe",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-06-08-email-notifications-design.md": {
+    "mtime": 1780910596.367571,
+    "ast_hash": "61392055b7a9cc2eb0f669481c7ae9e5",
     "semantic_hash": ""
   }
 }
