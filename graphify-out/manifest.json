@@ -385,8 +385,8 @@
     "semantic_hash": ""
   },
   "server/db.js": {
-    "mtime": 1780988323.6188424,
-    "ast_hash": "3d488c480560be57aa1d2699db7c59eb",
+    "mtime": 1781030020.6726866,
+    "ast_hash": "3f9ed5c7edfc41c71de7fba4a93e4da8",
     "semantic_hash": ""
   },
   "server/db.test.js": {
@@ -545,8 +545,8 @@
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1780991978.6004176,
-    "ast_hash": "495b0838b3b853ebcbe3fa346de79ea0",
+    "mtime": 1781028253.542306,
+    "ast_hash": "5f8f4e8fc62ac9361e2dd0de0f1dcd97",
     "semantic_hash": ""
   },
   "COMPLETION_REPORT.md": {
@@ -1090,8 +1090,8 @@
     "semantic_hash": ""
   },
   "docs/ROADMAP.md": {
-    "mtime": 1780992019.4606187,
-    "ast_hash": "d8119a8dec33a7a7804dd382a0cdbd9f",
+    "mtime": 1781028286.3949301,
+    "ast_hash": "1d8dedd27c2597ef6257f94770d17921",
     "semantic_hash": ""
   },
   "docs/RUFLO.md": {
@@ -1382,6 +1382,36 @@
   "docs/PHASE9-TASK7-INTEGRATION-TESTS.md": {
     "mtime": 1780991565.224349,
     "ast_hash": "5da5854e649dfb3eaba9017a76992f00",
+    "semantic_hash": ""
+  },
+  "docs/PHASE9B-HANDOFF-SESSION-1.md": {
+    "mtime": 1781028086.5839496,
+    "ast_hash": "37035b354bd0a6efbe6b40f7c5b206d3",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-06-09-phase9b-groq-coaching-intelligence-design.md": {
+    "mtime": 1781029513.5875952,
+    "ast_hash": "d79d757fe80e6f145c356afde35e445b",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-06-09-phase9b-groq-coaching-intelligence.md": {
+    "mtime": 1781029671.8608809,
+    "ast_hash": "4d7ff4f52d9dcae863bd57bf9cdf1137",
+    "semantic_hash": ""
+  },
+  "server/__tests__/groq-service.test.js": {
+    "mtime": 1781030090.528201,
+    "ast_hash": "02e057173b2f6115be2d0f38c6079264",
+    "semantic_hash": ""
+  },
+  "server/db/migrations/20260609_add_groq_queue_and_agent_decisions.sql": {
+    "mtime": 1781029980.6188557,
+    "ast_hash": "aca66c73e23563658a841677f622d11f",
+    "semantic_hash": ""
+  },
+  "server/services/groq-service.js": {
+    "mtime": 1781030056.1440263,
+    "ast_hash": "5fe25d4b883e1171e8e7f824754142b6",
     "semantic_hash": ""
   }
 }

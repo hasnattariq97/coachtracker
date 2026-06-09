@@ -90,6 +90,27 @@ async function migratePhase9(queryFn) {
       );
     `);
 
+    // Table: agent_decisions (Phase 9b)
+    // Track all intervention decisions (AI-informed + fallback)
+    await queryFn(`
+      CREATE TABLE IF NOT EXISTS agent_decisions (
+        id SERIAL PRIMARY KEY,
+        agent_type VARCHAR(50) NOT NULL,
+        coach_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        task_id INTEGER NOT NULL REFERENCES tasks(id) ON DELETE CASCADE,
+        groq_recommendation VARCHAR(50),
+        groq_confidence DECIMAL(3,2),
+        groq_reasoning TEXT,
+        final_action VARCHAR(50),
+        override_reason VARCHAR(100),
+        overridden BOOLEAN DEFAULT FALSE,
+        coach_pattern VARCHAR(50),
+        task_status VARCHAR(50),
+        metadata TEXT,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      );
+    `);
+
     console.log('✓ Phase 9 schema created');
   } catch (error) {
     console.error('✗ Phase 9 migration failed:', error.message);

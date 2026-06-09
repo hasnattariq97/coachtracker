@@ -2,18 +2,59 @@
  * Support Agent Tests — Phase 9 Autonomous Coaching System
  */
 
-const SupportAgent = require('../../agents/support-agent');
 const db = require('../../db');
 
 jest.mock('../../services/google-sheets-client');
 jest.mock('../../db');
 
+// Mock GroqService - returns Phase 9 fallback rules
+jest.mock('../../services/groq-service', () => {
+  return jest.fn().mockImplementation(() => ({
+    analyzeCoachForIntervention: jest.fn((snapshot) => {
+      // Return Phase 9 fallback rules based on snapshot
+      const { status, coach_pattern, days_remaining, blockers, missing_sections } = snapshot;
+
+      // Parse blockers (handle both string and array)
+      let blockersArray = [];
+      try {
+        if (typeof blockers === 'string') {
+          blockersArray = JSON.parse(blockers);
+        } else if (Array.isArray(blockers)) {
+          blockersArray = blockers;
+        }
+      } catch (e) {
+        blockersArray = [];
+      }
+
+      if (status === 'overdue' && coach_pattern === 'procrastinator') {
+        return Promise.resolve({ fallbackRule: 'escalate', confidence: 0 });
+      } else if (status === 'overdue') {
+        return Promise.resolve({ fallbackRule: 'email', confidence: 0 });
+      } else if (status === 'at_risk' && blockersArray && blockersArray.length > 0) {
+        // Detected blockers = proactive comment in sheet
+        return Promise.resolve({ fallbackRule: 'tag', confidence: 0 });
+      } else if (status === 'at_risk' && coach_pattern === 'procrastinator' && days_remaining < 3) {
+        return Promise.resolve({ fallbackRule: 'email', confidence: 0 });
+      } else if (status === 'at_risk') {
+        // Standard at-risk = gentle tag
+        return Promise.resolve({ fallbackRule: 'tag', confidence: 0 });
+      }
+
+      return Promise.resolve({ fallbackRule: null, confidence: 0 });
+    }),
+  }));
+});
+
+const SupportAgent = require('../../agents/support-agent');
+
 describe('SupportAgent', () => {
   let agent;
 
   beforeEach(() => {
-    agent = new SupportAgent();
     jest.clearAllMocks();
+    // Default mock for coach history query - returns empty for tests
+    db.query.mockResolvedValue({ rows: [] });
+    agent = new SupportAgent();
   });
 
   describe('initialization', () => {

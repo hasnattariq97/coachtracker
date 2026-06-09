@@ -20,6 +20,7 @@
 
 const db = require('../db');
 const GoogleSheetsClient = require('../services/google-sheets-client');
+const GroqService = require('../services/groq-service');
 
 class SupportAgent {
   constructor() {
@@ -83,10 +84,125 @@ class SupportAgent {
 
   /**
    * Decide intervention strategy based on snapshot
-   * Returns: { taskId, coachId, action: 'tag'|'email'|'nudge'|'escalate'|null, reason, details }
+   * Phase 9b: Uses GroqService for AI-informed decisions
+   * Fallback to Phase 9 rules if Groq unavailable
+   * Returns: { taskId, coachId, action: 'tag'|'email'|'escalate'|null, reason, details }
    */
   async _decideIntervention(snapshot) {
     const { task_id, coach_id, status, days_remaining, coach_pattern, blockers, missing_sections } = snapshot;
+
+    let action = null;
+    let reason = '';
+    let details = {};
+    let groqRecommendation = null;
+    let groqConfidence = 0;
+    let groqReasoning = '';
+    let overridden = false;
+    let overrideReason = null;
+
+    try {
+      // Step 1: Fetch coach history for context
+      let coachHistory = [];
+      try {
+        const historyResult = await this.db.query(
+          `SELECT id, title, status, completed_at, due_date, assigned_at
+           FROM tasks WHERE coach_id = $1 ORDER BY assigned_at DESC LIMIT 10`,
+          [coach_id]
+        );
+        coachHistory = (historyResult?.rows || []).map(row => ({
+          id: row.id,
+          title: row.title,
+          status: row.status,
+          completed_at: row.completed_at,
+          due_date: row.due_date,
+          assigned_at: row.assigned_at,
+          onTime: row.status === 'completed' && new Date(row.completed_at) <= new Date(row.due_date),
+        }));
+      } catch (err) {
+        console.error(`Failed to fetch coach history for ${coach_id}:`, err.message);
+        coachHistory = [];
+      }
+
+      // Step 2: Get Groq recommendation (or fallback to Phase 9 rules)
+      const groqService = new GroqService();
+      const groqAdvice = await groqService.analyzeCoachForIntervention(snapshot, coachHistory);
+
+      // Use Groq recommendation if available, otherwise use fallback rule
+      if (groqAdvice.recommendation) {
+        // Groq API returned a direct recommendation
+        action = groqAdvice.recommendation;
+        groqRecommendation = groqAdvice.recommendation;
+        groqConfidence = groqAdvice.confidence || 0;
+        groqReasoning = groqAdvice.reasoning || '';
+        reason = groqReasoning;
+      } else if (groqAdvice.fallbackRule !== undefined && groqAdvice.fallbackRule !== null) {
+        // Groq unavailable - use Phase 9 fallback rule
+        action = groqAdvice.fallbackRule;
+        groqRecommendation = groqAdvice.fallbackRule;
+        groqConfidence = 0;
+        groqReasoning = 'Using Phase 9 fallback rules (Groq unavailable)';
+        reason = groqReasoning;
+      } else {
+        // No recommendation from Groq or fallback
+        action = null;
+        reason = 'No intervention needed (Groq analysis inconclusive)';
+      }
+
+      // Step 3: Apply fatigue rules (can override Groq recommendation)
+      if (action === 'tag') {
+        const recentTag = await this._checkRecentAction(task_id, 'tag', this.TAG_FATIGUE_WINDOW_MINUTES);
+        if (recentTag) {
+          overridden = true;
+          overrideReason = 'fatigue_rule';
+          action = null;
+          reason = `[Fatigue rule override] Groq recommended tag, but already tagged ${recentTag.minutes} ago. Wait ${this.TAG_FATIGUE_WINDOW_MINUTES} min between tags.`;
+        }
+      }
+
+      if (action === 'email') {
+        const recentEmail = await this._checkRecentAction(coach_id, 'email', this.EMAIL_FATIGUE_WINDOW_HOURS * 60);
+        if (recentEmail) {
+          overridden = true;
+          overrideReason = 'fatigue_rule';
+          action = null;
+          reason = `[Fatigue rule override] Groq recommended email, but already emailed ${recentEmail.hours} hours ago. Wait ${this.EMAIL_FATIGUE_WINDOW_HOURS}h between emails.`;
+        }
+      }
+
+      // Step 4: Log decision to agent_decisions table
+      await this._logDecision({
+        agent_type: 'support_agent',
+        coach_id,
+        task_id,
+        groq_recommendation: groqRecommendation,
+        groq_confidence: groqConfidence,
+        groq_reasoning: groqReasoning,
+        final_action: action,
+        override_reason: overrideReason,
+        overridden,
+        coach_pattern,
+        task_status: status,
+      });
+
+      return {
+        taskId: task_id,
+        coachId: coach_id,
+        action,
+        reason,
+        details,
+      };
+    } catch (err) {
+      console.error(`Error in _decideIntervention for task ${task_id}:`, err.message);
+      // Fall back to Phase 9 rules on error
+      return await this._decideInterventionPhase9Fallback(snapshot);
+    }
+  }
+
+  /**
+   * Phase 9 fallback: Rule-based intervention (used if Groq fails)
+   */
+  async _decideInterventionPhase9Fallback(snapshot) {
+    const { task_id, coach_id, status, days_remaining, coach_pattern, blockers } = snapshot;
 
     let action = null;
     let reason = '';
@@ -102,52 +218,40 @@ class SupportAgent {
 
     // Decision tree based on task status and coach pattern
     if (status === 'overdue') {
-      // Task is past due date
       if (coach_pattern === 'procrastinator') {
-        // Known procrastinator + overdue = escalate to admin
         action = 'escalate';
-        reason = 'Procrastinator coach has overdue task. Escalate to admin for intervention.';
-        details = { severity: 'high', suggestedAction: 'Call coach, offer support' };
+        reason = 'Phase 9 fallback: Procrastinator coach has overdue task. Escalate to admin.';
+        details = { severity: 'high' };
       } else {
-        // First-time overdue = supportive email nudge
         action = 'email';
-        reason = 'Task is overdue. Send supportive email with resources.';
-        details = { subject: 'Help with overdue task', tone: 'supportive' };
+        reason = 'Phase 9 fallback: Task is overdue. Send supportive email.';
+        details = { tone: 'supportive' };
       }
     } else if (status === 'at_risk') {
-      // Task is >75% through time, <25% time left
       if (blockersArray && blockersArray.length > 0) {
-        // Detected blockers = proactive comment in sheet
         action = 'tag';
-        reason = `Detected blockers: ${blockersArray.slice(0, 2).join(', ')}. Tag sheet to offer help.`;
-        details = { message: `I noticed potential blockers in your sheet. How can I help?`, blockerCount: blockersArray.length };
+        reason = 'Phase 9 fallback: Detected blockers. Tag sheet to offer help.';
+        details = { blockerCount: blockersArray.length };
       } else if (coach_pattern === 'procrastinator' && days_remaining < 3) {
-        // Procrastinator with <3 days left = friendly nudge
         action = 'email';
-        reason = `Procrastinator pattern + ${days_remaining} days left. Send encouraging email.`;
-        details = { subject: 'You\'ve got this!', tone: 'encouraging' };
+        reason = 'Phase 9 fallback: Procrastinator with <3 days left. Send encouraging email.';
+        details = { tone: 'encouraging' };
       } else {
-        // Standard at-risk = gentle tag
         action = 'tag';
-        reason = `Task at-risk (${days_remaining} days left). Offer proactive support via sheet comment.`;
-        details = { message: 'How\'s the task going? Any blockers I can help with?' };
+        reason = 'Phase 9 fallback: Task at-risk. Offer proactive support via sheet.';
+        details = {};
       }
-    } else if (status === 'on_time' && coach_pattern === 'fast-track') {
-      // Fast-track coach on-time = positive reinforcement (no action)
-      action = null;
-      reason = 'Fast-track coach on-time. No intervention needed.';
     } else {
-      // Standard on-time = monitor but don't intervene
       action = null;
-      reason = 'Task on-time. No intervention needed.';
+      reason = 'Phase 9 fallback: Task on-time. No intervention needed.';
     }
 
-    // Check fatigue rules before deciding
+    // Check fatigue rules
     if (action === 'tag') {
       const recentTag = await this._checkRecentAction(task_id, 'tag', this.TAG_FATIGUE_WINDOW_MINUTES);
       if (recentTag) {
         action = null;
-        reason = `Skip: Already tagged ${recentTag.minutes} ago. Wait ${this.TAG_FATIGUE_WINDOW_MINUTES} min between tags.`;
+        reason = `Skip: Already tagged ${recentTag.minutes} ago.`;
       }
     }
 
@@ -155,7 +259,7 @@ class SupportAgent {
       const recentEmail = await this._checkRecentAction(coach_id, 'email', this.EMAIL_FATIGUE_WINDOW_HOURS * 60);
       if (recentEmail) {
         action = null;
-        reason = `Skip: Already emailed ${recentEmail.hours} hours ago. Wait ${this.EMAIL_FATIGUE_WINDOW_HOURS}h between emails.`;
+        reason = `Skip: Already emailed ${recentEmail.hours} hours ago.`;
       }
     }
 
@@ -217,6 +321,38 @@ class SupportAgent {
     } catch (err) {
       console.error(`Failed to execute ${action} for task ${taskId}:`, err.message);
       await this._logAgentError('execution_failed', err.message);
+    }
+  }
+
+  /**
+   * Log a decision to the agent_decisions table for tracking/analysis
+   */
+  async _logDecision(data) {
+    try {
+      await this.db.query(
+        `INSERT INTO agent_decisions
+         (agent_type, coach_id, task_id, groq_recommendation, groq_confidence,
+          groq_reasoning, final_action, override_reason, overridden, coach_pattern,
+          task_status, metadata)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)`,
+        [
+          data.agent_type,
+          data.coach_id,
+          data.task_id,
+          data.groq_recommendation,
+          data.groq_confidence,
+          data.groq_reasoning,
+          data.final_action,
+          data.override_reason,
+          data.overridden,
+          data.coach_pattern,
+          data.task_status,
+          JSON.stringify({ timestamp: new Date().toISOString() })
+        ]
+      );
+    } catch (err) {
+      console.error('[SupportAgent] Decision logging error:', err.message);
+      // Don't throw - logging failure shouldn't block agent
     }
   }
 
