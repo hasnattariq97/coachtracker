@@ -50,9 +50,14 @@ class MonitoringAgent {
     try {
       console.log('🔍 MonitoringAgent: Starting scan');
 
-      // Initialize Google Sheets client
-      this.sheetsClient = new GoogleSheetsClient();
-      await this.sheetsClient.ensureInitialized();
+      // Initialize Google Sheets client (optional)
+      try {
+        this.sheetsClient = new GoogleSheetsClient();
+        await this.sheetsClient.ensureInitialized();
+      } catch (err) {
+        console.warn('⚠️  Google Sheets API not available (optional):', err.message);
+        this.sheetsClient = null;
+      }
 
       // Get all active tasks
       const activeTasks = await this.db.query(
@@ -184,7 +189,11 @@ class MonitoringAgent {
 
       const sheetId = sheetIdMatch[1];
 
-      // Read sheet values with timeout
+      // Read sheet values with timeout (if sheets client available)
+      if (!this.sheetsClient) {
+        return { sheetId: null, completionPercent: 0, missingSections: [], blockers: [] };
+      }
+
       const sheetPromise = this.sheetsClient.readSheet(sheetId, 'A:Z');
       const timeoutPromise = new Promise((_, reject) =>
         setTimeout(() => reject(new Error('Google Sheets API timeout (15s)')), MonitoringAgent.SHEETS_API_TIMEOUT_MS)
