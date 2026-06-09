@@ -135,6 +135,61 @@ const initializeDatabase = async () => {
     // Phase 9: Autonomous Coaching System tables
     await migratePhase9(query);
 
+    // Phase 9b: Groq Queue and Agent Decisions tables
+    await query(`
+      CREATE TABLE IF NOT EXISTS groq_queue (
+        id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+        request_type VARCHAR NOT NULL,
+        payload JSONB NOT NULL,
+        status VARCHAR NOT NULL DEFAULT 'pending',
+        response JSONB,
+        error_message TEXT,
+        retry_count INT DEFAULT 0,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        started_at TIMESTAMP,
+        completed_at TIMESTAMP
+      );
+    `);
+    await query(`
+      CREATE INDEX IF NOT EXISTS idx_groq_queue_status ON groq_queue(status);
+    `);
+    await query(`
+      CREATE INDEX IF NOT EXISTS idx_groq_queue_created ON groq_queue(created_at);
+    `);
+
+    await query(`
+      CREATE TABLE IF NOT EXISTS agent_decisions (
+        id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+        timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        agent_type VARCHAR NOT NULL,
+        coach_id INT NOT NULL,
+        task_id INT NOT NULL,
+        groq_recommendation VARCHAR,
+        groq_confidence DECIMAL(3,2),
+        groq_reasoning TEXT,
+        final_action VARCHAR,
+        override_reason VARCHAR,
+        overridden BOOLEAN DEFAULT FALSE,
+        coach_pattern VARCHAR,
+        task_status VARCHAR,
+        metadata JSONB,
+        FOREIGN KEY (coach_id) REFERENCES users(id) ON DELETE CASCADE,
+        FOREIGN KEY (task_id) REFERENCES tasks(id) ON DELETE CASCADE
+      );
+    `);
+    await query(`
+      CREATE INDEX IF NOT EXISTS idx_agent_decisions_coach ON agent_decisions(coach_id);
+    `);
+    await query(`
+      CREATE INDEX IF NOT EXISTS idx_agent_decisions_task ON agent_decisions(task_id);
+    `);
+    await query(`
+      CREATE INDEX IF NOT EXISTS idx_agent_decisions_agent ON agent_decisions(agent_type);
+    `);
+    await query(`
+      CREATE INDEX IF NOT EXISTS idx_agent_decisions_timestamp ON agent_decisions(timestamp);
+    `);
+
     console.log('✓ Database tables ready');
 
     // Seed admin user if it doesn't exist
