@@ -384,27 +384,47 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 
 ---
 
-## Phase 9b — Advanced AI Features (Deferred)
+## Phase 9b — AI-Powered Agent Decision-Making (Ready to Start)
 
-**Status:** Deferred to future session  
+**Status:** Planned for next session  
+**Goal:** Add Groq AI intelligence to Phase 9 agents for smarter intervention recommendations  
+**Expected Timeline:** 3-4 days (20 hours implementation + testing)
 
-Future enhancements to the autonomous coaching system (not in Phase 9 scope):
+**What Phase 9b Adds:**
 
-- [ ] **Groq API Integration** — LLM-powered personalized recommendations (Phase 7 technology applied to Phase 9 agents)
-- [ ] **OAuth for Google Sheets** — Direct commenting on tasks (coaches see support advice where they're working)
-- [ ] **Performance Anomaly Detection** — ML learns per-coach baselines for earlier detection
-- [ ] **Predictive Delay Warnings** — Predict delays 73% confidence before they happen
-- [ ] **Team Cohort Analysis** — Understand if patterns are individual or team-wide
-- [ ] **Manual Agent Triggering** — API endpoint to run agents on-demand (currently cron-only)
-- [ ] **Admin Dashboard** — Real-time agent status, last run times, at-risk coaches, recommendations
+1. **Intelligent Support Agent Decisions** — Instead of rule-based intervention selection, use Groq API to analyze coach patterns and recommend optimal intervention strategy (email vs tag vs escalate)
 
-**Expected Timeline:** Q3-Q4 2026 (after Phase 9 stability validated)
+2. **Adaptive Coaching Insights** — Generate personalized coaching recommendations after task completion or delay submission using historical coach behavior and current context
 
-**Technology Stack:**
-- Groq API (llama-3.3-70b-versatile) for AI recommendations
-- Google Sheets OAuth2 for direct commenting
-- TensorFlow or scikit-learn for ML models
-- Dashboard UI components (React + TailwindCSS)
+3. **Pattern-Aware Recommendations** — Groq analyzes coach patterns (procrastinator, fast-track, steady) and recommends tailored approaches (e.g., "deadline pressure works for this coach, try escalate")
+
+**Technology:**
+- **Groq API** (llama-3.3-70b-versatile) — free tier, 30 RPM, already set up from Phase 7
+- **3 New Services:**
+  - `groq-service.js` — Groq API wrapper + rate limiting
+  - `coaching-insights.js` — Insight generation logic
+  - Enhanced `support-agent.js` — AI-informed decision making
+
+**Implementation Tasks:**
+- [ ] Task 1: Groq Service Wrapper (4 hours, 15+ tests)
+- [ ] Task 2: Enhanced Support Agent (6 hours, 20+ tests)
+- [ ] Task 3: Coaching Insights Feature (6 hours, 15+ tests)
+- [ ] Task 4: Integration + E2E Tests (4 hours, 20+ tests)
+
+**Complete Handoff:** See [@docs/PHASE9B-HANDOFF-SESSION-1.md](PHASE9B-HANDOFF-SESSION-1.md) for:
+- Full scope and architecture
+- Implementation plan with task breakdowns
+- Known blockers and solutions
+- Success criteria and timeline
+- Next session checklist
+
+**Future Enhancements (Phase 9b+):**
+- [ ] **OAuth for Google Sheets** — Direct commenting on tasks
+- [ ] **Performance Anomaly Detection** — ML learns per-coach baselines
+- [ ] **Predictive Delay Warnings** — Predict delays before they happen
+- [ ] **Team Cohort Analysis** — Understand team-wide patterns
+- [ ] **Manual Agent Triggering** — API endpoint to run agents on-demand
+- [ ] **Admin Dashboard** — Real-time agent status and recommendations
 
 ---
 
@@ -427,8 +447,10 @@ Future enhancements to the autonomous coaching system (not in Phase 9 scope):
 | 7+ | PostgreSQL (Railway) | ✅ Complete | ✅ Verified (2026-06-06) |
 | 8 | Email Notifications | ✅ Complete | ✅ Production verified (2026-06-08) |
 | 9 | Autonomous Agents | ✅ Complete | 156/156 |
+| 9b | AI-Powered Decisions (Groq) | ⏳ Planned | — |
 
 **Total Tests Passing:** 192+ (184 backend unit/integration/agent + 8 E2E via agent-browser)  
+**Next Phase (9b):** AI enhancement layer with Groq API for intelligent decision-making  
 **E2E Testing:** Agent-browser integration complete and verified  
 **Security Findings:** 11/11 resolved (0 critical, 0 active bypasses)  
 **Features Complete:** 20/20 (Phases 0-9 complete, all features implemented, 100% Phase 9 tests passing)  

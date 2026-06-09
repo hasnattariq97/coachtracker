@@ -37,7 +37,7 @@ New to this project? Do this first:
 
 **Frontend design:** See [@memory/frontend_design_system.md](~/.claude/projects/d--Cursor-new/memory/frontend_design_system.md) — uses ui-ux-pro-max-skill (Teal #0D9488, Orange #EA580C).
 
-## Phase 9 — Autonomous Multi-Agent Coaching System
+## Phase 9 — Autonomous Multi-Agent Coaching System ✅ COMPLETE & DEPLOYED
 
 Three autonomous agents continuously monitor coaches and provide real-time support:
 
@@ -45,17 +45,25 @@ Three autonomous agents continuously monitor coaches and provide real-time suppo
 2. **Support Agent** (every 30 min) — Reads snapshots, decides interventions (email, tag, escalate), prevents message fatigue (30-min tag window, 4-hour email window)
 3. **Reporting Agent** (daily 9am) — Synthesizes 24-hour actions, generates recommendations, creates HTML digest for admin
 
+**Status:** ✅ **LIVE ON RAILWAY** (commit `5d66d79`)
+- Backend: https://spectacular-connection-production-d07b.up.railway.app
+- All agents running on schedule (30-min + 9am daily cycles)
+- 192+ tests passing (100% success rate)
+- Database: 5 Phase 9 tables + full observability via agent_errors table
+
 **Key Features:**
 - 🤖 Autonomous decision-making without admin intervention
 - 🔍 Pattern-based analysis (not just deadline-based alerts)
 - 🎯 Preventive support before tasks are late
-- 😌 Built-in fatigue prevention rules
+- 😌 Built-in fatigue prevention rules (30-min tag window, 4-hour email window)
 - 📊 Daily digests with actionable insights
-- 🔄 Google Sheets integration (read-only Phase 9, OAuth in Phase 9b)
+- 🔄 Google Sheets integration (read-only, gracefully degrades if unavailable)
 
-**Complete User Guide:** See [@docs/PHASE9-AGENT-GUIDE.md](docs/PHASE9-AGENT-GUIDE.md) for admin instructions, coach guidance, database reference, and troubleshooting.
+**Implementation:** 1,379 lines of agent code + 697 lines of tests, 156+ tests passing (100%). All agents operational, tested, and deployed to production.
 
-**Implementation:** 1,379 lines of agent code + 697 lines of tests, 156 tests passing (100%). All agents operational and tested. Ready for production deployment.
+**Handoff & Documentation:**
+- [@docs/PHASE9-HANDOFF-SESSION-1.md](docs/PHASE9-HANDOFF-SESSION-1.md) — Session 1 status (75% complete before cleanup)
+- [@docs/PHASE9B-HANDOFF-SESSION-1.md](docs/PHASE9B-HANDOFF-SESSION-1.md) — Phase 9b planning (AI enhancement layer with Groq)
 
 ## Workflow: Superpowers (Brainstorm → Design → Plan → Execute → Review)
 
