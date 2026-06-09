@@ -72,24 +72,27 @@ class GroqService {
    * {
    *   recommendation: 'email' | 'tag' | 'escalate' | null,
    *   confidence: 0.0-1.0,
-   *   reasoning: string,
-   *   fallbackRule: string (if using fallback)
+   *   reasoning: string
    * }
+   *
+   * On Groq failure: returns fallback recommendation internally (confidence: 0)
    */
   async analyzeCoachForIntervention(snapshot, coachHistory) {
     // Validate input
     if (!snapshot || !coachHistory) {
       return {
-        fallbackRule: null,
+        recommendation: null,
         confidence: 0,
+        reasoning: 'Invalid input provided',
       };
     }
 
     // If Groq unavailable, use Phase 9 fallback rules immediately
     if (!this.client) {
       return {
-        fallbackRule: this._applyPhase9FallbackRule(snapshot),
+        recommendation: this._applyPhase9FallbackRule(snapshot),
         confidence: 0,
+        reasoning: 'Groq unavailable, using Phase 9 rules',
       };
     }
 
@@ -137,24 +140,26 @@ Respond with ONLY valid JSON:
       const content = response.choices[0]?.message?.content;
       if (!content) {
         return {
-          fallbackRule: this._applyPhase9FallbackRule(snapshot),
+          recommendation: this._applyPhase9FallbackRule(snapshot),
           confidence: 0,
+          reasoning: 'Groq returned empty response, using Phase 9 rules',
         };
       }
 
       const parsed = JSON.parse(content);
       return {
         recommendation: parsed.recommendation,
-        confidence: parsed.confidence || 0,
-        reasoning: parsed.reasoning || '',
+        confidence: parsed.confidence || 0.5,
+        reasoning: parsed.reasoning || 'No reasoning provided',
       };
     } catch (error) {
       console.error('[GroqService] analyzeCoachForIntervention error:', error.message);
 
       // Fall back to Phase 9 rules on any error
       return {
-        fallbackRule: this._applyPhase9FallbackRule(snapshot),
+        recommendation: this._applyPhase9FallbackRule(snapshot),
         confidence: 0,
+        reasoning: `Groq error: ${error.message}, using Phase 9 rules`,
       };
     }
   }
@@ -171,11 +176,16 @@ Respond with ONLY valid JSON:
    *   prediction: string,
    *   confidence: 0.0-1.0
    * }
+   *
+   * On Groq failure: returns generic message with confidence: 0
    */
   async enhanceCoachingInsight(coachHistory, task, eventType) {
     // Default fallback message
     const fallback = {
       message: 'Good work. Keep going.',
+      tone: 'neutral',
+      metrics: [],
+      prediction: '',
       confidence: 0,
     };
 
@@ -239,7 +249,7 @@ Respond with ONLY valid JSON:
         tone: parsed.tone || 'neutral',
         metrics: parsed.metrics || [],
         prediction: parsed.prediction || '',
-        confidence: parsed.confidence || 0,
+        confidence: parsed.confidence || 0.5,
       };
     } catch (error) {
       console.error('[GroqService] enhanceCoachingInsight error:', error.message);

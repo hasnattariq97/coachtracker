@@ -5,7 +5,7 @@
  * Covers queue operations, intervention analysis, coaching insights, and error handling.
  *
  * @phase 9b
- * @status draft
+ * @status active
  */
 
 const GroqService = require('../services/groq-service');
@@ -79,7 +79,7 @@ describe('GroqService - analyzeCoachForIntervention', () => {
     service.client = mockGroq; // Ensure client is set for tests
   });
 
-  test('returns recommendation with confidence and reasoning', async () => {
+  test('returns recommendation from Groq with confidence and reasoning', async () => {
     const snapshot = {
       task_id: 5,
       coach_id: 1,
@@ -112,9 +112,10 @@ describe('GroqService - analyzeCoachForIntervention', () => {
     expect(result.recommendation).toBe('escalate');
     expect(result.confidence).toBeGreaterThan(0.8);
     expect(result.reasoning).toBeDefined();
+    expect(result.reasoning).not.toContain('Groq unavailable'); // Groq succeeded
   });
 
-  test('returns fallback rule if Groq times out', async () => {
+  test('returns fallback recommendation if Groq times out', async () => {
     const snapshot = {
       task_id: 5,
       coach_id: 1,
@@ -134,12 +135,13 @@ describe('GroqService - analyzeCoachForIntervention', () => {
     const result = await service.analyzeCoachForIntervention(snapshot, coachHistory);
 
     expect(result).toBeDefined();
-    expect(result.fallbackRule).toBeDefined();
-    // For overdue + procrastinator, should recommend escalate
-    expect(['escalate', 'email']).toContain(result.fallbackRule);
+    // For overdue + procrastinator, fallback should recommend escalate
+    expect(result.recommendation).toBe('escalate');
+    expect(result.confidence).toBe(0); // Low confidence when using fallback
+    expect(result.reasoning).toContain('Groq');
   });
 
-  test('returns fallback rule if Groq returns invalid JSON', async () => {
+  test('returns fallback recommendation if Groq returns invalid JSON', async () => {
     const snapshot = {
       task_id: 5,
       coach_id: 1,
@@ -162,7 +164,9 @@ describe('GroqService - analyzeCoachForIntervention', () => {
     const result = await service.analyzeCoachForIntervention(snapshot, coachHistory);
 
     expect(result).toBeDefined();
-    expect(result.fallbackRule).toBeDefined();
+    expect(result.recommendation).toBe('escalate'); // Phase 9 fallback for overdue+procrastinator
+    expect(result.confidence).toBe(0);
+    expect(result.reasoning).toContain('Phase 9 rules');
   });
 
   test('applies correct fallback logic for different coach patterns', async () => {
@@ -176,7 +180,7 @@ describe('GroqService - analyzeCoachForIntervention', () => {
           coach_pattern: 'procrastinator',
           days_remaining: -5,
         },
-        expectedFallback: 'escalate',
+        expectedRecommendation: 'escalate',
       },
       {
         name: 'overdue + steady -> email',
@@ -187,7 +191,7 @@ describe('GroqService - analyzeCoachForIntervention', () => {
           coach_pattern: 'steady',
           days_remaining: -2,
         },
-        expectedFallback: 'email',
+        expectedRecommendation: 'email',
       },
       {
         name: 'at_risk without blockers -> null',
@@ -198,7 +202,7 @@ describe('GroqService - analyzeCoachForIntervention', () => {
           coach_pattern: 'fast_track',
           days_remaining: 2,
         },
-        expectedFallback: null,
+        expectedRecommendation: null,
       },
     ];
 
@@ -212,8 +216,29 @@ describe('GroqService - analyzeCoachForIntervention', () => {
 
       const result = await service.analyzeCoachForIntervention(scenario.snapshot, []);
 
-      expect(result.fallbackRule).toBe(scenario.expectedFallback);
+      expect(result.recommendation).toBe(scenario.expectedRecommendation);
+      expect(result.confidence).toBe(0); // Fallback always has low confidence
     }
+  });
+
+  test('returns null recommendation when client is unavailable', async () => {
+    const serviceNoClient = new GroqService();
+    serviceNoClient.client = null;
+
+    const snapshot = {
+      task_id: 1,
+      coach_id: 1,
+      status: 'at_risk',
+      coach_pattern: 'steady',
+      days_remaining: 2,
+    };
+
+    const result = await serviceNoClient.analyzeCoachForIntervention(snapshot, []);
+
+    expect(result).toBeDefined();
+    expect(result.recommendation).toBeNull();
+    expect(result.confidence).toBe(0);
+    expect(result.reasoning).toContain('unavailable');
   });
 });
 
@@ -237,10 +262,10 @@ describe('GroqService - enhanceCoachingInsight', () => {
     service.client = mockGroq; // Ensure client is set for tests
   });
 
-  test('returns enhanced message with metrics and prediction', async () => {
+  test('returns enhanced message with metrics and prediction from Groq', async () => {
     const coachHistory = [
-      { id: 1, status: 'completed', completed_early: true },
-      { id: 2, status: 'completed', completed_on_time: true },
+      { id: 1, status: 'completed', completed_early: true, completed_late: false },
+      { id: 2, status: 'completed', completed_on_time: true, completed_late: false },
     ];
     const task = { id: 5, title: 'Q2 Strategy', priority: 'high' };
     const eventType = 'completion';
@@ -264,10 +289,11 @@ describe('GroqService - enhanceCoachingInsight', () => {
     const result = await service.enhanceCoachingInsight(coachHistory, task, eventType);
 
     expect(result).toBeDefined();
-    expect(result.message).toBeDefined();
-    expect(result.tone).toBeDefined();
-    expect(result.metrics).toBeDefined();
+    expect(result.message).toBe('You crushed this deadline. Keep building momentum.');
+    expect(result.tone).toBe('encouraging');
+    expect(result.metrics.length).toBeGreaterThan(0);
     expect(result.prediction).toBeDefined();
+    expect(result.confidence).toBeGreaterThan(0.8);
   });
 
   test('returns fallback message if Groq unavailable', async () => {
@@ -275,20 +301,25 @@ describe('GroqService - enhanceCoachingInsight', () => {
     const task = { id: 5, title: 'Test Task' };
     const eventType = 'completion';
 
-    // Don't initialize Groq (no API key)
+    // Create service without Groq client
     const serviceNoGroq = new GroqService();
-    // Override the client to be null
     serviceNoGroq.client = null;
 
     const result = await serviceNoGroq.enhanceCoachingInsight(coachHistory, task, eventType);
 
     expect(result).toBeDefined();
     expect(result.message).toBe('Good work. Keep going.');
+    expect(result.tone).toBe('neutral');
+    expect(result.metrics).toEqual([]);
+    expect(result.prediction).toBe('');
     expect(result.confidence).toBe(0);
   });
 
   test('returns fallback message if Groq times out', async () => {
-    const coachHistory = [{ id: 1, status: 'completed' }];
+    const coachHistory = [
+      { id: 1, status: 'completed', completed_late: false },
+      { id: 2, status: 'completed', completed_late: false },
+    ];
     const task = { id: 5, title: 'Test Task' };
     const eventType = 'completion';
 
@@ -302,8 +333,19 @@ describe('GroqService - enhanceCoachingInsight', () => {
     const result = await service.enhanceCoachingInsight(coachHistory, task, eventType);
 
     expect(result).toBeDefined();
-    expect(result.message).toBeDefined();
-    expect(result.confidence).toBeLessThanOrEqual(0);
+    expect(result.message).toBe('Good work. Keep going.');
+    expect(result.confidence).toBe(0);
+  });
+
+  test('returns fallback message if coach history is empty', async () => {
+    const coachHistory = [];
+    const task = { id: 5, title: 'Test Task' };
+
+    const result = await service.enhanceCoachingInsight(coachHistory, task, 'completion');
+
+    expect(result).toBeDefined();
+    expect(result.message).toBe('Good work. Keep going.');
+    expect(result.confidence).toBe(0);
   });
 });
 
@@ -333,7 +375,7 @@ describe('GroqService - Error Handling', () => {
     consoleSpy.mockRestore();
   });
 
-  test('logs Groq API errors to console', async () => {
+  test('logs Groq API errors to console and returns fallback', async () => {
     const snapshot = { task_id: 1, coach_id: 1, status: 'overdue', coach_pattern: 'steady' };
     const error = new Error('Groq API rate limited');
 
@@ -343,8 +385,9 @@ describe('GroqService - Error Handling', () => {
 
     // Should have logged error
     expect(consoleSpy).toHaveBeenCalled();
-    // Should return fallback
-    expect(result.fallbackRule).toBe('email');
+    // Should return fallback recommendation (email for overdue+steady)
+    expect(result.recommendation).toBe('email');
+    expect(result.confidence).toBe(0);
   });
 
   test('handles network errors gracefully', async () => {
@@ -357,7 +400,8 @@ describe('GroqService - Error Handling', () => {
 
     // Should return result with fallback, not throw
     expect(result).toBeDefined();
-    expect(result.fallbackRule).toBeDefined();
+    expect(result.recommendation).toBeDefined();
+    expect(result.confidence).toBe(0);
   });
 
   test('handles invalid payload gracefully', async () => {
@@ -365,6 +409,35 @@ describe('GroqService - Error Handling', () => {
 
     // Should handle null payload without crashing
     expect(result).toBeUndefined();
+  });
+
+  test('handles Groq response with missing fields', async () => {
+    const snapshot = {
+      task_id: 1,
+      coach_id: 1,
+      status: 'overdue',
+      coach_pattern: 'steady',
+    };
+
+    mockGroq.chat.completions.create.mockResolvedValueOnce({
+      choices: [
+        {
+          message: {
+            content: JSON.stringify({
+              recommendation: 'email',
+              // Missing confidence and reasoning
+            }),
+          },
+        },
+      ],
+    });
+
+    const result = await service.analyzeCoachForIntervention(snapshot, []);
+
+    expect(result).toBeDefined();
+    expect(result.recommendation).toBe('email');
+    expect(result.confidence).toBe(0.5); // Default fallback
+    expect(result.reasoning).toBe('No reasoning provided'); // Default fallback
   });
 });
 
