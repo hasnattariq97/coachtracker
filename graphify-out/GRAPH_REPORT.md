@@ -1,16 +1,16 @@
 # Graph Report - Cursor_new  (2026-06-09)
 
 ## Corpus Check
-- 259 files · ~294,255 words
+- 259 files · ~294,293 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 3174 nodes · 3488 edges · 241 communities (229 shown, 12 thin omitted)
+- 3251 nodes · 3563 edges · 253 communities (241 shown, 12 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7e85cd3a`
+- Built from commit: `7fa208f6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -238,18 +238,30 @@
 - [[_COMMUNITY_Community 238|Community 238]]
 - [[_COMMUNITY_Community 239|Community 239]]
 - [[_COMMUNITY_Community 240|Community 240]]
+- [[_COMMUNITY_Community 241|Community 241]]
+- [[_COMMUNITY_Community 242|Community 242]]
+- [[_COMMUNITY_Community 243|Community 243]]
+- [[_COMMUNITY_Community 244|Community 244]]
+- [[_COMMUNITY_Community 245|Community 245]]
+- [[_COMMUNITY_Community 246|Community 246]]
+- [[_COMMUNITY_Community 247|Community 247]]
+- [[_COMMUNITY_Community 248|Community 248]]
+- [[_COMMUNITY_Community 249|Community 249]]
+- [[_COMMUNITY_Community 250|Community 250]]
+- [[_COMMUNITY_Community 251|Community 251]]
+- [[_COMMUNITY_Community 252|Community 252]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Build Roadmap — Coach Task Tracker` - 21 edges
 2. `Phase 1: Auth System Implementation Plan` - 20 edges
-3. `Railway CLI Deployment Guide` - 16 edges
-4. `Handoff: Railway Deployment & Admin User Seeding` - 16 edges
-5. `Phase 7 Coaching Insights — Chrome DevTools Manual Test Report` - 16 edges
-6. `Agent-Browser E2E Testing — Handoff & Implementation Guide` - 16 edges
-7. `Master Capabilities Reference` - 15 edges
-8. `Railway Deployment — Coach Tracker` - 15 edges
-9. `E2E Testing with Agent-Browser — Coach Task Tracker` - 15 edges
-10. `authenticateToken()` - 15 edges
+3. `Phase 9 Task 7: Integration Tests for Agent Swarm` - 16 edges
+4. `Railway CLI Deployment Guide` - 16 edges
+5. `Handoff: Railway Deployment & Admin User Seeding` - 16 edges
+6. `Phase 7 Coaching Insights — Chrome DevTools Manual Test Report` - 16 edges
+7. `Agent-Browser E2E Testing — Handoff & Implementation Guide` - 16 edges
+8. `Master Capabilities Reference` - 15 edges
+9. `Railway Deployment — Coach Tracker` - 15 edges
+10. `E2E Testing with Agent-Browser — Coach Task Tracker` - 15 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `LoginPage()` --calls--> `useAuth()`  [EXTRACTED]
@@ -266,7 +278,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (241 total, 12 thin omitted)
+## Communities (253 total, 12 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.17
@@ -473,8 +485,8 @@ Cohesion: 0.19
 Nodes (12): Claude Core Capabilities, code:bash (# Step 1: Initialize Claude Code), Distribution & Usage, For Agents, For Projects, For Teams, Guarantees & Constraints, Master Capabilities Reference (+4 more)
 
 ### Community 63 - "Community 63"
-Cohesion: 0.08
-Nodes (24): authenticateToken(), jwt, verifyToken(), app, { authenticateToken, requireAdmin }, coaches, db, express (+16 more)
+Cohesion: 0.11
+Nodes (19): authenticateToken(), jwt, requireAdmin(), verifyToken(), app, { authenticateToken, requireAdmin }, cors, corsOptions (+11 more)
 
 ### Community 64 - "Community 64"
 Cohesion: 0.29
@@ -513,8 +525,8 @@ Cohesion: 0.10
 Nodes (19): code:cmd (scripts\cleanup.cmd), code:bash (./scripts/cleanup.sh), code:bash (cd d:\Cursor_new\server), code:bash (cd d:\Cursor_new\client), code:cmd (scripts\cleanup.cmd), code:cmd (scripts\cleanup.cmd), code:bash (ps aux | grep node | grep -v grep | wc -l), code:bash (killall -9 node && sleep 2 && cd server && node index.js) (+11 more)
 
 ### Community 75 - "Community 75"
-Cohesion: 0.29
-Nodes (12): 400 Bad Request, 401 Unauthorized, 403 Forbidden, 409 Conflict, 500 Internal Server Error, code:json ({), code:json ({), code:json ({) (+4 more)
+Cohesion: 0.26
+Nodes (13): 400 Bad Request, 401 Unauthorized, 403 Forbidden, 409 Conflict, 500 Internal Server Error, code:json ({), code:json ({), code:json ({) (+5 more)
 
 ### Community 76 - "Community 76"
 Cohesion: 0.13
@@ -585,8 +597,8 @@ Cohesion: 0.08
 Nodes (25): code:powershell (cd d:\Cursor_new), code:block10 (CLIENT_ORIGIN = https://coachtracker-theta.vercel.app), code:powershell (npm install -g @railway/cli), code:block3 (✅ added X packages), code:powershell (npx railway login), code:powershell (npx railway link), code:powershell (cd server), code:powershell (npx railway service add) (+17 more)
 
 ### Community 94 - "Community 94"
-Cohesion: 0.48
-Nodes (7): code:json ([), code:json ({), code:json ({), GET /api/notifications, Notifications, PUT /api/notifications/:id/read, PUT /api/notifications/read-all
+Cohesion: 0.53
+Nodes (6): code:json ([), code:json ({), GET /api/notifications, Notifications, PUT /api/notifications/:id/read, PUT /api/notifications/read-all
 
 ### Community 95 - "Community 95"
 Cohesion: 0.29
@@ -669,8 +681,8 @@ Cohesion: 0.17
 Nodes (11): Agent Commands, AgentDB Namespaces, code:bash (/phase-builder), code:bash (# Trigger phase builder for parallel development), Learning Loop, Option A: Development Acceleration (Parallel Agents), Option B: Product Feature (Multi-Agent Coaching), Option C: Enterprise Platform (+3 more)
 
 ### Community 120 - "Community 120"
-Cohesion: 0.13
-Nodes (18): requireAdmin(), scheduleJobs(), app, { authenticateToken, requireAdmin }, cors, corsOptions, db, express (+10 more)
+Cohesion: 0.23
+Nodes (11): scheduleJobs(), app, { authenticateToken, requireAdmin }, cors, corsOptions, db, express, { scheduleJobs } (+3 more)
 
 ### Community 121 - "Community 121"
 Cohesion: 0.18
@@ -1112,8 +1124,56 @@ Nodes (4): Key Features, Overview, What Is Phase 9?, What It Does
 Cohesion: 0.67
 Nodes (4): Backend ✅, Frontend ✅, Phase 1 — Auth System ✅, Phase 3+ — Multi-Coach Task Assignment ✅
 
+### Community 241 - "Community 241"
+Cohesion: 0.08
+Nodes (24): Created (New Files), Files Created/Modified, Git State, How to Resume in Next Session, Key Design Decisions, Metrics, Modified, Next Session Checklist (+16 more)
+
+### Community 242 - "Community 242"
+Cohesion: 0.17
+Nodes (12): 1. Happy Path (4 tests), 2. Agent Coordination (3 tests), 3. Error Resilience (4 tests), 4. Stress Tests (4 tests), 5. Cycle Metrics and Logging (3 tests), 6. Agent Result Validation (3 tests), 7. Edge Cases (4 tests), 8. Idempotency (1 test) (+4 more)
+
+### Community 243 - "Community 243"
+Cohesion: 0.22
+Nodes (8): Commit Information, File Structure, How to Use This Document, Overview, Performance Characteristics, Phase 9 Task 7: Integration Tests for Agent Swarm, PostgreSQL Integration, Success Criteria (All Met ✅)
+
+### Community 244 - "Community 244"
+Cohesion: 0.29
+Nodes (6): app, { authenticateToken, requireAdmin }, coaches, db, express, result
+
+### Community 245 - "Community 245"
+Cohesion: 0.29
+Nodes (6): app, { authenticateToken, requireAdmin }, cors, corsOptions, express, { scheduleJobs }
+
+### Community 246 - "Community 246"
+Cohesion: 0.33
+Nodes (6): 1. Orchestrator Independence ✅, 2. Execution Order Matters ✅, 3. Error Logging Infrastructure ✅, 4. Scalability Verified ✅, 5. Idempotency Ensured ✅, Key Findings & Design Decisions
+
+### Community 247 - "Community 247"
+Cohesion: 0.40
+Nodes (5): Expected Output, Run integration tests only, Run with coverage (if configured), Run with verbose output, Running the Tests
+
+### Community 248 - "Community 248"
+Cohesion: 0.40
+Nodes (5): Integration with Phase 9, Monitoring Agent (`server/agents/monitoring-agent.js`), Orchestrator (`server/agents/orchestrator.js`), Reporting Agent (`server/agents/reporting-agent.js`), Support Agent (`server/agents/support-agent.js`)
+
+### Community 249 - "Community 249"
+Cohesion: 0.50
+Nodes (4): Future Enhancements, Phase 10: Performance Benchmarks, Phase 9b: PostgreSQL Integration Tests, Phase 9c: E2E via Agent-Browser
+
+### Community 250 - "Community 250"
+Cohesion: 0.50
+Nodes (4): Mocking Strategy, Setup Pattern, Test Architecture, Why Mocked Database?
+
+### Community 251 - "Community 251"
+Cohesion: 0.50
+Nodes (4): Pattern 1: Happy Path Test, Pattern 2: Error Resilience Test, Pattern 3: Stress Test, Test Patterns & Examples
+
+### Community 252 - "Community 252"
+Cohesion: 0.67
+Nodes (3): By Agent Concern, By Concern (9 test suites), Test Organization
+
 ## Knowledge Gaps
-- **1751 isolated node(s):** `Quick Start Checklist`, `Tech Stack`, `Code Conventions`, `Phase 9 — Autonomous Multi-Agent Coaching System`, `Workflow: Superpowers (Brainstorm → Design → Plan → Execute → Review)` (+1746 more)
+- **1811 isolated node(s):** `db`, `GoogleSheetsClient`, `Part 1: Foundation (Tasks 1-2)`, `Part 2: Agent Development (Tasks 3-5)`, `Part 3: Integration (Task 6)` (+1806 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -1121,13 +1181,13 @@ Nodes (4): Backend ✅, Frontend ✅, Phase 1 — Auth System ✅, Phase 3+ — 
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Master Capabilities Reference` connect `Community 62` to `Community 64`, `Community 7`, `Community 13`, `Community 19`, `Community 148`, `Community 22`, `Community 23`, `Community 61`, `Community 222`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
-- **Why does `Integrated Frameworks` connect `Community 13` to `Community 62`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+- **Why does `authenticateToken()` connect `Community 63` to `Community 79`, `Community 50`, `Community 51`, `Community 244`, `Community 245`, `Community 117`, `Community 120`, `Community 218`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `Installation & Setup` connect `Community 148` to `Community 24`, `Community 145`, `Community 62`?**
+- **Why does `scheduleJobs()` connect `Community 120` to `Community 218`, `Community 245`, `Community 207`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **What connects `Quick Start Checklist`, `Tech Stack`, `Code Conventions` to the rest of the system?**
-  _1751 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `db`, `GoogleSheetsClient`, `Part 1: Foundation (Tasks 1-2)` to the rest of the system?**
+  _1811 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.05410628019323672 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**
