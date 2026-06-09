@@ -1,16 +1,16 @@
 # Graph Report - Cursor_new  (2026-06-09)
 
 ## Corpus Check
-- 265 files · ~306,372 words
+- 266 files · ~308,167 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 3340 nodes · 3639 edges · 261 communities (248 shown, 13 thin omitted)
+- 3349 nodes · 3650 edges · 257 communities (244 shown, 13 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `db744b09`
+- Built from commit: `135cddbc`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -215,7 +215,6 @@
 - [[_COMMUNITY_Community 215|Community 215]]
 - [[_COMMUNITY_Community 216|Community 216]]
 - [[_COMMUNITY_Community 217|Community 217]]
-- [[_COMMUNITY_Community 218|Community 218]]
 - [[_COMMUNITY_Community 219|Community 219]]
 - [[_COMMUNITY_Community 220|Community 220]]
 - [[_COMMUNITY_Community 221|Community 221]]
@@ -250,11 +249,7 @@
 - [[_COMMUNITY_Community 250|Community 250]]
 - [[_COMMUNITY_Community 251|Community 251]]
 - [[_COMMUNITY_Community 252|Community 252]]
-- [[_COMMUNITY_Community 253|Community 253]]
 - [[_COMMUNITY_Community 254|Community 254]]
-- [[_COMMUNITY_Community 255|Community 255]]
-- [[_COMMUNITY_Community 256|Community 256]]
-- [[_COMMUNITY_Community 257|Community 257]]
 - [[_COMMUNITY_Community 258|Community 258]]
 - [[_COMMUNITY_Community 259|Community 259]]
 - [[_COMMUNITY_Community 260|Community 260]]
@@ -272,21 +267,21 @@
 10. `Railway Deployment — Coach Tracker` - 15 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Sidebar()` --calls--> `useAuth()`  [EXTRACTED]
-  client/src/components/Sidebar.jsx → AuthContext.jsx
 - `LoginPage()` --calls--> `useAuth()`  [EXTRACTED]
   client/src/pages/LoginPage.jsx → AuthContext.jsx
 - `CoachDashboard()` --calls--> `useAuth()`  [EXTRACTED]
   client/src/pages/coach/Dashboard.jsx → AuthContext.jsx
 - `ProtectedRoute()` --calls--> `useAuth()`  [EXTRACTED]
   client/src/components/ProtectedRoute.jsx → AuthContext.jsx
+- `Sidebar()` --calls--> `useAuth()`  [EXTRACTED]
+  client/src/components/Sidebar.jsx → AuthContext.jsx
 - `TestComponent()` --calls--> `useAuth()`  [EXTRACTED]
   src/context/AuthContext.test.jsx → AuthContext.jsx
 
 ## Import Cycles
 - None detected.
 
-## Communities (261 total, 13 thin omitted)
+## Communities (257 total, 13 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.17
@@ -313,8 +308,8 @@ Cohesion: 0.05
 Nodes (41): 13 Plugins to Install, Agent Commands, Agent Consensus Voting, AgentDB Namespaces, AgentDB Namespaces, Agents Not Spawning, Architecture: Ruflo in Coach Task Tracker, code:block1 ([PluginManager] Failed to install ruflo-agentdb: spawn npm E) (+33 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.12
-Nodes (15): ProtectedRoute(), AuthContext, AuthProvider(), decodeToken(), loginButton, loginPromise, logoutButton, TestComponent() (+7 more)
+Cohesion: 0.05
+Nodes (29): pageTitles, NotificationBell(), typeIcons, typeStyles, ProtectedRoute(), adminLinks, coachLinks, Sidebar() (+21 more)
 
 ### Community 7 - "Community 7"
 Cohesion: 0.18
@@ -445,8 +440,8 @@ Cohesion: 0.50
 Nodes (4): code:javascript (import express from 'express';), code:bash (cd d:\Cursor_new\server), code:bash (cd d:\Cursor_new\server), Task 8: Refactor Login Endpoint
 
 ### Community 44 - "Community 44"
-Cohesion: 0.16
-Nodes (7): STATUSES, TaskBoard(), Field(), TaskDetailSlideOver(), labels, styles, TableRowSkeleton()
+Cohesion: 0.06
+Nodes (21): CoachCard(), CoachesPage(), CoachForm(), STATUSES, TaskBoard(), CoachDashboard(), greeting(), emptyMessages (+13 more)
 
 ### Community 45 - "Community 45"
 Cohesion: 0.50
@@ -470,7 +465,7 @@ Nodes (18): adminResult, adminTaskResult, adminUnread, app, coachResult, coachUn
 
 ### Community 51 - "Community 51"
 Cohesion: 0.18
-Nodes (16): app, db, longPassword, payload, request, requireCoach(), decoded, expiredToken (+8 more)
+Nodes (15): app, db, longPassword, payload, request, decoded, expiredToken, { generateToken, verifyToken, authenticateToken, requireAdmin, requireCoach } (+7 more)
 
 ### Community 58 - "Community 58"
 Cohesion: 0.08
@@ -494,7 +489,7 @@ Nodes (12): Claude Core Capabilities, code:bash (# Step 1: Initialize Claude Cod
 
 ### Community 63 - "Community 63"
 Cohesion: 0.08
-Nodes (24): authenticateToken(), jwt, verifyToken(), app, { authenticateToken, requireAdmin }, coaches, db, express (+16 more)
+Nodes (25): authenticateToken(), jwt, requireCoach(), verifyToken(), app, { authenticateToken, requireAdmin }, coaches, db (+17 more)
 
 ### Community 64 - "Community 64"
 Cohesion: 0.29
@@ -533,8 +528,8 @@ Cohesion: 0.10
 Nodes (19): code:cmd (scripts\cleanup.cmd), code:bash (./scripts/cleanup.sh), code:bash (cd d:\Cursor_new\server), code:bash (cd d:\Cursor_new\client), code:cmd (scripts\cleanup.cmd), code:cmd (scripts\cleanup.cmd), code:bash (ps aux | grep node | grep -v grep | wc -l), code:bash (killall -9 node && sleep 2 && cd server && node index.js) (+11 more)
 
 ### Community 75 - "Community 75"
-Cohesion: 0.26
-Nodes (13): 400 Bad Request, 401 Unauthorized, 403 Forbidden, 409 Conflict, 500 Internal Server Error, code:json ({), code:json ({), code:json ({) (+5 more)
+Cohesion: 0.29
+Nodes (12): 400 Bad Request, 401 Unauthorized, 403 Forbidden, 409 Conflict, 500 Internal Server Error, code:json ({), code:json ({), code:json ({) (+4 more)
 
 ### Community 76 - "Community 76"
 Cohesion: 0.13
@@ -605,8 +600,8 @@ Cohesion: 0.08
 Nodes (25): code:powershell (cd d:\Cursor_new), code:block10 (CLIENT_ORIGIN = https://coachtracker-theta.vercel.app), code:powershell (npm install -g @railway/cli), code:block3 (✅ added X packages), code:powershell (npx railway login), code:powershell (npx railway link), code:powershell (cd server), code:powershell (npx railway service add) (+17 more)
 
 ### Community 94 - "Community 94"
-Cohesion: 0.53
-Nodes (6): code:json ([), code:json ({), GET /api/notifications, Notifications, PUT /api/notifications/:id/read, PUT /api/notifications/read-all
+Cohesion: 0.48
+Nodes (7): code:json ([), code:json ({), code:json ({), GET /api/notifications, Notifications, PUT /api/notifications/:id/read, PUT /api/notifications/read-all
 
 ### Community 95 - "Community 95"
 Cohesion: 0.29
@@ -1029,8 +1024,8 @@ Cohesion: 0.50
 Nodes (4): Implementation ✅, Issues Fixed ✅, Phase 7+ — Notifications & Coaching Insights Fix ✅, Verification ✅
 
 ### Community 215 - "Community 215"
-Cohesion: 0.19
-Nodes (5): db, GoogleSheetsClient, SupportAgent, db, SupportAgent
+Cohesion: 0.13
+Nodes (9): db, GoogleSheetsClient, GroqService, db, GroqService, SupportAgent, SupportAgent, db (+1 more)
 
 ### Community 216 - "Community 216"
 Cohesion: 0.15
@@ -1039,10 +1034,6 @@ Nodes (12): Part 1: Foundation (Database & Google Sheets Client), Part 2: Indivi
 ### Community 217 - "Community 217"
 Cohesion: 0.17
 Nodes (29): admin, coach, createdTasks, createNotification(), db, dueDateFormatted, dueDateValidation, express (+21 more)
-
-### Community 218 - "Community 218"
-Cohesion: 0.25
-Nodes (7): app, { authenticateToken, requireAdmin }, cors, corsOptions, db, express, { scheduleJobs }
 
 ### Community 219 - "Community 219"
 Cohesion: 0.17
@@ -1149,8 +1140,8 @@ Cohesion: 0.10
 Nodes (19): File Structure Overview, Phase 9b Implementation Plan: Groq-Powered Coaching Intelligence, Step 1.1: Database Setup — Add groq_queue Table, Step 1.2: Write Failing Tests for GroqService, Step 1.3: Implement GroqService, Step 2.1: Write Tests for Enhanced Support Agent, Step 2.2: Enhance _decideIntervention Method, Step 3.1: Write Tests for Enhanced Coaching Insights (+11 more)
 
 ### Community 245 - "Community 245"
-Cohesion: 0.14
-Nodes (5): CoachDashboard(), greeting(), emptyMessages, TABS, colorMap
+Cohesion: 0.25
+Nodes (7): app, { authenticateToken, requireAdmin }, cors, corsOptions, db, express, { scheduleJobs }
 
 ### Community 246 - "Community 246"
 Cohesion: 0.33
@@ -1180,25 +1171,9 @@ Nodes (4): Pattern 1: Happy Path Test, Pattern 2: Error Resilience Test, Pattern
 Cohesion: 0.67
 Nodes (3): By Agent Concern, By Concern (9 test suites), Test Organization
 
-### Community 253 - "Community 253"
-Cohesion: 0.15
-Nodes (7): pageTitles, NotificationBell(), typeIcons, typeStyles, adminLinks, coachLinks, Sidebar()
-
 ### Community 254 - "Community 254"
 Cohesion: 0.67
 Nodes (3): code:javascript (import request from 'supertest';), code:bash (cd d:\Cursor_new\server), Task 6: Implement Login Endpoint (RED)
-
-### Community 255 - "Community 255"
-Cohesion: 0.14
-Nodes (7): AdminDashboard, AssignTask, CoachDashboard, CoachesPage, LoginPage, MyTasks, TaskBoard
-
-### Community 256 - "Community 256"
-Cohesion: 0.25
-Nodes (5): daysLeft(), priorityBorder, TaskCard(), sizes, variants
-
-### Community 257 - "Community 257"
-Cohesion: 0.29
-Nodes (4): CoachCard(), CoachesPage(), CoachForm(), CardSkeleton()
 
 ### Community 259 - "Community 259"
 Cohesion: 0.40
@@ -1209,21 +1184,21 @@ Cohesion: 0.50
 Nodes (4): Agent Best Practices, Best Practices, Code Conventions (Language-Neutral), Documentation Best Practices
 
 ## Knowledge Gaps
-- **1878 isolated node(s):** `GroqService`, `db`, `{ migratePhase9 }`, `db`, `File Structure Overview` (+1873 more)
+- **1882 isolated node(s):** `GroqService`, `db`, `db`, `db`, `SupportAgent` (+1877 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **13 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `requireAdmin()` connect `Community 120` to `Community 79`, `Community 51`, `Community 245`, `Community 217`, `Community 63`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Why does `Master Capabilities Reference` connect `Community 62` to `Community 64`, `Community 260`, `Community 7`, `Community 13`, `Community 19`, `Community 148`, `Community 22`, `Community 23`, `Community 61`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `requireAdmin()` connect `Community 120` to `Community 79`, `Community 51`, `Community 217`, `Community 218`, `Community 63`?**
+- **Why does `scheduleJobs()` connect `Community 120` to `Community 245`, `Community 207`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `authenticateToken()` connect `Community 63` to `Community 79`, `Community 50`, `Community 51`, `Community 117`, `Community 120`, `Community 218`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **What connects `GroqService`, `db`, `{ migratePhase9 }` to the rest of the system?**
-  _1878 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `GroqService`, `db`, `db` to the rest of the system?**
+  _1882 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.05410628019323672 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**

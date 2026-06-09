@@ -1300,8 +1300,8 @@
     "semantic_hash": ""
   },
   "server/db-migrations/phase9-schema.js": {
-    "mtime": 1780988311.8143396,
-    "ast_hash": "738b36e8b689fb5a60a1c9b336f221c7",
+    "mtime": 1781030419.553058,
+    "ast_hash": "0f3686442571f3b7be980ec2acd8aee0",
     "semantic_hash": ""
   },
   "server/services/google-sheets-client.js": {
@@ -1320,13 +1320,13 @@
     "semantic_hash": ""
   },
   "server/__tests__/agents/support-agent.test.js": {
-    "mtime": 1780989914.2300887,
-    "ast_hash": "79f8b72673ff9ebceaedf5fa3809667c",
+    "mtime": 1781030856.218155,
+    "ast_hash": "32c4b57e455f7286d48c3bb53fc45cd5",
     "semantic_hash": ""
   },
   "server/agents/support-agent.js": {
-    "mtime": 1780989865.676539,
-    "ast_hash": "5cfc279eceffa7c5b10e44744562b880",
+    "mtime": 1781030683.1379018,
+    "ast_hash": "c1c1283d2d66f780f6c7b8e1ded12d5e",
     "semantic_hash": ""
   },
   "server/__tests__/agents/reporting-agent.test.js": {
@@ -1400,8 +1400,8 @@
     "semantic_hash": ""
   },
   "server/__tests__/groq-service.test.js": {
-    "mtime": 1781030090.528201,
-    "ast_hash": "02e057173b2f6115be2d0f38c6079264",
+    "mtime": 1781031131.6733842,
+    "ast_hash": "38a56ceb09d03a31f1c132ff8cf16b84",
     "semantic_hash": ""
   },
   "server/db/migrations/20260609_add_groq_queue_and_agent_decisions.sql": {
@@ -1410,8 +1410,13 @@
     "semantic_hash": ""
   },
   "server/services/groq-service.js": {
-    "mtime": 1781030056.1440263,
-    "ast_hash": "5fe25d4b883e1171e8e7f824754142b6",
+    "mtime": 1781031090.6328833,
+    "ast_hash": "74f1e44c99cbcc934f7fa3ff5683e144",
+    "semantic_hash": ""
+  },
+  "server/__tests__/agents/support-agent-phase9b.test.js": {
+    "mtime": 1781030733.9993024,
+    "ast_hash": "3ad36643f3d83aa96b8a91d30a6f1a2e",
     "semantic_hash": ""
   }
 }

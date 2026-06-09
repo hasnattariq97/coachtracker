@@ -21,13 +21,20 @@ describe('SupportAgent (Phase 9b: AI-Informed Decisions)', () => {
   let agent;
 
   beforeEach(() => {
-    jest.clearAllMocks();
-    agent = new SupportAgent();
+    jest.restoreAllMocks();  // Restore all spies and mocks instead of clearing
+    // Set default mock for db.query
+    db.query = jest.fn().mockResolvedValue({ rows: [] });
+    // Do NOT create agent here - create it in each test after setting up mocks
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();  // Also restore after each test to ensure clean state
   });
 
   describe('_logDecision() helper method', () => {
     test('inserts decision record with all required fields', async () => {
-      db.query.mockResolvedValue({ rows: [{ id: 1 }] });
+      agent = new SupportAgent();
+      agent.db.query = jest.fn().mockResolvedValue({ rows: [{ id: 1 }] });
 
       const decisionData = {
         agent_type: 'support_agent',
@@ -45,7 +52,7 @@ describe('SupportAgent (Phase 9b: AI-Informed Decisions)', () => {
 
       await agent._logDecision(decisionData);
 
-      expect(db.query).toHaveBeenCalledWith(
+      expect(agent.db.query).toHaveBeenCalledWith(
         expect.stringContaining('INSERT INTO agent_decisions'),
         expect.arrayContaining([
           'support_agent',
@@ -58,7 +65,8 @@ describe('SupportAgent (Phase 9b: AI-Informed Decisions)', () => {
     });
 
     test('handles logging errors gracefully', async () => {
-      db.query.mockRejectedValue(new Error('Insert failed'));
+      agent = new SupportAgent();
+      agent.db.query = jest.fn().mockRejectedValue(new Error('Insert failed'));
       const consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation();
 
       const decisionData = {
@@ -82,7 +90,8 @@ describe('SupportAgent (Phase 9b: AI-Informed Decisions)', () => {
     });
 
     test('logs with metadata timestamp', async () => {
-      db.query.mockResolvedValue({ rows: [{ id: 1 }] });
+      agent = new SupportAgent();
+      agent.db.query = jest.fn().mockResolvedValue({ rows: [{ id: 1 }] });
 
       const decisionData = {
         agent_type: 'support_agent',
@@ -100,7 +109,7 @@ describe('SupportAgent (Phase 9b: AI-Informed Decisions)', () => {
 
       await agent._logDecision(decisionData);
 
-      const callArgs = db.query.mock.calls[0];
+      const callArgs = agent.db.query.mock.calls[0];
       const metadata = callArgs[1][callArgs[1].length - 1];
 
       expect(typeof metadata).toBe('string');
@@ -111,21 +120,18 @@ describe('SupportAgent (Phase 9b: AI-Informed Decisions)', () => {
 
   describe('_decideIntervention() with GroqService', () => {
     test('uses Groq recommendation when available', async () => {
-      // Mock Groq service to return a recommendation
-      const mockGroqService = {
+      // Mock GroqService instance
+      GroqService.mockImplementation(() => ({
+        client: {},  // Non-null to pass !this.client check
         analyzeCoachForIntervention: jest.fn().mockResolvedValue({
           recommendation: 'escalate',
           confidence: 0.92,
           reasoning: 'Procrastinator with overdue task',
         }),
-      };
+      }));
 
-      jest.spyOn(GroqService.prototype, 'analyzeCoachForIntervention')
-        .mockResolvedValue({
-          recommendation: 'escalate',
-          confidence: 0.92,
-          reasoning: 'Procrastinator with overdue task',
-        });
+      // Create agent AFTER mocking GroqService
+      agent = new SupportAgent();
 
       const snapshot = {
         task_id: 1,
@@ -138,15 +144,14 @@ describe('SupportAgent (Phase 9b: AI-Informed Decisions)', () => {
       };
 
       // Mock coach history
-      db.query.mockResolvedValueOnce({
-        rows: [{ id: 1, title: 'Task 1', status: 'completed', completed_at: '2026-06-01T10:00:00Z', due_date: '2026-06-01T18:00:00Z', assigned_at: '2026-05-25T10:00:00Z' }]
-      });
-
-      // Mock fatigue check
-      db.query.mockResolvedValueOnce({ rows: [] });
-
-      // Mock decision logging
-      db.query.mockResolvedValueOnce({ rows: [{ id: 1 }] });
+      agent.db.query = jest.fn()
+        .mockResolvedValueOnce({
+          rows: [{ id: 1, title: 'Task 1', status: 'completed', completed_at: '2026-06-01T10:00:00Z', due_date: '2026-06-01T18:00:00Z', assigned_at: '2026-05-25T10:00:00Z' }]
+        })
+        // Mock fatigue check
+        .mockResolvedValueOnce({ rows: [] })
+        // Mock decision logging
+        .mockResolvedValueOnce({ rows: [{ id: 1 }] });
 
       const result = await agent._decideIntervention(snapshot);
 
@@ -155,11 +160,18 @@ describe('SupportAgent (Phase 9b: AI-Informed Decisions)', () => {
     });
 
     test('falls back to Phase 9 rules when Groq unavailable', async () => {
-      jest.spyOn(GroqService.prototype, 'analyzeCoachForIntervention')
-        .mockResolvedValue({
-          fallbackRule: 'email',
+      // Mock GroqService instance
+      GroqService.mockImplementation(() => ({
+        client: {},  // Non-null to pass !this.client check
+        analyzeCoachForIntervention: jest.fn().mockResolvedValue({
+          recommendation: 'email',
           confidence: 0,
-        });
+          reasoning: 'Groq unavailable, using Phase 9 rules',
+        }),
+      }));
+
+      // Create agent AFTER mocking GroqService
+      agent = new SupportAgent();
 
       const snapshot = {
         task_id: 1,
@@ -172,15 +184,14 @@ describe('SupportAgent (Phase 9b: AI-Informed Decisions)', () => {
       };
 
       // Mock coach history
-      db.query.mockResolvedValueOnce({
-        rows: [{ id: 1, title: 'Task 1', status: 'completed', completed_at: '2026-06-01T10:00:00Z', due_date: '2026-06-01T18:00:00Z', assigned_at: '2026-05-25T10:00:00Z' }]
-      });
-
-      // Mock fatigue check
-      db.query.mockResolvedValueOnce({ rows: [] });
-
-      // Mock decision logging
-      db.query.mockResolvedValueOnce({ rows: [{ id: 1 }] });
+      agent.db.query = jest.fn()
+        .mockResolvedValueOnce({
+          rows: [{ id: 1, title: 'Task 1', status: 'completed', completed_at: '2026-06-01T10:00:00Z', due_date: '2026-06-01T18:00:00Z', assigned_at: '2026-05-25T10:00:00Z' }]
+        })
+        // Mock fatigue check
+        .mockResolvedValueOnce({ rows: [] })
+        // Mock decision logging
+        .mockResolvedValueOnce({ rows: [{ id: 1 }] });
 
       const result = await agent._decideIntervention(snapshot);
 
@@ -188,12 +199,20 @@ describe('SupportAgent (Phase 9b: AI-Informed Decisions)', () => {
     });
 
     test('applies fatigue rules to override Groq recommendation', async () => {
-      jest.spyOn(GroqService.prototype, 'analyzeCoachForIntervention')
-        .mockResolvedValue({
-          recommendation: 'tag',
-          confidence: 0.85,
-          reasoning: 'Offer proactive support',
-        });
+      // Mock GroqService constructor and instance method
+      const mockAnalyze = jest.fn().mockResolvedValue({
+        recommendation: 'tag',
+        confidence: 0.85,
+        reasoning: 'Offer proactive support',
+      });
+
+      GroqService.mockImplementation(() => ({
+        client: true,
+        analyzeCoachForIntervention: mockAnalyze,
+      }));
+
+      // Create agent AFTER mocking GroqService
+      agent = new SupportAgent();
 
       const snapshot = {
         task_id: 1,
@@ -205,18 +224,15 @@ describe('SupportAgent (Phase 9b: AI-Informed Decisions)', () => {
         missing_sections: '[]',
       };
 
-      // Mock coach history
-      db.query.mockResolvedValueOnce({
-        rows: [{ id: 1, title: 'Task 1', status: 'completed', completed_at: '2026-06-01T10:00:00Z', due_date: '2026-06-01T18:00:00Z', assigned_at: '2026-05-25T10:00:00Z' }]
-      });
-
-      // Mock fatigue check: tag was sent 15 minutes ago (within 30-min window)
-      db.query.mockResolvedValueOnce({
-        rows: [{ minutes_ago: 15 }]
-      });
-
-      // Mock decision logging
-      db.query.mockResolvedValueOnce({ rows: [{ id: 1 }] });
+      // Mock coach history, fatigue check, and decision logging
+      agent.db.query = jest.fn()
+        .mockResolvedValueOnce({
+          rows: [{ id: 1, title: 'Task 1', status: 'completed', completed_at: '2026-06-01T10:00:00Z', due_date: '2026-06-01T18:00:00Z', assigned_at: '2026-05-25T10:00:00Z' }]
+        })
+        .mockResolvedValueOnce({
+          rows: [{ minutes_ago: 15 }]
+        })
+        .mockResolvedValueOnce({ rows: [{ id: 1 }] });
 
       const result = await agent._decideIntervention(snapshot);
 
@@ -226,12 +242,18 @@ describe('SupportAgent (Phase 9b: AI-Informed Decisions)', () => {
     });
 
     test('logs decision with override_reason when fatigue blocks action', async () => {
-      jest.spyOn(GroqService.prototype, 'analyzeCoachForIntervention')
-        .mockResolvedValue({
+      // Mock GroqService instance
+      GroqService.mockImplementation(() => ({
+        client: {},  // Non-null to pass !this.client check
+        analyzeCoachForIntervention: jest.fn().mockResolvedValue({
           recommendation: 'email',
           confidence: 0.88,
           reasoning: 'Supportive reminder',
-        });
+        }),
+      }));
+
+      // Create agent AFTER mocking GroqService
+      agent = new SupportAgent();
 
       const snapshot = {
         task_id: 1,
@@ -243,18 +265,15 @@ describe('SupportAgent (Phase 9b: AI-Informed Decisions)', () => {
         missing_sections: '[]',
       };
 
-      // Mock coach history
-      db.query.mockResolvedValueOnce({
-        rows: [{ id: 1, title: 'Task 1', status: 'completed', completed_at: '2026-06-01T10:00:00Z', due_date: '2026-06-01T18:00:00Z', assigned_at: '2026-05-25T10:00:00Z' }]
-      });
-
-      // Mock fatigue check: email was sent 2 hours ago (within 4-hour window)
-      db.query.mockResolvedValueOnce({
-        rows: [{ minutes_ago: 120 }]
-      });
-
-      // Mock decision logging
-      db.query.mockResolvedValueOnce({ rows: [{ id: 1 }] });
+      // Mock coach history, fatigue check, and decision logging
+      agent.db.query = jest.fn()
+        .mockResolvedValueOnce({
+          rows: [{ id: 1, title: 'Task 1', status: 'completed', completed_at: '2026-06-01T10:00:00Z', due_date: '2026-06-01T18:00:00Z', assigned_at: '2026-05-25T10:00:00Z' }]
+        })
+        .mockResolvedValueOnce({
+          rows: [{ minutes_ago: 120 }]
+        })
+        .mockResolvedValueOnce({ rows: [{ id: 1 }] });
 
       const result = await agent._decideIntervention(snapshot);
 
@@ -262,7 +281,7 @@ describe('SupportAgent (Phase 9b: AI-Informed Decisions)', () => {
       expect(result.action).toBeNull();
 
       // Verify logging was called with override_reason
-      const logCall = db.query.mock.calls.find(call =>
+      const logCall = agent.db.query.mock.calls.find(call =>
         call[0] && call[0].includes('agent_decisions')
       );
 
@@ -275,12 +294,18 @@ describe('SupportAgent (Phase 9b: AI-Informed Decisions)', () => {
     test('logs groq_reasoning in decision record', async () => {
       const groqReasoning = 'Coach is steady performer, gentle nudge appropriate';
 
-      jest.spyOn(GroqService.prototype, 'analyzeCoachForIntervention')
-        .mockResolvedValue({
+      // Mock GroqService instance
+      GroqService.mockImplementation(() => ({
+        client: {},  // Non-null to pass !this.client check
+        analyzeCoachForIntervention: jest.fn().mockResolvedValue({
           recommendation: 'email',
           confidence: 0.82,
           reasoning: groqReasoning,
-        });
+        }),
+      }));
+
+      // Create agent AFTER mocking GroqService
+      agent = new SupportAgent();
 
       const snapshot = {
         task_id: 1,
@@ -293,15 +318,14 @@ describe('SupportAgent (Phase 9b: AI-Informed Decisions)', () => {
       };
 
       // Mock coach history
-      db.query.mockResolvedValueOnce({
-        rows: [{ id: 1, title: 'Task 1', status: 'completed', completed_at: '2026-06-01T10:00:00Z', due_date: '2026-06-01T18:00:00Z', assigned_at: '2026-05-25T10:00:00Z' }]
-      });
-
-      // Mock fatigue check
-      db.query.mockResolvedValueOnce({ rows: [] });
-
-      // Mock decision logging
-      db.query.mockResolvedValueOnce({ rows: [{ id: 1 }] });
+      agent.db.query = jest.fn()
+        .mockResolvedValueOnce({
+          rows: [{ id: 1, title: 'Task 1', status: 'completed', completed_at: '2026-06-01T10:00:00Z', due_date: '2026-06-01T18:00:00Z', assigned_at: '2026-05-25T10:00:00Z' }]
+        })
+        // Mock fatigue check
+        .mockResolvedValueOnce({ rows: [] })
+        // Mock decision logging
+        .mockResolvedValueOnce({ rows: [{ id: 1 }] });
 
       const result = await agent._decideIntervention(snapshot);
 

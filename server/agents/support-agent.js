@@ -123,30 +123,16 @@ class SupportAgent {
         coachHistory = [];
       }
 
-      // Step 2: Get Groq recommendation (or fallback to Phase 9 rules)
+      // Step 2: Get Groq recommendation (includes fallback if Groq unavailable)
       const groqService = new GroqService();
       const groqAdvice = await groqService.analyzeCoachForIntervention(snapshot, coachHistory);
 
-      // Use Groq recommendation if available, otherwise use fallback rule
-      if (groqAdvice.recommendation) {
-        // Groq API returned a direct recommendation
-        action = groqAdvice.recommendation;
-        groqRecommendation = groqAdvice.recommendation;
-        groqConfidence = groqAdvice.confidence || 0;
-        groqReasoning = groqAdvice.reasoning || '';
-        reason = groqReasoning;
-      } else if (groqAdvice.fallbackRule !== undefined && groqAdvice.fallbackRule !== null) {
-        // Groq unavailable - use Phase 9 fallback rule
-        action = groqAdvice.fallbackRule;
-        groqRecommendation = groqAdvice.fallbackRule;
-        groqConfidence = 0;
-        groqReasoning = 'Using Phase 9 fallback rules (Groq unavailable)';
-        reason = groqReasoning;
-      } else {
-        // No recommendation from Groq or fallback
-        action = null;
-        reason = 'No intervention needed (Groq analysis inconclusive)';
-      }
+      // Use Groq recommendation (which may be AI-generated or Phase 9 fallback)
+      action = groqAdvice.recommendation;
+      groqRecommendation = groqAdvice.recommendation;
+      groqConfidence = groqAdvice.confidence || 0;
+      groqReasoning = groqAdvice.reasoning || '';
+      reason = groqReasoning;
 
       // Step 3: Apply fatigue rules (can override Groq recommendation)
       if (action === 'tag') {

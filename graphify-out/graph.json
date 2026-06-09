@@ -34,106 +34,6 @@
       "norm_label": "db"
     },
     {
-      "label": "db.js",
-      "file_type": "code",
-      "source_file": "server/db.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "server_db",
-      "community": 194,
-      "norm_label": "db.js"
-    },
-    {
-      "label": "{ Pool }",
-      "file_type": "code",
-      "source_file": "server/db.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "server_db_pool",
-      "community": 194,
-      "norm_label": "{ pool }"
-    },
-    {
-      "label": "dns",
-      "file_type": "code",
-      "source_file": "server/db.js",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "server_db_dns",
-      "community": 194,
-      "norm_label": "dns"
-    },
-    {
-      "label": "{ migratePhase9 }",
-      "file_type": "code",
-      "source_file": "server/db.js",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "server_db_migratephase9",
-      "community": 194,
-      "norm_label": "{ migratephase9 }"
-    },
-    {
-      "label": "query()",
-      "file_type": "code",
-      "source_file": "server/db.js",
-      "source_location": "L23",
-      "_origin": "ast",
-      "id": "server_db_query",
-      "community": 194,
-      "norm_label": "query()"
-    },
-    {
-      "label": "initializeDatabase()",
-      "file_type": "code",
-      "source_file": "server/db.js",
-      "source_location": "L40",
-      "_origin": "ast",
-      "id": "server_db_initializedatabase",
-      "community": 194,
-      "norm_label": "initializedatabase()"
-    },
-    {
-      "label": "queryOne()",
-      "file_type": "code",
-      "source_file": "server/db.js",
-      "source_location": "L220",
-      "_origin": "ast",
-      "id": "server_db_queryone",
-      "community": 194,
-      "norm_label": "queryone()"
-    },
-    {
-      "label": "queryAll()",
-      "file_type": "code",
-      "source_file": "server/db.js",
-      "source_location": "L225",
-      "_origin": "ast",
-      "id": "server_db_queryall",
-      "community": 194,
-      "norm_label": "queryall()"
-    },
-    {
-      "label": "run()",
-      "file_type": "code",
-      "source_file": "server/db.js",
-      "source_location": "L230",
-      "_origin": "ast",
-      "id": "server_db_run",
-      "community": 194,
-      "norm_label": "run()"
-    },
-    {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "server/db.js",
-      "source_location": "L236",
-      "_origin": "ast",
-      "id": "server_db_db",
-      "community": 194,
-      "norm_label": "db"
-    },
-    {
       "label": "groq-service.js",
       "file_type": "code",
       "source_file": "server/services/groq-service.js",
@@ -187,7 +87,7 @@
       "label": ".analyzeCoachForIntervention()",
       "file_type": "code",
       "source_file": "server/services/groq-service.js",
-      "source_location": "L79",
+      "source_location": "L80",
       "_origin": "ast",
       "id": "services_groq_service_groqservice_analyzecoachforintervention",
       "community": 258,
@@ -197,7 +97,7 @@
       "label": ".enhanceCoachingInsight()",
       "file_type": "code",
       "source_file": "server/services/groq-service.js",
-      "source_location": "L175",
+      "source_location": "L182",
       "_origin": "ast",
       "id": "services_groq_service_groqservice_enhancecoachinginsight",
       "community": 258,
@@ -207,7 +107,7 @@
       "label": ".processQueue()",
       "file_type": "code",
       "source_file": "server/services/groq-service.js",
-      "source_location": "L256",
+      "source_location": "L266",
       "_origin": "ast",
       "id": "services_groq_service_groqservice_processqueue",
       "community": 258,
@@ -217,11 +117,361 @@
       "label": "._applyPhase9FallbackRule()",
       "file_type": "code",
       "source_file": "server/services/groq-service.js",
-      "source_location": "L337",
+      "source_location": "L347",
       "_origin": "ast",
       "id": "services_groq_service_groqservice_applyphase9fallbackrule",
       "community": 258,
       "norm_label": "._applyphase9fallbackrule()"
+    },
+    {
+      "label": "support-agent-phase9b.test.js",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/support-agent-phase9b.test.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "support-agent-phase9b.test.js",
+      "id": "agents_support_agent_phase9b_test"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/support-agent-phase9b.test.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "db",
+      "id": "agents_support_agent_phase9b_test_db"
+    },
+    {
+      "label": "SupportAgent",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/support-agent-phase9b.test.js",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "supportagent",
+      "id": "agents_support_agent_phase9b_test_supportagent"
+    },
+    {
+      "label": "GroqService",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/support-agent-phase9b.test.js",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "groqservice",
+      "id": "agents_support_agent_phase9b_test_groqservice"
+    },
+    {
+      "label": "support-agent.test.js",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/support-agent.test.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "support-agent.test.js",
+      "id": "agents_support_agent_test"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/support-agent.test.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "db",
+      "id": "agents_support_agent_test_db"
+    },
+    {
+      "label": "SupportAgent",
+      "file_type": "code",
+      "source_file": "server/__tests__/agents/support-agent.test.js",
+      "source_location": "L48",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "supportagent",
+      "id": "agents_support_agent_test_supportagent"
+    },
+    {
+      "label": "support-agent.js",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "support-agent.js",
+      "id": "agents_support_agent"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "db",
+      "id": "agents_support_agent_db"
+    },
+    {
+      "label": "GoogleSheetsClient",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L22",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "googlesheetsclient",
+      "id": "agents_support_agent_googlesheetsclient"
+    },
+    {
+      "label": "GroqService",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L23",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "groqservice",
+      "id": "agents_support_agent_groqservice"
+    },
+    {
+      "label": "SupportAgent",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L25",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "supportagent",
+      "id": "agents_support_agent_supportagent"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L26",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": ".constructor()",
+      "id": "agents_support_agent_supportagent_constructor"
+    },
+    {
+      "label": ".run()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L39",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": ".run()",
+      "id": "agents_support_agent_supportagent_run"
+    },
+    {
+      "label": "._decideIntervention()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L91",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "._decideintervention()",
+      "id": "agents_support_agent_supportagent_decideintervention"
+    },
+    {
+      "label": "._decideInterventionPhase9Fallback()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L204",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "._decideinterventionphase9fallback()",
+      "id": "agents_support_agent_supportagent_decideinterventionphase9fallback"
+    },
+    {
+      "label": "._executeIntervention()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L278",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "._executeintervention()",
+      "id": "agents_support_agent_supportagent_executeintervention"
+    },
+    {
+      "label": "._logDecision()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L330",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "._logdecision()",
+      "id": "agents_support_agent_supportagent_logdecision"
+    },
+    {
+      "label": "._tagInSheet()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L363",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "._taginsheet()",
+      "id": "agents_support_agent_supportagent_taginsheet"
+    },
+    {
+      "label": "._queueEmail()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L399",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "._queueemail()",
+      "id": "agents_support_agent_supportagent_queueemail"
+    },
+    {
+      "label": "._queueEmailToAdmin()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L416",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "._queueemailtoadmin()",
+      "id": "agents_support_agent_supportagent_queueemailtoadmin"
+    },
+    {
+      "label": "._checkRecentAction()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L447",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "._checkrecentaction()",
+      "id": "agents_support_agent_supportagent_checkrecentaction"
+    },
+    {
+      "label": "._logAgentError()",
+      "file_type": "code",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L496",
+      "_origin": "ast",
+      "community": 215,
+      "norm_label": "._logagenterror()",
+      "id": "agents_support_agent_supportagent_logagenterror"
+    },
+    {
+      "label": "phase9-schema.js",
+      "file_type": "code",
+      "source_file": "server/db-migrations/phase9-schema.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 218,
+      "norm_label": "phase9-schema.js",
+      "id": "db_migrations_phase9_schema"
+    },
+    {
+      "label": "migratePhase9()",
+      "file_type": "code",
+      "source_file": "server/db-migrations/phase9-schema.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 218,
+      "norm_label": "migratephase9()",
+      "id": "db_migrations_phase9_schema_migratephase9"
+    },
+    {
+      "label": "db.js",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 194,
+      "norm_label": "db.js",
+      "id": "server_db"
+    },
+    {
+      "label": "{ Pool }",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 194,
+      "norm_label": "{ pool }",
+      "id": "server_db_pool"
+    },
+    {
+      "label": "dns",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 194,
+      "norm_label": "dns",
+      "id": "server_db_dns"
+    },
+    {
+      "label": "{ migratePhase9 }",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 194,
+      "norm_label": "{ migratephase9 }",
+      "id": "server_db_migratephase9"
+    },
+    {
+      "label": "query()",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L23",
+      "_origin": "ast",
+      "community": 194,
+      "norm_label": "query()",
+      "id": "server_db_query"
+    },
+    {
+      "label": "initializeDatabase()",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L40",
+      "_origin": "ast",
+      "community": 194,
+      "norm_label": "initializedatabase()",
+      "id": "server_db_initializedatabase"
+    },
+    {
+      "label": "queryOne()",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L220",
+      "_origin": "ast",
+      "community": 194,
+      "norm_label": "queryone()",
+      "id": "server_db_queryone"
+    },
+    {
+      "label": "queryAll()",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L225",
+      "_origin": "ast",
+      "community": 194,
+      "norm_label": "queryall()",
+      "id": "server_db_queryall"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L230",
+      "_origin": "ast",
+      "community": 194,
+      "norm_label": "run()",
+      "id": "server_db_run"
+    },
+    {
+      "label": "db",
+      "file_type": "code",
+      "source_file": "server/db.js",
+      "source_location": "L236",
+      "_origin": "ast",
+      "community": 194,
+      "norm_label": "db",
+      "id": "server_db_db"
     },
     {
       "label": "2026-06-09-phase9b-groq-coaching-intelligence.md",
@@ -4454,166 +4704,6 @@
       "id": "agents_reporting_agent_reportingagent_logagenterror"
     },
     {
-      "label": "support-agent.test.js",
-      "file_type": "code",
-      "source_file": "server/__tests__/agents/support-agent.test.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 215,
-      "norm_label": "support-agent.test.js",
-      "id": "agents_support_agent_test"
-    },
-    {
-      "label": "SupportAgent",
-      "file_type": "code",
-      "source_file": "server/__tests__/agents/support-agent.test.js",
-      "source_location": "L5",
-      "_origin": "ast",
-      "community": 215,
-      "norm_label": "supportagent",
-      "id": "agents_support_agent_test_supportagent"
-    },
-    {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "server/__tests__/agents/support-agent.test.js",
-      "source_location": "L6",
-      "_origin": "ast",
-      "community": 215,
-      "norm_label": "db",
-      "id": "agents_support_agent_test_db"
-    },
-    {
-      "label": "support-agent.js",
-      "file_type": "code",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 215,
-      "norm_label": "support-agent.js",
-      "id": "agents_support_agent"
-    },
-    {
-      "label": "db",
-      "file_type": "code",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L21",
-      "_origin": "ast",
-      "community": 215,
-      "norm_label": "db",
-      "id": "agents_support_agent_db"
-    },
-    {
-      "label": "GoogleSheetsClient",
-      "file_type": "code",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L22",
-      "_origin": "ast",
-      "community": 215,
-      "norm_label": "googlesheetsclient",
-      "id": "agents_support_agent_googlesheetsclient"
-    },
-    {
-      "label": "SupportAgent",
-      "file_type": "code",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L24",
-      "_origin": "ast",
-      "community": 215,
-      "norm_label": "supportagent",
-      "id": "agents_support_agent_supportagent"
-    },
-    {
-      "label": ".constructor()",
-      "file_type": "code",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L25",
-      "_origin": "ast",
-      "community": 215,
-      "norm_label": ".constructor()",
-      "id": "agents_support_agent_supportagent_constructor"
-    },
-    {
-      "label": ".run()",
-      "file_type": "code",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L38",
-      "_origin": "ast",
-      "community": 215,
-      "norm_label": ".run()",
-      "id": "agents_support_agent_supportagent_run"
-    },
-    {
-      "label": "._decideIntervention()",
-      "file_type": "code",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L88",
-      "_origin": "ast",
-      "community": 215,
-      "norm_label": "._decideintervention()",
-      "id": "agents_support_agent_supportagent_decideintervention"
-    },
-    {
-      "label": "._executeIntervention()",
-      "file_type": "code",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L174",
-      "_origin": "ast",
-      "community": 215,
-      "norm_label": "._executeintervention()",
-      "id": "agents_support_agent_supportagent_executeintervention"
-    },
-    {
-      "label": "._tagInSheet()",
-      "file_type": "code",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L227",
-      "_origin": "ast",
-      "community": 215,
-      "norm_label": "._taginsheet()",
-      "id": "agents_support_agent_supportagent_taginsheet"
-    },
-    {
-      "label": "._queueEmail()",
-      "file_type": "code",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L263",
-      "_origin": "ast",
-      "community": 215,
-      "norm_label": "._queueemail()",
-      "id": "agents_support_agent_supportagent_queueemail"
-    },
-    {
-      "label": "._queueEmailToAdmin()",
-      "file_type": "code",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L280",
-      "_origin": "ast",
-      "community": 215,
-      "norm_label": "._queueemailtoadmin()",
-      "id": "agents_support_agent_supportagent_queueemailtoadmin"
-    },
-    {
-      "label": "._checkRecentAction()",
-      "file_type": "code",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L311",
-      "_origin": "ast",
-      "community": 215,
-      "norm_label": "._checkrecentaction()",
-      "id": "agents_support_agent_supportagent_checkrecentaction"
-    },
-    {
-      "label": "._logAgentError()",
-      "file_type": "code",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L360",
-      "_origin": "ast",
-      "community": 215,
-      "norm_label": "._logagenterror()",
-      "id": "agents_support_agent_supportagent_logagenterror"
-    },
-    {
       "label": "monitoring-agent.test.js",
       "file_type": "code",
       "source_file": "server/__tests__/agents/monitoring-agent.test.js",
@@ -7805,7 +7895,7 @@
       "file_type": "document",
       "source_file": "docs/API.md",
       "source_location": "L402",
-      "community": 75,
+      "community": 94,
       "norm_label": "code:json ({)",
       "id": "docs_api_codeblock_24"
     },
@@ -16796,7 +16886,7 @@
       "file_type": "code",
       "source_file": "TaskCard.jsx",
       "source_location": "L1",
-      "community": 256,
+      "community": 44,
       "norm_label": "taskcard.jsx",
       "id": "taskcard_jsx"
     },
@@ -16805,7 +16895,7 @@
       "file_type": "code",
       "source_file": "TaskCard.jsx",
       "source_location": "L9",
-      "community": 256,
+      "community": 44,
       "norm_label": "priorityborder",
       "id": "components_taskcard_priorityborder"
     },
@@ -16814,7 +16904,7 @@
       "file_type": "code",
       "source_file": "TaskCard.jsx",
       "source_location": "L11",
-      "community": 256,
+      "community": 44,
       "norm_label": "daysleft()",
       "id": "components_taskcard_daysleft"
     },
@@ -16823,7 +16913,7 @@
       "file_type": "code",
       "source_file": "TaskCard.jsx",
       "source_location": "L19",
-      "community": 256,
+      "community": 44,
       "norm_label": "taskcard()",
       "id": "components_taskcard_taskcard"
     },
@@ -16859,7 +16949,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/admin/AssignTask.jsx",
       "source_location": "L1",
-      "community": 245,
+      "community": 44,
       "norm_label": "assigntask.jsx",
       "id": "client_src_pages_admin_assigntask_jsx"
     },
@@ -16868,7 +16958,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/admin/AssignTask.jsx",
       "source_location": "L9",
-      "community": 245,
+      "community": 44,
       "norm_label": "assigntask()",
       "id": "admin_assigntask_assigntask"
     },
@@ -16877,7 +16967,7 @@
       "file_type": "code",
       "source_file": "CoachesPage.jsx",
       "source_location": "L1",
-      "community": 257,
+      "community": 44,
       "norm_label": "coachespage.jsx",
       "id": "coachespage_jsx"
     },
@@ -16886,7 +16976,7 @@
       "file_type": "code",
       "source_file": "CoachesPage.jsx",
       "source_location": "L11",
-      "community": 257,
+      "community": 44,
       "norm_label": "coachform()",
       "id": "admin_coachespage_coachform"
     },
@@ -16895,7 +16985,7 @@
       "file_type": "code",
       "source_file": "CoachesPage.jsx",
       "source_location": "L44",
-      "community": 257,
+      "community": 44,
       "norm_label": "coachcard()",
       "id": "admin_coachespage_coachcard"
     },
@@ -16904,7 +16994,7 @@
       "file_type": "code",
       "source_file": "CoachesPage.jsx",
       "source_location": "L115",
-      "community": 257,
+      "community": 44,
       "norm_label": "coachespage()",
       "id": "admin_coachespage_coachespage"
     },
@@ -22907,7 +22997,7 @@
       "file_type": "code",
       "source_file": "NotificationBell.jsx",
       "source_location": "L1",
-      "community": 253,
+      "community": 6,
       "norm_label": "notificationbell.jsx",
       "id": "notificationbell_jsx"
     },
@@ -22916,7 +23006,7 @@
       "file_type": "code",
       "source_file": "NotificationBell.jsx",
       "source_location": "L7",
-      "community": 253,
+      "community": 6,
       "norm_label": "typestyles",
       "id": "components_notificationbell_typestyles"
     },
@@ -22925,7 +23015,7 @@
       "file_type": "code",
       "source_file": "NotificationBell.jsx",
       "source_location": "L15",
-      "community": 253,
+      "community": 6,
       "norm_label": "typeicons",
       "id": "components_notificationbell_typeicons"
     },
@@ -22934,7 +23024,7 @@
       "file_type": "code",
       "source_file": "NotificationBell.jsx",
       "source_location": "L23",
-      "community": 253,
+      "community": 6,
       "norm_label": "notificationbell()",
       "id": "components_notificationbell_notificationbell"
     },
@@ -24203,7 +24293,7 @@
       "file_type": "code",
       "source_file": "server/auth.js",
       "source_location": "L64",
-      "community": 51,
+      "community": 63,
       "norm_label": "requirecoach()",
       "id": "server_auth_requirecoach"
     },
@@ -24518,7 +24608,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L1",
-      "community": 218,
+      "community": 245,
       "norm_label": "test-with-db.js",
       "id": "server_test_with_db_js"
     },
@@ -24527,7 +24617,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L2",
-      "community": 218,
+      "community": 245,
       "norm_label": "express",
       "id": "server_test_with_db_express"
     },
@@ -24536,7 +24626,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L3",
-      "community": 218,
+      "community": 245,
       "norm_label": "cors",
       "id": "server_test_with_db_cors"
     },
@@ -24545,7 +24635,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L4",
-      "community": 218,
+      "community": 245,
       "norm_label": "db",
       "id": "server_test_with_db_db"
     },
@@ -24554,7 +24644,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L5",
-      "community": 218,
+      "community": 245,
       "norm_label": "{ authenticatetoken, requireadmin }",
       "id": "server_test_with_db_authenticatetoken_requireadmin"
     },
@@ -24563,7 +24653,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L6",
-      "community": 218,
+      "community": 245,
       "norm_label": "{ schedulejobs }",
       "id": "server_test_with_db_schedulejobs"
     },
@@ -24572,7 +24662,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L8",
-      "community": 218,
+      "community": 245,
       "norm_label": "app",
       "id": "server_test_with_db_app"
     },
@@ -24581,7 +24671,7 @@
       "file_type": "code",
       "source_file": "server/test-with-db.js",
       "source_location": "L13",
-      "community": 218,
+      "community": 245,
       "norm_label": "corsoptions",
       "id": "server_test_with_db_corsoptions"
     },
@@ -26138,7 +26228,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L1",
-      "community": 255,
+      "community": 6,
       "norm_label": "app.jsx",
       "id": "client_src_app_jsx"
     },
@@ -26147,7 +26237,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L8",
-      "community": 255,
+      "community": 6,
       "norm_label": "loginpage",
       "id": "src_app_loginpage"
     },
@@ -26156,7 +26246,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L9",
-      "community": 255,
+      "community": 6,
       "norm_label": "admindashboard",
       "id": "src_app_admindashboard"
     },
@@ -26165,7 +26255,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L10",
-      "community": 255,
+      "community": 6,
       "norm_label": "coachespage",
       "id": "src_app_coachespage"
     },
@@ -26174,7 +26264,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L11",
-      "community": 255,
+      "community": 6,
       "norm_label": "taskboard",
       "id": "src_app_taskboard"
     },
@@ -26183,7 +26273,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L12",
-      "community": 255,
+      "community": 6,
       "norm_label": "assigntask",
       "id": "src_app_assigntask"
     },
@@ -26192,7 +26282,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L13",
-      "community": 255,
+      "community": 6,
       "norm_label": "coachdashboard",
       "id": "src_app_coachdashboard"
     },
@@ -26201,7 +26291,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L14",
-      "community": 255,
+      "community": 6,
       "norm_label": "mytasks",
       "id": "src_app_mytasks"
     },
@@ -26210,7 +26300,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L16",
-      "community": 255,
+      "community": 6,
       "norm_label": "pageloader()",
       "id": "src_app_pageloader"
     },
@@ -26219,7 +26309,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L25",
-      "community": 255,
+      "community": 6,
       "norm_label": "adminlayout()",
       "id": "src_app_adminlayout"
     },
@@ -26228,7 +26318,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L29",
-      "community": 255,
+      "community": 6,
       "norm_label": "coachlayout()",
       "id": "src_app_coachlayout"
     },
@@ -26237,7 +26327,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L33",
-      "community": 255,
+      "community": 6,
       "norm_label": "roleredirect()",
       "id": "src_app_roleredirect"
     },
@@ -26246,7 +26336,7 @@
       "file_type": "code",
       "source_file": "client/src/App.jsx",
       "source_location": "L44",
-      "community": 255,
+      "community": 6,
       "norm_label": "app()",
       "id": "src_app_app"
     },
@@ -26255,7 +26345,7 @@
       "file_type": "code",
       "source_file": "client/src/components/DelayReasonModal.jsx",
       "source_location": "L1",
-      "community": 256,
+      "community": 44,
       "norm_label": "delayreasonmodal.jsx",
       "id": "client_src_components_delayreasonmodal_jsx"
     },
@@ -26264,7 +26354,7 @@
       "file_type": "code",
       "source_file": "client/src/components/DelayReasonModal.jsx",
       "source_location": "L7",
-      "community": 256,
+      "community": 44,
       "norm_label": "delayreasonmodal()",
       "id": "components_delayreasonmodal_delayreasonmodal"
     },
@@ -26291,7 +26381,7 @@
       "file_type": "code",
       "source_file": "client/src/components/Header.jsx",
       "source_location": "L1",
-      "community": 253,
+      "community": 6,
       "norm_label": "header.jsx",
       "id": "client_src_components_header_jsx"
     },
@@ -26300,7 +26390,7 @@
       "file_type": "code",
       "source_file": "client/src/components/Header.jsx",
       "source_location": "L5",
-      "community": 253,
+      "community": 6,
       "norm_label": "pagetitles",
       "id": "components_header_pagetitles"
     },
@@ -26309,7 +26399,7 @@
       "file_type": "code",
       "source_file": "client/src/components/Header.jsx",
       "source_location": "L14",
-      "community": 253,
+      "community": 6,
       "norm_label": "header()",
       "id": "components_header_header"
     },
@@ -26318,7 +26408,7 @@
       "file_type": "code",
       "source_file": "client/src/components/Layout.jsx",
       "source_location": "L1",
-      "community": 253,
+      "community": 6,
       "norm_label": "layout.jsx",
       "id": "client_src_components_layout_jsx"
     },
@@ -26327,7 +26417,7 @@
       "file_type": "code",
       "source_file": "client/src/components/Layout.jsx",
       "source_location": "L6",
-      "community": 253,
+      "community": 6,
       "norm_label": "layout()",
       "id": "components_layout_layout"
     },
@@ -26336,7 +26426,7 @@
       "file_type": "code",
       "source_file": "client/src/components/NotificationBell.jsx",
       "source_location": "L1",
-      "community": 253,
+      "community": 6,
       "norm_label": "notificationbell.jsx",
       "id": "client_src_components_notificationbell_jsx"
     },
@@ -26390,7 +26480,7 @@
       "file_type": "code",
       "source_file": "client/src/components/Sidebar.jsx",
       "source_location": "L1",
-      "community": 253,
+      "community": 6,
       "norm_label": "sidebar.jsx",
       "id": "client_src_components_sidebar_jsx"
     },
@@ -26399,7 +26489,7 @@
       "file_type": "code",
       "source_file": "client/src/components/Sidebar.jsx",
       "source_location": "L9",
-      "community": 253,
+      "community": 6,
       "norm_label": "adminlinks",
       "id": "components_sidebar_adminlinks"
     },
@@ -26408,7 +26498,7 @@
       "file_type": "code",
       "source_file": "client/src/components/Sidebar.jsx",
       "source_location": "L16",
-      "community": 253,
+      "community": 6,
       "norm_label": "coachlinks",
       "id": "components_sidebar_coachlinks"
     },
@@ -26417,7 +26507,7 @@
       "file_type": "code",
       "source_file": "client/src/components/Sidebar.jsx",
       "source_location": "L21",
-      "community": 253,
+      "community": 6,
       "norm_label": "navitem()",
       "id": "components_sidebar_navitem"
     },
@@ -26426,7 +26516,7 @@
       "file_type": "code",
       "source_file": "client/src/components/Sidebar.jsx",
       "source_location": "L39",
-      "community": 253,
+      "community": 6,
       "norm_label": "sidebar()",
       "id": "components_sidebar_sidebar"
     },
@@ -26435,7 +26525,7 @@
       "file_type": "code",
       "source_file": "client/src/components/TaskCard.jsx",
       "source_location": "L1",
-      "community": 256,
+      "community": 44,
       "norm_label": "taskcard.jsx",
       "id": "client_src_components_taskcard_jsx"
     },
@@ -26480,7 +26570,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Button.jsx",
       "source_location": "L1",
-      "community": 256,
+      "community": 44,
       "norm_label": "button.jsx",
       "id": "client_src_components_ui_button_jsx"
     },
@@ -26489,7 +26579,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Button.jsx",
       "source_location": "L4",
-      "community": 256,
+      "community": 44,
       "norm_label": "variants",
       "id": "ui_button_variants"
     },
@@ -26498,7 +26588,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Button.jsx",
       "source_location": "L12",
-      "community": 256,
+      "community": 44,
       "norm_label": "sizes",
       "id": "ui_button_sizes"
     },
@@ -26507,7 +26597,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Button.jsx",
       "source_location": "L18",
-      "community": 256,
+      "community": 44,
       "norm_label": "button()",
       "id": "ui_button_button"
     },
@@ -26516,7 +26606,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Card.jsx",
       "source_location": "L1",
-      "community": 245,
+      "community": 44,
       "norm_label": "card.jsx",
       "id": "client_src_components_ui_card_jsx"
     },
@@ -26525,7 +26615,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Card.jsx",
       "source_location": "L3",
-      "community": 245,
+      "community": 44,
       "norm_label": "card()",
       "id": "ui_card_card"
     },
@@ -26534,7 +26624,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/EmptyState.jsx",
       "source_location": "L1",
-      "community": 245,
+      "community": 44,
       "norm_label": "emptystate.jsx",
       "id": "client_src_components_ui_emptystate_jsx"
     },
@@ -26543,7 +26633,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/EmptyState.jsx",
       "source_location": "L3",
-      "community": 245,
+      "community": 44,
       "norm_label": "emptystate()",
       "id": "ui_emptystate_emptystate"
     },
@@ -26552,7 +26642,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/KPICard.jsx",
       "source_location": "L1",
-      "community": 245,
+      "community": 44,
       "norm_label": "kpicard.jsx",
       "id": "client_src_components_ui_kpicard_jsx"
     },
@@ -26561,7 +26651,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/KPICard.jsx",
       "source_location": "L3",
-      "community": 245,
+      "community": 44,
       "norm_label": "colormap",
       "id": "ui_kpicard_colormap"
     },
@@ -26570,7 +26660,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/KPICard.jsx",
       "source_location": "L11",
-      "community": 245,
+      "community": 44,
       "norm_label": "kpicard()",
       "id": "ui_kpicard_kpicard"
     },
@@ -26579,7 +26669,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Modal.jsx",
       "source_location": "L1",
-      "community": 257,
+      "community": 44,
       "norm_label": "modal.jsx",
       "id": "client_src_components_ui_modal_jsx"
     },
@@ -26588,7 +26678,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Modal.jsx",
       "source_location": "L4",
-      "community": 257,
+      "community": 44,
       "norm_label": "modal()",
       "id": "ui_modal_modal"
     },
@@ -26615,7 +26705,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Skeleton.jsx",
       "source_location": "L1",
-      "community": 257,
+      "community": 44,
       "norm_label": "skeleton.jsx",
       "id": "client_src_components_ui_skeleton_jsx"
     },
@@ -26624,7 +26714,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Skeleton.jsx",
       "source_location": "L3",
-      "community": 257,
+      "community": 44,
       "norm_label": "skeleton()",
       "id": "ui_skeleton_skeleton"
     },
@@ -26633,7 +26723,7 @@
       "file_type": "code",
       "source_file": "client/src/components/ui/Skeleton.jsx",
       "source_location": "L16",
-      "community": 257,
+      "community": 44,
       "norm_label": "cardskeleton()",
       "id": "ui_skeleton_cardskeleton"
     },
@@ -26687,7 +26777,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/admin/CoachesPage.jsx",
       "source_location": "L1",
-      "community": 257,
+      "community": 44,
       "norm_label": "coachespage.jsx",
       "id": "client_src_pages_admin_coachespage_jsx"
     },
@@ -26696,7 +26786,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/coach/Dashboard.jsx",
       "source_location": "L1",
-      "community": 245,
+      "community": 44,
       "norm_label": "dashboard.jsx",
       "id": "client_src_pages_coach_dashboard_jsx"
     },
@@ -26705,7 +26795,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/coach/Dashboard.jsx",
       "source_location": "L13",
-      "community": 245,
+      "community": 44,
       "norm_label": "greeting()",
       "id": "coach_dashboard_greeting"
     },
@@ -26714,7 +26804,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/coach/Dashboard.jsx",
       "source_location": "L19",
-      "community": 245,
+      "community": 44,
       "norm_label": "coachdashboard()",
       "id": "coach_dashboard_coachdashboard"
     },
@@ -26723,7 +26813,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/coach/MyTasks.jsx",
       "source_location": "L1",
-      "community": 245,
+      "community": 44,
       "norm_label": "mytasks.jsx",
       "id": "client_src_pages_coach_mytasks_jsx"
     },
@@ -26732,7 +26822,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/coach/MyTasks.jsx",
       "source_location": "L8",
-      "community": 245,
+      "community": 44,
       "norm_label": "tabs",
       "id": "coach_mytasks_tabs"
     },
@@ -26741,7 +26831,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/coach/MyTasks.jsx",
       "source_location": "L15",
-      "community": 245,
+      "community": 44,
       "norm_label": "emptymessages",
       "id": "coach_mytasks_emptymessages"
     },
@@ -26750,7 +26840,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/coach/MyTasks.jsx",
       "source_location": "L22",
-      "community": 245,
+      "community": 44,
       "norm_label": "mytasks()",
       "id": "coach_mytasks_mytasks"
     },
@@ -27956,7 +28046,7 @@
       "file_type": "code",
       "source_file": "client/src/main.jsx",
       "source_location": "L1",
-      "community": 255,
+      "community": 6,
       "norm_label": "main.jsx",
       "id": "client_src_main_jsx"
     },
@@ -30687,9 +30777,9 @@
       "source_file": "server/__tests__/groq-service.test.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_groq_service_test",
-      "target": "server_db",
-      "confidence_score": 1.0
+      "target": "server_db"
     },
     {
       "relation": "imports_from",
@@ -30698,9 +30788,9 @@
       "source_file": "server/__tests__/groq-service.test.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_groq_service_test",
-      "target": "services_groq_service",
-      "confidence_score": 1.0
+      "target": "services_groq_service"
     },
     {
       "relation": "contains",
@@ -30708,9 +30798,9 @@
       "source_file": "server/__tests__/groq-service.test.js",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_groq_service_test",
-      "target": "tests_groq_service_test_db",
-      "confidence_score": 1.0
+      "target": "tests_groq_service_test_db"
     },
     {
       "relation": "contains",
@@ -30718,99 +30808,9 @@
       "source_file": "server/__tests__/groq-service.test.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_groq_service_test",
-      "target": "tests_groq_service_test_groqservice",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L236",
-      "weight": 1.0,
-      "source": "server_db",
-      "target": "server_db_db",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "server_db",
-      "target": "server_db_dns",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L40",
-      "weight": 1.0,
-      "source": "server_db",
-      "target": "server_db_initializedatabase",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "server_db",
-      "target": "server_db_migratephase9",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "server_db",
-      "target": "server_db_pool",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L23",
-      "weight": 1.0,
-      "source": "server_db",
-      "target": "server_db_query",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L225",
-      "weight": 1.0,
-      "source": "server_db",
-      "target": "server_db_queryall",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L220",
-      "weight": 1.0,
-      "source": "server_db",
-      "target": "server_db_queryone",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/db.js",
-      "source_location": "L230",
-      "weight": 1.0,
-      "source": "server_db",
-      "target": "server_db_run",
-      "confidence_score": 1.0
+      "target": "tests_groq_service_test_groqservice"
     },
     {
       "relation": "imports_from",
@@ -30819,9 +30819,565 @@
       "source_file": "server/services/groq-service.js",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_groq_service",
-      "target": "server_db",
-      "confidence_score": 1.0
+      "target": "server_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/groq-service.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_groq_service",
+      "target": "services_groq_service_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/groq-service.js",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_groq_service",
+      "target": "services_groq_service_groqservice"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/groq-service.js",
+      "source_location": "L79",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_groq_service_groqservice",
+      "target": "services_groq_service_groqservice_analyzecoachforintervention"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/groq-service.js",
+      "source_location": "L337",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_groq_service_groqservice",
+      "target": "services_groq_service_groqservice_applyphase9fallbackrule"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/groq-service.js",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_groq_service_groqservice",
+      "target": "services_groq_service_groqservice_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/groq-service.js",
+      "source_location": "L175",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_groq_service_groqservice",
+      "target": "services_groq_service_groqservice_enhancecoachinginsight"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/groq-service.js",
+      "source_location": "L256",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_groq_service_groqservice",
+      "target": "services_groq_service_groqservice_processqueue"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/groq-service.js",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_groq_service_groqservice",
+      "target": "services_groq_service_groqservice_queuerequest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/groq-service.js",
+      "source_location": "L91",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_groq_service_groqservice_analyzecoachforintervention",
+      "target": "services_groq_service_groqservice_applyphase9fallbackrule"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/groq-service.js",
+      "source_location": "L283",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_groq_service_groqservice_processqueue",
+      "target": "services_groq_service_groqservice_analyzecoachforintervention"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/services/groq-service.js",
+      "source_location": "L288",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_groq_service_groqservice_processqueue",
+      "target": "services_groq_service_groqservice_enhancecoachinginsight"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/support-agent-phase9b.test.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_phase9b_test",
+      "target": "agents_support_agent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/support-agent-phase9b.test.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_phase9b_test",
+      "target": "agents_support_agent_phase9b_test_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/support-agent-phase9b.test.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_phase9b_test",
+      "target": "agents_support_agent_phase9b_test_groqservice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/support-agent-phase9b.test.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_phase9b_test",
+      "target": "agents_support_agent_phase9b_test_supportagent"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/support-agent.test.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_test",
+      "target": "agents_support_agent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/support-agent.test.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_test",
+      "target": "agents_support_agent_test_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/__tests__/agents/support-agent.test.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_test",
+      "target": "agents_support_agent_test_supportagent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent",
+      "target": "agents_support_agent_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent",
+      "target": "agents_support_agent_googlesheetsclient"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent",
+      "target": "agents_support_agent_groqservice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent",
+      "target": "agents_support_agent_supportagent"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L311",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_checkrecentaction"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_constructor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L88",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_decideintervention"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L204",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_decideinterventionphase9fallback"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L174",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_executeintervention"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L360",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_logagenterror"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L330",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_logdecision"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L263",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_queueemail"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L280",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_queueemailtoadmin"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_run"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L227",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent",
+      "target": "agents_support_agent_supportagent_taginsheet"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L64",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_run",
+      "target": "agents_support_agent_supportagent_decideintervention"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_run",
+      "target": "agents_support_agent_supportagent_executeintervention"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_run",
+      "target": "agents_support_agent_supportagent_logagenterror"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L147",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_decideintervention",
+      "target": "agents_support_agent_supportagent_checkrecentaction"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L197",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_decideintervention",
+      "target": "agents_support_agent_supportagent_decideinterventionphase9fallback"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L173",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_decideintervention",
+      "target": "agents_support_agent_supportagent_logdecision"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L251",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_decideinterventionphase9fallback",
+      "target": "agents_support_agent_supportagent_checkrecentaction"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L219",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_executeintervention",
+      "target": "agents_support_agent_supportagent_logagenterror"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L195",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_executeintervention",
+      "target": "agents_support_agent_supportagent_queueemail"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L206",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_executeintervention",
+      "target": "agents_support_agent_supportagent_queueemailtoadmin"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server/agents/support-agent.js",
+      "source_location": "L184",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_support_agent_supportagent_executeintervention",
+      "target": "agents_support_agent_supportagent_taginsheet"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db-migrations/phase9-schema.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "db_migrations_phase9_schema",
+      "target": "db_migrations_phase9_schema_migratephase9"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L236",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db",
+      "target": "server_db_db"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db",
+      "target": "server_db_dns"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db",
+      "target": "server_db_initializedatabase"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db",
+      "target": "server_db_migratephase9"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db",
+      "target": "server_db_pool"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db",
+      "target": "server_db_query"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L225",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db",
+      "target": "server_db_queryall"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L220",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db",
+      "target": "server_db_queryone"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/db.js",
+      "source_location": "L230",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_db",
+      "target": "server_db_run"
     },
     {
       "relation": "contains",
@@ -30860,9 +31416,9 @@
       "source_file": "server/db.js",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_db_initializedatabase",
-      "target": "server_db_query",
-      "confidence_score": 1.0
+      "target": "server_db_query"
     },
     {
       "relation": "calls",
@@ -30936,119 +31492,6 @@
       "confidence_score": 1.0,
       "source": "db_js",
       "target": "server_db_db"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/services/groq-service.js",
-      "source_location": "L15",
-      "weight": 1.0,
-      "source": "services_groq_service",
-      "target": "services_groq_service_db",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/services/groq-service.js",
-      "source_location": "L36",
-      "weight": 1.0,
-      "source": "services_groq_service",
-      "target": "services_groq_service_groqservice",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/services/groq-service.js",
-      "source_location": "L79",
-      "weight": 1.0,
-      "source": "services_groq_service_groqservice",
-      "target": "services_groq_service_groqservice_analyzecoachforintervention",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/services/groq-service.js",
-      "source_location": "L337",
-      "weight": 1.0,
-      "source": "services_groq_service_groqservice",
-      "target": "services_groq_service_groqservice_applyphase9fallbackrule",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/services/groq-service.js",
-      "source_location": "L37",
-      "weight": 1.0,
-      "source": "services_groq_service_groqservice",
-      "target": "services_groq_service_groqservice_constructor",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/services/groq-service.js",
-      "source_location": "L175",
-      "weight": 1.0,
-      "source": "services_groq_service_groqservice",
-      "target": "services_groq_service_groqservice_enhancecoachinginsight",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/services/groq-service.js",
-      "source_location": "L256",
-      "weight": 1.0,
-      "source": "services_groq_service_groqservice",
-      "target": "services_groq_service_groqservice_processqueue",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/services/groq-service.js",
-      "source_location": "L45",
-      "weight": 1.0,
-      "source": "services_groq_service_groqservice",
-      "target": "services_groq_service_groqservice_queuerequest",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/services/groq-service.js",
-      "source_location": "L91",
-      "weight": 1.0,
-      "source": "services_groq_service_groqservice_analyzecoachforintervention",
-      "target": "services_groq_service_groqservice_applyphase9fallbackrule",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/services/groq-service.js",
-      "source_location": "L283",
-      "weight": 1.0,
-      "source": "services_groq_service_groqservice_processqueue",
-      "target": "services_groq_service_groqservice_analyzecoachforintervention",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/services/groq-service.js",
-      "source_location": "L288",
-      "weight": 1.0,
-      "source": "services_groq_service_groqservice_processqueue",
-      "target": "services_groq_service_groqservice_enhancecoachinginsight",
-      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -35611,245 +36054,6 @@
       "confidence_score": 1.0,
       "source": "agents_reporting_agent_reportingagent_run",
       "target": "agents_reporting_agent_reportingagent_queuereportemail"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/__tests__/agents/support-agent.test.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_test",
-      "target": "agents_support_agent"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/__tests__/agents/support-agent.test.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_test",
-      "target": "agents_support_agent_test_db"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/__tests__/agents/support-agent.test.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_test",
-      "target": "agents_support_agent_test_supportagent"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent",
-      "target": "agents_support_agent_db"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L22",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent",
-      "target": "agents_support_agent_googlesheetsclient"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent",
-      "target": "agents_support_agent_supportagent"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L311",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_supportagent",
-      "target": "agents_support_agent_supportagent_checkrecentaction"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_supportagent",
-      "target": "agents_support_agent_supportagent_constructor"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L88",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_supportagent",
-      "target": "agents_support_agent_supportagent_decideintervention"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L174",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_supportagent",
-      "target": "agents_support_agent_supportagent_executeintervention"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L360",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_supportagent",
-      "target": "agents_support_agent_supportagent_logagenterror"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L263",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_supportagent",
-      "target": "agents_support_agent_supportagent_queueemail"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L280",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_supportagent",
-      "target": "agents_support_agent_supportagent_queueemailtoadmin"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L38",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_supportagent",
-      "target": "agents_support_agent_supportagent_run"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L227",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_supportagent",
-      "target": "agents_support_agent_supportagent_taginsheet"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L64",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_supportagent_run",
-      "target": "agents_support_agent_supportagent_decideintervention"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L67",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_supportagent_run",
-      "target": "agents_support_agent_supportagent_executeintervention"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L71",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_supportagent_run",
-      "target": "agents_support_agent_supportagent_logagenterror"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L147",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_supportagent_decideintervention",
-      "target": "agents_support_agent_supportagent_checkrecentaction"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L219",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_supportagent_executeintervention",
-      "target": "agents_support_agent_supportagent_logagenterror"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L195",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_supportagent_executeintervention",
-      "target": "agents_support_agent_supportagent_queueemail"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L206",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_supportagent_executeintervention",
-      "target": "agents_support_agent_supportagent_queueemailtoadmin"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "server/agents/support-agent.js",
-      "source_location": "L184",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agents_support_agent_supportagent_executeintervention",
-      "target": "agents_support_agent_supportagent_taginsheet"
     },
     {
       "relation": "contains",
@@ -67294,5 +67498,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "db744b09cdaa24ded38c1e5a3853624c86eea0cb"
+  "built_at_commit": "135cddbc88912202417c5873d032c4c99c2ed8e8"
 }

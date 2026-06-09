@@ -27,20 +27,20 @@ jest.mock('../../services/groq-service', () => {
       }
 
       if (status === 'overdue' && coach_pattern === 'procrastinator') {
-        return Promise.resolve({ fallbackRule: 'escalate', confidence: 0 });
+        return Promise.resolve({ recommendation:'escalate', confidence: 0 });
       } else if (status === 'overdue') {
-        return Promise.resolve({ fallbackRule: 'email', confidence: 0 });
+        return Promise.resolve({ recommendation:'email', confidence: 0 });
       } else if (status === 'at_risk' && blockersArray && blockersArray.length > 0) {
         // Detected blockers = proactive comment in sheet
-        return Promise.resolve({ fallbackRule: 'tag', confidence: 0 });
+        return Promise.resolve({ recommendation:'tag', confidence: 0 });
       } else if (status === 'at_risk' && coach_pattern === 'procrastinator' && days_remaining < 3) {
-        return Promise.resolve({ fallbackRule: 'email', confidence: 0 });
+        return Promise.resolve({ recommendation:'email', confidence: 0 });
       } else if (status === 'at_risk') {
         // Standard at-risk = gentle tag
-        return Promise.resolve({ fallbackRule: 'tag', confidence: 0 });
+        return Promise.resolve({ recommendation:'tag', confidence: 0 });
       }
 
-      return Promise.resolve({ fallbackRule: null, confidence: 0 });
+      return Promise.resolve({ recommendation:null, confidence: 0 });
     }),
   }));
 });
