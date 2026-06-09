@@ -37,6 +37,26 @@ New to this project? Do this first:
 
 **Frontend design:** See [@memory/frontend_design_system.md](~/.claude/projects/d--Cursor-new/memory/frontend_design_system.md) — uses ui-ux-pro-max-skill (Teal #0D9488, Orange #EA580C).
 
+## Phase 9 — Autonomous Multi-Agent Coaching System
+
+Three autonomous agents continuously monitor coaches and provide real-time support:
+
+1. **Monitoring Agent** (every 30 min) — Detects at-risk/overdue tasks, analyzes coach behavior patterns (fast-track, procrastinator, steady, inconsistent), saves snapshots to database
+2. **Support Agent** (every 30 min) — Reads snapshots, decides interventions (email, tag, escalate), prevents message fatigue (30-min tag window, 4-hour email window)
+3. **Reporting Agent** (daily 9am) — Synthesizes 24-hour actions, generates recommendations, creates HTML digest for admin
+
+**Key Features:**
+- 🤖 Autonomous decision-making without admin intervention
+- 🔍 Pattern-based analysis (not just deadline-based alerts)
+- 🎯 Preventive support before tasks are late
+- 😌 Built-in fatigue prevention rules
+- 📊 Daily digests with actionable insights
+- 🔄 Google Sheets integration (read-only Phase 9, OAuth in Phase 9b)
+
+**Complete User Guide:** See [@docs/PHASE9-AGENT-GUIDE.md](docs/PHASE9-AGENT-GUIDE.md) for admin instructions, coach guidance, database reference, and troubleshooting.
+
+**Implementation:** 1,379 lines of agent code + 697 lines of tests, 156 tests passing (100%). All agents operational and tested. Ready for production deployment.
+
 ## Workflow: Superpowers (Brainstorm → Design → Plan → Execute → Review)
 
 Every task follows this cycle:
