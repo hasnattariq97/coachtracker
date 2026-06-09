@@ -375,8 +375,8 @@
     "semantic_hash": ""
   },
   "server/cron.js": {
-    "mtime": 1780917888.6469615,
-    "ast_hash": "fd920c5f36fdf97b2e057f28192aad12",
+    "mtime": 1780990684.0367785,
+    "ast_hash": "f03f060e6a7a26057da394929b7323ba",
     "semantic_hash": ""
   },
   "server/db-integration.test.js": {
@@ -545,8 +545,8 @@
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1780849700.5196276,
-    "ast_hash": "3755d1ff09f1e9ab2ea4da61a8432a82",
+    "mtime": 1780991978.6004176,
+    "ast_hash": "495b0838b3b853ebcbe3fa346de79ea0",
     "semantic_hash": ""
   },
   "COMPLETION_REPORT.md": {
@@ -1090,8 +1090,8 @@
     "semantic_hash": ""
   },
   "docs/ROADMAP.md": {
-    "mtime": 1780925713.8982792,
-    "ast_hash": "a96c8e6bd3b97cd6a991bf6716cdacee",
+    "mtime": 1780992019.4606187,
+    "ast_hash": "d8119a8dec33a7a7804dd382a0cdbd9f",
     "semantic_hash": ""
   },
   "docs/RUFLO.md": {
@@ -1352,6 +1352,36 @@
   "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md": {
     "mtime": 1780990426.860382,
     "ast_hash": "4c38fc7be64410af6880e1419bdef4d4",
+    "semantic_hash": ""
+  },
+  "server/__tests__/agents/orchestrator.test.js": {
+    "mtime": 1780990731.7874365,
+    "ast_hash": "78fa135d79594afe1242e0d33d09d24d",
+    "semantic_hash": ""
+  },
+  "server/agents/orchestrator.js": {
+    "mtime": 1780990670.2843707,
+    "ast_hash": "8816a574e2a1d6fcb06cff80ba0c8f99",
+    "semantic_hash": ""
+  },
+  "server/__tests__/integration/phase9-integration.test.js": {
+    "mtime": 1780991481.6780267,
+    "ast_hash": "3efbde406546ffb628e44a898cf66ce0",
+    "semantic_hash": ""
+  },
+  "docs/PHASE9-HANDOFF-SESSION-1.md": {
+    "mtime": 1780990915.8786395,
+    "ast_hash": "7a580d5c5fd5a9c150751f9137252c33",
+    "semantic_hash": ""
+  },
+  "docs/PHASE9-AGENT-GUIDE.md": {
+    "mtime": 1780991968.825154,
+    "ast_hash": "d8cbbc18ad8c82b7596314bf269f6f1d",
+    "semantic_hash": ""
+  },
+  "docs/PHASE9-TASK7-INTEGRATION-TESTS.md": {
+    "mtime": 1780991565.224349,
+    "ast_hash": "5da5854e649dfb3eaba9017a76992f00",
     "semantic_hash": ""
   }
 }
