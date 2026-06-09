@@ -1,5 +1,6 @@
 const { Pool } = require('pg');
 const dns = require('dns');
+const { migratePhase9 } = require('./db-migrations/phase9-schema');
 
 // Force IPv4 only (fixes Railway PostgreSQL connectivity)
 dns.setDefaultResultOrder('ipv4first');
@@ -130,6 +131,9 @@ const initializeDatabase = async () => {
         sent_at TIMESTAMP
       );
     `);
+
+    // Phase 9: Autonomous Coaching System tables
+    await migratePhase9(query);
 
     console.log('✓ Database tables ready');
 
