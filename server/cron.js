@@ -119,14 +119,33 @@ const scheduleJobs = () => {
     }
   });
 
+  // Phase 9b: Groq queue processor
+  // Schedule: Every 2 minutes (dequeue ~5 requests per run)
+  // Respects 30 RPM quota: 5 items × 30 runs/hour = 150 items/hour (safe)
+  const task6 = cron.schedule('*/2 * * * *', async () => {
+    try {
+      const GroqService = require('./services/groq-service');
+      const groqService = new GroqService();
+
+      const result = await groqService.processQueue();
+
+      if (result.processed > 0) {
+        console.log(`[Cron] Groq queue processor: ${result.processed} item(s) processed, ${result.pending} pending`);
+      }
+    } catch (err) {
+      console.error('[Cron] Queue processor error:', err.message);
+    }
+  });
+
   task1.unref?.();
   task2.unref?.();
   task3.unref?.();
   task4.unref?.();
   task5.unref?.();
+  task6.unref?.();
 
-  scheduledTasks = [task1, task2, task3, task4, task5];
-  console.log('✓ Cron jobs scheduled (hourly nudges, email processor, Phase 9 agent cycles)');
+  scheduledTasks = [task1, task2, task3, task4, task5, task6];
+  console.log('✓ Cron jobs scheduled (hourly nudges, email processor, Phase 9 agent cycles, Groq queue processor)');
 };
 
 const stopJobs = () => {
