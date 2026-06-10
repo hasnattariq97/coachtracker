@@ -33,6 +33,7 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/coaches', authenticateToken, requireAdmin, require('./routes/coaches'));
 app.use('/api/tasks', authenticateToken, require('./routes/tasks'));
 app.use('/api/notifications', authenticateToken, require('./routes/notifications'));
+app.use('/api/admin', authenticateToken, require('./routes/admin'));
 
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
