@@ -473,7 +473,39 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 - [ ] **Predictive Delay Warnings** — Predict delays before they happen
 - [ ] **Team Cohort Analysis** — Understand team-wide patterns
 - [ ] **Manual Agent Triggering** — API endpoint to run agents on-demand
-- [ ] **Admin Dashboard** — Real-time agent status and recommendations
+
+---
+
+## Phase 9c — AI-Powered Reporting Dashboard ✅ COMPLETE
+
+**Status:** ✅ COMPLETE (2026-06-10)
+**Goal:** Add AI-powered daily reporting digests and an admin Agent Dashboard for real-time visibility
+
+**What Phase 9c Delivers:**
+
+1. **AI-Powered Reporting Digests** ✅ — ReportingAgent enhanced with Groq AI insights. Daily email digest includes AI-generated key insights, pattern analysis, and recommendations. Graceful fallback to rule-based summaries if Groq unavailable.
+
+2. **Admin Agent Dashboard** ✅ — New `/admin/agent-dashboard` page shows real-time agent status, Groq queue health, decision analytics, coach patterns, and recent decisions table. 30-second auto-refresh.
+
+3. **Agent Run Logging** ✅ — Orchestrator logs each agent run to `agent_runs` table, enabling history and trend analysis.
+
+**Files Created/Modified:**
+- ✅ `server/services/groq-service.js` — Added `generateReportingInsights()` method
+- ✅ `server/agents/reporting-agent.js` — AI insights integration
+- ✅ `server/db-migrations/phase9c-schema.js` — New `agent_runs` table + `daily_reports` columns
+- ✅ `server/routes/admin.js` — 3 new admin API endpoints
+- ✅ `server/agents/orchestrator.js` — Agent run logging
+- ✅ `client/src/pages/admin/AgentDashboard.jsx` — Full dashboard component
+- ✅ `client/src/App.jsx` — Route registered
+- ✅ `client/src/components/Sidebar.jsx` — Sidebar link added
+
+**Testing:**
+- ✅ 8 GroqService tests (generateReportingInsights)
+- ✅ 7 Reporting Agent tests (AI integration)
+- ✅ 9 Admin API endpoint tests
+- ✅ 8 Frontend component tests (AgentDashboard)
+- ✅ 7 Integration tests (full pipeline)
+- ✅ **Total Phase 9c: 39 tests passing**
 
 ---
 
@@ -497,15 +529,17 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 | 8 | Email Notifications | ✅ Complete | ✅ Production verified (2026-06-08) |
 | 9 | Autonomous Agents | ✅ Complete | 156/156 |
 | 9b | AI-Powered Decisions (Groq) | ✅ Complete | 58/58 |
+| 9c | AI Reporting Dashboard | ✅ Complete | 39 tests |
 
-**Total Tests Passing:** 250+ (156 Phase 9 agent + 58 Phase 9b integration + 36 core backend tests)  
-**All Phases Complete:** Phases 0-9b implemented and tested ✅  
+**Total Tests Passing:** 289+ (156 Phase 9 agent + 58 Phase 9b integration + 39 Phase 9c + 36 core backend tests)  
+**All Phases Complete:** Phases 0-9c implemented and tested ✅  
 **E2E Testing:** Agent-browser integration complete and verified (11/11 tests)  
 **Security Findings:** 11/11 resolved (0 critical, 0 active bypasses)  
-**Features Complete:** 22/22 (Phases 0-9b all features implemented)  
+**Features Complete:** 23/23 (Phases 0-9c all features implemented)  
 **Autonomous Agents:** ✅ Phase 9: Monitoring (pattern detection) + Support (AI-informed decisions) + Reporting (daily digests)  
 **AI Enhancement:** ✅ Phase 9b: Groq-powered intelligent intervention recommendations + adaptive coaching insights  
-**Agent Tests:** ✅ 214 tests passing (Phase 9: 156 + Phase 9b: 58)  
+**Admin Dashboard:** ✅ Phase 9c: Real-time agent status, decision analytics, coach patterns  
+**Agent Tests:** ✅ 253 tests passing (Phase 9: 156 + Phase 9b: 58 + Phase 9c: 39)  
 **Database:** PostgreSQL (Railway) — data persists across redeploys ✅  
 **Email:** ✅ **Gmail SMTP integration** (nodemailer) — coaches receiving real emails ✅  
 **Notifications:** ✅ In-app + email + **AI-enhanced coaching insights** + autonomous agent support  
