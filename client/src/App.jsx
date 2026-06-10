@@ -10,6 +10,7 @@ const AdminDashboard   = lazy(() => import('./pages/admin/Dashboard'));
 const CoachesPage      = lazy(() => import('./pages/admin/CoachesPage'));
 const TaskBoard        = lazy(() => import('./pages/admin/TaskBoard'));
 const AssignTask       = lazy(() => import('./pages/admin/AssignTask'));
+const AgentDashboard   = lazy(() => import('./pages/admin/AgentDashboard'));
 const CoachDashboard   = lazy(() => import('./pages/coach/Dashboard'));
 const MyTasks          = lazy(() => import('./pages/coach/MyTasks'));
 
@@ -66,7 +67,8 @@ const App = () => (
               <Route path="/admin/dashboard" element={<AdminDashboard />} />
               <Route path="/admin/coaches"   element={<CoachesPage />} />
               <Route path="/admin/tasks"     element={<TaskBoard />} />
-              <Route path="/admin/assign"    element={<AssignTask />} />
+              <Route path="/admin/assign"            element={<AssignTask />} />
+              <Route path="/admin/agent-dashboard"  element={<AgentDashboard />} />
               <Route path="/admin"           element={<Navigate to="/admin/dashboard" replace />} />
             </Route>
 

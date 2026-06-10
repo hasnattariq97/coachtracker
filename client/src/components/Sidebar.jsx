@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import {
   LayoutDashboard, Users, ClipboardList, PlusCircle,
-  CheckSquare, LogOut, Menu, X, Zap
+  CheckSquare, LogOut, Menu, X, Zap, Bot
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
@@ -10,7 +10,8 @@ const adminLinks = [
   { to: '/admin/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
   { to: '/admin/coaches',   icon: Users,            label: 'Coaches' },
   { to: '/admin/tasks',     icon: ClipboardList,    label: 'Task Board' },
-  { to: '/admin/assign',    icon: PlusCircle,       label: 'Assign Task' },
+  { to: '/admin/assign',            icon: PlusCircle,    label: 'Assign Task' },
+  { to: '/admin/agent-dashboard',  icon: Bot,           label: 'Agent Dashboard' },
 ];
 
 const coachLinks = [
