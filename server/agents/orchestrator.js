@@ -20,6 +20,7 @@
 const MonitoringAgent = require('./monitoring-agent');
 const SupportAgent = require('./support-agent');
 const ReportingAgent = require('./reporting-agent');
+const db = require('../db');
 
 class AgentOrchestrator {
   constructor() {
@@ -46,11 +47,28 @@ class AgentOrchestrator {
       const monitoringTime = (new Date() - cycleStart) / 1000;
       console.log(`✓ Monitoring: ${monitoringResult.scannedTasks} tasks, ${monitoringTime.toFixed(1)}s`);
 
+      await db.query(
+        `INSERT INTO agent_runs (agent_type, status, snapshots_created, coaches_at_risk)
+         VALUES ('monitoring', 'success', $1, $2)`,
+        [monitoringResult?.scannedTasks || 0, monitoringResult?.snapshots?.length || 0]
+      ).catch(e => console.error('[Orchestrator] Failed to log monitoring run:', e.message));
+
       // Step 2: Run Support Agent (depends on Monitoring snapshots)
       console.log('📍 Step 2: Support Agent');
       const supportResult = await this.supportAgent.run();
       const supportTime = (new Date() - cycleStart) / 1000;
       console.log(`✓ Support: ${supportResult.actionsDecided} actions, ${supportTime.toFixed(1)}s`);
+
+      await db.query(
+        `INSERT INTO agent_runs (agent_type, status, actions_taken, emails_sent, tags_created, escalations)
+         VALUES ('support', 'success', $1, $2, $3, $4)`,
+        [
+          supportResult?.actionsDecided || 0,
+          supportResult?.actions?.filter(a => a.action === 'email').length || 0,
+          supportResult?.actions?.filter(a => a.action === 'tag').length || 0,
+          supportResult?.actions?.filter(a => a.action === 'escalate').length || 0,
+        ]
+      ).catch(e => console.error('[Orchestrator] Failed to log support run:', e.message));
 
       // Step 3: Log cycle completion to AgentDB (Ruflo integration)
       await this._logCycleToAgentDB('30-min', {
@@ -88,6 +106,12 @@ class AgentOrchestrator {
       const reportingResult = await this.reportingAgent.run();
       const reportingTime = (new Date() - cycleStart) / 1000;
       console.log(`✓ Reporting: ${reportingResult.recommendations.length} recommendations, ${reportingTime.toFixed(1)}s`);
+
+      await db.query(
+        `INSERT INTO agent_runs (agent_type, status, report_generated, insights_count)
+         VALUES ('reporting', 'success', $1, $2)`,
+        [true, reportingResult?.aiInsights?.key_insights?.length || 0]
+      ).catch(e => console.error('[Orchestrator] Failed to log reporting run:', e.message));
 
       // Log to AgentDB
       await this._logCycleToAgentDB('daily', {

@@ -43,6 +43,9 @@ router.get('/decisions', requireAdmin, async (req, res) => {
   try {
     const hours = Math.min(168, Math.max(1, parseInt(req.query.hours) || 24));
     const coachId = req.query.coach_id ? parseInt(req.query.coach_id) : null;
+    if (req.query.coach_id && (isNaN(coachId) || coachId <= 0)) {
+      return res.status(400).json({ error: 'Invalid coach_id' });
+    }
 
     let query = `
       SELECT id, created_at as timestamp, agent_type, coach_id,
