@@ -94,6 +94,27 @@ describe('Phase 9c Integration: Admin API Endpoints', () => {
     expect(res.status).toBe(403);
   });
 
+  // ─── Test 2b: agent-status returns null fields when no run history ──────────
+
+  test('GET /api/admin/agent-status returns null fields when no run history', async () => {
+    // All 4 DB queries return empty rows
+    db.query
+      .mockResolvedValueOnce({ rows: [] })   // monitoring
+      .mockResolvedValueOnce({ rows: [] })   // support
+      .mockResolvedValueOnce({ rows: [] })   // reporting
+      .mockResolvedValueOnce({ rows: [{ pending: '0' }] });  // groq queue
+
+    const res = await request(app)
+      .get('/api/admin/agent-status')
+      .set('Authorization', `Bearer ${adminToken}`);
+
+    expect(res.status).toBe(200);
+    expect(res.body.monitoring).toBeNull();
+    expect(res.body.support).toBeNull();
+    expect(res.body.reporting).toBeNull();
+    expect(res.body.groq_queue_pending).toBe(0);
+  });
+
   // ─── Test 3: decisions returns 200 with summary and decisions array ─────────
 
   test('GET /api/admin/decisions returns 200 with summary and decisions array', async () => {
