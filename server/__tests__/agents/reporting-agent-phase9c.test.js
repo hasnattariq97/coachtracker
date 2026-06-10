@@ -12,6 +12,19 @@ jest.mock('../../db', () => ({
   query: jest.fn(),
 }));
 
+// Mock GroqService to ensure deterministic fallback in all test environments
+jest.mock('../../services/groq-service', () => {
+  return jest.fn().mockImplementation(() => ({
+    generateReportingInsights: jest.fn().mockResolvedValue({
+      key_insights: ['Team completed 5 tasks on time', 'On-time rate: 80%', '3 coaches supported'],
+      recommendations: ['Continue monitoring', 'Review patterns', 'Plan next week'],
+      coach_analysis: [{ pattern: 'steady', suggested_approach: 'Email support' }],
+      team_insights: { on_time_trend: 'Stable', most_effective_intervention: 'Email', emerging_patterns: 'None' },
+      confidence: 0.5
+    })
+  }));
+});
+
 describe('ReportingAgent Phase 9c', () => {
   let agent;
 
