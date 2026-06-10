@@ -65,7 +65,6 @@ describe('AgentDashboard', () => {
   });
 
   it('renders 3 agent status cards after data loads', async () => {
-    axios.get.mockResolvedValue({ data: mockAgentStatus });
     axios.get
       .mockResolvedValueOnce({ data: mockAgentStatus })
       .mockResolvedValueOnce({ data: mockDecisions })
