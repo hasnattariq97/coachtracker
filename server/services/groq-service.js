@@ -258,6 +258,73 @@ Respond with ONLY valid JSON:
   }
 
   /**
+   * Generate insights for the daily reporting digest
+   * Uses Groq with fallback to summary stats if unavailable
+   *
+   * Input context: { actions_24h, emails_sent, tags_created, escalations,
+   *                  coaches_affected, on_time_rate, coach_patterns }
+   * Returns: { key_insights, recommendations, coach_analysis, team_insights, confidence }
+   */
+  async generateReportingInsights(context) {
+    if (!this.client) {
+      return this._getFallbackReportingInsights(context);
+    }
+
+    try {
+      const response = await Promise.race([
+        this.client.chat.completions.create({
+          model: GROQ_MODEL,
+          messages: [
+            {
+              role: 'system',
+              content: 'You are a coaching analytics expert. Analyze 24-hour coaching data and generate actionable insights for the admin team. Return ONLY valid JSON with: key_insights (array of 3-5 strings max 100 chars each), recommendations (array of 3-5 strings), coach_analysis (array of objects with coach_id, name, pattern, recent_performance, suggested_approach), team_insights (object with on_time_trend, most_effective_intervention, emerging_patterns), confidence (0.0-1.0)',
+            },
+            { role: 'user', content: JSON.stringify(context) },
+          ],
+          max_tokens: 800,
+        }),
+        new Promise((_, reject) =>
+          setTimeout(() => reject(new Error('Groq timeout')), 15000)
+        ),
+      ]);
+
+      const parsed = JSON.parse(response.choices[0].message.content);
+      return parsed;
+    } catch (err) {
+      console.error('[GroqService] generateReportingInsights error:', err.message);
+      return this._getFallbackReportingInsights(context);
+    }
+  }
+
+  /**
+   * Fallback reporting insights when Groq is unavailable
+   */
+  _getFallbackReportingInsights(context) {
+    return {
+      key_insights: [
+        `Processed ${context.actions_24h} coaching actions in 24h`,
+        `On-time completion rate: ${Math.round((context.on_time_rate || 0) * 100)}%`,
+        `${context.coaches_affected} coaches supported with ${context.emails_sent} emails, ${context.tags_created} tags, ${context.escalations} escalations`,
+      ],
+      recommendations: [
+        'Continue monitoring at-risk coaches daily',
+        'Review intervention effectiveness by coach pattern',
+        'Consider pattern-specific strategies for next week',
+      ],
+      coach_analysis: (context.coach_patterns || []).slice(0, 3).map(p => ({
+        pattern: p,
+        suggested_approach: p === 'procrastinator' ? 'Escalation' : 'Email support',
+      })),
+      team_insights: {
+        on_time_trend: 'Stable',
+        most_effective_intervention: 'Escalation for procrastinators',
+        emerging_patterns: 'Monitored',
+      },
+      confidence: 0.5,
+    };
+  }
+
+  /**
    * Process queue: dequeue up to QUEUE_BATCH_SIZE pending requests
    * Called by cron every 2 minutes
    *
@@ -300,6 +367,8 @@ Respond with ONLY valid JSON:
               payload.task,
               payload.eventType
             );
+          } else if (request.request_type === 'reporting_insights') {
+            response = await this.generateReportingInsights(payload.context);
           }
 
           // Mark as completed
