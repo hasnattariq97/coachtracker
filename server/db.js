@@ -187,7 +187,7 @@ const initializeDatabase = async () => {
       CREATE INDEX IF NOT EXISTS idx_agent_decisions_agent ON agent_decisions(agent_type);
     `);
     await query(`
-      CREATE INDEX IF NOT EXISTS idx_agent_decisions_timestamp ON agent_decisions(timestamp);
+      CREATE INDEX IF NOT EXISTS idx_agent_decisions_timestamp ON agent_decisions(created_at);
     `);
 
     console.log('✓ Database tables ready');
