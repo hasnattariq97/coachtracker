@@ -39,14 +39,17 @@ class ReportingAgent {
       // 2. Generate recommendations
       const recommendations = await PatternAnalyzer.generateRecommendations(patterns);
 
-      // 3. Create HTML email content
-      const emailContent = this._generateEmailHTML(patterns, recommendations);
+      // 3. Get AI insights (non-blocking, fallback to null on failure)
+      const aiInsights = await this.generateAIInsights(patterns, recommendations);
 
-      // 4. Queue email to admin
+      // 4. Create HTML email content
+      const emailContent = this._generateEmailHTML(patterns, recommendations, aiInsights);
+
+      // 5. Queue email to admin
       await this._queueReportEmail(emailContent);
 
-      // 5. Archive report to database
-      await this._archiveReport(patterns, recommendations);
+      // 6. Archive report to database
+      await this._archiveReport(patterns, recommendations, aiInsights);
 
       console.log('✓ ReportingAgent: Daily report completed');
 
@@ -54,6 +57,7 @@ class ReportingAgent {
         completionRate: patterns.completionRate,
         blockers: patterns.commonBlockers,
         recommendations,
+        aiInsights,
         archived: true,
       };
     } catch (err) {
@@ -64,9 +68,38 @@ class ReportingAgent {
   }
 
   /**
+   * Generate AI insights for the daily report using GroqService
+   * Returns null on failure (non-blocking)
+   */
+  async generateAIInsights(patterns, recommendations) {
+    try {
+      const GroqService = require('../services/groq-service');
+      const groqService = new GroqService();
+
+      const context = {
+        actions_24h: patterns.supportActions ? patterns.supportActions.length : 0,
+        emails_sent: patterns.supportActions ? patterns.supportActions.filter(a => a.action_type === 'email').length : 0,
+        tags_created: patterns.supportActions ? patterns.supportActions.filter(a => a.action_type === 'tag').length : 0,
+        escalations: patterns.supportActions ? patterns.supportActions.filter(a => a.action_type === 'escalate').length : 0,
+        coaches_affected: patterns.coachPerformance ? patterns.coachPerformance.length : 0,
+        on_time_rate: patterns.completionRate ? patterns.completionRate / 100 : 0,
+        coach_patterns: patterns.coachPerformance
+          ? [...new Set(patterns.coachPerformance.map(c => c.pattern).filter(Boolean))]
+          : []
+      };
+
+      const insights = await groqService.generateReportingInsights(context);
+      return insights;
+    } catch (err) {
+      console.error('[ReportingAgent] generateAIInsights error:', err.message);
+      return null;
+    }
+  }
+
+  /**
    * Generate HTML email for daily coaching report
    */
-  _generateEmailHTML(patterns, recommendations) {
+  _generateEmailHTML(patterns, recommendations, aiInsights = null) {
     const { supportActions, completionRate, commonBlockers, coachPerformance } = patterns;
 
     const blockerHTML = commonBlockers.length > 0
@@ -85,6 +118,21 @@ class ReportingAgent {
     const recommendationHTML = recommendations.length > 0
       ? recommendations.map(r => `<li>${r}</li>`).join('')
       : '<li>Keep up the good work!</li>';
+
+    const aiInsightsHTML = aiInsights ? `
+  <div class="section" style="border-left-color: #EA580C;">
+    <h2>🤖 AI Coaching Insights</h2>
+    ${aiInsights.key_insights && aiInsights.key_insights.length > 0 ? `
+      <h3 style="color: #EA580C; font-size: 1em;">Key Insights</h3>
+      <ul>${aiInsights.key_insights.map(i => `<li>${i}</li>`).join('')}</ul>
+    ` : ''}
+    ${aiInsights.recommendations && aiInsights.recommendations.length > 0 ? `
+      <h3 style="color: #EA580C; font-size: 1em;">Recommendations</h3>
+      <ul>${aiInsights.recommendations.map(r => `<li>${r}</li>`).join('')}</ul>
+    ` : ''}
+    <p style="font-size: 0.8em; color: #999;">Confidence: ${Math.round((aiInsights.confidence || 0) * 100)}% | ${aiInsights.confidence > 0.5 ? 'Groq AI' : 'Rule-based fallback'}</p>
+  </div>
+` : '';
 
     return `
       <!DOCTYPE html>
@@ -129,6 +177,8 @@ class ReportingAgent {
             <h2>⭐ Coach Performance</h2>
             <ul>${coachPerformanceHTML}</ul>
           </div>
+
+          ${aiInsightsHTML}
 
           <div class="section">
             <h2>💡 Recommendations</h2>
@@ -191,19 +241,22 @@ class ReportingAgent {
   /**
    * Archive report to daily_reports table
    */
-  async _archiveReport(patterns, recommendations) {
+  async _archiveReport(patterns, recommendations, aiInsights = null) {
     try {
       const today = new Date().toISOString().split('T')[0];
 
       await this.db.query(
         `INSERT INTO daily_reports
-         (report_date, summary_json, patterns_json, recommendations_json, agent_activity_json)
-         VALUES ($1, $2, $3, $4, $5)
+         (report_date, summary_json, patterns_json, recommendations_json, agent_activity_json, insights, generated_by, ai_confidence)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
          ON CONFLICT (report_date) DO UPDATE SET
            summary_json = EXCLUDED.summary_json,
            patterns_json = EXCLUDED.patterns_json,
            recommendations_json = EXCLUDED.recommendations_json,
-           agent_activity_json = EXCLUDED.agent_activity_json`,
+           agent_activity_json = EXCLUDED.agent_activity_json,
+           insights = EXCLUDED.insights,
+           generated_by = EXCLUDED.generated_by,
+           ai_confidence = EXCLUDED.ai_confidence`,
         [
           today,
           JSON.stringify({
@@ -220,6 +273,9 @@ class ReportingAgent {
             generatedBy: this.name,
             executedAt: new Date().toISOString(),
           }),
+          aiInsights ? JSON.stringify(aiInsights) : null,
+          aiInsights ? 'groq-ai' : 'rules-based',
+          aiInsights ? (aiInsights.confidence || null) : null,
         ]
       );
 
