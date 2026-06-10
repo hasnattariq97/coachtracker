@@ -170,8 +170,8 @@
     "semantic_hash": ""
   },
   "client/src/App.jsx": {
-    "mtime": 1780381481.9851265,
-    "ast_hash": "58859c11c29a71954ae641252f6bcbfb",
+    "mtime": 1781074038.2638123,
+    "ast_hash": "a04caff0f6807b26b5cb58ce3bf0c208",
     "semantic_hash": ""
   },
   "client/src/main.jsx": {
@@ -225,8 +225,8 @@
     "semantic_hash": ""
   },
   "client/src/components/Sidebar.jsx": {
-    "mtime": 1780381529.9746294,
-    "ast_hash": "2fcf4fe8adc14cfa7738c054071b3729",
+    "mtime": 1781074049.9208987,
+    "ast_hash": "a5b90249bd34e2264bee1ff548a01497",
     "semantic_hash": ""
   },
   "client/src/components/TaskCard.jsx": {
@@ -375,8 +375,8 @@
     "semantic_hash": ""
   },
   "server/cron.js": {
-    "mtime": 1780990684.0367785,
-    "ast_hash": "f03f060e6a7a26057da394929b7323ba",
+    "mtime": 1781032607.743913,
+    "ast_hash": "992814ed4e99d36f901eb67961a3222c",
     "semantic_hash": ""
   },
   "server/db-integration.test.js": {
@@ -385,8 +385,8 @@
     "semantic_hash": ""
   },
   "server/db.js": {
-    "mtime": 1781030020.6726866,
-    "ast_hash": "3f9ed5c7edfc41c71de7fba4a93e4da8",
+    "mtime": 1781073154.783021,
+    "ast_hash": "774094b465463cec70fef00043c00db4",
     "semantic_hash": ""
   },
   "server/db.test.js": {
@@ -395,8 +395,8 @@
     "semantic_hash": ""
   },
   "server/index.js": {
-    "mtime": 1780915416.5470176,
-    "ast_hash": "3f2e6265d4d65525ea4c0d3f67a8902e",
+    "mtime": 1781073502.756587,
+    "ast_hash": "eca70184cf9cc519a8d1637fdfbc6aa6",
     "semantic_hash": ""
   },
   "server/index.test.js": {
@@ -500,8 +500,8 @@
     "semantic_hash": ""
   },
   "server/routes/coaching-insights.js": {
-    "mtime": 1780848719.7488427,
-    "ast_hash": "2700b978b54c3df93ba86a99ffffab6b",
+    "mtime": 1781032194.4139862,
+    "ast_hash": "9c47c5dba707c64252f1aa910cf0f26f",
     "semantic_hash": ""
   },
   "server/routes/notifications.js": {
@@ -1090,8 +1090,8 @@
     "semantic_hash": ""
   },
   "docs/ROADMAP.md": {
-    "mtime": 1781028286.3949301,
-    "ast_hash": "1d8dedd27c2597ef6257f94770d17921",
+    "mtime": 1781075194.8681552,
+    "ast_hash": "d15fcc515a8569d35a6539791c7ea71b",
     "semantic_hash": ""
   },
   "docs/RUFLO.md": {
@@ -1320,13 +1320,13 @@
     "semantic_hash": ""
   },
   "server/__tests__/agents/support-agent.test.js": {
-    "mtime": 1781030856.218155,
-    "ast_hash": "32c4b57e455f7286d48c3bb53fc45cd5",
+    "mtime": 1781031959.2773578,
+    "ast_hash": "15cc577014edd8489aca365e4fce0b9b",
     "semantic_hash": ""
   },
   "server/agents/support-agent.js": {
-    "mtime": 1781030683.1379018,
-    "ast_hash": "c1c1283d2d66f780f6c7b8e1ded12d5e",
+    "mtime": 1781031959.2783768,
+    "ast_hash": "c9d0fd0f4a5d169729c423f47201e365",
     "semantic_hash": ""
   },
   "server/__tests__/agents/reporting-agent.test.js": {
@@ -1340,8 +1340,8 @@
     "semantic_hash": ""
   },
   "server/agents/reporting-agent.js": {
-    "mtime": 1780990225.818916,
-    "ast_hash": "b5f8f16331c827ef9636ff0091437141",
+    "mtime": 1781073154.7820227,
+    "ast_hash": "dd2e5bba58a6a01682cb05d324371c66",
     "semantic_hash": ""
   },
   "server/services/pattern-analyzer.js": {
@@ -1360,8 +1360,8 @@
     "semantic_hash": ""
   },
   "server/agents/orchestrator.js": {
-    "mtime": 1780990670.2843707,
-    "ast_hash": "8816a574e2a1d6fcb06cff80ba0c8f99",
+    "mtime": 1781073766.900377,
+    "ast_hash": "182bfc30bfc459456ca29905b8301d00",
     "semantic_hash": ""
   },
   "server/__tests__/integration/phase9-integration.test.js": {
@@ -1410,13 +1410,78 @@
     "semantic_hash": ""
   },
   "server/services/groq-service.js": {
-    "mtime": 1781031090.6328833,
-    "ast_hash": "74f1e44c99cbcc934f7fa3ff5683e144",
+    "mtime": 1781072861.3485377,
+    "ast_hash": "c68e870028094aee5e6f1e17d2c390db",
     "semantic_hash": ""
   },
   "server/__tests__/agents/support-agent-phase9b.test.js": {
-    "mtime": 1781030733.9993024,
-    "ast_hash": "3ad36643f3d83aa96b8a91d30a6f1a2e",
+    "mtime": 1781031761.868045,
+    "ast_hash": "8c5f6ba3ce179395050c8ba25daecdce",
+    "semantic_hash": ""
+  },
+  "server/__tests__/coaching-insights-phase9b.test.js": {
+    "mtime": 1781032347.55437,
+    "ast_hash": "0143f39739bc2270ff4725b270762e0c",
+    "semantic_hash": ""
+  },
+  "SPEC_COMPLIANCE_REVIEW_TASK3.md": {
+    "mtime": 1781032493.993581,
+    "ast_hash": "4dc16ef31f86b1ebd1dd9201a9d3adbf",
+    "semantic_hash": ""
+  },
+  "server/__tests__/integration/phase9b-integration.test.js": {
+    "mtime": 1781032779.1488054,
+    "ast_hash": "0664df0aa01e384969700e5dc22203ae",
+    "semantic_hash": ""
+  },
+  "docs/PHASE9C-DESIGN-FOCUSED.md": {
+    "mtime": 1781068205.5424988,
+    "ast_hash": "99a3d85534f0123d8e7c172c99f246ce",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-06-10-phase9c-reporting-dashboard-design.md": {
+    "mtime": 1781069712.9518764,
+    "ast_hash": "97675930d1b88f36d957fa6ec6d019e4",
+    "semantic_hash": ""
+  },
+  "server/__tests__/groq-service-phase9c.test.js": {
+    "mtime": 1781072878.587669,
+    "ast_hash": "f4e86820c076d7305e7898d1bcd72ff9",
+    "semantic_hash": ""
+  },
+  "server/__tests__/agents/reporting-agent-phase9c.test.js": {
+    "mtime": 1781073366.475523,
+    "ast_hash": "915f27aa2caaea252c392a5498ead2ae",
+    "semantic_hash": ""
+  },
+  "server/db-migrations/phase9c-schema.js": {
+    "mtime": 1781073075.1326625,
+    "ast_hash": "45c70c3ae1b7bfea2f786b3d0e4a1e36",
+    "semantic_hash": ""
+  },
+  "server/__tests__/api/admin-dashboard.test.js": {
+    "mtime": 1781073544.4253998,
+    "ast_hash": "7c2be56d27886cd53460558345cda2cc",
+    "semantic_hash": ""
+  },
+  "server/routes/admin.js": {
+    "mtime": 1781073739.8667636,
+    "ast_hash": "b3591ca441c4c0d6b6eb942789246c27",
+    "semantic_hash": ""
+  },
+  "client/src/__tests__/AgentDashboard.test.jsx": {
+    "mtime": 1781074452.421306,
+    "ast_hash": "a9a22cd75d4092a5722797a10a886a82",
+    "semantic_hash": ""
+  },
+  "client/src/pages/admin/AgentDashboard.jsx": {
+    "mtime": 1781074025.6002643,
+    "ast_hash": "2f765f8effe78cd2aa0d2f4b49a1c584",
+    "semantic_hash": ""
+  },
+  "server/__tests__/integration/phase9c-integration.test.js": {
+    "mtime": 1781075511.1776881,
+    "ast_hash": "15e5424bc8d4495c96ae5bef5dcb88b8",
     "semantic_hash": ""
   }
 }
