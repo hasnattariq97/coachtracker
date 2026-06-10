@@ -288,7 +288,11 @@ Respond with ONLY valid JSON:
         ),
       ]);
 
-      const parsed = JSON.parse(response.choices[0].message.content);
+      const content = response.choices[0]?.message?.content;
+      if (!content) {
+        return this._getFallbackReportingInsights(context);
+      }
+      const parsed = JSON.parse(content);
       return parsed;
     } catch (err) {
       console.error('[GroqService] generateReportingInsights error:', err.message);
@@ -303,7 +307,7 @@ Respond with ONLY valid JSON:
     return {
       key_insights: [
         `Processed ${context.actions_24h} coaching actions in 24h`,
-        `On-time completion rate: ${Math.round((context.on_time_rate || 0) * 100)}%`,
+        `On-time completion rate: ${Math.min(100, Math.round((context.on_time_rate || 0) * 100))}%`,
         `${context.coaches_affected} coaches supported with ${context.emails_sent} emails, ${context.tags_created} tags, ${context.escalations} escalations`,
       ],
       recommendations: [

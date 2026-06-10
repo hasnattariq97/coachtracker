@@ -81,15 +81,10 @@ describe('GroqService.generateReportingInsights', () => {
 
   test('handles empty context gracefully', async () => {
     const svc = new GroqService();
-    svc.client = null;
-
-    let result;
-    await expect(async () => {
-      result = await svc.generateReportingInsights({});
-    }).not.toThrow();
-
+    const result = await svc.generateReportingInsights({});
     expect(result).toHaveProperty('key_insights');
     expect(result).toHaveProperty('confidence');
+    expect(result.recommendations).toHaveLength(3);
   });
 
   test('generateReportingInsights with mock client returns parsed response', async () => {
@@ -102,12 +97,14 @@ describe('GroqService.generateReportingInsights', () => {
       confidence: 0.9,
     };
 
+    const mockCreate = jest.fn().mockResolvedValue({
+      choices: [{ message: { content: JSON.stringify(mockResponse) } }],
+    });
+
     svc.client = {
       chat: {
         completions: {
-          create: jest.fn().mockResolvedValue({
-            choices: [{ message: { content: JSON.stringify(mockResponse) } }],
-          }),
+          create: mockCreate,
         },
       },
     };
@@ -116,5 +113,6 @@ describe('GroqService.generateReportingInsights', () => {
 
     expect(result.confidence).toBe(0.9);
     expect(result.key_insights).toEqual(['a']);
+    expect(mockCreate).toHaveBeenCalledTimes(1);
   });
 });
