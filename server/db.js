@@ -219,7 +219,7 @@ const initializeDatabase = async () => {
     const adminResult = await query(
       `INSERT INTO users (name, email, password_hash, role)
        VALUES ($1, $2, $3, 'admin')
-       ON CONFLICT (email) DO UPDATE SET name = EXCLUDED.name, password_hash = EXCLUDED.password_hash
+       ON CONFLICT (email) DO UPDATE SET name = EXCLUDED.name, password_hash = EXCLUDED.password_hash, role = EXCLUDED.role
        RETURNING id, email, role`,
       ['Hasnat Tariq', 'hasnat@niete.edu.pk', '$2b$12$G7sGVwROLniIHfm2lra11O1TcGED7yy/HEhNiNoY4QXtoa1B53PtW']
     );
