@@ -23,6 +23,7 @@ jobs:
       - name: Deploy to Railway
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        working-directory: server
         run: railway up --service spectacular-connection
 
       - name: Health check
