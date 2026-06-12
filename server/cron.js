@@ -153,11 +153,36 @@ const scheduleJobs = () => {
     phase10Running = true;
     console.log(`\n[CRON] Starting Phase 10 autonomous fix cycle...`);
     try {
-      await runDiagnosticAgent();
-      await runPlanningAgent();
-      await runImplementationAgent();
-      await runVerificationAgent();
-      await runIntegrationAgent();
+      const agents = [
+        { name: 'Diagnostic', fn: runDiagnosticAgent },
+        { name: 'Planning',   fn: runPlanningAgent },
+        { name: 'Implementation', fn: runImplementationAgent },
+        { name: 'Verification',   fn: runVerificationAgent },
+        { name: 'Integration',    fn: runIntegrationAgent },
+      ];
+      for (const agent of agents) {
+        const result = await agent.fn();
+        if (result && result.error) {
+          console.error(`[CRON] ${agent.name} Agent error: ${result.error}`);
+          try {
+            const { sendEmail } = require('./services/email');
+            await sendEmail(
+              process.env.ADMIN_EMAIL || 'hasnat@niete.edu.pk',
+              `⚠️ Phase 10 pipeline stuck — ${agent.name} Agent failed`,
+              `<h2>⚠️ Autonomous Fix Pipeline Error</h2>
+               <p>The <strong>${agent.name} Agent</strong> failed during the 5-minute cycle.</p>
+               <table style="border-collapse:collapse;width:100%;margin:16px 0">
+                 <tr><td style="padding:8px;border:1px solid #e5e7eb;font-weight:600;background:#f9fafb;width:140px">Agent</td><td style="padding:8px;border:1px solid #e5e7eb">${agent.name}</td></tr>
+                 <tr><td style="padding:8px;border:1px solid #e5e7eb;font-weight:600;background:#f9fafb">Error</td><td style="padding:8px;border:1px solid #e5e7eb;color:#dc2626;font-family:monospace">${result.error}</td></tr>
+                 <tr><td style="padding:8px;border:1px solid #e5e7eb;font-weight:600;background:#f9fafb">Time</td><td style="padding:8px;border:1px solid #e5e7eb">${new Date().toISOString()}</td></tr>
+               </table>
+               <p style="color:#6b7280;font-size:13px">Check the <a href="https://coachtracker-theta.vercel.app/admin/auto-fixes">Auto Fixes page</a> for the stuck record. The pipeline will retry automatically on the next cycle.</p>`
+            );
+          } catch (emailErr) {
+            console.error('[CRON] Failed to send error email:', emailErr.message);
+          }
+        }
+      }
       console.log(`[CRON] ✅ Phase 10 cycle complete`);
     } catch (err) {
       console.error('[CRON] Phase 10 cycle error:', err.message);
