@@ -13,11 +13,17 @@ const WORKFLOW_FILE = 'auto-fix.yml';
 
 async function runVerificationAgent() {
   try {
-    // Find the oldest auto_fix that is 'implementing' and has no test_results yet
+    // Find the oldest auto_fix ready to verify:
+    // - 'implementing' with no results (new), OR
+    // - 'testing_pending' with no results for >15 min (workflow failed/never ran — re-dispatch)
     const fixResult = await db.query(`
       SELECT a.id, a.feedback_id, a.branch_name
       FROM auto_fixes a
-      WHERE a.status = 'implementing' AND a.test_results IS NULL
+      WHERE a.test_results IS NULL
+        AND (
+          a.status = 'implementing'
+          OR (a.status = 'testing_pending' AND a.created_at < NOW() - INTERVAL '15 minutes')
+        )
       ORDER BY a.created_at ASC
       LIMIT 1
     `);
