@@ -65,21 +65,21 @@ Three autonomous agents continuously monitor coaches and provide real-time suppo
 - [@docs/PHASE9-HANDOFF-SESSION-1.md](docs/PHASE9-HANDOFF-SESSION-1.md) — Session 1 status (75% complete before cleanup)
 - [@docs/PHASE9B-HANDOFF-SESSION-1.md](docs/PHASE9B-HANDOFF-SESSION-1.md) — Phase 9b planning (AI enhancement layer with Groq)
 
-## Phase 10 — Autonomous Bug Fix System ✅ COMPLETE
+## Phase 10 — Autonomous Bug Fix System ✅ COMPLETE & FULLY AUTONOMOUS
 
-Groq-powered 5-agent pipeline that diagnoses coach-reported bugs, plans fixes, implements them via RED-GREEN-REFACTOR, runs tests, and creates one-click approval PRs for admin.
+Groq-powered 5-agent pipeline that diagnoses coach-reported bugs, creates real Git branches, runs the real test suite via GitHub Actions, and merges to `main` (triggering Railway auto-deploy) on admin approval.
 
 **How It Works:**
 1. **Feedback Submission** — Coaches submit bugs via `POST /api/feedback` (type: bug/feature_request/problem)
 2. **Diagnostic Agent** — Picks up `submitted` reports, calls Groq to identify root cause + affected files + severity
 3. **Planning Agent** — Escalates critical issues (auth.js, db.js, >5 files, security keywords, >4h effort), otherwise generates implementation plan
-4. **Implementation Agent** — RED-GREEN-REFACTOR: writes failing test → minimal code → refactor via 3 sequential Groq calls
-5. **Verification Agent** — Runs simulated test suite, records results in `auto_fixes`
-6. **Integration Agent** — Generates cryptographic approval token (SHA-256, 7-day expiry, one-time use), sends email to admin with approve button
+4. **Implementation Agent** — Creates real Git branch via GitHub API, fetches target file, commits Groq-generated fix (RED-GREEN-REFACTOR via 3 Groq calls)
+5. **Verification Agent** — Dispatches `auto-fix.yml` GitHub Actions workflow; real `npm test` runs on the fix branch and POSTs results back to Railway via `POST /api/auto-fixes/:id/test-results`
+6. **Integration Agent** — On `testing_passed`: generates cryptographic approval token, emails admin. On approval: calls GitHub Merge API → triggers existing `deploy.yml` Railway auto-deploy
 
-**Architecture:** Sequential pipeline triggered every 5 min by cron. 4 database tables (`feedback_reports`, `diagnoses`, `implementation_plans`, `auto_fixes`). Graceful degradation — pipeline never crashes on agent failure.
+**Architecture:** Sequential pipeline triggered every 5 min by cron. 4 database tables (`feedback_reports`, `diagnoses`, `implementation_plans`, `auto_fixes`). GitHub API via Node 18 native fetch (`server/services/github-api.js`). Graceful degradation — pipeline never crashes on agent failure.
 
-**Status:** ✅ Complete | 40+ tests passing | Railway cron active
+**Status:** ✅ Complete | 61+ tests passing | Railway cron active | Real GitHub API wired end-to-end
 
 ## Workflow: Superpowers (Brainstorm → Design → Plan → Execute → Review)
 
