@@ -48,7 +48,7 @@ async function runVerificationAgent() {
     // Dispatch GitHub Actions workflow with feedback_id + branch_name
     const github = new GitHubApiService();
     await github.dispatchWorkflow(WORKFLOW_FILE, 'main', {
-      feedback_id: String(autoFix.feedback_id),
+      auto_fix_id: String(autoFix.id),
       branch_name: autoFix.branch_name,
     });
 

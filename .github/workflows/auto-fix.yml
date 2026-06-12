@@ -4,8 +4,8 @@ name: Autonomous Fix — Test Runner
 on:
   workflow_dispatch:
     inputs:
-      feedback_id:
-        description: 'Feedback report ID (auto_fixes.feedback_id)'
+      auto_fix_id:
+        description: 'auto_fixes.id (UUID) — passed directly, no DB lookup needed'
         required: true
         type: string
       branch_name:
@@ -40,9 +40,7 @@ jobs:
           NODE_ENV: test
         run: |
           cd server
-          # Run tests, capture exit code and output
           npm test -- --no-coverage --json --outputFile=/tmp/test-results.json 2>/dev/null || true
-          # Parse results — jest --json writes a structured file
           PASSED=$(node -e "try{const r=require('/tmp/test-results.json');console.log(r.numPassedTests||0)}catch(e){console.log(0)}")
           FAILED=$(node -e "try{const r=require('/tmp/test-results.json');console.log(r.numFailedTests||0)}catch(e){console.log(0)}")
           SKIPPED=$(node -e "try{const r=require('/tmp/test-results.json');console.log(r.numPendingTests||0)}catch(e){console.log(0)}")
@@ -51,28 +49,12 @@ jobs:
           echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
           echo "Tests: $PASSED passed, $FAILED failed, $SKIPPED skipped"
 
-      - name: Find auto_fix id for feedback
-        id: find_fix
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: |
-          FIX_ID=$(cd server && node -e "
-          const { Pool } = require('pg');
-          const pool = new Pool({ connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: false } });
-          pool.query('SELECT id FROM auto_fixes WHERE feedback_id = \$1 ORDER BY created_at DESC LIMIT 1', ['${{ github.event.inputs.feedback_id }}'])
-            .then(r => { console.log(r.rows[0] ? r.rows[0].id : ''); pool.end(); })
-            .catch(e => { console.error(e.message); pool.end(); process.exit(1); });
-          " 2>/dev/null)
-          echo "fix_id=$FIX_ID" >> $GITHUB_OUTPUT
-          echo "Resolved auto_fix.id = $FIX_ID"
-
       - name: POST test results to Railway API
-        if: steps.find_fix.outputs.fix_id != ''
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
           WORKFLOW_CALLBACK_SECRET: ${{ secrets.WORKFLOW_CALLBACK_SECRET }}
         run: |
-          FIX_ID="${{ steps.find_fix.outputs.fix_id }}"
+          FIX_ID="${{ github.event.inputs.auto_fix_id }}"
           PASSED="${{ steps.run_tests.outputs.passed }}"
           FAILED="${{ steps.run_tests.outputs.failed }}"
           SKIPPED="${{ steps.run_tests.outputs.skipped }}"
