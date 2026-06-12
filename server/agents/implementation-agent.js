@@ -80,18 +80,35 @@ async function runImplementationAgent() {
       const branchName = `fix/feedback-${String(row.id).substring(0, 8)}`;
       const github = new GitHubApiService();
 
-      // Fetch current file content from GitHub before creating the branch
+      // Fetch current file content from GitHub before creating the branch.
+      // Groq often returns bare filenames (e.g. 'login.js'); resolve to actual repo path first.
       let currentContent = '// file content unavailable';
       let fileSha = null;
-      const resolvedFile = targetFile;
+      let resolvedFile = targetFile;
 
       if (targetFile && process.env.GITHUB_TOKEN) {
+        // Step 1: resolve bare filename to full repo path
         try {
-          const fileData = await github.getFileSha(targetFile, 'main');
-          currentContent = fileData.content;
-          fileSha = fileData.sha;
-        } catch (fileErr) {
-          console.warn(`[Implementation Agent] Could not fetch ${targetFile}: ${fileErr.message}`);
+          const found = await github.findFileInRepo(targetFile, 'main');
+          if (found) {
+            console.log(`[Implementation Agent] Resolved "${targetFile}" → "${found}"`);
+            resolvedFile = found;
+          } else {
+            console.warn(`[Implementation Agent] Could not resolve "${targetFile}" in repo — proceeding without file content`);
+          }
+        } catch (resolveErr) {
+          console.warn(`[Implementation Agent] findFileInRepo failed: ${resolveErr.message}`);
+        }
+
+        // Step 2: fetch actual file content using the resolved path
+        if (resolvedFile) {
+          try {
+            const fileData = await github.getFileSha(resolvedFile, 'main');
+            currentContent = fileData.content;
+            fileSha = fileData.sha;
+          } catch (fileErr) {
+            console.warn(`[Implementation Agent] Could not fetch ${resolvedFile}: ${fileErr.message}`);
+          }
         }
       }
 

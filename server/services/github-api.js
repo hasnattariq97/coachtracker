@@ -107,6 +107,78 @@ class GitHubApiService {
   }
 
   /**
+   * Searches the full repo tree for the best matching file path.
+   * Groq often returns bare filenames (e.g. 'login.js') that don't exist at
+   * that path. This resolves them to the actual full path in the repo.
+   *
+   * Resolution order:
+   *   1. Exact path match
+   *   2. Case-insensitive basename match
+   *   3. Stem fuzzy match (e.g. 'login' → 'LoginPage.jsx')
+   *   4. Keyword match (any significant word in filename appears in path)
+   *
+   * Returns the resolved path string, or null if no match found.
+   */
+  async findFileInRepo(filename, branch = 'main') {
+    const refData = await this._fetch(`/git/refs/heads/${encodeURIComponent(branch)}`);
+    const commitSha = refData.object.sha;
+    const commitData = await this._fetch(`/git/commits/${commitSha}`);
+    const treeData = await this._fetch(`/git/trees/${commitData.tree.sha}?recursive=1`);
+    const allPaths = (treeData.tree || [])
+      .filter(item => item.type === 'blob')
+      .map(item => item.path);
+
+    const norm = filename.replace(/\\/g, '/');
+
+    // 1. Exact match
+    if (allPaths.includes(norm)) return norm;
+
+    const inputBase = norm.split('/').pop();
+    const inputExt = inputBase.split('.').pop().toLowerCase();
+    const inputStem = inputBase.replace(/\.[^.]+$/, '').toLowerCase();
+
+    const isScript = ext => ['js', 'jsx', 'ts', 'tsx'].includes(ext);
+
+    // 2. Case-insensitive basename match
+    const baseMatches = allPaths.filter(p =>
+      p.split('/').pop().toLowerCase() === inputBase.toLowerCase() && isScript(p.split('.').pop().toLowerCase())
+    );
+    if (baseMatches.length === 1) return baseMatches[0];
+    if (baseMatches.length > 1) {
+      const prefer = ['jsx', 'tsx'].includes(inputExt)
+        ? baseMatches.find(p => p.startsWith('client/')) : baseMatches.find(p => p.startsWith('server/'));
+      return prefer || baseMatches[0];
+    }
+
+    // 3. Stem fuzzy match — e.g. 'login' matches 'LoginPage.jsx'
+    const stemMatches = allPaths.filter(p => {
+      if (!isScript(p.split('.').pop().toLowerCase())) return false;
+      const pStem = p.split('/').pop().replace(/\.[^.]+$/, '').toLowerCase();
+      return pStem.includes(inputStem) || inputStem.includes(pStem);
+    });
+    if (stemMatches.length > 0) {
+      stemMatches.sort((a, b) => a.length - b.length);
+      return stemMatches[0];
+    }
+
+    // 4. Keyword match — extract CamelCase/lowercase words ≥4 chars
+    const words = (inputBase.match(/[A-Z][a-z]+|[a-z]{4,}/g) || []).map(w => w.toLowerCase());
+    if (words.length > 0) {
+      const kwMatches = allPaths.filter(p => {
+        if (!isScript(p.split('.').pop().toLowerCase())) return false;
+        const pLower = p.toLowerCase();
+        return words.some(w => pLower.includes(w));
+      });
+      if (kwMatches.length > 0) {
+        kwMatches.sort((a, b) => a.length - b.length);
+        return kwMatches[0];
+      }
+    }
+
+    return null;
+  }
+
+  /**
    * Returns the most-recent workflow run for workflowFile on headBranch,
    * or null if none found.
    */

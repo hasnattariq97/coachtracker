@@ -16,12 +16,13 @@ on:
 jobs:
   test-fix-branch:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Checkout fix branch
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.inputs.branch_name }}
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -31,8 +32,8 @@ jobs:
       - name: Install server dependencies
         run: cd server && npm install
 
-      - name: Run tests and capture results
-        id: run_tests
+      - name: Run tests on fix branch
+        id: fix_tests
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
@@ -40,14 +41,31 @@ jobs:
           NODE_ENV: test
         run: |
           cd server
-          npm test -- --no-coverage --json --outputFile=/tmp/test-results.json 2>/dev/null || true
-          PASSED=$(node -e "try{const r=require('/tmp/test-results.json');console.log(r.numPassedTests||0)}catch(e){console.log(0)}")
-          FAILED=$(node -e "try{const r=require('/tmp/test-results.json');console.log(r.numFailedTests||0)}catch(e){console.log(0)}")
-          SKIPPED=$(node -e "try{const r=require('/tmp/test-results.json');console.log(r.numPendingTests||0)}catch(e){console.log(0)}")
-          echo "passed=$PASSED" >> $GITHUB_OUTPUT
-          echo "failed=$FAILED" >> $GITHUB_OUTPUT
-          echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
-          echo "Tests: $PASSED passed, $FAILED failed, $SKIPPED skipped"
+          npm test -- --no-coverage --json --outputFile=/tmp/fix-results.json 2>/dev/null || true
+          FIX_PASSED=$(node -e "try{const r=require('/tmp/fix-results.json');console.log(r.numPassedTests||0)}catch(e){console.log(0)}")
+          FIX_FAILED=$(node -e "try{const r=require('/tmp/fix-results.json');console.log(r.numFailedTests||0)}catch(e){console.log(0)}")
+          FIX_SKIPPED=$(node -e "try{const r=require('/tmp/fix-results.json');console.log(r.numPendingTests||0)}catch(e){console.log(0)}")
+          echo "passed=$FIX_PASSED" >> $GITHUB_OUTPUT
+          echo "failed=$FIX_FAILED" >> $GITHUB_OUTPUT
+          echo "skipped=$FIX_SKIPPED" >> $GITHUB_OUTPUT
+          echo "Fix branch: $FIX_PASSED passed, $FIX_FAILED failed"
+
+      - name: Run tests on main branch (baseline)
+        id: baseline_tests
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
+          NODE_ENV: test
+        run: |
+          # Use git worktree so we don't lose the fix branch checkout
+          git worktree add /tmp/main-worktree main
+          cd /tmp/main-worktree/server && npm install
+          npm test -- --no-coverage --json --outputFile=/tmp/baseline-results.json 2>/dev/null || true
+          git worktree remove /tmp/main-worktree --force 2>/dev/null || true
+          BASELINE_FAILED=$(node -e "try{const r=require('/tmp/baseline-results.json');console.log(r.numFailedTests||0)}catch(e){console.log(0)}")
+          echo "baseline_failed=$BASELINE_FAILED" >> $GITHUB_OUTPUT
+          echo "Main baseline: $BASELINE_FAILED failed"
 
       - name: POST test results to Railway API
         env:
@@ -55,15 +73,17 @@ jobs:
           WORKFLOW_CALLBACK_SECRET: ${{ secrets.WORKFLOW_CALLBACK_SECRET }}
         run: |
           FIX_ID="${{ github.event.inputs.auto_fix_id }}"
-          PASSED="${{ steps.run_tests.outputs.passed }}"
-          FAILED="${{ steps.run_tests.outputs.failed }}"
-          SKIPPED="${{ steps.run_tests.outputs.skipped }}"
+          PASSED="${{ steps.fix_tests.outputs.passed }}"
+          FAILED="${{ steps.fix_tests.outputs.failed }}"
+          SKIPPED="${{ steps.fix_tests.outputs.skipped }}"
+          BASELINE_FAILED="${{ steps.baseline_tests.outputs.baseline_failed }}"
           RUN_ID="${{ github.run_id }}"
 
           curl -s -X POST "${BASE_URL}/api/auto-fixes/${FIX_ID}/test-results" \
             -H "Content-Type: application/json" \
             -H "x-callback-secret: ${WORKFLOW_CALLBACK_SECRET}" \
-            -d "{\"passed\":${PASSED},\"failed\":${FAILED},\"skipped\":${SKIPPED},\"workflow_run_id\":\"${RUN_ID}\"}" \
+            -d "{\"passed\":${PASSED},\"failed\":${FAILED},\"baseline_failed\":${BASELINE_FAILED},\"skipped\":${SKIPPED},\"workflow_run_id\":\"${RUN_ID}\"}" \
             | tee /tmp/callback-response.json
 
           echo "Callback response: $(cat /tmp/callback-response.json)"
+          echo "Summary: fix branch ${FAILED} failed vs main baseline ${BASELINE_FAILED} failed"

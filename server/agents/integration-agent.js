@@ -83,6 +83,47 @@ async function runIntegrationAgent() {
     `);
     const autoFix = testedResult.rows[0];
 
+    // ── 2b. Notify admin when tests failed ──────────────────────────────────
+    const failedResult = await db.query(`
+      SELECT a.id, a.feedback_id, a.branch_name, a.test_results, f.title
+      FROM auto_fixes a
+      JOIN feedback_reports f ON a.feedback_id = f.id
+      WHERE a.status = 'testing_failed' AND a.approval_token_hash IS NULL
+      ORDER BY a.created_at ASC
+      LIMIT 1
+    `);
+    const failedFix = failedResult.rows[0];
+
+    if (failedFix) {
+      let results = {};
+      try {
+        results = typeof failedFix.test_results === 'string'
+          ? JSON.parse(failedFix.test_results) : (failedFix.test_results || {});
+      } catch {}
+
+      await db.query(
+        `UPDATE auto_fixes SET approval_token_hash = 'notified' WHERE id = $1`,
+        [failedFix.id]
+      );
+
+      const { sendEmail } = require('../services/email');
+      await sendEmail(
+        ADMIN_EMAIL,
+        `❌ Auto-fix tests failed: ${failedFix.title}`,
+        `<h2>❌ Auto-Fix Tests Failed — Manual Fix Required</h2>
+         <p>The autonomous pipeline generated a fix but tests did not pass:</p>
+         <table style="border-collapse:collapse;width:100%;margin:16px 0">
+           <tr><td style="padding:8px;border:1px solid #e5e7eb;font-weight:600;background:#f9fafb;width:140px">Bug</td><td style="padding:8px;border:1px solid #e5e7eb">${failedFix.title}</td></tr>
+           <tr><td style="padding:8px;border:1px solid #e5e7eb;font-weight:600;background:#f9fafb">Branch</td><td style="padding:8px;border:1px solid #e5e7eb;font-family:monospace">${failedFix.branch_name}</td></tr>
+           <tr><td style="padding:8px;border:1px solid #e5e7eb;font-weight:600;background:#f9fafb">Tests</td><td style="padding:8px;border:1px solid #e5e7eb;color:#dc2626">${results.passed || 0} passed, ${results.failed || 0} failed</td></tr>
+         </table>
+         <p style="color:#6b7280;font-size:13px">Review the branch on <a href="https://github.com/hasnattariq97/coachtracker/tree/${failedFix.branch_name}">GitHub</a> and fix manually, or check the <a href="https://coachtracker-theta.vercel.app/admin/auto-fixes">Auto Fixes page</a>.</p>`
+      );
+
+      console.log(`[Integration Agent] ✉️ Testing-failed email sent for: "${failedFix.title}"`);
+      return { notified: true, reason: 'testing_failed', fixId: failedFix.id };
+    }
+
     if (!autoFix) {
       return { skipped: true, reason: 'No tested fixes to integrate' };
     }
