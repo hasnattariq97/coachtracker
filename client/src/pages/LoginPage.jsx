@@ -1,17 +1,20 @@
+```jsx
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { Zap, Mail, Lock } from 'lucide-react';
+import { Zap, Mail, Lock, Eye, EyeOff } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 const LoginPage = () => {
-  const [email, setEmail]       = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const { login, loading, isAuthenticated, user } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (sessionStorage.getItem('session_expired')) {
+    const sessionExpired = sessionStorage.getItem('session_expired');
+    if (sessionExpired) {
       sessionStorage.removeItem('session_expired');
       toast.error('Your session expired. Please sign in again.');
     }
@@ -19,18 +22,39 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (isAuthenticated && user) {
-      navigate(user.role === 'admin' ? '/admin/dashboard' : '/coach/dashboard', { replace: true });
+      const dashboardPath = user.role === 'admin' ? '/admin/dashboard' : '/coach/dashboard';
+      navigate(dashboardPath, { replace: true });
     }
   }, [isAuthenticated, user, navigate]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     try {
+      if (!email || !password) {
+        toast.error('Please fill in both email and password.');
+        return;
+      }
       const decoded = await login(email, password);
       toast.success(`Welcome back, ${decoded.name || 'Coach'}!`);
-    } catch (err) {
-      toast.error(err.message || 'Login failed. Please try again.');
+    } catch (error) {
+      if (error instanceof Error) {
+        toast.error(error.message || 'Login failed. Please try again.');
+      } else {
+        toast.error('An unknown error occurred.');
+      }
     }
+  };
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleShowPassword = () => {
+    setShowPassword(!showPassword);
   };
 
   return (
@@ -49,15 +73,15 @@ const LoginPage = () => {
             "Great coaching isn't about doing the work — it's about building momentum."
           </blockquote>
           <div className="flex gap-3 items-start">
-            {['Stay accountable', 'Track progress', 'Celebrate wins'].map(t => (
-              <div key={t} className="bg-white/10 rounded-xl px-3 py-1.5 text-xs font-medium text-primary-100">
-                {t}
+            {['Stay accountable', 'Track progress', 'Celebrate wins'].map((tag) => (
+              <div key={tag} className="bg-white/10 rounded-xl px-3 py-1.5 text-xs font-medium text-primary-100">
+                {tag}
               </div>
             ))}
           </div>
         </div>
 
-        <p className="text-primary-300 text-xs">© {new Date().getFullYear()} Coach Tracker</p>
+        <p className="text-primary-300 text-xs"> {new Date().getFullYear()} Coach Tracker</p>
       </div>
 
       {/* Right panel */}
@@ -71,76 +95,47 @@ const LoginPage = () => {
             <span className="font-heading font-bold text-lg text-primary-900">Coach Tracker</span>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-sm border border-primary-100 p-8">
-            <div className="mb-7">
-              <h1 className="text-2xl font-heading font-bold text-primary-900 mb-1.5">
-                Welcome back
-              </h1>
-              <p className="text-sm text-slate-500">
-                Log in to manage your tasks and keep momentum going.
-              </p>
+          <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-sm border border-primary-200 p-6">
+            <h2 className="font-heading font-bold text-lg mb-4">Sign in to your account</h2>
+
+            <div className="flex flex-col mb-4">
+              <label className="text-sm font-medium text-primary-700 mb-2" htmlFor="email">Email address</label>
+              <input
+                type="email"
+                id="email"
+                value={email}
+                onChange={handleEmailChange}
+                placeholder="you@example.com"
+                className="bg-primary-50 border border-primary-200 rounded-lg p-3 text-sm text-primary-700"
+              />
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4" noValidate>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-primary-800 mb-1.5">
-                  Email
-                </label>
-                <div className="relative">
-                  <Mail size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
-                  <input
-                    id="email"
-                    type="email"
-                    value={email}
-                    onChange={e => setEmail(e.target.value)}
-                    placeholder="your@email.com"
-                    required
-                    disabled={loading}
-                    className="w-full pl-9 pr-4 py-2.5 border border-slate-200 rounded-lg text-sm
-                               bg-slate-50 focus:bg-white focus:border-primary-400
-                               focus:ring-2 focus:ring-primary-100 outline-none transition-all
-                               disabled:opacity-60 disabled:cursor-not-allowed"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="password" className="block text-sm font-medium text-primary-800 mb-1.5">
-                  Password
-                </label>
-                <div className="relative">
-                  <Lock size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
-                  <input
-                    id="password"
-                    type="password"
-                    value={password}
-                    onChange={e => setPassword(e.target.value)}
-                    placeholder="••••••••"
-                    required
-                    disabled={loading}
-                    className="w-full pl-9 pr-4 py-2.5 border border-slate-200 rounded-lg text-sm
-                               bg-slate-50 focus:bg-white focus:border-primary-400
-                               focus:ring-2 focus:ring-primary-100 outline-none transition-all
-                               disabled:opacity-60 disabled:cursor-not-allowed"
-                  />
-                </div>
-              </div>
-
+            <div className="flex flex-col mb-4 relative">
+              <label className="text-sm font-medium text-primary-700 mb-2" htmlFor="password">Password</label>
+              <input
+                type={showPassword ? 'text' : 'password'}
+                id="password"
+                value={password}
+                onChange={handlePasswordChange}
+                placeholder="Password"
+                className="bg-primary-50 border border-primary-200 rounded-lg p-3 text-sm text-primary-700"
+              />
               <button
-                type="submit"
-                disabled={loading || !email || !password}
-                className="w-full mt-2 py-2.5 bg-primary-600 text-white text-sm font-semibold
-                           rounded-lg hover:bg-primary-700 active:scale-[0.98] transition-all duration-150
-                           disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px]
-                           flex items-center justify-center gap-2"
+                type="button"
+                className="absolute right-3 top-10"
+                onClick={handleShowPassword}
               >
-                {loading
-                  ? <><div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" /> Signing in…</>
-                  : 'Sign in'
-                }
+                {showPassword ? <EyeOff size={18} className="text-primary-700" /> : <Eye size={18} className="text-primary-700" />}
               </button>
-            </form>
-          </div>
+            </div>
+
+            <button
+              type="submit"
+              className="bg-primary-700 hover:bg-primary-800 text-white rounded-lg p-3 text-sm font-medium w-full"
+            >
+              Sign in
+            </button>
+          </form>
         </div>
       </div>
     </div>
@@ -148,3 +143,4 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+```
