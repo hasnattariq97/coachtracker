@@ -56,9 +56,9 @@ jobs:
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
-          FIX_ID=$(node -e "
+          FIX_ID=$(cd server && node -e "
           const { Pool } = require('pg');
-          const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+          const pool = new Pool({ connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: false } });
           pool.query('SELECT id FROM auto_fixes WHERE feedback_id = \$1 ORDER BY created_at DESC LIMIT 1', ['${{ github.event.inputs.feedback_id }}'])
             .then(r => { console.log(r.rows[0] ? r.rows[0].id : ''); pool.end(); })
             .catch(e => { console.error(e.message); pool.end(); process.exit(1); });
