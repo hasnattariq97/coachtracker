@@ -125,16 +125,36 @@ Complexity: simple|moderate|complex`);
     const effortMatch = planText.match(/Estimated hours?:\s*([\d.]+)/i);
     const estimatedEffort = effortMatch ? parseFloat(effortMatch[1]) : 1.5;
 
-    if (estimatedEffort > 4) {
+    if (estimatedEffort > 8) {
+      const effortReason = `Estimated effort too high (${estimatedEffort}h > 8h)`;
       await db.query(
         `UPDATE diagnoses SET escalation_reason = $1 WHERE feedback_id = $2`,
-        [`Estimated effort too high (${estimatedEffort}h > 4h)`, row.id]
+        [effortReason, row.id]
       );
       await db.query(
         `UPDATE feedback_reports SET status = 'escalated', updated_at = NOW() WHERE id = $1`,
         [row.id]
       );
       console.log(`[Planning Agent] ⚠️ Escalated: effort ${estimatedEffort}h`);
+
+      try {
+        const { sendApprovalEmail } = require('../services/email');
+        const diagResult = await db.query(
+          'SELECT root_cause, affected_files FROM diagnoses WHERE feedback_id = $1',
+          [row.id]
+        );
+        const diag = diagResult.rows[0];
+        await sendApprovalEmail(
+          process.env.ADMIN_EMAIL || 'hasnat@niete.edu.pk',
+          row.title,
+          'escalated',
+          { reason: effortReason, rootCause: diag?.root_cause, affectedFiles: diag?.affected_files }
+        );
+        console.log('[Planning Agent] ✉️ Effort escalation email sent to admin');
+      } catch (emailErr) {
+        console.error('[Planning Agent] Email failed (non-fatal):', emailErr.message);
+      }
+
       return { escalated: true, reason: 'Effort too high', feedbackId: row.id };
     }
 
