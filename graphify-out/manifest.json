@@ -170,8 +170,8 @@
     "semantic_hash": ""
   },
   "client/src/App.jsx": {
-    "mtime": 1781074038.2638123,
-    "ast_hash": "a04caff0f6807b26b5cb58ce3bf0c208",
+    "mtime": 1781239039.795013,
+    "ast_hash": "c18dc3c730513b7633537204cf09f271",
     "semantic_hash": ""
   },
   "client/src/main.jsx": {
@@ -225,8 +225,8 @@
     "semantic_hash": ""
   },
   "client/src/components/Sidebar.jsx": {
-    "mtime": 1781074049.9208987,
-    "ast_hash": "a5b90249bd34e2264bee1ff548a01497",
+    "mtime": 1781239059.7175305,
+    "ast_hash": "784168612c1528c6a1d2505f05a4c1dc",
     "semantic_hash": ""
   },
   "client/src/components/TaskCard.jsx": {
@@ -375,8 +375,8 @@
     "semantic_hash": ""
   },
   "server/cron.js": {
-    "mtime": 1781032607.743913,
-    "ast_hash": "992814ed4e99d36f901eb67961a3222c",
+    "mtime": 1781236165.1779096,
+    "ast_hash": "68b6cb48b6c38b718c4b7f5f150d3401",
     "semantic_hash": ""
   },
   "server/db-integration.test.js": {
@@ -385,8 +385,8 @@
     "semantic_hash": ""
   },
   "server/db.js": {
-    "mtime": 1781073154.783021,
-    "ast_hash": "774094b465463cec70fef00043c00db4",
+    "mtime": 1781238849.0742922,
+    "ast_hash": "1e9b6f659386d3379fc2ab8ea1473b0a",
     "semantic_hash": ""
   },
   "server/db.test.js": {
@@ -395,8 +395,8 @@
     "semantic_hash": ""
   },
   "server/index.js": {
-    "mtime": 1781073502.756587,
-    "ast_hash": "eca70184cf9cc519a8d1637fdfbc6aa6",
+    "mtime": 1781089790.7469845,
+    "ast_hash": "0103f98495e04d85ff368258e4adecde",
     "semantic_hash": ""
   },
   "server/index.test.js": {
@@ -450,8 +450,8 @@
     "semantic_hash": ""
   },
   "server/test-setup.js": {
-    "mtime": 1780650537.775236,
-    "ast_hash": "9ce14f108a52d0190f64c2827c1f1faa",
+    "mtime": 1781239841.438989,
+    "ast_hash": "b0b5ce5313faddce27dd92bc4b155ed9",
     "semantic_hash": ""
   },
   "server/test-simple.js": {
@@ -545,8 +545,8 @@
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1781028253.542306,
-    "ast_hash": "5f8f4e8fc62ac9361e2dd0de0f1dcd97",
+    "mtime": 1781237833.697583,
+    "ast_hash": "545f6d7ef2713ea28dc58e6b6ec585a5",
     "semantic_hash": ""
   },
   "COMPLETION_REPORT.md": {
@@ -635,8 +635,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1780774775.1039615,
-    "ast_hash": "396386bc1383d5ff449c450f84c42649",
+    "mtime": 1781237842.3030503,
+    "ast_hash": "7db1410b401fbc760ee1e18c47901625",
     "semantic_hash": ""
   },
   "REORGANIZATION_SUMMARY.md": {
@@ -1090,8 +1090,8 @@
     "semantic_hash": ""
   },
   "docs/ROADMAP.md": {
-    "mtime": 1781075194.8681552,
-    "ast_hash": "d15fcc515a8569d35a6539791c7ea71b",
+    "mtime": 1781090363.5204139,
+    "ast_hash": "437fbac8bef440cc246ceafef8d239f3",
     "semantic_hash": ""
   },
   "docs/RUFLO.md": {
@@ -1215,18 +1215,18 @@
     "semantic_hash": ""
   },
   "server/jobs/email-processor.js": {
-    "mtime": 1780917915.6800606,
-    "ast_hash": "ca1bf0b00330293ffb8fff9b2f8643c7",
+    "mtime": 1781238529.362984,
+    "ast_hash": "f1b687911a65251cdbf84c51729b82c1",
     "semantic_hash": ""
   },
   "server/services/email-templates.js": {
-    "mtime": 1780911480.9290626,
-    "ast_hash": "cfa12d0cf4fdb89f49aafaeb44feacf8",
+    "mtime": 1781238289.4233596,
+    "ast_hash": "d69f2d2bd9469ab50ad9029a0220b57a",
     "semantic_hash": ""
   },
   "server/services/email.js": {
-    "mtime": 1780981452.5300636,
-    "ast_hash": "637e1304ffc2992a5b5cf5307a55d456",
+    "mtime": 1781236429.545231,
+    "ast_hash": "fa90efa0ce5e62119a9c8c91f82c3f19",
     "semantic_hash": ""
   },
   ".claude/skills/skill-github-push/SKILL.md": {
@@ -1340,13 +1340,13 @@
     "semantic_hash": ""
   },
   "server/agents/reporting-agent.js": {
-    "mtime": 1781073154.7820227,
-    "ast_hash": "dd2e5bba58a6a01682cb05d324371c66",
+    "mtime": 1781237820.20821,
+    "ast_hash": "800a9f50ba4312d5509a54b0e4972dad",
     "semantic_hash": ""
   },
   "server/services/pattern-analyzer.js": {
-    "mtime": 1780990536.3579216,
-    "ast_hash": "b9cf255af14b850d66f92ca04db314f0",
+    "mtime": 1781238821.6033857,
+    "ast_hash": "dc324bdd32321a7c14174df215643c41",
     "semantic_hash": ""
   },
   "docs/PHASE9-TASK5-COMPLIANCE-REVIEW.md": {
@@ -1410,8 +1410,8 @@
     "semantic_hash": ""
   },
   "server/services/groq-service.js": {
-    "mtime": 1781072861.3485377,
-    "ast_hash": "c68e870028094aee5e6f1e17d2c390db",
+    "mtime": 1781238835.7174947,
+    "ast_hash": "632fd0d5e72838f1576f972fc0a95eda",
     "semantic_hash": ""
   },
   "server/__tests__/agents/support-agent-phase9b.test.js": {
@@ -1420,8 +1420,8 @@
     "semantic_hash": ""
   },
   "server/__tests__/coaching-insights-phase9b.test.js": {
-    "mtime": 1781032347.55437,
-    "ast_hash": "0143f39739bc2270ff4725b270762e0c",
+    "mtime": 1781089790.7449882,
+    "ast_hash": "309e95fd362538518cb0407a98b3b1f8",
     "semantic_hash": ""
   },
   "SPEC_COMPLIANCE_REVIEW_TASK3.md": {
@@ -1482,6 +1482,111 @@
   "server/__tests__/integration/phase9c-integration.test.js": {
     "mtime": 1781075511.1776881,
     "ast_hash": "15e5424bc8d4495c96ae5bef5dcb88b8",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/20260610-phase9b-autonomous-bug-fix-design.md": {
+    "mtime": 1781235012.420963,
+    "ast_hash": "7c3a2b376fd7935a3b28ae5bacf3748e",
+    "semantic_hash": ""
+  },
+  "client/src/pages/admin/AutoFixesPage.jsx": {
+    "mtime": 1781239016.6224866,
+    "ast_hash": "23f1431f051e51c7db8957feeda8aa97",
+    "semantic_hash": ""
+  },
+  "client/src/pages/coach/FeedbackPage.jsx": {
+    "mtime": 1781238988.4114535,
+    "ast_hash": "2e95a32e7dc7c79bd766ad99b9aeec95",
+    "semantic_hash": ""
+  },
+  "server/__tests__/agents/diagnostic-agent.test.js": {
+    "mtime": 1781089589.008436,
+    "ast_hash": "2a9746531bf44cde99a8bc8e9975ca66",
+    "semantic_hash": ""
+  },
+  "server/__tests__/agents/implementation-agent.test.js": {
+    "mtime": 1781090449.8599954,
+    "ast_hash": "4e0159e5b5a1b58c03093e53a1eddba2",
+    "semantic_hash": ""
+  },
+  "server/__tests__/agents/integration-agent.test.js": {
+    "mtime": 1781090466.279319,
+    "ast_hash": "290b747e79c5ce8cf6995be166eb9cd7",
+    "semantic_hash": ""
+  },
+  "server/__tests__/agents/planning-agent.test.js": {
+    "mtime": 1781089615.7943766,
+    "ast_hash": "a2ba186101cb0e2e610c6976baddc114",
+    "semantic_hash": ""
+  },
+  "server/__tests__/agents/verification-agent.test.js": {
+    "mtime": 1781090457.8300965,
+    "ast_hash": "91334d0fec892280c0029f884d78daef",
+    "semantic_hash": ""
+  },
+  "server/__tests__/cron-scheduling.test.js": {
+    "mtime": 1781234983.382743,
+    "ast_hash": "f000e1e263291765970b6a4d92d8122d",
+    "semantic_hash": ""
+  },
+  "server/__tests__/integration/phase10-e2e.test.js": {
+    "mtime": 1781090280.1993575,
+    "ast_hash": "a15651d4a19cc5c2af2c6db76ca06a08",
+    "semantic_hash": ""
+  },
+  "server/__tests__/routes/feedback.test.js": {
+    "mtime": 1781088563.068226,
+    "ast_hash": "025d64a3f4def393f7b606a821bc4afd",
+    "semantic_hash": ""
+  },
+  "server/agents/diagnostic-agent.js": {
+    "mtime": 1781236182.9622989,
+    "ast_hash": "4f23ca3303163da0cec1b9c7edd8d66c",
+    "semantic_hash": ""
+  },
+  "server/agents/implementation-agent.js": {
+    "mtime": 1781236448.9398594,
+    "ast_hash": "a713cb74398f921b08a8bc259f35282c",
+    "semantic_hash": ""
+  },
+  "server/agents/integration-agent.js": {
+    "mtime": 1781236063.5299504,
+    "ast_hash": "1c0a6dcc091a9035ad4b7f6c96dc165d",
+    "semantic_hash": ""
+  },
+  "server/agents/planning-agent.js": {
+    "mtime": 1781089170.2487562,
+    "ast_hash": "19a9af7a593a6cfe33ee9c8ddb01a22a",
+    "semantic_hash": ""
+  },
+  "server/agents/verification-agent.js": {
+    "mtime": 1781236315.9673128,
+    "ast_hash": "94ec70b390227911aeaa6940d824f38e",
+    "semantic_hash": ""
+  },
+  "server/db-migrations/20260610-feedback-schema.js": {
+    "mtime": 1781236439.3386917,
+    "ast_hash": "32ae0f3e26bdeb8212a3341ce218f49b",
+    "semantic_hash": ""
+  },
+  "server/routes/auto-fixes.js": {
+    "mtime": 1781237823.3869317,
+    "ast_hash": "d981e6902481c4de329b99940b060e71",
+    "semantic_hash": ""
+  },
+  "server/routes/feedback.js": {
+    "mtime": 1781236086.9159665,
+    "ast_hash": "914b4253b3852deb8a6654d4362dcaa3",
+    "semantic_hash": ""
+  },
+  ".github/workflows/auto-fix.yml": {
+    "mtime": 1781090311.4816644,
+    "ast_hash": "28d4c82b068568f545a13022c60b9d89",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/20260610-phase9b-implementation.md": {
+    "mtime": 1781081647.0552812,
+    "ast_hash": "fff34aef58fbd5c1444ab851c13bb939",
     "semantic_hash": ""
   }
 }
