@@ -4,7 +4,10 @@ const GROQ_MODEL = 'llama-3.3-70b-versatile';
 const GROQ_TIMEOUT_MS = 20000;
 
 const CRITICAL_FILES = ['auth.js', 'db.js', 'cron.js', 'index.js'];
-const SECURITY_KEYWORDS = ['security', 'password', 'login', 'encrypt', 'token', 'api key', 'credential', 'auth'];
+// Only escalate on actual threat language — not common words like 'password' or 'login'
+// that appear in ordinary UI bug descriptions
+const SECURITY_KEYWORDS = ['sql injection', 'xss', 'csrf', 'bypass', 'vulnerability', 'exploit',
+  'unauthorized access', 'privilege escalation', 'remote code', 'injection attack'];
 
 let groqClient = null;
 if (process.env.NODE_ENV !== 'test' && process.env.GROQ_API_KEY) {
