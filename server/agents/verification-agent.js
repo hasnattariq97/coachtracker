@@ -1,71 +1,70 @@
+// server/agents/verification-agent.js
 /**
  * @phase 10
  * @status active
  * @owner phase-builder
- * @last_updated 2026-06-10T00:00:00Z
- * @beads ["verification-agent-phase10"]
- */
-
-/**
- * Verification Agent — Phase 10 Autonomous Bug Fix System
- *
- * Runs tests on the implemented branch and records results in auto_fixes.
+ * @last_updated 2026-06-12T00:00:00Z
  */
 
 const db = require('../db');
+const { GitHubApiService } = require('../services/github-api');
+
+const WORKFLOW_FILE = 'auto-fix.yml';
 
 async function runVerificationAgent() {
   try {
-    // Find implementing fixes without test results
-    const autoFix = await db.prepare(`
+    // Find the oldest auto_fix that is 'implementing' and has no test_results yet
+    const fixResult = await db.query(`
       SELECT a.id, a.feedback_id, a.branch_name
       FROM auto_fixes a
       WHERE a.status = 'implementing' AND a.test_results IS NULL
       ORDER BY a.created_at ASC
       LIMIT 1
-    `).get();
+    `);
+    const autoFix = fixResult.rows[0];
 
     if (!autoFix) {
       return { skipped: true, reason: 'No implementations to verify' };
     }
 
-    console.log(`[Verification Agent] Verifying: ${autoFix.branch_name}`);
+    console.log(`[Verification Agent] Dispatching tests for: ${autoFix.branch_name}`);
 
-    // In production, this would checkout the branch and run real tests.
-    // For now, simulate test execution (real implementation: use child_process + git checkout).
-    const testResults = await simulateTestRun(autoFix.branch_name);
+    // Mark as testing_pending so we don't re-dispatch on next cycle
+    await db.query(
+      `UPDATE auto_fixes SET status = 'testing_pending' WHERE id = $1`,
+      [autoFix.id]
+    );
+    await db.query(
+      `UPDATE feedback_reports SET status = 'testing', updated_at = NOW() WHERE id = $1`,
+      [autoFix.feedback_id]
+    );
 
-    const allPassed = testResults.failed === 0;
-    const newStatus = allPassed ? 'testing_passed' : 'testing_failed';
+    // Dispatch GitHub Actions workflow with feedback_id + branch_name
+    const github = new GitHubApiService();
+    await github.dispatchWorkflow(WORKFLOW_FILE, 'main', {
+      feedback_id: String(autoFix.feedback_id),
+      branch_name: autoFix.branch_name,
+    });
 
-    await db.prepare(`
-      UPDATE auto_fixes SET status = $1, test_results = $2 WHERE id = $3
-    `).run(newStatus, JSON.stringify(testResults), autoFix.id);
+    console.log(`[Verification Agent] ✅ Dispatched ${WORKFLOW_FILE} for branch ${autoFix.branch_name}`);
+    return { dispatched: true, branch: autoFix.branch_name, feedbackId: autoFix.feedback_id };
 
-    await db.prepare(`
-      UPDATE feedback_reports SET status = 'testing', updated_at = NOW() WHERE id = $1
-    `).run(autoFix.feedback_id);
-
-    console.log(`[Verification Agent] ✅ ${testResults.passed} passed, ${testResults.failed} failed → ${newStatus}`);
-    return { success: true, status: newStatus, results: testResults };
+    // Note: test results arrive asynchronously via POST /api/auto-fixes/:id/test-results
+    // The Integration Agent reads status='testing_passed' or 'testing_failed'
   } catch (err) {
     console.error('[Verification Agent] Error:', err.message);
     return { error: err.message };
   }
 }
 
-async function simulateTestRun(branchName) {
-  // Placeholder: real implementation would `git checkout branchName && npm test`
-  // simulated:true lets the admin email clearly flag this as unverified
-  return {
-    passed: 0,
-    failed: 0,
-    skipped: 0,
-    simulated: true,
-    coverage: null,
-    branch: branchName,
-    timestamp: new Date().toISOString(),
-  };
+// Called by GitHub Actions workflow after tests complete
+// Returns current auto_fix for the given feedbackId
+async function getAutoFixForFeedback(feedbackId) {
+  const result = await db.query(
+    `SELECT * FROM auto_fixes WHERE feedback_id = $1 ORDER BY created_at DESC LIMIT 1`,
+    [feedbackId]
+  );
+  return result.rows[0] || null;
 }
 
-module.exports = { runVerificationAgent, simulateTestRun };
+module.exports = { runVerificationAgent, getAutoFixForFeedback };

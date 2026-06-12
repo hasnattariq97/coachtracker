@@ -1,19 +1,27 @@
-name: Autonomous Fix Implementation
+# .github/workflows/auto-fix.yml
+name: Autonomous Fix — Test Runner
 
 on:
   workflow_dispatch:
     inputs:
       feedback_id:
-        description: 'Feedback ID to process'
+        description: 'Feedback report ID (auto_fixes.feedback_id)'
+        required: true
+        type: string
+      branch_name:
+        description: 'Branch to checkout and test (e.g. fix/feedback-abc12345)'
         required: true
         type: string
 
 jobs:
-  run-agent-cycle:
+  test-fix-branch:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout fix branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch_name }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -25,42 +33,57 @@ jobs:
       - name: Install server dependencies
         run: cd server && npm ci
 
-      - name: Run Phase 10 agent cycle
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          JWT_SECRET: ${{ secrets.JWT_SECRET }}
-          GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-          BASE_URL: ${{ secrets.BASE_URL }}
-          NODE_ENV: production
-        run: |
-          node -e "
-          const db = require('./server/db');
-          const { runDiagnosticAgent } = require('./server/agents/diagnostic-agent');
-          const { runPlanningAgent } = require('./server/agents/planning-agent');
-          const { runImplementationAgent } = require('./server/agents/implementation-agent');
-          const { runVerificationAgent } = require('./server/agents/verification-agent');
-          const { runIntegrationAgent } = require('./server/agents/integration-agent');
-
-          async function run() {
-            await db.initializeDatabase();
-            console.log('[GH Actions] Running Phase 10 agent cycle...');
-            await runDiagnosticAgent();
-            await runPlanningAgent();
-            await runImplementationAgent();
-            await runVerificationAgent();
-            await runIntegrationAgent();
-            console.log('[GH Actions] ✅ Cycle complete');
-            process.exit(0);
-          }
-          run().catch(err => { console.error(err); process.exit(1); });
-          "
-
-      - name: Run tests
+      - name: Run tests and capture results
+        id: run_tests
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
           NODE_ENV: test
-        run: cd server && npm test -- --passWithNoTests 2>&1 || true
+        run: |
+          cd server
+          # Run tests, capture exit code and output
+          npm test -- --no-coverage --json --outputFile=/tmp/test-results.json 2>/dev/null || true
+          # Parse results — jest --json writes a structured file
+          PASSED=$(node -e "try{const r=require('/tmp/test-results.json');console.log(r.numPassedTests||0)}catch(e){console.log(0)}")
+          FAILED=$(node -e "try{const r=require('/tmp/test-results.json');console.log(r.numFailedTests||0)}catch(e){console.log(0)}")
+          SKIPPED=$(node -e "try{const r=require('/tmp/test-results.json');console.log(r.numPendingTests||0)}catch(e){console.log(0)}")
+          echo "passed=$PASSED" >> $GITHUB_OUTPUT
+          echo "failed=$FAILED" >> $GITHUB_OUTPUT
+          echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
+          echo "Tests: $PASSED passed, $FAILED failed, $SKIPPED skipped"
+
+      - name: Find auto_fix id for feedback
+        id: find_fix
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          FIX_ID=$(node -e "
+          const { Pool } = require('pg');
+          const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+          pool.query('SELECT id FROM auto_fixes WHERE feedback_id = \$1 ORDER BY created_at DESC LIMIT 1', ['${{ github.event.inputs.feedback_id }}'])
+            .then(r => { console.log(r.rows[0] ? r.rows[0].id : ''); pool.end(); })
+            .catch(e => { console.error(e.message); pool.end(); process.exit(1); });
+          " 2>/dev/null)
+          echo "fix_id=$FIX_ID" >> $GITHUB_OUTPUT
+          echo "Resolved auto_fix.id = $FIX_ID"
+
+      - name: POST test results to Railway API
+        if: steps.find_fix.outputs.fix_id != ''
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}
+          WORKFLOW_CALLBACK_SECRET: ${{ secrets.WORKFLOW_CALLBACK_SECRET }}
+        run: |
+          FIX_ID="${{ steps.find_fix.outputs.fix_id }}"
+          PASSED="${{ steps.run_tests.outputs.passed }}"
+          FAILED="${{ steps.run_tests.outputs.failed }}"
+          SKIPPED="${{ steps.run_tests.outputs.skipped }}"
+          RUN_ID="${{ github.run_id }}"
+
+          curl -s -X POST "${BASE_URL}/api/auto-fixes/${FIX_ID}/test-results" \
+            -H "Content-Type: application/json" \
+            -H "x-callback-secret: ${WORKFLOW_CALLBACK_SECRET}" \
+            -d "{\"passed\":${PASSED},\"failed\":${FAILED},\"skipped\":${SKIPPED},\"workflow_run_id\":\"${RUN_ID}\"}" \
+            | tee /tmp/callback-response.json
+
+          echo "Callback response: $(cat /tmp/callback-response.json)"
