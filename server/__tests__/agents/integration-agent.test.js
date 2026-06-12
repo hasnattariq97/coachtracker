@@ -1,59 +1,124 @@
-jest.mock('../services/email', () => ({
-  sendApprovalEmail: jest.fn().mockResolvedValue({}),
-  sendEmail: jest.fn().mockResolvedValue({})
-}), { virtual: true });
+// server/__tests__/agents/integration-agent.test.js
 
+// Mock email service
 jest.mock('../../services/email', () => ({
   sendApprovalEmail: jest.fn().mockResolvedValue({}),
-  sendEmail: jest.fn().mockResolvedValue({})
+  sendEmail: jest.fn().mockResolvedValue({}),
+}));
+
+// Mock GitHubApiService — factory creates a fresh jest.fn() per instantiation
+jest.mock('../../services/github-api', () => ({
+  GitHubApiService: jest.fn(),
 }));
 
 const db = require('../../db');
+const { GitHubApiService } = require('../../services/github-api');
 const { runIntegrationAgent } = require('../../agents/integration-agent');
 
-describe('Integration Agent', () => {
-  let hasDatabase = false;
+// Shared mock function for mergeBranch
+let mockMergeBranch;
 
-  beforeAll(async () => {
-    try {
-      await db.prepare('SELECT 1 as ok').get();
-      hasDatabase = true;
-    } catch { hasDatabase = false; }
+beforeEach(() => {
+  jest.clearAllMocks();
+  process.env.GITHUB_TOKEN = 'test-token';
+  // Set up a fresh mergeBranch mock for each test
+  mockMergeBranch = jest.fn();
+  GitHubApiService.mockImplementation(() => ({
+    mergeBranch: mockMergeBranch,
+  }));
+});
+
+describe('runIntegrationAgent — deploy path (merge)', () => {
+  test('returns skipped when no approved fixes', async () => {
+    const origQuery = db.query;
+    db.query = jest.fn()
+      .mockResolvedValueOnce({ rows: [] })   // no approved fix
+      .mockResolvedValueOnce({ rows: [] });  // no testing_passed fix
+    const result = await runIntegrationAgent();
+    expect(result.skipped).toBe(true);
+    db.query = origQuery;
   });
 
-  test('returns skipped when no tested fixes', async () => {
+  test('calls mergeBranch and sets status=deployed on approval', async () => {
+    const origQuery = db.query;
+    const approvedFix = {
+      id: 10,
+      feedback_id: 55,
+      branch_name: 'fix/feedback-55abc',
+      pr_number: 42,
+    };
+
+    mockMergeBranch.mockResolvedValueOnce({ sha: 'merge-sha-999' });
+
+    db.query = jest.fn()
+      .mockResolvedValueOnce({ rows: [approvedFix] })              // SELECT approved fix
+      .mockResolvedValueOnce({ rows: [] })                          // UPDATE auto_fixes deployed
+      .mockResolvedValueOnce({ rows: [] })                          // UPDATE feedback_reports deployed
+      .mockResolvedValueOnce({ rows: [{ title: 'Login spinner bug' }] }); // SELECT title
+
     const result = await runIntegrationAgent();
-    expect(result).toBeDefined();
+    expect(result.deployed).toBe(true);
+    expect(result.fixId).toBe(10);
+    expect(mockMergeBranch).toHaveBeenCalledWith(
+      'fix/feedback-55abc',
+      'main',
+      expect.stringContaining('Auto-fix')
+    );
+
+    // Confirm status was set to 'deployed'
+    const updateCall = db.query.mock.calls[1];
+    expect(updateCall[0]).toMatch(/UPDATE auto_fixes SET status/);
+    expect(updateCall[1][0]).toBe('deployed');
+
+    db.query = origQuery;
   });
 
-  test('creates PR and saves approval token for tested fix', async () => {
-    if (!hasDatabase) return;
-    const adminUser = await db.prepare(`SELECT id FROM users WHERE role = 'admin' LIMIT 1`).get();
-    if (!adminUser) return;
+  test('handles merge conflict gracefully — sets status=merge_failed', async () => {
+    const origQuery = db.query;
+    const approvedFix = { id: 11, feedback_id: 56, branch_name: 'fix/feedback-56xyz', pr_number: 43 };
 
-    const fb = await db.prepare(`
-      INSERT INTO feedback_reports (coach_id, type, title, description, priority, status)
-      VALUES (?, 'bug', 'Integration test bug', 'desc', 'high', 'testing')
-      RETURNING id
-    `).get(adminUser.id);
-    if (!fb) return;
+    mockMergeBranch.mockRejectedValueOnce(new Error('GitHub API 409: Merge conflict'));
 
-    await db.prepare(`
-      INSERT INTO auto_fixes (feedback_id, branch_name, commit_hash, status, test_results)
-      VALUES (?, 'fix/feedback-abc12345', 'abc123', 'testing_passed', ?)
-    `).run(fb.id, JSON.stringify({ passed: 157, failed: 0 }));
+    db.query = jest.fn()
+      .mockResolvedValueOnce({ rows: [approvedFix] })
+      .mockResolvedValueOnce({ rows: [] })  // UPDATE auto_fixes merge_failed
+      .mockResolvedValueOnce({ rows: [] }); // UPDATE feedback_reports
 
     const result = await runIntegrationAgent();
-    expect(result.error).toBeUndefined();
+    expect(result.error).toMatch(/merge_failed/i);
 
-    const fix = await db.prepare('SELECT * FROM auto_fixes WHERE feedback_id = ?').get(fb.id);
-    if (fix && fix.pr_number) {
-      expect(fix.approval_token_hash).toBeTruthy();
-      expect(fix.status).toBe('review');
-    }
+    // Confirm merge_failed status was written
+    const updateCall = db.query.mock.calls[1];
+    expect(updateCall[1][0]).toBe('merge_failed');
 
-    // Cleanup
-    await db.prepare('DELETE FROM auto_fixes WHERE feedback_id = ?').run(fb.id);
-    await db.prepare('DELETE FROM feedback_reports WHERE id = ?').run(fb.id);
+    db.query = origQuery;
+  });
+
+  test('creates approval token and sends email for testing_passed fix', async () => {
+    const origQuery = db.query;
+    const { sendApprovalEmail } = require('../../services/email');
+
+    const testedFix = {
+      id: 20,
+      feedback_id: 66,
+      branch_name: 'fix/feedback-66def',
+      commit_hash: 'abc123',
+      test_results: JSON.stringify({ passed: 157, failed: 0 }),
+      fix_status: 'testing_passed',
+      title: 'Spinner race condition',
+      coach_id: 5,
+    };
+
+    db.query = jest.fn()
+      .mockResolvedValueOnce({ rows: [] })          // no approved fix
+      .mockResolvedValueOnce({ rows: [testedFix] }) // testing_passed fix
+      .mockResolvedValueOnce({ rows: [] })            // UPDATE auto_fixes review
+      .mockResolvedValueOnce({ rows: [] });            // UPDATE feedback_reports review
+
+    const result = await runIntegrationAgent();
+    expect(result.success).toBe(true);
+    expect(sendApprovalEmail).toHaveBeenCalled();
+
+    db.query = origQuery;
   });
 });
