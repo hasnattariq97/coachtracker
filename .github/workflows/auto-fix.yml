@@ -27,11 +27,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
-          cache-dependency-path: server/package-lock.json
 
       - name: Install server dependencies
-        run: cd server && npm ci
+        run: cd server && npm install
 
       - name: Run tests and capture results
         id: run_tests
