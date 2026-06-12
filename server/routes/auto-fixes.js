@@ -124,6 +124,25 @@ router.post('/:id/approve', async (req, res) => {
   }
 });
 
+// GET /api/auto-fixes/escalated — admin only
+router.get('/escalated', authenticateToken, requireAdmin, async (req, res) => {
+  try {
+    const result = await db.query(`
+      SELECT f.id, f.title, f.type, f.priority, f.created_at, f.updated_at,
+             d.root_cause, d.affected_files, d.severity, d.escalation_reason
+      FROM feedback_reports f
+      LEFT JOIN diagnoses d ON f.id = d.feedback_id
+      WHERE f.status = 'escalated'
+      ORDER BY f.updated_at DESC
+      LIMIT 50
+    `);
+    res.json(result.rows || []);
+  } catch (err) {
+    console.error('[Auto-Fixes] Escalated fetch error:', err);
+    res.status(500).json({ error: 'Failed to fetch escalated bugs' });
+  }
+});
+
 // GET /api/auto-fixes — admin only
 router.get('/', authenticateToken, requireAdmin, async (req, res) => {
   try {

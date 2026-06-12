@@ -130,8 +130,18 @@ async function sendApprovalEmail(toEmail, bugTitle, action, data = {}) {
     subject = `🎉 Auto-fix deployed: ${bugTitle}`;
     html = `<h2>Fix Deployed to Production</h2><p><strong>${bugTitle}</strong> has been fixed and is now live.</p>`;
   } else if (action === 'escalated') {
-    subject = `⚠️ Bug needs human review: ${bugTitle}`;
-    html = `<h2>Bug Escalated for Manual Review</h2><p><strong>${bugTitle}</strong> — ${data.reason || 'Requires human judgment.'}</p>`;
+    subject = `⚠️ Bug escalated for manual review: ${bugTitle}`;
+    html = `
+      <h2>⚠️ Bug Escalated — Manual Fix Required</h2>
+      <p>The autonomous pipeline escalated this bug because it's too complex to auto-fix safely:</p>
+      <table style="border-collapse:collapse;width:100%;margin:16px 0">
+        <tr><td style="padding:8px;border:1px solid #e5e7eb;font-weight:600;background:#f9fafb;width:160px">Bug</td><td style="padding:8px;border:1px solid #e5e7eb">${bugTitle}</td></tr>
+        <tr><td style="padding:8px;border:1px solid #e5e7eb;font-weight:600;background:#f9fafb">Escalation reason</td><td style="padding:8px;border:1px solid #e5e7eb;color:#b45309">${data.reason || 'Requires human judgment'}</td></tr>
+        ${data.rootCause ? `<tr><td style="padding:8px;border:1px solid #e5e7eb;font-weight:600;background:#f9fafb">Root cause</td><td style="padding:8px;border:1px solid #e5e7eb">${data.rootCause}</td></tr>` : ''}
+        ${Array.isArray(data.affectedFiles) && data.affectedFiles.length ? `<tr><td style="padding:8px;border:1px solid #e5e7eb;font-weight:600;background:#f9fafb">Affected files</td><td style="padding:8px;border:1px solid #e5e7eb"><code>${data.affectedFiles.join(', ')}</code></td></tr>` : ''}
+      </table>
+      <p style="color:#6b7280;font-size:13px">Please fix this manually. You can view all escalated bugs at <a href="https://coachtracker-theta.vercel.app/admin/auto-fixes">Auto Fixes</a>.</p>
+    `;
   } else {
     subject = `Coach Tracker: ${bugTitle}`;
     html = `<p>${bugTitle}</p>`;

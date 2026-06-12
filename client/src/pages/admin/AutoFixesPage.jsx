@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
-import { Wrench, RefreshCw } from 'lucide-react';
+import { Wrench, RefreshCw, AlertTriangle } from 'lucide-react';
 
 const STATUS_COLOR = {
   pending:          'bg-gray-100 text-gray-600',
@@ -29,6 +29,7 @@ const STATUS_LABEL = {
 
 const AutoFixesPage = () => {
   const [fixes, setFixes] = useState([]);
+  const [escalated, setEscalated] = useState([]);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
 
@@ -36,8 +37,12 @@ const AutoFixesPage = () => {
     if (!silent) setLoading(true);
     else setRefreshing(true);
     try {
-      const { data } = await axios.get('/api/auto-fixes');
-      setFixes(data || []);
+      const [fixesRes, escalatedRes] = await Promise.all([
+        axios.get('/api/auto-fixes'),
+        axios.get('/api/auto-fixes/escalated'),
+      ]);
+      setFixes(fixesRes.data || []);
+      setEscalated(escalatedRes.data || []);
     } catch (err) {
       if (!silent) toast.error('Failed to load auto-fixes.');
     } finally {
@@ -73,11 +78,12 @@ const AutoFixesPage = () => {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-4 gap-4">
         {[
           { label: 'Total', value: total, color: 'text-gray-800' },
           { label: 'Awaiting Approval', value: pending, color: 'text-teal-700' },
           { label: 'Deployed', value: deployed, color: 'text-green-700' },
+          { label: 'Escalated', value: escalated.length, color: escalated.length > 0 ? 'text-red-600' : 'text-gray-400' },
         ].map(s => (
           <div key={s.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center">
             <p className={`text-2xl font-bold font-heading ${s.color}`}>{s.value}</p>
@@ -86,7 +92,7 @@ const AutoFixesPage = () => {
         ))}
       </div>
 
-      {/* Table */}
+      {/* Auto-fix table */}
       <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
         {loading ? (
           <div className="space-y-0 divide-y divide-gray-50">
@@ -150,6 +156,66 @@ const AutoFixesPage = () => {
       {pending > 0 && (
         <div className="bg-teal-50 border border-teal-200 rounded-xl px-4 py-3 text-sm text-teal-800">
           <strong>{pending} fix{pending > 1 ? 'es' : ''} awaiting approval.</strong> Check your email at hasnat@niete.edu.pk for the one-click approve button.
+        </div>
+      )}
+
+      {/* Escalated bugs section */}
+      {!loading && escalated.length > 0 && (
+        <div className="space-y-3">
+          <div className="flex items-center gap-2">
+            <AlertTriangle size={16} className="text-red-500" />
+            <h2 className="text-base font-heading font-semibold text-gray-800">
+              Escalated — Needs Manual Fix ({escalated.length})
+            </h2>
+          </div>
+          <p className="text-xs text-gray-500 -mt-1">
+            These bugs were diagnosed by Groq but deemed too complex for autonomous fixing. Fix manually and deploy.
+          </p>
+          <div className="space-y-3">
+            {escalated.map(bug => (
+              <div key={bug.id} className="bg-white border border-red-100 rounded-2xl shadow-sm p-5 space-y-3">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="font-medium text-gray-900">{bug.title}</p>
+                    <p className="text-xs text-gray-400 mt-0.5">
+                      {new Date(bug.updated_at).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
+                      {' · '}
+                      <span className="capitalize">{bug.type?.replace('_', ' ')}</span>
+                    </p>
+                  </div>
+                  <span className={`shrink-0 text-xs px-2 py-0.5 rounded-full font-medium capitalize
+                    ${bug.priority === 'critical' ? 'bg-red-100 text-red-700'
+                      : bug.priority === 'high' ? 'bg-orange-100 text-orange-700'
+                      : bug.priority === 'medium' ? 'bg-blue-100 text-blue-700'
+                      : 'bg-gray-100 text-gray-600'}`}
+                  >
+                    {bug.priority}
+                  </span>
+                </div>
+
+                {bug.escalation_reason && (
+                  <div className="bg-red-50 border border-red-100 rounded-lg px-3 py-2 text-xs text-red-700">
+                    <span className="font-semibold">Why escalated: </span>{bug.escalation_reason}
+                  </div>
+                )}
+
+                {bug.root_cause && (
+                  <div className="text-xs text-gray-600">
+                    <span className="font-semibold text-gray-700">Groq diagnosis: </span>{bug.root_cause}
+                  </div>
+                )}
+
+                {Array.isArray(bug.affected_files) && bug.affected_files.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5">
+                    <span className="text-xs text-gray-500 font-medium">Files:</span>
+                    {bug.affected_files.map(f => (
+                      <span key={f} className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded font-mono">{f}</span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>
