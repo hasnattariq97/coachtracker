@@ -69,6 +69,25 @@ async function migrateFeedbackSchema(query) {
     await query(`ALTER TABLE auto_fixes ADD COLUMN IF NOT EXISTS approval_token_created_at TIMESTAMP`).catch(() => {});
     await query(`ALTER TABLE auto_fixes ADD COLUMN IF NOT EXISTS generated_code TEXT`).catch(() => {});
 
+    // Fix: add 'testing_pending' to auto_fixes status constraint (was missing, caused silent failures)
+    await query(`
+      DO $$
+      DECLARE cname text;
+      BEGIN
+        SELECT conname INTO cname FROM pg_constraint
+        WHERE conrelid = 'auto_fixes'::regclass AND contype = 'c'
+          AND pg_get_constraintdef(oid) LIKE '%status%';
+        IF cname IS NOT NULL THEN
+          EXECUTE 'ALTER TABLE auto_fixes DROP CONSTRAINT ' || quote_ident(cname);
+        END IF;
+      END $$;
+    `).catch(() => {});
+    await query(`
+      ALTER TABLE auto_fixes ADD CONSTRAINT auto_fixes_status_check
+      CHECK (status IN ('implementing', 'testing_pending', 'testing_passed', 'testing_failed',
+                        'review', 'approved', 'deployed', 'failed'))
+    `).catch(() => {});
+
     await query(`CREATE INDEX IF NOT EXISTS idx_feedback_status ON feedback_reports(status)`);
     await query(`CREATE INDEX IF NOT EXISTS idx_feedback_coach ON feedback_reports(coach_id)`);
     await query(`CREATE INDEX IF NOT EXISTS idx_autofix_status ON auto_fixes(status)`);
