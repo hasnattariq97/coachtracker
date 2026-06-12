@@ -2,9 +2,15 @@ const { Pool } = require('pg');
 const dns = require('dns');
 const { migratePhase9 } = require('./db-migrations/phase9-schema');
 const { migratePhase9c } = require('./db-migrations/phase9c-schema');
+const { migrateFeedbackSchema } = require('./db-migrations/20260610-feedback-schema');
 
 // Force IPv4 only (fixes Railway PostgreSQL connectivity)
 dns.setDefaultResultOrder('ipv4first');
+
+if (!process.env.DATABASE_URL) {
+  console.error('FATAL: DATABASE_URL environment variable is not set. Cannot connect to PostgreSQL.');
+  process.exit(1);
+}
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -139,6 +145,9 @@ const initializeDatabase = async () => {
     // Phase 9c: AI-Enhanced Reporting columns and agent_runs table
     await migratePhase9c(query);
 
+    // Phase 10: Autonomous Bug Fix System tables
+    await migrateFeedbackSchema(query);
+
     // Phase 9b: Groq Queue and Agent Decisions tables
     await query(`
       CREATE TABLE IF NOT EXISTS groq_queue (
@@ -196,13 +205,23 @@ const initializeDatabase = async () => {
 
     console.log('✓ Database tables ready');
 
-    // Seed admin user if it doesn't exist
+    // Migrate old admin@tracker.com → hasnat@niete.edu.pk if not already done
+    await query(
+      `UPDATE users SET name = $1, email = $2, password_hash = $3
+       WHERE email = 'admin@tracker.com' AND role = 'admin'
+       AND NOT EXISTS (SELECT 1 FROM users WHERE email = $2)`,
+      ['Hasnat Tariq', 'hasnat@niete.edu.pk', '$2b$12$G7sGVwROLniIHfm2lra11O1TcGED7yy/HEhNiNoY4QXtoa1B53PtW']
+    );
+    // Remove old admin if it survived (i.e. hasnat@... already existed above)
+    await query(`DELETE FROM users WHERE email = 'admin@tracker.com'`);
+
+    // Upsert the admin account (handles both fresh installs and re-deploys)
     const adminResult = await query(
       `INSERT INTO users (name, email, password_hash, role)
-       VALUES ($1, $2, $3, $4)
-       ON CONFLICT (email) DO UPDATE SET password_hash = EXCLUDED.password_hash
+       VALUES ($1, $2, $3, 'admin')
+       ON CONFLICT (email) DO UPDATE SET name = EXCLUDED.name, password_hash = EXCLUDED.password_hash
        RETURNING id, email, role`,
-      ['Admin', 'admin@tracker.com', '$2b$12$f/iWUwb/VZoNRiVj0tAIJO0xjwWwSXZyibakaHTT25JAbzQ6OB30q', 'admin']
+      ['Hasnat Tariq', 'hasnat@niete.edu.pk', '$2b$12$G7sGVwROLniIHfm2lra11O1TcGED7yy/HEhNiNoY4QXtoa1B53PtW']
     );
     if (adminResult.rows && adminResult.rows[0]) {
       console.log('✓ Admin user seeded:', adminResult.rows[0].email);

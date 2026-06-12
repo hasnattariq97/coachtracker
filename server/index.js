@@ -34,6 +34,8 @@ app.use('/api/coaches', authenticateToken, requireAdmin, require('./routes/coach
 app.use('/api/tasks', authenticateToken, require('./routes/tasks'));
 app.use('/api/notifications', authenticateToken, require('./routes/notifications'));
 app.use('/api/admin', authenticateToken, require('./routes/admin'));
+app.use('/api/feedback', require('./routes/feedback'));
+app.use('/api/auto-fixes', require('./routes/auto-fixes'));
 
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });

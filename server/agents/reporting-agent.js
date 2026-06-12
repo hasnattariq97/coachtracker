@@ -261,7 +261,7 @@ class ReportingAgent {
           today,
           JSON.stringify({
             completionRate: patterns.completionRate,
-            totalSupportActions: patterns.supportActions.length,
+            totalSupportActions: (patterns.supportActions || []).length,
             reportedAt: new Date().toISOString(),
           }),
           JSON.stringify({

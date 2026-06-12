@@ -420,17 +420,21 @@ describe('Phase 9b - Enhanced Coaching Insights', () => {
 
   describe('Enhanced Notification Creation with Rich Metadata', () => {
     test('should create notification with enhanced metadata structure', async () => {
+      if (!process.env.DATABASE_URL) {
+        console.log('Skipping: no DATABASE_URL');
+        return;
+      }
       const coachId = 2004;
       const taskId = 4;
 
-      db.prepare(
+      await db.prepare(
         'INSERT INTO users (id, email, name, role, password_hash) VALUES (?, ?, ?, ?, ?)'
       ).run(coachId, 'coach4@example.com', 'Coach 4', 'coach', 'hash');
 
       const now = new Date().toISOString();
       const futureDate = new Date(Date.now() + 86400000).toISOString();
 
-      db.prepare(
+      await db.prepare(
         'INSERT INTO tasks (id, coach_id, title, description, status, priority, assigned_at, due_date, completed_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)'
       ).run(taskId, coachId, 'Metadata Test', 'Desc', 'completed', 'high', now, futureDate, now);
 
@@ -468,7 +472,7 @@ describe('Phase 9b - Enhanced Coaching Insights', () => {
       );
 
       // Verify notification was created with both swarm and enhanced data
-      const notification = db.prepare(
+      const notification = await db.prepare(
         'SELECT * FROM notifications WHERE user_id = ? AND task_id = ?'
       ).get(coachId, taskId);
 
@@ -486,17 +490,21 @@ describe('Phase 9b - Enhanced Coaching Insights', () => {
 
   describe('Fallback Behavior', () => {
     test('should still create notification if enhancement fails', async () => {
+      if (!process.env.DATABASE_URL) {
+        console.log('Skipping: no DATABASE_URL');
+        return;
+      }
       const coachId = 2005;
       const taskId = 5;
 
-      db.prepare(
+      await db.prepare(
         'INSERT INTO users (id, email, name, role, password_hash) VALUES (?, ?, ?, ?, ?)'
       ).run(coachId, 'coach5@example.com', 'Coach 5', 'coach', 'hash');
 
       const now = new Date().toISOString();
       const futureDate = new Date(Date.now() + 86400000).toISOString();
 
-      db.prepare(
+      await db.prepare(
         'INSERT INTO tasks (id, coach_id, title, description, status, priority, assigned_at, due_date, completed_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)'
       ).run(taskId, coachId, 'Fallback Test', 'Desc', 'completed', 'low', now, futureDate, now);
 
@@ -510,7 +518,7 @@ describe('Phase 9b - Enhanced Coaching Insights', () => {
       `).run(coachId, taskId, 'Fallback Test', fallbackMessage, null, 'timeout', now);
 
       // Verify notification exists even with fallback
-      const notification = db.prepare(
+      const notification = await db.prepare(
         'SELECT * FROM notifications WHERE user_id = ? AND task_id = ?'
       ).get(coachId, taskId);
 

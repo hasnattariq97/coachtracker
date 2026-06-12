@@ -12,7 +12,7 @@ New to this project? Do this first:
 4. **Skim** [@docs/ROADMAP.md](docs/ROADMAP.md) — see the phases
 5. **Run** `cd server && npm install && node index.js` — start backend on :3001
 6. **Run** `cd client && npm install && npm run dev` — start frontend on :5173
-7. **Login** with admin@tracker.com / admin123
+7. **Login** with hasnat@niete.edu.pk / Hasnat97
 
 ## Tech Stack
 
@@ -64,6 +64,22 @@ Three autonomous agents continuously monitor coaches and provide real-time suppo
 **Handoff & Documentation:**
 - [@docs/PHASE9-HANDOFF-SESSION-1.md](docs/PHASE9-HANDOFF-SESSION-1.md) — Session 1 status (75% complete before cleanup)
 - [@docs/PHASE9B-HANDOFF-SESSION-1.md](docs/PHASE9B-HANDOFF-SESSION-1.md) — Phase 9b planning (AI enhancement layer with Groq)
+
+## Phase 10 — Autonomous Bug Fix System ✅ COMPLETE
+
+Groq-powered 5-agent pipeline that diagnoses coach-reported bugs, plans fixes, implements them via RED-GREEN-REFACTOR, runs tests, and creates one-click approval PRs for admin.
+
+**How It Works:**
+1. **Feedback Submission** — Coaches submit bugs via `POST /api/feedback` (type: bug/feature_request/problem)
+2. **Diagnostic Agent** — Picks up `submitted` reports, calls Groq to identify root cause + affected files + severity
+3. **Planning Agent** — Escalates critical issues (auth.js, db.js, >5 files, security keywords, >4h effort), otherwise generates implementation plan
+4. **Implementation Agent** — RED-GREEN-REFACTOR: writes failing test → minimal code → refactor via 3 sequential Groq calls
+5. **Verification Agent** — Runs simulated test suite, records results in `auto_fixes`
+6. **Integration Agent** — Generates cryptographic approval token (SHA-256, 7-day expiry, one-time use), sends email to admin with approve button
+
+**Architecture:** Sequential pipeline triggered every 5 min by cron. 4 database tables (`feedback_reports`, `diagnoses`, `implementation_plans`, `auto_fixes`). Graceful degradation — pipeline never crashes on agent failure.
+
+**Status:** ✅ Complete | 40+ tests passing | Railway cron active
 
 ## Workflow: Superpowers (Brainstorm → Design → Plan → Execute → Review)
 

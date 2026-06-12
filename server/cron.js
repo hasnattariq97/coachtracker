@@ -11,6 +11,11 @@ const db = require('./db');
 const { processEmailQueue } = require('./jobs/email-processor.js');
 const { createEmailQueue } = require('./services/email.js');
 const AgentOrchestrator = require('./agents/orchestrator');
+const { runDiagnosticAgent } = require('./agents/diagnostic-agent');
+const { runPlanningAgent } = require('./agents/planning-agent');
+const { runImplementationAgent } = require('./agents/implementation-agent');
+const { runVerificationAgent } = require('./agents/verification-agent');
+const { runIntegrationAgent } = require('./agents/integration-agent');
 
 const createNotification = async (userId, taskId, type, message) => {
   try {
@@ -137,6 +142,31 @@ const scheduleJobs = () => {
     }
   });
 
+  // Phase 10: Autonomous bug fix agent cycle (every 5 minutes)
+  // Runs agents sequentially: Diagnostic → Planning → Implementation → Verification → Integration
+  let phase10Running = false;
+  const task7 = cron.schedule('*/5 * * * *', async () => {
+    if (phase10Running) {
+      console.log('[CRON] Phase 10 cycle still running, skipping tick');
+      return;
+    }
+    phase10Running = true;
+    console.log(`\n[CRON] Starting Phase 10 autonomous fix cycle...`);
+    try {
+      await runDiagnosticAgent();
+      await runPlanningAgent();
+      await runImplementationAgent();
+      await runVerificationAgent();
+      await runIntegrationAgent();
+      console.log(`[CRON] ✅ Phase 10 cycle complete`);
+    } catch (err) {
+      console.error('[CRON] Phase 10 cycle error:', err.message);
+    } finally {
+      phase10Running = false;
+    }
+  });
+  task7.unref?.();
+
   task1.unref?.();
   task2.unref?.();
   task3.unref?.();
@@ -144,8 +174,8 @@ const scheduleJobs = () => {
   task5.unref?.();
   task6.unref?.();
 
-  scheduledTasks = [task1, task2, task3, task4, task5, task6];
-  console.log('✓ Cron jobs scheduled (hourly nudges, email processor, Phase 9 agent cycles, Groq queue processor)');
+  scheduledTasks = [task1, task2, task3, task4, task5, task6, task7];
+  console.log('✓ Cron jobs scheduled (hourly nudges, email processor, Phase 9 agent cycles, Groq queue processor, Phase 10 autonomous fix cycle)');
 };
 
 const stopJobs = () => {

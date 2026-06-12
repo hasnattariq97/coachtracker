@@ -44,8 +44,8 @@ class PatternAnalyzer {
          AND status IN ('completed', 'overdue')`
       );
 
-      const completedCount = completedTasks.rows[0]?.completed || 0;
-      const totalCount = totalTasks.rows[0]?.total || 0;
+      const completedCount = parseInt(completedTasks.rows[0]?.completed || 0, 10);
+      const totalCount = parseInt(totalTasks.rows[0]?.total || 0, 10);
 
       const completionRate = totalCount > 0
         ? Math.round((completedCount / totalCount) * 100)
@@ -117,15 +117,18 @@ class PatternAnalyzer {
          ORDER BY completed DESC`
       );
 
-      return (result.rows || []).map(row => ({
-        coachId: row.coach_id,
-        total: row.total_tasks,
-        completed: row.completed,
-        overdue: row.overdue,
-        completionRate: row.total_tasks > 0
-          ? Math.round((row.completed / row.total_tasks) * 100)
-          : 0,
-      }));
+      return (result.rows || []).map(row => {
+        const total = parseInt(row.total_tasks, 10);
+        const completed = parseInt(row.completed, 10);
+        const overdue = parseInt(row.overdue, 10);
+        return {
+          coachId: row.coach_id,
+          total,
+          completed,
+          overdue,
+          completionRate: total > 0 ? Math.round((completed / total) * 100) : 0,
+        };
+      });
     } catch (err) {
       console.error('Coach performance analysis failed:', err.message);
       return [];

@@ -98,7 +98,50 @@ async function createEmailQueue(type, coachId, taskId, adminId = null) {
   }
 }
 
+/**
+ * Send approval/notification email for autonomous bug fixes
+ * @param {string} toEmail - Recipient email
+ * @param {string} bugTitle - Title of the bug being fixed
+ * @param {'pending'|'approved'|'deployed'} action - Email type
+ * @param {Object} data - Extra data (prNumber, approveUrl for pending)
+ */
+async function sendApprovalEmail(toEmail, bugTitle, action, data = {}) {
+  let subject, html;
+
+  if (action === 'pending') {
+    subject = `✅ Auto-fix ready for review: ${bugTitle}`;
+    html = `
+      <h2>Autonomous Fix Ready for Review</h2>
+      <p>An AI agent has diagnosed and fixed a reported bug:</p>
+      <p><strong>${bugTitle}</strong></p>
+      ${data.prNumber ? `<p><a href="https://github.com/hasnattariq97/coachtracker/pull/${data.prNumber}">View PR #${data.prNumber} on GitHub</a></p>` : ''}
+      <p style="margin-top:20px">
+        <a href="${data.approveUrl}" style="background:#0D9488;color:white;padding:12px 24px;text-decoration:none;border-radius:6px;font-weight:bold">
+          ✅ APPROVE FIX
+        </a>
+      </p>
+      <p style="color:#666;font-size:12px;margin-top:16px">This link expires in 7 days. Reply to this email to reject.</p>
+      <p style="color:#b45309;background:#fef3c7;border:1px solid #f59e0b;border-radius:4px;padding:10px;font-size:12px;margin-top:12px">
+        ⚠️ <strong>Test results are SIMULATED</strong> — real test execution is not yet wired up.
+        Review the generated code in the PR before approving.
+      </p>
+    `;
+  } else if (action === 'approved') {
+    subject = `🎉 Auto-fix deployed: ${bugTitle}`;
+    html = `<h2>Fix Deployed to Production</h2><p><strong>${bugTitle}</strong> has been fixed and is now live.</p>`;
+  } else if (action === 'escalated') {
+    subject = `⚠️ Bug needs human review: ${bugTitle}`;
+    html = `<h2>Bug Escalated for Manual Review</h2><p><strong>${bugTitle}</strong> — ${data.reason || 'Requires human judgment.'}</p>`;
+  } else {
+    subject = `Coach Tracker: ${bugTitle}`;
+    html = `<p>${bugTitle}</p>`;
+  }
+
+  return sendEmail(toEmail || process.env.GMAIL_EMAIL || 'hasnat@niete.edu.pk', subject, html);
+}
+
 module.exports = {
   sendEmail,
   createEmailQueue,
+  sendApprovalEmail,
 };

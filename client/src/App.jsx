@@ -11,8 +11,10 @@ const CoachesPage      = lazy(() => import('./pages/admin/CoachesPage'));
 const TaskBoard        = lazy(() => import('./pages/admin/TaskBoard'));
 const AssignTask       = lazy(() => import('./pages/admin/AssignTask'));
 const AgentDashboard   = lazy(() => import('./pages/admin/AgentDashboard'));
+const AutoFixesPage    = lazy(() => import('./pages/admin/AutoFixesPage'));
 const CoachDashboard   = lazy(() => import('./pages/coach/Dashboard'));
 const MyTasks          = lazy(() => import('./pages/coach/MyTasks'));
+const FeedbackPage     = lazy(() => import('./pages/coach/FeedbackPage'));
 
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-dvh bg-primary-50">
@@ -69,12 +71,14 @@ const App = () => (
               <Route path="/admin/tasks"     element={<TaskBoard />} />
               <Route path="/admin/assign"            element={<AssignTask />} />
               <Route path="/admin/agent-dashboard"  element={<AgentDashboard />} />
+              <Route path="/admin/auto-fixes"        element={<AutoFixesPage />} />
               <Route path="/admin"           element={<Navigate to="/admin/dashboard" replace />} />
             </Route>
 
             <Route element={<CoachLayout />}>
               <Route path="/coach/dashboard" element={<CoachDashboard />} />
               <Route path="/coach/tasks"     element={<MyTasks />} />
+              <Route path="/coach/feedback"  element={<FeedbackPage />} />
               <Route path="/coach"           element={<Navigate to="/coach/dashboard" replace />} />
             </Route>
 

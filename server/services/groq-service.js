@@ -284,7 +284,7 @@ Respond with ONLY valid JSON:
           max_tokens: 800,
         }),
         new Promise((_, reject) =>
-          setTimeout(() => reject(new Error('Groq timeout')), 15000)
+          setTimeout(() => reject(new Error('Groq timeout')), AGENT_TIMEOUT_MS)
         ),
       ]);
 
@@ -358,7 +358,12 @@ Respond with ONLY valid JSON:
 
           // Process based on request type
           let response = null;
-          const payload = JSON.parse(request.payload);
+          let payload;
+          try {
+            payload = JSON.parse(request.payload);
+          } catch (parseErr) {
+            throw new Error(`Malformed queue payload (id=${request.id}): ${parseErr.message}`);
+          }
 
           if (request.request_type === 'intervention_analysis') {
             response = await this.analyzeCoachForIntervention(

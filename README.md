@@ -41,8 +41,8 @@ Runs on http://localhost:5173
 - **Status:** All systems operational ✓
 
 ### Default Login
-- Email: `admin@tracker.com`
-- Password: `admin123`
+- Email: `hasnat@niete.edu.pk`
+- Password: `Hasnat97`
 
 ### Knowledge Graph (Graphify)
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import {
   LayoutDashboard, Users, ClipboardList, PlusCircle,
-  CheckSquare, LogOut, Menu, X, Zap, Bot
+  CheckSquare, LogOut, Menu, X, Zap, Bot, Wrench, MessageSquare
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
@@ -12,11 +12,13 @@ const adminLinks = [
   { to: '/admin/tasks',     icon: ClipboardList,    label: 'Task Board' },
   { to: '/admin/assign',            icon: PlusCircle,    label: 'Assign Task' },
   { to: '/admin/agent-dashboard',  icon: Bot,           label: 'Agent Dashboard' },
+  { to: '/admin/auto-fixes',       icon: Wrench,        label: 'Auto Fixes' },
 ];
 
 const coachLinks = [
-  { to: '/coach/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
-  { to: '/coach/tasks',     icon: CheckSquare,     label: 'My Tasks' },
+  { to: '/coach/dashboard', icon: LayoutDashboard,  label: 'Dashboard' },
+  { to: '/coach/tasks',     icon: CheckSquare,      label: 'My Tasks' },
+  { to: '/coach/feedback',  icon: MessageSquare,    label: 'Report Issue' },
 ];
 
 const NavItem = ({ to, icon: Icon, label, onClick }) => (
