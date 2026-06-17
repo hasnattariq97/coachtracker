@@ -10,7 +10,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const db = require('./db');
-const { authenticateToken, requireAdmin } = require('./auth');
+const { authenticateToken, requireAdmin, requireSuperAdmin } = require('./auth');
 const { scheduleJobs } = require('./cron');
 
 const app = express();
@@ -34,6 +34,7 @@ app.use('/api/coaches', authenticateToken, requireAdmin, require('./routes/coach
 app.use('/api/tasks', authenticateToken, require('./routes/tasks'));
 app.use('/api/notifications', authenticateToken, require('./routes/notifications'));
 app.use('/api/admin', authenticateToken, require('./routes/admin'));
+app.use('/api/admins', authenticateToken, requireSuperAdmin, require('./routes/admins'));
 app.use('/api/feedback', require('./routes/feedback'));
 app.use('/api/auto-fixes', require('./routes/auto-fixes'));
 
