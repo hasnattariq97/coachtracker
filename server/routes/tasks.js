@@ -9,7 +9,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../db');
-const { requireAdmin, requireCoach } = require('../auth');
+const { requireAdmin, requireCoach, regionFilter } = require('../auth');
 const { queueCoachingInsights } = require('./coaching-insights');
 const { createEmailQueue } = require('../services/email');
 
@@ -99,11 +99,18 @@ router.get('/', requireAdmin, async (req, res) => {
     let whereClause = '';
     const params = [];
 
+    const regionId = regionFilter(req.user);
+    if (regionId) {
+      whereClause += 'u.region_id = ?';
+      params.push(regionId);
+    }
+
     if (coach_id) {
       const id = Number.parseInt(coach_id, 10);
       if (!Number.isInteger(id)) {
         return res.status(400).json({ error: 'Invalid coach_id' });
       }
+      if (whereClause) whereClause += ' AND ';
       whereClause += 't.coach_id = ?';
       params.push(id);
     }
