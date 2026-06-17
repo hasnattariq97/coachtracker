@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import {
   LayoutDashboard, Users, ClipboardList, PlusCircle,
-  CheckSquare, LogOut, Menu, X, Zap, Bot, Wrench, MessageSquare
+  CheckSquare, LogOut, Menu, X, Zap, Bot, Wrench, MessageSquare, MapPin
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
@@ -19,6 +19,11 @@ const coachLinks = [
   { to: '/coach/dashboard', icon: LayoutDashboard,  label: 'Dashboard' },
   { to: '/coach/tasks',     icon: CheckSquare,      label: 'My Tasks' },
   { to: '/coach/feedback',  icon: MessageSquare,    label: 'Report Issue' },
+];
+
+const superAdminLinks = [
+  { to: '/super-admin/overview', icon: LayoutDashboard, label: 'Overview' },
+  { to: '/super-admin/admins',   icon: Users,           label: 'Manage Admins' },
 ];
 
 const NavItem = ({ to, icon: Icon, label, onClick }) => (
@@ -43,7 +48,7 @@ const Sidebar = ({ role }) => {
   const { user, logout } = useAuth();
   const [mobileOpen, setMobileOpen] = useState(false);
   const navigate = useNavigate();
-  const links = role === 'admin' ? adminLinks : coachLinks;
+  const links = role === 'super_admin' ? superAdminLinks : role === 'admin' ? adminLinks : coachLinks;
 
   const handleLogout = () => { logout(); };
 
@@ -60,9 +65,19 @@ const Sidebar = ({ role }) => {
         </div>
         <div>
           <p className="text-white font-heading font-bold text-sm leading-tight">Coach Tracker</p>
-          <p className="text-primary-200 text-[11px] capitalize">{role} portal</p>
+          <p className="text-primary-200 text-[11px] capitalize">{role === 'super_admin' ? 'Super Admin' : `${role} portal`}</p>
         </div>
       </div>
+
+      {/* Region badge (admin only) */}
+      {role === 'admin' && user?.region_name && (
+        <div className="px-4 py-2 border-b border-white/10">
+          <span className="inline-flex items-center gap-1 text-[11px] font-medium text-primary-100 bg-white/10 rounded-full px-2.5 py-1">
+            <MapPin size={10} />
+            {user.region_name} Region
+          </span>
+        </div>
+      )}
 
       {/* Nav */}
       <nav className="flex-1 px-3 py-4 space-y-1" aria-label="Main navigation">

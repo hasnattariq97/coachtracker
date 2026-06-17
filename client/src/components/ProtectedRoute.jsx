@@ -18,7 +18,7 @@ const ProtectedRoute = ({ component: Component, requiredRole }) => {
   if (requiredRole) {
     const allowed = Array.isArray(requiredRole) ? requiredRole : [requiredRole];
     if (!allowed.includes(user?.role)) {
-      return <Navigate to="/login" replace />;
+      return <Navigate to="/" replace />;
     }
   }
 

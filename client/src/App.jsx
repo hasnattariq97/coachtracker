@@ -15,6 +15,9 @@ const AutoFixesPage    = lazy(() => import('./pages/admin/AutoFixesPage'));
 const CoachDashboard   = lazy(() => import('./pages/coach/Dashboard'));
 const MyTasks          = lazy(() => import('./pages/coach/MyTasks'));
 const FeedbackPage     = lazy(() => import('./pages/coach/FeedbackPage'));
+const SuperAdminOverview = lazy(() => import('./pages/super-admin/Overview'));
+const SuperAdminRegion   = lazy(() => import('./pages/super-admin/RegionDetail'));
+const SuperAdminAdmins   = lazy(() => import('./pages/super-admin/ManageAdmins'));
 
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-dvh bg-primary-50">
@@ -33,12 +36,18 @@ const CoachLayout = () => (
   <ProtectedRoute requiredRole="coach" component={() => <Layout role="coach" />} />
 );
 
+const SuperAdminLayout = () => (
+  <ProtectedRoute requiredRole="super_admin" component={() => <Layout role="super_admin" />} />
+);
+
 const RoleRedirect = () => {
   const token = localStorage.getItem('token');
   if (!token) return <Navigate to="/login" replace />;
   try {
     const { role } = JSON.parse(atob(token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/')));
-    return <Navigate to={role === 'admin' ? '/admin/dashboard' : '/coach/dashboard'} replace />;
+    if (role === 'super_admin') return <Navigate to="/super-admin/overview" replace />;
+    if (role === 'admin') return <Navigate to="/admin/dashboard" replace />;
+    return <Navigate to="/coach/dashboard" replace />;
   } catch {
     return <Navigate to="/login" replace />;
   }
@@ -80,6 +89,13 @@ const App = () => (
               <Route path="/coach/tasks"     element={<MyTasks />} />
               <Route path="/coach/feedback"  element={<FeedbackPage />} />
               <Route path="/coach"           element={<Navigate to="/coach/dashboard" replace />} />
+            </Route>
+
+            <Route element={<SuperAdminLayout />}>
+              <Route path="/super-admin/overview"   element={<SuperAdminOverview />} />
+              <Route path="/super-admin/region/:id" element={<SuperAdminRegion />} />
+              <Route path="/super-admin/admins"     element={<SuperAdminAdmins />} />
+              <Route path="/super-admin"            element={<Navigate to="/super-admin/overview" replace />} />
             </Route>
 
             <Route path="/"  element={<RoleRedirect />} />
