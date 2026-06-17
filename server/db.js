@@ -3,6 +3,7 @@ const dns = require('dns');
 const { migratePhase9 } = require('./db-migrations/phase9-schema');
 const { migratePhase9c } = require('./db-migrations/phase9c-schema');
 const { migrateFeedbackSchema } = require('./db-migrations/20260610-feedback-schema');
+const { migrateRegions } = require('./db-migrations/regions-schema');
 
 // Force IPv4 only (fixes Railway PostgreSQL connectivity)
 dns.setDefaultResultOrder('ipv4first');
@@ -148,6 +149,9 @@ const initializeDatabase = async () => {
     // Phase 10: Autonomous Bug Fix System tables
     await migrateFeedbackSchema(query);
 
+    // Phase 11: Regional scoping
+    await migrateRegions(query);
+
     // Phase 9b: Groq Queue and Agent Decisions tables
     await query(`
       CREATE TABLE IF NOT EXISTS groq_queue (
@@ -217,9 +221,9 @@ const initializeDatabase = async () => {
 
     // Upsert the admin account (handles both fresh installs and re-deploys)
     const adminResult = await query(
-      `INSERT INTO users (name, email, password_hash, role)
-       VALUES ($1, $2, $3, 'admin')
-       ON CONFLICT (email) DO UPDATE SET name = EXCLUDED.name, password_hash = EXCLUDED.password_hash, role = EXCLUDED.role
+      `INSERT INTO users (name, email, password_hash, role, region_id)
+       VALUES ($1, $2, $3, 'admin', (SELECT id FROM regions WHERE name = 'Urban-I'))
+       ON CONFLICT (email) DO UPDATE SET name = EXCLUDED.name, password_hash = EXCLUDED.password_hash, role = EXCLUDED.role, region_id = COALESCE(users.region_id, (SELECT id FROM regions WHERE name = 'Urban-I'))
        RETURNING id, email, role`,
       ['Hasnat Tariq', 'hasnat@niete.edu.pk', '$2b$12$G7sGVwROLniIHfm2lra11O1TcGED7yy/HEhNiNoY4QXtoa1B53PtW']
     );
