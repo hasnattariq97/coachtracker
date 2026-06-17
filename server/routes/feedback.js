@@ -47,7 +47,7 @@ router.post('/', authenticateToken, async (req, res) => {
 router.get('/', authenticateToken, async (req, res) => {
   try {
     let result;
-    if (req.user.role === 'admin') {
+    if (req.user.role === 'admin' || req.user.role === 'super_admin') {
       result = await db.query(`
         SELECT f.id, f.coach_id, f.type, f.title, f.priority, f.status,
                f.created_at, f.updated_at,

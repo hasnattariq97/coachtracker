@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const crypto = require('crypto');
 const db = require('../db');
-const { authenticateToken, requireAdmin } = require('../auth');
+const { authenticateToken, requireSuperAdmin } = require('../auth');
 
 const TOKEN_EXPIRY_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
 
@@ -133,8 +133,8 @@ router.post('/:id/approve', async (req, res) => {
   }
 });
 
-// GET /api/auto-fixes/escalated — admin only
-router.get('/escalated', authenticateToken, requireAdmin, async (req, res) => {
+// GET /api/auto-fixes/escalated — super_admin only
+router.get('/escalated', authenticateToken, requireSuperAdmin, async (req, res) => {
   try {
     const result = await db.query(`
       SELECT f.id, f.title, f.type, f.priority, f.created_at, f.updated_at,
@@ -152,8 +152,8 @@ router.get('/escalated', authenticateToken, requireAdmin, async (req, res) => {
   }
 });
 
-// GET /api/auto-fixes — admin only
-router.get('/', authenticateToken, requireAdmin, async (req, res) => {
+// GET /api/auto-fixes — super_admin only
+router.get('/', authenticateToken, requireSuperAdmin, async (req, res) => {
   try {
     const fixes = await db.query(`
       SELECT a.*, f.title, f.type, f.priority, f.coach_id

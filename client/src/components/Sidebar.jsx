@@ -12,7 +12,6 @@ const adminLinks = [
   { to: '/admin/tasks',     icon: ClipboardList,    label: 'Task Board' },
   { to: '/admin/assign',            icon: PlusCircle,    label: 'Assign Task' },
   { to: '/admin/agent-dashboard',  icon: Bot,           label: 'Agent Dashboard' },
-  { to: '/admin/auto-fixes',       icon: Wrench,        label: 'Auto Fixes' },
 ];
 
 const coachLinks = [
@@ -22,8 +21,9 @@ const coachLinks = [
 ];
 
 const superAdminLinks = [
-  { to: '/super-admin/overview', icon: LayoutDashboard, label: 'Overview' },
-  { to: '/super-admin/admins',   icon: Users,           label: 'Manage Admins' },
+  { to: '/super-admin/overview',    icon: LayoutDashboard, label: 'Overview' },
+  { to: '/super-admin/admins',      icon: Users,           label: 'Manage Admins' },
+  { to: '/super-admin/auto-fixes',  icon: Wrench,          label: 'Auto Fixes' },
 ];
 
 const NavItem = ({ to, icon: Icon, label, onClick }) => (

@@ -76,7 +76,6 @@ const App = () => (
               <Route path="/admin/tasks"     element={<TaskBoard />} />
               <Route path="/admin/assign"            element={<AssignTask />} />
               <Route path="/admin/agent-dashboard"  element={<AgentDashboard />} />
-              <Route path="/admin/auto-fixes"        element={<AutoFixesPage />} />
               <Route path="/admin"           element={<Navigate to="/admin/dashboard" replace />} />
             </Route>
 
@@ -88,10 +87,11 @@ const App = () => (
             </Route>
 
             <Route element={<SuperAdminLayout />}>
-              <Route path="/super-admin/overview"   element={<SuperAdminOverview />} />
-              <Route path="/super-admin/region/:id" element={<SuperAdminRegion />} />
-              <Route path="/super-admin/admins"     element={<SuperAdminAdmins />} />
-              <Route path="/super-admin"            element={<Navigate to="/super-admin/overview" replace />} />
+              <Route path="/super-admin/overview"    element={<SuperAdminOverview />} />
+              <Route path="/super-admin/region/:id"  element={<SuperAdminRegion />} />
+              <Route path="/super-admin/admins"      element={<SuperAdminAdmins />} />
+              <Route path="/super-admin/auto-fixes"  element={<AutoFixesPage />} />
+              <Route path="/super-admin"             element={<Navigate to="/super-admin/overview" replace />} />
             </Route>
 
             <Route path="/"  element={<RoleRedirect />} />
