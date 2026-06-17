@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../db');
-const { authenticateToken, requireAdmin } = require('../auth');
+const { authenticateToken } = require('../auth');
 
 // POST /api/feedback — coaches submit bug reports / feature requests
 router.post('/', authenticateToken, async (req, res) => {
