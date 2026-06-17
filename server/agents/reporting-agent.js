@@ -27,29 +27,43 @@ class ReportingAgent {
   }
 
   /**
-   * Main entry point: generate and send daily report
+   * Main entry point: generate and send daily report (per region + combined super_admin report)
    */
   async run() {
     try {
       console.log('📊 ReportingAgent: Generating daily report');
 
-      // 1. Analyze 24-hour patterns
+      // Fetch all regions
+      const regionsResult = await this.db.query(`SELECT id, name FROM regions ORDER BY name`);
+      const regions = regionsResult.rows || [];
+
+      // 1. Per-region reports — email each region's admin
+      for (const region of regions) {
+        try {
+          await this._runForRegion(region);
+        } catch (err) {
+          console.error(`Failed to generate report for region ${region.name}:`, err.message);
+          await this._logAgentError('region_report_failed', `${region.name}: ${err.message}`);
+        }
+      }
+
+      // 2. Combined report for super_admin
       const patterns = await PatternAnalyzer.analyze24HourActions();
-
-      // 2. Generate recommendations
       const recommendations = await PatternAnalyzer.generateRecommendations(patterns);
-
-      // 3. Get AI insights (non-blocking, fallback to null on failure)
       const aiInsights = await this.generateAIInsights(patterns, recommendations);
+      const emailContent = this._generateEmailHTML(patterns, recommendations, aiInsights, null);
 
-      // 4. Create HTML email content
-      const emailContent = this._generateEmailHTML(patterns, recommendations, aiInsights);
+      // Find super_admin and send combined report
+      const superAdminResult = await this.db.query(
+        `SELECT id, email FROM users WHERE role = 'super_admin' LIMIT 1`
+      );
+      if (superAdminResult.rows[0]) {
+        const { id: superAdminId } = superAdminResult.rows[0];
+        await this._queueReportEmail(emailContent, superAdminId);
+      }
 
-      // 5. Queue email to admin
-      await this._queueReportEmail(emailContent);
-
-      // 6. Archive report to database
-      await this._archiveReport(patterns, recommendations, aiInsights);
+      // Archive combined report (region_id = NULL → combined/global)
+      await this._archiveReport(patterns, recommendations, aiInsights, null);
 
       console.log('✓ ReportingAgent: Daily report completed');
 
@@ -65,6 +79,35 @@ class ReportingAgent {
       await this._logAgentError('run_failed', err.message, 'critical');
       throw err;
     }
+  }
+
+  /**
+   * Generate and send report for a single region
+   */
+  async _runForRegion(region) {
+    // Analyze 24-hour patterns for this region's coaches
+    const patterns = await PatternAnalyzer.analyze24HourActions(region.id);
+    const recommendations = await PatternAnalyzer.generateRecommendations(patterns);
+    const aiInsights = await this.generateAIInsights(patterns, recommendations);
+    const emailContent = this._generateEmailHTML(patterns, recommendations, aiInsights, region.name);
+
+    // Find this region's admin
+    const adminResult = await this.db.query(
+      `SELECT id, email FROM users WHERE role = 'admin' AND region_id = $1 LIMIT 1`,
+      [region.id]
+    );
+
+    if (adminResult.rows[0]) {
+      const { id: adminId } = adminResult.rows[0];
+      await this._queueReportEmail(emailContent, adminId);
+      console.log(`✓ Queued daily report email to admin for region ${region.name}`);
+    } else {
+      console.warn(`No admin found for region ${region.name} — skipping email`);
+    }
+
+    // Archive per-region report
+    await this._archiveReport(patterns, recommendations, aiInsights, region.id);
+    console.log(`✓ Archived report for region ${region.name}`);
   }
 
   /**
@@ -98,8 +141,12 @@ class ReportingAgent {
 
   /**
    * Generate HTML email for daily coaching report
+   * @param {object} patterns - analyzed patterns
+   * @param {string[]} recommendations - list of recommendations
+   * @param {object|null} aiInsights - AI insights or null
+   * @param {string|null} regionName - region name for header (null = combined/global report)
    */
-  _generateEmailHTML(patterns, recommendations, aiInsights = null) {
+  _generateEmailHTML(patterns, recommendations, aiInsights = null, regionName = null) {
     const { supportActions, completionRate, commonBlockers, coachPerformance } = patterns;
 
     const blockerHTML = commonBlockers.length > 0
@@ -156,7 +203,7 @@ class ReportingAgent {
       <body>
         <div class="container">
           <div class="header">
-            <h1>📊 Daily Coaching Report</h1>
+            <h1>📊 Daily Coaching Report${regionName ? ` — ${regionName}` : ' (All Regions)'}</h1>
             <p>${new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}</p>
           </div>
 
@@ -210,20 +257,15 @@ class ReportingAgent {
   }
 
   /**
-   * Queue report email to admin
+   * Queue report email to a specific admin by ID
+   * @param {string} emailContent - HTML email content (unused by queue, kept for future use)
+   * @param {number} adminId - the admin's user ID to send the report to
    */
-  async _queueReportEmail(emailContent) {
+  async _queueReportEmail(emailContent, adminId) {
     try {
-      // Find admin user
-      const adminResult = await this.db.query(
-        `SELECT id, email FROM users WHERE role = 'admin' LIMIT 1`
-      );
-
-      if (!adminResult.rows || !adminResult.rows[0]) {
-        throw new Error('No admin user found');
+      if (!adminId) {
+        throw new Error('No admin ID provided for report email');
       }
-
-      const { id: adminId, email: adminEmail } = adminResult.rows[0];
 
       // Queue email
       await this.db.query(
@@ -232,7 +274,7 @@ class ReportingAgent {
         [adminId, 'daily_report', 'pending']
       );
 
-      console.log(`✓ Queued daily report email to admin ${adminEmail}`);
+      console.log(`✓ Queued daily report email to admin ID ${adminId}`);
     } catch (err) {
       throw new Error(`Queue email failed: ${err.message}`);
     }
@@ -240,46 +282,93 @@ class ReportingAgent {
 
   /**
    * Archive report to daily_reports table
+   * @param {object} patterns - analyzed patterns
+   * @param {string[]} recommendations - recommendations list
+   * @param {object|null} aiInsights - AI insights or null
+   * @param {number|null} regionId - region ID for per-region reports; NULL = combined/global
    */
-  async _archiveReport(patterns, recommendations, aiInsights = null) {
+  async _archiveReport(patterns, recommendations, aiInsights = null, regionId = null) {
     try {
       const today = new Date().toISOString().split('T')[0];
 
-      await this.db.query(
-        `INSERT INTO daily_reports
-         (report_date, summary_json, patterns_json, recommendations_json, agent_activity_json, insights, generated_by, ai_confidence)
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
-         ON CONFLICT (report_date) DO UPDATE SET
-           summary_json = EXCLUDED.summary_json,
-           patterns_json = EXCLUDED.patterns_json,
-           recommendations_json = EXCLUDED.recommendations_json,
-           agent_activity_json = EXCLUDED.agent_activity_json,
-           insights = EXCLUDED.insights,
-           generated_by = EXCLUDED.generated_by,
-           ai_confidence = EXCLUDED.ai_confidence`,
-        [
-          today,
-          JSON.stringify({
-            completionRate: patterns.completionRate,
-            totalSupportActions: (patterns.supportActions || []).length,
-            reportedAt: new Date().toISOString(),
-          }),
-          JSON.stringify({
-            commonBlockers: patterns.commonBlockers,
-            coachPerformance: patterns.coachPerformance,
-          }),
-          JSON.stringify(recommendations),
-          JSON.stringify({
-            generatedBy: this.name,
-            executedAt: new Date().toISOString(),
-          }),
-          aiInsights ? JSON.stringify(aiInsights) : null,
-          aiInsights ? 'groq-ai' : 'rules-based',
-          aiInsights ? (aiInsights.confidence || null) : null,
-        ]
-      );
+      // For per-region reports, use (report_date, region_id) upsert key.
+      // For the combined report (region_id IS NULL), upsert on report_date alone.
+      if (regionId !== null) {
+        await this.db.query(
+          `INSERT INTO daily_reports
+           (report_date, region_id, summary_json, patterns_json, recommendations_json, agent_activity_json, insights, generated_by, ai_confidence)
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+           ON CONFLICT (report_date) DO UPDATE SET
+             summary_json = EXCLUDED.summary_json,
+             patterns_json = EXCLUDED.patterns_json,
+             recommendations_json = EXCLUDED.recommendations_json,
+             agent_activity_json = EXCLUDED.agent_activity_json,
+             insights = EXCLUDED.insights,
+             generated_by = EXCLUDED.generated_by,
+             ai_confidence = EXCLUDED.ai_confidence,
+             region_id = EXCLUDED.region_id`,
+          [
+            today,
+            regionId,
+            JSON.stringify({
+              completionRate: patterns.completionRate,
+              totalSupportActions: (patterns.supportActions || []).length,
+              reportedAt: new Date().toISOString(),
+            }),
+            JSON.stringify({
+              commonBlockers: patterns.commonBlockers,
+              coachPerformance: patterns.coachPerformance,
+            }),
+            JSON.stringify(recommendations),
+            JSON.stringify({
+              generatedBy: this.name,
+              executedAt: new Date().toISOString(),
+              regionId,
+            }),
+            aiInsights ? JSON.stringify(aiInsights) : null,
+            aiInsights ? 'groq-ai' : 'rules-based',
+            aiInsights ? (aiInsights.confidence || null) : null,
+          ]
+        );
+      } else {
+        await this.db.query(
+          `INSERT INTO daily_reports
+           (report_date, region_id, summary_json, patterns_json, recommendations_json, agent_activity_json, insights, generated_by, ai_confidence)
+           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+           ON CONFLICT (report_date) DO UPDATE SET
+             summary_json = EXCLUDED.summary_json,
+             patterns_json = EXCLUDED.patterns_json,
+             recommendations_json = EXCLUDED.recommendations_json,
+             agent_activity_json = EXCLUDED.agent_activity_json,
+             insights = EXCLUDED.insights,
+             generated_by = EXCLUDED.generated_by,
+             ai_confidence = EXCLUDED.ai_confidence`,
+          [
+            today,
+            null,
+            JSON.stringify({
+              completionRate: patterns.completionRate,
+              totalSupportActions: (patterns.supportActions || []).length,
+              reportedAt: new Date().toISOString(),
+            }),
+            JSON.stringify({
+              commonBlockers: patterns.commonBlockers,
+              coachPerformance: patterns.coachPerformance,
+            }),
+            JSON.stringify(recommendations),
+            JSON.stringify({
+              generatedBy: this.name,
+              executedAt: new Date().toISOString(),
+              combined: true,
+            }),
+            aiInsights ? JSON.stringify(aiInsights) : null,
+            aiInsights ? 'groq-ai' : 'rules-based',
+            aiInsights ? (aiInsights.confidence || null) : null,
+          ]
+        );
+      }
 
-      console.log(`✓ Archived report to daily_reports table for ${today}`);
+      console.log(`✓ Archived report to daily_reports table for ${today} (region_id: ${regionId})`);
     } catch (err) {
       throw new Error(`Archive failed: ${err.message}`);
     }

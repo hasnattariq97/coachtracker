@@ -31,6 +31,12 @@ describe('MonitoringAgent', () => {
 
   describe('run()', () => {
     test('scans all active tasks without errors', async () => {
+      // First call: regions query
+      db.query.mockResolvedValueOnce({
+        rows: [{ id: 1, name: 'Urban-I' }],
+      });
+
+      // Second call: active tasks for region 1
       db.query.mockResolvedValueOnce({
         rows: [
           {
@@ -50,6 +56,9 @@ describe('MonitoringAgent', () => {
           rows: [{ total: '5', completed: '4', overdue: '0', avg_hours_late: 2 }],
         }); // _detectCoachPattern
 
+      // Upsert
+      db.query.mockResolvedValueOnce({});
+
       const result = await agent.run();
       expect(result.scannedTasks).toBeGreaterThanOrEqual(0);
       expect(Array.isArray(result.snapshots)).toBe(true);
@@ -64,6 +73,12 @@ describe('MonitoringAgent', () => {
     test('logs errors for individual task analysis failures', async () => {
       const consoleSpy = jest.spyOn(console, 'error').mockImplementation();
 
+      // First call: regions query
+      db.query.mockResolvedValueOnce({
+        rows: [{ id: 1, name: 'Urban-I' }],
+      });
+
+      // Second call: active tasks for region 1
       db.query.mockResolvedValueOnce({
         rows: [
           {

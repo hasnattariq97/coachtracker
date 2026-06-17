@@ -34,7 +34,7 @@ class SupportAgent {
   }
 
   /**
-   * Main entry point: scan monitoring snapshots and decide interventions
+   * Main entry point: scan monitoring snapshots and decide interventions (per region)
    */
   async run() {
     try {
@@ -49,32 +49,46 @@ class SupportAgent {
         this.sheetsClient = null;
       }
 
-      // Get all snapshots from Monitoring Agent
-      const result = await this.db.query(
-        `SELECT id, task_id, coach_id, sheet_id, sheet_completion_percent,
-                missing_sections, blockers, status, days_remaining, coach_pattern
-         FROM monitoring_snapshots
-         ORDER BY snapshot_at DESC`
-      );
+      // Fetch all regions and loop per region
+      const regionsResult = await this.db.query(`SELECT id, name FROM regions ORDER BY name`);
+      const regions = regionsResult.rows || [];
 
-      const snapshots = result.rows || [];
-      const actions = [];
+      const allActions = [];
+      let totalSnapshots = 0;
 
-      for (const snapshot of snapshots) {
-        try {
-          const intervention = await this._decideIntervention(snapshot);
-          if (intervention && intervention.action) {
-            actions.push(intervention);
-            await this._executeIntervention(intervention);
+      for (const region of regions) {
+        // Get snapshots for coaches in this region via JOIN on users
+        const result = await this.db.query(
+          `SELECT ms.id, ms.task_id, ms.coach_id, ms.sheet_id, ms.sheet_completion_percent,
+                  ms.missing_sections, ms.blockers, ms.status, ms.days_remaining, ms.coach_pattern
+           FROM monitoring_snapshots ms
+           JOIN users u ON u.id = ms.coach_id
+           WHERE u.region_id = $1
+           ORDER BY ms.snapshot_at DESC`,
+          [region.id]
+        );
+
+        const snapshots = result.rows || [];
+        totalSnapshots += snapshots.length;
+
+        for (const snapshot of snapshots) {
+          try {
+            const intervention = await this._decideIntervention(snapshot, region.id);
+            if (intervention && intervention.action) {
+              allActions.push(intervention);
+              await this._executeIntervention(intervention, region.id);
+            }
+          } catch (err) {
+            console.error(`Failed to process snapshot ${snapshot.id}:`, err.message);
+            await this._logAgentError('intervention_failed', err.message);
           }
-        } catch (err) {
-          console.error(`Failed to process snapshot ${snapshot.id}:`, err.message);
-          await this._logAgentError('intervention_failed', err.message);
         }
+
+        console.log(`✓ SupportAgent: Processed ${snapshots.length} snapshots in region ${region.name}`);
       }
 
-      console.log(`✓ SupportAgent: Decided on ${actions.length} interventions`);
-      return { analyzedSnapshots: snapshots.length, actionsDecided: actions.length, actions };
+      console.log(`✓ SupportAgent: Decided on ${allActions.length} interventions`);
+      return { analyzedSnapshots: totalSnapshots, actionsDecided: allActions.length, actions: allActions };
     } catch (err) {
       console.error('❌ SupportAgent failed:', err.message);
       await this._logAgentError('run_failed', err.message, 'critical');
@@ -86,9 +100,9 @@ class SupportAgent {
    * Decide intervention strategy based on snapshot
    * Phase 9b: Uses GroqService for AI-informed decisions
    * Fallback to Phase 9 rules if Groq unavailable
-   * Returns: { taskId, coachId, action: 'tag'|'email'|'escalate'|null, reason, details }
+   * Returns: { taskId, coachId, action: 'tag'|'email'|'escalate'|null, reason, details, regionId }
    */
-  async _decideIntervention(snapshot) {
+  async _decideIntervention(snapshot, regionId = null) {
     const { task_id, coach_id, status, days_remaining, coach_pattern, blockers, missing_sections } = snapshot;
 
     let action = null;
@@ -176,11 +190,13 @@ class SupportAgent {
         action,
         reason,
         details,
+        regionId,
       };
     } catch (err) {
       console.error(`Error in _decideIntervention for task ${task_id}:`, err.message);
       // Fall back to Phase 9 rules on error
-      return await this._decideInterventionPhase9Fallback(snapshot);
+      const fallback = await this._decideInterventionPhase9Fallback(snapshot);
+      return { ...fallback, regionId };
     }
   }
 
@@ -261,8 +277,10 @@ class SupportAgent {
   /**
    * Execute the decided intervention
    */
-  async _executeIntervention(intervention) {
+  async _executeIntervention(intervention, regionId = null) {
     const { taskId, coachId, action, details } = intervention;
+    // Use regionId from intervention object if not passed directly
+    const effectiveRegionId = regionId !== null ? regionId : (intervention.regionId || null);
 
     if (!action) {
       return; // No action decided
@@ -292,8 +310,8 @@ class SupportAgent {
         );
 
       } else if (action === 'escalate') {
-        // Notify admin
-        await this._queueEmailToAdmin(taskId, coachId, details);
+        // Notify the regional admin for this region
+        await this._queueEmailToAdmin(taskId, coachId, details, effectiveRegionId);
 
         // Log in database
         await this.db.query(
@@ -398,14 +416,25 @@ class SupportAgent {
 
   /**
    * Queue email to admin for escalation
+   * Scoped to the regional admin when regionId is provided
    */
-  async _queueEmailToAdmin(taskId, coachId, details) {
+  async _queueEmailToAdmin(taskId, coachId, details, regionId = null) {
     try {
-      // Find admin user
-      const adminResult = await this.db.query(
-        `SELECT id FROM users WHERE role = $1 LIMIT 1`,
-        ['admin']
-      );
+      // Find the admin for this specific region (or any admin as fallback)
+      let adminResult;
+      if (regionId !== null) {
+        adminResult = await this.db.query(
+          `SELECT id FROM users WHERE role = 'admin' AND region_id = $1 LIMIT 1`,
+          [regionId]
+        );
+      }
+
+      // Fallback: find any admin if no regional admin found
+      if (!adminResult || !adminResult.rows[0]) {
+        adminResult = await this.db.query(
+          `SELECT id FROM users WHERE role = 'admin' LIMIT 1`
+        );
+      }
 
       if (!adminResult.rows[0]) {
         console.error('No admin user found for escalation email');
@@ -420,7 +449,7 @@ class SupportAgent {
         [adminId, 'escalation', taskId, 'pending']
       );
 
-      console.log(`✓ Queued escalation email to admin for task ${taskId}`);
+      console.log(`✓ Queued escalation email to admin for task ${taskId} (region ${regionId})`);
     } catch (err) {
       throw new Error(`Queue admin email failed: ${err.message}`);
     }

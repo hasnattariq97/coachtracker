@@ -4,6 +4,7 @@ const { migratePhase9 } = require('./db-migrations/phase9-schema');
 const { migratePhase9c } = require('./db-migrations/phase9c-schema');
 const { migrateFeedbackSchema } = require('./db-migrations/20260610-feedback-schema');
 const { migrateRegions } = require('./db-migrations/regions-schema');
+const { migrateRegionsAgentSchema } = require('./db-migrations/regions-agent-schema');
 
 // Force IPv4 only (fixes Railway PostgreSQL connectivity)
 dns.setDefaultResultOrder('ipv4first');
@@ -151,6 +152,9 @@ const initializeDatabase = async () => {
 
     // Phase 11: Regional scoping
     await migrateRegions(query);
+
+    // Phase 11: Region scoping for Phase 9 agent tables
+    await migrateRegionsAgentSchema(query);
 
     // Phase 9b: Groq Queue and Agent Decisions tables
     await query(`

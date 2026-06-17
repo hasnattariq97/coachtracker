@@ -51,16 +51,12 @@ describe('ReportingAgent', () => {
         '🎯 Strong completion rate!',
       ]);
 
-      // Mock admin user query
-      db.query.mockResolvedValueOnce({
-        rows: [{ id: 1, email: 'admin@tracker.com' }],
-      });
-
-      // Mock email queue insert
-      db.query.mockResolvedValueOnce({ rowCount: 1, rows: [] });
-
-      // Mock daily_reports insert
-      db.query.mockResolvedValueOnce({ rowCount: 1, rows: [] });
+      // Use agent.db.query spy to intercept all db calls in run()
+      jest.spyOn(agent.db, 'query')
+        .mockResolvedValueOnce({ rows: [] })                                   // regions → empty
+        .mockResolvedValueOnce({ rows: [{ id: 99, email: 'hasnattariq97@gmail.com' }] }) // super_admin
+        .mockResolvedValueOnce({ rowCount: 1, rows: [] })                      // email_queue insert
+        .mockResolvedValueOnce({ rowCount: 1, rows: [] });                     // daily_reports insert
 
       const result = await agent.run();
 
@@ -70,6 +66,9 @@ describe('ReportingAgent', () => {
     });
 
     test('run() handles errors gracefully', async () => {
+      // Bypass the regions db.query call by mocking _runForRegion and the regions fetch
+      jest.spyOn(agent.db, 'query').mockResolvedValueOnce({ rows: [] }); // regions → empty
+
       jest
         .spyOn(PatternAnalyzer, 'analyze24HourActions')
         .mockRejectedValueOnce(new Error('DB error'));
@@ -154,38 +153,27 @@ describe('ReportingAgent', () => {
   });
 
   describe('_queueReportEmail()', () => {
-    test('finds admin and queues email', async () => {
-      db.query.mockResolvedValueOnce({
-        rows: [{ id: 1, email: 'admin@tracker.com' }],
-      });
-      db.query.mockResolvedValueOnce({ rowCount: 1, rows: [] });
+    test('queues email for given adminId', async () => {
+      const querySpy = jest.spyOn(agent.db, 'query').mockResolvedValueOnce({ rowCount: 1, rows: [] });
 
-      await agent._queueReportEmail('<html>Report</html>');
+      await agent._queueReportEmail('<html>Report</html>', 1);
 
-      expect(db.query).toHaveBeenCalledTimes(2);
-      // First call: fetch admin
-      const firstCall = db.query.mock.calls[0];
-      expect(firstCall[0]).toContain('users');
-      // Second call: insert email queue
-      const secondCall = db.query.mock.calls[1];
-      expect(secondCall[0]).toContain('email_queue');
+      expect(querySpy).toHaveBeenCalledTimes(1);
+      // Only call: insert email queue
+      const firstCall = querySpy.mock.calls[0];
+      expect(firstCall[0]).toContain('email_queue');
     });
 
-    test('throws error if no admin found', async () => {
-      db.query.mockResolvedValueOnce({ rows: [] });
-
+    test('throws error if no adminId provided', async () => {
       await expect(agent._queueReportEmail('<html>Report</html>')).rejects.toThrow(
-        'No admin user found'
+        'No admin ID provided'
       );
     });
 
     test('throws error if queue insert fails', async () => {
-      db.query.mockResolvedValueOnce({
-        rows: [{ id: 1, email: 'admin@tracker.com' }],
-      });
-      db.query.mockRejectedValueOnce(new Error('Insert failed'));
+      jest.spyOn(agent.db, 'query').mockRejectedValueOnce(new Error('Insert failed'));
 
-      await expect(agent._queueReportEmail('<html>Report</html>')).rejects.toThrow(
+      await expect(agent._queueReportEmail('<html>Report</html>', 1)).rejects.toThrow(
         'Queue email failed'
       );
     });
@@ -193,7 +181,7 @@ describe('ReportingAgent', () => {
 
   describe('_archiveReport()', () => {
     test('saves report to daily_reports table', async () => {
-      db.query.mockResolvedValueOnce({ rowCount: 1, rows: [] });
+      const querySpy = jest.spyOn(agent.db, 'query').mockResolvedValueOnce({ rowCount: 1, rows: [] });
 
       const patterns = {
         supportActions: [],
@@ -204,14 +192,14 @@ describe('ReportingAgent', () => {
 
       await agent._archiveReport(patterns, ['Recommendation']);
 
-      expect(db.query).toHaveBeenCalledWith(
+      expect(querySpy).toHaveBeenCalledWith(
         expect.stringContaining('daily_reports'),
         expect.any(Array)
       );
     });
 
     test('includes all pattern data in archive', async () => {
-      db.query.mockResolvedValueOnce({ rowCount: 1, rows: [] });
+      const querySpy = jest.spyOn(agent.db, 'query').mockResolvedValueOnce({ rowCount: 1, rows: [] });
 
       const patterns = {
         supportActions: [{ id: 1 }],
@@ -224,16 +212,17 @@ describe('ReportingAgent', () => {
 
       await agent._archiveReport(patterns, recommendations);
 
-      const callArgs = db.query.mock.calls[0];
+      const callArgs = querySpy.mock.calls[0];
       const [sql, params] = callArgs;
 
-      expect(params[1]).toContain('75'); // completionRate
-      expect(params[2]).toContain('stuck'); // blocker
-      expect(params[3]).toContain('Rec 1'); // recommendation
+      // params: [today, regionId(null), summaryJson, patternsJson, recommendationsJson, ...]
+      expect(params[2]).toContain('75'); // completionRate in summary_json
+      expect(params[3]).toContain('stuck'); // blocker in patterns_json
+      expect(params[4]).toContain('Rec 1'); // recommendation in recommendations_json
     });
 
     test('handles archive errors gracefully', async () => {
-      db.query.mockRejectedValueOnce(new Error('Archive failed'));
+      jest.spyOn(agent.db, 'query').mockRejectedValueOnce(new Error('Archive failed'));
 
       jest.spyOn(agent, '_logAgentError').mockResolvedValue(undefined);
 
@@ -252,29 +241,29 @@ describe('ReportingAgent', () => {
 
   describe('_logAgentError()', () => {
     test('logs error to agent_errors table', async () => {
-      db.query.mockResolvedValueOnce({ rowCount: 1, rows: [] });
+      const querySpy = jest.spyOn(agent.db, 'query').mockResolvedValueOnce({ rowCount: 1, rows: [] });
 
       await agent._logAgentError('test_error', 'Error message', 'high');
 
-      expect(db.query).toHaveBeenCalledWith(
+      expect(querySpy).toHaveBeenCalledWith(
         expect.stringContaining('agent_errors'),
         [agent.name, 'test_error', 'Error message', 'high']
       );
     });
 
     test('logs with default severity', async () => {
-      db.query.mockResolvedValueOnce({ rowCount: 1, rows: [] });
+      const querySpy = jest.spyOn(agent.db, 'query').mockResolvedValueOnce({ rowCount: 1, rows: [] });
 
       await agent._logAgentError('test_error', 'Error message');
 
-      expect(db.query).toHaveBeenCalledWith(
+      expect(querySpy).toHaveBeenCalledWith(
         expect.any(String),
         [agent.name, 'test_error', 'Error message', 'medium']
       );
     });
 
     test('handles logging errors silently', async () => {
-      db.query.mockRejectedValueOnce(new Error('Logging failed'));
+      jest.spyOn(agent.db, 'query').mockRejectedValueOnce(new Error('Logging failed'));
 
       // Should not throw
       await expect(

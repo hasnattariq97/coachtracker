@@ -44,7 +44,7 @@ class MonitoringAgent {
   }
 
   /**
-   * Main entry point: run monitoring cycle
+   * Main entry point: run monitoring cycle (per region)
    */
   async run() {
     try {
@@ -59,27 +59,37 @@ class MonitoringAgent {
         this.sheetsClient = null;
       }
 
-      // Get all active tasks
-      const activeTasks = await this.db.query(
-        `SELECT id, coach_id, title, assigned_at, due_date
-         FROM tasks
-         WHERE status != $1 AND status != $2`,
-        ['completed', 'cancelled']
-      );
+      // Fetch all regions and loop per region
+      const regionsResult = await this.db.query(`SELECT id, name FROM regions ORDER BY name`);
+      const regions = regionsResult.rows || [];
 
       const snapshots = [];
 
-      for (const task of activeTasks.rows) {
-        try {
-          const snapshot = await this._analyzeTask(task);
-          snapshots.push(snapshot);
-        } catch (err) {
-          console.error(`Failed to analyze task ${task.id}:`, err.message);
-          await this._logAgentError(this.name, 'task_analysis_failed', err.message);
+      for (const region of regions) {
+        // Get active tasks for coaches in this region
+        const activeTasks = await this.db.query(
+          `SELECT t.id, t.coach_id, t.title, t.assigned_at, t.due_date
+           FROM tasks t
+           JOIN users u ON u.id = t.coach_id
+           WHERE t.status NOT IN ('completed', 'cancelled')
+             AND u.region_id = $1`,
+          [region.id]
+        );
+
+        for (const task of activeTasks.rows) {
+          try {
+            const snapshot = await this._analyzeTask(task, region.id);
+            snapshots.push(snapshot);
+          } catch (err) {
+            console.error(`Failed to analyze task ${task.id}:`, err.message);
+            await this._logAgentError(this.name, 'task_analysis_failed', err.message);
+          }
         }
+
+        console.log(`✓ MonitoringAgent: Scanned ${activeTasks.rows.length} tasks in region ${region.name}`);
       }
 
-      console.log(`✓ MonitoringAgent: Scanned ${snapshots.length} tasks`);
+      console.log(`✓ MonitoringAgent: Scanned ${snapshots.length} tasks total`);
       return { scannedTasks: snapshots.length, snapshots };
     } catch (err) {
       console.error('❌ MonitoringAgent failed:', err.message);
@@ -90,9 +100,9 @@ class MonitoringAgent {
 
   /**
    * Analyze single task for progress and risk
-   * Returns: { taskId, coachId, completionPercent, blockers, status, pattern }
+   * Returns: { taskId, coachId, completionPercent, blockers, status, pattern, regionId }
    */
-  async _analyzeTask(task) {
+  async _analyzeTask(task, regionId = null) {
     const { id: taskId, coach_id: coachId, due_date: dueDateStr, assigned_at: assignedAtStr } = task;
 
     // 1. Calculate time-based status
@@ -127,13 +137,14 @@ class MonitoringAgent {
       status,
       daysRemaining,
       pattern,
+      regionId,
     };
 
-    // Upsert monitoring_snapshots
+    // Upsert monitoring_snapshots (include region_id in insert and conflict update)
     await this.db.query(
       `INSERT INTO monitoring_snapshots
-       (task_id, coach_id, sheet_id, sheet_completion_percent, missing_sections, blockers, status, days_remaining, coach_pattern)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+       (task_id, coach_id, sheet_id, sheet_completion_percent, missing_sections, blockers, status, days_remaining, coach_pattern, region_id)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
        ON CONFLICT (task_id) DO UPDATE SET
          sheet_completion_percent = EXCLUDED.sheet_completion_percent,
          missing_sections = EXCLUDED.missing_sections,
@@ -141,6 +152,7 @@ class MonitoringAgent {
          status = EXCLUDED.status,
          days_remaining = EXCLUDED.days_remaining,
          coach_pattern = EXCLUDED.coach_pattern,
+         region_id = EXCLUDED.region_id,
          snapshot_at = CURRENT_TIMESTAMP`,
       [
         taskId,
@@ -152,6 +164,7 @@ class MonitoringAgent {
         status,
         daysRemaining,
         pattern,
+        regionId,
       ]
     );
 
