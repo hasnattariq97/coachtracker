@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import toast from 'react-hot-toast';
 import { TableRowSkeleton } from '../../components/ui/Skeleton';
 import EmptyState from '../../components/ui/EmptyState';
 import { Users } from 'lucide-react';
@@ -22,7 +23,7 @@ const RegionDetail = () => {
         setRegion(found || null);
         setCoaches(coachesRes.data);
       })
-      .catch(() => {})
+      .catch(() => toast.error('Failed to load region data'))
       .finally(() => setLoading(false));
   }, [id]);
 

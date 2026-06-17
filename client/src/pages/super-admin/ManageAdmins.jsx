@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import { Plus, Pencil, Trash2, ShieldAlert } from 'lucide-react';
@@ -43,7 +43,7 @@ const ManageAdmins = () => {
   const [submitting, setSubmitting] = useState(false);
 
   const [pendingDelete, setPendingDelete] = useState(null);
-  const [deleteTimers, setDeleteTimers] = useState({});
+  const deleteTimersRef = useRef({});
 
   const fetchData = useCallback(() => {
     setLoading(true);
@@ -62,6 +62,11 @@ const ManageAdmins = () => {
   useEffect(() => {
     fetchData();
   }, [fetchData]);
+
+  useEffect(() => {
+    const timers = deleteTimersRef.current;
+    return () => { Object.values(timers).forEach(clearTimeout); };
+  }, []);
 
   const validateAdd = () => {
     const errors = {};
@@ -139,19 +144,22 @@ const ManageAdmins = () => {
       return;
     }
     if (pendingDelete === admin.id) {
-      clearTimeout(deleteTimers[admin.id]);
+      clearTimeout(deleteTimersRef.current[admin.id]);
+      delete deleteTimersRef.current[admin.id];
       confirmDelete(admin.id);
       return;
     }
     setPendingDelete(admin.id);
     const timer = setTimeout(() => {
       setPendingDelete((prev) => (prev === admin.id ? null : prev));
+      delete deleteTimersRef.current[admin.id];
     }, 3000);
-    setDeleteTimers((prev) => ({ ...prev, [admin.id]: timer }));
+    deleteTimersRef.current[admin.id] = timer;
   };
 
   const cancelDelete = (adminId) => {
-    clearTimeout(deleteTimers[adminId]);
+    clearTimeout(deleteTimersRef.current[adminId]);
+    delete deleteTimersRef.current[adminId];
     setPendingDelete(null);
   };
 
@@ -237,7 +245,11 @@ const ManageAdmins = () => {
                           <Button
                             variant="danger"
                             size="sm"
-                            onClick={() => confirmDelete(admin.id)}
+                            onClick={() => {
+                              clearTimeout(deleteTimersRef.current[admin.id]);
+                              delete deleteTimersRef.current[admin.id];
+                              confirmDelete(admin.id);
+                            }}
                           >
                             Confirm?
                           </Button>

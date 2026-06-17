@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import toast from 'react-hot-toast';
 import Card from '../../components/ui/Card';
 import { CardSkeleton } from '../../components/ui/Skeleton';
 
@@ -12,7 +13,7 @@ const Overview = () => {
   useEffect(() => {
     axios.get('/api/admins/regions/overview')
       .then(({ data }) => setRegions(data))
-      .catch(() => {})
+      .catch(() => toast.error('Failed to load regions'))
       .finally(() => setLoading(false));
   }, []);
 
