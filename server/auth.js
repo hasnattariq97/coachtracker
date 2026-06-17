@@ -22,7 +22,7 @@ const generateToken = (user) => {
     throw new Error('User must have id, email, and role properties');
   }
   return jwt.sign(
-    { id: user.id, email: user.email, role: user.role },
+    { id: user.id, email: user.email, role: user.role, region_id: user.region_id ?? null, region_name: user.region_name ?? null },
     SECRET,
     { expiresIn: '24h' }
   );
@@ -68,4 +68,16 @@ const requireCoach = (req, res, next) => {
   next();
 };
 
-module.exports = { generateToken, verifyToken, authenticateToken, requireAdmin, requireCoach };
+const requireSuperAdmin = (req, res, next) => {
+  if (!req.user || req.user.role !== 'super_admin') {
+    return res.status(403).json({ error: 'Super admin access required' });
+  }
+  next();
+};
+
+const regionFilter = (user) => {
+  if (user.role === 'super_admin') return null;
+  return user.region_id;
+};
+
+module.exports = { generateToken, verifyToken, authenticateToken, requireAdmin, requireCoach, requireSuperAdmin, regionFilter };

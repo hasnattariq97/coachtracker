@@ -57,8 +57,13 @@ router.post('/login', async (req, res) => {
     // Normalize email (trim and lowercase)
     const normalizedEmail = email.trim().toLowerCase();
 
-    // Query user by email (case-insensitive)
-    const user = await db.prepare('SELECT * FROM users WHERE LOWER(email) = $1').get(normalizedEmail);
+    // Query user by email (case-insensitive), join region name for JWT payload
+    const user = await db.prepare(`
+      SELECT u.*, r.name AS region_name
+      FROM users u
+      LEFT JOIN regions r ON r.id = u.region_id
+      WHERE LOWER(u.email) = $1
+    `).get(normalizedEmail);
     if (!user) {
       return res.status(401).json({ error: 'Invalid email or password' });
     }
