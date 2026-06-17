@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {
   LayoutDashboard, Users, ClipboardList, PlusCircle,
   CheckSquare, LogOut, Menu, X, Zap, Bot, Wrench, MessageSquare, MapPin
@@ -47,10 +47,7 @@ const NavItem = ({ to, icon: Icon, label, onClick }) => (
 const Sidebar = ({ role }) => {
   const { user, logout } = useAuth();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const navigate = useNavigate();
   const links = role === 'super_admin' ? superAdminLinks : role === 'admin' ? adminLinks : coachLinks;
-
-  const handleLogout = () => { logout(); };
 
   const initials = user?.name
     ? user.name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)
@@ -98,7 +95,7 @@ const Sidebar = ({ role }) => {
           </div>
         </div>
         <button
-          onClick={handleLogout}
+          onClick={logout}
           className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl text-sm text-primary-100 hover:bg-white/10 hover:text-white transition-all duration-150 min-h-[44px]"
           aria-label="Log out"
         >
