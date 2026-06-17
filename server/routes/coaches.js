@@ -1,6 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const db = require('../db');
+const { regionFilter } = require('../auth');
 const router = express.Router();
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -10,7 +11,9 @@ const validateEmail = (email) => EMAIL_REGEX.test(email);
 router.get('/', async (req, res) => {
   console.log('[GET /coaches] Route called');
   try {
-    const coaches = await db.prepare(`
+    const regionId = regionFilter(req.user);
+
+    let sql = `
       SELECT
         u.id, u.name, u.email, u.role,
         COUNT(CASE WHEN t.status IN ('assigned','in_progress') THEN 1 END) AS assigned,
@@ -20,9 +23,15 @@ router.get('/', async (req, res) => {
       FROM users u
       LEFT JOIN tasks t ON t.coach_id = u.id
       WHERE u.role = 'coach'
-      GROUP BY u.id
-      ORDER BY u.name
-    `).all();
+    `;
+    const params = [];
+    if (regionId) {
+      sql += ' AND u.region_id = ?';
+      params.push(regionId);
+    }
+    sql += ' GROUP BY u.id ORDER BY u.name';
+
+    const coaches = await db.prepare(sql).all(...params);
     res.json(coaches);
   } catch (err) {
     console.error('GET /api/coaches error:', err.message);
@@ -66,9 +75,10 @@ router.post('/', async (req, res) => {
     if (existing) return res.status(409).json({ error: 'Email already exists' });
 
     const hash = await bcrypt.hash(password, 10);
+    const regionId = req.user.region_id;
     const result = await db.prepare(
-      'INSERT INTO users (name, email, password_hash, role) VALUES (?, ?, ?, ?) RETURNING id'
-    ).run(trimmedName, trimmedEmail, hash, 'coach');
+      'INSERT INTO users (name, email, password_hash, role, region_id) VALUES (?, ?, ?, ?, ?) RETURNING id'
+    ).run(trimmedName, trimmedEmail, hash, 'coach', regionId);
 
     const newId = result.rows[0]?.id;
     res.json({ id: newId, name: trimmedName, email: trimmedEmail, role: 'coach' });
@@ -87,7 +97,10 @@ router.put('/:id', async (req, res) => {
   }
 
   try {
-    const coach = await db.prepare('SELECT id FROM users WHERE id = ? AND role = ?').get(id, 'coach');
+    const regionId = regionFilter(req.user);
+    const coach = regionId
+      ? await db.prepare('SELECT id FROM users WHERE id = ? AND role = ? AND region_id = ?').get(id, 'coach', regionId)
+      : await db.prepare('SELECT id FROM users WHERE id = ? AND role = ?').get(id, 'coach');
     if (!coach) return res.status(404).json({ error: 'Coach not found' });
 
     if (name !== undefined) {
@@ -143,7 +156,10 @@ router.delete('/:id', async (req, res) => {
   }
 
   try {
-    const coach = await db.prepare('SELECT id FROM users WHERE id = ? AND role = ?').get(id, 'coach');
+    const regionId = regionFilter(req.user);
+    const coach = regionId
+      ? await db.prepare('SELECT id FROM users WHERE id = ? AND role = ? AND region_id = ?').get(id, 'coach', regionId)
+      : await db.prepare('SELECT id FROM users WHERE id = ? AND role = ?').get(id, 'coach');
     if (!coach) return res.status(404).json({ error: 'Coach not found' });
 
     await db.prepare('DELETE FROM users WHERE id = ?').run(id);
