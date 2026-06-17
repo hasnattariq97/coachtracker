@@ -34,6 +34,10 @@ router.post('/', async (req, res) => {
   if (password.length < 6) {
     return res.status(400).json({ error: 'Password must be at least 6 characters' });
   }
+  const numericRegionId = Number.parseInt(region_id, 10);
+  if (!Number.isInteger(numericRegionId) || numericRegionId < 1) {
+    return res.status(400).json({ error: 'region_id must be a positive integer' });
+  }
 
   const trimmedEmail = email.trim().toLowerCase();
   const trimmedName = name.trim();
@@ -45,9 +49,10 @@ router.post('/', async (req, res) => {
     const hash = await bcrypt.hash(password, 12);
     const result = await db.prepare(
       `INSERT INTO users (name, email, password_hash, role, region_id) VALUES (?, ?, ?, 'admin', ?) RETURNING id`
-    ).run(trimmedName, trimmedEmail, hash, region_id);
+    ).run(trimmedName, trimmedEmail, hash, numericRegionId);
 
     const newId = result.rows[0]?.id;
+    if (!newId) return res.status(500).json({ error: 'Internal server error' });
     const created = await db.prepare(`
       SELECT u.id, u.name, u.email, u.role, r.name AS region_name
       FROM users u LEFT JOIN regions r ON r.id = u.region_id
