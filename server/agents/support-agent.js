@@ -461,6 +461,8 @@ class SupportAgent {
    */
   async _checkRecentAction(targetId, actionType, windowMinutes) {
     try {
+      if (actionType !== 'tag' && actionType !== 'email') return null;
+
       let query;
       let params;
 

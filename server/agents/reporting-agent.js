@@ -291,82 +291,49 @@ class ReportingAgent {
     try {
       const today = new Date().toISOString().split('T')[0];
 
-      // For per-region reports, use (report_date, region_id) upsert key.
-      // For the combined report (region_id IS NULL), upsert on report_date alone.
-      if (regionId !== null) {
-        await this.db.query(
-          `INSERT INTO daily_reports
-           (report_date, region_id, summary_json, patterns_json, recommendations_json, agent_activity_json, insights, generated_by, ai_confidence)
-           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
-           ON CONFLICT (report_date) DO UPDATE SET
-             summary_json = EXCLUDED.summary_json,
-             patterns_json = EXCLUDED.patterns_json,
-             recommendations_json = EXCLUDED.recommendations_json,
-             agent_activity_json = EXCLUDED.agent_activity_json,
-             insights = EXCLUDED.insights,
-             generated_by = EXCLUDED.generated_by,
-             ai_confidence = EXCLUDED.ai_confidence,
-             region_id = EXCLUDED.region_id`,
-          [
-            today,
+      // Delete the existing row for this (report_date, region_id) pair before re-inserting.
+      // This is the safest way to upsert when the unique index is on a functional expression
+      // (COALESCE(region_id, 0)), which PostgreSQL does not support in ON CONFLICT clauses
+      // without naming the index explicitly.
+      // The WHERE handles both the per-region case (integer match) and the combined report
+      // (both sides are NULL, so we use an IS NULL check rather than = NULL).
+      await this.db.query(
+        `DELETE FROM daily_reports
+         WHERE report_date = $1
+           AND (
+             (region_id = $2)
+             OR ($2 IS NULL AND region_id IS NULL)
+           )`,
+        [today, regionId]
+      );
+
+      await this.db.query(
+        `INSERT INTO daily_reports
+         (report_date, region_id, summary_json, patterns_json, recommendations_json, agent_activity_json, insights, generated_by, ai_confidence)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)`,
+        [
+          today,
+          regionId,
+          JSON.stringify({
+            completionRate: patterns.completionRate,
+            totalSupportActions: (patterns.supportActions || []).length,
+            reportedAt: new Date().toISOString(),
+          }),
+          JSON.stringify({
+            commonBlockers: patterns.commonBlockers,
+            coachPerformance: patterns.coachPerformance,
+          }),
+          JSON.stringify(recommendations),
+          JSON.stringify({
+            generatedBy: this.name,
+            executedAt: new Date().toISOString(),
             regionId,
-            JSON.stringify({
-              completionRate: patterns.completionRate,
-              totalSupportActions: (patterns.supportActions || []).length,
-              reportedAt: new Date().toISOString(),
-            }),
-            JSON.stringify({
-              commonBlockers: patterns.commonBlockers,
-              coachPerformance: patterns.coachPerformance,
-            }),
-            JSON.stringify(recommendations),
-            JSON.stringify({
-              generatedBy: this.name,
-              executedAt: new Date().toISOString(),
-              regionId,
-            }),
-            aiInsights ? JSON.stringify(aiInsights) : null,
-            aiInsights ? 'groq-ai' : 'rules-based',
-            aiInsights ? (aiInsights.confidence || null) : null,
-          ]
-        );
-      } else {
-        await this.db.query(
-          `INSERT INTO daily_reports
-           (report_date, region_id, summary_json, patterns_json, recommendations_json, agent_activity_json, insights, generated_by, ai_confidence)
-           VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
-           ON CONFLICT (report_date) DO UPDATE SET
-             summary_json = EXCLUDED.summary_json,
-             patterns_json = EXCLUDED.patterns_json,
-             recommendations_json = EXCLUDED.recommendations_json,
-             agent_activity_json = EXCLUDED.agent_activity_json,
-             insights = EXCLUDED.insights,
-             generated_by = EXCLUDED.generated_by,
-             ai_confidence = EXCLUDED.ai_confidence`,
-          [
-            today,
-            null,
-            JSON.stringify({
-              completionRate: patterns.completionRate,
-              totalSupportActions: (patterns.supportActions || []).length,
-              reportedAt: new Date().toISOString(),
-            }),
-            JSON.stringify({
-              commonBlockers: patterns.commonBlockers,
-              coachPerformance: patterns.coachPerformance,
-            }),
-            JSON.stringify(recommendations),
-            JSON.stringify({
-              generatedBy: this.name,
-              executedAt: new Date().toISOString(),
-              combined: true,
-            }),
-            aiInsights ? JSON.stringify(aiInsights) : null,
-            aiInsights ? 'groq-ai' : 'rules-based',
-            aiInsights ? (aiInsights.confidence || null) : null,
-          ]
-        );
-      }
+          }),
+          aiInsights ? JSON.stringify(aiInsights) : null,
+          aiInsights ? 'groq-ai' : 'rules-based',
+          aiInsights ? (aiInsights.confidence || null) : null,
+        ]
+      );
 
       console.log(`✓ Archived report to daily_reports table for ${today} (region_id: ${regionId})`);
     } catch (err) {

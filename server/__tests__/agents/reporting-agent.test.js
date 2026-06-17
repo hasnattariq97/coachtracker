@@ -56,7 +56,8 @@ describe('ReportingAgent', () => {
         .mockResolvedValueOnce({ rows: [] })                                   // regions → empty
         .mockResolvedValueOnce({ rows: [{ id: 99, email: 'hasnattariq97@gmail.com' }] }) // super_admin
         .mockResolvedValueOnce({ rowCount: 1, rows: [] })                      // email_queue insert
-        .mockResolvedValueOnce({ rowCount: 1, rows: [] });                     // daily_reports insert
+        .mockResolvedValueOnce({ rowCount: 0, rows: [] })                      // daily_reports DELETE
+        .mockResolvedValueOnce({ rowCount: 1, rows: [] });                     // daily_reports INSERT
 
       const result = await agent.run();
 
@@ -181,7 +182,9 @@ describe('ReportingAgent', () => {
 
   describe('_archiveReport()', () => {
     test('saves report to daily_reports table', async () => {
-      const querySpy = jest.spyOn(agent.db, 'query').mockResolvedValueOnce({ rowCount: 1, rows: [] });
+      const querySpy = jest.spyOn(agent.db, 'query')
+        .mockResolvedValueOnce({ rowCount: 0, rows: [] })  // DELETE existing row
+        .mockResolvedValueOnce({ rowCount: 1, rows: [] }); // INSERT new row
 
       const patterns = {
         supportActions: [],
@@ -199,7 +202,9 @@ describe('ReportingAgent', () => {
     });
 
     test('includes all pattern data in archive', async () => {
-      const querySpy = jest.spyOn(agent.db, 'query').mockResolvedValueOnce({ rowCount: 1, rows: [] });
+      const querySpy = jest.spyOn(agent.db, 'query')
+        .mockResolvedValueOnce({ rowCount: 0, rows: [] })  // DELETE existing row
+        .mockResolvedValueOnce({ rowCount: 1, rows: [] }); // INSERT new row
 
       const patterns = {
         supportActions: [{ id: 1 }],
@@ -212,8 +217,8 @@ describe('ReportingAgent', () => {
 
       await agent._archiveReport(patterns, recommendations);
 
-      const callArgs = querySpy.mock.calls[0];
-      const [sql, params] = callArgs;
+      // call[0] = DELETE, call[1] = INSERT — check the INSERT params
+      const [sql, params] = querySpy.mock.calls[1];
 
       // params: [today, regionId(null), summaryJson, patternsJson, recommendationsJson, ...]
       expect(params[2]).toContain('75'); // completionRate in summary_json

@@ -66,27 +66,32 @@ class MonitoringAgent {
       const snapshots = [];
 
       for (const region of regions) {
-        // Get active tasks for coaches in this region
-        const activeTasks = await this.db.query(
-          `SELECT t.id, t.coach_id, t.title, t.assigned_at, t.due_date
-           FROM tasks t
-           JOIN users u ON u.id = t.coach_id
-           WHERE t.status NOT IN ('completed', 'cancelled')
-             AND u.region_id = $1`,
-          [region.id]
-        );
+        try {
+          // Get active tasks for coaches in this region
+          const activeTasks = await this.db.query(
+            `SELECT t.id, t.coach_id, t.title, t.assigned_at, t.due_date
+             FROM tasks t
+             JOIN users u ON u.id = t.coach_id
+             WHERE t.status NOT IN ('completed', 'cancelled')
+               AND u.region_id = $1`,
+            [region.id]
+          );
 
-        for (const task of activeTasks.rows) {
-          try {
-            const snapshot = await this._analyzeTask(task, region.id);
-            snapshots.push(snapshot);
-          } catch (err) {
-            console.error(`Failed to analyze task ${task.id}:`, err.message);
-            await this._logAgentError(this.name, 'task_analysis_failed', err.message);
+          for (const task of activeTasks.rows) {
+            try {
+              const snapshot = await this._analyzeTask(task, region.id);
+              snapshots.push(snapshot);
+            } catch (err) {
+              console.error(`Failed to analyze task ${task.id}:`, err.message);
+              await this._logAgentError(this.name, 'task_analysis_failed', err.message);
+            }
           }
-        }
 
-        console.log(`✓ MonitoringAgent: Scanned ${activeTasks.rows.length} tasks in region ${region.name}`);
+          console.log(`✓ MonitoringAgent: Scanned ${activeTasks.rows.length} tasks in region ${region.name}`);
+        } catch (err) {
+          console.error(`MonitoringAgent: Failed for region ${region.name}:`, err.message);
+          await this._logAgentError(this.name, 'region_scan_failed', `Region ${region.name}: ${err.message}`);
+        }
       }
 
       console.log(`✓ MonitoringAgent: Scanned ${snapshots.length} tasks total`);
@@ -146,6 +151,7 @@ class MonitoringAgent {
        (task_id, coach_id, sheet_id, sheet_completion_percent, missing_sections, blockers, status, days_remaining, coach_pattern, region_id)
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
        ON CONFLICT (task_id) DO UPDATE SET
+         sheet_id = EXCLUDED.sheet_id,
          sheet_completion_percent = EXCLUDED.sheet_completion_percent,
          missing_sections = EXCLUDED.missing_sections,
          blockers = EXCLUDED.blockers,
