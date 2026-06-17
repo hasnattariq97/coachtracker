@@ -12,7 +12,7 @@ New to this project? Do this first:
 4. **Skim** [@docs/ROADMAP.md](docs/ROADMAP.md) — see the phases
 5. **Run** `cd server && npm install && node index.js` — start backend on :3001
 6. **Run** `cd client && npm install && npm run dev` — start frontend on :5173
-7. **Login** with hasnat@niete.edu.pk / Hasnat97
+7. **Login** with hasnattariq97@gmail.com / superadmin123* (super_admin) or hasnat@niete.edu.pk / Hasnat97 (admin)
 
 ## Tech Stack
 
@@ -20,8 +20,8 @@ New to this project? Do this first:
 |-------|------|
 | Frontend | React (Vite) + TailwindCSS, port 5173 |
 | Backend | Node.js + Express, port 3001 |
-| Database | SQLite via better-sqlite3 (server/tracker.db) |
-| Auth | JWT + bcrypt (roles: 'admin' \| 'coach') |
+| Database | PostgreSQL via `pg` pool (Railway) |
+| Auth | JWT + bcrypt (roles: 'super_admin' \| 'admin' \| 'coach') |
 | Automation | node-cron (hourly nudge jobs) |
 | E2E Testing | Agent-Browser (deterministic element refs) |
 | LLM (Phase 7) | Groq API (llama-3.3-70b-versatile) — free tier, 30 RPM, no credit card |
@@ -32,7 +32,9 @@ New to this project? Do this first:
 - No comments unless WHY is non-obvious
 - Validate only at system boundaries (user input, external APIs)
 - All admin routes: `requireAdmin` middleware
+- All super_admin routes: `requireSuperAdmin` middleware (mounted at `/api/admins`)
 - All coach routes: scoped to `req.user.id`
+- Admin queries: use `regionFilter(user)` — returns `null` for super_admin (sees all), `region_id` for admin (scoped)
 - Never return `password_hash` in API responses
 
 **Frontend design:** See [@memory/frontend_design_system.md](~/.claude/projects/d--Cursor-new/memory/frontend_design_system.md) — uses ui-ux-pro-max-skill (Teal #0D9488, Orange #EA580C).
@@ -80,6 +82,43 @@ Groq-powered 5-agent pipeline that diagnoses coach-reported bugs, creates real G
 **Architecture:** Sequential pipeline triggered every 5 min by cron. 4 database tables (`feedback_reports`, `diagnoses`, `implementation_plans`, `auto_fixes`). GitHub API via Node 18 native fetch (`server/services/github-api.js`). Graceful degradation — pipeline never crashes on agent failure.
 
 **Status:** ✅ Complete | 61+ tests passing | Railway cron active | Real GitHub API wired end-to-end
+
+## Phase 11 — Regional Scoping & Multi-Tenancy ✅ COMPLETE & DEPLOYED
+
+6 fixed regions with a `super_admin` role that has full cross-region visibility. Admins and coaches are scoped to a single region.
+
+**Regions:** Urban-I, Urban-II, Sihala, Nilore, Barakahu, Tarnol
+
+**Roles:**
+- `super_admin` — sees all regions, manages all admins via `/api/admins` (requireSuperAdmin)
+- `admin` — scoped to their region; sees only coaches/tasks/agents in that region
+- `coach` — unchanged; scoped to their own tasks
+
+**Key Implementation:**
+- `regionFilter(user)` in `server/auth.js` — returns `null` (super_admin) or `region_id` (admin); used in coaches + tasks + agent queries
+- `requireSuperAdmin` middleware — blocks non-super_admin at route level
+- JWT includes `region_id` + `region_name` — frontend uses for region badge in Sidebar
+- Phase 9 agents loop per region — each agent run scopes monitoring/support/reporting to a single region, with per-region error isolation
+- 3 new super_admin frontend pages: Overview (6-region grid), RegionDetail (coach table), ManageAdmins (CRUD)
+
+**API (all requireSuperAdmin):**
+- `GET /api/admins/regions/overview` — all 6 regions with coach_count, active_tasks, overdue_tasks
+- `GET /api/admins/regions/:id/coaches` — coaches in a region
+- `GET /api/admins/regions/:id/tasks` — tasks in a region
+- `GET/POST/PUT/DELETE /api/admins` — manage regional admins
+
+**Status:** ✅ **LIVE ON RAILWAY** (commit `51f82d6`) — 15 commits, 380 backend tests passing, production verified
+
+**Login Credentials (production):**
+| Role | Email | Password |
+|------|-------|----------|
+| super_admin | hasnattariq97@gmail.com | superadmin123* |
+| admin (Urban-I) | hasnat@niete.edu.pk | Hasnat97 |
+| admin (Sihala) | hashir.hussain@niete.edu.pk | hashir1234 |
+| admin (Urban-II) | anam.masood@niete.edu.pk | anam1234 |
+| admin (Nilore) | sara.fatima@niete.edu.pk | sara1234 |
+| admin (Barakahu) | asma.zaheer@niete.edu.pk | asma1234 |
+| admin (Tarnol) | abdul.waheed@niete.edu.pk | waheed1234 |
 
 ## Workflow: Superpowers (Brainstorm → Design → Plan → Execute → Review)
 

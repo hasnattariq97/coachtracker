@@ -598,6 +598,58 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 
 ---
 
+## Phase 11 — Regional Scoping & Multi-Tenancy ✅ COMPLETE
+
+**Status:** ✅ COMPLETE (2026-06-17) | 15 commits | Railway deployed (commit `51f82d6`)
+
+### What Was Built
+- **6 Fixed Regions:** Urban-I, Urban-II, Sihala, Nilore, Barakahu, Tarnol (seeded in `regions` table)
+- **3 Roles:** `super_admin` (cross-region), `admin` (scoped to region), `coach` (unchanged)
+- **`regionFilter(user)`** in `server/auth.js` — returns `null` for super_admin, `region_id` for admin; used in coaches + tasks queries
+- **`requireSuperAdmin`** middleware — blocks non-super_admin on `/api/admins` routes
+- **JWT** now includes `region_id` + `region_name` in payload
+- **Phase 9 agents** loop per region with per-region error isolation
+- **3 super_admin frontend pages:** Overview (region grid), RegionDetail (coach table), ManageAdmins (CRUD)
+
+### New API Endpoints (all `requireSuperAdmin`)
+- `GET /api/admins/regions/overview` → 6 regions with stats
+- `GET /api/admins/regions/:id/coaches` → coaches in region
+- `GET /api/admins/regions/:id/tasks` → tasks in region
+- `GET /api/admins` → all regional admins
+- `POST /api/admins` → create admin (requires region_id)
+- `PUT /api/admins/:id` → update admin
+- `DELETE /api/admins/:id` → delete admin
+
+### Login Credentials (Production)
+| Role | Email | Password | Region |
+|------|-------|----------|--------|
+| super_admin | hasnattariq97@gmail.com | superadmin123* | — |
+| admin | hasnat@niete.edu.pk | Hasnat97 | Urban-I |
+| admin | hashir.hussain@niete.edu.pk | hashir1234 | Sihala |
+| admin | anam.masood@niete.edu.pk | anam1234 | Urban-II |
+| admin | sara.fatima@niete.edu.pk | sara1234 | Nilore |
+| admin | asma.zaheer@niete.edu.pk | asma1234 | Barakahu |
+| admin | abdul.waheed@niete.edu.pk | waheed1234 | Tarnol |
+
+### Files Created/Modified
+- ✅ `server/db-migrations/regions-schema.js` — regions table, users.region_id, seed data
+- ✅ `server/db-migrations/regions-agent-schema.js` — region_id on monitoring_snapshots + daily_reports
+- ✅ `server/auth.js` — `regionFilter()`, `requireSuperAdmin`, region_name in JWT
+- ✅ `server/routes/coaches.js` — region-scoped queries
+- ✅ `server/routes/tasks.js` — region-scoped admin task listing
+- ✅ `server/routes/admins.js` — NEW: full CRUD + region overview endpoints
+- ✅ `server/agents/monitoring-agent.js` — per-region loop with error isolation
+- ✅ `server/agents/support-agent.js` — per-region snapshots + scoped admin email
+- ✅ `server/agents/reporting-agent.js` — per-region + combined super_admin report
+- ✅ `client/src/App.jsx` — super_admin routes + RoleRedirect via useAuth
+- ✅ `client/src/components/ProtectedRoute.jsx` — wrong-role redirects to `/`
+- ✅ `client/src/components/Sidebar.jsx` — region badge (admin), super_admin nav links
+- ✅ `client/src/pages/super-admin/Overview.jsx` — 6 region cards grid
+- ✅ `client/src/pages/super-admin/RegionDetail.jsx` — per-region coach table
+- ✅ `client/src/pages/super-admin/ManageAdmins.jsx` — admin CRUD with modals
+
+---
+
 ## Project Status Summary
 
 | Phase | Feature | Status | Tests |
@@ -621,13 +673,14 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 | 9c | AI Reporting Dashboard | ✅ Complete | 39 tests |
 | 10 | Autonomous Bug Fix System | ✅ Complete | 40+ tests |
 | 10+ | Phase 10 Full Autonomy (Real GitHub API) | ✅ Complete | 21 new tests |
+| 11 | Regional Scoping & Multi-Tenancy | ✅ Complete | 380 passing |
 
-**Total Tests Passing:** 350+ (156 Phase 9 + 58 Phase 9b + 39 Phase 9c + 61+ Phase 10 + 36 core backend tests)  
-**All Phases Complete:** Phases 0-10 + Full Autonomy implemented and tested ✅  
+**Total Tests Passing:** 380 (backend, 2026-06-17)  
+**All Phases Complete:** Phases 0-11 implemented and tested ✅  
 **E2E Testing:** Agent-browser integration complete and verified (11/11 tests)  
 **Security Findings:** 11/11 resolved (0 critical, 0 active bypasses)  
-**Features Complete:** All features implemented (Phases 0-10)  
-**Autonomous Agents:** ✅ Phase 9: Monitoring + Support + Reporting | Phase 10: Diagnostic + Planning + Implementation + Verification + Integration  
+**Features Complete:** All features implemented (Phases 0-11)  
+**Autonomous Agents:** ✅ Phase 9: Monitoring + Support + Reporting (region-scoped) | Phase 10: Diagnostic + Planning + Implementation + Verification + Integration  
 **AI Enhancement:** ✅ Phase 9b: Groq-powered decisions | Phase 10: Groq code generation + real GitHub branch/commit/merge  
 **Admin Dashboard:** ✅ Phase 9c: Real-time agent status, decision analytics, coach patterns  
 **Agent Tests:** ✅ 314+ tests passing (Phase 9: 156 + Phase 9b: 58 + Phase 9c: 39 + Phase 10: 61+)  
@@ -636,6 +689,7 @@ When coaches submit completed tasks or delay reasons, a 3-agent consensus swarm 
 **Notifications:** ✅ In-app + email + **AI-enhanced coaching insights** + autonomous agent support  
 **Groq API:** ✅ Integrated with queue management, rate limiting, graceful fallback to Phase 9 rules  
 **Coaching Messages:** ✅ **MEANINGFUL & AI-PERSONALIZED** — tone, metrics, predictions per coach pattern  
+**Multi-Tenancy:** ✅ **Phase 11** — 6 regions, super_admin cross-region view, admin/coach scoped to region  
 **Skills:** ✅ NEW: `skill-railway-deploy` (no context) + `skill-github-push` (Anthropic best practices)
 
 ---
@@ -655,8 +709,9 @@ cd client && npm run test:e2e         # 11 E2E tests pass via agent-browser
 ```
 
 ### Login Credentials
-- **Admin:** admin@tracker.com / admin123
-- **Coach:** create via UI or seed directly
+- **Super Admin:** hasnattariq97@gmail.com / superadmin123*
+- **Admin (Urban-I):** hasnat@niete.edu.pk / Hasnat97
+- **Coach:** create via UI (assign to a region's admin)
 
 ---
 
