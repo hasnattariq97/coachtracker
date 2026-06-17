@@ -1,5 +1,3 @@
-const bcrypt = require('bcrypt');
-
 async function migrateRegions(query) {
   // 1. Create regions table
   await query(`
@@ -22,8 +20,10 @@ async function migrateRegions(query) {
     EXCEPTION WHEN undefined_object THEN NULL; END $$;
   `);
   await query(`
-    ALTER TABLE users ADD CONSTRAINT users_role_check
-    CHECK (role IN ('super_admin', 'admin', 'coach'));
+    DO $$ BEGIN
+      ALTER TABLE users ADD CONSTRAINT users_role_check
+        CHECK (role IN ('super_admin', 'admin', 'coach'));
+    EXCEPTION WHEN duplicate_object THEN NULL; END $$;
   `);
 
   // 4. Add region_id column to users (nullable — super_admin has no region)
@@ -46,29 +46,28 @@ async function migrateRegions(query) {
 
   // 7. Seed super_admin and 5 new regional admin accounts
   const accounts = [
-    { name: 'Super Admin',    email: 'hasnattariq97@gmail.com',     password: 'superadmin123*', role: 'super_admin', region: null },
-    { name: 'Hashir Hussain', email: 'hashir.hussain@niete.edu.pk', password: 'hashir1234',    role: 'admin',       region: 'Sihala'   },
-    { name: 'Anam Masood',   email: 'anam.masood@niete.edu.pk',    password: 'anam1234',      role: 'admin',       region: 'Urban-II' },
-    { name: 'Sara Fatima',   email: 'sara.fatima@niete.edu.pk',    password: 'sara1234',      role: 'admin',       region: 'Nilore'   },
-    { name: 'Asma Zaheer',   email: 'asma.zaheer@niete.edu.pk',    password: 'asma1234',      role: 'admin',       region: 'Barakahu' },
-    { name: 'Abdul Waheed',  email: 'abdul.waheed@niete.edu.pk',   password: 'waheed1234',    role: 'admin',       region: 'Tarnol'   },
+    { name: 'Super Admin',    email: 'hasnattariq97@gmail.com',     hash: '$2b$12$7VDe1Oev.TnJ4zo6P8xK0e2uBvxTRzYoKUduuXX4.JN8IONm8WwVi', role: 'super_admin', region: null      },
+    { name: 'Hashir Hussain', email: 'hashir.hussain@niete.edu.pk', hash: '$2b$12$LqBjC/RiFSwPb9F5dtQ2OekDRgrXJ/TrktavmKjDMlD9nn1Ozma2O',  role: 'admin',       region: 'Sihala'   },
+    { name: 'Anam Masood',   email: 'anam.masood@niete.edu.pk',    hash: '$2b$12$rKtROcZmqino4l4XnNhj1eZ3hD3IN45zJNLxFUcmPqcNMHAfqf80u',  role: 'admin',       region: 'Urban-II' },
+    { name: 'Sara Fatima',   email: 'sara.fatima@niete.edu.pk',    hash: '$2b$12$/hGkSZjkvs7MvdttN7LQHOSkrTW/GYOl9k8HGAvchOqrsF6Ni1wAG',  role: 'admin',       region: 'Nilore'   },
+    { name: 'Asma Zaheer',   email: 'asma.zaheer@niete.edu.pk',    hash: '$2b$12$MLEULG2NExZo6V6sfPikz.zx.ybugw87hHVct8hsp/daabcf2qdDS',   role: 'admin',       region: 'Barakahu' },
+    { name: 'Abdul Waheed',  email: 'abdul.waheed@niete.edu.pk',   hash: '$2b$12$sl6ht4aOCyOK809EXIxvb.ADculqtCqHTZ56RVFYObqEfNNaaToBy',   role: 'admin',       region: 'Tarnol'   },
   ];
 
   for (const acct of accounts) {
     const existing = await query(`SELECT id FROM users WHERE email = ?`, [acct.email]);
     if (existing.rows.length > 0) continue;
 
-    const hash = await bcrypt.hash(acct.password, 12);
     if (acct.region) {
       await query(`
         INSERT INTO users (name, email, password_hash, role, region_id)
         VALUES (?, ?, ?, ?, (SELECT id FROM regions WHERE name = ?))
-      `, [acct.name, acct.email, hash, acct.role, acct.region]);
+      `, [acct.name, acct.email, acct.hash, acct.role, acct.region]);
     } else {
       await query(`
         INSERT INTO users (name, email, password_hash, role)
         VALUES (?, ?, ?, ?)
-      `, [acct.name, acct.email, hash, acct.role]);
+      `, [acct.name, acct.email, acct.hash, acct.role]);
     }
   }
 
