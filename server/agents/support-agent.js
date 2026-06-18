@@ -31,6 +31,7 @@ class SupportAgent {
     // Fatigue prevention thresholds
     this.TAG_FATIGUE_WINDOW_MINUTES = 30;      // Don't tag same task twice within 30 min
     this.EMAIL_FATIGUE_WINDOW_HOURS = 4;       // Don't email same coach twice within 4 hours
+    this.ESCALATE_FATIGUE_WINDOW_HOURS = 8;    // Don't escalate same task twice within 8 hours
   }
 
   /**
@@ -170,12 +171,12 @@ class SupportAgent {
       }
 
       if (action === 'escalate') {
-        const recentEscalate = await this._checkRecentAction(task_id, 'escalate', this.EMAIL_FATIGUE_WINDOW_HOURS * 60);
+        const recentEscalate = await this._checkRecentAction(task_id, 'escalate', this.ESCALATE_FATIGUE_WINDOW_HOURS * 60);
         if (recentEscalate) {
           overridden = true;
           overrideReason = 'fatigue_rule';
           action = null;
-          reason = `[Fatigue rule override] Groq recommended escalate, but already escalated ${recentEscalate.hours}h ago. Wait ${this.EMAIL_FATIGUE_WINDOW_HOURS}h between escalations.`;
+          reason = `[Fatigue rule override] Groq recommended escalate, but already escalated ${recentEscalate.hours}h ago. Wait ${this.ESCALATE_FATIGUE_WINDOW_HOURS}h between escalations.`;
         }
       }
 
@@ -276,7 +277,7 @@ class SupportAgent {
     }
 
     if (action === 'escalate') {
-      const recentEscalate = await this._checkRecentAction(task_id, 'escalate', this.EMAIL_FATIGUE_WINDOW_HOURS * 60);
+      const recentEscalate = await this._checkRecentAction(task_id, 'escalate', this.ESCALATE_FATIGUE_WINDOW_HOURS * 60);
       if (recentEscalate) {
         action = null;
         reason = `Skip: Already escalated ${recentEscalate.hours}h ago.`;
