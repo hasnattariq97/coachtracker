@@ -11,7 +11,7 @@ const AssignTask = () => {
   const [coachesError, setCoachesError] = useState(false);
   const [loading, setLoading]     = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
-  const [form, setForm]           = useState({ coach_ids: [], title: '', description: '', priority: 'medium', due_date: '', links: [] });
+  const [form, setForm]           = useState({ coach_ids: [], title: '', description: '', priority: 'medium', due_date: '', due_time: '17:00', links: [] });
   const [newLink, setNewLink]     = useState({ label: '', url: '' });
   const dropdownRef = useRef(null);
   const navigate = useNavigate();
@@ -87,7 +87,7 @@ const AssignTask = () => {
         title: form.title,
         description: form.description,
         priority: form.priority,
-        due_date: new Date(form.due_date).toISOString(),
+        due_date: new Date(`${form.due_date}T${form.due_time || '23:59'}`).toISOString(),
         coach_ids: form.coach_ids,
         links: form.links,
       });
@@ -250,18 +250,27 @@ const AssignTask = () => {
               </select>
             </div>
 
-            {/* Due date */}
+            {/* Due date & time */}
             <div>
-              <label htmlFor="due" className="block text-sm font-medium text-primary-800 mb-1.5">Due Date</label>
-              <input
-                id="due"
-                type="date"
-                value={form.due_date}
-                onChange={set('due_date')}
-                min={minDate}
-                required
-                className="w-full px-3 py-2.5 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:bg-white focus:border-primary-400 focus:ring-2 focus:ring-primary-100 outline-none transition-all"
-              />
+              <label className="block text-sm font-medium text-primary-800 mb-1.5">Due Date & Time</label>
+              <div className="flex gap-2">
+                <input
+                  id="due"
+                  type="date"
+                  value={form.due_date}
+                  onChange={set('due_date')}
+                  min={minDate}
+                  required
+                  className="flex-1 px-3 py-2.5 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:bg-white focus:border-primary-400 focus:ring-2 focus:ring-primary-100 outline-none transition-all"
+                />
+                <input
+                  type="time"
+                  value={form.due_time}
+                  onChange={set('due_time')}
+                  required
+                  className="w-32 px-3 py-2.5 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:bg-white focus:border-primary-400 focus:ring-2 focus:ring-primary-100 outline-none transition-all"
+                />
+              </div>
             </div>
           </div>
 
