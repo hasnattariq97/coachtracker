@@ -299,7 +299,7 @@ function DecisionsTable({ decisions }) {
             <tr key={d.id ?? i} className={d.overridden ? 'bg-yellow-50' : ''}>
               <td className="px-4 py-3 text-gray-600 font-mono text-xs">{formatTime(d.timestamp)}</td>
               <td className="px-4 py-3 text-gray-700 capitalize">{(d.agent_type || '—').replace(/_/g, ' ')}</td>
-              <td className="px-4 py-3 text-gray-700">Coach {d.coach_id}</td>
+              <td className="px-4 py-3 text-gray-700">{d.coach_name || `Coach ${d.coach_id}`}</td>
               <td className="px-4 py-3 font-mono text-xs text-gray-500">{d.groq_recommendation || '—'}</td>
               <td className="px-4 py-3 font-mono text-xs font-semibold text-gray-900">{d.final_action || '—'}</td>
               <td className="px-4 py-3">

@@ -48,18 +48,20 @@ router.get('/decisions', requireAdmin, async (req, res) => {
     }
 
     let query = `
-      SELECT id, created_at as timestamp, agent_type, coach_id,
-             groq_recommendation, groq_confidence, final_action,
-             override_reason, overridden, coach_pattern, task_status, metadata
-      FROM agent_decisions
-      WHERE created_at > NOW() - INTERVAL '${hours} hours'
+      SELECT ad.id, ad.created_at as timestamp, ad.agent_type, ad.coach_id,
+             u.name as coach_name,
+             ad.groq_recommendation, ad.groq_confidence, ad.final_action,
+             ad.override_reason, ad.overridden, ad.coach_pattern, ad.task_status, ad.metadata
+      FROM agent_decisions ad
+      LEFT JOIN users u ON ad.coach_id = u.id
+      WHERE ad.created_at > NOW() - INTERVAL '${hours} hours'
     `;
     const params = [];
     if (coachId) {
-      query += ` AND coach_id = $1`;
+      query += ` AND ad.coach_id = $1`;
       params.push(coachId);
     }
-    query += ` ORDER BY created_at DESC LIMIT 100`;
+    query += ` ORDER BY ad.created_at DESC LIMIT 100`;
 
     const result = await db.query(query, params);
     const rows = result.rows;

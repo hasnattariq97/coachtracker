@@ -169,6 +169,16 @@ class SupportAgent {
         }
       }
 
+      if (action === 'escalate') {
+        const recentEscalate = await this._checkRecentAction(task_id, 'escalate', this.EMAIL_FATIGUE_WINDOW_HOURS * 60);
+        if (recentEscalate) {
+          overridden = true;
+          overrideReason = 'fatigue_rule';
+          action = null;
+          reason = `[Fatigue rule override] Groq recommended escalate, but already escalated ${recentEscalate.hours}h ago. Wait ${this.EMAIL_FATIGUE_WINDOW_HOURS}h between escalations.`;
+        }
+      }
+
       // Step 4: Log decision to agent_decisions table
       await this._logDecision({
         agent_type: 'support_agent',
@@ -262,6 +272,14 @@ class SupportAgent {
       if (recentEmail) {
         action = null;
         reason = `Skip: Already emailed ${recentEmail.hours} hours ago.`;
+      }
+    }
+
+    if (action === 'escalate') {
+      const recentEscalate = await this._checkRecentAction(task_id, 'escalate', this.EMAIL_FATIGUE_WINDOW_HOURS * 60);
+      if (recentEscalate) {
+        action = null;
+        reason = `Skip: Already escalated ${recentEscalate.hours}h ago.`;
       }
     }
 
@@ -461,7 +479,7 @@ class SupportAgent {
    */
   async _checkRecentAction(targetId, actionType, windowMinutes) {
     try {
-      if (actionType !== 'tag' && actionType !== 'email') return null;
+      if (actionType !== 'tag' && actionType !== 'email' && actionType !== 'escalate') return null;
 
       let query;
       let params;
@@ -481,6 +499,15 @@ class SupportAgent {
           SELECT EXTRACT(EPOCH FROM (CURRENT_TIMESTAMP - created_at))/60 as minutes_ago
           FROM support_actions
           WHERE coach_id = $1 AND action_type = 'email'
+          ORDER BY created_at DESC LIMIT 1
+        `;
+        params = [targetId];
+      } else if (actionType === 'escalate') {
+        // Check for recent escalation on same task
+        query = `
+          SELECT EXTRACT(EPOCH FROM (CURRENT_TIMESTAMP - created_at))/60 as minutes_ago
+          FROM support_actions
+          WHERE task_id = $1 AND action_type = 'escalate'
           ORDER BY created_at DESC LIMIT 1
         `;
         params = [targetId];
