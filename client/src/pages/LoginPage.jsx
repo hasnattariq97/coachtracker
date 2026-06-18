@@ -39,7 +39,8 @@ const LoginPage = () => {
     e.preventDefault();
     try {
       const decoded = await login(email, password);
-      toast.success(`Welcome back, ${decoded.name || 'Coach'}!`);
+      const roleFallback = decoded.role === 'super_admin' ? 'Super Admin' : decoded.role === 'admin' ? 'Admin' : 'Coach';
+      toast.success(`Welcome back, ${decoded.name || roleFallback}!`);
     } catch (err) {
       toast.error(err.message || 'Login failed. Please try again.');
     }
