@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
-import { Users, UserPlus, Pencil, Trash2, Mail, MoreVertical } from 'lucide-react';
+import { Users, UserPlus, Pencil, Trash2, Mail, MoreVertical, Eye, EyeOff } from 'lucide-react';
 import Card from '../../components/ui/Card';
 import Button from '../../components/ui/Button';
 import Modal from '../../components/ui/Modal';
@@ -10,30 +10,51 @@ import { CardSkeleton } from '../../components/ui/Skeleton';
 
 const CoachForm = ({ initial = {}, onSubmit, loading }) => {
   const [form, setForm] = useState({ name: initial.name || '', email: initial.email || '', password: '' });
+  const [showPassword, setShowPassword] = useState(false);
   const set = k => e => setForm(f => ({ ...f, [k]: e.target.value }));
   const isEdit = !!initial.id;
+
+  const inputClass = "w-full px-3 py-2.5 border border-slate-200 rounded-lg text-sm bg-slate-50 focus:bg-white focus:border-primary-400 focus:ring-2 focus:ring-primary-100 outline-none transition-all disabled:opacity-60 disabled:cursor-not-allowed";
 
   return (
     <form onSubmit={e => { e.preventDefault(); onSubmit(form); }} className="space-y-4">
       {[
-        { id: 'name',     label: 'Full Name',  type: 'text',     placeholder: 'Sarah Johnson', required: true  },
-        { id: 'email',    label: 'Email',       type: 'email',    placeholder: 'sarah@team.com', required: true  },
-        { id: 'password', label: isEdit ? 'New Password (leave blank to keep)' : 'Password', type: 'password', placeholder: '••••••••', required: !isEdit },
+        { id: 'name',  label: 'Full Name', type: 'text',  placeholder: 'Sarah Johnson',  required: true },
+        { id: 'email', label: 'Email',     type: 'email', placeholder: 'sarah@team.com', required: true },
       ].map(({ id, label, ...rest }) => (
         <div key={id}>
           <label htmlFor={id} className="block text-sm font-medium text-primary-800 mb-1.5">{label}</label>
-          <input
-            id={id}
-            value={form[id]}
-            onChange={set(id)}
-            disabled={loading}
-            className="w-full px-3 py-2.5 border border-slate-200 rounded-lg text-sm bg-slate-50
-                       focus:bg-white focus:border-primary-400 focus:ring-2 focus:ring-primary-100 outline-none transition-all
-                       disabled:opacity-60 disabled:cursor-not-allowed"
-            {...rest}
-          />
+          <input id={id} value={form[id]} onChange={set(id)} disabled={loading} className={inputClass} {...rest} />
         </div>
       ))}
+
+      <div>
+        <label htmlFor="password" className="block text-sm font-medium text-primary-800 mb-1.5">
+          {isEdit ? 'New Password (leave blank to keep)' : 'Password'}
+        </label>
+        <div className="relative">
+          <input
+            id="password"
+            type={showPassword ? 'text' : 'password'}
+            value={form.password}
+            onChange={set('password')}
+            placeholder="••••••••"
+            required={!isEdit}
+            disabled={loading}
+            className={`${inputClass} pr-10`}
+          />
+          <button
+            type="button"
+            onClick={() => setShowPassword(v => !v)}
+            tabIndex={-1}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors"
+            aria-label={showPassword ? 'Hide password' : 'Show password'}
+          >
+            {showPassword ? <EyeOff size={15} /> : <Eye size={15} />}
+          </button>
+        </div>
+      </div>
+
       <Button type="submit" loading={loading} className="w-full mt-2">
         {isEdit ? 'Save Changes' : 'Add Coach'}
       </Button>
