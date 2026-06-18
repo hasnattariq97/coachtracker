@@ -5,7 +5,11 @@ const { requireAdmin, regionFilter } = require('../auth');
 
 router.get('/agent-status', requireAdmin, async (req, res) => {
   try {
-    const [monitoring, support, reporting, queueDepth] = await Promise.all([
+    const regionId = regionFilter(req.user);
+    const atRiskParams = regionId !== null ? [regionId] : [];
+    const atRiskFilter = regionId !== null ? 'AND region_id = $1' : '';
+
+    const [monitoring, support, reporting, queueDepth, atRiskCount] = await Promise.all([
       db.query(
         `SELECT id, timestamp, snapshots_created, coaches_at_risk, status
          FROM agent_runs WHERE agent_type = 'monitoring'
@@ -23,11 +27,23 @@ router.get('/agent-status', requireAdmin, async (req, res) => {
       ),
       db.query(
         `SELECT COUNT(*) as pending FROM groq_queue WHERE status = 'pending'`
+      ),
+      db.query(
+        `SELECT COUNT(DISTINCT coach_id) as count
+         FROM monitoring_snapshots
+         WHERE status IN ('at_risk', 'overdue')
+           ${atRiskFilter}`,
+        atRiskParams
       )
     ]);
 
+    const monitoringRow = monitoring.rows[0] || null;
+    if (monitoringRow) {
+      monitoringRow.coaches_at_risk = parseInt(atRiskCount.rows[0]?.count || 0);
+    }
+
     res.json({
-      monitoring: monitoring.rows[0] || null,
+      monitoring: monitoringRow,
       support: support.rows[0] || null,
       reporting: reporting.rows[0] || null,
       groq_queue_pending: parseInt(queueDepth.rows[0]?.pending || 0),

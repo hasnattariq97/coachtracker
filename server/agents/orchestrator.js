@@ -47,10 +47,16 @@ class AgentOrchestrator {
       const monitoringTime = (new Date() - cycleStart) / 1000;
       console.log(`✓ Monitoring: ${monitoringResult.scannedTasks} tasks, ${monitoringTime.toFixed(1)}s`);
 
+      const atRiskCoaches = new Set(
+        (monitoringResult?.snapshots || [])
+          .filter(s => s.status === 'at_risk' || s.status === 'overdue')
+          .map(s => s.coachId)
+      ).size;
+
       await db.query(
         `INSERT INTO agent_runs (agent_type, status, snapshots_created, coaches_at_risk)
          VALUES ('monitoring', 'success', $1, $2)`,
-        [monitoringResult?.scannedTasks || 0, monitoringResult?.snapshots?.length || 0]
+        [monitoringResult?.scannedTasks || 0, atRiskCoaches]
       ).catch(e => console.error('[Orchestrator] Failed to log monitoring run:', e.message));
 
       // Step 2: Run Support Agent (depends on Monitoring snapshots)
