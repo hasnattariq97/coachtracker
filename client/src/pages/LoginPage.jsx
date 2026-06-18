@@ -1,14 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { Zap, Mail, Lock } from 'lucide-react';
+import { Zap, Mail, Lock, Eye, EyeOff } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 const LoginPage = () => {
-  const [email, setEmail]       = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail]         = useState('');
+  const [password, setPassword]   = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [peekActive, setPeekActive]     = useState(false);
+  const peekTimer = useRef(null);
   const { login, loading, isAuthenticated, user } = useAuth();
   const navigate = useNavigate();
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+    if (!showPassword && e.target.value.length > 0) {
+      setPeekActive(true);
+      clearTimeout(peekTimer.current);
+      peekTimer.current = setTimeout(() => setPeekActive(false), 600);
+    }
+  };
 
   useEffect(() => {
     if (sessionStorage.getItem('session_expired')) {
@@ -112,17 +124,26 @@ const LoginPage = () => {
                   <Lock size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
                   <input
                     id="password"
-                    type="password"
+                    type={showPassword || peekActive ? 'text' : 'password'}
                     value={password}
-                    onChange={e => setPassword(e.target.value)}
+                    onChange={handlePasswordChange}
                     placeholder="••••••••"
                     required
                     disabled={loading}
-                    className="w-full pl-9 pr-4 py-2.5 border border-slate-200 rounded-lg text-sm
+                    className="w-full pl-9 pr-10 py-2.5 border border-slate-200 rounded-lg text-sm
                                bg-slate-50 focus:bg-white focus:border-primary-400
                                focus:ring-2 focus:ring-primary-100 outline-none transition-all
                                disabled:opacity-60 disabled:cursor-not-allowed"
                   />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(v => !v)}
+                    tabIndex={-1}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors"
+                    aria-label={showPassword ? 'Hide password' : 'Show password'}
+                  >
+                    {showPassword ? <EyeOff size={15} /> : <Eye size={15} />}
+                  </button>
                 </div>
               </div>
 
