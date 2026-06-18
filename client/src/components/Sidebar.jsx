@@ -51,7 +51,9 @@ const Sidebar = ({ role }) => {
 
   const initials = user?.name
     ? user.name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)
-    : '??';
+    : user?.email
+      ? user.email[0].toUpperCase()
+      : '?';
 
   const sidebarContent = (
     <div className="flex flex-col h-full">
