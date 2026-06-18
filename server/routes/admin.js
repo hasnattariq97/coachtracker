@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../db');
-const { requireAdmin } = require('../auth');
+const { requireAdmin, regionFilter } = require('../auth');
 
 router.get('/agent-status', requireAdmin, async (req, res) => {
   try {
@@ -47,6 +47,7 @@ router.get('/decisions', requireAdmin, async (req, res) => {
       return res.status(400).json({ error: 'Invalid coach_id' });
     }
 
+    const regionId = regionFilter(req.user);
     let query = `
       SELECT ad.id, ad.created_at as timestamp, ad.agent_type, ad.coach_id,
              u.name as coach_name,
@@ -57,9 +58,13 @@ router.get('/decisions', requireAdmin, async (req, res) => {
       WHERE ad.created_at > NOW() - INTERVAL '${hours} hours'
     `;
     const params = [];
+    if (regionId !== null) {
+      params.push(regionId);
+      query += ` AND u.region_id = $${params.length}`;
+    }
     if (coachId) {
-      query += ` AND ad.coach_id = $1`;
       params.push(coachId);
+      query += ` AND ad.coach_id = $${params.length}`;
     }
     query += ` ORDER BY ad.created_at DESC LIMIT 100`;
 
@@ -103,23 +108,31 @@ router.get('/decisions', requireAdmin, async (req, res) => {
 
 router.get('/coach-patterns', requireAdmin, async (req, res) => {
   try {
+    const regionId = regionFilter(req.user);
+    const snapshotParams = regionId !== null ? [regionId] : [];
+    const snapshotRegionFilter = regionId !== null ? 'AND region_id = $1' : '';
+    const effectivenessParams = regionId !== null ? [regionId] : [];
+    const effectivenessRegionFilter = regionId !== null ? 'AND u.region_id = $1' : '';
     const [snapshots, effectiveness] = await Promise.all([
       db.query(`
         SELECT coach_id, coach_pattern, COUNT(*) as detections
         FROM monitoring_snapshots
         WHERE created_at > NOW() - INTERVAL '7 days'
           AND coach_pattern IS NOT NULL
+          ${snapshotRegionFilter}
         GROUP BY coach_id, coach_pattern
         ORDER BY detections DESC
-      `),
+      `, snapshotParams),
       db.query(`
-        SELECT coach_id, final_action,
+        SELECT ad.coach_id, ad.final_action,
                COUNT(*) as total,
-               SUM(CASE WHEN overridden = false THEN 1 ELSE 0 END) as executed
-        FROM agent_decisions
-        WHERE created_at > NOW() - INTERVAL '7 days'
-        GROUP BY coach_id, final_action
-      `)
+               SUM(CASE WHEN ad.overridden = false THEN 1 ELSE 0 END) as executed
+        FROM agent_decisions ad
+        LEFT JOIN users u ON ad.coach_id = u.id
+        WHERE ad.created_at > NOW() - INTERVAL '7 days'
+          ${effectivenessRegionFilter}
+        GROUP BY ad.coach_id, ad.final_action
+      `, effectivenessParams)
     ]);
 
     const byPattern = {};
