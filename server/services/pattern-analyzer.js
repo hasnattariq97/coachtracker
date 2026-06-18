@@ -18,30 +18,41 @@ class PatternAnalyzer {
    * Analyze 24-hour support actions
    * Returns: { supportActions: [...], completionRate, commonBlockers, coachPerformance }
    */
-  static async analyze24HourActions() {
+  static async analyze24HourActions(regionId = null) {
     try {
-      // Get actions from past 24 hours
+      const regionFilter = regionId !== null ? 'AND u.region_id = $1' : '';
+      const regionParams = regionId !== null ? [regionId] : [];
+
+      // Get support actions from past 24 hours, scoped to region
       const result = await db.query(
-        `SELECT id, task_id, coach_id, action_type, action_status, details, created_at
-         FROM support_actions
-         WHERE created_at >= CURRENT_TIMESTAMP - INTERVAL '24 hours'
-         ORDER BY created_at DESC`
+        `SELECT sa.id, sa.task_id, sa.coach_id, sa.action_type, sa.action_status, sa.details, sa.created_at
+         FROM support_actions sa
+         JOIN users u ON u.id = sa.coach_id
+         WHERE sa.created_at >= CURRENT_TIMESTAMP - INTERVAL '24 hours'
+           ${regionFilter}
+         ORDER BY sa.created_at DESC`,
+        regionParams
       );
 
       const actions = result.rows || [];
 
-      // Analyze completion rate
+      // Completion rate: tasks completed vs all non-cancelled tasks in this region
       const completedTasks = await db.query(
         `SELECT COUNT(*) as completed
-         FROM tasks
-         WHERE completed_at >= CURRENT_TIMESTAMP - INTERVAL '24 hours'`
+         FROM tasks t
+         JOIN users u ON u.id = t.coach_id
+         WHERE t.status = 'completed'
+           ${regionFilter}`,
+        regionParams
       );
 
       const totalTasks = await db.query(
         `SELECT COUNT(*) as total
-         FROM tasks
-         WHERE assigned_at <= CURRENT_TIMESTAMP
-         AND status IN ('completed', 'overdue')`
+         FROM tasks t
+         JOIN users u ON u.id = t.coach_id
+         WHERE t.status NOT IN ('cancelled')
+           ${regionFilter}`,
+        regionParams
       );
 
       const completedCount = parseInt(completedTasks.rows[0]?.completed || 0, 10);
@@ -55,7 +66,7 @@ class PatternAnalyzer {
       const commonBlockers = this._parseCommonBlockers(actions);
 
       // Analyze coach performance
-      const coachPerformance = await this._analyzeCoachPerformance();
+      const coachPerformance = await this._analyzeCoachPerformance(regionId);
 
       return {
         supportActions: actions,
@@ -102,19 +113,26 @@ class PatternAnalyzer {
   }
 
   /**
-   * Analyze coach performance metrics from past 24 hours
+   * Analyze overall coach performance (all-time, by region)
    */
-  static async _analyzeCoachPerformance() {
+  static async _analyzeCoachPerformance(regionId = null) {
     try {
+      const regionFilter = regionId !== null ? 'AND u.region_id = $1' : '';
+      const params = regionId !== null ? [regionId] : [];
+
       const result = await db.query(
-        `SELECT coach_id,
-                COUNT(*) as total_tasks,
-                COUNT(CASE WHEN status = 'completed' THEN 1 END) as completed,
-                COUNT(CASE WHEN status = 'overdue' THEN 1 END) as overdue
-         FROM tasks
-         WHERE assigned_at >= CURRENT_TIMESTAMP - INTERVAL '24 hours'
-         GROUP BY coach_id
-         ORDER BY completed DESC`
+        `SELECT u.id as coach_id, u.name as coach_name,
+                COUNT(t.id) as total_tasks,
+                COUNT(CASE WHEN t.status = 'completed' THEN 1 END) as completed,
+                COUNT(CASE WHEN t.status = 'overdue' THEN 1 END) as overdue
+         FROM users u
+         LEFT JOIN tasks t ON t.coach_id = u.id AND t.status NOT IN ('cancelled')
+         WHERE u.role = 'coach'
+           ${regionFilter}
+         GROUP BY u.id, u.name
+         HAVING COUNT(t.id) > 0
+         ORDER BY COUNT(CASE WHEN t.status = 'completed' THEN 1 END) DESC`,
+        params
       );
 
       return (result.rows || []).map(row => {
@@ -123,6 +141,7 @@ class PatternAnalyzer {
         const overdue = parseInt(row.overdue, 10);
         return {
           coachId: row.coach_id,
+          coachName: row.coach_name || `Coach ${row.coach_id}`,
           total,
           completed,
           overdue,
@@ -143,8 +162,8 @@ class PatternAnalyzer {
     const recommendations = [];
 
     if (patterns.completionRate > 85) {
-      recommendations.push('🎯 Strong completion rate this week. Keep the momentum!');
-    } else if (patterns.completionRate < 60) {
+      recommendations.push('🎯 Strong completion rate overall. Keep the momentum!');
+    } else if (patterns.completionRate < 60 && patterns.completionRate > 0) {
       recommendations.push('⚠️ Completion rate below 60%. Consider increasing support or reducing task load.');
     }
 
@@ -155,14 +174,20 @@ class PatternAnalyzer {
 
     if (patterns?.coachPerformance?.length > 0) {
       const topCoach = patterns.coachPerformance[0];
-      recommendations.push(`⭐ Top performer: Coach ${topCoach?.coachId || 'N/A'} with ${topCoach?.completionRate || 0}% completion.`);
+      if (topCoach?.completionRate > 0) {
+        recommendations.push(`⭐ Top performer: ${topCoach.coachName} with ${topCoach.completionRate}% completion (${topCoach.completed}/${topCoach.total} tasks).`);
+      }
     }
 
     if (patterns?.coachPerformance?.length > 1) {
       const lowPerformer = patterns.coachPerformance[patterns.coachPerformance.length - 1];
-      if (lowPerformer?.completionRate < 50) {
-        recommendations.push(`💪 Coach ${lowPerformer?.coachId || 'N/A'} needs support: ${lowPerformer?.completionRate || 0}% completion rate.`);
+      if (lowPerformer?.overdue > 0) {
+        recommendations.push(`💪 ${lowPerformer.coachName} has ${lowPerformer.overdue} overdue task${lowPerformer.overdue > 1 ? 's' : ''} — consider a check-in.`);
       }
+    }
+
+    if (recommendations.length === 0) {
+      recommendations.push('✅ No issues to flag today. All coaches are on track.');
     }
 
     return recommendations;

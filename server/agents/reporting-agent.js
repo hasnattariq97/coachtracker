@@ -157,10 +157,10 @@ class ReportingAgent {
 
     const coachPerformanceHTML = coachPerformance.length > 0
       ? coachPerformance
-          .slice(0, 3)
-          .map(c => `<li>Coach ${c.coachId}: ${c.completionRate}% completion (${c.completed}/${c.total} tasks)</li>`)
+          .slice(0, 5)
+          .map(c => `<li><strong>${c.coachName}</strong>: ${c.completionRate}% completion (${c.completed}/${c.total} tasks, ${c.overdue} overdue)</li>`)
           .join('')
-      : '<li>No data available</li>';
+      : '<li>No coach data available yet</li>';
 
     const recommendationHTML = recommendations.length > 0
       ? recommendations.map(r => `<li>${r}</li>`).join('')
