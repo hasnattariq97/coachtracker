@@ -235,7 +235,10 @@ router.post('/', requireAdmin, async (req, res) => {
       await createNotification(coachId, taskId, 'assigned', notificationMessage);
 
       // Queue email notification for task assignment
-      await createEmailQueue('assignment', coachId, taskId);
+      const emailResult = await createEmailQueue('assignment', coachId, taskId);
+      if (emailResult && emailResult.error) {
+        console.error(`[TASKS] Failed to queue assignment email for coach ${coachId}, task ${taskId}:`, emailResult.reason);
+      }
     }
 
     // Backward compatible: single coach returns { id, ... }, multiple returns { tasks: [...] }

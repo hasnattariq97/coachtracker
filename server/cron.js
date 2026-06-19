@@ -48,7 +48,10 @@ const midpointNudgeJob = async () => {
       const dueDate = new Date(task.due_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
       const message = `Halfway there! ⚡ Don't let momentum slip — '${task.title}' is due ${dueDate}. How's it going?`;
       await createNotification(task.coach_id, task.id, 'midpoint_nudge', message);
-      await createEmailQueue('midpoint_nudge', task.coach_id, task.id);
+      const midpointEmailResult = await createEmailQueue('midpoint_nudge', task.coach_id, task.id);
+      if (midpointEmailResult && midpointEmailResult.error) {
+        console.error(`[Cron] Failed to queue midpoint_nudge email for coach ${task.coach_id}, task ${task.id}:`, midpointEmailResult.reason);
+      }
     }
 
     console.log(`[Cron] ✓ Midpoint nudge: notified ${candidates.length} coach(es)`);
@@ -75,7 +78,10 @@ const overdueJob = async () => {
 
       const coachMessage = `This one slipped by — and that's okay. 💪 Please share what got in the way for '${task.title}' so we can move forward together.`;
       await createNotification(task.coach_id, task.id, 'overdue_nudge', coachMessage);
-      await createEmailQueue('overdue', task.coach_id, task.id);
+      const overdueEmailResult = await createEmailQueue('overdue', task.coach_id, task.id);
+      if (overdueEmailResult && overdueEmailResult.error) {
+        console.error(`[Cron] Failed to queue overdue email for coach ${task.coach_id}, task ${task.id}:`, overdueEmailResult.reason);
+      }
 
       const adminUser = await db.prepare("SELECT id FROM users WHERE role = $1 LIMIT 1").get('admin');
       if (adminUser) {
