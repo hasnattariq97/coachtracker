@@ -73,10 +73,11 @@ async function createEmailQueue(type, coachId, taskId, adminId = null) {
   try {
     console.log(`[EMAIL QUEUE] Attempting to queue: type=${type}, coach=${coachId}, task=${taskId}`);
 
-    // Idempotency: check if email already queued, sent, or failed (not skipped)
+    // Idempotency: check if email already queued or sent — do NOT block on 'failed'
+    // so that failed emails can be re-queued on the next cron run
     const exists = await db.prepare(
-      'SELECT id FROM email_queue WHERE type = ? AND task_id = ? AND coach_id = ? AND status IN (?, ?, ?) LIMIT 1'
-    ).get(type, taskId, coachId, 'pending', 'sent', 'failed');
+      'SELECT id FROM email_queue WHERE type = ? AND task_id = ? AND coach_id = ? AND status IN (?, ?) LIMIT 1'
+    ).get(type, taskId, coachId, 'pending', 'sent');
 
     if (exists) {
       console.log(`[EMAIL QUEUE] Already processed, skipping`);
