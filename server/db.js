@@ -240,7 +240,7 @@ const initializeDatabase = async () => {
     // One-time fix: reset any 'failed' emails back to 'pending' so the processor retries them.
     // Safe to run every startup — only affects rows stuck in 'failed' state.
     const resetResult = await query(
-      "UPDATE email_queue SET status = 'pending', attempts = 0 WHERE status = 'failed'"
+      "UPDATE email_queue SET status = 'pending' WHERE status = 'failed'"
     );
     const resetCount = resetResult.rowCount || 0;
     if (resetCount > 0) {
