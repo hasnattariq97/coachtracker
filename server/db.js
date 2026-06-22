@@ -237,6 +237,16 @@ const initializeDatabase = async () => {
       console.log('✓ Admin user already exists');
     }
 
+    // One-time fix: reset any 'failed' emails back to 'pending' so the processor retries them.
+    // Safe to run every startup — only affects rows stuck in 'failed' state.
+    const resetResult = await query(
+      "UPDATE email_queue SET status = 'pending', attempts = 0 WHERE status = 'failed'"
+    );
+    const resetCount = resetResult.rowCount || 0;
+    if (resetCount > 0) {
+      console.log(`✓ Reset ${resetCount} stuck failed emails back to pending for retry`);
+    }
+
     console.log('✓ PostgreSQL database ready');
   } catch (err) {
     console.error('❌ Database initialization failed:', err.message);
